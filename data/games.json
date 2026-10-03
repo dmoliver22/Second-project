@@ -107,7 +107,8 @@
       "https://www.steampulse.org/game/413150",
       "https://en.wikipedia.org/wiki/Stardew_Valley"
     ],
-    "confidence": "high"
+    "confidence": "high",
+    "teamAtLaunch": 1
   },
   {
     "id": "cats-and-soup",
@@ -415,7 +416,8 @@
       "https://www.notebookcheck.net/65-000-reviews-even-before-official-launch-New-management-sim-hits-Steam-with-a-25-launch-discount-and-future-multiplayer-plans.1040173.0.html"
     ],
     "confidence": "medium",
-    "dataNotes": "Units/revenue = Raijin estimate. steamReviews is 'past 74,000' snapshot. Cozy-adjacent (job sim)."
+    "dataNotes": "Units/revenue = Raijin estimate. steamReviews is 'past 74,000' snapshot. Cozy-adjacent (job sim).",
+    "teamAtLaunch": 1
   },
   {
     "id": "webfishing",
@@ -465,7 +467,8 @@
       "https://www.gamespark.jp/article/2024/11/14/146924.html",
       "https://www.gamersunchained.com/game/webfishing"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "teamAtLaunch": 1
   },
   {
     "id": "fields-of-mistria",
@@ -623,7 +626,8 @@
       "https://gamewave.fr/dinkum/dinkum-s-est-ecoule-a-350-000-copies-en-un-mois/",
       "https://raijin.gg/app/1062520/Dinkum"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "teamAtLaunch": 1
   },
   {
     "id": "unpacking",
@@ -681,7 +685,8 @@
       "https://en.wikipedia.org/wiki/Unpacking_(video_game)"
     ],
     "confidence": "high",
-    "dataNotes": "revenueEstimateUSDm = Raijin Steam-only gross estimate (~672.6K Steam copies, $8.1M); other trackers say 1.2M units/$16.7M. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough."
+    "dataNotes": "revenueEstimateUSDm = Raijin Steam-only gross estimate (~672.6K Steam copies, $8.1M); other trackers say 1.2M units/$16.7M. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
+    "teamAtLaunch": 4
   },
   {
     "id": "spiritfarer",
@@ -737,7 +742,8 @@
       "https://vaporlens.app/app/972660/spiritfarer_farewell_edition/stats/details"
     ],
     "confidence": "medium",
-    "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (~975K Steam copies); VGI ~773K/$10.75M. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough."
+    "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (~975K Steam copies); VGI ~773K/$10.75M. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
+    "teamAtLaunch": 15
   },
   {
     "id": "a-little-to-the-left",
@@ -847,7 +853,8 @@
       "https://steampulse.org/game/1562430"
     ],
     "confidence": "medium",
-    "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (1.1M copies/$16.2M); VGI 1.6M/$26.8M."
+    "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (1.1M copies/$16.2M); VGI 1.6M/$26.8M.",
+    "teamAtLaunch": 4
   },
   {
     "id": "sun-haven",
@@ -951,7 +958,8 @@
       "https://newsletter.gamediscover.co/p/deep-dive-inside-strange-horticultures"
     ],
     "confidence": "medium",
-    "dataNotes": "steamReviews is a floor ('over 10,000', Overwhelmingly Positive) per publisher; exact count not retrieved."
+    "dataNotes": "steamReviews is a floor ('over 10,000', Overwhelmingly Positive) per publisher; exact count not retrieved.",
+    "teamAtLaunch": 2
   },
   {
     "id": "tiny-glade",
@@ -1003,7 +1011,8 @@
       "https://vaporlens.app/app/2198150/tiny_glade/stats/details"
     ],
     "confidence": "medium",
-    "dataNotes": "Raijin Sep-2026 Steam estimate 516.8K copies/$4.6M is lower than the confirmed 616K, showing estimator unreliability; VaporLens estimates 1.8M/$27M. Revenue left null. "
+    "dataNotes": "Raijin Sep-2026 Steam estimate 516.8K copies/$4.6M is lower than the confirmed 616K, showing estimator unreliability; VaporLens estimates 1.8M/$27M. Revenue left null. ",
+    "teamAtLaunch": 2
   },
   {
     "id": "coral-island",
@@ -1164,7 +1173,8 @@
       "https://vaporlens.app/app/1291340/townscaper/stats/details"
     ],
     "confidence": "medium",
-    "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (464K copies/$2.4M); VaporLens 1.64M/$9.8M (likely high). Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough."
+    "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (464K copies/$2.4M); VaporLens 1.64M/$9.8M (likely high). Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
+    "teamAtLaunch": 1
   },
   {
     "id": "little-kitty-big-city",
@@ -1264,7 +1274,8 @@
       "https://www.gamenguide.com/articles/105189/20240502/rustys-retirement-idle-farming-simulator-sells-100k-copies-in-5-days.htm",
       "https://en.wikipedia.org/wiki/Rusty%27s_Retirement"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "teamAtLaunch": 1
   },
   {
     "id": "tiny-bookshop",
@@ -1420,7 +1431,8 @@
       "https://raijin.gg/app/2113850/Spirit_City_Lofi_Sessions"
     ],
     "confidence": "medium",
-    "dataNotes": "releaseYear 2024 inferred from launch-week coverage dated April 2024 (not directly confirmed). revenueEstimateUSDm = Raijin estimate."
+    "dataNotes": "releaseYear 2024 inferred from launch-week coverage dated April 2024 (not directly confirmed). revenueEstimateUSDm = Raijin estimate.",
+    "teamAtLaunch": 3
   },
   {
     "id": "is-this-seat-taken",
@@ -2338,7 +2350,8 @@
       "https://www.notebookcheck.net/After-a-long-silence-Stardew-Valley-developer-shares-an-update-on-his-next-game.1217866.0.html"
     ],
     "confidence": "medium",
-    "status": "unreleased"
+    "status": "unreleased",
+    "teamAtLaunch": 1
   },
   {
     "id": "ooblets",
@@ -2440,7 +2453,8 @@
       "https://www.pockettactics.com/a-short-hike-flies/physical-edition"
     ],
     "confidence": "medium",
-    "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (428.1K copies, June 2026). SteamPageAnalyzer Boxleiter estimate: 765K copies/$6.1M gross from 19,127 reviews. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough."
+    "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (428.1K copies, June 2026). SteamPageAnalyzer Boxleiter estimate: 765K copies/$6.1M gross from 19,127 reviews. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
+    "teamAtLaunch": 1
   },
   {
     "id": "cozy-grove",
@@ -2550,7 +2564,8 @@
       "https://www.steamspy.com/dev/Toukana+Interactive"
     ],
     "confidence": "medium",
-    "dataNotes": "revenueEstimateUSDm = VGI estimate via SteamPulse (874K units/$7.2M); Raijin 526.9K/$4.4M. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough."
+    "dataNotes": "revenueEstimateUSDm = VGI estimate via SteamPulse (874K units/$7.2M); Raijin 526.9K/$4.4M. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
+    "teamAtLaunch": 4
   },
   {
     "id": "potion-craft",
@@ -2701,7 +2716,8 @@
       "https://raijin.gg/app/2368930/ISLANDERS_New_Shores"
     ],
     "confidence": "low",
-    "dataNotes": "VaporLens estimate 1,294,616 sales/$6.46M considered likely high; not used numerically."
+    "dataNotes": "VaporLens estimate 1,294,616 sales/$6.46M considered likely high; not used numerically.",
+    "teamAtLaunch": 3
   },
   {
     "id": "bongo-cat",
@@ -2797,7 +2813,8 @@
       "https://www.dekudeals.com/items/ropukas-idle-island-plus-fish-to-dish-idle-sushi-bundle"
     ],
     "confidence": "low",
-    "dataNotes": "Positive % from an earlier snapshot 1,907/1,969 (~97%); review count 4,028 later snapshot. Business model guess 'Premium + DLC' is uncertain."
+    "dataNotes": "Positive % from an earlier snapshot 1,907/1,969 (~97%); review count 4,028 later snapshot. Business model guess 'Premium + DLC' is uncertain.",
+    "teamAtLaunch": 3
   },
   {
     "id": "animal-crossing-pocket-camp",
@@ -2901,7 +2918,8 @@
       "https://gonintendo.com/contents/42429-good-pizza-great-pizza-10th-anniversary-art-gallery-exhibit-announced"
     ],
     "confidence": "low",
-    "dataNotes": "300M downloads figure is from a single GamesBeat article and could not be cross-checked."
+    "dataNotes": "300M downloads figure is from a single GamesBeat article and could not be cross-checked.",
+    "teamAtLaunch": 12
   },
   {
     "id": "dressmaker",

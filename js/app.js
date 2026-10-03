@@ -151,15 +151,60 @@
 
   // ---------- views ----------
   const VIEWS = {
-    overview: { label: "Overview", icon: "M3 12l9-8 9 8M5 10v10h14V10", render: renderOverview },
-    trends: { label: "Trends", icon: "M3 17l6-6 4 4 8-8M15 7h6v6", render: renderTrends },
+    overview: { label: "Briefing", icon: "M3 12l9-8 9 8M5 10v10h14V10", render: renderOverview },
+    ask: { label: "Ask the atlas", icon: "M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12zM8 11h.01M12 11h.01M16 11h.01", render: () => window.AtlasAsk.render() },
+    concepts: { label: "What to build", icon: "M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z", render: renderConcepts },
+    outliers: { label: "Outliers", icon: "M12 3v4M12 17v4M3 12h4M17 12h4M12 12h.01M7 7l2 2M15 15l2 2M17 7l-2 2M9 15l-2 2", render: renderOutliers },
     gaps: { label: "Market gaps", icon: "M12 3v18M3 12h18M7 7h.01M17 17h.01", render: renderGaps },
+    trends: { label: "Trends", icon: "M3 17l6-6 4 4 8-8M15 7h6v6", render: renderTrends },
     games: { label: "Games that work", icon: "M6 11h4M8 9v4M15 12h.01M18 10h.01M7 6h10a4 4 0 014 4v4a4 4 0 01-4 4H7a4 4 0 01-4-4v-4a4 4 0 014-4z", render: renderGames },
     monetization: { label: "Monetization", icon: "M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6", render: renderMonetization },
     playbook: { label: "Studio playbook", icon: "M4 4h12l4 4v12H4zM8 12h8M8 16h5", render: renderPlaybook },
-    concepts: { label: "What to build", icon: "M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z", render: renderConcepts },
     sources: { label: "Sources & updates", icon: "M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5zM20 17v4H6.5", render: renderSources },
   };
+
+  // "So what" box at the top of each analysis page
+  function takeaway(key) {
+    const t = (D.insights.viewTakeaways || {})[key];
+    if (!t) return null;
+    return h("div", { class: "takeaway" }, h("div", { class: "eyebrow", text: "So what" }), h("p", { text: t.text }),
+      t.link ? h("a", { href: t.link, text: (t.linkText || "Go deeper") + " →" }) : null);
+  }
+  // Opens the chat with a question; hidden where the page can't reach Claude
+  function askBtn(label, question) {
+    if (!window.AtlasAsk || !window.AtlasAsk.available()) return null;
+    return h("button", { type: "button", class: "ask-btn", onclick: (e) => { e.stopPropagation(); const d = drawer(); if (d.open) d.close(); window.AtlasAsk.ask(question); } },
+      svgIcon(VIEWS.ask.icon), label);
+  }
+  function evidenceChip(ev) {
+    if (ev.game) {
+      const g = D.games.find((x) => x.id === ev.game);
+      return h("button", { type: "button", class: "chip ev", text: ev.text, onclick: () => g && openGame(g) });
+    }
+    return h("a", { class: "chip ev", href: ev.link || "#overview", text: ev.text });
+  }
+  function goConcept(id) { store.set("concept", id); location.hash = "#concepts"; }
+  const OUTLIER = {
+    Overperformer: { cls: "good", icon: ICON.up },
+    Cautionary: { cls: "crit", icon: ICON.down },
+    Surprise: { cls: "warn", icon: ICON.flat },
+  };
+  function outlierCard(o, compact) {
+    const g = D.games.find((x) => x.id === o.gameId);
+    const t = OUTLIER[o.type] || OUTLIER.Surprise;
+    const conceptName = (id) => (D.concepts.concepts.find((c) => c.id === id) || {}).name;
+    return h("article", { class: "card outlier" },
+      h("div", { class: "card-top" },
+        g ? h("button", { type: "button", class: "link-btn", onclick: () => openGame(g) }, h("h3", { text: o.name })) : h("h3", { text: o.name }),
+        h("span", { class: "dir " + (t.cls === "good" ? "rising" : t.cls === "crit" ? "declining" : "peaking") }, svgIcon(t.icon), o.type)),
+      h("div", { class: "mono outlier-stat", text: o.stat }),
+      h("p", { class: "ink-2", text: o.whatHappened }),
+      h("p", {}, h("b", { text: "Lesson: " }), o.lesson),
+      compact ? null : h("p", {}, h("b", { text: o.type === "Cautionary" ? "Do instead: " : "Steal this: " }), o.stealThis),
+      compact ? null : h("div", { class: "chips" }, h("span", { class: "muted", style: "font-size:.8rem", text: "Applies to:" }),
+        (o.appliesTo || []).filter(conceptName).map((id) => h("button", { type: "button", class: "chip accent", text: conceptName(id), onclick: () => goConcept(id) }))),
+      compact ? null : askBtn("Ask how to apply this", `What exactly should my studio take from ${o.name}'s story (${o.stat})? Be specific to my plan.`));
+  }
 
   function renderOverview() {
     const I = D.insights, M = D.market;
@@ -168,38 +213,96 @@
     const rel = (M.steamCozyReleasesByYear || []).filter((r) => r.count != null);
     const relBox = chartBox();
     later(() => C.columns(relBox, rel.map((r) => ({ label: String(r.year), value: r.count, display: fmtInt(r.count), partial: r.partial, sub: r.note })), { title: "Steam cozy releases by year", labelValues: true }));
+    const outs = I.outliers || [];
+    const pickOut = ["Overperformer", "Surprise", "Cautionary"].map((t) => outs.find((o) => o.type === t)).filter(Boolean);
 
     return h("div", { class: "view" },
-      viewHead("Cozy game market · data as of " + D.meta.asOf, I.headline, I.subhead),
-      h("div", { class: "kpis" }, I.kpis.map((k) => h("div", { class: "kpi" },
-        h("div", { class: "kpi-value", text: k.value }), h("div", { class: "kpi-label", text: k.label }),
-        h("div", { class: "kpi-src" }, k.sourceUrl ? h("a", { href: k.sourceUrl, target: "_blank", rel: "noopener", text: k.source }) : k.source, " ", conf(k.confidence))))),
+      viewHead("Briefing · data as of " + D.meta.asOf, I.headline, I.subhead),
       h("div", { class: "hero-rec" },
         h("div", { class: "section" },
-          h("div", { class: "eyebrow", text: "Recommended first game" }),
+          h("div", { class: "eyebrow", text: "What to build first" }),
           h("h2", { text: top.c.name }),
           h("p", { class: "ink-2", text: top.c.oneLiner }),
           h("p", { text: top.c.pitch }),
-          h("div", {}, h("a", { class: "btn primary", href: "#concepts", text: "See the full build & run plan" }))),
+          h("div", { class: "chips" }, h("a", { class: "btn primary", href: "#concepts", text: "See the build & run plan" }),
+            askBtn("Pressure-test it", `Pressure-test ${top.c.name} for my studio: what is most likely to make it fail, and what should I validate first?`))),
         h("div", { class: "section" },
           h("div", { class: "eyebrow", text: "Opportunity score" }),
           h("div", { class: "score-big", text: top.score.toFixed(1) }),
-          h("p", { class: "muted", text: "Weighted across demand, competition, scope fit for a small team, monetization, marketability and trend momentum. Change the weights on the What to build page." }))),
-      h("div", { class: "grid grid-2" },
-        panel("Cozy-tagged releases on Steam", "Supply keeps rising; standing out gets harder each year", relBox,
-          h("p", { class: "panel-note", text: M.steamCozyReleasesNote || "" })),
+          h("p", { class: "muted", text: "Top of six concepts, weighted across demand, competition, fit for a small team, revenue potential, marketability and momentum. Adjust the weights on What to build." }))),
+      I.decisions ? section("The calls", "What the data says to do, decision by decision. Click evidence to see the game or chart behind it.",
+        h("div", { class: "grid grid-2" }, I.decisions.map((d) => h("article", { class: "card decision" },
+          h("div", { class: "card-top" }, h("div", { class: "eyebrow", text: d.topic }), conf(d.confidence)),
+          h("h3", { text: d.call }),
+          h("p", { class: "ink-2", text: d.why }),
+          h("div", { class: "chips" }, (d.evidence || []).map(evidenceChip)))))) : null,
+      I.next90 ? h("div", { class: "grid grid-2" },
+        panel("Your next 90 days", "In order. Each step tells you whether to keep going.",
+          h("div", { class: "timeline" }, I.next90.map((s) => h("div", { class: "tl-row" }, h("div", { class: "tl-when", text: s.when }), h("div", { class: "ink-2", style: "font-size:.92rem", text: s.what }))))),
         panel("Biggest open lanes", "Demand × (inverse) supply, 0–10",
           h("ol", { class: "rank-list" }, niches.slice(0, 7).map((n, i) => h("li", {},
             h("a", { class: "rank-item", href: "#gaps", style: "text-decoration:none" },
               h("span", { class: "rank-n", text: i + 1 }), h("span", { text: n.name }),
               h("span", { class: "rank-bar" }, h("i", { style: `width:${n.opportunity * 10}%` })),
-              h("span", { class: "rank-score", text: n.opportunity.toFixed(1) }))))))),
-      section("What the data says", "The findings that should shape your studio's first moves.",
-        h("div", { class: "grid grid-3" }, I.keyFindings.map((f) => h("article", { class: "card" },
-          h("h3", { text: f.title }), h("p", { class: "ink-2", text: f.detail }),
-          f.link ? h("a", { href: f.link, text: "Go deeper →", style: "margin-top:auto;font-size:.85rem" }) : null)))),
+              h("span", { class: "rank-score", text: n.opportunity.toFixed(1) }))))))) : null,
+      pickOut.length ? section("Outliers to learn from", "The games that broke the pattern, in both directions.",
+        h("div", { class: "grid grid-3" }, pickOut.map((o) => outlierCard(o, true))),
+        h("div", {}, h("a", { href: "#outliers", text: "All " + outs.length + " outliers and what to steal from each →" }))) : null,
+      section("The evidence", "The numbers behind the calls.",
+        h("div", { class: "kpis" }, I.kpis.map((k) => h("div", { class: "kpi" },
+          h("div", { class: "kpi-value", text: k.value }), h("div", { class: "kpi-label", text: k.label }),
+          h("div", { class: "kpi-src" }, k.sourceUrl ? h("a", { href: k.sourceUrl, target: "_blank", rel: "noopener", text: k.source }) : k.source, " ", conf(k.confidence))))),
+        h("div", { class: "grid grid-2" },
+          panel("Cozy-tagged releases on Steam", "Supply keeps rising; standing out gets harder each year", relBox,
+            h("p", { class: "panel-note", text: M.steamCozyReleasesNote || "" })),
+          h("div", { class: "grid", style: "align-content:start" }, I.keyFindings.slice(0, 3).map((f) => h("article", { class: "card" },
+            h("h3", { text: f.title }), h("p", { class: "ink-2", text: f.detail })))))),
       section("Momentum right now", null,
         h("div", { class: "grid grid-2" }, [...M.trends].sort((a, b) => b.strength - a.strength).slice(0, 4).map(trendCard))),
+    );
+  }
+
+  function renderOutliers() {
+    const I = D.insights, G = D.games;
+    const outs = I.outliers || [];
+    const types = ["Overperformer", "Surprise", "Cautionary"];
+    let cur = store.get("outlierType", "");
+    if (cur && !types.includes(cur)) cur = "";
+    const strip = h("div", { class: "chips", role: "group", "aria-label": "Outlier type" });
+    const grid = h("div", { class: "grid grid-2" });
+    const draw = () => {
+      strip.replaceChildren(...["", ...types].map((t) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(cur === t), onclick: () => { cur = t; store.set("outlierType", t); draw(); } },
+        h("span", { class: "p-name", text: t ? ({ Overperformer: "Overperformers", Surprise: "Surprises", Cautionary: "Cautionary tales" })[t] : "All" }), h("span", { class: "muted", style: "font-size:.75rem", text: outs.filter((o) => !t || o.type === t).length + "" }))));
+      grid.replaceChildren(...outs.filter((o) => !cur || o.type === cur).map((o) => outlierCard(o)));
+    };
+    draw();
+
+    // computed: copies per person on the launch team (premium games where both are known)
+    const per = G.filter((g) => g.teamAtLaunch && g.unitsOrPlayersMillions != null && /^Premium/.test(g.businessModel))
+      .map((g) => ({ g, v: (g.unitsOrPlayersMillions * 1000) / g.teamAtLaunch })).sort((a, b) => b.v - a.v);
+    const capped = per.filter((x) => x.v <= 5000);
+    const off = per.filter((x) => x.v > 5000);
+    const perBox = chartBox();
+    later(() => C.barH(perBox, capped.map(({ g, v }) => ({ label: g.name, value: Math.round(v), display: fmtInt(Math.round(v)) + "k", sub: `${g.teamAtLaunch} ${g.teamAtLaunch === 1 ? "person" : "people"} · ${g.salesEstimate}`, onClick: () => openGame(g) }))));
+
+    // computed: loved but under-discovered
+    const gems = G.filter((g) => g.steamPositivePct >= 92 && g.steamReviews != null && g.steamReviews < 10000).sort((a, b) => b.steamPositivePct - a.steamPositivePct || a.steamReviews - b.steamReviews);
+
+    return h("div", { class: "view" },
+      viewHead("Outliers", "The games that broke the pattern", "Overperformers to copy, surprises that change the picture, and cautionary tales to avoid. Each one says what to take from it and which of your concepts it applies to."),
+      takeaway("outliers"),
+      strip, grid,
+      h("div", { class: "grid grid-2" },
+        panel("Copies sold per person on the launch team", "Thousands of copies per developer, premium games where team size is known",
+          perBox,
+          h("p", { class: "panel-note", text: (off.length ? off.map(({ g, v }) => `${g.name} is off the chart at ${fmtInt(Math.round(v))}k per person. `).join("") : "") +
+            "Only " + per.length + " games publish both figures, so read this as a pattern, not a ranking. The pattern: one- to four-person teams dominate." })),
+        panel("Loved, but few found them", "92%+ positive on Steam with under 10,000 reviews",
+          h("div", { class: "table-wrap", style: "border:0" }, h("table", {},
+            h("thead", {}, h("tr", {}, h("th", { text: "Game" }), h("th", { class: "num", text: "Positive" }), h("th", { class: "num", text: "Reviews" }))),
+            h("tbody", {}, gems.map((g) => h("tr", { class: "clickable", tabindex: "0", onclick: () => openGame(g), onkeydown: (e) => { if (e.key === "Enter") openGame(g); } },
+              h("td", { class: "game-name", text: g.name }), h("td", { class: "num", text: g.steamPositivePct + "%" }), h("td", { class: "num", text: fmtInt(g.steamReviews) })))))),
+          h("p", { class: "panel-note", text: "Quality didn't guarantee an audience. These games got the craft right; what most lacked was a hook that spreads on its own (co-op, a clip-able action) or a big marketing beat." }))),
     );
   }
 
@@ -236,6 +339,7 @@
     const A = M.audience || { facts: [], wants: [], complaints: [] };
     return h("div", { class: "view" },
       viewHead("Trends", "Where cozy is heading", "What is rising, what has peaked, and who the players are. Each trend lists its evidence and what it means for a new studio."),
+      takeaway("trends"),
       h("div", { class: "grid grid-2" },
         panel("Cozy-tagged Steam releases per year", "Grey = partial year", relBox, h("p", { class: "panel-note", text: M.steamCozyReleasesNote || "" })),
         plats.length ? panel("Where cozy players play", "Share of cozy players / revenue by platform (see notes)", platBox) :
@@ -273,9 +377,11 @@
         h("p", {}, h("b", { text: "Supply evidence: " }), n.supplyEvidence),
         n.exampleHits && n.exampleHits.length ? h("div", { class: "chips" }, h("span", { class: "muted", text: "Hits:" }), n.exampleHits.map((g) => h("span", { class: "chip accent", text: g }))) : null,
         n.exampleMisses && n.exampleMisses.length ? h("div", { class: "chips" }, h("span", { class: "muted", text: "Misses:" }), n.exampleMisses.map((g) => h("span", { class: "chip", text: g }))) : null,
-        srcLinks(n.sources)))));
+        srcLinks(n.sources),
+        askBtn("Ask what would win here", `What would a winning game in the "${n.name}" niche look like for my studio? Name the closest games in the data and the gap they leave.`)))));
     return h("div", { class: "view" },
       viewHead("Market gaps", "Where demand outruns supply", "Each cozy niche is scored 0–10 for player demand and for how crowded it is. The top-left corner is where a new studio has the best odds. Click a dot or a row for the evidence."),
+      takeaway("gaps"),
       h("div", { class: "callout" }, h("b", { text: "How the opportunity score works" }),
         h("p", { class: "ink-2", text: "Opportunity = demand × (11 − supply) ÷ 10. A niche with demand 9 and supply 3 scores 7.2; demand 8 with supply 9 scores 1.6. Scores are research-based judgements, so read the evidence before betting on one." })),
       panel("Opportunity map", "Highlighted: the 8 highest-scoring niches", box),
@@ -337,6 +443,7 @@
     draw();
     return h("div", { class: "view" },
       viewHead("Games that work", "The cozy hits, taken apart", "What each successful game is, how it makes money, how the studio runs it, and how it found its audience. Click any game for the full breakdown."),
+      takeaway("games"),
       h("div", { class: "grid grid-3" },
         panel("How the hits make money", "Number of games per model", modelBox),
         panel("What kind of game", "Number of games per subgenre", subBox),
@@ -382,6 +489,7 @@
       block("Funding", g.funding),
       block("Weak spots", g.weaknesses),
       g.lessonForNewStudio ? h("div", { class: "callout" }, h("b", { text: "Lesson for your studio" }), h("p", { text: g.lessonForNewStudio })) : null,
+      askBtn("Ask what to copy from " + g.name, `What should my studio copy from ${g.name}, and what should we avoid? Use its full profile.`),
       h("div", { class: "section" }, conf(g.confidence), srcLinks(g.sources), g.live ? h("p", { class: "muted", style: "font-size:.8rem", text: "Steam review figures refreshed automatically on " + g.liveFetchedAt + "." }) : null),
     );
     if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open", "");
@@ -397,6 +505,7 @@
     const fitClass = (f) => (/recommend/i.test(f) ? "good" : /avoid/i.test(f) ? "crit" : "warn");
     return h("div", { class: "view" },
       viewHead("Monetization", "How cozy games make money", "The business models the hits use, what each costs you, and which ones suit a first game from a small studio."),
+      takeaway("monetization"),
       h("div", { class: "grid grid-2" }, I.monetizationModels.map((m) => h("article", { class: "card" },
         h("div", { class: "card-top" }, h("h3", { text: m.model }), h("span", { class: "chip " + fitClass(m.fitForNewStudio), text: m.fitForNewStudio })),
         h("p", { class: "ink-2", text: m.howItWorks }),
@@ -440,6 +549,7 @@
     draw();
     return h("div", { class: "view" },
       viewHead("Studio playbook", "How to run a cozy studio", "The operating steps from first prototype to post-launch updates, in order, with the benchmarks successful cozy teams hit along the way."),
+      takeaway("playbook"),
       strip, steps,
       section("Funding your first game", null, h("div", { class: "table-wrap" }, h("table", {},
         h("thead", {}, h("tr", {}, h("th", { text: "Option" }), h("th", { text: "Typical terms" }), h("th", { text: "Trade-offs" }))),
@@ -480,6 +590,7 @@
 
     append(wrap, [
       viewHead("What to build", "Game concepts ranked by the data", D.concepts.intro),
+      takeaway("concepts"),
       h("div", { class: "callout warn" }, h("b", { text: "Read this first" }), h("p", { class: "ink-2", text: D.concepts.caveat })),
       panel("Scoring weights", "Drag to match what matters to you. The ranking updates live and is saved in this browser.", sliders, h("div", {}, reset)),
       tabs, detail,
@@ -499,6 +610,8 @@
         h("div", { class: "section" },
           h("div", { class: "eyebrow", text: "Concept #" + rank + " · " + c.niche }),
           h("h2", { text: c.name }), h("p", { class: "ink-2", style: "font-size:var(--step-1)", text: c.oneLiner }), h("p", { text: c.pitch }),
+          h("div", { class: "chips" }, askBtn("Pressure-test this", `Pressure-test ${c.name} for my studio: the biggest risks, what to validate first, and what you would change.`),
+            askBtn("Adapt it to my studio", `Adapt the ${c.name} plan to my studio's team, budget and skills. What changes in scope, team, timeline and money?`)),
           h("div", { class: "chips" }, (c.genreTags || []).map((t) => h("span", { class: "chip accent", text: t }))),
           h("dl", { class: "kv" }, h("dt", { text: "Audience" }), h("dd", { text: c.audience }), h("dt", { text: "Comparables" }), h("dd", { text: (c.comps || []).join(", ") }),
             h("dt", { text: "Session" }), h("dd", { text: c.sessionLength }), h("dt", { text: "Art direction" }), h("dd", { text: c.artDirection }))),
@@ -616,6 +729,8 @@
     });
     label();
   }
+
+  window.Atlas = { h, data: () => D, ranked: rankedConcepts };
 
   async function start() {
     const main = document.getElementById("main");

@@ -2,11 +2,41 @@
   "headline": "Cozy players are buying, but cozy games are flooding in. Win with co-op, a fresh setting and one clear hook.",
   "subhead": "Cozy games reach commercial scale more than twice as often as the average Steam game, yet cozy releases have doubled every year since 2023. The open space is co-op, couples play and survival-lite crafting in settings that aren't another pastoral farm.",
   "kpis": [
-    { "value": "1,041", "label": "Cozy-tagged Steam releases in 2026 so far (to 27 Sep), up 143% on the same weeks of 2025", "source": "Steam Page Analyzer", "sourceUrl": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report", "confidence": "medium" },
-    { "value": "11% vs 4.2%", "label": "Cozy games reaching 1,000+ Steam reviews (about $150k gross) vs all Steam games", "source": "Steam Page Analyzer", "sourceUrl": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report", "confidence": "medium" },
-    { "value": "0.4% → 3.1%", "label": "Share of $100k+ Steam games that describe themselves as cozy, 2022 to 2025", "source": "GameDiscoverCo", "sourceUrl": "https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about", "confidence": "high" },
-    { "value": "45% vs 3%", "label": "Cozy games priced $20+ vs under $5 that reach 1,000 reviews", "source": "Steam Page Analyzer", "sourceUrl": "https://www.steampageanalyzer.com/niches/cozy", "confidence": "medium" },
-    { "value": "0.10×", "label": "First-week sales per wishlist for games over $10 (100k wishlists ≈ 10k copies)", "source": "GameDiscoverCo", "sourceUrl": "https://newsletter.gamediscover.co/p/steam-the-new-wishlists-to-first", "confidence": "high" }
+    {
+      "value": "1,041",
+      "label": "Cozy-tagged Steam releases in 2026 so far (to 27 Sep), up 143% on the same weeks of 2025",
+      "source": "Steam Page Analyzer",
+      "sourceUrl": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+      "confidence": "medium"
+    },
+    {
+      "value": "11% vs 4.2%",
+      "label": "Cozy games reaching 1,000+ Steam reviews (about $150k gross) vs all Steam games",
+      "source": "Steam Page Analyzer",
+      "sourceUrl": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+      "confidence": "medium"
+    },
+    {
+      "value": "0.4% → 3.1%",
+      "label": "Share of $100k+ Steam games that describe themselves as cozy, 2022 to 2025",
+      "source": "GameDiscoverCo",
+      "sourceUrl": "https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about",
+      "confidence": "high"
+    },
+    {
+      "value": "45% vs 3%",
+      "label": "Cozy games priced $20+ vs under $5 that reach 1,000 reviews",
+      "source": "Steam Page Analyzer",
+      "sourceUrl": "https://www.steampageanalyzer.com/niches/cozy",
+      "confidence": "medium"
+    },
+    {
+      "value": "0.10×",
+      "label": "First-week sales per wishlist for games over $10 (100k wishlists ≈ 10k copies)",
+      "source": "GameDiscoverCo",
+      "sourceUrl": "https://newsletter.gamediscover.co/p/steam-the-new-wishlists-to-first",
+      "confidence": "high"
+    }
   ],
   "keyFindings": [
     {
@@ -47,9 +77,21 @@
       "howItWorks": "One price, no in-game purchases. Big free content updates restart word of mouth and sales.",
       "bestFor": "Deep systemic games with a long tail (life sims, builders, co-op)",
       "typicalPrice": "$14.99–24.99",
-      "examples": ["Stardew Valley", "Fields of Mistria", "Dorfromantik", "Tiny Glade"],
-      "pros": ["Highest goodwill; reviews stay high", "Each update is a marketing beat and a sale", "Simple to build and run"],
-      "cons": ["Revenue is front-loaded; you need a hit or a long tail", "Free updates cost dev time with no direct revenue"],
+      "examples": [
+        "Stardew Valley",
+        "Fields of Mistria",
+        "Dorfromantik",
+        "Tiny Glade"
+      ],
+      "pros": [
+        "Highest goodwill; reviews stay high",
+        "Each update is a marketing beat and a sale",
+        "Simple to build and run"
+      ],
+      "cons": [
+        "Revenue is front-loaded; you need a hit or a long tail",
+        "Free updates cost dev time with no direct revenue"
+      ],
       "note": "The default for your first game. Stardew sold 11M+ copies in 2024 alone on the back of a free update."
     },
     {
@@ -58,9 +100,21 @@
       "howItWorks": "Sell an unfinished but polished game on Steam, update it in public, then relaunch at 1.0 as a second marketing beat.",
       "bestFor": "Systemic, content-driven games with an engaged community",
       "typicalPrice": "$14.99–24.99, raised slightly at 1.0",
-      "examples": ["Fields of Mistria", "Dinkum", "Potion Craft", "Starsand Island"],
-      "pros": ["Revenue arrives 12–18 months earlier", "Players help design the game", "Two launches instead of one"],
-      "cons": ["A buggy EA launch hurts permanently (see Mirthwood)", "Needs a reliable update cadence"],
+      "examples": [
+        "Fields of Mistria",
+        "Dinkum",
+        "Potion Craft",
+        "Starsand Island"
+      ],
+      "pros": [
+        "Revenue arrives 12–18 months earlier",
+        "Players help design the game",
+        "Two launches instead of one"
+      ],
+      "cons": [
+        "A buggy EA launch hurts permanently (see Mirthwood)",
+        "Needs a reliable update cadence"
+      ],
       "note": "Fields of Mistria: 100k in EA week one, 98% positive, 1M+ at 1.0. Only do it if the first hour is already polished."
     },
     {
@@ -69,9 +123,19 @@
       "howItWorks": "Add-on content after launch: new regions, story chapters, cosmetic packs, soundtrack.",
       "bestFor": "Games with a satisfied player base 6+ months after launch",
       "typicalPrice": "$4.99–14.99 per pack; expansions up to $24.99",
-      "examples": ["Dredge", "Animal Crossing: New Horizons", "A Little to the Left", "Disney Dreamlight Valley"],
-      "pros": ["Monetizes your biggest fans", "Expansion launches bring base-game sales spikes"],
-      "cons": ["Too early or too thin reads as a cash grab"],
+      "examples": [
+        "Dredge",
+        "Animal Crossing: New Horizons",
+        "A Little to the Left",
+        "Disney Dreamlight Valley"
+      ],
+      "pros": [
+        "Monetizes your biggest fans",
+        "Expansion launches bring base-game sales spikes"
+      ],
+      "cons": [
+        "Too early or too thin reads as a cash grab"
+      ],
       "note": "Plan one paid expansion 6–9 months after 1.0. A $4.99 supporter pack at launch is a cheap extra (Rusty's Retirement: 11% attach)."
     },
     {
@@ -80,9 +144,20 @@
       "howItWorks": "A $5–10 game with one strong hook, often an idle or desktop toy, plus an optional supporter pack.",
       "bestFor": "A first small release to build a Steam following and cash flow",
       "typicalPrice": "$4.99–9.99",
-      "examples": ["Rusty's Retirement", "Webfishing", "Townscaper", "Spirit City: Lofi Sessions"],
-      "pros": ["3–9 month scope", "Spreads well on social and Twitch"],
-      "cons": ["Low revenue per player; most cheap games never reach 1,000 reviews", "Idle and desktop supply is flooding (+150% in 2026)"],
+      "examples": [
+        "Rusty's Retirement",
+        "Webfishing",
+        "Townscaper",
+        "Spirit City: Lofi Sessions"
+      ],
+      "pros": [
+        "3–9 month scope",
+        "Spreads well on social and Twitch"
+      ],
+      "cons": [
+        "Low revenue per player; most cheap games never reach 1,000 reviews",
+        "Idle and desktop supply is flooding (+150% in 2026)"
+      ],
       "note": "Good as a studio launchpad if the hook is distinctive. Not a business on its own unless it breaks out."
     },
     {
@@ -91,9 +166,18 @@
       "howItWorks": "Apple Arcade, Game Pass or Netflix pay up front for exclusivity or a day-one slot, then you release on other platforms.",
       "bestFor": "Funding production or reducing risk on a polished vertical slice",
       "typicalPrice": "Deal-based (undisclosed)",
-      "examples": ["Hello Kitty Island Adventure", "Wylde Flowers"],
-      "pros": ["Guaranteed money before launch", "Platform marketing"],
-      "cons": ["Can cannibalize sales on that platform", "Deals are scarce and slow"],
+      "examples": [
+        "Hello Kitty Island Adventure",
+        "Wylde Flowers"
+      ],
+      "pros": [
+        "Guaranteed money before launch",
+        "Platform marketing"
+      ],
+      "cons": [
+        "Can cannibalize sales on that platform",
+        "Deals are scarce and slow"
+      ],
       "note": "Hello Kitty Island Adventure and Wylde Flowers used Apple Arcade to launch, then sold on Steam and Switch."
     },
     {
@@ -102,9 +186,22 @@
       "howItWorks": "Free to download, revenue from in-game purchases, which needs live ops and server spend.",
       "bestFor": "Funded teams with live-service and user-acquisition expertise",
       "typicalPrice": "Free",
-      "examples": ["Palia", "Infinity Nikki", "Animal Crossing: Pocket Camp", "Cats & Soup", "Bongo Cat"],
-      "pros": ["Huge reach", "High ceiling"],
-      "cons": ["Needs MMO-scale retention economics (Palia's studio was sold)", "Cozy players punish aggressive monetization", "Bongo Cat hit 194k concurrent players and still wasn't profitable"],
+      "examples": [
+        "Palia",
+        "Infinity Nikki",
+        "Animal Crossing: Pocket Camp",
+        "Cats & Soup",
+        "Bongo Cat"
+      ],
+      "pros": [
+        "Huge reach",
+        "High ceiling"
+      ],
+      "cons": [
+        "Needs MMO-scale retention economics (Palia's studio was sold)",
+        "Cozy players punish aggressive monetization",
+        "Bongo Cat hit 194k concurrent players and still wasn't profitable"
+      ],
       "note": "Not for a first game from a small studio."
     },
     {
@@ -113,9 +210,17 @@
       "howItWorks": "Free experiences inside Roblox, monetized with game passes and items paid out through DevEx.",
       "bestFor": "Cheap, fast loop testing or a parallel brand channel",
       "typicalPrice": "Free; items and passes in Robux",
-      "examples": ["Grow a Garden"],
-      "pros": ["Huge young audience (Grow a Garden peaked at 22M concurrent)", "Weeks to ship, not years"],
-      "cons": ["Winner-takes-most", "A different skill set and audience from premium PC"],
+      "examples": [
+        "Grow a Garden"
+      ],
+      "pros": [
+        "Huge young audience (Grow a Garden peaked at 22M concurrent)",
+        "Weeks to ship, not years"
+      ],
+      "cons": [
+        "Winner-takes-most",
+        "A different skill set and audience from premium PC"
+      ],
       "note": "Worth a small experiment once your main game is underway, not instead of it."
     },
     {
@@ -124,10 +229,363 @@
       "howItWorks": "Once a game has fans: console and mobile ports, plush, soundtrack, board games, concerts, film rights.",
       "bestFor": "Established hits",
       "typicalPrice": "Varies",
-      "examples": ["Stardew Valley (concert tour, cookbook)", "Dorfromantik (board game)", "Dredge (film deal)"],
-      "pros": ["Revenue that doesn't need a new game"],
-      "cons": ["Only works after the game has a following"],
+      "examples": [
+        "Stardew Valley (concert tour, cookbook)",
+        "Dorfromantik (board game)",
+        "Dredge (film deal)"
+      ],
+      "pros": [
+        "Revenue that doesn't need a new game"
+      ],
+      "cons": [
+        "Only works after the game has a following"
+      ],
       "note": "Design a memorable mascot or character early. It's what makes merch possible later."
+    }
+  ],
+  "decisions": [
+    {
+      "topic": "What to make",
+      "call": "A co-op, no-fail survival-lite game in a setting that isn't a farm. Our pick: Driftgarden, a garden on a houseboat for 1–4 players.",
+      "why": "It sits on the two strongest data-backed gaps at once: cozy crafting/survival-lite (demand 9, supply 5) and co-op for 2–4 (demand 9, supply 6). Ocean settings are almost empty (supply 3).",
+      "evidence": [
+        {
+          "text": "28% of survival-craft games reach 1,000 reviews, best of 23 niches",
+          "link": "#gaps"
+        },
+        {
+          "text": "Webfishing: solo dev, est. 1.3M copies, 97% positive",
+          "game": "webfishing"
+        },
+        {
+          "text": "Dinkum: solo dev, 1M+ on PC",
+          "game": "dinkum"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "Who it's for",
+      "call": "Friend groups and couples aged 18–40 who play cozy games together and find Raft or Valheim too stressful.",
+      "why": "Players keep asking for cozy co-op and couples games and get pointed to stressful titles. 58% of women gamers report toxicity in gaming spaces, so a co-op game that is safe by design is a selling point.",
+      "evidence": [
+        {
+          "text": "Couples co-op: demand 8, supply 4",
+          "link": "#gaps"
+        },
+        {
+          "text": "Reddit couples threads answered with It Takes Two, A Way Out",
+          "link": "#gaps"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "What not to make",
+      "call": "No straight farming sim, life sim, shop sim or idle game as your first game.",
+      "why": "These are where supply is exploding: 350 farming sims shipped on Steam in 2025, shop sims are up 634% and idle games 150% in 2026. The median shop sim grosses about $70k.",
+      "evidence": [
+        {
+          "text": "Farming supply 9, life sim 9, idle 10",
+          "link": "#gaps"
+        },
+        {
+          "text": "Supermarket Simulator is the exception that hides a weak median",
+          "game": "supermarket-simulator"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "topic": "Price and business model",
+      "call": "$17.99 in Early Access, $19.99 at 1.0. Free content updates, a $4.99 supporter pack, then a paid expansion. No free-to-play, gacha or premium currency.",
+      "why": "45% of cozy games at $20+ reach 1,000 reviews against 2.7% under $5. Cozy players punish aggressive monetization, and free-to-play needs MMO-scale money.",
+      "evidence": [
+        {
+          "text": "Infinity Nikki: 20M+ downloads, 56% positive on Steam",
+          "game": "infinity-nikki"
+        },
+        {
+          "text": "Palia: $49M raised, studio sold",
+          "game": "palia"
+        },
+        {
+          "text": "Stardew sold 11M+ in 2024 off a free update",
+          "game": "stardew-valley"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "Platforms",
+      "call": "Steam and Steam Deck first. Switch 2 and PS5 only after PC proves itself, through a porting partner.",
+      "why": "Steam gives the data and the festivals. Switch 2 sold almost 20M units, but indies report weak eShop sales and fast visibility decay.",
+      "evidence": [
+        {
+          "text": "Fields of Mistria went PC Early Access → 1.0 → consoles",
+          "game": "fields-of-mistria"
+        },
+        {
+          "text": "Switch 2 indie sales trend: declining",
+          "link": "#trends"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "topic": "How to launch",
+      "call": "Steam page by month 4, 2,000+ wishlists before Next Fest, 20,000+ at Early Access launch. Simplified Chinese from day one.",
+      "why": "Expect about 0.10–0.15 first-week sales per wishlist. Games under ~2k wishlists see little lift from Next Fest. 26% of Rusty's Retirement sales came from China.",
+      "evidence": [
+        {
+          "text": "Wishlist conversion benchmarks",
+          "link": "#monetization"
+        },
+        {
+          "text": "Rusty's Retirement: 26% of sales from China",
+          "game": "rustys-retirement"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "topic": "Team and money",
+      "call": "5–6 people. Hire a network programmer first, keep burn under about $70k a month, own your IP, and fund game two from revenue.",
+      "why": "The breakouts came from 1–4 person teams, while heavily funded cozy studios shrank or closed: Palia, Fae Farm, Wanderstop.",
+      "evidence": [
+        {
+          "text": "Copies sold per team member",
+          "link": "#outliers"
+        },
+        {
+          "text": "Wanderstop: acclaimed, studio closed",
+          "game": "wanderstop"
+        }
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "next90": [
+    {
+      "when": "Weeks 1–2",
+      "what": "Write the one-sentence hook and capsule sketch. Show both to 20 cozy players; keep the version they can repeat back to you."
+    },
+    {
+      "when": "Weeks 1–4",
+      "what": "Recruit the network programmer (or confirm a co-founder can do it). Start a 2-player prototype: plant, fish, sail, together."
+    },
+    {
+      "when": "Weeks 2–12",
+      "what": "Post one short clip a week on TikTok, Shorts and Bluesky. Track saves and shares per hook, not views."
+    },
+    {
+      "when": "Weeks 5–10",
+      "what": "Playtest with 5 pairs of friends or couples. Go only if 3 of 5 pairs play 45+ minutes without being asked."
+    },
+    {
+      "when": "Weeks 8–12",
+      "what": "Steam page live: 'cozy co-op survival' in the first line, GIF screenshots, Simplified Chinese page. Target 12%+ visit-to-wishlist."
+    },
+    {
+      "when": "Week 12",
+      "what": "Go/no-go review against the kill criteria. If co-op isn't fun, pivot to Lantern Stall (couples, simpler tech)."
+    }
+  ],
+  "suggestedQuestions": [
+    "If I only have $200k and 3 people, what should I build?",
+    "Pressure-test Driftgarden: what is most likely to kill it?",
+    "Which outliers should I copy, and exactly what should I take from each?",
+    "Compare Driftgarden and Lantern Stall for a team with no network programmer.",
+    "What's the cheapest way to validate demand before I quit my job?",
+    "Which publishers should I pitch, and with what numbers?"
+  ],
+  "viewTakeaways": {
+    "trends": {
+      "text": "Cozy is still growing, but supply is growing faster. The rising trends that favor a small team are co-op hangouts, cozy hybrids and the Chinese market. Farming sims and shop sims have peaked.",
+      "link": "#gaps",
+      "linkText": "See where that leaves room"
+    },
+    "gaps": {
+      "text": "The open lanes are about who you play with (co-op, couples, older players) and where (ocean, sci-fi, non-Western settings), not new verbs on a farm. Survival-lite crafting has the strongest hard evidence.",
+      "link": "#concepts",
+      "linkText": "See the concepts built on these gaps"
+    },
+    "games": {
+      "text": "Most hits are cheap to make and deep to play: tiny teams, $15–25, one satisfying action that reads in a five-second clip, and years of free updates. Big budgets and big IP don't transfer to a new studio.",
+      "link": "#outliers",
+      "linkText": "See the outliers"
+    },
+    "monetization": {
+      "text": "Sell once at $15–25, update for free, add paid DLC later. That model sits behind nearly every sustainable cozy studio here. Free-to-play is where the cautionary tales live.",
+      "link": "#concepts",
+      "linkText": "See each concept's money plan"
+    },
+    "playbook": {
+      "text": "The order matters more than any single step: prove the fun with a prototype, put up the Steam page early, use wishlists as the go/no-go signal, then decide whether to launch in Early Access.",
+      "link": "#overview",
+      "linkText": "See your first 90 days"
+    },
+    "concepts": {
+      "text": "Driftgarden ranks first on the default weights because it sits on two gaps at once. Lantern Stall is the better first game if your team can't build online multiplayer. Move the weights to match your studio.",
+      "link": "#ask",
+      "linkText": "Ask which fits your studio"
+    },
+    "outliers": {
+      "text": "The overperformers share a pattern: tiny team, one clear hook, friends or clips doing the marketing. The underperformers share one too: spending ahead of proof. Acclaim, reach and IP alone didn't save anyone.",
+      "link": "#concepts",
+      "linkText": "See how the concepts use these lessons"
+    }
+  },
+  "outliers": [
+    {
+      "gameId": "stardew-valley",
+      "name": "Stardew Valley",
+      "type": "Overperformer",
+      "stat": "1 person · $14.99 · 50M copies",
+      "whatHappened": "A solo developer's farming game, still selling faster ten years later: 11M+ copies in 2024 alone after the free 1.6 update.",
+      "lesson": "Free updates are marketing. Each one restarts word of mouth and sales.",
+      "stealThis": "Plan two large free updates after launch and treat each as a relaunch with a trailer and a sale.",
+      "appliesTo": [
+        "driftgarden",
+        "lantern-stall"
+      ]
+    },
+    {
+      "gameId": "webfishing",
+      "name": "Webfishing",
+      "type": "Overperformer",
+      "stat": "1 person · $4.99 · est. 1.3M copies",
+      "whatHappened": "A tiny, jam-born fishing hangout spread through friend groups and reached 97% positive. It broke the 'cheap games don't sell' rule.",
+      "lesson": "When friends must buy it to play together, a low price acts as a multiplier, not a ceiling.",
+      "stealThis": "Make co-op the reason to buy, and offer a friend 4-pack.",
+      "appliesTo": [
+        "driftgarden",
+        "lantern-stall"
+      ]
+    },
+    {
+      "gameId": "rustys-retirement",
+      "name": "Rusty's Retirement",
+      "type": "Overperformer",
+      "stat": "1 person · $6.99 · 500k+ copies",
+      "whatHappened": "A desktop idle farm that sits at the bottom of the screen. 26% of its Steam sales came from China, and a $4 supporter pack added about $111k.",
+      "lesson": "A format nobody had seen plus Chinese localization beat a bigger game.",
+      "stealThis": "Ship Simplified Chinese at launch and add a supporter pack.",
+      "appliesTo": [
+        "sill",
+        "driftgarden"
+      ]
+    },
+    {
+      "gameId": "tiny-glade",
+      "name": "Tiny Glade",
+      "type": "Overperformer",
+      "stat": "2 people · $14.99 · 616k in under a month",
+      "whatHappened": "A goal-less castle-building toy reached 1.3M wishlists before launch, almost entirely from GIFs and short clips.",
+      "lesson": "If the core action is satisfying in five seconds, social video does the marketing.",
+      "stealThis": "Polish the one action people will clip (for Driftgarden: a new room snapping onto the boat).",
+      "appliesTo": [
+        "driftgarden",
+        "quilt-porch"
+      ]
+    },
+    {
+      "gameId": "fields-of-mistria",
+      "name": "Fields of Mistria",
+      "type": "Overperformer",
+      "stat": "Small team · $13.99 · 1M+ at 1.0",
+      "whatHappened": "Entered the most crowded niche (farming) and still won: 100k in Early Access week one, about two years of public updates at 98% positive, 1M+ by 1.0, consoles after.",
+      "lesson": "Early Access works when the first hour is already polished and the update rhythm never breaks.",
+      "stealThis": "Copy the Early Access cadence and the 'PC first, consoles after 1.0' sequence.",
+      "appliesTo": [
+        "driftgarden"
+      ]
+    },
+    {
+      "gameId": "grow-a-garden",
+      "name": "Grow a Garden",
+      "type": "Surprise",
+      "stat": "Built in ~3 days · Roblox · 22M concurrent",
+      "whatHappened": "A teenager's idle gardening game on Roblox became one of the largest cozy audiences of any format in 2025, making about $12M in a single month from item sales.",
+      "lesson": "Gardening may be the largest cozy fantasy of all. Roblox can test a loop in weeks.",
+      "stealThis": "Test Driftgarden's garden loop cheaply as a Roblox experiment before or during production.",
+      "appliesTo": [
+        "bloom-harbor-roblox",
+        "driftgarden"
+      ]
+    },
+    {
+      "gameId": "supermarket-simulator",
+      "name": "Supermarket Simulator",
+      "type": "Surprise",
+      "stat": "Solo creator · est. 1.8M copies",
+      "whatHappened": "One of the biggest indie hits of 2024–2025, which triggered a flood of copycats. The median 'X Simulator' now grosses about $70k.",
+      "lesson": "One outlier makes a niche look rich. Check the median before entering.",
+      "stealThis": "Use the satisfying shop loop, but only with a twist the copycats lack (co-op, a setting).",
+      "appliesTo": [
+        "lantern-stall"
+      ]
+    },
+    {
+      "gameId": "bongo-cat",
+      "name": "Bongo Cat",
+      "type": "Cautionary",
+      "stat": "Free · 194k concurrent · not profitable",
+      "whatHappened": "Huge reach on Steam, with up to 194k people running it at once, but free with cosmetics didn't turn that into a business.",
+      "lesson": "Reach isn't revenue. Price the game.",
+      "stealThis": "Take the friends-on-your-desktop idea; don't take the business model.",
+      "appliesTo": [
+        "sill"
+      ]
+    },
+    {
+      "gameId": "palia",
+      "name": "Palia",
+      "type": "Cautionary",
+      "stat": "$49M raised · 10M players · studio sold",
+      "whatHappened": "A well-funded cozy MMO with millions of players went through repeated layoffs and was sold to Daybreak in 2024.",
+      "lesson": "A burn rate sized for a hit is fatal when results are merely good.",
+      "stealThis": "Keep the 'cozy online without combat' promise in a small co-op game with no servers to run.",
+      "appliesTo": [
+        "driftgarden"
+      ]
+    },
+    {
+      "gameId": "wanderstop",
+      "name": "Wanderstop",
+      "type": "Cautionary",
+      "stat": "Critically acclaimed · est. ~97k copies · studio closed",
+      "whatHappened": "Made best-of-2025 lists with a famous team and a top publisher, sold modestly, and the studio closed in 2026 when it couldn't fund its next game.",
+      "lesson": "Acclaim doesn't pay salaries. Narrative cozy is loved by critics and harder to sell.",
+      "stealThis": "Pair story with a replayable loop, and line up game two's funding before launch.",
+      "appliesTo": [
+        "lamplighters-rest"
+      ]
+    },
+    {
+      "gameId": "infinity-nikki",
+      "name": "Infinity Nikki",
+      "type": "Cautionary",
+      "stat": "20M+ downloads · 56% positive on Steam",
+      "whatHappened": "Massive reach and polish, but aggressive gacha monetization dragged its Steam reputation down.",
+      "lesson": "Cozy players notice and punish monetization that feels predatory.",
+      "stealThis": "Nothing on monetization. Cosmetics only, sold once.",
+      "appliesTo": [
+        "driftgarden",
+        "bloom-harbor-roblox"
+      ]
+    },
+    {
+      "gameId": "pokemon-pokopia",
+      "name": "Pokémon Pokopia",
+      "type": "Surprise",
+      "stat": "$69.99 · 5M+ in 5 months · Switch 2 only",
+      "whatHappened": "Nintendo's cozy life sim sold millions at full price, and created demand among people without a Switch 2 for 'something like it on PC'.",
+      "lesson": "Big IP launches create spillover demand for PC alternatives.",
+      "stealThis": "Position on Steam as the cozy co-op game for people who don't own the console.",
+      "appliesTo": [
+        "driftgarden"
+      ]
     }
   ]
 }

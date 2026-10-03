@@ -11,6 +11,13 @@
     "Once a quarter, ask Claude to re-run the cozy market research and update data/, then add a line to this change log."
   ],
   "changelog": [
-    { "date": "2026-10-03", "note": "First edition: 57 games, 26 niches, 15 trends, 21 benchmarks, 13 publishers and 6 ranked game concepts." }
+    {
+      "date": "2026-10-03",
+      "note": "Added the Briefing (seven decisions and a 90-day plan), the Outliers page, 'So what' takeaways on every page, and Ask the Atlas, a chat that answers from this data."
+    },
+    {
+      "date": "2026-10-03",
+      "note": "First edition: 57 games, 26 niches, 15 trends, 21 benchmarks, 13 publishers and 6 ranked game concepts."
+    }
   ]
 }
