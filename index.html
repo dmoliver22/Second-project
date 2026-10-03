@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cozy Market Atlas</title>
+<meta name="description" content="Analytics dashboard of the cozy game market: trends, gaps, successful games, monetization, studio playbook and ranked game concepts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="rail">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="2" y="2" width="28" height="28" rx="8" fill="var(--accent)"/>
+        <path d="M16 24c0-6 0-8 4-12M16 18c-3-1-6-3-6-7 4 0 6 3 6 7z" fill="none" stroke="var(--surface)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M20 12c1-3 3-4 5-4 0 3-2 5-5 4z" fill="var(--surface)"/>
+      </svg>
+      <div>
+        <div class="brand-name">Cozy Market Atlas</div>
+        <div class="brand-sub">studio research desk</div>
+      </div>
+    </div>
+    <nav class="nav" id="nav" aria-label="Sections"></nav>
+    <div class="rail-foot">
+      <span class="asof" id="asof"></span>
+      <button class="theme-toggle" id="theme-btn" type="button">Dark mode</button>
+    </div>
+  </aside>
+  <main class="main" id="main" tabindex="-1">
+    <div class="loading">Loading market data…</div>
+  </main>
+</div>
+<dialog class="drawer" id="game-drawer" aria-label="Game details">
+  <div class="drawer-close"><button class="btn drawer-x" type="button">Close</button></div>
+  <div class="drawer-inner drawer-body"></div>
+</dialog>
+<!-- ATLAS:DATA -->
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

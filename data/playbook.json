@@ -1,0 +1,278 @@
+{
+  "playbook": [
+    {
+      "phase": "Validate",
+      "step": "Pick a niche with data, not vibes",
+      "detail": "Check tag-level supply growth and success rates before choosing. Cozy overall: 11% of 2024-H1'25 releases hit 1,000 reviews (2.6x Steam) but releases grew +143% in 2026 vs Steam +45%. Avoid fastest-filling niches (Shop Keeper +634%, Idler +150%) unless you have a sharp twist; favor slow-filling high-odds niches (Survival Craft 28.3%, +39%).",
+      "benchmark": "1,000 reviews ~= $150k gross; Steam baseline 4.2% of games reach it",
+      "source": "https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest"
+    },
+    {
+      "phase": "Validate",
+      "step": "Treat 'cozy' as a mood layer on a real genre",
+      "detail": "Steam Page Analyzer: 'Cozy' is a mood tag layered on top of a genre and overlaps farming, life sim and puzzle. Define the genre hook first, the cozy tone second.",
+      "benchmark": "",
+      "source": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report"
+    },
+    {
+      "phase": "Validate",
+      "step": "Use 'cozy' explicitly in store copy",
+      "detail": "GameDiscoverCo found 'cozy' used as a primary descriptor by 3.1% of $100k+ Steam games in 2025 vs 0.4% in 2022 (+675%) - a label the audience reacts positively to.",
+      "benchmark": "0.4% -> 3.1% of $100k+ games (2022->2025)",
+      "source": "https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about"
+    },
+    {
+      "phase": "Pre-production",
+      "step": "Steam page live early; build to 2k wishlists before Next Fest",
+      "detail": "HTMAG Next Fest survey data: games see no meaningful Next Fest lift below ~2,000 pre-fest wishlists; Gold tier = 7,000-9,999 wishlists earned in-fest.",
+      "benchmark": "2,000+ wishlists pre-Next Fest; 7,000 wishlists ~= Popular Upcoming at launch",
+      "source": "https://howtomarketagame.com/2025/03/26/archive-january-2026-benchmarks-how-many-wishlists-can-i-get-from-steam-next-fest/"
+    },
+    {
+      "phase": "Pre-production",
+      "step": "Use wishlist velocity as a go/no-go signal",
+      "detail": "VG Insights: wishlist momentum is a strong success indicator, but mainly for games reaching 100k+ wishlists pre-launch; action/adventure out-wishlists other genres, so cozy games should benchmark against cozy peers.",
+      "benchmark": "100k+ pre-launch wishlists = strong predictor tier",
+      "source": "https://vginsights.com/assets/reports/VGI_Wishlist_Report_July_2025.pdf"
+    },
+    {
+      "phase": "Pre-production",
+      "step": "Short-form/social hook testing",
+      "detail": "Case study of a farming-adjacent game reaching 220,000 wishlists in 3 months (How To Market A Game). No session-verified, cozy-specific TikTok benchmark was found; test GIF/short-video hooks and track wishlist conversion per post.",
+      "benchmark": "220k wishlists in 3 months (single case study)",
+      "source": "https://howtomarketagame.com/2024/11/18/how-we-harvest-shadows-220000-wishlists-in-3-months/"
+    },
+    {
+      "phase": "Marketing",
+      "step": "Steam Next Fest timing",
+      "detail": "Enter Next Fest once the demo is polished and you already have 2k+ wishlists; Feb 2025 fest had 2,244 participating games (HTMAG survey n=208).",
+      "benchmark": "2,244 games per Next Fest (Feb 2025)",
+      "source": "https://howtomarketagame.com/2025/03/04/steam-next-fest-feb-2025/"
+    },
+    {
+      "phase": "Marketing",
+      "step": "Cozy showcases: Wholesome Direct, Day of the Devs and cozy-specific festivals",
+      "detail": "[PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Wholesome Direct (June, Summer Game Fest window) is the flagship cozy showcase; Day of the Devs is a curated indie showcase. Apply 6+ months ahead and line up a Steam page/demo for the traffic spike. No session-verified wishlist-per-showcase benchmarks were found.",
+      "benchmark": "",
+      "source": "https://wholesomegames.com/"
+    },
+    {
+      "phase": "Marketing",
+      "step": "Design for friends/co-op virality",
+      "detail": "GameDiscoverCo: post-Lethal Company, devs realized virality compounds with online co-op; co-op keywords up 1.4% -> 2.1% (2023-2025). Bongo Cat's friends-on-desktop feature coincided with continued player growth.",
+      "benchmark": "",
+      "source": "https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about"
+    },
+    {
+      "phase": "Launch",
+      "step": "Price premium, not cheap",
+      "detail": "Across cozy niches, sub-$5 titles almost never reach 1,000 reviews while $20+ titles do far better (correlation also reflects production value).",
+      "benchmark": "Cozy: <$5 2.7% vs $20+ 45.2%; Farming 1.7% vs 24.4%; Life sim 2% vs 34.2%; City builder $20+ 46.5%; Idler best at $10-14.99 (16.1%); Roguelike DB best at $15-19.99 (22.7%)",
+      "source": "https://www.steampageanalyzer.com/niches/cozy"
+    },
+    {
+      "phase": "Launch",
+      "step": "Early Access can work for systemic cozy games",
+      "detail": "Fields of Mistria: 100k downloads in EA week 1, 250k in month 1, 98% positive on 2,400+ reviews; 1.0 in Aug 2026 after ~2 years of EA, reportedly passing 1M copies around 1.0, then console ports announced.",
+      "benchmark": "100k week 1; 250k month 1",
+      "source": "https://destructoid.com/?p=576727"
+    },
+    {
+      "phase": "Launch",
+      "step": "Ship PC-native UX even if you plan mobile",
+      "detail": "Heartopia's Steam launch was ~66% positive mainly due to mobile-first UI and missing controller support, despite huge CCU.",
+      "benchmark": "66,027 peak CCU but ~66% rating",
+      "source": "https://www.notebookcheck.net/New-free-to-play-life-sim-lands-on-Steam-hits-15-100-player-peak-in-12-hours-with-350-reviews.1206511.0.html"
+    },
+    {
+      "phase": "Live Ops",
+      "step": "Steady content updates through Early Access",
+      "detail": "Fields of Mistria kept an Early Access roadmap of major updates to 1.0 while holding ~98% positive. [PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Cozy EA titles typically ship a major content update every ~2-4 months; no session-verified cadence benchmark was gathered.",
+      "benchmark": "",
+      "source": "https://rpgsite.net/news/20570-fields-of-mistria-full-release-date-1-0-steam-pc"
+    },
+    {
+      "phase": "Live Ops",
+      "step": "Don't over-build live service before product-market fit",
+      "detail": "Singularity 6 raised ~$49M for Palia, then cut staff in three rounds (Sept 2023-May 2024) and sold to Daybreak in July 2024 despite millions of players.",
+      "benchmark": "~$49M raised; ~85+ layoffs",
+      "source": "https://gameworldobserver.com/2024/07/02/daybreak-acquires-singularity-6-palia-1-0-launch"
+    },
+    {
+      "phase": "Expansion",
+      "step": "Console ports after PC proof",
+      "detail": "Fields of Mistria announced Switch/PS5/Xbox after its PC 1.0; Palia expanded to PS5/Xbox with the Elderwood expansion.",
+      "benchmark": "",
+      "source": "https://www.gamepro.de/artikel/fields-of-mistria-nintendo-switch-ps5-xbox-series-release,3417659.html"
+    },
+    {
+      "phase": "Expansion",
+      "step": "Roblox as a parallel channel",
+      "detail": "Grow a Garden (cozy gardening) peaked ~22M CCU; Roblox paid >$1.5B to creators in 2025. A small Roblox spin-off can test a cozy loop cheaply or extend a brand.",
+      "benchmark": "Top 10,000 Roblox creators >$110k/yr",
+      "source": "https://www.nasdaq.com/articles/can-robloxs-creator-economy-unlock-its-next-phase-monetization"
+    },
+    {
+      "phase": "Expansion",
+      "step": "Discount and regional pricing discipline",
+      "detail": "[PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Follow Steam's discount cooldown rules and regional pricing recommendations; join seasonal sales once launch velocity fades.",
+      "benchmark": "",
+      "source": "https://partner.steamgames.com/doc/marketing/discounts"
+    }
+  ],
+  "funding": [
+    {
+      "option": "Self-funding / bootstrapping + Early Access revenue",
+      "typicalTerms": "Keep 100% IP and revenue (minus platform fee); EA revenue funds the rest of development.",
+      "prosCons": "Pro: full control; Fields of Mistria shows EA can fund a cozy game to 1.0 (100k week-1 downloads). Con: needs a playable, compelling EA build and personal runway.",
+      "source": "https://destructoid.com/?p=576727"
+    },
+    {
+      "option": "Indie publisher deal",
+      "typicalTerms": "[PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Publisher advances development + marketing budget, recoups first, then splits net revenue; commonly cited splits range from 50/50 to 70/30 in the developer's favor after recoup, with IP usually staying with the developer for indie deals.",
+      "prosCons": "Pro: funding, marketing, ports, localization, QA. Con: recoupment can delay dev revenue; terms vary widely - get a lawyer. (No session-verified 2025-26 term survey gathered.)",
+      "source": "https://wholesomegames.com/"
+    },
+    {
+      "option": "Venture capital / large investor round",
+      "typicalTerms": "Equity in exchange for capital sized for live-service growth.",
+      "prosCons": "Con example: Singularity 6 raised ~$49M for cozy MMO Palia, then had three rounds of layoffs and was acquired by Daybreak. VC scale pushes toward live-service scope a small cozy team rarely needs.",
+      "source": "https://gamedeveloper.com/business/daybreak-acquires-struggling-palia-developer-singularity-6"
+    },
+    {
+      "option": "Grants (e.g. Epic MegaGrants, national/regional funds)",
+      "typicalTerms": "[PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Non-dilutive; Epic MegaGrants awards range from about $5k to $500k for Unreal projects; national programs (e.g. Canada Media Fund, UK Games Fund, Creative Europe) vary by country and often require matching funds.",
+      "prosCons": "Pro: no equity/recoup. Con: competitive, slow, eligibility constraints.",
+      "source": "https://www.unrealengine.com/en-US/megagrants"
+    },
+    {
+      "option": "Crowdfunding (Kickstarter)",
+      "typicalTerms": "[PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Backers pre-buy; platform fee ~5% plus payment processing. Cozy example: Coral Island raised roughly $1.6M on Kickstarter in 2021.",
+      "prosCons": "Pro: validates demand, builds community. Con: needs an existing audience and polished pitch; fulfillment obligations. No session-verified 2024-26 cozy Kickstarter benchmarks were gathered.",
+      "source": "https://www.kickstarter.com/discover/categories/games/video%20games"
+    },
+    {
+      "option": "Platform deals (Netflix, Apple Arcade, subscription services)",
+      "typicalTerms": "[PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Upfront fee/minimum guarantee for exclusivity or catalog inclusion; terms are private.",
+      "prosCons": "Pro: de-risks budget. Con: exclusivity limits Steam upside. Netflix is investing in cozy (Spirit Crossing cozy MMO).",
+      "source": "https://massivelyop.com/tag/cozy-gaming/"
+    },
+    {
+      "option": "Roblox creator economy",
+      "typicalTerms": "Revenue via Robux converted through Developer Exchange; Roblox paid >$1.5B to creators in 2025; top 1,000 creators averaged ~$0.8-1M.",
+      "prosCons": "Pro: zero distribution cost, huge audience. Con: young audience, monetization design, extreme hit concentration.",
+      "source": "https://create.roblox.com/docs/en-us/production/monetization/developer-exchange.md"
+    }
+  ],
+  "localization": [
+    {
+      "language": "Simplified Chinese",
+      "whyItMatters": "[PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Simplified Chinese is consistently one of the top two languages in the Steam Hardware & Software Survey. Session evidence: Chinese studio XD's cozy life sim Heartopia peaked at 66k Steam CCU, showing a large Chinese-speaking cozy audience and competition.",
+      "source": "https://store.steampowered.com/hwsurvey/"
+    },
+    {
+      "language": "Japanese",
+      "whyItMatters": "Japanese press covers Western cozy hits (e.g. Denfaminicogamer on Webfishing). [PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Japan is a strong Switch market, relevant for console ports of cozy games.",
+      "source": "https://news.denfaminicogamer.jp/news/250113f"
+    },
+    {
+      "language": "German",
+      "whyItMatters": "German outlets (PC Games Hardware, GamePro, Mein-MMO) regularly cover the cozy trend and cozy releases (Rusty's Retirement, Fields of Mistria ports), indicating an engaged cozy audience.",
+      "source": "https://www.pcgameshardware.de/Steam-Software-69900/News/Cozy-Games-treten-aus-der-Nische-hervor-und-haben-sich-als-Genre-etabliert-1503949/"
+    },
+    {
+      "language": "Traditional Chinese",
+      "whyItMatters": "Taiwanese outlet 4Gamers published a cozy-games Steam trend analysis in 2026; cheap incremental add once Simplified Chinese exists.",
+      "source": "https://www.4gamers.com.tw/news/detail/77165/cozy-games-steam-trend-data-analysis-2026"
+    },
+    {
+      "language": "Russian",
+      "whyItMatters": "Russian outlets reported on cozy/single-player growth on Steam in 2026. [PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Russian is a top-5 Steam language.",
+      "source": "https://shazoo.ru/2026/02/16/179713/milye-igry-i-taitly-s-vozmoznostiu-odinocnoi-igry-perezivaiut-stremitelnyi-rost-populiarnosti-v-steam"
+    },
+    {
+      "language": "French / Italian / Spanish / Brazilian Portuguese",
+      "whyItMatters": "French (Gameblog on Fields of Mistria 1.0) and Italian (Multiplayer.it on cozy growth) press cover the trend. [PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Spanish and Brazilian Portuguese are large Steam languages; Steamworks recommends localizing store pages at minimum.",
+      "source": "https://partner.steamgames.com/doc/store/localization"
+    },
+    {
+      "language": "Korean",
+      "whyItMatters": "[PRIOR KNOWLEDGE - not re-verified in this research session; confirm before relying on it] Common top-10 Steam language; often bundled with CJK localization pass.",
+      "source": "https://store.steampowered.com/hwsurvey/"
+    }
+  ],
+  "budgets": [
+    {
+      "scope": "Revenue break-even reference (any cozy game)",
+      "budgetRangeUSD": "1,000 Steam reviews ~= $150,000 gross",
+      "note": "Rule of thumb from Steam Page Analyzer. Steam takes a platform fee and refunds/VAT/regional pricing reduce net, so net is materially below gross. A game needs well above 1,000 reviews to repay a multi-person, multi-year budget.",
+      "source": "https://www.steampageanalyzer.com/niches/life-sim"
+    },
+    {
+      "scope": "Small premium cozy, 2-4 devs, 18 months",
+      "budgetRangeUSD": "Derived: ~$150k-$700k",
+      "note": "DERIVED ARITHMETIC, not a sourced survey: 2-4 people x 18 months x ~$4k-$10k fully loaded monthly cost per person (varies hugely by country), plus ~10-20% for audio, localization, QA and marketing. Cozy $20+ titles reach 1,000 reviews 45.2% of the time vs 2.7% under $5, so price for the budget.",
+      "source": "https://www.steampageanalyzer.com/niches/cozy"
+    },
+    {
+      "scope": "Solo/duo idle or desktop companion, 3-6 months",
+      "budgetRangeUSD": "Derived: ~$10k-$60k",
+      "note": "DERIVED ARITHMETIC: 1-2 people x 3-6 months x ~$4k-$5k/month. Only 5.6% of idlers reach 1,000 reviews and 54 can ship in a single week, so keep it cheap; best price band $10-14.99.",
+      "source": "https://www.steampageanalyzer.com/niches/idler"
+    },
+    {
+      "scope": "Co-op cozy survival-lite, 4-8 devs, 24-30 months",
+      "budgetRangeUSD": "Derived: ~$0.8M-$2.5M",
+      "note": "DERIVED ARITHMETIC: 4-8 people x 24-30 months x ~$6k-$10k/month plus netcode/QA overhead. Highest-odds niche (28.3% to 1,000 reviews) justifies larger scope, often with publisher funding.",
+      "source": "https://www.steampageanalyzer.com/niches/open-world-survival-craft"
+    },
+    {
+      "scope": "Cozy MMO / live service",
+      "budgetRangeUSD": "Tens of millions (Singularity 6 raised ~$49M)",
+      "note": "Not a first-project scope; Palia's developer still needed layoffs and a sale despite millions of players.",
+      "source": "https://gamedeveloper.com/business/daybreak-acquires-struggling-palia-developer-singularity-6"
+    }
+  ],
+  "failureModes": [
+    {
+      "mode": "Launching a generic farming/life sim into the flood",
+      "detail": "Farming sim: 1,198 unreleased pages queued; life sim: 3,074. Players and press voice fatigue with farming sims.",
+      "source": "https://www.steampageanalyzer.com/niches/farming-sim"
+    },
+    {
+      "mode": "Pricing too low",
+      "detail": "Under-$5 cozy titles reach 1,000 reviews only 2.7% of the time (farming 1.7%, life sim 2%, creature collector 1.8%) vs 24-46% for $20+ in the same niches.",
+      "source": "https://www.steampageanalyzer.com/niches/cozy"
+    },
+    {
+      "mode": "Too few wishlists before Next Fest",
+      "detail": "HTMAG data: no meaningful Next Fest lift below ~2,000 pre-fest wishlists; 7,000 is roughly the Popular Upcoming threshold.",
+      "source": "https://howtomarketagame.com/2025/03/26/archive-january-2026-benchmarks-how-many-wishlists-can-i-get-from-steam-next-fest/"
+    },
+    {
+      "mode": "Chasing the fastest-filling trend",
+      "detail": "Shop Keeper releases went from 65 to 477 in the same weeks year-on-year (+634%); Idler +150%; past success rates were earned before the flood.",
+      "source": "https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest"
+    },
+    {
+      "mode": "Asset-flip / AI-slop lookalikes",
+      "detail": "PC Gamer: 54 idle games in one week, many 'eerily similar'; visual sameness makes discoverability nearly impossible.",
+      "source": "https://pcgamer.com/gaming-industry/steam-week-in-review-54-idle-games-released-on-steam-last-week-and-many-look-eerily-similar"
+    },
+    {
+      "mode": "Over-scoped live service funded by VC",
+      "detail": "Palia's developer raised ~$49M, then three layoff rounds and acquisition by Daybreak (July 2024).",
+      "source": "https://gameworldobserver.com/2024/07/02/daybreak-acquires-singularity-6-palia-1-0-launch"
+    },
+    {
+      "mode": "Mobile-first UX on PC",
+      "detail": "Heartopia's Steam reception (~66%) was dragged down by lack of controller support and PC optimization.",
+      "source": "https://www.notebookcheck.net/New-free-to-play-life-sim-lands-on-Steam-hits-15-100-player-peak-in-12-hours-with-350-reviews.1206511.0.html"
+    },
+    {
+      "mode": "Treating 'cozy' as the genre",
+      "detail": "Cozy is a mood tag over a genre; games need a clear genre hook. Creature collectors (in Pokemon's shadow) show the weakest odds of measured niches (5.9%).",
+      "source": "https://www.steampageanalyzer.com/niches/creature-collector"
+    }
+  ]
+}

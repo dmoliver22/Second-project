@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+"""Check every data file the dashboard reads for the fields it needs.
+
+Run after editing anything in data/:  python3 scripts/validate_data.py
+Exits non-zero with a list of problems so CI can block a broken update.
+"""
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "data"
+problems = []
+
+
+def load(name):
+    path = DATA / name
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        problems.append(f"{name}: file missing")
+    except json.JSONDecodeError as e:
+        problems.append(f"{name}: invalid JSON ({e})")
+    return None
+
+
+def need(obj, keys, where):
+    for k in keys:
+        if k not in obj or obj[k] in (None, ""):
+            problems.append(f"{where}: missing '{k}'")
+
+
+def num_in(obj, key, lo, hi, where):
+    v = obj.get(key)
+    if not isinstance(v, (int, float)) or not lo <= v <= hi:
+        problems.append(f"{where}: '{key}' must be a number {lo}-{hi}, got {v!r}")
+
+
+meta = load("meta.json")
+if meta:
+    need(meta, ["title", "asOf", "methodology", "howToUpdate", "changelog"], "meta.json")
+
+market = load("market.json")
+if market:
+    need(market, ["trends", "benchmarks", "audience", "platforms"], "market.json")
+    for i, t in enumerate(market.get("trends", [])):
+        w = f"market.json trends[{i}] {t.get('name', '?')}"
+        need(t, ["name", "direction", "summary"], w)
+        num_in(t, "strength", 1, 5, w)
+        if t.get("direction") not in ("rising", "peaking", "declining"):
+            problems.append(f"{w}: direction must be rising|peaking|declining")
+    for i, r in enumerate(market.get("steamCozyReleasesByYear", [])):
+        need(r, ["year"], f"market.json steamCozyReleasesByYear[{i}]")
+
+games = load("games.json")
+if games is not None:
+    seen = set()
+    for i, g in enumerate(games):
+        w = f"games.json [{i}] {g.get('name', '?')}"
+        need(g, ["id", "name", "studio", "subgenre", "businessModel", "coreLoop", "monetization"], w)
+        if g.get("id") in seen:
+            problems.append(f"{w}: duplicate id '{g.get('id')}'")
+        seen.add(g.get("id"))
+        for k in ("priceUSD", "unitsOrPlayersMillions", "steamReviews", "steamPositivePct", "releaseYear"):
+            if g.get(k) is not None and not isinstance(g.get(k), (int, float)):
+                problems.append(f"{w}: '{k}' must be a number or null")
+
+niches = load("niches.json")
+if niches:
+    for i, n in enumerate(niches.get("niches", [])):
+        w = f"niches.json niches[{i}] {n.get('name', '?')}"
+        need(n, ["name", "supplyEvidence", "demandEvidence", "opportunityNote"], w)
+        num_in(n, "supply", 0, 10, w)
+        num_in(n, "demand", 0, 10, w)
+
+playbook = load("playbook.json")
+if playbook:
+    need(playbook, ["playbook", "funding", "localization", "budgets", "failureModes"], "playbook.json")
+
+insights = load("insights.json")
+if insights:
+    need(insights, ["headline", "subhead", "kpis", "keyFindings", "monetizationModels"], "insights.json")
+
+concepts = load("concepts.json")
+if concepts:
+    factors = [f["key"] for f in concepts.get("scoring", {}).get("factors", [])]
+    if not factors:
+        problems.append("concepts.json: scoring.factors is empty")
+    for i, c in enumerate(concepts.get("concepts", [])):
+        w = f"concepts.json concepts[{i}] {c.get('name', '?')}"
+        need(c, ["id", "name", "niche", "oneLiner", "pitch", "coreLoop", "features", "platforms", "pricing",
+                 "team", "budgetUSD", "devMonths", "milestones", "marketingPlan", "liveOps", "kpis",
+                 "killCriteria", "risks", "revenueScenarios"], w)
+        for f in factors:
+            s = c.get("scores", {}).get(f)
+            if not s or not isinstance(s.get("score"), (int, float)):
+                problems.append(f"{w}: scores.{f}.score missing")
+
+live = DATA / "live" / "steam.json"
+if live.exists():
+    try:
+        json.loads(live.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        problems.append(f"live/steam.json: invalid JSON ({e})")
+
+if problems:
+    print(f"{len(problems)} problem(s):")
+    for p in problems:
+        print("  -", p)
+    sys.exit(1)
+print("Data OK:", len(games or []), "games,", len((niches or {}).get("niches", [])), "niches,",
+      len((market or {}).get("trends", [])), "trends,", len((concepts or {}).get("concepts", [])), "concepts")

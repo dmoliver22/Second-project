@@ -1,0 +1,16 @@
+{
+  "title": "Cozy Market Atlas",
+  "asOf": "2026-10-03",
+  "version": 1,
+  "methodology": "Compiled on 3 Oct 2026 from Steam Page Analyzer, GameDiscoverCo, How To Market A Game, VG Insights, Gamalytic and Raijin estimates, publisher and developer statements, and press coverage. Every figure carries a source link and a confidence level. Page fetches were blocked in the research environment, so figures were taken from search-result summaries of the cited pages; spot-check any number before you put money behind it. Third-party Steam sales estimates often disagree with each other by 2–5x.",
+  "howToUpdate": [
+    "Edit the JSON files in data/: games.json for games, niches.json for gaps, market.json for trends and benchmarks, playbook.json for operations, concepts.json for game ideas, insights.json for the headline findings.",
+    "Run python3 scripts/validate_data.py to catch missing or malformed fields.",
+    "Run python3 scripts/build.py to rebuild the single-file dashboard in dist/.",
+    "Steam review counts and prices refresh every Monday through the GitHub Action (scripts/refresh_steam.py). You can also run the script yourself.",
+    "Once a quarter, ask Claude to re-run the cozy market research and update data/, then add a line to this change log."
+  ],
+  "changelog": [
+    { "date": "2026-10-03", "note": "First edition: 57 games, 26 niches, 15 trends, 21 benchmarks, 13 publishers and 6 ranked game concepts." }
+  ]
+}

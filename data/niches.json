@@ -1,0 +1,560 @@
+{
+  "_meta": {
+    "generated": "2026-10-03",
+    "method": "Web search summaries (Steam Page Analyzer niche index counted 2026-09-27, GameDiscoverCo, How To Market A Game, VG Insights, AARP, press). Direct page fetches were blocked by the network proxy and the session web-search budget was exhausted mid-research, so several niches have qualitative scores. Items marked [PRIOR KNOWLEDGE] or [QUALITATIVE ESTIMATE] or 'Derived' are not session-verified and should be confirmed.",
+    "scales": "supply 1-10 = 10 most crowded; demand 1-10 = 10 strongest commercial/player demand",
+    "keyBaseline": "Steam overall: 4.2% of games released Jan 2024-Jun 2025 reached 1,000 reviews; Steam release volume +45% YoY in 2026 (same weeks)."
+  },
+  "niches": [
+    {
+      "name": "Farming sim",
+      "supply": 9,
+      "demand": 8,
+      "supplyEvidence": "362 Farming Sim-tagged games released on Steam in 2025 (234 in 2024); 361 released in 2026 through late Sept (+37% vs same weeks of 2025); 1,198 more unreleased Farming Sim pages on Steam, 76 dated within 90 days. Press and players openly complain of farming-sim fatigue.",
+      "demandEvidence": "Of 412 farming sims released Jan 2024-Jun 2025, 8% reached 1,000 reviews (~$150k gross rule of thumb) vs 4.2% for all of Steam (1.9x). Price-sensitive: under $5 only 1.7% reached 1,000 reviews; $20+ reached 24.4%. Fields of Mistria hit 100k downloads in its first Early Access week and 250k in its first month, 98% positive on 2,400+ reviews.",
+      "exampleHits": [
+        "Stardew Valley",
+        "Fields of Mistria",
+        "Coral Island",
+        "Rusty's Retirement (idle farming hybrid)"
+      ],
+      "exampleMisses": [
+        "The sub-$5 farming long tail (1.7% reach 1,000 reviews)"
+      ],
+      "opportunityNote": "Demand is real but supply is the highest of any cozy niche and still accelerating. Only enter with a sharp hook (new setting, co-op-first, unusual verb) and premium production/price ($20+). Plain 'Stardew-like' is a red ocean.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/farming-sim",
+        "https://destructoid.com/?p=576727",
+        "https://primagames.com/gaming/are-there-too-many-farming-games-the-tiring-onslaught-of-cozy-farming-sims",
+        "https://www.reddit.com/r/CozyGamers/comments/1cp8exi/cozy_gaming_thats_not_farming/"
+      ],
+      "shortName": "Farming"
+    },
+    {
+      "name": "Social/romance life sim",
+      "supply": 9,
+      "demand": 8,
+      "supplyEvidence": "922 Life Sim-tagged games released in 2025 (614 in 2024); 1,043 in 2026 through late Sept (+53%); 3,074 unreleased Life Sim pages on Steam (largest pipeline measured).",
+      "demandEvidence": "Of 1,058 life sims released Jan 2024-Jun 2025, 8.6% reached 1,000 reviews (2.0x Steam). $20+ titles reached 34.2%; under $5 only 2%. Heartopia (XD, F2P online life sim) peaked at 66,027 concurrent on Steam in Feb 2026.",
+      "exampleHits": [
+        "Fields of Mistria",
+        "Heartopia",
+        "Stardew Valley"
+      ],
+      "exampleMisses": [
+        "Heartopia's PC version sat at ~66% positive at launch due to mobile-first UI/no controller support"
+      ],
+      "opportunityNote": "Crowded; differentiation must come from relationship depth/writing, adult casts, or under-served settings rather than more of the same loop. High pipeline means discoverability risk.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/life-sim",
+        "https://www.notebookcheck.net/New-free-to-play-life-sim-lands-on-Steam-hits-15-100-player-peak-in-12-hours-with-350-reviews.1206511.0.html",
+        "https://steambase.io/apps/heartopia",
+        "https://rpgsite.net/news/20570-fields-of-mistria-full-release-date-1-0-steam-pc"
+      ],
+      "shortName": "Life sim"
+    },
+    {
+      "name": "Cozy co-op/multiplayer (2-4 players)",
+      "supply": 6,
+      "demand": 9,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] GameDiscoverCo: share of all Steam games using 'co-op' in descriptions rose from 1.4% (2023) to 2.1% (2025) after the Lethal Company 'friendslop' wave, but most of that supply is horror/comedy co-op rather than cozy co-op.",
+      "demandEvidence": "GameDiscoverCo: co-op rising among top-selling Steam titles; strong increases in 'cosy', 'survival', 'build', 'crafting' keywords describe what people want to do with friends; co-op scales up/down within friend groups more easily than PvP. Webfishing (online cozy fishing hangout) peaked ~24k CCU, 98% positive. Open World Survival Craft (often co-op) had the best odds of 23 Steam niches (28.3% hit 1,000 reviews).",
+      "exampleHits": [
+        "Webfishing",
+        "Stardew Valley (co-op)",
+        "Palia (online)"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "One of the clearest gaps: cozy loops designed co-op-first (not co-op bolted on) for 2-4 friends or couples. Netcode cost is the barrier that keeps supply low for tiny teams.",
+      "sources": [
+        "https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about",
+        "https://www.gamereactor.eu/co-op-has-unsurprisingly-been-rising-massively-among-top-selling-steam-titles-1675523/",
+        "https://www.inverse.com/gaming/steam-webfishing-cozy-chatroom-game-animal-crossing",
+        "https://www.steampageanalyzer.com/niches/open-world-survival-craft"
+      ],
+      "shortName": "Co-op (2–4)"
+    },
+    {
+      "name": "Cozy MMO/online social",
+      "supply": 4,
+      "demand": 7,
+      "supplyEvidence": "Few credible entrants: Palia, Heartopia (XD), Netflix's announced Spirit Crossing. High cost: Palia's studio Singularity 6 raised ~$49M, laid off staff in multiple rounds (Sept 2023-May 2024, ~85+ people) and was acquired by Daybreak in July 2024.",
+      "demandEvidence": "Palia reported 4M+ players around its 2024 1.0 and later crossing 10M players (May 2026, per search summary); Heartopia peaked at 66k Steam CCU (Feb 2026). Webfishing shows demand for small-scale social hangouts.",
+      "exampleHits": [
+        "Palia (players)",
+        "Heartopia",
+        "Webfishing (small-scale social)"
+      ],
+      "exampleMisses": [
+        "Singularity 6 as a business (layoffs, sale to Daybreak)"
+      ],
+      "opportunityNote": "Demand exists, but this is not a small-studio niche. The accessible version is a 'small online hangout' (Webfishing model) or session-based cozy co-op, not a persistent MMO.",
+      "sources": [
+        "https://gameworldobserver.com/2024/07/02/daybreak-acquires-singularity-6-palia-1-0-launch",
+        "https://gamedeveloper.com/business/daybreak-acquires-struggling-palia-developer-singularity-6",
+        "https://en.wikipedia.org/wiki/Palia",
+        "https://steambase.io/apps/heartopia",
+        "https://massivelyop.com/tag/cozy-gaming/"
+      ],
+      "shortName": "Cozy MMO"
+    },
+    {
+      "name": "Decorating/organizing",
+      "supply": 7,
+      "demand": 6,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Steam Page Analyzer notes 'Cozy' is a mood tag layered over genres; decorating is a common layer in cozy/life-sim releases (1,041 Cozy-tagged releases in 2026 to date). No dedicated count was verified this session.",
+      "demandEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Overall Cozy tag success rate 11% to 1,000 reviews (2.6x Steam) and 45.2% for $20+; no decorating-specific breakdown verified.",
+      "exampleHits": [
+        "Unpacking",
+        "A Little to the Left (prior knowledge)"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Mechanically saturated as a feature; best used as a layer on a stronger genre hook. Standalone short organizing games are a known quantity with clone pressure.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/cozy",
+        "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report"
+      ],
+      "shortName": "Decorating"
+    },
+    {
+      "name": "Cozy puzzle (short, premium)",
+      "supply": 7,
+      "demand": 6,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Steam Page Analyzer lists puzzle games among the genres the Cozy tag overlaps with; no puzzle-only count verified this session.",
+      "demandEvidence": "AARP: puzzle/logic is the #1 genre for US gamers 50+ (73% play), card/tile 69%, word 58%; 52.4M US gamers aged 50+. But >80% of them play on mobile and 30% only on smartphones, so premium PC puzzle demand is narrower.",
+      "exampleHits": [
+        "Projected Dreams (recommended in non-farming cozy lists)"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Steady, modest demand. Best upside is a puzzle game designed for older/accessibility-first players and ported to mobile/tablet.",
+      "sources": [
+        "https://gamedevreports.substack.com/p/aarp-45-of-50-aged-in-the-us-are",
+        "https://cozygamereviews.com/console-games/cozy-games-that-arent-farming/",
+        "https://www.steampageanalyzer.com/niches/cozy"
+      ],
+      "shortName": "Short puzzle"
+    },
+    {
+      "name": "Narrative cozy adventure",
+      "supply": 6,
+      "demand": 5,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Visual novels/narrative cozy titles (e.g. Coffee Talk) are routinely recommended as non-farming cozy options; no count verified.",
+      "demandEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Recommended in player threads as alternatives to farming, but no session-verified sales data for 2024-26 narrative cozy titles.",
+      "exampleHits": [
+        "Coffee Talk",
+        "Spiritfarer (prior knowledge)"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Critically loved, commercially harder; pair narrative with a replayable systemic loop or a strong cultural/setting hook.",
+      "sources": [
+        "https://cozygamereviews.com/console-games/cozy-games-that-arent-farming/",
+        "https://www.reddit.com/r/CozyGamers/comments/1cp8exi/cozy_gaming_thats_not_farming/"
+      ],
+      "shortName": "Narrative"
+    },
+    {
+      "name": "Shop/management sim (cafe, bakery, potion shop)",
+      "supply": 8,
+      "demand": 8,
+      "supplyEvidence": "Fastest-filling niche on Steam in 2026: 477 Shop Keeper-tagged games released Jan 1-Sept 27 2026 vs 65 in the same weeks of 2025 (+634%), against +45% for Steam overall.",
+      "demandEvidence": "Of 68 Shop Keeper games released Jan 2024-Jun 2025, 13.2% reached 1,000 reviews (3.1x Steam), the best rate among the cozy-adjacent niches measured besides survival craft. That cohort launched before the 2026 flood.",
+      "exampleHits": [
+        "Sticky Business (non-farming cozy recommendation)",
+        "Coffee Talk"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Historic demand strong but supply exploded 7x in 2026; past success rates will not hold. Enter only with distinctive fantasy/co-op twist and expect much tougher discoverability.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/shop-keeper",
+        "https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest",
+        "https://cozygamereviews.com/console-games/cozy-games-that-arent-farming/"
+      ],
+      "shortName": "Shop sim"
+    },
+    {
+      "name": "Town/city builder (relaxing)",
+      "supply": 6,
+      "demand": 8,
+      "supplyEvidence": "574 City Builder games released Jan 2024-Jun 2025 (all city builders, not only relaxing ones); relaxing/no-fail subset is smaller.",
+      "demandEvidence": "10.5% of city builders reached 1,000 reviews (2.5x Steam); $20+ titles reached 46.5%, the highest premium-price success rate measured. City builders are listed among cozy-tag overlaps.",
+      "exampleHits": [
+        "Townscaper / Tiny Glade / Dorfromantik (prior knowledge)"
+      ],
+      "exampleMisses": [
+        "Most sub-$10 city builders (2.6% at $5-9.99)"
+      ],
+      "opportunityNote": "Good premium niche: relaxing builder with a strong art hook at $15-25. Avoid low-price cluttered market.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/city-builder",
+        "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report"
+      ],
+      "shortName": "Town builder"
+    },
+    {
+      "name": "Creature collector/pet care",
+      "supply": 7,
+      "demand": 6,
+      "supplyEvidence": "552 Creature Collector games released in 2025 (431 in 2024); 516 in 2026 to date (+34%); 1,418 unreleased pages.",
+      "demandEvidence": "Only 5.9% of 693 creature collectors (Jan 2024-Jun 2025) reached 1,000 reviews (1.4x Steam) - weakest of the measured cozy-adjacent niches; $20+ did 27.3%. Pokemon's cozy spin-off Pokopia (Switch 2) now occupies the mainstream cozy-creature space.",
+      "exampleHits": [
+        "Pokopia (Nintendo, Switch 2)"
+      ],
+      "exampleMisses": [
+        "Sub-$5 creature collectors (1.8%)"
+      ],
+      "opportunityNote": "Crowded and overshadowed by Pokemon; pet care without battling, or creatures as co-op companions, is the less contested angle.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/creature-collector",
+        "https://www.fzine.com/culture/cosy-video-games"
+      ],
+      "shortName": "Creatures/pets"
+    },
+    {
+      "name": "Idle/desktop companion",
+      "supply": 10,
+      "demand": 7,
+      "supplyEvidence": "967 Idler games released Jan 2024-Jun 2025; Idler niche +150% in 2026; PC Gamer counted 54 idle games released in a single week, many 'eerily similar' / AI-slop.",
+      "demandEvidence": "Bongo Cat (free) peaked at 194,508 CCU, 5.7M players; Task Bar Hero ~66k concurrent at time of PC Gamer piece; Rusty's Retirement sold 100k in 5 days and 500k+ overall. But only 5.6% of idlers reached 1,000 reviews; best price band $10-14.99 (16.1%).",
+      "exampleHits": [
+        "Bongo Cat",
+        "Rusty's Retirement",
+        "Task Bar Hero"
+      ],
+      "exampleMisses": [
+        "Dozens of near-identical weekly desktop idlers (PC Gamer)"
+      ],
+      "opportunityNote": "Demand is real but hit-driven and the supply flood is extreme. Only viable as a cheap side project with a distinctive social/friends hook (Bongo Cat's friends-on-desktop) or as a companion to a main game.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/idler",
+        "https://pcgamer.com/gaming-industry/steam-week-in-review-54-idle-games-released-on-steam-last-week-and-many-look-eerily-similar",
+        "https://www.gamesmarket.global/bongo-cat-is-on-its-way-to-6-million-players",
+        "https://tracker.gg/population/steam/3419430",
+        "https://Techraptor.net/gaming/news/rustys-retirement-sales",
+        "https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest"
+      ],
+      "shortName": "Idle/desktop"
+    },
+    {
+      "name": "Cozy exploration (A Short Hike-like)",
+      "supply": 5,
+      "demand": 6,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified count; players list A Short Hike and Caravan SandWitch among the few non-farming cozy exploration picks.",
+      "demandEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] A Short Hike is a perennial recommendation in non-farming cozy threads; no 2024-26 sales numbers verified this session.",
+      "exampleHits": [
+        "A Short Hike",
+        "Caravan SandWitch"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Moderate gap; works best short, premium, with a strong traversal verb. Watch motion-sickness accessibility (a recurring player request).",
+      "sources": [
+        "https://cozygamereviews.com/console-games/cozy-games-that-arent-farming/",
+        "https://www.reddit.com/r/CozyGamers/comments/1cp8exi/cozy_gaming_thats_not_farming/"
+      ],
+      "shortName": "Exploration"
+    },
+    {
+      "name": "Cozy crafting/survival-lite",
+      "supply": 5,
+      "demand": 9,
+      "supplyEvidence": "Open World Survival Craft: only 90 releases in 2026 to date (+39%, below Steam's +45% growth) - a slow-filling niche.",
+      "demandEvidence": "Best odds of all 23 niches measured: 28.3% of Open World Survival Craft games (Jan 2024-Jun 2025) reached 1,000 reviews (6.7x the 4.2% Steam rate). GameDiscoverCo sees 'cosy', 'survival', 'build' and 'crafting' rising together among $100k+ games, i.e. what people want to do with friends.",
+      "exampleHits": [
+        "Open World Survival Craft cohort generally (28.3% success)"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Biggest data-backed gap: a no-death/low-stress survival-craft with co-op, cozy art and cozy tags captures a high-performing, slow-filling niche. Scope (3D open world, netcode) is the barrier.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/open-world-survival-craft",
+        "https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest",
+        "https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about"
+      ],
+      "shortName": "Survival-lite crafting"
+    },
+    {
+      "name": "Cozy roguelite/deckbuilder hybrid",
+      "supply": 6,
+      "demand": 6,
+      "supplyEvidence": "224 Roguelike Deckbuilders released in 2025 (143 in 2024); 316 in 2026 to date (+93%). Cozy-themed subset is a small fraction.",
+      "demandEvidence": "7.8% of 245 roguelike deckbuilders (Jan 2024-Jun 2025) reached 1,000 reviews (1.9x Steam); best band $15-19.99 at 22.7%.",
+      "exampleHits": [],
+      "exampleMisses": [],
+      "opportunityNote": "Cozy-themed deckbuilder is an underexplored mash-up but the parent genre is filling fast; design must be genuinely low-stress to win the cozy audience.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/roguelike-deckbuilder"
+      ],
+      "shortName": "Roguelite hybrid"
+    },
+    {
+      "name": "Cozy horror / spooky cozy",
+      "supply": 4,
+      "demand": 6,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified count for the cozy-horror crossover.",
+      "demandEvidence": "Players actively seek 'unexpected cozy games' with darker edges like Dredge (r/GirlGamers thread). Co-op horror ('friendslop') is a proven demand pattern per GameDiscoverCo.",
+      "exampleHits": [
+        "Dredge (cited by players as 'unexpected cozy')"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Promising tonal gap: cozy loops with mild mystery/spookiness; strong seasonal (Halloween) marketing hook.",
+      "sources": [
+        "https://www.reddit.com/r/GirlGamers/comments/1gts5m1/unexpected_cozy_games_eg_dredge/",
+        "https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about"
+      ],
+      "shortName": "Spooky cozy"
+    },
+    {
+      "name": "Cozy fishing",
+      "supply": 5,
+      "demand": 7,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified count; fishing is commonly a sub-feature in farming/life sims.",
+      "demandEvidence": "Webfishing (Oct 2024): ~24k peak CCU, 98% positive; one estimate ~1.3M copies / ~$5.6M gross (estimates vary widely). Japanese press covered it.",
+      "exampleHits": [
+        "Webfishing",
+        "Dredge"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Standalone fishing as a social hangout proved demand; combine with co-op/social.",
+      "sources": [
+        "https://raijin.gg/app/3146520/WEBFISHING",
+        "https://www.inverse.com/gaming/steam-webfishing-cozy-chatroom-game-animal-crossing",
+        "https://news.denfaminicogamer.jp/news/250113f"
+      ],
+      "shortName": "Fishing"
+    },
+    {
+      "name": "Cozy sports/racing",
+      "supply": 2,
+      "demand": 4,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified data; very few titles self-describe as cozy sports/racing.",
+      "demandEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified demand data; treat as speculative.",
+      "exampleHits": [],
+      "exampleMisses": [],
+      "opportunityNote": "Empty but unproven; validate with a cheap prototype before committing.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/cozy"
+      ],
+      "shortName": "Sports/racing"
+    },
+    {
+      "name": "Cozy mobile premium",
+      "supply": 5,
+      "demand": 4,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified count of premium cozy mobile releases.",
+      "demandEvidence": "AARP: >80% of 50+ gamers play on mobile, 30% smartphone-only, average $49 spend per six months - large audience but low spend. The biggest mobile cozy launch seen (Heartopia) is F2P, not premium.",
+      "exampleHits": [
+        "Heartopia (F2P, not premium)"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Mobile is a port/expansion channel for a PC cozy hit rather than a lead platform for premium.",
+      "sources": [
+        "https://gamedevreports.substack.com/p/aarp-45-of-50-aged-in-the-us-are",
+        "https://www.notebookcheck.net/New-free-to-play-life-sim-lands-on-Steam-hits-15-100-player-peak-in-12-hours-with-350-reviews.1206511.0.html"
+      ],
+      "shortName": "Mobile premium"
+    },
+    {
+      "name": "Roblox cozy experiences",
+      "supply": 9,
+      "demand": 10,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Roblox is a creator-flooded platform; Grow a Garden spawned many imitators (no count verified).",
+      "demandEvidence": "Grow a Garden (cozy gardening, launched Mar 2025) peaked at ~22M concurrent users (Aug 2025), the highest ever recorded. Roblox paid >$1.5B to creators in 2025; top 1,000 creators averaged ~$0.8-1M/yr, top 10,000 >$110k.",
+      "exampleHits": [
+        "Grow a Garden"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Enormous demand and real revenue, but a different skill set (live ops, monetization, young audience, trend speed). Viable as a parallel low-cost experiment or brand extension.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Grow_a_Garden",
+        "https://www.pocketgamer.biz/roblox-game-grow-a-garden-beats-steam-with-record-concurrent-user-high-of-89m",
+        "https://www.nasdaq.com/articles/can-robloxs-creator-economy-unlock-its-next-phase-monetization",
+        "https://respawn.outlookindia.com/gaming/gaming-news/robloxs-top-developers-average-339-million-in-annual-earnings"
+      ],
+      "shortName": "Roblox"
+    },
+    {
+      "name": "Cozy games for older adults / accessibility-first",
+      "supply": 3,
+      "demand": 7,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified count of cozy games explicitly designed for 50+ players.",
+      "demandEvidence": "AARP: 45% of US adults 50+ game (52.4M people); 45% of them play daily (52% of women); average 12 hours/week; puzzle/logic 73%, card/tile 69%, word 58%. AARP has published dedicated research on older gamers' accessibility preferences.",
+      "exampleHits": [],
+      "exampleMisses": [],
+      "opportunityNote": "Large, under-targeted audience. Best fit: puzzle/tile/word-adjacent cozy loops, big readable UI, no time pressure, mobile/tablet + PC. Spend is low, so keep budgets lean.",
+      "sources": [
+        "https://gamedevreports.substack.com/p/aarp-45-of-50-aged-in-the-us-are",
+        "https://www.aarp.org/pri/topics/technology/internet-media-devices/gamer-accessibility-preferences-older-adults/",
+        "https://www.aarp.org/pri/topics/technology/internet-media-devices/electronic-gaming-research-adults-50plus/"
+      ],
+      "shortName": "Older adults"
+    },
+    {
+      "name": "Cozy games for couples",
+      "supply": 4,
+      "demand": 8,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Couples' co-op threads mostly surface non-cozy games (It Takes Two, A Way Out, Portal 2) - a sign of thin cozy supply.",
+      "demandEvidence": "Recurring Reddit requests for co-op games to play with a partner (r/CoOpGaming); co-op rising among top sellers (GameDiscoverCo).",
+      "exampleHits": [
+        "Stardew Valley co-op",
+        "Chicory (recommended)"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Strong gap: 2-player cozy co-op with asymmetric roles, no time pressure, couch + online. Marketable via couple creators.",
+      "sources": [
+        "https://www.reddit.com/r/CoOpGaming/comments/1fg6t21/looking_for_co_op_recommendations/",
+        "https://www.reddit.com/r/CoOpGaming/comments/1f3dn71/please_recommend_a_steam_coop_game_to_play_with_a/",
+        "https://gummysearch.com/tools/best-products/co-op-recommendations/",
+        "https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about"
+      ],
+      "shortName": "Couples"
+    },
+    {
+      "name": "Cozy educational/learning",
+      "supply": 4,
+      "demand": 4,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified data.",
+      "demandEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified data.",
+      "exampleHits": [],
+      "exampleMisses": [],
+      "opportunityNote": "Unproven on Steam; possibly better via schools/grants/Roblox or mobile. Validate first.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/cozy"
+      ],
+      "shortName": "Educational"
+    },
+    {
+      "name": "Cozy sci-fi/space",
+      "supply": 4,
+      "demand": 6,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified count; most cozy releases skew pastoral/fantasy (farming 362, life sim 922 in 2025).",
+      "demandEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified sales data; survival-craft (which includes space-craft titles) has the strongest odds measured (28.3%).",
+      "exampleHits": [],
+      "exampleMisses": [],
+      "opportunityNote": "Setting differentiation against the pastoral flood; pairs naturally with survival-lite crafting.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/open-world-survival-craft",
+        "https://www.steampageanalyzer.com/niches/farming-sim",
+        "https://www.steampageanalyzer.com/niches/life-sim"
+      ],
+      "shortName": "Sci-fi"
+    },
+    {
+      "name": "Cozy ocean/underwater",
+      "supply": 3,
+      "demand": 6,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified count.",
+      "demandEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Fishing hits (Webfishing, Dredge) show water-themed demand; Dave the Diver is a known ocean hit (prior knowledge, not verified).",
+      "exampleHits": [
+        "Dredge",
+        "Webfishing"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Under-used setting; combine with fishing/exploration/crafting.",
+      "sources": [
+        "https://www.inverse.com/gaming/steam-webfishing-cozy-chatroom-game-animal-crossing",
+        "https://www.reddit.com/r/GirlGamers/comments/1gts5m1/unexpected_cozy_games_eg_dredge/"
+      ],
+      "shortName": "Ocean"
+    },
+    {
+      "name": "Non-Western/cultural settings",
+      "supply": 3,
+      "demand": 6,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Most cozy supply uses Western pastoral or generic fantasy settings; no count verified.",
+      "demandEvidence": "Chinese studio XD's Heartopia peaked at 66k Steam CCU; cozy-trend coverage across Taiwanese, German, Russian and Italian press shows broad international audience. Coral Island (Indonesian studio, Southeast Asian setting) and Venba (South Asian cooking narrative) are known examples (prior knowledge, sales not verified).",
+      "exampleHits": [
+        "Coral Island",
+        "Venba",
+        "Heartopia"
+      ],
+      "exampleMisses": [],
+      "opportunityNote": "Strong differentiation lever and press hook in a homogeneous market; authenticity (team from that culture) matters.",
+      "sources": [
+        "https://steambase.io/apps/heartopia",
+        "https://www.4gamers.com.tw/news/detail/77165/cozy-games-steam-trend-data-analysis-2026",
+        "https://www.pcgameshardware.de/Steam-Software-69900/News/Cozy-Games-treten-aus-der-Nische-hervor-und-haben-sich-als-Genre-etabliert-1503949/",
+        "https://shazoo.ru/2026/02/16/179713/milye-igry-i-taitly-s-vozmoznostiu-odinocnoi-igry-perezivaiut-stremitelnyi-rost-populiarnosti-v-steam"
+      ],
+      "shortName": "Non-Western settings"
+    },
+    {
+      "name": "Cozy VR/MR",
+      "supply": 3,
+      "demand": 3,
+      "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified data.",
+      "demandEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified data; VR installed base is small relative to PC/Switch/mobile.",
+      "exampleHits": [],
+      "exampleMisses": [],
+      "opportunityNote": "Low supply but also low, uncertain demand; not recommended as a first title.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/cozy"
+      ],
+      "shortName": "VR/MR"
+    }
+  ],
+  "playerRequests": [
+    {
+      "request": "Cozy games that are NOT farming sims",
+      "evidence": "Recurring threads ('Cozy gaming that's not farming'); press piece on the 'tiring onslaught of cozy farming sims'; Steam forum 'Relaxing Non-Farming Games?'.",
+      "source": "https://www.reddit.com/r/CozyGamers/comments/1cp8exi/cozy_gaming_thats_not_farming/"
+    },
+    {
+      "request": "Cozy games that aren't farming (curated list demand)",
+      "evidence": "Cozy Game Reviews notes posts like 'Please recommend me a list of games with zero farming' / 'I am sick of farming games' are frequent on Reddit.",
+      "source": "https://cozygamereviews.com/console-games/cozy-games-that-arent-farming/"
+    },
+    {
+      "request": "Non-farming relaxing games on Steam",
+      "evidence": "Steam Community general forum thread asking for relaxing non-farming games.",
+      "source": "https://steamcommunity.com/discussions/forum/7/4406291330029683035"
+    },
+    {
+      "request": "Animal Crossing-like experience on PC / non-Nintendo platforms",
+      "evidence": "Perennial 'Animal Crossing on PC?' articles; Pokopia is Switch 2-exclusive, prompting 'cosy games to try if you don't have a Switch 2' coverage.",
+      "source": "https://www.techradar.com/news/animal-crossing-pc-the-best-alternatives-on-steam"
+    },
+    {
+      "request": "Cozy alternatives for people without a Switch 2",
+      "evidence": "Coverage of alternatives to Pokopia for non-Switch-2 owners.",
+      "source": "https://www.fzine.com/culture/cosy-video-games"
+    },
+    {
+      "request": "Cozy games with a darker or mysterious edge (Dredge-like)",
+      "evidence": "r/GirlGamers thread 'Unexpected cozy games e.g. Dredge'.",
+      "source": "https://www.reddit.com/r/GirlGamers/comments/1gts5m1/unexpected_cozy_games_eg_dredge/"
+    },
+    {
+      "request": "Co-op games for couples/partners",
+      "evidence": "r/CoOpGaming threads requesting co-op games to play with a partner; answers mostly non-cozy titles (It Takes Two, A Way Out).",
+      "source": "https://www.reddit.com/r/CoOpGaming/comments/1f3dn71/please_recommend_a_steam_coop_game_to_play_with_a/"
+    },
+    {
+      "request": "Co-op recommendations (general, recurring)",
+      "evidence": "Aggregated Reddit co-op recommendation requests.",
+      "source": "https://gummysearch.com/tools/best-products/co-op-recommendations/"
+    },
+    {
+      "request": "Cozy online social without combat",
+      "evidence": "Palia's positioning - build a home and know neighbors instead of fighting monsters - and Netflix's Spirit Crossing cozy MMO announcement.",
+      "source": "https://massivelyop.com/tag/cozy-gaming/"
+    },
+    {
+      "request": "Cozy games that don't cause motion sickness / higher-quality cozy games",
+      "evidence": "r/cozygames help requests for motion-sickness-safe picks and threads criticizing cozy quality (from search-result summaries of subreddit listings).",
+      "source": "https://www.reddit.com/r/cozygames/"
+    },
+    {
+      "request": "Something cozy to run while working (desktop companions)",
+      "evidence": "Bongo Cat 5.7M players / 194k peak; writer describes Rusty's Retirement as 'a lifesaver' for writer's block.",
+      "source": "https://checkpointgaming.net/features/2024/05/rustys-retirement-is-both-a-lifesaver-and-detriment-to-my-writers-block"
+    },
+    {
+      "request": "Proper PC controls/controller support for mobile-first cozy games",
+      "evidence": "Heartopia launched ~66% positive on Steam due to mobile-first design lacking controller support and PC optimization.",
+      "source": "https://www.notebookcheck.net/New-free-to-play-life-sim-lands-on-Steam-hits-15-100-player-peak-in-12-hours-with-350-reviews.1206511.0.html"
+    },
+    {
+      "request": "Accessibility features for older players",
+      "evidence": "AARP research on accessibility preferences of older gamers.",
+      "source": "https://www.aarp.org/pri/topics/technology/internet-media-devices/gamer-accessibility-preferences-older-adults/"
+    }
+  ]
+}

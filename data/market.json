@@ -1,0 +1,993 @@
+{
+  "_meta": {
+    "compiledOn": "2026-10-03",
+    "method": "WebSearch result summaries only. WebFetch was blocked by the network egress proxy for every domain tried (steampageanalyzer, gamediscover.co, destructoid, wikipedia, games-stats, substack, howtomarketagame), and the session web-search budget ran out partway through. Figures therefore come from search-engine summaries of the cited pages, not from reading the full pages. Items marked 'priorKnowledge' come from the model's training data (to mid-2026) and were NOT re-verified in this session.",
+    "caveats": [
+      "Syndicated 'cozy games market size' reports (IndexBox, Intel Market Research, QYResearch, HTF, GlobalInfoResearch) disagree by more than 4x and do not publish their methods. Treat them as directional only.",
+      "Steam tag counts change over time because players and developers add tags after release. Different snapshots (SteamDB at end of 2025 vs Steam Page Analyzer in Sep 2026) give different counts for the same year.",
+      "Per-game sales figures from Gamalytic, VG Insights, SteamSpy and PlayTracker are review-based estimates that often differ by 2x or more."
+    ]
+  },
+  "marketSize": [
+    {
+      "metric": "Global cozy gaming market revenue (syndicated report estimate)",
+      "value": "$1.9bn in 2025, +11.8% YoY; 12.5% CAGR to ~$4.3bn by 2033",
+      "numeric": 1.9,
+      "unit": "USD bn",
+      "year": 2025,
+      "source": "https://www.htfmarketinsights.com/report/4382814-cozy-gaming-market",
+      "sourceName": "HTF Market Insights (surfaced alongside IndexBox / Outlook Respawn summaries)",
+      "confidence": "low",
+      "note": "Opaque methodology and unclear definition of 'cozy'. The search summary did not pin the figure to one report, so the attribution is uncertain. Use only as an upper-range anchor."
+    },
+    {
+      "metric": "Global 'online cozy game' market (syndicated report estimate)",
+      "value": "~$973m in 2024, projected to $1,473m by 2032",
+      "numeric": 0.973,
+      "unit": "USD bn",
+      "year": 2024,
+      "source": "https://www.intelmarketresearch.com/online-cozy-game-market-6937",
+      "sourceName": "Intel Market Research (similar QYResearch / GlobalInfoResearch 'Online Cozy Game' reports)",
+      "confidence": "low",
+      "note": "Covers 'online' cozy games only. Implies a CAGR of about 5-6%, well below the HTF figure."
+    },
+    {
+      "metric": "Cozy game segment size (IndexBox)",
+      "value": "More than EUR 855m (2026)",
+      "numeric": 0.855,
+      "unit": "USD bn",
+      "year": 2026,
+      "source": "https://www.indexbox.io/blog/cozy-games-market-surpasses-855-million-why-slow-gentle-gaming-is-booming-in-2026/",
+      "sourceName": "IndexBox blog",
+      "confidence": "low",
+      "note": "The figure is in EUR, not USD (the numeric field holds the EUR value in bn). Methodology not disclosed."
+    },
+    {
+      "metric": "Broad 'cozy video game market' estimate",
+      "value": "$3.85bn",
+      "numeric": 3.85,
+      "unit": "USD bn",
+      "year": 2025,
+      "source": "https://voxbooster.com/blog/cozy-games-statistics-2026",
+      "sourceName": "VoxBooster stats roundup (secondary aggregator)",
+      "confidence": "low",
+      "note": "Secondary aggregator; the primary source is unclear. Probably a broader definition that includes life sims and mobile."
+    },
+    {
+      "metric": "North America online cozy game market",
+      "value": "$520m (2025) to $780m (2032), 6.8% CAGR",
+      "numeric": 0.52,
+      "unit": "USD bn",
+      "year": 2025,
+      "source": "https://www.intelmarketresearch.com/north-america-online-cozy-game-market-market-40080",
+      "sourceName": "Intel Market Research",
+      "confidence": "low",
+      "note": "Syndicated estimate."
+    },
+    {
+      "metric": "Asia-Pacific online cozy game market",
+      "value": "$263.7m (2024), $280.9m (2025) to $429.1m (2032), 7.2% CAGR",
+      "numeric": 0.281,
+      "unit": "USD bn",
+      "year": 2025,
+      "source": "https://www.intelmarketresearch.com/asia-pacific-online-cozy-game-market-market-45392",
+      "sourceName": "Intel Market Research",
+      "confidence": "low",
+      "note": "Syndicated estimate. Projected growth is faster than North America."
+    },
+    {
+      "metric": "Sanity check: Stardew Valley lifetime units",
+      "value": "41m+ copies across all platforms (Dec 2024); 11m+ sold in 2024 alone after update 1.6",
+      "numeric": 41,
+      "unit": "players m",
+      "year": 2024,
+      "source": "https://www.pocketgamer.biz/stardew-valley-sells-over-41-million-copies",
+      "sourceName": "PocketGamer.biz",
+      "confidence": "high",
+      "note": "One game at roughly $15 implies hundreds of millions of dollars in lifetime gross. This suggests the syndicated 'market size' reports are narrow or understated. Treat them as floors for a narrowly defined segment."
+    },
+    {
+      "metric": "Share of >$100k-lifetime Steam games that call themselves 'cozy' in the short description",
+      "value": "0.4% (2022) to 3.1% (2025), +675%. 'Cozy' was the fastest-rising keyword among successful games over 5 years ('solo' +450%, 'factory' +325%).",
+      "numeric": 3.1,
+      "unit": "%",
+      "year": 2025,
+      "source": "https://www.pcgamer.com/games/life-sim/the-cozy-game-boom-is-the-clearest-trend-on-steam-over-five-years-of-data/",
+      "sourceName": "PC Gamer (16 Feb 2026), reporting GameDiscoverCo newsletter analysis",
+      "confidence": "high",
+      "note": "Original analysis: https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about"
+    },
+    {
+      "metric": "Steam games tagged Cozy, all-time total",
+      "value": "~3,429 games tagged Cozy on Steam (2026 snapshot)",
+      "numeric": 3429,
+      "unit": "count",
+      "year": 2026,
+      "source": "https://games-stats.com/steam/?tag=cozy",
+      "sourceName": "Games-Stats",
+      "confidence": "medium",
+      "note": "Does not match the per-year Steam Page Analyzer counts (sum of about 2,378 for 2020 to Sep 2026) because the trackers use different tag-weight thresholds."
+    },
+    {
+      "metric": "Share of 2025 Steam releases tagged Cozy (derived)",
+      "value": "~3.1-3.3% (632 Cozy-tagged / ~19,000-20,500 total releases)",
+      "numeric": 3.2,
+      "unit": "%",
+      "year": 2025,
+      "source": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+      "sourceName": "Derived: Steam Page Analyzer cozy count / SteamDB, GameDiscoverCo, Gamalytic and VGI total counts",
+      "confidence": "medium",
+      "note": "Derived calculation. Using the SteamDB end-of-2025 Cozy count of 543 gives ~2.9%. 2024: 382/18,558 = ~2.1%."
+    },
+    {
+      "metric": "Share of 2026 YTD Steam releases tagged Cozy (derived)",
+      "value": "~6% (1,041 Cozy-tagged to 27 Sep 2026 vs an estimated ~17-18k total releases YTD at ~66/day)",
+      "numeric": 6,
+      "unit": "%",
+      "year": 2026,
+      "source": "https://www.steampageanalyzer.com/blog/how-many-games-release-on-steam",
+      "sourceName": "Derived: Steam Page Analyzer (SteamDB H1-2026 count of 11,979 at ~66/day)",
+      "confidence": "low",
+      "note": "Rough derivation. The denominator is extrapolated."
+    },
+    {
+      "metric": "Farming Sim tagged Steam releases in 2025",
+      "value": "350",
+      "numeric": 350,
+      "unit": "count",
+      "year": 2025,
+      "source": "https://www.destructoid.com/this-genre-exploded-on-steam-in-2025-and-proves-were-still-resisting-our-grim-reality/",
+      "sourceName": "Destructoid citing SteamDB",
+      "confidence": "medium",
+      "note": "Destructoid says Farming Sim and Life Sim had their most yearly releases ever in 2025. 350 is ~1.8% of 2025 releases."
+    },
+    {
+      "metric": "Life Sim tagged Steam releases in 2025",
+      "value": "966",
+      "numeric": 966,
+      "unit": "count",
+      "year": 2025,
+      "source": "https://www.destructoid.com/this-genre-exploded-on-steam-in-2025-and-proves-were-still-resisting-our-grim-reality/",
+      "sourceName": "Destructoid citing SteamDB",
+      "confidence": "medium",
+      "note": "~5% of 2025 releases. Games-Stats lists ~7,212 Life Sim games on Steam all-time."
+    },
+    {
+      "metric": "Total Steam releases per year (denominator)",
+      "value": "2023: 14,111; 2024: 18,558; 2025: 19,008 (SteamDB) or 20,008-20,558 (SteamDB alt / VGI / Gamalytic / GameDiscoverCo); H1 2026: 11,979",
+      "numeric": 19008,
+      "unit": "count",
+      "year": 2025,
+      "source": "https://www.gamingonlinux.com/2025/12/over-19000-games-have-released-on-steam-in-2025-with-nearly-half-seeing-fewer-than-10-reviews/page=1/",
+      "sourceName": "GamingOnLinux (SteamDB); Steam Page Analyzer for the tracker comparison",
+      "confidence": "high",
+      "note": "Of the 19,008 SteamDB-counted 2025 releases, 9,269 had 10 or fewer reviews."
+    },
+    {
+      "metric": "Global players (all games) context",
+      "value": "3.578bn players in 2025 (+4.4% YoY)",
+      "numeric": 3578,
+      "unit": "players m",
+      "year": 2025,
+      "source": "https://gamedevreports.substack.com/p/newzoo-the-games-market-in-2025",
+      "sourceName": "Newzoo via GameDev Reports",
+      "confidence": "high",
+      "note": "No credible public figure for 'cozy players' worldwide was found. Newzoo does not publish a cozy segment."
+    }
+  ],
+  "steamCozyReleasesByYear": [
+    {
+      "year": 2020,
+      "count": 25,
+      "source": "https://www.steampageanalyzer.com/niches/cozy",
+      "note": "Steam Page Analyzer, Sep 2026 snapshot."
+    },
+    {
+      "year": 2021,
+      "count": 45,
+      "source": "https://www.steampageanalyzer.com/niches/cozy",
+      "note": "Steam Page Analyzer."
+    },
+    {
+      "year": 2022,
+      "count": 97,
+      "source": "https://www.steampageanalyzer.com/niches/cozy",
+      "note": "Steam Page Analyzer."
+    },
+    {
+      "year": 2023,
+      "count": 156,
+      "source": "https://www.steampageanalyzer.com/niches/cozy",
+      "note": "Steam Page Analyzer."
+    },
+    {
+      "year": 2024,
+      "count": 382,
+      "source": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+      "note": "Steam Page Analyzer. ~2.1% of the 18,558 SteamDB-counted 2024 releases."
+    },
+    {
+      "year": 2025,
+      "count": 632,
+      "source": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+      "note": "Steam Page Analyzer (Sep 2026 snapshot). SteamDB at end of 2025 showed 543 Cozy-tagged 2025 releases vs 698 published before 2025 (Destructoid: https://www.destructoid.com/this-genre-exploded-on-steam-in-2025-and-proves-were-still-resisting-our-grim-reality/). The gap reflects tags added after release."
+    },
+    {
+      "year": 2026,
+      "count": 1041,
+      "source": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+      "note": "Partial year, to 27 Sep 2026. +143% vs the same weeks of 2025. 2026 passed the full-year 2025 total on 6 Aug 2026.",
+      "partial": true
+    }
+  ],
+  "audience": {
+    "facts": [
+      {
+        "fact": "Cozy Steam games outperform the Steam average on reaching scale: 11% of Cozy-tagged games released 1 Jan 2024 to 30 Jun 2025 reached 1,000+ reviews (roughly $150k gross by the review-multiplier rule of thumb), vs 4.2% across all of Steam (2.6x).",
+        "numeric": 11,
+        "source": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+        "confidence": "medium"
+      },
+      {
+        "fact": "Women are ~46-48% of gamers worldwide. Bryter's UK/US study (1,015 PC and console gamers aged 16-65) warns that the 'women only play cosy games' stereotype is misleading, though Life Sim is a notably popular genre with women players.",
+        "numeric": 46,
+        "source": "https://www.bryter-global.com/blog/women-gamers-study-2025",
+        "confidence": "high"
+      },
+      {
+        "fact": "Women who wouldn't call themselves 'a gamer' fell from 38% (2019) to 24% (2025). Many cozy players are 'non-identifying' gamers, so core-gamer channels under-reach them.",
+        "numeric": 24,
+        "source": "https://www.bryter-global.com/blog/women-gamers-study-2025",
+        "confidence": "high"
+      },
+      {
+        "fact": "58% of women gamers report experiencing toxicity from men in gaming spaces. This is one reason cozy/wholesome multiplayer that is safe by design (no open voice chat, limited PvP) appeals.",
+        "numeric": 58,
+        "source": "https://www.bryter-global.com/blog/women-gamers-study-2025",
+        "confidence": "high"
+      },
+      {
+        "fact": "Cozy player base is estimated at 45-55% female, with a core age of 25-45 and higher disposable income and education.",
+        "numeric": null,
+        "source": "https://respawn.outlookindia.com/gaming/gaming-guides/small-teams-huge-margins-cozy-games-are-2025s-stable-bet",
+        "confidence": "low"
+      },
+      {
+        "fact": "74% of cozy gamers say they play relaxing games to relieve work stress and anxiety. A separate claim says 57%+ of US players say such games help them handle daily stress.",
+        "numeric": 74,
+        "source": "https://www.indexbox.io/blog/cozy-games-market-surpasses-855-million-why-slow-gentle-gaming-is-booming-in-2026/",
+        "confidence": "low"
+      },
+      {
+        "fact": "Nintendo Switch is the favoured cozy platform for ~60% of cozy players (claimed survey figure; primary survey not identified).",
+        "numeric": 60,
+        "source": "https://www.indexbox.io/blog/cozy-games-market-surpasses-855-million-why-slow-gentle-gaming-is-booming-in-2026/",
+        "confidence": "low"
+      },
+      {
+        "fact": "Quantic Foundry: for women, Completion (collecting everything, finishing all tasks) and Fantasy (being someone else, somewhere else) are the most common primary motivations, and Excitement and Challenge the least. Women's motivation preferences are more polarized (disparity factor 5.7 vs 2.5 for men). Cozy loops (collections, museums, decorating, bundles) map directly onto Completion and Fantasy.",
+        "numeric": null,
+        "source": "https://quanticfoundry.com/2016/12/15/primary-motivations/",
+        "confidence": "medium"
+      },
+      {
+        "fact": "Quantic Foundry genre gender data (2017): Family/Farm Sim and Match-3 audiences were each about 69% female, the most female-skewed genres in their dataset. This is old data, cited from prior knowledge of the article.",
+        "numeric": 69,
+        "source": "https://quanticfoundry.com/2017/01/19/female-gamers-by-genre/",
+        "confidence": "medium"
+      },
+      {
+        "fact": "Quantic Foundry's overall survey sample (1.92m gamers, 2015-Feb 2026) is 74% male with a median age of 23. It over-represents core gamers, so its general data understates the cozy audience.",
+        "numeric": 1924157,
+        "source": "https://quanticfoundry.com/",
+        "confidence": "high"
+      },
+      {
+        "fact": "China and East Asia are major cozy buyers on Steam: 26% of Rusty's Retirement's 330k+ Steam sales came from China, with Japan, Korea and Taiwan also significant. Localizing into Simplified Chinese is a priority.",
+        "numeric": 26,
+        "source": "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+        "confidence": "high"
+      },
+      {
+        "fact": "Stardew Valley shows the size of the core farming/life-sim audience: 41m+ copies sold by Dec 2024, 11m+ of them in 2024.",
+        "numeric": 41,
+        "source": "https://www.pocketgamer.biz/stardew-valley-sells-over-41-million-copies",
+        "confidence": "high"
+      },
+      {
+        "fact": "Cozy audiences cluster around showcases: Wholesome Direct has shown 375+ titles since 2020 and generated 1m+ wishlist additions. About 1,500 teams submitted for the 2025 show, which featured 60 titles.",
+        "numeric": 1500,
+        "source": "https://gamespress.westeu-v2.propressroom.com/pt/-WHOLESOME-DIRECT-2025-DELIVERED-ITS-BIGGEST-SHOWCASE-YET-WITH-SURPRIS",
+        "confidence": "medium"
+      }
+    ],
+    "wants": [
+      "Low-stress play with no fail states: relaxation and stress relief is the most-cited motivation (IndexBox/Outlook summaries, low confidence)",
+      "Collection and completion loops (Quantic Foundry: Completion is a top motivation for women)",
+      "Fantasy and escapism: a charming world and characters to 'live' in (Quantic Foundry Fantasy motivation)",
+      "Customization, decorating and self-expression (Bryter: women gamers like character development and customisation)",
+      "Play that fits around life: short sessions and multitasking-friendly idle or desktop games (Rusty's Retirement, Bongo Cat)",
+      "Safe, low-pressure social play with friends without toxicity (Webfishing; Bryter toxicity data)",
+      "A fair one-time price plus meaningful paid DLC and free updates rather than aggressive monetization (Outlook Respawn summary, low confidence; Stardew 1.6 update drove 11m sales in a year)",
+      "Handheld and portable play (Switch, Steam Deck; Stardew is a consistent Steam Deck top-10)",
+      "Localization into Chinese, Japanese and Korean for Asian audiences"
+    ],
+    "complaints": [
+      "Stamina and energy meters that cut play sessions short: lists of 'farming games without stamina mechanics' are a recurring editorial format (TheGamer)",
+      "Too many look-alike farming sims (350 Farming Sim releases on Steam in 2025): fatigue with Stardew clones",
+      "Grind and padded progression, especially in live-service cozy MMOs (Palia's mostly positive 79% Steam reception)",
+      "Thin or 'underdeveloped' content and mechanics in licensed cozy games (Tales of the Shire reviews called it boring and poorly thought out)",
+      "Performance bugs and stutter at launch (Mirthwood reviews)",
+      "Limited building or design freedom in decorating/gardening sims (Garden Life reviews)",
+      "Discovery fatigue and storefront 'slop': low-quality, AI-generated, misleading games crowding the Switch eShop",
+      "Lack of, or poor, multiplayer in traditionally single-player farming sims. Demand shows in the success of Webfishing and in co-op keywords rising (GameDiscoverCo co-op description analysis). Evidence is indirect."
+    ]
+  },
+  "platforms": [
+    {
+      "platform": "PC/Steam",
+      "sharePct": null,
+      "notes": "The main launch and discovery platform for indie cozy games, with transparent data and tag-driven discovery (Cozy tag, Farming Fest, Wholesome Direct and Next Fest). Stardew Valley's PC share is reported at ~26m of 41m copies (~63%), but that comes from a secondary blog and is low confidence. Cozy-tagged games are 2.6x more likely than the Steam average to reach 1,000 reviews. No credible public cozy-revenue split by platform was found.",
+      "source": "https://blog.udonis.co/mobile-marketing/mobile-games/stardew-valley-sales"
+    },
+    {
+      "platform": "Nintendo Switch / Switch 2",
+      "sharePct": null,
+      "notes": "Historically the 'home' of cozy games (claimed 60% platform preference, low confidence). Stardew Valley's Switch share is reported at ~7.9m units (~19%; secondary source, low confidence). Switch 2 sold 10.36m by 30 Sep 2025 and 19.86m by 31 Mar 2026 (Nintendo's fastest-selling platform), but Bloomberg and MCV report indie developers seeing sluggish Switch and Switch 2 sales: eShop visibility tails off fast, the store is flooded with shovelware, and a revenue-based ranking favours expensive first-party games. Treat Switch as a strong port target after PC proof, not an automatic multiplier.",
+      "source": "https://mcvuk.com/business-news/i-literally-cannot-sell-units-on-switch-its-heartbreaking-and-it-makes-me-really-sad-for-the-eshop-why-indies-are-struggling-to-be-seen-on-the-switch-eshop/"
+    },
+    {
+      "platform": "Steam Deck",
+      "sharePct": null,
+      "notes": "A low-friction handheld path for PC cozy games. Stardew Valley ranked #5 among the most-played Steam Deck games in Nov 2025. 71% of the top 1,000 Steam games are Deck Verified or Playable (May 2025). Getting 'Verified' should be on a new studio's checklist; no cozy-specific revenue share is published.",
+      "source": "https://www.gamingonlinux.com/2025/12/heres-the-50-most-popular-steam-deck-games-for-november-2025-with-dispatch-the-winner/page=1/"
+    },
+    {
+      "platform": "Roblox",
+      "sharePct": null,
+      "notes": "The largest cozy audience by concurrency in 2025. Grow a Garden (a free-to-play idle gardening game made by a teenager, released 26 Mar 2025) peaked at about 21-22m concurrent users (22.3m on 23 Aug 2025 per Wikipedia; one outlet's 47m figure likely reflects Roblox platform-wide concurrency) and made about $12m in May 2025 from item sales. The audience skews young and monetizes through Robux microtransactions, a very different business from premium cozy.",
+      "source": "https://en.wikipedia.org/wiki/Grow_a_Garden"
+    },
+    {
+      "platform": "Mobile",
+      "sharePct": null,
+      "notes": "Stardew Valley's mobile versions are inferred at about 7m units, the remainder after PC and Switch (low confidence). Cozy mobile is dominated by free-to-play decorating, merge and idle games. No reliable cozy-specific mobile revenue figure was found in this session.",
+      "source": "https://blog.udonis.co/mobile-marketing/mobile-games/stardew-valley-sales"
+    },
+    {
+      "platform": "PlayStation / Xbox",
+      "sharePct": null,
+      "notes": "Usually later ports for cozy indies, e.g. Fae Farm reached PS and Xbox in Oct 2024, a year after its PC/Switch launch. Game Pass and PS Plus deals are a common funding and visibility lever, but no cozy-specific data was found.",
+      "source": "https://videogameschronicle.com/news/dauntless-and-fae-farm-studio-phoenix-labs-confirms-layoffs-and-game-cancellations/"
+    }
+  ],
+  "trends": [
+    {
+      "name": "Cozy release flood and saturation on Steam",
+      "direction": "rising",
+      "strength": 5,
+      "summary": "Cozy-tagged Steam releases roughly doubled every year from 2023 to 2025 (156, 382, 632) and hit 1,041 by 27 Sep 2026 (+143% YoY). Competition for the same players is growing much faster than the audience.",
+      "evidence": [
+        "Steam Page Analyzer: 25/45/97/156/382/632 Cozy releases 2020-2025; 1,041 in 2026 to 27 Sep",
+        "SteamDB via Destructoid: 543 Cozy releases in 2025 vs 698 in all years before 2025",
+        "Cozy is ~6% of 2026 YTD releases vs ~2% in 2024 (derived)"
+      ],
+      "exampleGames": [
+        "Snacko",
+        "Bookshop Simulator",
+        "Tiny Glade"
+      ],
+      "implicationForNewStudio": "'Cozy' alone is no longer a differentiator. You need a sharp hook (an unusual verb, fantasy or format) that is clear from one capsule image, and should expect stronger competition at every Fest.",
+      "sources": [
+        "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+        "https://www.destructoid.com/this-genre-exploded-on-steam-in-2025-and-proves-were-still-resisting-our-grim-reality/"
+      ]
+    },
+    {
+      "name": "'Cozy' becomes a mainstream selling label among commercially successful games",
+      "direction": "rising",
+      "strength": 4,
+      "summary": "Among Steam games grossing more than $100k, the share that call themselves 'cozy' in their short description rose from 0.4% (2022) to 3.1% (2025), the fastest-rising keyword in GameDiscoverCo's five-year analysis. Cozy games still reach 1,000 reviews at 2.6x the Steam base rate.",
+      "evidence": [
+        "GameDiscoverCo/PC Gamer: +675% 'cozy' keyword among >$100k games",
+        "Steam Page Analyzer: 11% of cozy games reach 1,000 reviews vs 4.2% for Steam overall"
+      ],
+      "exampleGames": [
+        "PowerWash Simulator",
+        "Rusty's Retirement",
+        "Webfishing"
+      ],
+      "implicationForNewStudio": "Demand is real and cozy still beats the Steam average. Use 'cozy' plus a precise sub-genre descriptor in the capsule and short description, because players search and filter by the tag.",
+      "sources": [
+        "https://www.pcgamer.com/games/life-sim/the-cozy-game-boom-is-the-clearest-trend-on-steam-over-five-years-of-data/",
+        "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report"
+      ]
+    },
+    {
+      "name": "Idle / desktop-companion games ('play while you work')",
+      "direction": "rising",
+      "strength": 4,
+      "summary": "Low-priced or free games that sit on a strip of the desktop and progress while the player works became a breakout format in 2024-2025. They suit multitasking players and long Steam 'playtime', and spread well on social media and Twitch.",
+      "evidence": [
+        "Rusty's Retirement: 330k+ Steam units at $7, ~20k units/day in its first 5 days, launched into Steam Farming Fest (GameDiscoverCo)",
+        "Bongo Cat (free-to-play, Mar 2025): peak ~194.5k concurrent players, ~5.7m players",
+        "Destructoid notes cozy expanding into idlers such as Keep on Mining"
+      ],
+      "exampleGames": [
+        "Rusty's Retirement",
+        "Bongo Cat",
+        "Ropuka's Idle Island",
+        "Keep on Mining"
+      ],
+      "implicationForNewStudio": "A cheap-to-build format with a 3-9 month scope that fits a small team's first release and builds an audience for a bigger second game. The format is now crowded, so the fantasy and art must be distinctive.",
+      "sources": [
+        "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+        "https://www.gamesmarket.global/bongo-cat-is-on-its-way-to-6-million-players",
+        "https://www.destructoid.com/this-genre-exploded-on-steam-in-2025-and-proves-were-still-resisting-our-grim-reality/"
+      ]
+    },
+    {
+      "name": "Cozy social multiplayer and hangout games",
+      "direction": "rising",
+      "strength": 4,
+      "summary": "Lightweight, friend-group 'hangout' games with cozy activities became viral hits, while expensive cozy MMOs struggled. GameDiscoverCo also tracks co-op descriptors rising among successful Steam games.",
+      "evidence": [
+        "Webfishing (Oct 2024, born in a game jam): ~1.0-2.1m estimated copies (Gamalytic ~1.04m, SteamSpy ~1.44m, VGI ~1.6m, PlayTracker ~2.06m); the developer expected ~100 players",
+        "Palia (Steam Mar 2024): peak only ~12.6k concurrent players despite 4m+ total players, multiple layoff rounds, sold to Daybreak in Jul 2024",
+        "GameDiscoverCo article: 'What game descriptions tell us about the rise of co-op'"
+      ],
+      "exampleGames": [
+        "Webfishing",
+        "Palia",
+        "Snacko"
+      ],
+      "implicationForNewStudio": "Small-scope, session-based co-op (2-8 friends, no servers to run) is a strong angle. Avoid live-service MMO ambitions without deep funding.",
+      "sources": [
+        "https://vaporlens.app/app/3146520/webfishing/stats/details",
+        "https://en.wikipedia.org/wiki/Palia",
+        "https://newsletter.gamediscover.co/p/what-game-descriptions-tell-us-about"
+      ]
+    },
+    {
+      "name": "Roblox cozy mega-hits (gardening and idle)",
+      "direction": "rising",
+      "strength": 5,
+      "summary": "Grow a Garden showed that idle gardening is one of the largest-reach cozy fantasies of any format, reaching about 21-22m concurrent users in 2025. The audience is young and free-to-play, and the game was made by a teenager.",
+      "evidence": [
+        "Grow a Garden peaked at 22.3m concurrent users on 23 Aug 2025 (Wikipedia); PocketGamer.biz reported an earlier 8.9m record beating Steam's all-time peak",
+        "About $12m revenue in May 2025 from item sales"
+      ],
+      "exampleGames": [
+        "Grow a Garden"
+      ],
+      "implicationForNewStudio": "Roblox is a viable second front for prototyping cozy loops cheaply, but it needs a separate free-to-play/UGC skill set and monetization design. Hits are winner-takes-most.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Grow_a_Garden",
+        "https://www.pocketgamer.biz/roblox-game-grow-a-garden-beats-steam-with-record-concurrent-user-high-of-89m",
+        "https://wnhub.io/news/finance/item-48413"
+      ]
+    },
+    {
+      "name": "Shop / job 'X Simulator' management sims",
+      "direction": "peaking",
+      "strength": 4,
+      "summary": "First-person shop and job sims (supermarket, bookshop, kebab shop) were among the biggest indie breakouts of 2024-2025 and overlap heavily with cozy audiences. The median result is modest and copycats are many.",
+      "evidence": [
+        "Supermarket Simulator: est. 1.8-2.15m copies and ~$22m gross, 38,056 concurrent-player peak (Mar 2024)",
+        "GameDiscoverCo (Simon Carless): median gross revenue for 'X Simulator' games since Jul 2023 is ~$70k, median ~5-7k copies",
+        "Bookshop Simulator (Sep 2025) highlighted as a well-reviewed cozy release; Cash Cleaner Simulator cited as a cozy-adjacent hit"
+      ],
+      "exampleGames": [
+        "Supermarket Simulator",
+        "Bookshop Simulator",
+        "Kebab Chefs! - Restaurant Simulator",
+        "Cash Cleaner Simulator"
+      ],
+      "implicationForNewStudio": "Shop-sim loops give clear, satisfying progression with a small scope, but the sub-genre is saturated and the median is weak. A distinctive cozy theme and co-op are what set the top performers apart.",
+      "sources": [
+        "https://wnhub.io/news/stores-and-publishing/item-43033",
+        "https://raijin.gg/app/2670630/Supermarket_Simulator",
+        "https://respawn.outlookindia.com/gaming/gaming-news/steam-vibe-shift-why-cozy-is-the-most-dominant-keyword-of-2026"
+      ]
+    },
+    {
+      "name": "Cozy-hybrid genres (cozy + strategy / roguelite / horror / survival / crime)",
+      "direction": "rising",
+      "strength": 3,
+      "summary": "'Cozy' increasingly works as a tone layered onto other genres rather than as a genre of its own. Destructoid's 2025 review notes cozy spreading into strategy, idlers and even crime sims.",
+      "evidence": [
+        "Destructoid cites Backpack Battles (strategy), Keep on Mining (idle) and Cash Cleaner Simulator (crime) as cozy-tagged 2025 hits",
+        "Wanderstop (2025) paired cozy tea-shop gameplay with a heavy narrative about burnout and appeared on year-end best lists"
+      ],
+      "exampleGames": [
+        "Backpack Battles",
+        "Keep on Mining",
+        "Cash Cleaner Simulator",
+        "Wanderstop"
+      ],
+      "implicationForNewStudio": "A hybrid ('cozy + X') can stand out in a saturated tag while borrowing a proven core loop from a larger genre. Make sure the cozy promise (no punishing fail states) holds, or reviews will turn on you.",
+      "sources": [
+        "https://www.destructoid.com/this-genre-exploded-on-steam-in-2025-and-proves-were-still-resisting-our-grim-reality/",
+        "https://en.wikipedia.org/wiki/Wanderstop"
+      ]
+    },
+    {
+      "name": "Farming-sim saturation and Stardew-clone fatigue",
+      "direction": "peaking",
+      "strength": 4,
+      "summary": "Farming Sim releases hit a record (350 on Steam in 2025) while Stardew Valley kept absorbing demand (11m+ copies in 2024 alone). Players increasingly reject legacy friction such as stamina bars, and licensed or AA farming/life sims have stumbled.",
+      "evidence": [
+        "SteamDB via Destructoid: 350 Farming Sim and 966 Life Sim releases in 2025, both record highs",
+        "TheGamer's 'farming games without stamina mechanics' list format reflects player preference",
+        "Tales of the Shire (Jul 2025) reviews were negative ('boring', 'poorly thought out')"
+      ],
+      "exampleGames": [
+        "Stardew Valley",
+        "Fields of Mistria",
+        "Coral Island",
+        "Tales of the Shire"
+      ],
+      "implicationForNewStudio": "Don't build a straight Stardew-like. If you farm, change one core assumption (no stamina, idle farming, co-op-first, unusual setting) and make it visible on the store page.",
+      "sources": [
+        "https://www.destructoid.com/this-genre-exploded-on-steam-in-2025-and-proves-were-still-resisting-our-grim-reality/",
+        "https://www.thegamer.com/farming-games-without-stamina-mechanics/",
+        "https://www.pocketgamer.biz/stardew-valley-sells-over-41-million-copies"
+      ]
+    },
+    {
+      "name": "China / East Asia as a core cozy market",
+      "direction": "rising",
+      "strength": 4,
+      "summary": "Chinese-language players are a large share of buyers for cozy and idle Steam games, and third-party estimates show Asia-Pacific cozy spending growing faster than North America.",
+      "evidence": [
+        "Rusty's Retirement: 26% of Steam sales from China, plus strong Japan, Korea and Taiwan sales (GameDiscoverCo)",
+        "Intel Market Research: APAC online cozy market grows at 7.2% CAGR vs North America at 6.8% (low confidence)"
+      ],
+      "exampleGames": [
+        "Rusty's Retirement",
+        "Webfishing"
+      ],
+      "implicationForNewStudio": "Ship with Simplified Chinese at launch, consider Japanese, Korean and Traditional Chinese, and plan Bilibili/Weibo or regional influencer outreach.",
+      "sources": [
+        "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+        "https://www.intelmarketresearch.com/asia-pacific-online-cozy-game-market-market-45392"
+      ]
+    },
+    {
+      "name": "Switch 2 boom not translating to indie cozy sales",
+      "direction": "declining",
+      "strength": 3,
+      "summary": "Switch 2 sold almost 20m units in 10 months, but indie developers report weak eShop sales, fast visibility decay and shovelware crowding. A revenue-weighted ranking also disadvantages cheap indie games.",
+      "evidence": [
+        "Switch 2: 10.36m units by 30 Sep 2025, 19.86m by 31 Mar 2026",
+        "MCV: 'I literally cannot sell units on Switch'",
+        "Bloomberg (via ResetEra): Switch 2 sales boom fails to ease developers' gloom",
+        "GamesRadar: eShop ranking change could hurt good indies priced around $10"
+      ],
+      "exampleGames": [],
+      "implicationForNewStudio": "Budget for Switch as a port after PC traction, ideally with a publisher who has Nintendo relationships for featuring. Don't model Switch at historical '5-10x Steam' multiples.",
+      "sources": [
+        "https://fullcleared.com/news/nintendo-switch-2-sales-reach-19-86m-units/",
+        "https://mcvuk.com/business-news/i-literally-cannot-sell-units-on-switch-its-heartbreaking-and-it-makes-me-really-sad-for-the-eshop-why-indies-are-struggling-to-be-seen-on-the-switch-eshop/",
+        "https://www.gamesradar.com/games/nintendo-makes-a-big-change-to-the-eshop-ahead-of-switch-2-pushing-down-shovelware-but-potentially-hurting-good-indies-too/",
+        "https://www.resetera.com/threads/bloomberg-nintendo%E2%80%99s-switch-2-sales-boom-fails-to-ease-game-developers%E2%80%99-gloom.1305216/"
+      ]
+    },
+    {
+      "name": "Showcase- and Fest-driven discovery (Wholesome Direct, Steam Farming Fest, Next Fest)",
+      "direction": "rising",
+      "strength": 4,
+      "summary": "Cozy discovery is concentrated in curated showcases and themed Steam festivals. Competition to get in is intense (~1,500 submissions for 60 Wholesome Direct slots in 2025), and themed Steam Fests can make a launch.",
+      "evidence": [
+        "Wholesome Direct: 375+ titles shown since 2020, 1m+ wishlists generated; ~1,500 submissions and 60 games shown in 2025; the 2026 show had 50+ games",
+        "Rusty's Retirement launched into Steam Farming Fest and sold ~20k units/day for 5 days"
+      ],
+      "exampleGames": [
+        "Rusty's Retirement"
+      ],
+      "implicationForNewStudio": "Plan your launch around themed Steam Fests (Farming, Cozy, Simulation) and apply to Wholesome Direct/Cozy showcases a year ahead. A showcase slot is a lottery ticket, not a plan.",
+      "sources": [
+        "https://gamespress.westeu-v2.propressroom.com/pt/-WHOLESOME-DIRECT-2025-DELIVERED-ITS-BIGGEST-SHOWCASE-YET-WITH-SURPRIS",
+        "https://www.cgmagonline.com/news/wholesome-direct-returns-june-2026",
+        "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed"
+      ]
+    },
+    {
+      "name": "Small scope, low price ('short cozy' / micro-games)",
+      "direction": "rising",
+      "strength": 3,
+      "summary": "Several of the most profitable recent cozy hits were tiny-team, low-price or free projects with a single strong hook, often from jams or solo developers.",
+      "evidence": [
+        "Rusty's Retirement: solo developer, $7 price, 330k+ units, plus a $4 supporter DLC at 11% attach (~$111k)",
+        "Webfishing: started as a Cozy Autumn Game Jam entry",
+        "Bongo Cat: free with cosmetic items"
+      ],
+      "exampleGames": [
+        "Rusty's Retirement",
+        "Webfishing",
+        "Bongo Cat",
+        "Tiny Glade"
+      ],
+      "implicationForNewStudio": "Ship a small, hook-driven game first ($5-10, 6-12 months) to build a mailing list, a Steam follower base and revenue before attempting a 3-year life sim.",
+      "sources": [
+        "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+        "https://www.gamespark.jp/article/2024/11/14/146924.html"
+      ]
+    },
+    {
+      "name": "Funding winter: acclaimed cozy studios closing",
+      "direction": "rising",
+      "strength": 4,
+      "summary": "Venture and publisher funding tightened. Even well-reviewed or well-known cozy studios shut down or shrank in 2024-2026 when the next project could not be financed or live-service economics failed.",
+      "evidence": [
+        "Ivy Road (Wanderstop) closed 31 Mar 2026 after failing to fund its next game, despite year-end best-of lists",
+        "Phoenix Labs (Fae Farm) laid off the 'majority' of staff in its fourth round in under two years",
+        "Singularity 6 (Palia): repeated layoffs, sold to Daybreak",
+        "Gaming startup VC fell to ~$627m by mid-2025 (Outlook Respawn summary)"
+      ],
+      "exampleGames": [
+        "Wanderstop",
+        "Fae Farm",
+        "Palia"
+      ],
+      "implicationForNewStudio": "Keep burn low, own your IP and plan for revenue-funded growth. Treat a publisher advance as the main external capital, and line up the next project's funding before launch.",
+      "sources": [
+        "https://gamedeveloper.com/business/wanderstop-developer-ivy-road-is-shutting-down",
+        "https://www.geekwire.com/2025/vancouver-game-studio-phoenix-labs-lays-off-majority-of-employees/",
+        "https://gameworldobserver.com/2024/07/02/daybreak-acquires-singularity-6-palia-1-0-launch"
+      ]
+    },
+    {
+      "name": "Decorating, organizing and 'tinkering' builders",
+      "direction": "rising",
+      "strength": 3,
+      "summary": "Goal-light creative toys (building, decorating, unpacking) continue to perform, with Tiny Glade the standout example and many organizing and decorating follow-ups.",
+      "evidence": [
+        "Tiny Glade (2-person team, 2024) was a top-selling cozy builder (GameDiscoverCo reported 600k+ copies in about its first month; prior knowledge, not re-verified)",
+        "Whisper of the House, an unpacking and decorating game, rated 96.6% positive (Boiling Steam Steam Deck roundup)"
+      ],
+      "exampleGames": [
+        "Tiny Glade",
+        "Whisper of the House",
+        "Unpacking"
+      ],
+      "implicationForNewStudio": "Builders are expensive to make feel good (procedural tech, polish) but very marketable through GIFs and short video. Be ready to invest in tech if you go this way.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tiny_Glade",
+        "https://boilingsteam.com/new-steam-games-playable-on-the-steam-deck-2025-08-30-edition/"
+      ]
+    },
+    {
+      "name": "Big-budget / licensed life sims entering the space",
+      "direction": "peaking",
+      "strength": 3,
+      "summary": "Larger studios and IP holders moved into cozy life sims (Lord of the Rings, Hello Kitty, Disney, Paralives). Results are mixed: strong ones sell, while licensed games that lack depth get punished.",
+      "evidence": [
+        "Tales of the Shire (Private Division / Weta Workshop, Jul 2025): negative reviews; reports of developer inexperience and weak leadership",
+        "Paralives entered Early Access at $39.99 with an estimated ~$14m (Games-Stats estimate)"
+      ],
+      "exampleGames": [
+        "Tales of the Shire",
+        "Paralives",
+        "Disney Dreamlight Valley",
+        "Hello Kitty Island Adventure"
+      ],
+      "implicationForNewStudio": "Don't compete on content volume with funded life sims. Compete on a focused hook, charm and community, and on price.",
+      "sources": [
+        "https://gamingbolt.com/tales-of-the-shire-a-lord-of-the-rings-game-studio-was-affected-by-inexperience-other-problems",
+        "https://games-stats.com/steam/?tag=life-sim"
+      ]
+    }
+  ],
+  "benchmarks": [
+    {
+      "metric": "Steam store fee (revenue share)",
+      "value": "30% standard; 25% on lifetime gross between $10m and $50m; 20% above $50m (Valve, since late 2018). Consoles (Nintendo, Sony, Microsoft) also take 30% as standard.",
+      "numeric": 30,
+      "source": "https://steamcommunity.com/groups/steamworks/announcements/detail/1697191267930157838",
+      "confidence": "medium (priorKnowledge; the URL is from training memory, not re-verified this session)"
+    },
+    {
+      "metric": "Steam Direct app fee",
+      "value": "$100 per game, recoupable after $1,000 in gross revenue",
+      "numeric": 100,
+      "source": "https://partner.steamgames.com/doc/gettingstarted/appfee",
+      "confidence": "high (priorKnowledge, not re-verified this session)"
+    },
+    {
+      "metric": "Cozy games reaching 1,000+ Steam reviews (about $150k gross)",
+      "value": "11% of Cozy-tagged games released Jan 2024 to Jun 2025, vs 4.2% for all Steam games",
+      "numeric": 11,
+      "source": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+      "confidence": "medium"
+    },
+    {
+      "metric": "Median wishlist to first-week sales ratio (games with 25k+ wishlists)",
+      "value": "0.15x (Sep 2024 to Aug 2025 releases); ~0.14x excluding NSFW games; varies by up to 10x between titles",
+      "numeric": 0.15,
+      "source": "https://newsletter.gamediscover.co/p/steam-the-new-wishlists-to-first",
+      "confidence": "high"
+    },
+    {
+      "metric": "Wishlist conversion for games priced above $10",
+      "value": "~0.10x first week (100k wishlists gives ~10k first-week copies)",
+      "numeric": 0.1,
+      "source": "https://newsletter.gamediscover.co/p/steam-the-new-wishlists-to-first",
+      "confidence": "high"
+    },
+    {
+      "metric": "Steam store-page visit to wishlist conversion",
+      "value": "8-12% median for Coming Soon pages; 12-18% good; 25%+ exceptional; genre range ~4-20%",
+      "numeric": 10,
+      "source": "https://www.steampageanalyzer.com/blog/steam-store-page-conversion-benchmarks",
+      "confidence": "low (vendor estimate; Valve does not publish this data)"
+    },
+    {
+      "metric": "Steam games grossing >$100k (2025 releases)",
+      "value": "~8% of 2025 releases; ~66% under $1k; ~90% under $50k (Gamalytic-derived)",
+      "numeric": 8,
+      "source": "https://game-developers.org/2025-steam-game-revenue-distribution",
+      "confidence": "medium"
+    },
+    {
+      "metric": "Median Steam indie gross revenue",
+      "value": "~$249 gross (~$174 after Valve's cut) per VG Insights / Alinea-derived analysis. Other analyses put the median at $5k-15k depending on the filter (e.g. excluding games with almost no reviews).",
+      "numeric": 249,
+      "source": "https://ziva.sh/blogs/indie-game-revenue",
+      "confidence": "low (median depends heavily on filtering)"
+    },
+    {
+      "metric": "Alternative median indie revenue (filtered)",
+      "value": "$5k-15k median",
+      "numeric": 10000,
+      "source": "https://www.steampageanalyzer.com/blog/indie-game-revenue-data",
+      "confidence": "low"
+    },
+    {
+      "metric": "Median gross for 'X Simulator' Steam games (since Jul 2023)",
+      "value": "~$70k gross; median ~5-7k copies",
+      "numeric": 70000,
+      "source": "https://wnhub.io/news/stores-and-publishing/item-43033",
+      "confidence": "medium (Simon Carless / GameDiscoverCo analysis via secondary)"
+    },
+    {
+      "metric": "Steam releases with 10 or fewer reviews (2025)",
+      "value": "9,269 of 19,008 (~49%)",
+      "numeric": 49,
+      "source": "https://www.gamingonlinux.com/2025/12/over-19000-games-have-released-on-steam-in-2025-with-nearly-half-seeing-fewer-than-10-reviews/page=1/",
+      "confidence": "high"
+    },
+    {
+      "metric": "Typical successful cozy price point",
+      "value": "$15-40 one-time price, sustained by DLC and expansions; most indie farming/life sims cluster at $13.99-24.99 (Stardew $14.99, Fields of Mistria $14.99, PowerWash Simulator $24.99, Paralives EA $39.99)",
+      "numeric": 15,
+      "source": "https://games-stats.com/steam/?tag=cozy",
+      "confidence": "medium"
+    },
+    {
+      "metric": "Idle/desktop cozy price point",
+      "value": "Rusty's Retirement $7 base plus a $4 Supporter Pack (11% attach, ~$111k extra); Bongo Cat free with cosmetics",
+      "numeric": 7,
+      "source": "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+      "confidence": "high"
+    },
+    {
+      "metric": "Top-decile style outcomes: idle cozy hit",
+      "value": "Rusty's Retirement 330k+ Steam units (solo developer)",
+      "numeric": 330000,
+      "source": "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+      "confidence": "high"
+    },
+    {
+      "metric": "Top-decile style outcomes: cozy multiplayer hit",
+      "value": "Webfishing ~1.04-2.06m estimated copies, ~$5.6m gross (tracker estimates disagree)",
+      "numeric": 5.6,
+      "source": "https://vaporlens.app/app/3146520/webfishing/stats/details",
+      "confidence": "low"
+    },
+    {
+      "metric": "Top outcome: shop sim",
+      "value": "Supermarket Simulator est. ~$21.8-22.2m gross, 1.8-2.15m copies",
+      "numeric": 22,
+      "source": "https://raijin.gg/app/2670630/Supermarket_Simulator",
+      "confidence": "low"
+    },
+    {
+      "metric": "Top outcome: all-time cozy benchmark",
+      "value": "Stardew Valley 41m+ copies (Dec 2024), solo developer, ~4.5-year initial development (dev time from prior knowledge)",
+      "numeric": 41000000,
+      "source": "https://www.pocketgamer.biz/stardew-valley-sells-over-41-million-copies",
+      "confidence": "high (sales); medium (dev time)"
+    },
+    {
+      "metric": "Wholesome Direct selectivity",
+      "value": "~60 of ~1,500 submissions shown in 2025 (~4%)",
+      "numeric": 4,
+      "source": "https://gamespress.westeu-v2.propressroom.com/pt/-WHOLESOME-DIRECT-2025-DELIVERED-ITS-BIGGEST-SHOWCASE-YET-WITH-SURPRIS",
+      "confidence": "medium"
+    },
+    {
+      "metric": "Team size of recent cozy breakouts",
+      "value": "Mostly 1-5 people: Rusty's Retirement (solo, Jordan Morris), Webfishing (solo/tiny, game-jam origin), Tiny Glade (2 people), Bongo Cat (2 credited developers). No reliable survey of cozy team size or budget was found.",
+      "numeric": null,
+      "source": "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+      "confidence": "medium (anecdotal case set, not a distribution)"
+    },
+    {
+      "metric": "Typical indie publisher revenue share",
+      "value": "Commonly cited norms are 50/50 to 70/30 (developer/publisher) after recoup when the publisher funds development, and 70-80% to the developer for marketing-only deals. Search budget ran out before this could be verified with a 2025-26 source.",
+      "numeric": null,
+      "source": "https://gamedev.substack.com/p/looking-for-a-publisher-to-publish",
+      "confidence": "low (priorKnowledge; verify with publisher term sheets)"
+    },
+    {
+      "metric": "Steam release volume (competition)",
+      "value": "~55 games/day in 2025 (20,282 per VGI/Zukowski); ~66/day in H1 2026 (11,979), on pace for ~24k in 2026",
+      "numeric": 66,
+      "source": "https://www.steampageanalyzer.com/blog/how-many-games-release-on-steam",
+      "confidence": "high"
+    }
+  ],
+  "publishers": [
+    {
+      "name": "Whitethorn Games",
+      "focus": "Explicitly cozy and accessible: 'pleasant, cozy games that can be played in pieces, that require no special skills or knowledge'",
+      "notableCozyTitles": [
+        "APICO",
+        "Wytchwood",
+        "Lake",
+        "Teacup",
+        "Botany Manor",
+        "Kernel Hearts (Mar 2026)",
+        "Spray Paint Simulator (2025)"
+      ],
+      "dealNotes": "Signs small studios through its annual showcase (e.g. Pancake Games' Slime Heroes, North Star Video Games). Distribution deals such as Blacknut cloud gaming in 65+ countries. Deal terms are not public.",
+      "source": "https://www.blacknut.com/nutshell/whitethorn-games-on-blacknut"
+    },
+    {
+      "name": "Fireshine Games",
+      "focus": "London-based publisher, subsidiary of Enad Global 7. Mixed portfolio with cozy titles.",
+      "notableCozyTitles": [
+        "Tales of Seikyu",
+        "KeyWe"
+      ],
+      "dealNotes": "Part of the EG7 group. Terms not public.",
+      "source": "https://www.gematsu.com/companies/enad-global-7/fireshine-games"
+    },
+    {
+      "name": "Humble Games",
+      "focus": "Indie publishing arm of Humble Bundle. Restructured with major layoffs in mid-2024 (prior knowledge, not re-verified this session), so capacity for new signings is reduced.",
+      "notableCozyTitles": [
+        "Mineko's Night Market",
+        "Coral Island (co-published)",
+        "Forager"
+      ],
+      "dealNotes": "Treat as a cautious signer after the 2024 restructure. Verify current status before pitching.",
+      "source": "https://en.wikipedia.org/wiki/Mineko%27s_Night_Market"
+    },
+    {
+      "name": "Chucklefish",
+      "focus": "UK indie publisher and developer with pixel-art life sims",
+      "notableCozyTitles": [
+        "Stardew Valley (early console/PC publishing partner)",
+        "Witchbrook"
+      ],
+      "dealNotes": "Witchbrook is its own flagship cozy life sim. Unclear appetite for external signings. Terms not public.",
+      "source": "https://gg.deals/games/?publisher=1290"
+    },
+    {
+      "name": "Raw Fury",
+      "focus": "Swedish publisher of artsy, story-rich indie games (25+ titles), some cozy-adjacent",
+      "notableCozyTitles": [
+        "Moonstone Island (prior knowledge)"
+      ],
+      "dealNotes": "Backed by Altor (private equity). Terms not public.",
+      "source": "https://altor.com/companies/raw-fury"
+    },
+    {
+      "name": "Playtonic Friends",
+      "focus": "Publishing label of Playtonic (Yooka-Laylee), focused on 'fun' indie games",
+      "notableCozyTitles": [],
+      "dealNotes": "No cozy titles verified this session. Check the label's Steam franchise page for the current slate.",
+      "source": "https://www.gamedeveloper.com/business/playtonic-branches-into-game-publishing-with-playtonic-friends-label"
+    },
+    {
+      "name": "Kwalee",
+      "focus": "UK mobile and PC/console publisher listed among indie-friendly publishers",
+      "notableCozyTitles": [],
+      "dealNotes": "Cozy catalog not verified this session. Strong in hyper-casual/mobile UA, which can suit idle or cozy mobile ports.",
+      "source": "http://mandragoragames.com/tpost/3mbh739sb1-the-list-of-indie-friendly-game-publishe"
+    },
+    {
+      "name": "Annapurna Interactive",
+      "focus": "Prestige narrative indie publisher",
+      "notableCozyTitles": [
+        "Wanderstop"
+      ],
+      "dealNotes": "Even an Annapurna-published, critically acclaimed cozy game did not secure the studio's next round of funding (Ivy Road closed in 2026).",
+      "source": "https://gamedeveloper.com/business/wanderstop-developer-ivy-road-is-shutting-down"
+    },
+    {
+      "name": "Nacon",
+      "focus": "French AA publisher with simulation-heavy portfolio",
+      "notableCozyTitles": [
+        "Garden Life: A Cozy Simulator (stillalive studios, Feb 2024)"
+      ],
+      "dealNotes": "Simulation-focused, with console reach. Garden Life received mixed critic reviews (~68%).",
+      "source": "https://www.ggrecon.com/reviews/garden-life-a-cozy-simulator-review/"
+    },
+    {
+      "name": "Private Division",
+      "focus": "Publisher label originally formed by Take-Two for AA games",
+      "notableCozyTitles": [
+        "Tales of the Shire (Weta Workshop, 2025)"
+      ],
+      "dealNotes": "A cautionary licensed cozy release. Take-Two sold off the label in late 2024 (prior knowledge).",
+      "source": "https://en.wikipedia.org/wiki/Tales_of_the_Shire"
+    },
+    {
+      "name": "Daybreak Game Company",
+      "focus": "MMO operator and acquirer",
+      "notableCozyTitles": [
+        "Palia"
+      ],
+      "dealNotes": "Acquired Singularity 6 and Palia in Jul 2024 after repeated layoffs. Terms undisclosed.",
+      "source": "https://www.videogameschronicle.com/news/daybreak-games-has-acquired-palia-studio-singularity-6/"
+    },
+    {
+      "name": "Irox Games",
+      "focus": "Publisher of Bongo Cat (desktop idle)",
+      "notableCozyTitles": [
+        "Bongo Cat"
+      ],
+      "dealNotes": "Free-to-play with cosmetic items. ~5.7m players and a ~194.5k concurrent-player peak.",
+      "source": "https://www.gamesmarket.global/bongo-cat-is-on-its-way-to-6-million-players"
+    },
+    {
+      "name": "Wholesome Games (showcase / curator)",
+      "focus": "Not a classic publisher. Runs Wholesome Direct (part of Summer Game Fest), the main cozy discovery showcase.",
+      "notableCozyTitles": [],
+      "dealNotes": "375+ games shown since 2020 and 1m+ wishlists generated; ~4% acceptance (60 of ~1,500 in 2025). Free to submit to.",
+      "source": "https://gamespress.westeu-v2.propressroom.com/pt/-WHOLESOME-DIRECT-2025-DELIVERED-ITS-BIGGEST-SHOWCASE-YET-WITH-SURPRIS"
+    }
+  ],
+  "flops": [
+    {
+      "game": "Tales of the Shire: A The Lord of the Rings Game (2025)",
+      "whatHappened": "Licensed cozy life sim from Weta Workshop / Private Division. Delayed twice (to 29 Jul 2025), then met mixed-to-negative reviews: PC Gamer called it 'boring' and 'poorly thought out', and critics and fans 'tore it apart'. Reports cite studio inexperience, weak leadership and communication problems.",
+      "lesson": "A strong IP and art direction can't carry thin core loops. Cozy players expect depth in farming, cooking and relationships, and studios new to games underestimate this.",
+      "source": "https://gamingbolt.com/tales-of-the-shire-a-lord-of-the-rings-game-studio-was-affected-by-inexperience-other-problems"
+    },
+    {
+      "game": "Palia (Singularity 6)",
+      "whatHappened": "A heavily funded cozy MMO. Steam peak of only ~12.6k concurrent players and 79% positive reviews. Three or more rounds of layoffs (35% of staff in Apr 2024, 40% in May 2024), then sale to Daybreak in Jul 2024.",
+      "lesson": "Live-service cozy needs MMO-scale retention economics. A burn rate sized for a hit is fatal when results are only moderate.",
+      "source": "https://en.wikipedia.org/wiki/Palia"
+    },
+    {
+      "game": "Fae Farm (Phoenix Labs)",
+      "whatHappened": "A cozy farm/RPG released on PC and Switch in 2023, with console ports in 2024. The studio went through four layoff rounds in under two years and later cut the 'majority' of staff. Fae Farm was well reviewed but not big enough to sustain the studio.",
+      "lesson": "Good reviews don't guarantee sustainability. Studio overhead has to match realistic sales for a $30-60 cozy title.",
+      "source": "https://www.geekwire.com/2025/vancouver-game-studio-phoenix-labs-lays-off-majority-of-employees/"
+    },
+    {
+      "game": "Wanderstop (Ivy Road / Annapurna, 2025)",
+      "whatHappened": "A critically acclaimed cozy-narrative tea-shop game that appeared on 2025 best-of lists, but the studio closed on 31 Mar 2026 after failing to secure funding for its next project (Engine Angel).",
+      "lesson": "Critical success is not commercial or financial security. Fund the next game from revenue or line up deals before launch, and keep burn low.",
+      "source": "https://gamedeveloper.com/business/wanderstop-developer-ivy-road-is-shutting-down"
+    },
+    {
+      "game": "Mirthwood (2024)",
+      "whatHappened": "A medieval cozy life sim that launched with stutters (up to 3-second freezes on area, weather and day transitions), awkward controls and black-screen bugs, and was reviewed as a 'diamond in the rough'.",
+      "lesson": "Cozy players are unforgiving of jank that breaks relaxation. Delay or ship a demo and Early Access rather than a buggy 1.0.",
+      "source": "https://primagames.com/reviews/mirthwood-review-a-diamond-in-the-rough"
+    },
+    {
+      "game": "Garden Life: A Cozy Simulator (Nacon, 2024)",
+      "whatHappened": "A well-marketed cozy gardening sim with good visuals, but critic reviews were mixed (~68%), citing limited design freedom and value.",
+      "lesson": "Putting 'Cozy' in the title is not a substitute for creative freedom. Decorating and gardening fans want deep customization.",
+      "source": "https://www.ggrecon.com/reviews/garden-life-a-cozy-simulator-review/"
+    }
+  ],
+  "steamCozyReleasesNote": "Steam Page Analyzer counts of games carrying the Cozy tag (Sep 2026 snapshot). 2026 is partial, to 27 Sep, and already 1,041 (+143% on the same weeks of 2025). Tag counts shift as tags are added after release."
+}
