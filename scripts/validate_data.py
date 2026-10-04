@@ -91,7 +91,12 @@ if concepts:
         need(c, ["id", "name", "niche", "oneLiner", "pitch", "coreLoop", "features", "platforms", "pricing",
                  "team", "budgetUSD", "devMonths", "milestones", "marketingPlan", "liveOps", "kpis",
                  "killCriteria", "risks", "revenueScenarios"], w)
-        need(c, ["track", "hook", "spec", "drivers"], w)
+        need(c, ["track", "hook", "spec", "drivers", "look"], w)
+        lk = c.get("look") or {}
+        need(lk, ["short", "vibe", "references", "palette", "shapes", "characters", "camera", "lighting", "ui", "motion", "sound", "screenshot", "clip", "avoid"], w + " look")
+        for col in lk.get("palette", []):
+            if not str(col.get("hex", "")).startswith("#") or len(col.get("hex", "")) != 7:
+                problems.append(f"{w}: look.palette hex must be #RRGGBB, got {col.get('hex')!r}")
         if c.get("track") not in ("main", "side"):
             problems.append(f"{w}: track must be main|side")
         for k in ("genre", "players", "setting", "coreVerb", "look", "team", "audience", "differentiator"):

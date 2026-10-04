@@ -419,7 +419,59 @@
           "netUSD": 4000000,
           "note": "Neko Atsume-style phenomenon. Rare."
         }
-      ]
+      ],
+      "look": {
+        "short": "A pastel plush-bakery shelf · squishy treats with sleepy faces",
+        "vibe": "Imagine a tiny pastel shop shelf at golden hour. A little paper box sits on the counter; you tap it, the lid pops with a soft 'fwump', and a plush croissant with sleepy eyes tumbles out and blinks at you. Everything looks squishy enough to pick up and hug.",
+        "references": [
+          "Jellycat bakery plush",
+          "Sanrio shop windows",
+          "Japanese capsule-toy displays",
+          "Neko Atsume's simplicity"
+        ],
+        "palette": [
+          {
+            "name": "Strawberry milk",
+            "hex": "#F6C6C8"
+          },
+          {
+            "name": "Butter cream",
+            "hex": "#FBE7B5"
+          },
+          {
+            "name": "Matcha foam",
+            "hex": "#B9D7A8"
+          },
+          {
+            "name": "Blueberry dusk",
+            "hex": "#8E9BD6"
+          },
+          {
+            "name": "Shelf wood",
+            "hex": "#D9A577"
+          },
+          {
+            "name": "Cocoa",
+            "hex": "#6B4A3A"
+          }
+        ],
+        "shapes": "Round and stubby, no sharp corners. Treats are mostly body with tiny limbs; everything sits like a bean bag.",
+        "characters": "Treats with calm faces: two dot eyes, a tiny mouth, pink blush. A round baker-bunny shopkeeper and a loaf-shaped shop cat that naps on the counter.",
+        "camera": "Straight-on, like looking into a shop window. Portrait (9:16) first, so a phone screenshot is a whole shelf.",
+        "lighting": "Warm late-afternoon light from the left; soft drop shadows. Secret treats get a slow gold shimmer, never a flashing jackpot.",
+        "textures": "Visible plush fuzz and stitched seams on treats; kraft-paper boxes with a printed series label.",
+        "ui": "Rounded cards like candy wrappers, big thumb-sized buttons, a series card showing silhouettes of the 6 + 1 secret.",
+        "type": "Rounded, friendly display font (e.g. Fredoka or Baloo 2) with a clean body font (e.g. Nunito).",
+        "motion": "The box wobbles twice before opening; the treat squashes and stretches as it lands; placed treats give a tiny bounce.",
+        "sound": "Paper rustle, a soft pop, a tiny music-box chime for secrets. Music: gentle music box and ukulele.",
+        "screenshot": "A full shelf of colorful treats in neat rows, one golden secret glowing in the middle.",
+        "clip": "Box wobbles → lid pops → a plush croissant blinks → 'SECRET!' sparkle. Five seconds.",
+        "avoid": [
+          "Toothy 'ugly-cute' faces that read as Labubu",
+          "Casino-style flashing and coin showers",
+          "Neon colors or glossy plastic textures"
+        ]
+      }
     },
     {
       "id": "tea-cart",
@@ -751,7 +803,59 @@
           "netUSD": 3500000,
           "note": "Monkey Mart-level. Rare."
         }
-      ]
+      ],
+      "look": {
+        "short": "A lantern-lit tea street at dusk · chunky chibi customers · steam and glow",
+        "vibe": "Imagine a little wooden tea cart at the edge of a lantern-lit street in early evening. Steam curls from the kettle, chubby customers queue with tiny umbrellas, and every cup you serve lights another lantern until the whole street glows.",
+        "references": [
+          "Night-market illustrations",
+          "Café chalkboard menus",
+          "Chibi character art",
+          "Monkey Mart's readability"
+        ],
+        "palette": [
+          {
+            "name": "Steam cream",
+            "hex": "#F7EEDC"
+          },
+          {
+            "name": "Lantern amber",
+            "hex": "#F2A541"
+          },
+          {
+            "name": "Matcha",
+            "hex": "#9BBF6A"
+          },
+          {
+            "name": "Brick",
+            "hex": "#B5533C"
+          },
+          {
+            "name": "Boba brown",
+            "hex": "#6E4B3A"
+          },
+          {
+            "name": "Night teal",
+            "hex": "#23495A"
+          }
+        ],
+        "shapes": "Chunky and soft: low-poly or 2.5D with big rounded silhouettes; everything readable on a small screen.",
+        "characters": "Round chibi customers (cats, capybaras, people) with one accessory each; regulars are recognizable by silhouette alone.",
+        "camera": "3/4 top-down in portrait; in focus mode, a horizontal strip along the edge of the screen.",
+        "lighting": "Dusk turning to night; each upgrade adds warm lantern light to the street.",
+        "textures": "Smooth shapes with paper-lantern glow; wood grain on the cart.",
+        "ui": "A chalkboard menu, a coin jar for money, wooden sign buttons.",
+        "type": "Rounded display font (e.g. Fredoka) with chalk-style menu lettering.",
+        "motion": "Curling steam, a bobbing queue, cups sliding across the counter.",
+        "sound": "Kettle whistle, cup clinks, distant street chatter; soft lofi with plucked strings.",
+        "screenshot": "Half the street glowing, a queue at the cart.",
+        "clip": "A time-lapse from one dim cart to a fully glowing street.",
+        "avoid": [
+          "The generic supermarket-tycoon look",
+          "Harsh pop-up ads and badges",
+          "Overly detailed characters that blur on a phone"
+        ]
+      }
     },
     {
       "id": "cozy-corner",
@@ -1083,7 +1187,59 @@
           "netUSD": 3000000,
           "note": "Dress to Impress-style. Rare."
         }
-      ]
+      ],
+      "look": {
+        "short": "A matchbox-sized isometric room · one warm lamp · rain on the window",
+        "vibe": "Imagine a tiny isometric room the size of a matchbox, lit by one warm lamp while it rains outside. You drop in a beanbag, a stack of books, a plant and fairy lights, and suddenly it feels like a place someone lives. Then you scroll through everyone else's take on the same theme.",
+        "references": [
+          "Isometric diorama illustrations",
+          "Dollhouse miniatures",
+          "Pinterest room boards",
+          "Unpacking's readable rooms"
+        ],
+        "palette": [
+          {
+            "name": "Lamp glow",
+            "hex": "#F5C77E"
+          },
+          {
+            "name": "Cream wall",
+            "hex": "#F2E6D8"
+          },
+          {
+            "name": "Blush",
+            "hex": "#E7A9A0"
+          },
+          {
+            "name": "Moss",
+            "hex": "#8BA471"
+          },
+          {
+            "name": "Rain blue",
+            "hex": "#8FA9C6"
+          },
+          {
+            "name": "Plum dusk",
+            "hex": "#5E4B6B"
+          }
+        ],
+        "shapes": "Soft, slightly chunky furniture with rounded edges; props are small but readable, with bold silhouettes.",
+        "characters": "A small resident (the player's chosen character) and an optional pet who reacts to what you place.",
+        "camera": "Isometric 3/4 view; the room floats like a diorama, with tilt-shift blur in photo mode.",
+        "lighting": "Time-of-day lighting; lamps and fairy lights actually glow; rain streaks on the window.",
+        "textures": "Soft painted surfaces with fabric patterns on cushions and rugs.",
+        "ui": "A prop drawer like a mail-order catalog, the theme on a sticky note, the gallery as polaroids with hearts.",
+        "type": "Rounded sans for UI (e.g. Nunito) with a handwritten font for themes (e.g. Patrick Hand).",
+        "motion": "Props drop in and settle with a small bounce; lights fade on as the room fills.",
+        "sound": "Rain, page flips, soft placement thuds; lofi.",
+        "screenshot": "One beautifully finished room in today's theme.",
+        "clip": "An empty room fills up in a 5-second time-lapse, ending with the lights coming on.",
+        "avoid": [
+          "Realistic furniture-catalog 3D",
+          "A cluttered interface over the room",
+          "Tiny props that vanish on a phone"
+        ]
+      }
     },
     {
       "id": "pond-party",
@@ -1442,7 +1598,59 @@
           "netUSD": 5450000,
           "note": "Webfishing-level, in a browser. Rare."
         }
-      ]
+      ],
+      "look": {
+        "short": "A round pond at golden hour · chunky low-poly critters in silly hats · fireflies",
+        "vibe": "Imagine a small round pond in late summer with lily pads and a wooden dock. Little critters in silly hats sit on the edge with their lines in the water while the fireflies come out. Someone catches a golden koi and everyone throws a heart emote.",
+        "references": [
+          "Low-poly diorama art",
+          "Picture-book animals",
+          "Animal Crossing's fishing mood (spirit)",
+          "Webfishing's hangout energy"
+        ],
+        "palette": [
+          {
+            "name": "Firefly yellow",
+            "hex": "#F8E27A"
+          },
+          {
+            "name": "Lily pink",
+            "hex": "#F2A7B5"
+          },
+          {
+            "name": "Dusk lavender",
+            "hex": "#A99BD1"
+          },
+          {
+            "name": "Dock wood",
+            "hex": "#B98B5E"
+          },
+          {
+            "name": "Pond green",
+            "hex": "#4F8F7A"
+          },
+          {
+            "name": "Deep water",
+            "hex": "#2C5D6F"
+          }
+        ],
+        "shapes": "Chunky, flat-shaded low-poly with oversized heads and hats so each critter reads from across the pond.",
+        "characters": "A frog, cat, duck and capybara to start, each with dozens of hats; a resident capybara soaks with a yuzu on its head.",
+        "camera": "3/4 top-down with a slow orbit; the whole pond fits on one phone screen.",
+        "lighting": "Golden hour sliding into night, fireflies and lanterns appearing; weather changes by season.",
+        "textures": "Flat-shaded low poly with a soft, gently animated water surface.",
+        "ui": "A big emote wheel; catches pop up as trading cards.",
+        "type": "Chunky rounded sans (e.g. Baloo 2).",
+        "motion": "Bobbing floats, splashes, a fish flip on every catch; critters wiggle when emoting.",
+        "sound": "Lapping water, crickets, reel clicks; acoustic guitar.",
+        "screenshot": "Five critters in hats on the dock at sunset.",
+        "clip": "A rare golden-koi reveal and a burst of group emotes.",
+        "avoid": [
+          "Realistic fish or gore",
+          "Open chat bubbles",
+          "Neon or harsh outlines"
+        ]
+      }
     },
     {
       "id": "petal-drop",
@@ -1775,7 +1983,58 @@
           "netUSD": 4200000,
           "note": "Suika-level moment. Rare."
         }
-      ]
+      ],
+      "look": {
+        "short": "A terracotta pot on a sunny windowsill · watercolor blooms · jelly physics",
+        "vibe": "Imagine a terracotta pot on a sunny windowsill. Soft round buds drop in and wobble against each other; when two match they puff into a bigger flower with a little cloud of petals, until the pot is bursting with a giant sunflower.",
+        "references": [
+          "Botanical watercolor prints",
+          "Pressed-flower art",
+          "Suika Game's readable shapes"
+        ],
+        "palette": [
+          {
+            "name": "Sky window",
+            "hex": "#BFE0F2"
+          },
+          {
+            "name": "Terracotta",
+            "hex": "#D9784F"
+          },
+          {
+            "name": "Petal pink",
+            "hex": "#F4A6B8"
+          },
+          {
+            "name": "Sun yellow",
+            "hex": "#F7D154"
+          },
+          {
+            "name": "Leaf",
+            "hex": "#7FB069"
+          },
+          {
+            "name": "Soil",
+            "hex": "#5B3A29"
+          }
+        ],
+        "shapes": "Circles that read as flowers seen from above. Each of the ten tiers has its own silhouette and color, so you can tell them apart even without color.",
+        "characters": "The flowers themselves have tiny sleepy faces until they bloom; a bee mascot hovers by the seed packet.",
+        "camera": "Side-on cross-section of the pot, portrait.",
+        "lighting": "Bright morning sun, flat with a soft rim light.",
+        "textures": "Watercolor wash on petals, painted outlines, a grainy terracotta pot.",
+        "ui": "The score lives on a seed packet; the next flower shows on a garden tag; the share card is a pressed-flower postcard.",
+        "type": "Playful rounded sans (e.g. Baloo 2).",
+        "motion": "Jelly wobble on every drop, a petal puff on every merge; the danger line glows softly instead of flashing red.",
+        "sound": "Soft pops, wind chimes, birdsong; a gentle acoustic loop.",
+        "screenshot": "An overflowing pot with a sunflower crowning it.",
+        "clip": "Near-overflow tension, one last drop, a giant sunflower bloom.",
+        "avoid": [
+          "Fruit (it reads as a Suika clone)",
+          "Harsh red warnings",
+          "Generic clip-art flowers"
+        ]
+      }
     },
     {
       "id": "daily-tidy",
@@ -2132,7 +2391,59 @@
           "netUSD": 3000000,
           "note": "Wordle-scale. Very rare, and a licensing or acquisition story."
         }
-      ]
+      ],
+      "look": {
+        "short": "A top-down flat-lay of a cozy desk · paper and wood textures · snap-into-place",
+        "vibe": "Imagine looking down at a wooden desk on a rainy morning: pencils scattered, a tipped-over mug, washi tape everywhere. You drag each thing and it snaps home with a satisfying click, until the desk looks like a photo in a stationery-shop catalog.",
+        "references": [
+          "Knolling and flat-lay photography",
+          "Japanese stationery catalogs",
+          "A Little to the Left (spirit)",
+          "Unpacking's readable objects"
+        ],
+        "palette": [
+          {
+            "name": "Linen",
+            "hex": "#F3EDE2"
+          },
+          {
+            "name": "Oak desk",
+            "hex": "#C99C6B"
+          },
+          {
+            "name": "Sage",
+            "hex": "#A7B99E"
+          },
+          {
+            "name": "Dusty rose",
+            "hex": "#D9A5A0"
+          },
+          {
+            "name": "Mustard",
+            "hex": "#E0B44C"
+          },
+          {
+            "name": "Ink navy",
+            "hex": "#2F3E5C"
+          }
+        ],
+        "shapes": "Clean, flat illustration with thin dark outlines; slightly rounded objects that read at thumb size. Every object has an obvious 'home' shape.",
+        "characters": "No people; a fluffy grey cat wanders through some scenes and knocks one thing over.",
+        "camera": "Top-down flat-lay, the scene as a square board centered in a portrait screen.",
+        "lighting": "Soft window light from one side, with gentle contact shadows so objects feel tactile.",
+        "textures": "Light paper grain and wood grain; no photo textures, no heavy gradients.",
+        "ui": "Almost none while playing: a move counter and a lightbulb hint. The result is a little receipt-style card.",
+        "type": "Warm rounded sans (e.g. Nunito) with a handwritten accent font for labels (e.g. Caveat).",
+        "motion": "Drag, snap, tiny bounce. At the end, a quick rewind from mess to tidy.",
+        "sound": "Pencil clinks, paper slides, a soft click on each snap; rain and lofi in the background.",
+        "screenshot": "A before/after split: chaos on the left, a perfect flat-lay on the right.",
+        "clip": "Three seconds of mess, rapid satisfying snaps, the final tidy reveal, then the result card.",
+        "avoid": [
+          "Clutter too small to read on a phone",
+          "Realistic photo textures",
+          "Busy UI over the scene"
+        ]
+      }
     },
     {
       "id": "driftgarden",
@@ -2596,7 +2907,58 @@
             "link": "#playbook"
           }
         }
-      ]
+      ],
+      "look": {
+        "short": "A garden houseboat on a turquoise sea · stylized 3D · watercolor water",
+        "vibe": "Imagine a little houseboat on a turquoise sea with a garden spilling over its deck: tomato vines on the railing, a greenhouse cabin, friends fishing off the back as the sun sets over flooded rooftops.",
+        "references": [
+          "Watercolor seascapes",
+          "Studio-animation skies (original, not imitated)",
+          "Raft's build-on-a-boat idea, made gentle"
+        ],
+        "palette": [
+          {
+            "name": "Sail cream",
+            "hex": "#F4E9D3"
+          },
+          {
+            "name": "Lagoon",
+            "hex": "#3FB6B2"
+          },
+          {
+            "name": "Sunset coral",
+            "hex": "#F49A7A"
+          },
+          {
+            "name": "Tomato",
+            "hex": "#E2583E"
+          },
+          {
+            "name": "Leaf",
+            "hex": "#6FAF5A"
+          },
+          {
+            "name": "Deck teak",
+            "hex": "#A8754B"
+          }
+        ],
+        "shapes": "Stylized 3D with soft, chunky forms; the boat silhouette must read instantly as 'garden + boat'.",
+        "characters": "Rounded, expressive islanders; players customize simple characters with big hats and scarves.",
+        "camera": "Third-person over the shoulder, pulling back to show the whole boat when sailing.",
+        "lighting": "Bright midday to warm sunset; light dancing on the water.",
+        "textures": "Painterly textures, watercolor-like water and foam.",
+        "ui": "Wooden crate inventory, a hand-drawn sea chart.",
+        "type": "Hand-lettered titles with a clean rounded body font.",
+        "motion": "Gentle rocking boat, swaying plants, rooms snapping onto the hull.",
+        "sound": "Waves, gulls, creaking wood; accordion and acoustic guitar.",
+        "screenshot": "The boat at sunset with friends on deck.",
+        "clip": "A new room snapping onto the hull as the boat sails into golden light.",
+        "avoid": [
+          "Grim survival tones",
+          "Realistic water",
+          "Dark storms as threats"
+        ]
+      }
     },
     {
       "id": "lantern-stall",
@@ -2976,7 +3338,58 @@
             "niche": "Shop/management sim (cafe, bakery, potion shop)"
           }
         }
-      ]
+      ],
+      "look": {
+        "short": "A busy night market from behind your stall · painterly 2.5D · red and gold lanterns",
+        "vibe": "Imagine a busy night market seen from your little stall: red and gold lanterns overhead, steam rising from bamboo baskets, two cooks bumping elbows behind the counter while regulars wave from the crowd.",
+        "references": [
+          "Night-market photography",
+          "Painterly food illustration",
+          "Cozy cooking games' close-up food shots"
+        ],
+        "palette": [
+          {
+            "name": "Steam white",
+            "hex": "#F4EFE6"
+          },
+          {
+            "name": "Gold",
+            "hex": "#E8B84A"
+          },
+          {
+            "name": "Lantern red",
+            "hex": "#C8443A"
+          },
+          {
+            "name": "Bok choy",
+            "hex": "#7AAE6B"
+          },
+          {
+            "name": "Soy",
+            "hex": "#5A3825"
+          },
+          {
+            "name": "Night ink",
+            "hex": "#1F2A44"
+          }
+        ],
+        "shapes": "Painterly 2.5D with rounded characters; food rendered big and lovingly.",
+        "characters": "Two cooks with distinct silhouettes; regulars with small stories and signature orders.",
+        "camera": "Side view across the stall, with the crowd softly blurred behind.",
+        "lighting": "Lantern-lit night with warm pools of light and drifting steam.",
+        "textures": "Painted backgrounds, glossy sauces, bamboo and enamel.",
+        "ui": "Paper order tickets, a hand-written menu board.",
+        "type": "Brush-style display font with a clean body font; real script where the culture uses it.",
+        "motion": "Sizzling woks, stacking baskets, passing plates hand to hand.",
+        "sound": "Sizzle, chatter, cleavers on boards; lively but gentle music from the setting.",
+        "screenshot": "Two cooks mid-rush, steam everywhere, a full counter.",
+        "clip": "A perfect hand-off between partners during a rush.",
+        "avoid": [
+          "Stereotyped or costume-like depictions",
+          "Timers and red alarms",
+          "Generic 'Asian' mash-ups"
+        ]
+      }
     },
     {
       "id": "terraces",
@@ -3365,7 +3778,58 @@
           "netUSD": 8820000,
           "note": "A Tiny Glade-like year. Rare."
         }
-      ]
+      ],
+      "look": {
+        "short": "A misty mountain of rice terraces at dawn · soft stylized 3D · glittering water",
+        "vibe": "Imagine a misty green mountain at dawn. Each terrace you carve catches the light like a mirror as water spills from step to step, and tiny villages with curved roofs appear where it lands.",
+        "references": [
+          "Rice-terrace photography",
+          "Townscaper's toy-like charm",
+          "Tiny Glade's tactile building"
+        ],
+        "palette": [
+          {
+            "name": "Mist",
+            "hex": "#E6EEF0"
+          },
+          {
+            "name": "Dawn peach",
+            "hex": "#F3C9A8"
+          },
+          {
+            "name": "Water sky",
+            "hex": "#9CCBE0"
+          },
+          {
+            "name": "Rice green",
+            "hex": "#8DBF6A"
+          },
+          {
+            "name": "Clay roof",
+            "hex": "#B8603E"
+          },
+          {
+            "name": "Stone",
+            "hex": "#8C8C84"
+          }
+        ],
+        "shapes": "Smooth sculpted terrain with crisp terrace edges; small, toy-like houses.",
+        "characters": "Tiny villagers and water buffalo seen from afar; no close-ups.",
+        "camera": "Orbiting overhead camera with tilt-shift, like looking at a model.",
+        "lighting": "Dawn and dusk with long shadows; water mirrors the sky.",
+        "textures": "Soft painted terrain; reflective water.",
+        "ui": "Minimal: a sculpt tool and a seed pouch at the screen edge.",
+        "type": "Elegant, airy sans with generous spacing.",
+        "motion": "Water flowing step to step, rice swaying, smoke curling from chimneys.",
+        "sound": "Trickling water, birds, distant bells; traditional instruments.",
+        "screenshot": "A whole mountain glittering with flooded terraces at sunrise.",
+        "clip": "One cut in the slope and water cascading down five terraces.",
+        "avoid": [
+          "Busy UI",
+          "Over-saturated colors",
+          "Cultural pastiche without consultants"
+        ]
+      }
     },
     {
       "id": "lamplighters-rest",
@@ -3749,7 +4213,58 @@
             "game": "wanderstop"
           }
         }
-      ]
+      ],
+      "look": {
+        "short": "A foggy seaside inn at dusk · hand-painted 2D · amber lamplight and soft ghosts",
+        "vibe": "Imagine a foggy seaside village at dusk with one lighthouse beam sweeping across. Inside your little inn it's warm and amber; outside, translucent ghosts drift by, more sad-sweet than scary.",
+        "references": [
+          "Hand-painted storybook art",
+          "Dredge's moody coast (spirit)",
+          "Spiritfarer's warmth (spirit)"
+        ],
+        "palette": [
+          {
+            "name": "Candle cream",
+            "hex": "#F6E9CF"
+          },
+          {
+            "name": "Lamp amber",
+            "hex": "#F0B35E"
+          },
+          {
+            "name": "Ghost mint",
+            "hex": "#CFEDE3"
+          },
+          {
+            "name": "Fog blue",
+            "hex": "#8E9BA8"
+          },
+          {
+            "name": "Brick",
+            "hex": "#9C5643"
+          },
+          {
+            "name": "Sea ink",
+            "hex": "#23364A"
+          }
+        ],
+        "shapes": "Soft hand-painted shapes; ghosts are simple translucent silhouettes with gentle faces.",
+        "characters": "The innkeeper, regular guests and ghosts, each with one memorable object tied to their story.",
+        "camera": "2D side view, interior cutaway of the inn.",
+        "lighting": "Warm inside, cool fog outside; the lighthouse beam sweeps across every few seconds.",
+        "textures": "Painterly brushwork and paper grain.",
+        "ui": "A guest ledger and letters as menus.",
+        "type": "Bookish serif for story text with a clean sans for UI.",
+        "motion": "Drifting fog, flickering candles, ghosts fading in and out.",
+        "sound": "Waves, creaking wood, a crackling fire; piano and cello.",
+        "screenshot": "The inn glowing amber in the fog with a ghost at the window.",
+        "clip": "A ghost's story resolving and the ghost dissolving into light.",
+        "avoid": [
+          "Jump scares",
+          "Gore or horror imagery",
+          "Pitch-black scenes"
+        ]
+      }
     },
     {
       "id": "bloom-harbor-roblox",
@@ -4001,7 +4516,52 @@
             "niche": "Roblox cozy experiences"
           }
         }
-      ]
+      ],
+      "look": {
+        "short": "A sunny harbor of garden piers · bright Roblox-native style · glowing rare plants",
+        "vibe": "Imagine a sunny harbor of little garden plots on piers, full of players' rare glowing plants and stalls where people trade.",
+        "references": [
+          "Grow a Garden's readability",
+          "Bright toy-like Roblox builds"
+        ],
+        "palette": [
+          {
+            "name": "Sand",
+            "hex": "#F1DDB0"
+          },
+          {
+            "name": "Rare gold",
+            "hex": "#F6C343"
+          },
+          {
+            "name": "Bright leaf",
+            "hex": "#6CC24A"
+          },
+          {
+            "name": "Coral",
+            "hex": "#F17D6B"
+          },
+          {
+            "name": "Harbor blue",
+            "hex": "#4A90C2"
+          }
+        ],
+        "shapes": "Chunky, bright, Roblox-native shapes; rare plants have glowing auras.",
+        "characters": "Players' avatars; a harbor master NPC.",
+        "camera": "Standard Roblox third person.",
+        "lighting": "Bright daylight; rare plants glow at night.",
+        "textures": "Clean Roblox materials.",
+        "ui": "Big buttons and rarity colors.",
+        "type": "Roblox default fonts with a chunky title.",
+        "motion": "Plants pop when ready, sparkles on rares.",
+        "sound": "Harbor ambience, pops.",
+        "screenshot": "A pier of glowing rare plants.",
+        "clip": "A super-rare plant growing in.",
+        "avoid": [
+          "Pay-to-win shortcuts",
+          "Cluttered HUD"
+        ]
+      }
     },
     {
       "id": "quilt-porch",
@@ -4347,7 +4907,58 @@
             "link": "#gaps"
           }
         }
-      ]
+      ],
+      "look": {
+        "short": "A sunny porch with a quilt in progress · bold fabric squares · big readable UI",
+        "vibe": "Imagine an old wooden porch on a summer afternoon with a half-finished quilt across your lap. Each fabric square you place clicks into a pattern, and the colors sing together.",
+        "references": [
+          "Traditional quilt patterns",
+          "Vintage fabric swatches",
+          "Dorfromantik's calm placement"
+        ],
+        "palette": [
+          {
+            "name": "Porch white",
+            "hex": "#F5F0E6"
+          },
+          {
+            "name": "Buttercup",
+            "hex": "#F2CF5B"
+          },
+          {
+            "name": "Sage",
+            "hex": "#93AE8B"
+          },
+          {
+            "name": "Gingham red",
+            "hex": "#C9504A"
+          },
+          {
+            "name": "Denim",
+            "hex": "#4D6E9C"
+          },
+          {
+            "name": "Walnut",
+            "hex": "#7A5536"
+          }
+        ],
+        "shapes": "A big grid of large squares with bold, high-contrast patterns that read at arm's length.",
+        "characters": "Family members appear in small story vignettes between quilts.",
+        "camera": "Top-down on the quilt, zoomed in close.",
+        "lighting": "Warm afternoon sun, light and even.",
+        "textures": "Visible fabric weave and stitching.",
+        "ui": "Extra-large buttons and text, high contrast, no timers anywhere.",
+        "type": "Large, highly legible font (e.g. Atkinson Hyperlegible).",
+        "motion": "Squares settle with a soft stitch animation; finished quilts unfold.",
+        "sound": "Soft fabric rustle, porch birds; gentle guitar.",
+        "screenshot": "A finished quilt draped over the porch rail.",
+        "clip": "The last square placed and the whole quilt unfolding.",
+        "avoid": [
+          "Small text",
+          "Fast animations",
+          "Low-contrast pastel-on-pastel"
+        ]
+      }
     },
     {
       "id": "sill",
@@ -4608,7 +5219,52 @@
             "niche": "Idle/desktop companion"
           }
         }
-      ]
+      ],
+      "look": {
+        "short": "A sunny windowsill along the bottom of your screen · crisp pixel plants",
+        "vibe": "Imagine the bottom strip of your screen turned into a sunny windowsill: three little pots, a sprout slowly unfurling while you work, and a friend's flower popping in to visit.",
+        "references": [
+          "Rusty's Retirement's screen-strip format",
+          "Pixel-art plant illustrations"
+        ],
+        "palette": [
+          {
+            "name": "Sill white",
+            "hex": "#F7F3EC"
+          },
+          {
+            "name": "Window sky",
+            "hex": "#CFE6F5"
+          },
+          {
+            "name": "Bloom pink",
+            "hex": "#F0A1B8"
+          },
+          {
+            "name": "Leaf",
+            "hex": "#79B26B"
+          },
+          {
+            "name": "Terracotta",
+            "hex": "#D27D56"
+          }
+        ],
+        "shapes": "Crisp pixel art at 2x scale; pots and plants with clear outlines.",
+        "characters": "Tiny pot-dwelling critters (a snail, a ladybug) that wander along the sill.",
+        "camera": "A side-view strip about 120px tall.",
+        "lighting": "Follows your real clock: bright by day, warm lamp at night.",
+        "textures": "Clean pixel shading.",
+        "ui": "Nearly invisible: hover to see a tiny watering can.",
+        "type": "Pixel font for numbers.",
+        "motion": "Slow growth, leaves swaying, a sparkle when something blooms.",
+        "sound": "Optional soft rain and drips.",
+        "screenshot": "A desktop with the sill full of blooms along the bottom.",
+        "clip": "A time-lapse of a seed growing into a flower across a workday.",
+        "avoid": [
+          "Distracting motion",
+          "Bright flashing notifications"
+        ]
+      }
     }
   ]
 }

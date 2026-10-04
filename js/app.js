@@ -253,14 +253,64 @@
   }
   function miniBar(v, max) { return h("span", { class: "mini-bar", "aria-hidden": "true" }, h("i", { style: `width:${(v / (max || 10)) * 100}%` })); }
 
+  // ---------- look & feel ----------
+  function swatches(look, small) {
+    return h("div", { class: "swatches" + (small ? " small" : ""), role: "list", "aria-label": "Palette" }, (look.palette || []).map((c) =>
+      h("div", { class: "swatch", role: "listitem", title: c.name + " " + c.hex }, h("i", { style: "background:" + c.hex }), small ? null : h("span", {}, h("b", { text: c.name }), h("code", { text: c.hex })))));
+  }
+  function sketchOf(c, small) { return window.AtlasSketch && c.look ? window.AtlasSketch.sketch(c.id, c.look.palette, { small, label: "Mood sketch of " + c.name }) : null; }
+  function artBrief(c) {
+    const L = c.look;
+    return [
+      "ART BRIEF: " + c.name, "", "Hook: " + c.hook, "", "Imagine: " + L.vibe, "",
+      "Palette: " + L.palette.map((x) => x.name + " " + x.hex).join(", "),
+      "References (in spirit, never copied): " + L.references.join("; "), "",
+      "Shapes: " + L.shapes, "Characters: " + L.characters, "Camera: " + L.camera, "Lighting: " + L.lighting, "Textures: " + L.textures,
+      "Interface: " + L.ui, "Type: " + L.type, "Motion: " + L.motion, "Sound: " + L.sound, "",
+      "Key screenshot: " + L.screenshot, "The 5-second clip: " + L.clip, "",
+      "Avoid: " + L.avoid.join("; "), "",
+      "All art must be original and hand-made or hand-directed. No AI-generated images, and no imitation of any artist's or brand's style.",
+    ].join("\n");
+  }
+  function lookPanel(c) {
+    const L = c.look;
+    if (!L) return null;
+    const sk = sketchOf(c);
+    const brief = artBrief(c);
+    const ta = h("textarea", { class: "brief", readonly: true, rows: "12", "aria-label": "Art brief" });
+    ta.value = brief;
+    const status = h("span", { class: "muted", style: "font-size:.8rem", role: "status" });
+    const copy = h("button", { type: "button", class: "btn", text: "Copy brief", onclick: async () => {
+      try { await navigator.clipboard.writeText(brief); status.textContent = "Copied"; }
+      catch (e) { ta.focus(); ta.select(); status.textContent = "Selected; press Ctrl/Cmd+C to copy"; }
+    } });
+    const rows = [["Shapes", L.shapes], ["Characters", L.characters], ["Camera", L.camera], ["Lighting", L.lighting], ["Textures", L.textures], ["Interface", L.ui], ["Type", L.type], ["Motion", L.motion], ["Sound", L.sound]];
+    return h("section", { class: "panel look" },
+      h("div", { class: "panel-head" }, h("h3", { text: "Look & feel" }), h("p", { text: sk ? "Mood sketch: composition and palette, not final art" : "Palette and art direction" })),
+      h("div", { class: "look-top" + (sk ? "" : " no-sketch") },
+        sk,
+        h("div", { class: "section" },
+          h("p", { class: "look-vibe", text: L.vibe }),
+          swatches(L),
+          h("div", { class: "chips" }, h("span", { class: "muted", style: "font-size:.8rem", text: "Looks like (in spirit):" }), L.references.map((x) => h("span", { class: "chip", text: x }))),
+          h("div", { class: "grid grid-2", style: "gap:10px" },
+            h("div", { class: "money-shot" }, h("div", { class: "eyebrow", text: "The screenshot" }), h("p", { text: L.screenshot })),
+            h("div", { class: "money-shot" }, h("div", { class: "eyebrow", text: "The 5-second clip" }), h("p", { text: L.clip }))))),
+      h("dl", { class: "kv look-kv" }, rows.map(([k, v]) => [h("dt", { text: k }), h("dd", { text: v })])),
+      h("div", { class: "look-avoid" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Avoid:"), h("ul", {}, L.avoid.map((x) => h("li", { text: x })))),
+      h("details", { class: "brief-wrap" }, h("summary", { text: "Art brief for your illustrator", style: "cursor:pointer;color:var(--accent);font-weight:600" }),
+        h("div", { class: "section", style: "margin-top:8px" }, ta, h("div", { class: "chips" }, copy, status))));
+  }
+
   function suggestionRow(r, i) {
     const c = r.c, sp = c.spec || {};
     const caution = (c.drivers || []).find((d) => d.strength === "caution");
     return h("article", { class: "sugg" + (i === 0 ? " top" : "") },
       h("div", { class: "sugg-rank" }, h("span", { class: "eyebrow", text: i === 0 ? "#1 · Top pick" : "#" + (i + 1) }),
-        h("span", { class: "sugg-score", text: r.score.toFixed(1) }), miniBar(r.score)),
+        h("span", { class: "sugg-score", text: r.score.toFixed(1) }), miniBar(r.score), sketchOf(c, true)),
       h("div", { class: "sugg-main" },
         h("h3", { text: c.name }), h("p", { class: "ink-2", text: c.hook }),
+        c.look ? h("div", { class: "look-line" }, swatches(c.look, true), h("span", { text: c.look.short })) : null,
         h("div", { class: "chips" }, [sp.genre, sp.players, sp.price, (c.devMonths < 3 ? Math.round(c.devMonths * 4.3) + " weeks" : c.devMonths + " months"), c.budgetUSD.label].map((t) => h("span", { class: "chip", text: t })))),
       h("div", { class: "sugg-drivers" }, h("div", { class: "eyebrow", text: "Driven by" }), driverList(c.drivers, { noCaution: true, limit: 3, brief: true }),
         caution ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Watch out:"), " ", caution.signal) : null),
@@ -281,6 +331,7 @@
           h("span", { class: "eyebrow", text: "#" + (i + 1) }), h("span", { class: "compare-name", text: r.c.name }), h("span", { class: "muted", style: "font-size:.75rem", text: "See plan ↓" })))))),
       h("tbody", {},
         row("Hook", main.map((r) => h("td", { class: "ink-2", text: r.c.hook }))),
+        row("Look", main.map((r) => h("td", {}, h("div", { class: "section", style: "gap:6px" }, sketchOf(r.c, true), r.c.look ? swatches(r.c.look, true) : null, r.c.look ? h("span", { class: "ink-2", style: "font-size:.82rem", text: r.c.look.short }) : null)))),
         row("Overall score", main.map((r) => h("td", { class: r.score === topScore ? "best" : "" }, h("span", { class: "score-cell" }, miniBar(r.score), h("b", { text: r.score.toFixed(1) })))), "score-row"),
         S.factors.map((f) => row(f.label, main.map((r) => {
           const v = r.c.scores[f.key].score;
@@ -896,9 +947,10 @@
             askBtn("Adapt it to my studio", `Adapt the ${c.name} plan to my studio's team, budget and skills. What changes in scope, team, timeline and money?`)),
           h("div", { class: "chips" }, (c.genreTags || []).map((t) => h("span", { class: "chip accent", text: t }))),
           h("dl", { class: "kv" }, h("dt", { text: "Audience" }), h("dd", { text: c.audience }), h("dt", { text: "Comparables" }), h("dd", { text: (c.comps || []).join(", ") }),
-            h("dt", { text: "Session" }), h("dd", { text: c.sessionLength }), h("dt", { text: "Art direction" }), h("dd", { text: c.artDirection }))),
+            h("dt", { text: "Session" }), h("dd", { text: c.sessionLength }), h("dt", { text: "Look" }), h("dd", { text: c.look ? c.look.short : c.artDirection }))),
         h("div", { class: "section" }, h("div", { class: "eyebrow", text: "Score" }), h("div", { class: "score-big", text: score.toFixed(1) }), factorBox,
           h("p", { class: "panel-note", text: "Hover a bar for the reasoning behind each factor." }))),
+      lookPanel(c),
       h("div", { class: "grid grid-2" },
         panel("What drives this suggestion", "The market signals behind it, strongest first", driverList(c.drivers)),
         panel("What the game is", null, h("dl", { class: "kv spec" }, specRows(c).map(([k, v]) => [h("dt", { text: k }), h("dd", { text: v })])))),

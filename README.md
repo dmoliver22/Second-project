@@ -66,6 +66,7 @@ Every figure carries a source link and a confidence level (high, medium, low). R
 ```
 index.html            page shell
 css/styles.css        design tokens (light + dark) and layout
+js/sketches.js        mood sketches (SVG phone screens) for the web-first game suggestions
 js/charts.js          small SVG chart kit (bars, columns, scatter, timeline), no dependencies
 js/ask.js             Ask the Atlas chat: prompt digest, lookup tools, safe markdown rendering
 js/app.js             data loading, routing, the views
