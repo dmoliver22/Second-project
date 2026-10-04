@@ -89,7 +89,7 @@ if concepts:
     for i, c in enumerate(concepts.get("concepts", [])):
         w = f"concepts.json concepts[{i}] {c.get('name', '?')}"
         need(c, ["id", "name", "niche", "oneLiner", "pitch", "coreLoop", "features", "platforms", "pricing",
-                 "team", "budgetUSD", "devMonths", "milestones", "marketingPlan", "liveOps", "kpis",
+                 "team", "budgetUSD", "steps", "marketingPlan", "liveOps", "kpis",
                  "killCriteria", "risks", "revenueScenarios"], w)
         need(c, ["track", "hook", "spec", "drivers", "look", "distribution"], w)
         need(c.get("distribution") or {}, ["ship", "firstMoney", "reach", "graduate"], w + " distribution")

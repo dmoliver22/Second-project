@@ -226,7 +226,7 @@
     return [
       ["Genre", sp.genre], ["Players", sp.players], ["Setting", sp.setting], ["What you do", sp.coreVerb], ["Look", sp.look],
       ["Session", c.sessionLength], ["Price", c.pricing.base], ["Business model", c.pricing.model], ["Launch platforms", c.platforms.launch.join(", ")],
-      ["Team", sp.team], ["Time to launch", c.devMonths < 3 ? "About " + Math.round(c.devMonths * 4.3) + " weeks" : c.devMonths + " months"], ["Budget", c.budgetUSD.label], ["Audience", sp.audience],
+      ["Team", sp.team], ["Budget", c.budgetUSD.label], ["Audience", sp.audience],
       ["Closest games", (c.comps || []).slice(0, 3).join(", ")], ["Stands out by", sp.differentiator],
     ].filter((r) => r[1]);
   }
@@ -309,7 +309,7 @@
       h("div", { class: "sugg-main" },
         h("h3", { text: c.name }), h("p", { class: "ink-2", text: c.hook }),
         c.look ? h("div", { class: "look-line" }, swatches(c.look, true), h("span", { text: c.look.short })) : null,
-        h("div", { class: "chips" }, [sp.genre, sp.players, sp.price, (c.devMonths < 3 ? Math.round(c.devMonths * 4.3) + " weeks" : c.devMonths + " months"), c.budgetUSD.label].map((t) => h("span", { class: "chip", text: t })))),
+        h("div", { class: "chips" }, [sp.genre, sp.players, sp.price, c.budgetUSD.label].map((t) => h("span", { class: "chip", text: t })))),
       h("div", { class: "sugg-drivers" }, h("div", { class: "eyebrow", text: "Driven by" }), driverList(c.drivers, { noCaution: true, limit: 3, brief: true }),
         caution ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Watch out:"), " ", caution.signal) : null),
       h("div", { class: "sugg-actions" }, h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(c.id) }),
@@ -362,7 +362,7 @@
           h("p", { class: "ink-2", text: d.why }),
           h("div", { class: "chips" }, (d.evidence || []).map(evidenceChip)))))) : null,
       I.next90 ? h("div", { class: "grid grid-2" },
-        panel("Your next 90 days", "In order. Each step tells you whether to keep going.",
+        panel("Your first steps", "In order. Each step tells you whether to keep going.",
           h("div", { class: "timeline" }, I.next90.map((s) => h("div", { class: "tl-row" }, h("div", { class: "tl-when", text: s.when }), h("div", { class: "ink-2", style: "font-size:.92rem", text: s.what }))))),
         panel("Biggest open lanes", "Demand × (inverse) supply, 0–10",
           h("ol", { class: "rank-list" }, niches.slice(0, 7).map((n, i) => h("li", {},
@@ -422,7 +422,7 @@
       takeaway("launch"),
       G.ladder ? section("The shipping ladder", "Start every game free on your own site, then move it up a step only when the signals earn it. Thresholds are rules of thumb; adjust them after your first games.",
         h("ol", { class: "ladder" }, G.ladder.map((st, i) => h("li", { class: "card ladder-step" },
-          h("div", { class: "eyebrow", text: "Stage " + (i + 1) + " · " + st.when }), h("h3", { text: st.stage }), h("p", { class: "ladder-goal", text: st.goal }),
+          h("div", { class: "eyebrow", text: "Stage " + (i + 1) }), h("h3", { text: st.stage }), h("p", { class: "ladder-goal", text: st.goal }),
           h("div", {}, h("h4", { text: "Where it lives" }), h("ul", { class: "ink-2" }, st.where.map((x) => h("li", { text: x })))),
           h("div", {}, h("h4", { text: "How it makes money" }), h("ul", { class: "ink-2" }, st.money.map((x) => h("li", { text: x })))),
           h("details", {}, h("summary", { text: "Setup", style: "cursor:pointer;color:var(--accent);font-weight:600;font-size:.85rem" }), h("ul", { class: "ink-2", style: "margin-top:6px" }, st.setup.map((x) => h("li", { text: x })))),
@@ -941,9 +941,8 @@
 
   function conceptDetail(c, score, rank, isMore) {
     const S = D.concepts.scoring;
-    const factorBox = chartBox(), ganttBox = chartBox();
+    const factorBox = chartBox();
     later(() => C.barH(factorBox, S.factors.map((f) => ({ label: f.label, value: c.scores[f.key].score, display: c.scores[f.key].score + "/10", sub: c.scores[f.key].why })), { max: 10 }));
-    later(() => C.gantt(ganttBox, c.milestones.map((m) => ({ name: m.name, start: m.startMonth, end: m.endMonth, kind: m.kind, sub: m.deliverable + (m.gate ? " · Gate: " + m.gate : "") }))));
     const list = (arr) => h("ul", { class: "ink-2", style: "font-size:.92rem" }, (arr || []).map((x) => h("li", { text: x })));
     return h("div", { class: "section", style: "gap:20px" },
       h("div", { class: "hero-rec" },
@@ -981,13 +980,15 @@
         panel("Monetization plan", null, list(c.monetizationPlan))),
       h("div", { class: "grid grid-2" },
         panel("Team", null, h("table", {}, h("tbody", {}, c.team.map((t) => h("tr", {}, h("td", { class: "num", text: t.count + "×" }), h("td", {}, h("b", { text: t.role }), h("div", { class: "muted", style: "font-size:.82rem", text: t.note }))))))),
-        panel("Budget & timeline", null,
+        panel("Budget", null,
           h("div", { class: "kpis" },
-            h("div", { class: "kpi" }, h("div", { class: "kpi-value", text: c.budgetUSD.label }), h("div", { class: "kpi-label", text: "Budget to launch" })),
-            h("div", { class: "kpi" }, h("div", { class: "kpi-value", text: c.devMonths < 3 ? Math.round(c.devMonths * 4.3) + " wk" : c.devMonths + " mo" }), h("div", { class: "kpi-label", text: "To launch" }))),
+            h("div", { class: "kpi" }, h("div", { class: "kpi-value", text: c.budgetUSD.label }), h("div", { class: "kpi-label", text: "Budget to launch" }))),
           h("p", { class: "ink-2", style: "font-size:.9rem", text: c.budgetUSD.note }))),
-      panel("Production roadmap", "Green = build, violet = launch beats, amber = live ops. Hover for deliverables and go/no-go gates.", ganttBox,
-        h("div", { class: "legend" }, h("span", {}, h("i", { style: "background:var(--series-1)" }), "Build"), h("span", {}, h("i", { style: "background:var(--series-2)" }), "Launch"), h("span", {}, h("i", { style: "background:var(--series-3)" }), "Live ops"))),
+      panel("Steps to build and launch", "In order. Move to the next step when the signal on the right shows up.",
+        h("ol", { class: "build-steps" }, (c.steps || []).map((st, i) => h("li", {},
+          h("span", { class: "rank-n", text: "Step " + (i + 1) }),
+          h("div", {}, h("b", { text: st.name }), h("div", { class: "ink-2", style: "font-size:.88rem", text: st.deliverable })),
+          st.gate ? h("div", { class: "build-gate" }, h("span", { class: "muted", text: "Move on when: " }), st.gate) : h("span", {}))))),
       h("div", { class: "grid grid-2" },
         panel("Marketing plan", null, h("div", { class: "timeline" }, c.marketingPlan.map((m) => h("div", { class: "tl-row" }, h("div", { class: "tl-when", text: m.when }), h("div", { class: "ink-2", style: "font-size:.92rem", text: m.action }))))),
         panel("How to run it after launch", null, h("div", { class: "timeline" }, c.liveOps.map((m) => h("div", { class: "tl-row" }, h("div", { class: "tl-when", text: m.when }), h("div", { class: "ink-2", style: "font-size:.92rem", text: m.what })))))),

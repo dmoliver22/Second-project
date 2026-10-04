@@ -555,3 +555,8 @@ textarea.brief { width: 100%; font-family: var(--font-data); font-size: .78rem; 
 @media (max-width: 480px) { .climb { grid-template-columns: minmax(0, 1fr); } }
 .climb li { margin: 0; background: var(--surface-2); border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 3px; }
 .climb p { font-size: .86rem; }
+.build-steps { list-style: none; padding: 0; display: flex; flex-direction: column; }
+.build-steps li { margin: 0; display: grid; grid-template-columns: 64px minmax(0, 1.2fr) minmax(0, 1fr); gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line); align-items: start; }
+.build-steps li:last-child { border-bottom: 0; }
+.build-gate { font-size: .86rem; background: var(--accent-wash); border-radius: 6px; padding: 6px 10px; }
+@media (max-width: 640px) { .build-steps li { grid-template-columns: minmax(0, 1fr); gap: 4px; } }

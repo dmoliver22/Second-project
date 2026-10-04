@@ -50,9 +50,9 @@
       "gate": "You can describe the game in one sentence a stranger repeats back."
     },
     {
-      "step": "Prototype in days",
+      "step": "Prototype fast",
       "detail": "Ugly but playable on a phone browser. Use AI for the code; keep the look human-directed.",
-      "gate": "Playable on a phone in under a week."
+      "gate": "Playable on a phone."
     },
     {
       "step": "Clip-test",
@@ -67,7 +67,7 @@
     {
       "step": "Grow or kill",
       "detail": "Double down on the one game in five that pulls; archive the rest without regret.",
-      "gate": "Plays and returns keep rising for 2–4 weeks."
+      "gate": "Plays and returns keep rising."
     },
     {
       "step": "Graduate",
@@ -2815,7 +2815,6 @@
   "ladder": [
     {
       "stage": "Ship & test",
-      "when": "Weeks 1–4 of each game",
       "goal": "Prove people play and come back.",
       "where": [
         "Your own site on free static hosting (Cloudflare Pages, Netlify or GitHub Pages): the link in every video",
@@ -2838,11 +2837,10 @@
         "Day-2 return of 20%+ for daily games, or 5+ minute sessions for idle games",
         "Players share results without being asked"
       ],
-      "kill": "Below those signals after ~4 weeks and 10+ clips: archive it and ship the next prototype."
+      "kill": "Below those signals after 10+ clips and a fair number of players: archive it and ship the next prototype."
     },
     {
       "stage": "First money",
-      "when": "Weeks 4–12",
       "goal": "Prove people pay.",
       "where": [
         "Same site + itch.io",
@@ -2868,7 +2866,6 @@
     },
     {
       "stage": "Reach",
-      "when": "Months 3–6 for a winner",
       "goal": "Grow beyond your own followers.",
       "where": [
         "Pick a portal strategy for this game: CrazyGames (non-exclusive, ~60% of ads, 70% of purchases) or Poki (exclusive on the open web; 100% of ads on traffic you bring, 50% on Poki's). Check whether Poki accepts games already live elsewhere before you publish anywhere",
@@ -2883,15 +2880,14 @@
         "A monthly long-form devlog to keep your own audience growing"
       ],
       "moveUp": [
-        "Portal plays and ranking climbing for several weeks",
+        "Portal plays and ranking climbing steadily",
         "A few thousand fans on email, Discord or followers who have played",
         "People asking for 'more' or a bigger version"
       ],
-      "kill": "Portal traffic flat after a month of updates: keep the game live, put effort into the next one."
+      "kill": "Portal traffic stays flat through several updates: keep the game live, put your effort into the next one."
     },
     {
       "stage": "Graduate",
-      "when": "6+ months",
       "goal": "Turn a proven game into a real product.",
       "where": [
         "Phone-style games (daily, merge, collect, idle): iOS and Android apps; Apple and Google take 15% under $1M a year",

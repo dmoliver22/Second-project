@@ -13,6 +13,10 @@
   "changelog": [
     {
       "date": "2026-10-04",
+      "note": "Removed time estimates: plans are now ordered steps with the signal to move on, the 90-day plan is 'Your first steps', and ladder stages have no durations. Platform rules (e.g. Steam's 30-day wait) and measured facts stay."
+    },
+    {
+      "date": "2026-10-04",
       "note": "Added the shipping ladder (ship & test → first money → reach → graduate) with move-up and kill signals, and each game's path up it. Steam is now the top step for proven PC-suited games, not the default."
     },
     {

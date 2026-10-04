@@ -253,38 +253,6 @@
   }
   function overlap(a, b) { return a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h; }
 
-  // ---------- gantt ----------
-  // tasks: [{name, start, end, sub}] in months from 0
-  function gantt(el, tasks, opts) {
-    opts = opts || {};
-    responsive(el, (W) => {
-      const rowH = 30, padT = 24, fs = 12.5;
-      const labelW = Math.min(W * 0.38, Math.max(...tasks.map((t) => measureText(t.name, fs))) + 12);
-      const total = opts.total || Math.max(...tasks.map((t) => t.end));
-      const x0 = labelW, x1 = W - 8;
-      const X = (m) => x0 + ((x1 - x0) * m) / total;
-      const H = padT + tasks.length * rowH + 4;
-      const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opts.title || "Timeline" });
-      const step = total > 24 ? 6 : total > 8 ? 3 : total > 3 ? 1 : 0.5;
-      for (let m = 0; m <= total; m += step) {
-        svg.appendChild(s("line", { x1: X(m), x2: X(m), y1: padT - 6, y2: H, class: m === 0 ? "axis-line" : "grid-line" }));
-        svg.appendChild(s("text", { x: X(m), y: 12, "text-anchor": "middle" }, total <= 3 ? "W" + Math.round(m * 4.3) : "M" + m));
-      }
-      tasks.forEach((t, i) => {
-        const y = padT + i * rowH;
-        const g = s("g", { class: "row" });
-        g.appendChild(s("rect", { class: "hit", x: 0, y, width: W, height: rowH }));
-        g.appendChild(s("text", { x: x0 - 10, y: y + rowH / 2 + 4, "text-anchor": "end", class: "lbl" }, truncate(t.name, labelW - 12, fs)));
-        const color = t.kind === "launch" ? "var(--series-2)" : t.kind === "live" ? "var(--series-3)" : "var(--series-1)";
-        const w = Math.max(6, X(t.end) - X(t.start));
-        g.appendChild(s("rect", { class: "mark", x: X(t.start) + 1, y: y + 8, width: w - 2, height: rowH - 16, rx: 4, fill: color }));
-        bindTip(g, () => [t.name, total <= 3 ? `Week ${Math.round(t.start * 4.3)}–${Math.round(t.end * 4.3)}` : `Month ${t.start}–${t.end}`, t.sub]);
-        svg.appendChild(g);
-      });
-      el.appendChild(svg);
-    });
-  }
-
   function compact(v) {
     if (v >= 1e9) return +(v / 1e9).toFixed(1) + "B";
     if (v >= 1e6) return +(v / 1e6).toFixed(1) + "M";
@@ -292,5 +260,5 @@
     return String(+v.toFixed(2));
   }
 
-  window.AtlasCharts = { barH, columns, scatter, gantt, compact, showTip, hideTip };
+  window.AtlasCharts = { barH, columns, scatter, compact, showTip, hideTip };
 })();

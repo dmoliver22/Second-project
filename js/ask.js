@@ -97,7 +97,7 @@
     out.push("GAME SUGGESTIONS (five main suggestions plus side bets, ranked with the viewer's current weights; score /10):\n" + ranked.map((r) => {
       const sp = r.c.spec || {};
       return `- [${r.c.id}] ${r.c.name} (${r.c.track === "side" ? "side bet" : "main suggestion"}) — ${r.score.toFixed(1)} — ${r.c.hook} ` +
-        `Genre: ${sp.genre}; players: ${sp.players}; setting: ${sp.setting}; team: ${sp.team}; ${r.c.devMonths} months; budget ${r.c.budgetUSD.label}; price ${r.c.pricing.base}. ` +
+        `Genre: ${sp.genre}; players: ${sp.players}; setting: ${sp.setting}; team: ${sp.team}; budget ${r.c.budgetUSD.label}; price ${r.c.pricing.base}. ` +
         (r.c.distribution ? `Path: ship on ${r.c.distribution.ship}; first money: ${r.c.distribution.firstMoney}; reach: ${r.c.distribution.reach}; graduate: ${r.c.distribution.graduate}. ` : "") +
         (r.c.look ? `Look: ${r.c.look.vibe} On screen: ${r.c.look.layout || ""} Palette: ${r.c.look.palette.map((x) => x.name + " " + x.hex).join(", ")}. ` : "") +
         "Factors: " + Object.entries(r.c.scores).map(([k, v]) => k + " " + v.score).join(", ") + ". Drivers: " +
@@ -119,7 +119,7 @@
     const G = D.gotomarket;
     if (G) {
       out.push("GO-TO-MARKET STACK (recommended for a solo, AI-assisted, web-first cozy developer):\n" + G.stack.map((x) => `- ${x.layer}: ${x.choice}. ${x.why}`).join("\n"));
-      if (G.ladder) out.push("THE SHIPPING LADDER (recommended path for every game; Steam is the top step for proven PC games, not the start):\n" + G.ladder.map((st, i) => `${i + 1}. ${st.stage} (${st.when}): ${st.goal} Where: ${st.where.join("; ")}. Money: ${st.money.join("; ")}. Move up when: ${st.moveUp.join("; ")}. Stop if: ${st.kill}`).join("\n"));
+      if (G.ladder) out.push("THE SHIPPING LADDER (recommended path for every game; Steam is the top step for proven PC games, not the start):\n" + G.ladder.map((st, i) => `${i + 1}. ${st.stage}: ${st.goal} Where: ${st.where.join("; ")}. Money: ${st.money.join("; ")}. Move up when: ${st.moveUp.join("; ")}. Stop if: ${st.kill}`).join("\n"));
       out.push("THE LOOP: " + G.loop.map((x, i) => `${i + 1}) ${x.step}: ${x.detail} Gate: ${x.gate}`).join(" "));
       out.push("PLATFORMS:\n" + G.platforms.map((p) => `- ${p.name} (${p.type}): share ${cut(p.revShare, 120)}; from a phone link: ${cut(p.linkFromSocial, 120)}; best for ${cut(p.bestFor, 80)}`).join("\n"));
       out.push("MARKETING CASE STUDIES:\n" + G.caseStudies.map((c) => `- ${c.game} (${c.channel}): ${cut(c.results, 140)}. Lesson: ${cut(c.lesson, 120)}`).join("\n"));
@@ -153,6 +153,7 @@
     return [
       "You are the analyst inside Cozy Market Atlas, a market-research dashboard for a founder starting a cozy video game business (by default: one person building with AI, web-first games playable from a link, marketed on TikTok and YouTube). Answer the founder's questions from the dashboard data below; use the lookup tools (when offered) for a game's, concept's or niche's full record.",
       "How to answer:",
+      "- Never estimate how long things will take (no week, month or day counts for building or launching); describe steps in order with the signal that tells the founder to move on.",
       "- Start with a direct answer or recommendation in the first sentence, then the reasoning with specific numbers and named games, niches or concepts from the data.",
       "- Stay grounded in the data. If something isn't in it, say so, and label any general industry knowledge as yours. Flag low-confidence figures and third-party estimates as estimates.",
       "- Fit the advice to the founder's studio profile. Never promise success; talk in odds, and say what to validate and how.",
@@ -187,7 +188,7 @@
       },
       {
         name: "get_concept",
-        description: "Full build-and-run plan for one game concept: features, team, budget, milestones, marketing, live ops, KPIs, kill criteria, risks, revenue scenarios. Pass the concept id or name.",
+        description: "Full build-and-run plan for one game concept: features, team, budget, build steps, marketing, live ops, KPIs, kill criteria, risks, revenue scenarios. Pass the concept id or name.",
         inputSchema: { type: "object", properties: { id: { type: "string" } }, required: ["id"] },
         execute(input) {
           const c = findBy(D.concepts.concepts, input.id, ["id", "name"]);

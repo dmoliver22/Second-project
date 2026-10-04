@@ -280,51 +280,16 @@
         {
           "role": "Contract illustrator",
           "count": 1,
-          "note": "Owns the plush style and the cast; 7 treats a month."
+          "note": "Owns the plush style and the cast; 7 treats per series."
         }
       ],
       "budgetUSD": {
         "label": "$4–15k",
         "note": "Mostly character and treat art; later, merch samples."
       },
-      "devMonths": 1.5,
-      "milestones": [
-        {
-          "name": "Reveal prototype + clip test",
-          "startMonth": 0,
-          "endMonth": 0.5,
-          "kind": "build",
-          "deliverable": "Box opening with 7 treats; 5 reveal clips",
-          "gate": "Clips earn saves; comments pick favorites"
-        },
-        {
-          "name": "Web launch",
-          "startMonth": 0.5,
-          "endMonth": 1.5,
-          "kind": "launch",
-          "deliverable": "Daily boxes, shelf, share card",
-          "gate": "25%+ day-2 return"
-        },
-        {
-          "name": "Monthly series",
-          "startMonth": 1.5,
-          "endMonth": 9,
-          "kind": "live",
-          "deliverable": "A new seasonal series each month",
-          "gate": "Shelf shares growing"
-        },
-        {
-          "name": "Cosmetics + merch test",
-          "startMonth": 3,
-          "endMonth": 6,
-          "kind": "launch",
-          "deliverable": "Shelf themes; sticker drop",
-          "gate": "1%+ buy cosmetics"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Week 1",
+          "when": "Before launch",
           "action": "Reveal clips with a 'which one would you get?' hook; secret-pull reactions."
         },
         {
@@ -373,7 +338,7 @@
       ],
       "killCriteria": [
         "Reveal clips don't beat your channel average after 10 posts: the treats aren't lovable enough; redesign the cast.",
-        "Day-2 return under 12% after a month: the daily box isn't a habit; rethink rewards."
+        "Day-2 return stays under 12% after a few hundred players: the daily box isn't a habit; rethink rewards."
       ],
       "risks": [
         {
@@ -478,7 +443,29 @@
         "firstMoney": "$3 'complete the series' unlock and shelf themes",
         "reach": "CrazyGames or Poki",
         "graduate": "iOS/Android app (a daily phone habit); Steam not needed"
-      }
+      },
+      "steps": [
+        {
+          "name": "Reveal prototype + clip test",
+          "deliverable": "Box opening with 7 treats; 5 reveal clips",
+          "gate": "Clips earn saves; comments pick favorites"
+        },
+        {
+          "name": "Web launch",
+          "deliverable": "Daily boxes, shelf, share card",
+          "gate": "25%+ day-2 return"
+        },
+        {
+          "name": "Monthly series",
+          "deliverable": "A new seasonal series each month",
+          "gate": "Shelf shares growing"
+        },
+        {
+          "name": "Cosmetics + merch test",
+          "deliverable": "Shelf themes; sticker drop",
+          "gate": "1%+ buy cosmetics"
+        }
+      ]
     },
     {
       "id": "tea-cart",
@@ -690,41 +677,6 @@
         "label": "$4–12k",
         "note": "Art for the street and customers; analytics tooling."
       },
-      "devMonths": 2,
-      "milestones": [
-        {
-          "name": "Core loop",
-          "startMonth": 0,
-          "endMonth": 0.7,
-          "kind": "build",
-          "deliverable": "Cart, serving, upgrades",
-          "gate": "Testers play 10+ minutes"
-        },
-        {
-          "name": "Portal submission",
-          "startMonth": 0.7,
-          "endMonth": 2,
-          "kind": "build",
-          "deliverable": "Street expansion, regulars, SDK",
-          "gate": "Portal accepts it"
-        },
-        {
-          "name": "Launch",
-          "startMonth": 2,
-          "endMonth": 2.5,
-          "kind": "launch",
-          "deliverable": "Live on portal and site",
-          "gate": "Average session 8+ minutes"
-        },
-        {
-          "name": "Updates",
-          "startMonth": 2.5,
-          "endMonth": 8,
-          "kind": "live",
-          "deliverable": "Seasonal teas, events",
-          "gate": "Retention holding"
-        }
-      ],
       "marketingPlan": [
         {
           "when": "Pre-launch",
@@ -869,7 +821,29 @@
         "firstMoney": "Ad-free unlock + cosmetic decorations",
         "reach": "Poki or CrazyGames as its main home",
         "graduate": "Mobile app; a Steam desktop 'focus mode' version (Desktop Companion Fest)"
-      }
+      },
+      "steps": [
+        {
+          "name": "Core loop",
+          "deliverable": "Cart, serving, upgrades",
+          "gate": "Testers play 10+ minutes"
+        },
+        {
+          "name": "Portal submission",
+          "deliverable": "Street expansion, regulars, SDK",
+          "gate": "Portal accepts it"
+        },
+        {
+          "name": "Launch",
+          "deliverable": "Live on portal and site",
+          "gate": "Average session 8+ minutes"
+        },
+        {
+          "name": "Updates",
+          "deliverable": "Seasonal teas, events",
+          "gate": "Retention holding"
+        }
+      ]
     },
     {
       "id": "cozy-corner",
@@ -1081,44 +1055,9 @@
         "label": "$5–20k",
         "note": "Mostly props: an initial set, then monthly packs."
       },
-      "devMonths": 2.5,
-      "milestones": [
-        {
-          "name": "Prototype + clip test",
-          "startMonth": 0,
-          "endMonth": 0.7,
-          "kind": "build",
-          "deliverable": "One room, 30 props, photo export; 5 clips",
-          "gate": "Room clips earn saves"
-        },
-        {
-          "name": "Gallery + themes",
-          "startMonth": 0.7,
-          "endMonth": 2,
-          "kind": "build",
-          "deliverable": "Daily themes, gallery, moderation",
-          "gate": "Testers browse others' rooms"
-        },
-        {
-          "name": "Web launch",
-          "startMonth": 2,
-          "endMonth": 2.5,
-          "kind": "launch",
-          "deliverable": "Live on site and portal",
-          "gate": "15%+ day-2 return"
-        },
-        {
-          "name": "Daily themes",
-          "startMonth": 2.5,
-          "endMonth": 9,
-          "kind": "live",
-          "deliverable": "New theme daily, packs monthly",
-          "gate": "Gallery submissions growing"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Week 1",
+          "when": "Before launch",
           "action": "Speed-decorating clips and before/after reveals."
         },
         {
@@ -1260,7 +1199,29 @@
         "firstMoney": "Prop packs through a one-time unlock",
         "reach": "Portals (decorating leads cozy charts)",
         "graduate": "Mobile app; a Roblox version"
-      }
+      },
+      "steps": [
+        {
+          "name": "Prototype + clip test",
+          "deliverable": "One room, 30 props, photo export; 5 clips",
+          "gate": "Room clips earn saves"
+        },
+        {
+          "name": "Gallery + themes",
+          "deliverable": "Daily themes, gallery, moderation",
+          "gate": "Testers browse others' rooms"
+        },
+        {
+          "name": "Web launch",
+          "deliverable": "Live on site and portal",
+          "gate": "15%+ day-2 return"
+        },
+        {
+          "name": "Daily themes",
+          "deliverable": "New theme daily, packs monthly",
+          "gate": "Gallery submissions growing"
+        }
+      ]
     },
     {
       "id": "pond-party",
@@ -1475,60 +1436,9 @@
         "label": "$5–20k + servers",
         "note": "Art plus a managed multiplayer service; server costs scale with players (budget per concurrent user)."
       },
-      "devMonths": 3,
-      "milestones": [
-        {
-          "name": "Two-player prototype",
-          "startMonth": 0,
-          "endMonth": 0.7,
-          "kind": "build",
-          "deliverable": "Two phones fishing at one pond via link",
-          "gate": "Friends stay 15+ minutes"
-        },
-        {
-          "name": "Clip test",
-          "startMonth": 0.5,
-          "endMonth": 1.2,
-          "kind": "launch",
-          "deliverable": "Clips of funny catches and hats",
-          "gate": "Comments ask for the link"
-        },
-        {
-          "name": "Web beta",
-          "startMonth": 1.2,
-          "endMonth": 2.5,
-          "kind": "build",
-          "deliverable": "8-player ponds, collection book, cosmetics",
-          "gate": "Rooms average 3+ players"
-        },
-        {
-          "name": "Public launch",
-          "startMonth": 2.5,
-          "endMonth": 3,
-          "kind": "launch",
-          "deliverable": "Open to everyone",
-          "gate": "Invites per player above 1"
-        },
-        {
-          "name": "Seasons",
-          "startMonth": 3,
-          "endMonth": 9,
-          "kind": "live",
-          "deliverable": "Seasonal fish, events",
-          "gate": "Weekly active groups growing"
-        },
-        {
-          "name": "Steam version",
-          "startMonth": 6,
-          "endMonth": 9,
-          "kind": "launch",
-          "deliverable": "Bigger worlds, $4.99",
-          "gate": "Strong group retention"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Weeks 1–4",
+          "when": "Before launch",
           "action": "Clips of rare catches, hat combos and funny group moments."
         },
         {
@@ -1573,7 +1483,7 @@
       ],
       "killCriteria": [
         "Pairs leave within 10 minutes in testing: the fishing isn't fun enough together.",
-        "Server costs exceed revenue after two months: shrink rooms or move to the Steam version."
+        "Server costs keep exceeding revenue once player numbers settle: shrink rooms or move to the Steam version."
       ],
       "risks": [
         {
@@ -1678,7 +1588,39 @@
         "firstMoney": "Supporter pack + hats",
         "reach": "Discord Activity + streamer communities",
         "graduate": "Steam ($4.99, Webfishing's path)"
-      }
+      },
+      "steps": [
+        {
+          "name": "Two-player prototype",
+          "deliverable": "Two phones fishing at one pond via link",
+          "gate": "Friends stay 15+ minutes"
+        },
+        {
+          "name": "Clip test",
+          "deliverable": "Clips of funny catches and hats",
+          "gate": "Comments ask for the link"
+        },
+        {
+          "name": "Web beta",
+          "deliverable": "8-player ponds, collection book, cosmetics",
+          "gate": "Rooms average 3+ players"
+        },
+        {
+          "name": "Public launch",
+          "deliverable": "Open to everyone",
+          "gate": "Invites per player above 1"
+        },
+        {
+          "name": "Seasons",
+          "deliverable": "Seasonal fish, events",
+          "gate": "Weekly active groups growing"
+        },
+        {
+          "name": "Steam version",
+          "deliverable": "Bigger worlds, $4.99",
+          "gate": "Strong group retention"
+        }
+      ]
     },
     {
       "id": "petal-drop",
@@ -1732,7 +1674,7 @@
         },
         {
           "signal": "Fastest build here",
-          "detail": "Physics merge is a small, well-understood system: days to a playable, weeks to polish.",
+          "detail": "Physics merge is a small, well-understood system: the fastest of these to get playable.",
           "strength": "medium",
           "ref": {
             "link": "#launch"
@@ -1883,52 +1825,9 @@
         "label": "$2–8k",
         "note": "Illustration for flower tiers and garden pieces; optional sound designer."
       },
-      "devMonths": 1.5,
-      "milestones": [
-        {
-          "name": "Physics prototype",
-          "startMonth": 0,
-          "endMonth": 0.3,
-          "kind": "build",
-          "deliverable": "Merge loop with placeholder art",
-          "gate": "Testers restart 3+ times unprompted"
-        },
-        {
-          "name": "Clip test",
-          "startMonth": 0.3,
-          "endMonth": 0.8,
-          "kind": "launch",
-          "deliverable": "5 clips with final flower art",
-          "gate": "Above-average saves and shares"
-        },
-        {
-          "name": "Web launch",
-          "startMonth": 0.8,
-          "endMonth": 1.5,
-          "kind": "launch",
-          "deliverable": "Daily pot, garden, bloom card",
-          "gate": "15%+ day-2 return"
-        },
-        {
-          "name": "Live updates",
-          "startMonth": 1.5,
-          "endMonth": 6,
-          "kind": "live",
-          "deliverable": "Seasonal sets, friend pots",
-          "gate": "Plays growing"
-        },
-        {
-          "name": "Deluxe version",
-          "startMonth": 3,
-          "endMonth": 5,
-          "kind": "launch",
-          "deliverable": "Steam and Switch deluxe",
-          "gate": "1M+ web plays"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Week 1",
+          "when": "Before launch",
           "action": "Near-overflow clips and 'first sunflower' moments; test cozy vs funny hooks."
         },
         {
@@ -1962,7 +1861,7 @@
           "why": "Shows the daily pot works."
         },
         {
-          "metric": "Web plays by month 3",
+          "metric": "Web plays before the deluxe version",
           "target": "1M+",
           "why": "Worth a deluxe version."
         }
@@ -2069,7 +1968,34 @@
         "firstMoney": "$2–3 deluxe unlock (all flower sets, no ads) or a paid itch.io download",
         "reach": "Portals (merge games rank well there)",
         "graduate": "Mobile apps; a cheap deluxe on Switch or Steam (Suika's path)"
-      }
+      },
+      "steps": [
+        {
+          "name": "Physics prototype",
+          "deliverable": "Merge loop with placeholder art",
+          "gate": "Testers restart 3+ times unprompted"
+        },
+        {
+          "name": "Clip test",
+          "deliverable": "5 clips with final flower art",
+          "gate": "Above-average saves and shares"
+        },
+        {
+          "name": "Web launch",
+          "deliverable": "Daily pot, garden, bloom card",
+          "gate": "15%+ day-2 return"
+        },
+        {
+          "name": "Live updates",
+          "deliverable": "Seasonal sets, friend pots",
+          "gate": "Plays growing"
+        },
+        {
+          "name": "Deluxe version",
+          "deliverable": "Steam and Switch deluxe",
+          "gate": "1M+ web plays"
+        }
+      ]
     },
     {
       "id": "daily-tidy",
@@ -2228,7 +2154,7 @@
           "Loads in under 3 seconds"
         ],
         "launch": [
-          "A new scene every day (30-day buffer)",
+          "A new scene every day (keep 30 scenes in reserve)",
           "Streaks and a calendar",
           "Archive of past scenes",
           "Email or account-free streak saving",
@@ -2286,52 +2212,9 @@
         "label": "$3–15k",
         "note": "Mostly illustration: a style guide and object sets up front, then a monthly retainer. Hosting is cheap."
       },
-      "devMonths": 2,
-      "milestones": [
-        {
-          "name": "Prototype + clip test",
-          "startMonth": 0,
-          "endMonth": 0.5,
-          "kind": "build",
-          "deliverable": "5 scenes playable on a phone; 5 clips posted",
-          "gate": "Clips earn saves and 'where can I play' comments"
-        },
-        {
-          "name": "Scene editor + style",
-          "startMonth": 0.5,
-          "endMonth": 1.5,
-          "kind": "build",
-          "deliverable": "Editor, house style, 30 scenes",
-          "gate": "You can make a scene in under an hour"
-        },
-        {
-          "name": "Web launch",
-          "startMonth": 1.5,
-          "endMonth": 2,
-          "kind": "launch",
-          "deliverable": "Daily scenes live on your site and a portal",
-          "gate": "20%+ of day-1 players return on day 2"
-        },
-        {
-          "name": "Daily content",
-          "startMonth": 2,
-          "endMonth": 8,
-          "kind": "live",
-          "deliverable": "A scene and a short video every day",
-          "gate": "Daily players growing week on week"
-        },
-        {
-          "name": "Paid collection",
-          "startMonth": 6,
-          "endMonth": 9,
-          "kind": "launch",
-          "deliverable": "Steam and mobile collection",
-          "gate": "10k+ daily players"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Week 1",
+          "when": "Before launch",
           "action": "Five clips of the most satisfying tidies; test hooks like 'only 1% finish this in 6 moves'."
         },
         {
@@ -2373,19 +2256,19 @@
           "why": "Shares are the growth engine."
         },
         {
-          "metric": "Daily players at month 3",
+          "metric": "Daily players before the paid collection",
           "target": "10,000+",
           "why": "Enough to make a paid collection worth it."
         }
       ],
       "killCriteria": [
         "Clips don't get saves or shares after 10 posts: try a different object world or hook.",
-        "Day-2 return under 10% after a month: the puzzles aren't satisfying enough; rework before adding content."
+        "Day-2 return stays under 10% after a few hundred players: the puzzles aren't satisfying enough; rework before adding content."
       ],
       "risks": [
         {
           "risk": "Content treadmill",
-          "mitigation": "Scene editor from week 2; 30-day buffer; seasonal packs reuse objects."
+          "mitigation": "Build the scene editor early; keep 30 scenes in reserve; seasonal packs reuse objects."
         },
         {
           "risk": "Easy to copy",
@@ -2485,7 +2368,34 @@
         "firstMoney": "$3 archive unlock + tip jar",
         "reach": "A portal + YouTube Playables",
         "graduate": "iOS/Android app; optional $5 Steam collection"
-      }
+      },
+      "steps": [
+        {
+          "name": "Prototype + clip test",
+          "deliverable": "5 scenes playable on a phone; 5 clips posted",
+          "gate": "Clips earn saves and 'where can I play' comments"
+        },
+        {
+          "name": "Scene editor + style",
+          "deliverable": "Editor, house style, 30 scenes",
+          "gate": "You can make a scene in under an hour"
+        },
+        {
+          "name": "Web launch",
+          "deliverable": "Daily scenes live on your site and a portal",
+          "gate": "20%+ of day-1 players return on day 2"
+        },
+        {
+          "name": "Daily content",
+          "deliverable": "A scene and a short video every day",
+          "gate": "Daily players growing week on week"
+        },
+        {
+          "name": "Paid collection",
+          "deliverable": "Steam and mobile collection",
+          "gate": "10k+ daily players"
+        }
+      ]
     },
     {
       "id": "driftgarden",
@@ -2524,7 +2434,7 @@
         },
         "scopeFit": {
           "score": 4,
-          "why": "3D plus online co-op is the hardest scope in this list. Feasible for 5–6 people over about 24 months with peer-to-peer networking and no servers, but it needs a network programmer."
+          "why": "3D plus online co-op is the hardest scope in this list. Feasible for a 5–6 person team with peer-to-peer networking and no servers, but it needs a network programmer."
         },
         "monetization": {
           "score": 8,
@@ -2540,7 +2450,7 @@
         },
         "soloSpeed": {
           "score": 3,
-          "why": "3D online co-op with a sailing world is the heaviest build here, even with AI writing code; art and netcode testing take months."
+          "why": "3D online co-op with a sailing world is the heaviest build here, even with AI writing code; art and netcode testing are long jobs."
         },
         "instantPlay": {
           "score": 2,
@@ -2587,10 +2497,10 @@
           "Public roadmap to 1.0"
         ],
         "postLaunch": [
-          "Free content update every 10–12 weeks: a new island, festival or crop set",
+          "Regular free content updates: a new island, festival or crop set",
           "Pets and boat companions",
           "1.0 relaunch with the full archipelago and an ending",
-          "Paid expansion with a new sea region ($9.99–14.99) 6–9 months after 1.0",
+          "Paid expansion with a new sea region ($9.99–14.99) after 1.0, once reviews are strong",
           "Switch 2 and PS5 ports through a porting partner; boat-design share codes"
         ]
       },
@@ -2619,7 +2529,7 @@
         "Base game sales are the business: aim for 80%+ of year-one revenue.",
         "Free Early Access updates to drive review count and pull wishlisters back.",
         "$4.99 cosmetic Supporter Pack (sails, hull paint) at launch. Rusty's Retirement saw an 11% attach rate.",
-        "Paid expansion ($9.99–14.99) 6–9 months after 1.0, plus soundtrack and artbook DLC.",
+        "Paid expansion ($9.99–14.99) after 1.0, once reviews are strong, plus soundtrack and artbook DLC.",
         "No microtransactions, gacha or premium currency. Cozy players punish them.",
         "Later: console ports, plush of the boat's mascot, merch once the community is large."
       ],
@@ -2652,7 +2562,7 @@
         {
           "role": "Community and marketing lead",
           "count": 1,
-          "note": "From month 3: short video, Discord, festivals, creators."
+          "note": "Joins once the prototype works: short video, Discord, festivals, creators."
         },
         {
           "role": "Contractors",
@@ -2662,122 +2572,39 @@
       ],
       "budgetUSD": {
         "label": "$0.9–1.6M",
-        "note": "Six people for about 24 months, plus contractors, tools, localization and festivals. A 4-person core with a longer Early Access brings it to about $0.6M. The research's derived range for co-op survival-lite with 4–8 devs over 24–30 months is $0.8–2.5M."
+        "note": "Estimate for a six-person funded team, including contractors, tools, localization and festivals. A 4-person core with a longer Early Access brings it to about $0.6M. The research's derived range for co-op survival-lite with 4–8 devs over 24–30 months is $0.8–2.5M."
       },
-      "devMonths": 24,
-      "milestones": [
-        {
-          "name": "Co-op prototype",
-          "startMonth": 0,
-          "endMonth": 3,
-          "kind": "build",
-          "deliverable": "Two players farm, fish and sail together",
-          "gate": "Pairs play 45+ minutes unprompted in 3 of 5 tests"
-        },
-        {
-          "name": "Steam page live",
-          "startMonth": 3,
-          "endMonth": 4,
-          "kind": "launch",
-          "deliverable": "Capsule, GIF screenshots, trailer, Chinese page",
-          "gate": "12%+ visit-to-wishlist conversion"
-        },
-        {
-          "name": "Vertical slice",
-          "startMonth": 3,
-          "endMonth": 8,
-          "kind": "build",
-          "deliverable": "One island at final quality",
-          "gate": "Stable peer-to-peer sync with 4 players"
-        },
-        {
-          "name": "Demo and Next Fest",
-          "startMonth": 9,
-          "endMonth": 11,
-          "kind": "launch",
-          "deliverable": "60–90 minute public demo",
-          "gate": "2k+ wishlists before the fest, 7k+ after"
-        },
-        {
-          "name": "Early Access content",
-          "startMonth": 8,
-          "endMonth": 14,
-          "kind": "build",
-          "deliverable": "5 islands, 3 biomes, roadmap",
-          "gate": "Closed playtest above 85% positive"
-        },
-        {
-          "name": "Early Access launch",
-          "startMonth": 14,
-          "endMonth": 15,
-          "kind": "launch",
-          "deliverable": "Steam EA at $17.99",
-          "gate": "20k+ wishlists going in"
-        },
-        {
-          "name": "Early Access updates",
-          "startMonth": 15,
-          "endMonth": 24,
-          "kind": "live",
-          "deliverable": "Content update every 10–12 weeks",
-          "gate": "Reviews stay 90%+"
-        },
-        {
-          "name": "1.0 launch",
-          "startMonth": 24,
-          "endMonth": 25,
-          "kind": "launch",
-          "deliverable": "Full archipelago, ending, $19.99",
-          "gate": "Second sales spike"
-        },
-        {
-          "name": "Console ports",
-          "startMonth": 22,
-          "endMonth": 30,
-          "kind": "build",
-          "deliverable": "Switch 2 and PS5 with a porting partner",
-          "gate": "Partner signed by month 20"
-        },
-        {
-          "name": "Paid expansion",
-          "startMonth": 28,
-          "endMonth": 33,
-          "kind": "live",
-          "deliverable": "New sea region DLC",
-          "gate": "Base game above 90% positive"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Months 0–3",
+          "when": "Step 1",
           "action": "Post short co-op clips weekly on TikTok, Shorts, Reels and Bluesky; note which hook earns saves and shares. Open the Discord and a mailing list."
         },
         {
-          "when": "Months 3–4",
+          "when": "Step 2",
           "action": "Steam page goes live with 'cozy co-op survival' in the first line, GIF-led screenshots and a Simplified Chinese page."
         },
         {
-          "when": "Months 4–9",
+          "when": "Step 3",
           "action": "Apply to Wholesome Direct (June), cozy festivals and Day of the Devs. Enter themed Steam fests (cozy, fishing, survival). Run closed playtests with Steam Playtest."
         },
         {
-          "when": "Months 9–11",
+          "when": "Step 4",
           "action": "Public demo in Steam Next Fest. Send keys to co-op, cozy and couples creators. Target 2k+ wishlists before the fest."
         },
         {
-          "when": "Months 12–14",
+          "when": "Step 5",
           "action": "Pitch publishers and porting partners with wishlist data. Prepare the press kit. Reach out to Bilibili and Weibo creators for China."
         },
         {
-          "when": "Month 14",
+          "when": "Step 6",
           "action": "Early Access launch, timed away from big releases. 10% launch discount and the friend 4-pack."
         },
         {
-          "when": "Months 15–24",
+          "when": "Step 7",
           "action": "Each update ships with a trailer, a devlog and a sale."
         },
         {
-          "when": "Month 24",
+          "when": "Step 8",
           "action": "1.0 relaunch as a second marketing beat: new trailer, press push and showcase slot."
         }
       ],
@@ -2787,7 +2614,7 @@
           "what": "Devlog or patch notes, a Discord community event, bug triage from the in-game feedback button."
         },
         {
-          "when": "Every 10–12 weeks",
+          "when": "Each content update",
           "what": "Content update against a public roadmap. Fields of Mistria held 98% positive with this approach."
         },
         {
@@ -2841,10 +2668,10 @@
         }
       ],
       "killCriteria": [
-        "The 2-player prototype isn't fun after 3 months: pivot to Lantern Stall, the couples concept.",
-        "Fewer than 2,000 wishlists 6 months after the Steam page goes live: change the hook and capsule, or cut scope.",
+        "The 2-player prototype isn't fun after the first prototype rounds: pivot to Lantern Stall, the couples concept.",
+        "Fewer than 2,000 wishlists by the time you'd enter Next Fest: change the hook and capsule, or cut scope.",
         "Fewer than 7,000 wishlists after Next Fest: delay Early Access and rework, or ship a smaller single-player version.",
-        "Peer-to-peer sync still unstable at month 8: cap co-op at 2 players and ship."
+        "Peer-to-peer sync still unstable by the vertical slice: cap co-op at 2 players and ship."
       ],
       "risks": [
         {
@@ -3007,7 +2834,59 @@
         "firstMoney": "Early Access on itch.io or straight to Steam",
         "reach": "Next Fest, co-op creators",
         "graduate": "Steam Early Access, then consoles"
-      }
+      },
+      "steps": [
+        {
+          "name": "Co-op prototype",
+          "deliverable": "Two players farm, fish and sail together",
+          "gate": "Pairs play 45+ minutes unprompted in 3 of 5 tests"
+        },
+        {
+          "name": "Steam page live",
+          "deliverable": "Capsule, GIF screenshots, trailer, Chinese page",
+          "gate": "12%+ visit-to-wishlist conversion"
+        },
+        {
+          "name": "Vertical slice",
+          "deliverable": "One island at final quality",
+          "gate": "Stable peer-to-peer sync with 4 players"
+        },
+        {
+          "name": "Early Access content",
+          "deliverable": "5 islands, 3 biomes, roadmap",
+          "gate": "Closed playtest above 85% positive"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "deliverable": "60–90 minute public demo",
+          "gate": "2k+ wishlists before the fest, 7k+ after"
+        },
+        {
+          "name": "Early Access launch",
+          "deliverable": "Steam EA at $17.99",
+          "gate": "20k+ wishlists going in"
+        },
+        {
+          "name": "Early Access updates",
+          "deliverable": "Regular content updates",
+          "gate": "Reviews stay 90%+"
+        },
+        {
+          "name": "Console ports",
+          "deliverable": "Switch 2 and PS5 with a porting partner",
+          "gate": "Porting partner signed before 1.0"
+        },
+        {
+          "name": "1.0 launch",
+          "deliverable": "Full archipelago, ending, $19.99",
+          "gate": "Second sales spike"
+        },
+        {
+          "name": "Paid expansion",
+          "deliverable": "New sea region DLC",
+          "gate": "Base game above 90% positive"
+        }
+      ]
     },
     {
       "id": "lantern-stall",
@@ -3165,97 +3044,30 @@
       ],
       "budgetUSD": {
         "label": "$350–650k",
-        "note": "Four people for about 16 months plus contractors and festivals. No Early Access: a polished premium launch with a Next Fest demo."
+        "note": "Estimate for a four-person team plus contractors and festivals. No Early Access: a polished premium launch with a Next Fest demo."
       },
-      "devMonths": 16,
-      "milestones": [
-        {
-          "name": "Two-player prototype",
-          "startMonth": 0,
-          "endMonth": 2,
-          "kind": "build",
-          "deliverable": "One night at the market playable in couch co-op",
-          "gate": "Couples laugh and ask for another night"
-        },
-        {
-          "name": "Steam page live",
-          "startMonth": 2,
-          "endMonth": 3,
-          "kind": "launch",
-          "deliverable": "Food-led capsule and trailer",
-          "gate": "12%+ conversion"
-        },
-        {
-          "name": "Production",
-          "startMonth": 3,
-          "endMonth": 12,
-          "kind": "build",
-          "deliverable": "Recipes, regulars, decorating",
-          "gate": "Playtests above 85% positive"
-        },
-        {
-          "name": "Demo and Next Fest",
-          "startMonth": 9,
-          "endMonth": 11,
-          "kind": "launch",
-          "deliverable": "Two-night demo",
-          "gate": "2k+ wishlists before, 7k+ after"
-        },
-        {
-          "name": "Polish and localization",
-          "startMonth": 12,
-          "endMonth": 16,
-          "kind": "build",
-          "deliverable": "Five languages, Deck Verified",
-          "gate": "15k+ wishlists"
-        },
-        {
-          "name": "Launch",
-          "startMonth": 16,
-          "endMonth": 17,
-          "kind": "launch",
-          "deliverable": "PC release",
-          "gate": "90%+ positive"
-        },
-        {
-          "name": "Festival updates and DLC",
-          "startMonth": 17,
-          "endMonth": 24,
-          "kind": "live",
-          "deliverable": "Free festivals, paid recipe packs",
-          "gate": "Stable review score"
-        },
-        {
-          "name": "Switch 2 port",
-          "startMonth": 19,
-          "endMonth": 24,
-          "kind": "build",
-          "deliverable": "Port with a partner",
-          "gate": "PC traction"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Months 0–3",
+          "when": "Step 1",
           "action": "Food and couple-reaction clips on TikTok and Reels; start the Discord."
         },
         {
-          "when": "Months 3–9",
+          "when": "Step 2",
           "action": "Apply to Wholesome Direct and cultural showcases; pitch the setting's story to press."
         },
         {
-          "when": "Months 9–11",
+          "when": "Step 3",
           "action": "Next Fest demo; send keys to couples gaming creators."
         },
         {
-          "when": "Month 16",
+          "when": "Step 4",
           "action": "Launch near Valentine's Day or Lunar New Year."
         }
       ],
       "liveOps": [
         {
           "when": "Monthly",
-          "what": "Free festival night or recipe in the first months after launch."
+          "what": "Free festival night or recipe after launch."
         },
         {
           "when": "Quarterly",
@@ -3285,11 +3097,11 @@
         {
           "metric": "Year-one units",
           "target": "40,000 (base case)",
-          "why": "Recoups the budget in about 18 months."
+          "why": "Recoups the budget with DLC and the Switch port."
         }
       ],
       "killCriteria": [
-        "Couples in playtests don't ask for 'one more night' by month 2: rethink the role split.",
+        "Couples in playtests don't ask for 'one more night' by the second prototype: rethink the role split.",
         "Fewer than 7,000 wishlists after Next Fest: cut content and ship lean, or push for a showcase slot."
       ],
       "risks": [
@@ -3318,7 +3130,7 @@
           "scenario": "Base",
           "units": 40000,
           "netUSD": 352000,
-          "note": "Close to recouping in 18 months with DLC and the Switch port."
+          "note": "Close to recouping with DLC and the Switch port."
         },
         {
           "scenario": "Strong",
@@ -3445,7 +3257,49 @@
         "firstMoney": "Paid desktop download on itch.io",
         "reach": "Couples creators and festivals",
         "graduate": "Steam, then Switch"
-      }
+      },
+      "steps": [
+        {
+          "name": "Two-player prototype",
+          "deliverable": "One night at the market playable in couch co-op",
+          "gate": "Couples laugh and ask for another night"
+        },
+        {
+          "name": "Steam page live",
+          "deliverable": "Food-led capsule and trailer",
+          "gate": "12%+ conversion"
+        },
+        {
+          "name": "Production",
+          "deliverable": "Recipes, regulars, decorating",
+          "gate": "Playtests above 85% positive"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "deliverable": "Two-night demo",
+          "gate": "2k+ wishlists before, 7k+ after"
+        },
+        {
+          "name": "Polish and localization",
+          "deliverable": "Five languages, Deck Verified",
+          "gate": "15k+ wishlists"
+        },
+        {
+          "name": "Launch",
+          "deliverable": "PC release",
+          "gate": "90%+ positive"
+        },
+        {
+          "name": "Festival updates and DLC",
+          "deliverable": "Free festivals, paid recipe packs",
+          "gate": "Stable review score"
+        },
+        {
+          "name": "Switch 2 port",
+          "deliverable": "Port with a partner",
+          "gate": "PC traction"
+        }
+      ]
     },
     {
       "id": "terraces",
@@ -3625,7 +3479,7 @@
       },
       "monetizationPlan": [
         "Premium base game",
-        "Mountain packs ($4.99) every few months",
+        "Mountain packs ($4.99) over time",
         "Soundtrack with traditional instruments",
         "Art book and prints of player-made mountains (later)",
         "No microtransactions"
@@ -3659,94 +3513,27 @@
       ],
       "budgetUSD": {
         "label": "$450–800k",
-        "note": "Four people for about 20 months plus contractors and festivals. Most of the risk sits in the first 3 months: if the water toy isn't satisfying by then, stop or change course cheaply."
+        "note": "Estimate for a four-person team plus contractors and festivals. Most of the risk sits in the water prototype: if the water toy isn't satisfying by then, stop or change course cheaply."
       },
-      "devMonths": 20,
-      "milestones": [
-        {
-          "name": "Water toy prototype",
-          "startMonth": 0,
-          "endMonth": 3,
-          "kind": "build",
-          "deliverable": "Sculpt a slope and watch water fill terraces",
-          "gate": "Strangers keep sculpting 15+ minutes; clips earn saves and shares"
-        },
-        {
-          "name": "Steam page live",
-          "startMonth": 3,
-          "endMonth": 4,
-          "kind": "launch",
-          "deliverable": "GIF-led page, Chinese and Japanese pages",
-          "gate": "12%+ visit-to-wishlist"
-        },
-        {
-          "name": "Vertical slice",
-          "startMonth": 4,
-          "endMonth": 9,
-          "kind": "build",
-          "deliverable": "One mountain at final quality",
-          "gate": "Runs well on Steam Deck"
-        },
-        {
-          "name": "Demo and Next Fest",
-          "startMonth": 10,
-          "endMonth": 12,
-          "kind": "launch",
-          "deliverable": "30-minute demo with photo mode",
-          "gate": "10k+ wishlists after the fest"
-        },
-        {
-          "name": "Production",
-          "startMonth": 9,
-          "endMonth": 19,
-          "kind": "build",
-          "deliverable": "8 mountains, sandbox, seasons",
-          "gate": "Playtests above 90% positive"
-        },
-        {
-          "name": "Launch",
-          "startMonth": 20,
-          "endMonth": 21,
-          "kind": "launch",
-          "deliverable": "PC release at $19.99",
-          "gate": "30k+ wishlists going in"
-        },
-        {
-          "name": "Photo challenges and packs",
-          "startMonth": 21,
-          "endMonth": 30,
-          "kind": "live",
-          "deliverable": "Monthly challenges, paid mountain packs",
-          "gate": "Reviews stay 92%+"
-        },
-        {
-          "name": "iPad and Switch 2 ports",
-          "startMonth": 22,
-          "endMonth": 28,
-          "kind": "build",
-          "deliverable": "Touch-first port, then console",
-          "gate": "PC traction"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Months 1–4",
+          "when": "Step 1",
           "action": "Post a water clip every week from the first prototype on TikTok, Shorts, Reels and r/CityBuilders. The water is the trailer."
         },
         {
-          "when": "Months 3–9",
+          "when": "Step 2",
           "action": "Steam page, Wholesome Direct and builder showcases, Bilibili and regional creators in Southeast Asia."
         },
         {
-          "when": "Months 10–12",
+          "when": "Step 3",
           "action": "Next Fest demo with photo mode; send keys to builder YouTubers and 'satisfying' channels."
         },
         {
-          "when": "Months 12–19",
+          "when": "Step 4",
           "action": "A photo-mode contest on the demo to keep clips flowing; pitch press on the setting and the team behind it."
         },
         {
-          "when": "Month 20",
+          "when": "Step 5",
           "action": "Launch timed with a Steam city-builder or cozy fest."
         }
       ],
@@ -3756,7 +3543,7 @@
           "what": "Photo challenge with a theme; feature winners in-game."
         },
         {
-          "when": "Every 3–4 months",
+          "when": "Each new pack",
           "what": "New mountain pack with a sale on the base game."
         },
         {
@@ -3783,12 +3570,12 @@
         {
           "metric": "Year-one units",
           "target": "60,000 (base case)",
-          "why": "Recoups the budget in about 18 months with packs and ports."
+          "why": "Recoups the budget with packs and ports."
         }
       ],
       "killCriteria": [
-        "Testers stop sculpting within 10 minutes after 3 months of iteration: the water toy isn't working.",
-        "Under 5,000 wishlists after 6 months of weekly clips: the hook isn't landing; rethink the setting or the action."
+        "Testers stop sculpting within 10 minutes after several rounds of iteration: the water toy isn't working.",
+        "Under 5,000 wishlists after 30+ clips: the hook isn't landing; rethink the setting or the action."
       ],
       "risks": [
         {
@@ -3892,7 +3679,49 @@
         "firstMoney": "Paid desktop download on itch.io",
         "reach": "Builder showcases and creators",
         "graduate": "Steam"
-      }
+      },
+      "steps": [
+        {
+          "name": "Water toy prototype",
+          "deliverable": "Sculpt a slope and watch water fill terraces",
+          "gate": "Strangers keep sculpting 15+ minutes; clips earn saves and shares"
+        },
+        {
+          "name": "Steam page live",
+          "deliverable": "GIF-led page, Chinese and Japanese pages",
+          "gate": "12%+ visit-to-wishlist"
+        },
+        {
+          "name": "Vertical slice",
+          "deliverable": "One mountain at final quality",
+          "gate": "Runs well on Steam Deck"
+        },
+        {
+          "name": "Production",
+          "deliverable": "8 mountains, sandbox, seasons",
+          "gate": "Playtests above 90% positive"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "deliverable": "30-minute demo with photo mode",
+          "gate": "10k+ wishlists after the fest"
+        },
+        {
+          "name": "Launch",
+          "deliverable": "PC release at $19.99",
+          "gate": "30k+ wishlists going in"
+        },
+        {
+          "name": "Photo challenges and packs",
+          "deliverable": "Monthly challenges, paid mountain packs",
+          "gate": "Reviews stay 92%+"
+        },
+        {
+          "name": "iPad and Switch 2 ports",
+          "deliverable": "Touch-first port, then console",
+          "gate": "PC traction"
+        }
+      ]
     },
     {
       "id": "lamplighters-rest",
@@ -3928,7 +3757,7 @@
         },
         "scopeFit": {
           "score": 7,
-          "why": "Single-player and content-led. Manageable with 4 people in 18 months."
+          "why": "Single-player and content-led. Manageable with 4 people."
         },
         "monetization": {
           "score": 5,
@@ -4045,94 +3874,27 @@
       ],
       "budgetUSD": {
         "label": "$400–750k",
-        "note": "Four people for 18 months."
+        "note": "Estimate for a four-person team; content-heavy scope."
       },
-      "devMonths": 18,
-      "milestones": [
-        {
-          "name": "Prototype",
-          "startMonth": 0,
-          "endMonth": 3,
-          "kind": "build",
-          "deliverable": "Inn loop and one ghost story",
-          "gate": "Testers ask what happens to the next ghost"
-        },
-        {
-          "name": "Steam page",
-          "startMonth": 3,
-          "endMonth": 4,
-          "kind": "launch",
-          "deliverable": "Moody trailer and capsule",
-          "gate": "12%+ visit-to-wishlist"
-        },
-        {
-          "name": "Vertical slice",
-          "startMonth": 4,
-          "endMonth": 8,
-          "kind": "build",
-          "deliverable": "3 ghosts, the inn at final quality",
-          "gate": "Tone test: cozy players say 'eerie, not scary'"
-        },
-        {
-          "name": "Next Fest demo",
-          "startMonth": 10,
-          "endMonth": 12,
-          "kind": "launch",
-          "deliverable": "45-minute demo",
-          "gate": "7k+ wishlists"
-        },
-        {
-          "name": "Production",
-          "startMonth": 8,
-          "endMonth": 17,
-          "kind": "build",
-          "deliverable": "All 20 stories and the town",
-          "gate": "Narrative playtests above 90% positive"
-        },
-        {
-          "name": "October launch",
-          "startMonth": 18,
-          "endMonth": 19,
-          "kind": "launch",
-          "deliverable": "PC release at $19.99",
-          "gate": "20k+ wishlists going in"
-        },
-        {
-          "name": "Seasonal updates",
-          "startMonth": 19,
-          "endMonth": 24,
-          "kind": "live",
-          "deliverable": "Spring festival, quality-of-life patches",
-          "gate": "Reviews hold 92%+"
-        },
-        {
-          "name": "Autumn story DLC",
-          "startMonth": 24,
-          "endMonth": 30,
-          "kind": "live",
-          "deliverable": "Next October's paid chapter",
-          "gate": "Base game still selling"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Months 0–6",
+          "when": "Step 1",
           "action": "Post atmospheric GIFs and 30-second ghost micro-stories; start a mailing list."
         },
         {
-          "when": "Months 4–10",
+          "when": "Step 2",
           "action": "Apply to Wholesome Direct and spooky and cozy showcases; run the Steam page through Halloween events."
         },
         {
-          "when": "Months 10–12",
+          "when": "Step 3",
           "action": "Next Fest demo ending on a cliffhanger; keys to cozy and narrative streamers."
         },
         {
-          "when": "Months 12–17",
+          "when": "Step 4",
           "action": "Press on 'cozy with a darker edge'; Dredge and Spiritfarer comparisons in pitches."
         },
         {
-          "when": "Month 18",
+          "when": "Step 5",
           "action": "Launch in early October, ahead of Halloween sales and coverage."
         }
       ],
@@ -4334,7 +4096,49 @@
         "firstMoney": "Paid full game on itch.io",
         "reach": "Spooky/cozy festivals in October",
         "graduate": "Steam"
-      }
+      },
+      "steps": [
+        {
+          "name": "Prototype",
+          "deliverable": "Inn loop and one ghost story",
+          "gate": "Testers ask what happens to the next ghost"
+        },
+        {
+          "name": "Steam page",
+          "deliverable": "Moody trailer and capsule",
+          "gate": "12%+ visit-to-wishlist"
+        },
+        {
+          "name": "Vertical slice",
+          "deliverable": "3 ghosts, the inn at final quality",
+          "gate": "Tone test: cozy players say 'eerie, not scary'"
+        },
+        {
+          "name": "Production",
+          "deliverable": "All 20 stories and the town",
+          "gate": "Narrative playtests above 90% positive"
+        },
+        {
+          "name": "Next Fest demo",
+          "deliverable": "45-minute demo",
+          "gate": "7k+ wishlists"
+        },
+        {
+          "name": "October launch",
+          "deliverable": "PC release at $19.99",
+          "gate": "20k+ wishlists going in"
+        },
+        {
+          "name": "Seasonal updates",
+          "deliverable": "Spring festival, quality-of-life patches",
+          "gate": "Reviews hold 92%+"
+        },
+        {
+          "name": "Autumn story DLC",
+          "deliverable": "Next October's paid chapter",
+          "gate": "Base game still selling"
+        }
+      ]
     },
     {
       "id": "bloom-harbor-roblox",
@@ -4414,7 +4218,7 @@
         "mvp": [
           "Garden plots, 20 seeds, rarity tiers",
           "Trading",
-          "Ships in 6–8 weeks"
+          "Small enough to ship fast"
         ],
         "launch": [
           "Weekly seed drops",
@@ -4458,35 +4262,8 @@
       ],
       "budgetUSD": {
         "label": "$40–120k",
-        "note": "3–4 months to launch, then weekly updates. Run it as an experiment with a fixed budget."
+        "note": "Run it as a fixed-budget experiment, with weekly updates once live."
       },
-      "devMonths": 3,
-      "milestones": [
-        {
-          "name": "Build",
-          "startMonth": 0,
-          "endMonth": 2,
-          "kind": "build",
-          "deliverable": "Core loop and trading",
-          "gate": "Friends-and-family test"
-        },
-        {
-          "name": "Soft launch",
-          "startMonth": 2,
-          "endMonth": 3,
-          "kind": "launch",
-          "deliverable": "Public experience",
-          "gate": "Day-1 retention 25%+"
-        },
-        {
-          "name": "Weekly updates",
-          "startMonth": 3,
-          "endMonth": 9,
-          "kind": "live",
-          "deliverable": "Seeds and events",
-          "gate": "Growth in concurrent players"
-        }
-      ],
       "marketingPlan": [
         {
           "when": "Launch",
@@ -4510,13 +4287,13 @@
           "why": "Roblox benchmark for a viable experience."
         },
         {
-          "metric": "Concurrent players at month 2",
+          "metric": "Concurrent players after the first updates",
           "target": "1,000+",
           "why": "Signals the algorithm is picking it up."
         }
       ],
       "killCriteria": [
-        "No growth after 8 weeks of updates: stop and keep the lessons."
+        "No growth after several weekly updates: stop and keep the lessons."
       ],
       "risks": [
         {
@@ -4638,7 +4415,24 @@
         "firstMoney": "Game passes and items",
         "reach": "Roblox discovery and YouTubers",
         "graduate": "Stays on Roblox"
-      }
+      },
+      "steps": [
+        {
+          "name": "Build",
+          "deliverable": "Core loop and trading",
+          "gate": "Friends-and-family test"
+        },
+        {
+          "name": "Soft launch",
+          "deliverable": "Public experience",
+          "gate": "Day-1 retention 25%+"
+        },
+        {
+          "name": "Weekly updates",
+          "deliverable": "Seeds and events",
+          "gate": "Growth in concurrent players"
+        }
+      ]
     },
     {
       "id": "quilt-porch",
@@ -4673,7 +4467,7 @@
         },
         "scopeFit": {
           "score": 8,
-          "why": "2D, single-player, puzzle content. Three people in about 12 months."
+          "why": "2D, single-player, puzzle content. Three people can build it."
         },
         "monetization": {
           "score": 4,
@@ -4778,74 +4572,23 @@
       ],
       "budgetUSD": {
         "label": "$200–400k",
-        "note": "Three people for about 12 months."
+        "note": "Three people; small scope."
       },
-      "devMonths": 12,
-      "milestones": [
-        {
-          "name": "Prototype",
-          "startMonth": 0,
-          "endMonth": 2,
-          "kind": "build",
-          "deliverable": "Core puzzle on PC and iPad",
-          "gate": "Testers over 50 finish 3 quilts without help"
-        },
-        {
-          "name": "Steam page and iPad pre-order",
-          "startMonth": 2,
-          "endMonth": 3,
-          "kind": "launch",
-          "deliverable": "Calm, readable trailer",
-          "gate": "Craft-community response"
-        },
-        {
-          "name": "Production",
-          "startMonth": 3,
-          "endMonth": 10,
-          "kind": "build",
-          "deliverable": "40 quilts and 5 family chapters",
-          "gate": "Accessibility review passes"
-        },
-        {
-          "name": "Polish and partners",
-          "startMonth": 9,
-          "endMonth": 12,
-          "kind": "build",
-          "deliverable": "Craft-community partnerships, Apple Arcade pitch",
-          "gate": "A partner or 10k wishlists"
-        },
-        {
-          "name": "Launch",
-          "startMonth": 12,
-          "endMonth": 13,
-          "kind": "launch",
-          "deliverable": "PC and iPad",
-          "gate": "90%+ positive"
-        },
-        {
-          "name": "Seasonal packs and ports",
-          "startMonth": 13,
-          "endMonth": 20,
-          "kind": "live",
-          "deliverable": "Packs, Android tablets, Switch 2",
-          "gate": "Retention holds"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Months 0–6",
+          "when": "Step 1",
           "action": "Quilting and craft communities: Facebook groups, Pinterest, quilting YouTubers and magazines."
         },
         {
-          "when": "Months 3–9",
+          "when": "Step 2",
           "action": "Accessibility and older-gamer outlets (AARP-style), puzzle newsletters."
         },
         {
-          "when": "Months 9–12",
+          "when": "Step 3",
           "action": "Apple Arcade pitch; Steam puzzle fest demo."
         },
         {
-          "when": "Month 12",
+          "when": "Step 4",
           "action": "Launch near Mother's Day or the winter holidays; gift-friendly pricing."
         }
       ],
@@ -4887,7 +4630,7 @@
       ],
       "killCriteria": [
         "Older testers find it confusing after two UI iterations: rethink the core puzzle.",
-        "No craft community or platform partner bites by month 9: launch small on PC and iPad only."
+        "No craft community or platform partner bites before production wraps up: launch small on PC and iPad only."
       ],
       "risks": [
         {
@@ -4970,7 +4713,7 @@
         },
         {
           "signal": "Smallest scope of the five",
-          "detail": "2D, single-player, 3 people, about 12 months.",
+          "detail": "2D, single-player, 3 people.",
           "strength": "supporting",
           "ref": {
             "link": "#playbook"
@@ -5042,14 +4785,46 @@
         "firstMoney": "$3 quilt-pack unlock",
         "reach": "Craft communities",
         "graduate": "iPad/Android tablet app; Apple Arcade pitch"
-      }
+      },
+      "steps": [
+        {
+          "name": "Prototype",
+          "deliverable": "Core puzzle on PC and iPad",
+          "gate": "Testers over 50 finish 3 quilts without help"
+        },
+        {
+          "name": "Steam page and iPad pre-order",
+          "deliverable": "Calm, readable trailer",
+          "gate": "Craft-community response"
+        },
+        {
+          "name": "Production",
+          "deliverable": "40 quilts and 5 family chapters",
+          "gate": "Accessibility review passes"
+        },
+        {
+          "name": "Polish and partners",
+          "deliverable": "Craft-community partnerships, Apple Arcade pitch",
+          "gate": "A partner or 10k wishlists"
+        },
+        {
+          "name": "Launch",
+          "deliverable": "PC and iPad",
+          "gate": "90%+ positive"
+        },
+        {
+          "name": "Seasonal packs and ports",
+          "deliverable": "Packs, Android tablets, Switch 2",
+          "gate": "Retention holds"
+        }
+      ]
     },
     {
       "id": "sill",
       "name": "Sill",
       "niche": "Idle desktop companion · social",
       "oneLiner": "A tiny window-box garden that grows along the bottom of your screen while you work, and your friends' plants can visit.",
-      "pitch": "A small studio launchpad. Desktop idle games spread fast (Rusty's Retirement sold 330k+ copies on Steam at $7; Bongo Cat peaked at 194k concurrent players). Sill is a window box that sits at the bottom of the screen, grows while you work, and lets friends' plants pollinate yours. It's 4–6 months for two people. The goal is cash flow, Steam followers and a mailing list to launch the flagship to, not a fortune.",
+      "pitch": "A small studio launchpad. Desktop idle games spread fast (Rusty's Retirement sold 330k+ copies on Steam at $7; Bongo Cat peaked at 194k concurrent players). Sill is a window box that sits at the bottom of the screen, grows while you work, and lets friends' plants pollinate yours. The goal is cash flow, Steam followers and a mailing list to launch the flagship to, not a fortune.",
       "genreTags": [
         "Idle",
         "Desktop companion",
@@ -5077,7 +4852,7 @@
         },
         "scopeFit": {
           "score": 10,
-          "why": "Two people, 4–6 months."
+          "why": "Two people, tiny scope."
         },
         "monetization": {
           "score": 4,
@@ -5167,46 +4942,11 @@
       ],
       "budgetUSD": {
         "label": "$25–70k",
-        "note": "Two people for 4–6 months."
+        "note": "Two people; a deliberately tiny scope."
       },
-      "devMonths": 5,
-      "milestones": [
-        {
-          "name": "Build",
-          "startMonth": 0,
-          "endMonth": 4,
-          "kind": "build",
-          "deliverable": "Game",
-          "gate": "Testers keep it open for a full workday"
-        },
-        {
-          "name": "Steam page and fest",
-          "startMonth": 1,
-          "endMonth": 4,
-          "kind": "launch",
-          "deliverable": "Page and demo",
-          "gate": "5k+ wishlists"
-        },
-        {
-          "name": "Launch",
-          "startMonth": 5,
-          "endMonth": 6,
-          "kind": "launch",
-          "deliverable": "Release",
-          "gate": "90%+ positive"
-        },
-        {
-          "name": "Updates",
-          "startMonth": 6,
-          "endMonth": 12,
-          "kind": "live",
-          "deliverable": "Seasonal plants",
-          "gate": "Followers gained"
-        }
-      ],
       "marketingPlan": [
         {
-          "when": "Months 1–4",
+          "when": "Step 1",
           "action": "Desktop clips, 'what's on my screen' posts, the Idle Fest on Steam."
         },
         {
@@ -5233,7 +4973,7 @@
         }
       ],
       "killCriteria": [
-        "Under 2,000 wishlists after 3 months: ship it small anyway and move on."
+        "Under 2,000 wishlists by launch: ship it small anyway and move on."
       ],
       "risks": [
         {
@@ -5242,7 +4982,7 @@
         },
         {
           "risk": "Distracts from the flagship",
-          "mitigation": "Hard 6-month cap."
+          "mitigation": "A hard scope cap: ship it small."
         }
       ],
       "revenueAssumptions": "Assumes $7.99. Net ≈ $3.90 per unit.",
@@ -5257,7 +4997,7 @@
           "scenario": "Base",
           "units": 40000,
           "netUSD": 156000,
-          "note": "Funds several months of the flagship."
+          "note": "Helps fund the flagship."
         },
         {
           "scenario": "Strong",
@@ -5355,7 +5095,29 @@
         "firstMoney": "Paid itch.io download ($5)",
         "reach": "Desktop-companion creators",
         "graduate": "Steam (Desktop Companion Fest)"
-      }
+      },
+      "steps": [
+        {
+          "name": "Build",
+          "deliverable": "Game",
+          "gate": "Testers keep it open for a full workday"
+        },
+        {
+          "name": "Steam page and fest",
+          "deliverable": "Page and demo",
+          "gate": "5k+ wishlists"
+        },
+        {
+          "name": "Launch",
+          "deliverable": "Release",
+          "gate": "90%+ positive"
+        },
+        {
+          "name": "Updates",
+          "deliverable": "Seasonal plants",
+          "gate": "Followers gained"
+        }
+      ]
     }
   ]
 }
