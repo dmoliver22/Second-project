@@ -357,7 +357,9 @@
       viewHead("Briefing · data as of " + D.meta.asOf, I.headline, I.subhead),
       section("Five games to consider", "Ranked by the data. Each shows what kind of game it is and the market signals behind it.",
         h("div", { class: "sugg-list" }, rankedSplit().main.map(suggestionRow)),
-        h("div", {}, h("a", { href: "#concepts", text: "Compare all five side by side →" }))),
+        h("div", { class: "chips", style: "gap:18px" }, h("a", { href: "#concepts", text: "Compare all five side by side →" }),
+          h("a", { href: "#concepts", text: "Rank by your own weights →", onclick: () => store.set("openWeights", true) }),
+          activePreset(weights()) ? null : h("span", { class: "chip accent", text: "Ranked with your custom weights" }))),
       I.decisions ? section("The calls", "What the data says to do, decision by decision. Click evidence to see the game or chart behind it.",
         h("div", { class: "grid grid-2" }, I.decisions.map((d) => h("article", { class: "card decision" },
           h("div", { class: "card-top" }, h("div", { class: "eyebrow", text: d.topic }), conf(d.confidence)),
@@ -961,12 +963,19 @@
     const reset = h("button", { class: "btn", type: "button", text: "Reset weights", onclick: () => { store.set("weights2", null); S.factors.forEach((f) => { w[f.key] = f.weight; const el = document.getElementById("w-" + f.key); if (el) { el.value = f.weight; el.previousSibling.lastChild.textContent = f.weight; } }); drawAll(); } });
 
     const presetBar = h("div", { class: "chips preset-bar", role: "group", "aria-label": "Rank for" });
+    const weightsPanel = h("details", { class: "panel weights-panel" }, h("summary", {}, h("b", { text: "Your weights" }), h("span", { class: "muted", text: " Drag to set how much each factor counts (0 = ignore, 5 = most). The ranking here and on the Briefing updates live and is remembered in this browser." })),
+      sliders, h("div", {}, reset));
+    if (!activePreset(w) || store.get("openWeights", false)) weightsPanel.open = true;
+    store.set("openWeights", false);
+    weightsPanel.addEventListener("toggle", () => drawPresets());
+    const openWeights = () => { weightsPanel.open = true; drawPresets(); const first = weightsPanel.querySelector("input"); if (first) first.focus({ preventScroll: true }); weightsPanel.scrollIntoView({ behavior: "smooth", block: "nearest" }); };
     const applyPreset = (p) => { Object.assign(w, p.weights); store.set("weights2", w); S.factors.forEach((f) => { const el = document.getElementById("w-" + f.key); if (el) { el.value = w[f.key]; el.previousSibling.lastChild.textContent = w[f.key]; } }); drawAll(); };
     const drawPresets = () => {
       const cur = activePreset(w);
       presetBar.replaceChildren(h("span", { class: "muted", style: "font-size:.85rem", text: "Rank for:" }),
-        ...(S.presets || []).map((p) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(cur && cur.id === p.id), title: p.note, onclick: () => applyPreset(p) }, h("span", { class: "p-name", text: p.label }))),
-        cur ? null : h("span", { class: "chip", text: "Custom weights" }));
+        ...(S.presets || []).map((p) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(!!cur && cur.id === p.id), title: p.note, onclick: () => applyPreset(p) }, h("span", { class: "p-name", text: p.label }))),
+        h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(!cur), title: "Set your own weights for each factor", onclick: () => (weightsPanel.open ? weightsPanel.removeAttribute("open") : openWeights()) },
+          h("span", { class: "p-name", text: "Custom" }), h("span", { class: "muted", style: "font-size:.75rem", text: weightsPanel.open ? "▴" : "▾" })));
     };
     const pick = (id, scroll) => { selected = id; store.set("concept", id); drawAll(); if (scroll) detail.scrollIntoView({ behavior: "smooth", block: "start" }); };
     const tab = (r, label) => h("button", { type: "button", role: "tab", class: "concept-tab", "aria-selected": String(r.c.id === selected), onclick: () => pick(r.c.id) },
@@ -990,9 +999,7 @@
       viewHead("What to build", "Five games the data points to", D.concepts.intro),
       takeaway("concepts"),
       h("div", { class: "callout warn" }, h("b", { text: "Read this first" }), h("p", { class: "ink-2", text: D.concepts.caveat })),
-      section("Side by side", "Bold marks the best of the five on each factor. Hover a factor score for the reasoning; click a name for its full plan.", presetBar, compare),
-      h("details", { class: "panel weights-panel" }, h("summary", {}, h("b", { text: "Change what matters" }), h("span", { class: "muted", text: " Scoring weights; the ranking updates live and is saved in this browser" })),
-        sliders, h("div", {}, reset)),
+      section("Side by side", "Pick what to rank for, or press Custom to set your own weights. Bold marks the best of the five on each factor. Hover a factor score for the reasoning; click a name for its full plan.", presetBar, weightsPanel, compare),
       section("Full plans", null, tabs,
         h("div", { class: "side-bets" }, h("div", { class: "eyebrow", text: "More ideas and side bets" }), sideTabs),
         detail),
@@ -1497,7 +1504,7 @@
     if (!(root instanceof Element)) return;
     const boxes = root.matches(COPY_BOXES) ? [root, ...root.querySelectorAll(COPY_BOXES)] : root.querySelectorAll(COPY_BOXES);
     boxes.forEach((box) => {
-      if (box.querySelector(":scope > .copy-btn") || box.matches(".chat") || box.querySelector(".chart")) return;
+      if (box.querySelector(":scope > .copy-btn") || box.matches(".chat, .weights-panel") || box.querySelector(".chart")) return;
       box.classList.add("has-copy");
       box.append(copyButton(box));
     });
