@@ -4,6 +4,12 @@
   "scoring": {
     "factors": [
       {
+        "key": "originality",
+        "label": "Originality",
+        "weight": 3,
+        "description": "Is this genuinely new (a fresh verb, fantasy or format), or a reskin of an existing hit?"
+      },
+      {
         "key": "demand",
         "label": "Player demand",
         "weight": 3,
@@ -20,6 +26,12 @@
         "label": "Fast to build solo",
         "weight": 3,
         "description": "How quickly one person with AI coding tools can ship a good v1, keeping art human-directed."
+      },
+      {
+        "key": "creatorFit",
+        "label": "Fits you",
+        "weight": 2,
+        "description": "Suits one person building with AI: little bespoke human-made art needed, and easy to make videos about."
       },
       {
         "key": "instantPlay",
@@ -72,7 +84,9 @@
           "marketability": 3,
           "momentum": 1,
           "scopeFit": 0,
-          "culture": 2
+          "culture": 2,
+          "originality": 3,
+          "creatorFit": 2
         }
       },
       {
@@ -88,7 +102,9 @@
           "marketability": 2,
           "momentum": 2,
           "scopeFit": 3,
-          "culture": 1
+          "culture": 1,
+          "originality": 2,
+          "creatorFit": 0
         }
       }
     ]
@@ -206,6 +222,14 @@
         "culture": {
           "score": 10,
           "why": "Sits on the strongest culture signals in the research: blind boxes, kidult collecting, unboxing, plush and little treats."
+        },
+        "originality": {
+          "score": 5,
+          "why": "Blind-box collecting exists in many gacha games; free, open-odds plush shelves with an original cast is a fresh angle, not a new genre."
+        },
+        "creatorFit": {
+          "score": 6,
+          "why": "Code is simple, but every series needs seven lovable hand-made treats: steady art cost."
         }
       },
       "whyNow": [
@@ -595,6 +619,14 @@
         "culture": {
           "score": 9,
           "why": "Supported by 37 culture signals, strongest: Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin); Cat content dominance; Loneliness epidemic and the search for low-cost third places."
+        },
+        "originality": {
+          "score": 2,
+          "why": "An idle shop tycoon with a tea theme; the genre is full of near-identical games."
+        },
+        "creatorFit": {
+          "score": 7,
+          "why": "Well-understood systems AI can build fast; moderate art for customers and street."
         }
       },
       "whyNow": [
@@ -974,6 +1006,14 @@
         "culture": {
           "score": 10,
           "why": "Supported by 41 culture signals, strongest: Kidult collecting (adults buying toys for themselves); Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin); Cat content dominance."
+        },
+        "originality": {
+          "score": 4,
+          "why": "Room decorating with daily themes and a gallery borrows Dress to Impress's loop for rooms."
+        },
+        "creatorFit": {
+          "score": 5,
+          "why": "Props are the product, so art never stops; plus gallery moderation."
         }
       },
       "whyNow": [
@@ -1352,6 +1392,14 @@
         "culture": {
           "score": 7,
           "why": "Supported by 25 culture signals, strongest: Kidult collecting (adults buying toys for themselves); Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin); Cat content dominance."
+        },
+        "originality": {
+          "score": 5,
+          "why": "A browser version of the Webfishing hangout; link-to-join is the new part."
+        },
+        "creatorFit": {
+          "score": 6,
+          "why": "Real-time multiplayer and servers are real work even with AI; art is modest low-poly."
         }
       },
       "whyNow": [
@@ -1741,6 +1789,14 @@
         "culture": {
           "score": 7,
           "why": "Supported by 28 culture signals, strongest: Kidult collecting (adults buying toys for themselves); Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin); Streak psychology, with forgiveness (Duolingo)."
+        },
+        "originality": {
+          "score": 2,
+          "why": "A Suika-style merge game with flowers. The format is crowded with near-identical clones."
+        },
+        "creatorFit": {
+          "score": 9,
+          "why": "Tiny system and ten flower designs: the easiest build here for one person with AI."
         }
       },
       "whyNow": [
@@ -2125,6 +2181,14 @@
         "culture": {
           "score": 7,
           "why": "Supported by 26 culture signals, strongest: Cat content dominance; Streak psychology, with forgiveness (Duolingo); AI fatigue, 'slop' backlash and demand for human-made."
+        },
+        "originality": {
+          "score": 5,
+          "why": "Daily puzzles and tidying games both exist; combining them with a shareable result is a modest twist."
+        },
+        "creatorFit": {
+          "score": 6,
+          "why": "Easy to code; a daily hand-made scene is a content treadmill unless scenes are built from reusable object sets."
         }
       },
       "whyNow": [
@@ -2459,6 +2523,14 @@
         "culture": {
           "score": 5,
           "why": "Loneliness and third-place trends favor co-op, but few culture signals point at survival or the sea."
+        },
+        "originality": {
+          "score": 6,
+          "why": "No-death survival crafting on a garden boat recombines known parts in a fresh setting."
+        },
+        "creatorFit": {
+          "score": 2,
+          "why": "3D online co-op is a team-sized project."
         }
       },
       "whyNow": [
@@ -2949,6 +3021,14 @@
         "culture": {
           "score": 8,
           "why": "Matcha and café culture, anime and K-culture, night-market aesthetics and the 'little treat' mood all point here; couples content is evergreen."
+        },
+        "originality": {
+          "score": 6,
+          "why": "Stress-free two-player cooking in a night market is a real twist on Overcooked-style co-op."
+        },
+        "creatorFit": {
+          "score": 4,
+          "why": "Two-player co-op, food art and cultural consultants: a lot for one person."
         }
       },
       "whyNow": [
@@ -3414,6 +3494,14 @@
         "culture": {
           "score": 6,
           "why": "Ghibli-adjacent landscapes, miniatures and the slow-living mood help; fewer direct signals than the web-first ideas."
+        },
+        "originality": {
+          "score": 7,
+          "why": "Shaping land so water creates terraces and villages is a fresh core action among relaxing builders."
+        },
+        "creatorFit": {
+          "score": 6,
+          "why": "Water and terrain code suits AI-assisted iteration, but the feel needs long tuning."
         }
       },
       "whyNow": [
@@ -3782,6 +3870,14 @@
         "culture": {
           "score": 6,
           "why": "Autumn and Halloween seasonality and 'cute-spooky' aesthetics help, but only for part of the year."
+        },
+        "originality": {
+          "score": 6,
+          "why": "Gentle ghost stories in an inn is an uncommon mix of spooky and cozy."
+        },
+        "creatorFit": {
+          "score": 3,
+          "why": "Twenty stories of human writing plus painted art: heavy for one person."
         }
       },
       "whyNow": [
@@ -4196,6 +4292,14 @@
         "culture": {
           "score": 7,
           "why": "Gen Alpha's calm idle loops on Roblox and collecting culture support it."
+        },
+        "originality": {
+          "score": 2,
+          "why": "Close to Grow a Garden on the same platform."
+        },
+        "creatorFit": {
+          "score": 5,
+          "why": "Small, but Roblox's Luau and live-ops skills are separate from web."
         }
       },
       "whyNow": [
@@ -4492,6 +4596,14 @@
         "culture": {
           "score": 7,
           "why": "The 'grandma hobbies' and crochet revival (needlecraft searches up 136%), plus bounded, calming play, fit it closely."
+        },
+        "originality": {
+          "score": 6,
+          "why": "A quilt-making tile puzzle designed for older players is an uncommon combination."
+        },
+        "creatorFit": {
+          "score": 7,
+          "why": "Simple puzzle code; fabric patterns are a manageable art set."
         }
       },
       "whyNow": [
@@ -4877,6 +4989,14 @@
         "culture": {
           "score": 8,
           "why": "Desktop companions, focus timers and body doubling, houseplants and virtual-pet revival all point here."
+        },
+        "originality": {
+          "score": 4,
+          "why": "A desktop idle garden follows Rusty's Retirement's format closely; friends' plants visiting is the twist."
+        },
+        "creatorFit": {
+          "score": 8,
+          "why": "Tiny scope and small pixel art."
         }
       },
       "whyNow": [
