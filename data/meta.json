@@ -13,6 +13,10 @@
   "changelog": [
     {
       "date": "2026-10-04",
+      "note": "Saved tab: save any game suggestion, Idea lab idea or chat answer, add your own ideas, and keep notes on each. On claude.ai they're stored with the dashboard on your account; the chat knows what you've saved."
+    },
+    {
+      "date": "2026-10-04",
       "note": "Every box (cards, callouts, suggestions, panels, chat answers) has a Copy button that copies its text without the buttons."
     },
     {

@@ -580,3 +580,31 @@ textarea.brief { width: 100%; font-family: var(--font-data); font-size: .78rem; 
 }
 @media (hover: none) { .copy-btn span { display: none; } .copy-btn.done span { display: inline; } }
 .copying .copy-btn, .copying .ask-btn, .copying .btn { display: none !important; }
+
+/* ---------- saved ideas ---------- */
+.save-btn {
+  display: inline-flex; align-items: center; gap: 6px; align-self: flex-start;
+  font: inherit; font-size: .84rem; font-weight: 600; cursor: pointer;
+  padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line-strong);
+  background: var(--surface); color: var(--ink-2);
+}
+.save-btn svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linejoin: round; }
+.save-btn:hover { border-color: var(--accent); color: var(--accent); }
+.save-btn[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); background: var(--accent-wash); }
+.save-btn[aria-pressed="true"] svg { fill: currentColor; }
+.save-btn:disabled { opacity: .55; cursor: default; }
+.save-btn.icon-only { padding: 5px 7px; position: relative; }
+.save-btn.icon-only span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sugg-actions .save-btn { align-self: stretch; justify-content: center; }
+.msg-actions { display: flex; justify-content: flex-end; }
+.msg-actions .save-btn { font-size: .78rem; padding: 4px 10px; }
+.nav-count { margin-left: auto; font-family: var(--font-data); font-size: .72rem; font-weight: 600; color: var(--accent); background: var(--accent-wash); border-radius: 999px; padding: 1px 7px; }
+.saved-card { gap: 10px; }
+.saved-note-wrap { display: flex; flex-direction: column; gap: 2px; }
+.saved-note { font: inherit; font-size: .88rem; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; resize: vertical; width: 100%; min-width: 0; }
+.saved-note:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px var(--accent-wash); }
+.saved-note-state { font-size: .74rem; min-height: 1em; }
+.saved-actions { align-items: center; }
+.own-form { max-width: 640px; gap: 10px; }
+.own-form input[type="text"] { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line-strong); border-radius: 8px; padding: 8px 10px; }
+.copying .save-btn, .copying .saved-note-state { display: none !important; }

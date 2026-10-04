@@ -159,6 +159,7 @@
   const VIEWS = {
     overview: { label: "Briefing", icon: "M3 12l9-8 9 8M5 10v10h14V10", render: renderOverview },
     ask: { label: "Ask the atlas", icon: "M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12zM8 11h.01M12 11h.01M16 11h.01", render: () => window.AtlasAsk.render() },
+    saved: { label: "Saved", icon: "M6 3h12v18l-6-4.5L6 21z", render: renderSaved },
     concepts: { label: "What to build", icon: "M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z", render: renderConcepts },
     launch: { label: "Launch & grow", icon: "M5 19l4-4M14 4l6 6-8 8-6-6zM14 4l-2-2M20 10l2 2M3 21l2-2", render: renderLaunch },
     spread: { label: "What spreads", icon: "M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4", render: renderSpread },
@@ -314,7 +315,7 @@
         h("div", { class: "chips" }, [sp.genre, sp.players, sp.price, c.budgetUSD.label].map((t) => h("span", { class: "chip", text: t })))),
       h("div", { class: "sugg-drivers" }, h("div", { class: "eyebrow", text: "Driven by" }), driverList(c.drivers, { noCaution: true, limit: 3, brief: true }),
         caution ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Watch out:"), " ", caution.signal) : null),
-      h("div", { class: "sugg-actions" }, h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(c.id) }),
+      h("div", { class: "sugg-actions" }, h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(c.id) }), saveBtn(conceptEntry(c)),
         askBtn("Pressure-test", `Pressure-test ${c.name} for my studio: the biggest risks, what to validate first, and what you would change.`)));
   }
 
@@ -521,24 +522,28 @@
     );
   }
 
+  const crit = ["originality", "clarity", "clip", "spread", "buildable", "demand", "money"];
+  const critLabel = { originality: "Originality", clarity: "5-second clarity", clip: "Clip appeal", spread: "Built-in spread", buildable: "Solo buildable", demand: "Demand", money: "Money" };
+  function openIdea(x) {
+    const blocks = [["Hook", x.hook], ["In one line", x.oneLiner], ["Core loop", x.coreLoop], ["How it spreads", x.howItSpreads], ["How it makes money", x.monetization], ["What's new", x.whatsNew], ["Closest existing", x.closestExisting], ["Build notes", x.buildNotes],
+      ["Scores (average of two scorers, 1–5)", crit.map((c) => critLabel[c] + ": " + x.avg[c]).join(" · ") + " · Total " + x.total + "/100"],
+      ["Scorer A", x.verdictA], ["Scorer B", x.verdictB]];
+    if (x.market) blocks.push(["Player & market critic: " + x.market.verdict, [x.market.fatalFlaw && "Biggest risk: " + x.market.fatalFlaw, "Return play: " + x.market.returnPlay, "Best clip opens on: " + x.market.firstFrame, "Competitors: " + x.market.competitors, "Money: " + x.market.moneyPath, ...(x.market.fixes || []).map((f) => "Fix: " + f)].filter(Boolean)]);
+    if (x.build) blocks.push(["Build & distribution critic: " + x.build.verdict, ["Hardest risk: " + x.build.hardestRisk, "Server: " + x.build.needsServer, "Art load: " + x.build.artLoad, "Phone browser issues: " + x.build.mobileWebIssues, "Privacy & safety: " + x.build.privacySafety, "Smallest first version: " + x.build.stage1MVP, "Portals and in-app platforms: " + x.build.portalFit, ...(x.build.fixes || []).map((f) => "Fix: " + f)]]);
+    openPanel(x.lensLabel + " · " + x.stageLabel, x.title, blocks, [], null);
+    const head = drawer().querySelector(".drawer-body .section");
+    if (head) head.append(h("div", { class: "chips" }, saveBtn(ideaEntry(x)),
+      x.conceptId && D.concepts.concepts.some((c) => c.id === x.conceptId) ? h("button", { type: "button", class: "btn", text: "See the full plan", onclick: () => { drawer().close(); goConcept(x.conceptId); } }) : null));
+  }
+
   function renderIdeas() {
     const X = D.ideation;
     if (!X) return h("div", { class: "error-box", text: "Ideation data is missing (data/ideation.json)." });
-    const crit = ["originality", "clarity", "clip", "spread", "buildable", "demand", "money"];
-    const critLabel = { originality: "Originality", clarity: "5-second clarity", clip: "Clip appeal", spread: "Built-in spread", buildable: "Solo buildable", demand: "Demand", money: "Money" };
     const lenses = uniq(X.ideas.map((x) => x.lens));
     let lens = store.get("ideaLens", ""), stage = store.get("ideaStage", "");
     const stages = [["", "All"], ["finalist", "Finalists"], ["critiqued", "Critiqued"], ["cut", "Cut at scoring"], ["duplicate", "Merged duplicates"]];
     const bar = h("div", { class: "chips" });
     const table = h("div", {});
-    const openIdea = (x) => {
-      const blocks = [["Hook", x.hook], ["In one line", x.oneLiner], ["Core loop", x.coreLoop], ["How it spreads", x.howItSpreads], ["How it makes money", x.monetization], ["What's new", x.whatsNew], ["Closest existing", x.closestExisting], ["Build notes", x.buildNotes],
-        ["Scores (average of two scorers, 1–5)", crit.map((c) => critLabel[c] + ": " + x.avg[c]).join(" · ") + " · Total " + x.total + "/100"],
-        ["Scorer A", x.verdictA], ["Scorer B", x.verdictB]];
-      if (x.market) blocks.push(["Player & market critic: " + x.market.verdict, [x.market.fatalFlaw && "Biggest risk: " + x.market.fatalFlaw, "Return play: " + x.market.returnPlay, "Best clip opens on: " + x.market.firstFrame, "Competitors: " + x.market.competitors, "Money: " + x.market.moneyPath, ...(x.market.fixes || []).map((f) => "Fix: " + f)].filter(Boolean)]);
-      if (x.build) blocks.push(["Build & distribution critic: " + x.build.verdict, ["Hardest risk: " + x.build.hardestRisk, "Server: " + x.build.needsServer, "Art load: " + x.build.artLoad, "Phone browser issues: " + x.build.mobileWebIssues, "Privacy & safety: " + x.build.privacySafety, "Smallest first version: " + x.build.stage1MVP, "Portals and in-app platforms: " + x.build.portalFit, ...(x.build.fixes || []).map((f) => "Fix: " + f)]]);
-      openPanel(x.lensLabel + " · " + x.stageLabel, x.title, blocks, [], null);
-    };
     const draw = () => {
       bar.replaceChildren(
         ...stages.map(([k, label]) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(stage === k), onclick: () => { stage = k; store.set("ideaStage", k); draw(); } },
@@ -552,6 +557,7 @@
         { label: "Score", num: true, get: (r) => h("span", { class: "score-cell" }, miniBar(r.total, 100), h("b", { text: r.total })) },
         { label: "Origin.", num: true, get: (r) => r.avg.originality }, { label: "Clip", num: true, get: (r) => r.avg.clip }, { label: "Spread", num: true, get: (r) => r.avg.spread }, { label: "Build", num: true, get: (r) => r.avg.buildable }, { label: "Demand", num: true, get: (r) => r.avg.demand },
         { label: "Outcome", get: (r) => h("span", { class: "chip" + (r.stage === "finalist" ? " good" : r.stage === "critiqued" ? " warn" : ""), text: r.stageLabel }) },
+        { label: "", get: (r) => saveBtn(ideaEntry(r), { icon: true }) },
       ], rows.map((x) => Object.assign({ __click: () => openIdea(x) }, x))));
     };
     draw();
@@ -568,7 +574,7 @@
           h("p", { class: "ink-2", text: x.finalHook || x.hook }),
           x.whySurvived ? h("p", { style: "font-size:.88rem" }, h("b", { text: "Why it survived: " }), x.whySurvived) : null,
           x.mainFix ? h("p", { style: "font-size:.88rem" }, h("b", { text: "What the critics changed: " }), x.mainFix) : null,
-          h("div", { class: "chips" }, x.conceptId && conceptName(x.conceptId) ? h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(x.conceptId) }) : null,
+          h("div", { class: "chips" }, x.conceptId && conceptName(x.conceptId) ? h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(x.conceptId) }) : null, saveBtn(ideaEntry(x)),
             h("button", { type: "button", class: "btn", text: "Scores and critiques", onclick: () => openIdea(x) })))))) : null,
       X.cutLessons && X.cutLessons.length ? section("Why most ideas were cut", null, h("ul", { class: "list-plain" }, X.cutLessons.map((t) => h("li", { class: "ink-2", text: t })))) : null,
       section("All " + X.ideas.length + " ideas", "Click any idea for its full write-up, both scorers' grades and, for the top 12, both critiques.", bar, table),
@@ -1005,7 +1011,7 @@
         h("div", { class: "section" },
           h("div", { class: "eyebrow", text: (rank ? "Suggestion #" + rank : isMore ? "More ideas" : "Side bet · " + (c.sideRole || "")) + " · " + c.niche }),
           h("h2", { text: c.name }), h("p", { class: "ink-2", style: "font-size:var(--step-1)", text: c.oneLiner }), h("p", { text: c.pitch }),
-          h("div", { class: "chips" }, askBtn("Pressure-test this", `Pressure-test ${c.name} for my studio: the biggest risks, what to validate first, and what you would change.`),
+          h("div", { class: "chips" }, saveBtn(conceptEntry(c)), askBtn("Pressure-test this", `Pressure-test ${c.name} for my studio: the biggest risks, what to validate first, and what you would change.`),
             askBtn("Adapt it to my studio", `Adapt the ${c.name} plan to my studio's team, budget and skills. What changes in scope, team, timeline and money?`)),
           h("div", { class: "chips" }, (c.genreTags || []).map((t) => h("span", { class: "chip accent", text: t }))),
           h("dl", { class: "kv" }, h("dt", { text: "Audience" }), h("dd", { text: c.audience }), h("dt", { text: "Comparables" }), h("dd", { text: (c.comps || []).join(", ") }),
@@ -1132,7 +1138,8 @@
 
   function buildNav() {
     const nav = document.getElementById("nav");
-    nav.replaceChildren(...Object.entries(VIEWS).map(([k, v]) => h("a", { href: "#" + k, "data-view": k }, svgIcon(v.icon), v.label)));
+    nav.replaceChildren(...Object.entries(VIEWS).map(([k, v]) => h("a", { href: "#" + k, "data-view": k }, svgIcon(v.icon), v.label,
+      k === "saved" ? h("span", { class: "nav-count", hidden: "" }) : null)));
     document.getElementById("asof").textContent = "Data as of " + D.meta.asOf;
   }
 
@@ -1148,6 +1155,219 @@
       root.setAttribute("data-theme", next); store.set("theme", next); label();
     });
     label();
+  }
+
+  // ---------- saved ideas ----------
+  // Kept in the artifact's database when the page runs on claude.ai (follows you across devices);
+  // in this browser's storage otherwise.
+  const Saved = (() => {
+    let items = new Map();
+    let mode = "local", col = null, readOnly = false, lastError = "";
+    const listeners = new Set();
+    const queue = new Map(); // one write at a time per document
+    const fromLocal = () => { items = new Map((store.get("saved", []) || []).filter((x) => x && x.id).map((x) => [x.id, x])); };
+    const toLocal = () => store.set("saved", [...items.values()]);
+    const emit = () => listeners.forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });
+    function fail(e, op) {
+      const code = e && e.code;
+      if (op === "update" && code === "invalid_argument") return; // the idea was removed while its note was saving
+      if (code === "invalid_argument" || code === "not_granted" || code === "revoked") { readOnly = true; lastError = "You can see these saved ideas but not change them."; }
+      else if (code === "quota_exceeded") lastError = "Saved ideas are full. Remove a few to make room.";
+      else lastError = "That change didn't save. Try again in a moment.";
+      emit();
+    }
+    function write(id, fn, op) {
+      const prev = queue.get(id) || Promise.resolve();
+      const next = prev.then(fn).catch((e) => fail(e, op));
+      queue.set(id, next);
+      return next;
+    }
+    async function init() {
+      fromLocal();
+      emit();
+      if (!window.claude || typeof window.claude.use !== "function") return;
+      let db = null;
+      try { db = await window.claude.use("db"); } catch (e) { db = null; }
+      if (!db) return;
+      col = db.collection("saved");
+      let first = true;
+      col.onSnapshot((snap) => {
+        const next = new Map(snap.docs.map((d) => [d.id, Object.assign({}, d.data(), { id: d.id })]));
+        if (first) {
+          first = false;
+          mode = "db";
+          // carry over anything saved in this browser before the account store was reachable
+          const local = [...items.values()].filter((x) => !next.has(x.id));
+          local.forEach((x) => { const body = Object.assign({}, x); delete body.id; next.set(x.id, x); write(x.id, () => col.doc(x.id).set(body), "set"); });
+          if (local.length) Promise.all(local.map((x) => queue.get(x.id))).then(() => store.set("saved", []));
+          else store.set("saved", []);
+        }
+        items = next;
+        emit();
+      }, () => { mode = "local"; col = null; fromLocal(); emit(); });
+    }
+    function add(entry) {
+      if (readOnly) return;
+      const body = Object.assign({ note: "" }, entry, { savedAt: new Date().toISOString() });
+      delete body.id;
+      lastError = "";
+      if (mode === "db") return write(entry.id, () => col.doc(entry.id).set(body), "set");
+      items.set(entry.id, Object.assign({}, body, { id: entry.id })); toLocal(); emit();
+    }
+    function remove(id) {
+      if (readOnly) return;
+      lastError = "";
+      if (mode === "db") return write(id, () => col.doc(id).delete(), "delete");
+      items.delete(id); toLocal(); emit();
+    }
+    function setNote(id, note) {
+      if (readOnly || !items.has(id)) return;
+      if (mode === "db") return write(id, () => col.doc(id).update({ note }), "update");
+      items.set(id, Object.assign({}, items.get(id), { note })); toLocal();
+    }
+    return {
+      init, add, remove, setNote,
+      has: (id) => items.has(id),
+      get: (id) => items.get(id),
+      list: () => [...items.values()].sort((a, b) => String(b.savedAt || "").localeCompare(String(a.savedAt || ""))),
+      toggle: (entry) => (items.has(entry.id) ? remove(entry.id) : add(entry)),
+      on: (fn) => { listeners.add(fn); return () => listeners.delete(fn); },
+      synced: () => mode === "db",
+      readOnly: () => readOnly,
+      error: () => lastError,
+    };
+  })();
+
+  const ICON_SAVE = "M6 3h12v18l-6-4.5L6 21z";
+  const conceptEntry = (c) => ({ id: "concept:" + c.id, kind: "concept", ref: c.id, title: c.name, hook: c.hook || c.oneLiner || "" });
+  const ideaEntry = (x) => ({ id: "idea:" + x.id, kind: "idea", ref: x.id, title: x.title, hook: x.finalHook || x.hook || "" });
+  function hashText(t) { let a = 5381; for (let i = 0; i < t.length; i++) a = ((a << 5) + a + t.charCodeAt(i)) | 0; return (a >>> 0).toString(36); }
+  const chatEntry = (question, answer) => ({ id: "chat:" + hashText(question + "\n" + answer), kind: "chat", ref: "", title: question.slice(0, 200), hook: "", text: answer });
+  function paintSave(btn) {
+    const on = Saved.has(btn.dataset.saveId);
+    btn.setAttribute("aria-pressed", String(on));
+    btn.querySelector("span").textContent = on ? "Saved" : "Save";
+    btn.title = on ? "Remove from Saved" : "Add to Saved";
+    btn.disabled = Saved.readOnly();
+  }
+  function saveBtn(entry, opts) {
+    const o = opts || {};
+    const btn = h("button", { type: "button", class: "save-btn" + (o.icon ? " icon-only" : ""), "data-save-id": entry.id, "aria-label": "Save " + entry.title },
+      svgIcon(ICON_SAVE), h("span", { text: "Save" }));
+    btn.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); Saved.toggle(entry); });
+    btn.addEventListener("keydown", (e) => e.stopPropagation());
+    paintSave(btn);
+    return btn;
+  }
+  Saved.on(() => {
+    document.querySelectorAll("[data-save-id]").forEach(paintSave);
+    const n = Saved.list().length;
+    const badge = document.querySelector('.nav a[data-view="saved"] .nav-count');
+    if (badge) { badge.textContent = n ? String(n) : ""; badge.hidden = !n; }
+  });
+
+  function renderSaved() {
+    const KINDS = [["", "All"], ["concept", "Game suggestions"], ["idea", "Idea lab"], ["chat", "Chat answers"], ["own", "Your own"]];
+    let kind = store.get("savedKind", "");
+    const status = h("div", {});
+    const filters = h("div", { class: "chips", role: "group", "aria-label": "Filter saved ideas" });
+    const listBox = h("div", { class: "section" });
+    const ranked = rankedConcepts();
+    const ideaById = (id) => (D.ideation ? D.ideation.ideas.find((x) => x.id === id) : null);
+    const conceptById = (id) => D.concepts.concepts.find((c) => c.id === id);
+    const fmtDate = (iso) => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }); };
+
+    function noteBox(item) {
+      const ta = h("textarea", { class: "saved-note", rows: "2", placeholder: "Your notes: why you like it, what you'd change, what to test first", "aria-label": "Notes on " + item.title });
+      ta.value = item.note || "";
+      ta.disabled = Saved.readOnly();
+      const state = h("span", { class: "muted saved-note-state", "aria-live": "polite" });
+      let t = null, last = ta.value;
+      const commit = () => { clearTimeout(t); if (ta.value === last) return; last = ta.value; Saved.setNote(item.id, ta.value); state.textContent = "Saved"; };
+      ta.addEventListener("input", () => { state.textContent = ""; clearTimeout(t); t = setTimeout(commit, 900); });
+      ta.addEventListener("blur", commit);
+      return h("div", { class: "saved-note-wrap" }, ta, state);
+    }
+    function card(item) {
+      const removeBtn = Saved.readOnly() ? null : h("button", { type: "button", class: "btn", text: "Remove", onclick: () => Saved.remove(item.id) });
+      const when = h("span", { class: "muted", style: "font-size:.78rem", text: item.savedAt ? "Saved " + fmtDate(item.savedAt) : "" });
+      if (item.kind === "concept") {
+        const c = conceptById(item.ref);
+        const rank = ranked.findIndex((r) => r.c.id === item.ref);
+        const score = rank >= 0 ? ranked[rank].score : null;
+        const sp = c ? c.spec || {} : {};
+        return h("article", { class: "card saved-card" },
+          h("div", { class: "card-top" }, h("div", {}, h("div", { class: "eyebrow", text: "Game suggestion" + (rank >= 0 ? " · ranked #" + (rank + 1) : "") }), h("h3", { text: c ? c.name : item.title })),
+            score != null ? h("span", { class: "chip good", text: score.toFixed(1) + " / 10" }) : null),
+          h("p", { class: "ink-2", text: c ? c.hook : item.hook }),
+          c && c.look ? h("div", { class: "look-line" }, swatches(c.look, true), h("span", { text: c.look.short })) : null,
+          c ? h("div", { class: "chips" }, [sp.genre, sp.players, sp.price].filter(Boolean).map((t) => h("span", { class: "chip", text: t }))) : null,
+          noteBox(item),
+          h("div", { class: "chips saved-actions" }, c ? h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(c.id) }) : null, removeBtn, when));
+      }
+      if (item.kind === "idea") {
+        const x = ideaById(item.ref);
+        return h("article", { class: "card saved-card" },
+          h("div", { class: "card-top" }, h("div", {}, h("div", { class: "eyebrow", text: "Idea lab" + (x ? " · " + x.stageLabel : "") }), h("h3", { text: x ? x.title : item.title })),
+            x ? h("span", { class: "chip" + (x.stage === "finalist" ? " good" : ""), text: x.total + " / 100" }) : null),
+          h("p", { class: "ink-2", text: x ? x.finalHook || x.hook : item.hook }),
+          x && x.oneLiner ? h("p", { style: "font-size:.9rem", text: x.oneLiner }) : null,
+          noteBox(item),
+          h("div", { class: "chips saved-actions" }, x ? h("button", { type: "button", class: "btn primary", text: "Scores and critiques", onclick: () => openIdea(x) }) : null,
+            x && x.conceptId && conceptById(x.conceptId) ? h("button", { type: "button", class: "btn", text: "See the plan", onclick: () => goConcept(x.conceptId) }) : null, removeBtn, when));
+      }
+      const body = item.kind === "chat" && window.AtlasAsk && window.AtlasAsk.md ? h("div", { class: "md" }, window.AtlasAsk.md(item.text || "")) : h("p", { class: "ink-2", style: "white-space:pre-wrap", text: item.text || "" });
+      return h("article", { class: "card saved-card" },
+        h("div", {}, h("div", { class: "eyebrow", text: item.kind === "chat" ? "Chat answer" : "Your own idea" }), h("h3", { text: item.title })),
+        item.text ? body : null,
+        noteBox(item),
+        h("div", { class: "chips saved-actions" }, removeBtn, when));
+    }
+    function addForm() {
+      const title = h("input", { type: "text", id: "own-title", maxlength: "160", placeholder: "Name or one-line hook" });
+      const text = h("textarea", { id: "own-text", rows: "3", placeholder: "What the game is, how it looks, why it could work" });
+      const form = h("form", { class: "card own-form" },
+        h("h3", { text: "Add your own idea" }),
+        h("div", { class: "field" }, h("label", { for: "own-title", text: "Idea" }), title),
+        h("div", { class: "field" }, h("label", { for: "own-text", text: "Details (optional)" }), text),
+        h("div", { class: "chips" }, h("button", { type: "submit", class: "btn primary", text: "Save idea" })));
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const t = title.value.trim();
+        if (!t) { title.focus(); return; }
+        Saved.add({ id: "own:" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), kind: "own", ref: "", title: t, hook: "", text: text.value.trim() });
+        title.value = ""; text.value = "";
+      });
+      return form;
+    }
+
+    let shownIds = "";
+    function draw(force) {
+      const all = Saved.list();
+      const ids = all.map((x) => x.id).join("|") + "#" + kind + "#" + Saved.readOnly();
+      status.replaceChildren(h("div", { class: "section", style: "gap:8px" },
+        h("p", { class: "panel-note", text: Saved.synced() ? "Saved to this dashboard on your claude.ai account, so they're here on any device where you open it." : "Saved in this browser only. Open the dashboard on claude.ai to keep saved ideas across devices." }),
+        Saved.error() ? h("div", { class: "callout warn" }, h("p", { text: Saved.error() })) : null));
+      if (!force && ids === shownIds) return; // note edits don't redraw (keeps typing focus)
+      shownIds = ids;
+      const counts = Object.fromEntries(KINDS.map(([k]) => [k, all.filter((x) => !k || x.kind === k).length]));
+      if (kind && !counts[kind]) kind = "";
+      filters.replaceChildren(...KINDS.filter(([k]) => !k || counts[k]).map(([k, label]) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(kind === k), onclick: () => { kind = k; store.set("savedKind", k); draw(true); } },
+        h("span", { class: "p-name", text: label }), h("span", { class: "muted", style: "font-size:.75rem", text: String(counts[k]) }))));
+      filters.hidden = all.length < 2;
+      const rows = all.filter((x) => !kind || x.kind === kind);
+      listBox.replaceChildren(...[
+        all.length ? null : h("div", { class: "callout" }, h("b", { text: "Nothing saved yet" }),
+          h("p", { class: "ink-2", text: "Press Save on any game suggestion (Briefing, What to build), any of the 80 ideas in the Idea lab, or any answer from Ask the atlas. Or add your own idea below." })),
+        rows.length ? h("div", { class: "grid grid-2" }, rows.map(card)) : null,
+        all.length >= 2 ? askBtn("Which of my saved ideas should I build first?", "Here are the ideas I've saved: " + all.map((x) => x.title + (x.note ? " (my note: " + x.note + ")" : "")).join("; ") + ". Compare them for my studio and tell me which to build first, which to combine, and which to drop, and why.") : null].filter(Boolean));
+    }
+    draw(true);
+    const off = Saved.on(() => { if (!document.body.contains(listBox)) { off(); return; } draw(false); });
+    return h("div", { class: "view" },
+      viewHead("Saved", "Your saved ideas", "Game ideas you've kept, with your own notes. Save from any suggestion, Idea lab idea or chat answer."),
+      status, filters, listBox,
+      Saved.readOnly() ? null : addForm());
   }
 
   // ---------- copy buttons on every box ----------
@@ -1213,7 +1433,7 @@
     }).observe(document.body, { childList: true, subtree: true });
   }
 
-  window.Atlas = { h, data: () => D, ranked: rankedConcepts };
+  window.Atlas = { h, data: () => D, ranked: rankedConcepts, saveBtn, chatEntry, savedList: () => Saved.list() };
 
   async function start() {
     const main = document.getElementById("main");
@@ -1228,6 +1448,7 @@
     document.getElementById("game-drawer").querySelector(".drawer-x").addEventListener("click", () => drawer().close());
     drawer().addEventListener("click", (e) => { if (e.target === drawer()) drawer().close(); });
     window.addEventListener("hashchange", route);
+    Saved.init();
     route();
     watchCopyBoxes();
   }
