@@ -389,5 +389,5 @@
     else location.hash = "#ask";
   }
 
-  window.AtlasAsk = { render, ask, available: hasRuntime, md };
+  window.AtlasAsk = { render, ask, available: hasRuntime, md, profile: () => profileText() };
 })();
