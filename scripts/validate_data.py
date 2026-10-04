@@ -158,6 +158,22 @@ if pit:
             if not isinstance(v, int) or not 1 <= v <= 10:
                 problems.append(f"{w}: scores.{k} must be an integer 1-10")
 
+win = load("winners.json") if (DATA / "winners.json").exists() else None
+if win:
+    keys = {f["key"] for f in (concepts or {}).get("scoring", {}).get("factors", [])}
+    checks = ["provenLoop", "openTheme", "hook", "moment", "feel", "click", "look", "timing", "comeBackAndMoney"]
+    for i, x in enumerate(win.get("winners", [])):
+        w = f"winners.json [{i}] {x.get('name', '?')}"
+        need(x, ["id", "name", "family", "hook", "oneLiner", "clipStoryboard", "provenLoop", "openTheme", "coreAction", "clickMoment", "look", "sound", "timing", "comeBack", "money", "path", "effort", "proveItFirst", "weakestLink", "checks", "scores"], w)
+        need(x.get("coreAction") or {}, ["verb", "input", "response", "feedback", "payoff"], w + " coreAction")
+        for c in checks:
+            if ((x.get("checks") or {}).get(c) or {}).get("rating") not in ("strong", "ok", "weak"):
+                problems.append(f"{w}: checks.{c}.rating must be strong|ok|weak")
+        for k in keys:
+            v = (x.get("scores") or {}).get(k)
+            if not isinstance(v, int) or not 1 <= v <= 10:
+                problems.append(f"{w}: scores.{k} must be an integer 1-10")
+
 live = DATA / "live" / "steam.json"
 if live.exists():
     try:

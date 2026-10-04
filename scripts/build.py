@@ -17,7 +17,7 @@ DIST = ROOT / "dist"
 DATA_FILES = {
     "meta": "meta.json", "market": "market.json", "games": "games.json", "niches": "niches.json",
     "playbook": "playbook.json", "insights": "insights.json", "concepts": "concepts.json", "live": "live/steam.json",
-    "gotomarket": "gotomarket.json", "verification": "verification.json", "culture": "culture.json", "ideation": "ideation.json", "genres": "genres.json", "pitches": "pitches.json",
+    "gotomarket": "gotomarket.json", "verification": "verification.json", "culture": "culture.json", "ideation": "ideation.json", "genres": "genres.json", "pitches": "pitches.json", "winners": "winners.json",
 }
 
 

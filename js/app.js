@@ -95,7 +95,7 @@
   const FILES = {
     meta: "data/meta.json", market: "data/market.json", games: "data/games.json", niches: "data/niches.json",
     playbook: "data/playbook.json", insights: "data/insights.json", concepts: "data/concepts.json", live: "data/live/steam.json",
-    gotomarket: "data/gotomarket.json", verification: "data/verification.json", culture: "data/culture.json", ideation: "data/ideation.json", genres: "data/genres.json", pitches: "data/pitches.json",
+    gotomarket: "data/gotomarket.json", verification: "data/verification.json", culture: "data/culture.json", ideation: "data/ideation.json", genres: "data/genres.json", pitches: "data/pitches.json", winners: "data/winners.json",
   };
   let D = null;
 
@@ -108,7 +108,7 @@
         if (!r.ok) throw new Error(r.status);
         out[k] = await r.json();
       } catch (e) {
-        if (!["live", "verification", "ideation", "genres", "pitches"].includes(k)) throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
+        if (!["live", "verification", "ideation", "genres", "pitches", "winners"].includes(k)) throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
         out[k] = null;
       }
     }));
@@ -160,6 +160,7 @@
   // ---------- views ----------
   const VIEWS = {
     overview: { label: "Briefing", icon: "M3 12l9-8 9 8M5 10v10h14V10", render: renderOverview },
+    winners: { label: "Winning ideas", icon: "M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0zM17 5h3v2a3 3 0 01-3 3M7 5H4v2a3 3 0 003 3", render: renderWinners },
     ask: { label: "Ask the atlas", icon: "M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12zM8 11h.01M12 11h.01M16 11h.01", render: () => window.AtlasAsk.render() },
     saved: { label: "Saved", icon: "M6 3h12v18l-6-4.5L6 21z", render: renderSaved },
     finder: { label: "Game finder", icon: "M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zM8 8h.01M16 8h.01M12 12h.01M8 16h.01M16 16h.01", render: renderFinder },
@@ -1346,7 +1347,7 @@
     if (!D) return null;
     if (item.kind === "concept") return D.concepts.concepts.find((c) => c.id === item.ref) || null;
     if (item.kind === "idea") return (D.ideation ? D.ideation.ideas.find((x) => x.id === item.ref) : null) || null;
-    if (item.kind === "pitch") return ((D.pitches && D.pitches.pitches) || []).find((x) => x.id === item.ref) || (typeof Generated !== "undefined" && Generated.get(item.ref)) || null;
+    if (item.kind === "pitch") return ((D.winners && D.winners.winners) || []).find((x) => x.id === item.ref) || ((D.pitches && D.pitches.pitches) || []).find((x) => x.id === item.ref) || (typeof Generated !== "undefined" && Generated.get(item.ref)) || null;
     return null;
   }
   // a full copy of the plan or idea as it is right now, kept with the save
@@ -1455,7 +1456,7 @@
           x && x.oneLiner ? h("p", { style: "font-size:.9rem", text: x.oneLiner }) : null,
           copyNote(item),
           noteBox(item),
-          h("div", { class: "chips saved-actions" }, x ? h("button", { type: "button", class: "btn primary", text: "Details", onclick: () => openPitch(x, String(x.id).startsWith("gen-") ? "generated" : "pitch") }) : null, removeBtn, when));
+          h("div", { class: "chips saved-actions" }, x ? h("button", { type: "button", class: "btn primary", text: x.coreAction ? "See it" : "Details", onclick: () => (x.coreAction && ((D.winners && D.winners.winners) || []).some((y) => y.id === x.id) ? openWinner(x.id) : openPitch(x, String(x.id).startsWith("gen-") ? "generated" : "pitch")) }) : null, removeBtn, when));
       }
       if (item.kind === "idea") {
         const x = item.snapshot || ideaById(item.ref);
@@ -1552,6 +1553,83 @@
     return view;
   }
 
+  // ---------- winning ideas: built to pass nine checks ----------
+  const CHECKS = [
+    ["provenLoop", "Proven loop", "A loop people have already paid for many times"],
+    ["openTheme", "Open theme", "Real demand, few or weak competitors"],
+    ["hook", "Hook", "A stranger gets it in one sentence or a 5-second clip"],
+    ["moment", "Shareable moment", "One moment people want to film or share"],
+    ["feel", "Feels great", "The core action feels great in your hands"],
+    ["click", "Clicks fast", "It clicks in the first minute, and again later"],
+    ["look", "Look & sound", "A look and sound people recognise in a thumbnail"],
+    ["timing", "Timing", "Good session rhythm, and a reason it's right now"],
+    ["comeBackAndMoney", "Return & money", "A reason to come back, and a clear way to earn"],
+  ];
+  const RATE = { strong: ["good", 2, "Strong"], ok: ["warn", 1, "OK"], weak: ["crit", 0, "Weak"] };
+  const checkPoints = (w) => CHECKS.reduce((n, [k]) => n + ((RATE[(w.checks && w.checks[k] && w.checks[k].rating) || "weak"] || RATE.weak)[1]), 0);
+  function checkStrip(w, compact) {
+    return h("div", { class: "check-strip" + (compact ? " compact" : "") }, CHECKS.map(([k, label, desc]) => {
+      const c = (w.checks || {})[k] || { rating: "weak", note: "Not assessed" };
+      const r = RATE[c.rating] || RATE.weak;
+      return compact ? h("span", { class: "check-dot " + r[0], title: label + ": " + r[2] + (c.note ? ". " + c.note : "") }, h("span", { class: "sr", text: label + " " + r[2] }))
+        : h("div", { class: "check-cell " + r[0] }, h("div", { class: "check-top" }, h("b", { text: label }), h("span", { class: "chip " + r[0], text: r[2] })), h("p", { text: c.note || desc }));
+    }));
+  }
+  function openWinner(id) { store.set("winnerOpen", id); const d = drawer(); if (d.open) d.close(); if (location.hash === "#winners") route(); else location.hash = "#winners"; }
+  function winnerCard(w, rank) {
+    const fx = w.coreAction || {};
+    const sect = (title, ...body) => h("details", { class: "w-sect" }, h("summary", {}, h("b", { text: title })), h("div", { class: "w-body" }, body));
+    const ul = (arr) => h("ul", { class: "ink-2" }, (arr || []).map((x) => h("li", { text: x })));
+    const kv = (rows) => h("dl", { class: "kv" }, rows.filter((r) => r[1]).map(([k, v]) => [h("dt", { text: k }), h("dd", { text: v })]));
+    const score = weighted(w.scores || {}, weights());
+    return h("article", { class: "card winner-card", id: "w-" + w.id },
+      h("div", { class: "card-top" },
+        h("div", {}, h("div", { class: "eyebrow", text: "#" + rank + " · " + w.family + (w.theme ? " · " + w.theme : "") }), h("h2", { class: "w-name", text: w.name })),
+        h("div", { class: "w-badges" }, h("span", { class: "chip good", text: checkPoints(w) + "/18 checks" }), h("span", { class: "chip", text: score.toFixed(1) + " / 10" }))),
+      h("p", { class: "w-hook", text: w.hook }),
+      h("p", { class: "ink-2", text: w.oneLiner }),
+      w.look && w.look.palette ? h("div", { class: "look-line" }, swatches(w.look, true), h("span", { text: w.look.short })) : null,
+      checkStrip(w),
+      w.critic ? h("div", { class: "callout" + (w.critic.verdict && /fix|risk|weak/i.test(w.critic.verdict) ? " warn" : "") }, h("b", { text: "Critic: " + (w.critic.verdict || "") }), h("p", { class: "ink-2", text: w.critic.summary || "" }),
+        w.critic.fixesApplied && w.critic.fixesApplied.length ? h("details", {}, h("summary", { text: "What the critic changed (" + w.critic.fixesApplied.length + ")", style: "cursor:pointer;color:var(--accent);font-size:.88rem" }), ul(w.critic.fixesApplied)) : null) : null,
+      h("div", { class: "grid grid-2" },
+        h("section", { class: "w-panel" }, h("div", { class: "eyebrow", text: "The 5-second clip" }),
+          h("ol", { class: "storyboard" }, (w.clipStoryboard || []).map((b) => h("li", {}, h("span", { class: "sb-beat", text: b.beat }), h("span", { text: b.shot }))))),
+        h("section", { class: "w-panel" }, h("div", { class: "eyebrow", text: "How it feels in your hands" }),
+          h("p", {}, h("b", { text: fx.verb ? fx.verb + ". " : "" }), fx.input || ""),
+          fx.response ? h("p", { class: "ink-2", style: "font-size:.9rem" }, h("b", { text: "Instantly: " }), fx.response) : null,
+          fx.payoff ? h("p", { class: "ink-2", style: "font-size:.9rem" }, h("b", { text: "Payoff: " }), fx.payoff) : null)),
+      sect("Feel spec: every feedback layer", ul(fx.feedback), fx.tuning && fx.tuning.length ? [h("h4", { text: "Knobs to tune" }), ul(fx.tuning)] : null, fx.feelsBadIf && fx.feelsBadIf.length ? [h("h4", { text: "It feels bad if" }), ul(fx.feelsBadIf)] : null),
+      sect("When it clicks", kv([["In the first minute", w.clickMoment && w.clickMoment.first], ["Later", w.clickMoment && w.clickMoment.deeper], ["The first minute", w.timing && w.timing.firstMinute]])),
+      sect("Look & sound", h("p", { class: "look-vibe", text: w.look && w.look.vibe }), w.look && w.look.signature ? h("div", { class: "money-shot" }, h("span", { class: "eyebrow", text: "Signature detail" }), w.look.signature) : null,
+        w.look && w.look.palette ? swatches(w.look) : null, kv([["References", w.look && (w.look.references || []).join(" · ")], ["Avoid", w.look && (w.look.avoid || []).join(" · ")], ["Sound", w.sound]])),
+      sect("Why it's proven and open", h("h4", { text: "Hits on the same loop" }), h("p", { class: "ink-2", text: w.provenLoop && w.provenLoop.loop }),
+        h("ul", { class: "list-plain" }, ((w.provenLoop && w.provenLoop.paidHits) || []).map((x) => h("li", {}, h("b", { text: x.name + ": " }), x.result, " ", conf(confOf(x.confidence))))),
+        kv([["Demand", w.openTheme && w.openTheme.demand], ["Competition", w.openTheme && w.openTheme.supply], ["What we searched", w.openTheme && w.openTheme.searched]])),
+      sect("Timing, return and money", kv([["Session rhythm", w.timing && w.timing.session], ["Why now", w.timing && w.timing.marketWindow], ["Come back tomorrow", w.comeBack && w.comeBack.short], ["Still playing later", w.comeBack && w.comeBack.long], ["How it earns", w.money && [w.money.model, w.money.price].filter(Boolean).join(" · ")], ["Evidence", w.money && w.money.evidence], ["Ship path", w.path], ["Effort", w.effort]])),
+      h("div", { class: "w-prove" }, h("div", { class: "eyebrow", text: "Prove it first" }), h("p", { text: w.proveItFirst })),
+      w.weakestLink ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Weakest link:"), " ", w.weakestLink) : null,
+      h("div", { class: "chips finder-actions" }, saveBtn({ id: "pitch:" + w.id, kind: "pitch", ref: w.id, title: w.name, hook: w.hook || "" }),
+        genButton({ kind: "idea", item: Object.assign({ genre: fx.verb }, w) }),
+        askBtn("Pressure-test it", `Pressure-test the winning idea "${w.name}" (${w.hook}). Its weakest link is: ${w.weakestLink}. What would you change, and what exactly should my first clip test look like?`)));
+  }
+  function renderWinners() {
+    const X = D.winners;
+    if (!X || !X.winners || !X.winners.length) return h("div", { class: "error-box", text: "Winning ideas are missing (data/winners.json)." });
+    const list = [...X.winners].sort((a, b) => checkPoints(b) - checkPoints(a) || weighted(b.scores, weights()) - weighted(a.scores, weights()));
+    const openId = store.get("winnerOpen", null);
+    store.set("winnerOpen", null);
+    if (openId) later(() => { const el = document.getElementById("w-" + openId); if (el) el.scrollIntoView({ block: "start" }); });
+    return h("div", { class: "view" },
+      viewHead("Winning ideas", X.title || "Ideas built to pass all nine checks", X.intro),
+      takeaway("winners"),
+      h("section", { class: "panel" }, h("div", { class: "panel-head" }, h("h3", { text: "The nine checks" }), h("p", { text: "Every idea here is designed and then graded against all nine. Two points for strong, one for OK." })),
+        h("div", { class: "check-legend" }, CHECKS.map(([k, l, d]) => h("div", {}, h("b", { text: l }), h("span", { class: "muted", text: " " + d })))),
+        h("p", { class: "panel-note", text: "No idea is a sure thing: the checks raise the odds, and the 'Prove it first' test tells you cheaply whether strangers agree before you build the game." })),
+      h("nav", { class: "jump-bar", "aria-label": "Winning ideas" }, list.map((w) => h("a", { href: "#winners", text: w.name, onclick: (e) => { e.preventDefault(); const el = document.getElementById("w-" + w.id); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); } }))),
+      h("div", { class: "section", style: "gap:22px" }, list.map((w, i) => winnerCard(w, i + 1))));
+  }
+
   // ---------- game finder: every suggestion in one pool ----------
   const FAMILIES = ["First-person craft & shop sims", "Top-down management & tycoon", "Other evergreen genres", "Web & link originals"];
   const PATHS = ["web-first", "browser test → Steam", "Steam-first", "Roblox"];
@@ -1609,6 +1687,7 @@
         path: f.path || "web-first", effort: f.effort || "medium", genre: (c.spec || {}).genre, camera: c.look && c.look.camera ? c.look.camera.split(/[,.;]/)[0] : "",
         price: (c.spec || {}).price, clip: c.look && c.look.clip, look: c.look, scores: intScores(c.scores), score: weighted(intScores(c.scores), w), track: c.track, origin: c.origin || "Market research", src: c });
     });
+    ((D.winners && D.winners.winners) || []).forEach((x) => out.push(Object.assign({}, x, { kind: "winner", origin: "Winning idea", genre: x.coreAction && x.coreAction.verb, clip: (x.clipStoryboard || []).map((b) => b.shot).join(" "), score: weighted(x.scores, w), src: x })));
     ((D.pitches && D.pitches.pitches) || []).forEach((p) => out.push(Object.assign({}, p, { kind: "pitch", origin: "Pitch", score: weighted(p.scores, w), src: p })));
     Generated.list().forEach((p) => out.push(Object.assign({}, p, { kind: "generated", origin: "Generated by you", score: weighted(p.scores || {}, w), src: p })));
     return out;
@@ -1620,12 +1699,14 @@
   }
   function openItem(it) {
     if (it.kind === "concept") { const d = drawer(); if (d.open) d.close(); goConcept(it.id); return; }
+    if (it.kind === "winner") { openWinner(it.id); return; }
     openPitch(it.src, it.kind);
   }
   function openPitch(p, kind) {
     const sc = D.concepts.scoring.factors.filter((f) => typeof (p.scores || {})[f.key] === "number").map((f) => f.label + " " + p.scores[f.key]).join(" · ");
     openPanel((kind === "generated" ? "Generated by you" : "Pitch") + " · " + (p.family || "") + (p.theme ? " · " + p.theme : ""), p.name, [
       ["Hook", p.hook], ["What you do", p.oneLiner], ["Core loop", (p.loop || []).join(" → ")], ["The 5-second clip", p.clip],
+      ["How it feels in your hands", p.feel], ["When it clicks", p.clickMoment], ["Why you come back", p.comeBack],
       ["Look", [p.look && p.look.short, p.look && p.look.vibe, p.look && p.look.palette ? "Palette: " + p.look.palette.map((c) => c.name + " " + c.hex).join(", ") : ""].filter(Boolean)],
       ["Genre and camera", [p.genre, p.camera].filter(Boolean).join(" · ")], ["Ship path", p.path], ["Effort", p.effort], ["Price and money", [p.price, p.money].filter(Boolean).join(". ")],
       ["Borrows from", (p.comps || []).join(", ")], ["Why it could work", p.why], ["Risk", p.risk], ["First playable to test the hook", p.firstStep],
@@ -1657,12 +1738,13 @@
     const factorKeys = D.concepts.scoring.factors.map((f) => f.key + " (" + f.label + ")").join(", ");
     return [
       "You design cozy video games for a one-person studio that builds with AI coding tools. Art, music and writing must be human-made or bought asset packs (never AI art). The creator markets on TikTok and YouTube, tests games free in the browser (itch.io / own site) and takes proven ones to Steam or web portals. Never give time estimates.",
+      "THE BAR (every pitch must pass all nine): a proven loop people already paid for many times; an open theme (real demand, few or weak competitors); a hook a stranger gets in one sentence or a 5-second clip; one moment people want to film or share; a core action that feels great in the hands (instant response, layered feedback: animation, particles, sound, camera, haptics); a click in the first minute; a recognisable look and sound; good session rhythm and a reason it's right now; a reason to come back and a clear way to earn.",
       "Write exactly 3 NEW game pitches on PROVEN loops with an under-served theme and one tactile moment that clips well. Not novelty toys, not straight clones of taken themes. Each must be clearly different from the seed and from each other (different venue, verb, audience or format) and must not reuse any existing name.",
       seed.kind === "idea" ? "SEED (make 3 ideas in the same spirit, same family" + (theme ? " and theme" : "") + "): " + JSON.stringify({ name: seed.item.name, hook: seed.item.hook, oneLiner: seed.item.oneLiner, genre: seed.item.genre, family: fam, theme }) : "SEED THEME: " + theme + " (" + (seed.detail || "") + "), family: " + fam,
       g ? "RESEARCH FOR THIS FAMILY: what wins now: " + (g.whatWinsNow || []).join(" ") + " | what fails: " + (g.whatFails || []).join(" ") + " | taken themes (don't clone): " + (g.takenThemes || []).join(", ") + (t ? " | why this theme is open: " + t.whyOpen + " | risk: " + (t.risk || "") : "") : "",
       "EXISTING NAMES (don't reuse): " + names,
       "Score every pitch honestly 1-10 on: " + factorKeys + ". Calibrate against these existing scores:\n" + calib,
-      'Reply with ONLY a JSON array of 3 objects with these keys: name, hook (max 14 words), oneLiner, genre, camera, loop (array of 3-5 steps), clip, look {short, vibe, palette: [{name, hex "#RRGGBB"} x5]}, path ("web-first" | "browser test → Steam" | "Steam-first"), effort ("small" | "medium" | "large"), price, money, comps (array of real games), why, risk, firstStep, scores {' + D.concepts.scoring.factors.map((f) => f.key).join(", ") + "} (integers).",
+      'Reply with ONLY a JSON array of 3 objects with these keys: name, hook (max 14 words), oneLiner, genre, camera, loop (array of 3-5 steps), clip, look {short, vibe, palette: [{name, hex "#RRGGBB"} x5]}, feel (2-3 sentences: the input, what responds instantly, the feedback layers and the payoff of the core action), clickMoment (when it first clicks in the first minute), comeBack (why you come back tomorrow), path ("web-first" | "browser test → Steam" | "Steam-first"), effort ("small" | "medium" | "large"), price, money, comps (array of real games), why, risk, firstStep, scores {' + D.concepts.scoring.factors.map((f) => f.key).join(", ") + "} (integers).",
     ].filter(Boolean).join("\n\n");
   }
   function normalizePitch(p, seed) {
@@ -1682,7 +1764,7 @@
       look: { short: str(p.look && p.look.short, 120), vibe: str(p.look && p.look.vibe, 500), palette: pal },
       path: PATHS.includes(p.path) ? p.path : "browser test → Steam", effort: EFFORTS.includes(p.effort) ? p.effort : "medium",
       price: str(p.price, 120), money: str(p.money, 300), comps: (Array.isArray(p.comps) ? p.comps : []).slice(0, 5).map((x) => str(x, 60)),
-      why: str(p.why, 500), risk: str(p.risk, 300), firstStep: str(p.firstStep, 400), scores,
+      why: str(p.why, 500), risk: str(p.risk, 300), firstStep: str(p.firstStep, 400), feel: str(p.feel, 600), clickMoment: str(p.clickMoment, 400), comeBack: str(p.comeBack, 400), scores,
       seed: seed.kind === "idea" ? "More like " + seed.item.name : "Theme: " + theme, createdAt: new Date().toISOString(),
     };
   }
@@ -1785,7 +1867,7 @@
     const P = { "web-first": "Web first", "browser test → Steam": "Browser test → Steam", "Steam-first": "Steam first", Roblox: "Roblox" };
     return h("article", { class: "card finder-card" + (why ? " rolled" : "") },
       h("div", { class: "card-top" },
-        h("div", {}, h("div", { class: "eyebrow", text: it.kind === "concept" ? "Full plan" + (it.origin && it.origin !== "Market research" ? " · " + it.origin : "") : it.kind === "generated" ? "Generated by you" : "Pitch" }), h("h3", { text: it.name })),
+        h("div", {}, h("div", { class: "eyebrow", text: it.kind === "concept" ? "Full plan" + (it.origin && it.origin !== "Market research" ? " · " + it.origin : "") : it.kind === "generated" ? "Generated by you" : it.kind === "winner" ? "Winning idea · " + checkPoints(it) + "/18 checks" : "Pitch" }), h("h3", { text: it.name })),
         h("span", { class: "chip good", text: it.score.toFixed(1) })),
       why ? h("div", { class: "chips" }, why.map((t) => h("span", { class: "chip accent", text: t }))) : null,
       h("p", { class: "ink-2", text: it.hook }),
@@ -1793,7 +1875,7 @@
       it.clip ? h("p", { style: "font-size:.86rem" }, h("b", { text: "The clip: " }), it.clip) : null,
       h("div", { class: "chips" }, [it.genre, P[it.path] || it.path, it.effort ? "Effort: " + it.effort : null].filter(Boolean).map((t) => h("span", { class: "chip", text: t }))),
       h("div", { class: "chips finder-actions" },
-        h("button", { type: "button", class: "btn primary", text: it.kind === "concept" ? "See the plan" : "Details", onclick: () => openItem(it) }),
+        h("button", { type: "button", class: "btn primary", text: it.kind === "concept" ? "See the plan" : it.kind === "winner" ? "See it" : "Details", onclick: () => openItem(it) }),
         saveBtn(poolEntry(it)),
         genButton({ kind: "idea", item: it }),
         it.kind === "generated" ? h("button", { type: "button", class: "btn", text: "Delete", title: "Remove this generated idea from the list", onclick: () => Generated.remove(it.id) }) : null));
@@ -1820,7 +1902,7 @@
         h("div", { class: "filters" },
           sel("f-path", "Ship path", path, [["", "Any"], ...PATHS.map((p) => [p, p])], (v) => { path = v; store.set("fPath", v); drawList(); }),
           sel("f-effort", "Effort", effort, [["", "Any"], ...EFFORTS.map((p) => [p, p])], (v) => { effort = v; store.set("fEffort", v); drawList(); }),
-          sel("f-src", "Source", src, [["", "Everything"], ["concept", "Full plans"], ["pitch", "Pitches"], ["generated", "Generated by you"]], (v) => { src = v; store.set("fSrc", v); drawList(); }),
+          sel("f-src", "Source", src, [["", "Everything"], ["winner", "Winning ideas"], ["concept", "Full plans"], ["pitch", "Pitches"], ["generated", "Generated by you"]], (v) => { src = v; store.set("fSrc", v); drawList(); }),
           sel("f-sort", "Sort by", sort, Object.entries(SORTS).map(([k, v]) => [k, v[0]]), (v) => { sort = v; store.set("fSort", v); drawList(); }),
           h("div", { class: "field" }, h("label", { for: "f-q", text: "Search" }), search),
           h("label", { class: "check" }, (() => { const c = h("input", { type: "checkbox" }); c.checked = group; c.addEventListener("change", () => { group = c.checked; store.set("fGroup", group); drawList(); }); return c; })(), " Group by theme"),
