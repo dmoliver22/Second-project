@@ -539,6 +539,20 @@
       x.conceptId && D.concepts.concepts.some((c) => c.id === x.conceptId) ? h("button", { type: "button", class: "btn", text: "See the full plan", onclick: () => { drawer().close(); goConcept(x.conceptId); } }) : null));
   }
 
+  // "GENRE: long theme (detail)" -> a short title, a genre chip and a detail line
+  function themeHead(t) {
+    if (t.detail !== undefined) return h("div", {}, h("div", { class: "card-top" }, h("h3", { text: t.theme }), t.genre ? h("span", { class: "chip", text: t.genre }) : null),
+      t.detail ? h("p", { class: "muted", style: "font-size:.84rem", text: t.detail }) : null);
+    let theme = String(t.theme || ""), genre = t.genre || "";
+    const caps = theme.match(/^([A-Z0-9 /&-]{4,}):\s*(.*)$/);
+    if (caps) { genre = genre || caps[1].charAt(0) + caps[1].slice(1).toLowerCase(); theme = caps[2]; }
+    let title = theme, detail = "";
+    const cut = theme.search(/ \(|: | - | — /);
+    if (theme.length > 60 && cut > 8) { title = theme.slice(0, cut); detail = theme.slice(cut).replace(/^[\s(:—-]+|\)$/g, ""); }
+    title = title.charAt(0).toUpperCase() + title.slice(1);
+    return h("div", {}, h("div", { class: "card-top" }, h("h3", { text: title }), genre ? h("span", { class: "chip", text: genre }) : null),
+      detail ? h("p", { class: "muted", style: "font-size:.84rem", text: detail }) : null);
+  }
   function renderGenres() {
     const P = D.genres;
     if (!P) return h("div", { class: "error-box", text: "Proven-genre research is missing (data/genres.json)." });
@@ -560,7 +574,7 @@
           h("p", { class: "ink-2", text: g.saturation.evidence })) : null,
         g.openThemes && g.openThemes.length ? section("Open themes", "Angles with real demand and few or weak games, from the research. These are where a new game has room.",
           h("div", { class: "grid grid-2" }, g.openThemes.map((t) => h("article", { class: "card" },
-            h("div", { class: "card-top" }, h("h3", { text: t.theme }), t.genre ? h("span", { class: "chip", text: t.genre }) : null),
+            themeHead(t),
             h("p", { class: "ink-2", style: "font-size:.92rem", text: t.whyOpen }),
             t.evidence && t.evidence.length ? h("details", {}, h("summary", { text: "Evidence (" + t.evidence.length + ")", style: "cursor:pointer;font-size:.85rem;color:var(--accent)" }),
               h("ul", { class: "list-plain", style: "margin-top:8px" }, t.evidence.map((e) => h("li", { style: "font-size:.85rem" }, e.fact, " ", conf(confOf(e.confidence)), " ", srcOne(e.source))))) : null,

@@ -1,0 +1,1473 @@
+{
+  "title": "Evergreen genres and the gaps inside them",
+  "intro": "Proven loops that have sold many times: first-person craft and shop simulators, top-down management games, and the other evergreen cozy genres. For each: the hits and misses, how crowded it is, which themes are taken, and which are still open. Researched on 4 Oct 2026 from GameDiscoverCo, Steam Page Analyzer, Raijin, VG Insights, Gamalytic, developer statements and press; estimates are marked as such.",
+  "genres": [
+    {
+      "genre": "First-person job / shop / restoration simulator",
+      "summary": "The genre has a strong track record. Supermarket Simulator (an estimated 1.8M to 2.6M+ Steam copies), TCG Card Shop Simulator (about 1.1M copies, 4M players) and PowerWash Simulator (17M players) all came from tiny or mid-size teams. Supply is now very high. PC Gamer described a flood of rough retail sims in 2026, with 14 in a single week of July, and most themed clones land in the 5k-120k copy range. Results run on a power law: a handful of breakouts and a long tail of games that make $50k-$500k. The 2025-2026 winners are no longer 'run another store with a scanner'. They are tactile craft or repair games with one verb that looks good on video, such as Dressmaker (sewing, 400k+ wishlists, recouped its budget in under 24h, Sept 2026) and ReStory (electronics repair, 500k+ copies in about 6 weeks, Aug 2026). They pair a distinctive art direction with a prototype that went viral on social media before the game shipped. Generic store or food sims (bakery, liquor, laundry, boba) mostly top out at 25k-120k copies even when reviews are good.",
+      "trackRecord": [
+        {
+          "name": "Dressmaker",
+          "studio": "Cozy Lives (offshoot of Free Lives, South Africa)",
+          "year": 2026,
+          "teamSize": "small (exact size not found); started as a 3-week prototype",
+          "price": "$14.99",
+          "camera": "first-person / close-up workbench",
+          "theme": "small-town dress boutique: cut patterns, sew garments, decorate",
+          "coreLoop": "Take a customer's request, pick the fabric, lay out and cut the pattern, run it through the sewing machine, add trims, then sell the dress and upgrade the boutique.",
+          "result": "Launched Sept 21 2026 with 400k+ wishlists (200k when the date was announced in July 2026). Peak of about 15,550 CCU, #9 on Steam global top sellers, 96% positive (Overwhelmingly Positive), and development costs recouped in under 24h. The itch.io prototype had 100k+ downloads.",
+          "confidence": "medium",
+          "source": "https://gurugamer.com/pc-console/a-tiny-dressmaking-game-is-suddenly-taking-over-steam-27344 ; https://www.gamedeveloper.com/press-release/highly-anticipated-dressmaker-gets-a-release-date-200k-wishlists ; https://gamesindustryafrica.com/2026/06/10/south-africas-free-lives-and-cozy-lives-turn-heads-at-wholesome-direct-with-dressmaker/",
+          "whyItWorked": "It took a craft hobby that is booming on TikTok (sewing, crochet) and made the whole process hands-on rather than menu-driven. Simple social posts went viral several times, then a free itch.io prototype proved demand (100k downloads) before full production started. The Wholesome Direct slot came on top of that.",
+          "clipMoment": "Feeding cut fabric through the sewing machine and revealing the finished dress"
+        },
+        {
+          "name": "ReStory: Chill Electronics Repairs",
+          "studio": "Mandragora (Armenia); publisher tinyBuild",
+          "year": 2026,
+          "teamSize": "small studio (exact size not found)",
+          "price": "not verified",
+          "camera": "first-person / close-up workbench",
+          "theme": "retro electronics repair shop in Tokyo (phones, game consoles)",
+          "coreLoop": "Take in a broken retro device, disassemble it, diagnose and replace parts, reassemble and return it, with a branching story between jobs.",
+          "result": "Released Aug 6 (2026 per announcement timeline). Over 100k sales on day one, more than $1M gross overnight and budget recouped in 12h. Over 300k copies after a week and over 500k after about 1.5 months. 96% positive.",
+          "confidence": "medium",
+          "source": "https://wnhub.io/news/finance/item-51771 ; https://80.lv/articles/nostalgic-repair-sim-restory-recouped-its-budget-in-12-hours/ ; https://ingamenews.com/pc-gaming/restory-chill-electronics-repairs-hits-100-000-sales-on-steam/",
+          "whyItWorked": "It combines nostalgia for retro tech with real-world repair steps and an anime cozy art style, which gives it a clear identity rather than 'X Simulator'. 100k+ wishlists before launch and a publisher behind it.",
+          "clipMoment": "Opening a dead retro console or flip phone and bringing it back to life"
+        },
+        {
+          "name": "TCG Card Shop Simulator",
+          "studio": "OPNeon Games (Malaysia)",
+          "year": 2024,
+          "teamSize": "1 (solo developer, per GameDiscoverCo)",
+          "price": "not verified (Raijin revenue/units implies about $12 average realized)",
+          "camera": "first-person",
+          "theme": "trading-card shop",
+          "coreLoop": "Stock packs and accessories, price them, open packs yourself to chase rare cards, host play tables, and expand the shop.",
+          "result": "Early Access Sept 15 2024: almost 400k copies in 10 days and a 38k CCU peak. An estimated 1.1M Steam copies and $12.9M gross (Raijin). The developer reports 1M+ copies sold. The 1.0 release on Sept 15 2026 came out on Steam, PS5, Xbox, Switch and Switch 2 at the same time, with 4M+ players and about 50k reviews at 96% positive. Knockoffs appeared on the PS Store before the official console port.",
+          "confidence": "medium",
+          "source": "https://newsletter.gamediscover.co/p/tcg-card-shop-simulator-the-second ; https://raijin.gg/app/3070070/TCG_Card_Shop_Simulator ; https://finalboss.io/tcg-card-shop-simulators-1-0-release-brings-ps5-switch-and-playable-cards ; https://pushsquare.com/news/2026/08/after-several-ps-store-knock-offs-the-real-tcg-card-shop-simulator-hits-ps5-next-month",
+          "whyItWorked": "It added a gambling-like reward reveal (pack opening) to the Supermarket Simulator template and borrowed the huge real-world TCG and Pokemon pack-opening video culture.",
+          "clipMoment": "Ripping a pack open and pulling a rare foil"
+        },
+        {
+          "name": "PowerWash Simulator 2",
+          "studio": "FuturLab (UK), self-published",
+          "year": 2025,
+          "teamSize": "10+",
+          "price": "$24.99",
+          "camera": "first-person",
+          "theme": "pressure-washing vehicles and buildings",
+          "coreLoop": "Pick a dirty scene and clear it with nozzles and soaps until it hits 100% clean, with co-op and split-screen.",
+          "result": "Launched Oct 23 2025, day one on Game Pass. 1M+ players in week one. An estimated 343.8k Steam copies and $5.2M gross (Raijin, Sept 2026), 91% of 11,777 reviews. Steam peak CCU 19,483 vs 148,013 for the first game.",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/2968420/PowerWash_Simulator_2 ; https://www.futurlab.co.uk/news/remarkably-satisfying-one-month-of-powerwash-simulator-2 ; https://www.gematsu.com/2025/08/powerwash-simulator-2-priced-at-24-99",
+          "whyItWorked": "A solid mid-size performer, but the sequel lost the novelty and Game Pass split its audience. It shows that a single satisfying verb wears off fast and that sequels to novelty sims have a lower ceiling.",
+          "clipMoment": "Grime peeling off in clean stripes (the original's viral moment)"
+        },
+        {
+          "name": "Supermarket Simulator",
+          "studio": "Nokta Games (Turkey)",
+          "year": 2024,
+          "teamSize": "4 employees",
+          "price": "not verified (revenue/units implies about $10-12 average realized)",
+          "camera": "first-person",
+          "theme": "supermarket",
+          "coreLoop": "Order stock, carry boxes, shelve and price products, scan items at checkout, hire staff, and expand the store.",
+          "result": "Early Access Feb 20 2024 started with only about 3k CCU on day one, then peaked at 38,056 CCU on Mar 4. Estimates vary: 1.8M copies and $21.8M gross (Raijin), 2.6M units and $27M gross (GameDiscoverCo), 3.55M (Steam Page Analyzer). 1.0 launched in June 2025 with 65k+ reviews already. Streaming in the first 30 days: 19.3M hours watched across 46k channels.",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/2670630/Supermarket_Simulator ; https://newsletter.gamediscover.co/p/are-derivative-games-now-the-only ; https://streamhatchet.com/?p=17566 ; https://wnhub.io/news/stores-and-publishing/item-43033",
+          "whyItWorked": "Ordinary chores (scanning, giving change, stacking shelves) are oddly satisfying and easy for streamers to talk over, and the store visibly grows. It was more polished than PlayWay's earlier job sims and grew slowly through streamers rather than through a launch spike.",
+          "clipMoment": "Checkout scanning and counting change, throwing items at shoplifters, the store turning into chaos"
+        },
+        {
+          "name": "Crime Scene Cleaner",
+          "studio": "President Studio / PlayWay (Poland)",
+          "year": 2024,
+          "teamSize": "small (not verified)",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "cleaning up mob crime scenes",
+          "coreLoop": "Scrub blood, dispose of bodies and evidence, and restore rooms to clean between story missions.",
+          "result": "355k+ Steam units and $5.4M in the first 60 days (from Aug 14 2024 launch).",
+          "confidence": "medium",
+          "source": "https://wnhub.io/news/stores-and-publishing/item-45772",
+          "whyItWorked": "A dark-comedy twist on the PowerWash cleaning verb. The odd premise makes viewers stop scrolling.",
+          "clipMoment": "Mopping blood from a gruesome scene"
+        },
+        {
+          "name": "House Flipper 2",
+          "studio": "Frozen District / PlayWay (Poland)",
+          "year": 2023,
+          "teamSize": "10+",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "cleaning, renovating and flipping houses",
+          "coreLoop": "Buy a run-down house, clean, repair and redecorate it, then sell it for profit or finish client jobs.",
+          "result": "131k copies and $4.3M in the first 3 days (Dec 2023), budget recouped in 3 days, and over 1M copies by Feb 2026.",
+          "confidence": "high",
+          "source": "https://wnhub.io/news/other/item-42728 ; https://www.weareplaystation.fr/communautes/jeux-independants/actualites-communaute/house-flipper-2-sest-vendu-a-1-million-dexemplaires ; https://newsletter.gamediscover.co/p/house-flipper-2-how-the-sequel-cleaned",
+          "whyItWorked": "Cleaning followed by decorating gives a before-and-after reveal, and it is backed by an established franchise and steady DLC.",
+          "clipMoment": "Before/after reveal of a filthy house"
+        },
+        {
+          "name": "Gas Station Simulator",
+          "studio": "DRAGO entertainment (Poland)",
+          "year": 2021,
+          "teamSize": "10+ (not verified)",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "roadside gas station (fuel, shop, car wash, repairs)",
+          "coreLoop": "Fix up a derelict station, serve fuel and shop customers, and expand into a car wash and garage.",
+          "result": "1M copies sold by Dec 2022. Over $10M Steam revenue by Mar 2024.",
+          "confidence": "high",
+          "source": "https://wnhub.io/news/stores-and-publishing/item-43329 ; https://multiplayer.it/notizie/gas-station-simulator-ha-venduto-piu-di-milione-di-copie-e-simulatore-benzinaio.html",
+          "whyItWorked": "Laid down the 'restore a run-down business' template early, with an American road-trip setting and DLC support.",
+          "clipMoment": "Customers honking and chaos at the pumps"
+        },
+        {
+          "name": "Internet Cafe Simulator 2",
+          "studio": "cheesecakedev (Turkey)",
+          "year": 2021,
+          "teamSize": "small (not verified)",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "internet cafe",
+          "coreLoop": "Set up PCs, manage customers and games, deal with crime in the neighbourhood, and expand.",
+          "result": "An estimated 277.8k Steam copies and $3.6M gross (Raijin).",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/1563180/Internet_Cafe_Simulator_2",
+          "whyItWorked": "A niche nostalgic theme with a large Turkish and Eastern European audience, plus some chaos.",
+          "clipMoment": "unknown"
+        },
+        {
+          "name": "Grocery Store Simulator",
+          "studio": "not verified",
+          "year": 2024,
+          "teamSize": "not verified",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "grocery store (direct Supermarket Simulator follower)",
+          "coreLoop": "Stock shelves, price products, run the checkout and expand.",
+          "result": "An estimated 122.8k Steam copies and $1.1M gross (Raijin).",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/2961880/Grocery_Store_Simulator",
+          "whyItWorked": "The best case for a close clone: it took about 5% of the leader's sales by riding search traffic from the hit.",
+          "clipMoment": "none notable"
+        },
+        {
+          "name": "Tavern Manager Simulator",
+          "studio": "not verified",
+          "year": 2025,
+          "teamSize": "not verified",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "medieval tavern",
+          "coreLoop": "Brew, serve and clean, then expand a fantasy tavern.",
+          "result": "An estimated 92.3k Steam copies and $830.4k gross. 92% of 4,449 reviews (Raijin).",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/2756770/Tavern_Manager_Simulator",
+          "whyItWorked": "Reskinning the shop loop with a fantasy setting gives it a distinct identity. Solid but not a breakout.",
+          "clipMoment": "unknown"
+        },
+        {
+          "name": "Bookshop Simulator",
+          "studio": "not verified",
+          "year": 2026,
+          "teamSize": "not verified",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "bookshop",
+          "coreLoop": "Stock and arrange books, serve customers and expand the shop.",
+          "result": "An estimated 50.9k Steam copies and $488.3k gross. 93% of 1,593 reviews (Raijin).",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/3467040/Bookshop_Simulator",
+          "whyItWorked": "A cozy theme on a proven loop. A decent indie income, but a typical 'themed reskin' ceiling.",
+          "clipMoment": "unknown"
+        },
+        {
+          "name": "Bakery Simulator",
+          "studio": "not verified (PlayWay-ecosystem style)",
+          "year": 2022,
+          "teamSize": "not verified",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "bakery",
+          "coreLoop": "Knead, bake and sell bread, then expand the bakery.",
+          "result": "An estimated 49.7k Steam copies and $476.8k gross. 66% of 2,407 reviews (Mixed) (Raijin).",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/1031120/Bakery_Simulator",
+          "whyItFailed": "A wishlist-friendly theme undermined by janky execution. Mixed reviews capped it even though the theme had demand.",
+          "clipMoment": "none notable"
+        },
+        {
+          "name": "Laundry Store Simulator",
+          "studio": "not verified",
+          "year": 2025,
+          "teamSize": "not verified",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "laundromat",
+          "coreLoop": "Run washers and dryers, fold, sell detergent and expand.",
+          "result": "An estimated 40.8k Steam copies and $293.4k gross. 90% of 1,885 reviews (Raijin).",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/3150440/Laundry_Store_Simulator",
+          "whyItWorked": "Well reviewed but modest. It shows that the laundromat theme is now taken at the mid tier.",
+          "clipMoment": "unknown"
+        },
+        {
+          "name": "Boba Cafe Simulator",
+          "studio": "not verified",
+          "year": 2026,
+          "teamSize": "not verified",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "bubble-tea shop (co-op)",
+          "coreLoop": "Make custom drinks to order, deal with difficult customers, and expand, with multiplayer.",
+          "result": "Launched July 24 2026. An estimated 24.6k Steam copies and $236.3k gross. 93% of 1,292 reviews, peak 7,852 CCU (Raijin).",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/3683770/Boba_Cafe_Simulator",
+          "whyItWorked": "Co-op and a trendy drink theme brought a decent launch, but it stays mid-tier.",
+          "clipMoment": "Slapping rude customers (noted by Automaton)"
+        },
+        {
+          "name": "Thrifty Business",
+          "studio": "Spellgarden Games",
+          "year": 2026,
+          "teamSize": "small (not verified)",
+          "price": "not verified",
+          "camera": "top-down / isometric (not first-person)",
+          "theme": "90s vintage thrift shop",
+          "coreLoop": "Sort donation boxes, build displays, decorate, and serve the community.",
+          "result": "About 6.9k copies (estimate) and about $89.6k. 95% of 102 reviews (VaporLens estimate).",
+          "confidence": "low",
+          "source": "https://vaporlens.app/app/3693650/thrifty_business/stats/details",
+          "whyItFailed": "The theme is popular with cozy players but it lacks a strong tactile verb that shows well on video, and it is not first-person. The demand signal is real (Reddit) but this execution was low-key.",
+          "clipMoment": "none notable"
+        },
+        {
+          "name": "Piece by Piece",
+          "studio": "Gamkat / No More Robots",
+          "year": 2026,
+          "teamSize": "small",
+          "price": "not verified",
+          "camera": "close-up workbench",
+          "theme": "woodland-animal repair shop (cozy)",
+          "coreLoop": "Repair, paint and reassemble heirlooms and toys for animal customers.",
+          "result": "About 4.8k copies (estimate) and about $57.6k. 92.6% of 68 reviews (VaporLens).",
+          "confidence": "low",
+          "source": "https://vaporlens.app/app/3179050/piece_by_piece/stats/details",
+          "whyItFailed": "A strong publisher but no viral hook. The cute, generic cozy look and slower crafting did not travel the way ReStory's specific nostalgia did. It shows that the 'repair' theme alone is not enough.",
+          "clipMoment": "none notable"
+        },
+        {
+          "name": "Exotica 2: Pet Shop Simulator",
+          "studio": "not verified",
+          "year": 2024,
+          "teamSize": "not verified",
+          "price": "not verified",
+          "camera": "first-person",
+          "theme": "exotic pet shop",
+          "coreLoop": "Care for animals, sell pets and supplies, and expand.",
+          "result": "An estimated 13.7k Steam copies and $122.8k gross. 78% of 522 reviews (Raijin).",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/2824380/Exotica_2_Pet_Shop_Simulator",
+          "whyItFailed": "The pet theme has broad appeal, but mid-quality animals and animation gave lukewarm reviews. Execution was the bottleneck, not demand.",
+          "clipMoment": "none notable"
+        }
+      ],
+      "saturation": {
+        "level": "very high",
+        "evidence": "PC Gamer (Steam Week in Review, July 2026) counted 14 retail/management sims released in a single 7-day stretch (July 21-24 2026) and called the flood 'torrential' since late 2024. It noted that most are shovelware and that many come from PlayWay's centralized idea pipeline (https://www.pcgamer.com/gaming-industry/steam-week-in-review-a-torrent-of-janky-retail-sims-continues-to-flood-steam-and-theres-no-end-in-sight/). Steam had 21,382 releases in 2025 and 13,359 by mid-July 2026. 30.8% of 2026 releases disclosed generative-AI content, and shopkeeper/management sims are at the top of that curve (https://www.shanethegamer.com/pc-mac/steams-retail-sim-flood-keeps-rising-as-2026-nears-2025s-full-year-total-already/; medium). One aggregated source attributes a median simulator gross of about $70k (5k-7k copies) to GameDiscoverCo, but the original was not verified (low confidence). The mid-tier band from Raijin estimates is consistent: themed shop sims with good reviews land at 25k-120k copies (Boba Cafe 24.6k, Laundry Store 40.8k, Bakery 49.7k, Bookshop 50.9k, Tavern Manager 92.3k, Grocery Store 122.8k), compared with 1M+ for the 3-4 originals. Even well-made cozy craft sims without a viral hook sell under 10k (Piece by Piece about 4.8k, Thrifty Business about 6.9k). Knockoffs now appear on console stores too: several fake TCG card shop games on the PS Store (https://pushsquare.com/news/2026/08/after-several-ps-store-knock-offs-the-real-tcg-card-shop-simulator-hits-ps5-next-month). GameDiscoverCo's own framing is 'are derivative games now the only way to hit it big?', though it also argues that simulators remain under-developed as a style (https://newsletter.gamediscover.co/p/are-derivative-games-now-the-only)."
+      },
+      "takenThemes": [
+        "supermarket / grocery / hypermarket / convenience store (Supermarket Simulator plus dozens of clones)",
+        "trading-card shop (TCG Card Shop Simulator, now 1.0 on all consoles)",
+        "gas station (Gas Station Simulator)",
+        "car mechanic / car restoration (Car Mechanic Simulator series, about 839k Steam copies for CMS2021)",
+        "pressure washing (PowerWash Simulator 1 and 2)",
+        "house flipping / renovation / generic cleaning (House Flipper 1 and 2, 1M+)",
+        "crime-scene cleaning (Crime Scene Cleaner)",
+        "internet cafe (Internet Cafe Simulator 1 and 2)",
+        "tavern / pub / bar / liquor store (Tavern Manager Sim, Liquor Store Sim, Pub Sim)",
+        "bakery / pizza / burger / coffee / boba cafe (many entries, mid-tier at best)",
+        "laundromat (Laundry Store Simulator)",
+        "bookshop (Bookshop Simulator, 2026)",
+        "electronics / retro console repair (ReStory, Aug 2026, about 500k; expect clones)",
+        "dressmaking / tailoring (Dressmaker, Sept 2026, plus Tailor Simulator, Feb 2026)",
+        "lawn mowing, PC building, unpacking / tidying (Unpacking, A Little to the Left at 1M)"
+      ],
+      "openThemes": [
+        {
+          "theme": "Hand-craft studio (Dressmaker-adjacent)",
+          "whyOpen": "Demand: Dressmaker shows that a tactile, real-process craft hobby can outsell AAA games for a week (#9 global top seller, 400k+ wishlists), and its 3-week itch.io prototype reached 100k downloads. Real-world crochet, knitting and sewing are trending on TikTok with Gen Z. Supply: searches for knitting, pottery or cobbler simulators returned no notable Steam titles. The nearest are tailoring games (Dressmaker, Tailor Simulator).",
+          "evidence": [
+            {
+              "fact": "Dressmaker launched with 400k+ wishlists and recouped its development cost in under 24h; peak about 15.5k CCU; #9 global top sellers",
+              "source": "https://gurugamer.com/pc-console/a-tiny-dressmaking-game-is-suddenly-taking-over-steam-27344",
+              "confidence": "medium"
+            },
+            {
+              "fact": "The Dressmaker itch.io prototype was built in 3 weeks after posts went viral and got 100k+ downloads",
+              "source": "https://gamesindustryafrica.com/2026/06/10/south-africas-free-lives-and-cozy-lives-turn-heads-at-wholesome-direct-with-dressmaker/",
+              "confidence": "medium"
+            },
+            {
+              "fact": "TikTok is driving a Gen Z revival of crochet, knitting and sewing",
+              "source": "https://spartanshield.org/44030/feature/crafting-a-new-narrative-tiktoks-impact-on-the-revival-of-traditional-hobbies/",
+              "confidence": "low"
+            },
+            {
+              "fact": "The search found no notable knitting or pottery sim on Steam (absence of evidence, not a full audit)",
+              "source": "https://www.wasdland.com/game/tailor-simulator-3484750/similar-games/?page=2",
+              "confidence": "low"
+            }
+          ],
+          "risk": "Dressmaker clones will flood in within 6-12 months. Craft steps need careful physical feel (yarn and clay are hard to simulate convincingly), and a weak version reads as a mini-game.",
+          "fullTheme": "Hand-craft studio 'Dressmaker-adjacent' sims: knitting / yarn shop, pottery and ceramics glazing, candle and soap making, jewellery bench",
+          "detail": "Knitting or yarn shop, pottery and ceramics, candle or soap making"
+        },
+        {
+          "theme": "Small-object restoration",
+          "whyOpen": "Demand: ReStory (retro electronics) sold over 500k copies in about 6 weeks and House Flipper and PowerWash prove that before-and-after reveals spread. Upcoming restoration titles such as Things Left Unsaid (antique ASMR restoration, 2027) are collecting wishlists. Supply: aside from ReStory, few strong entries. Piece by Piece sold only about 4.8k, which suggests that a specific nostalgic object category matters more than generic 'repair'.",
+          "evidence": [
+            {
+              "fact": "ReStory: 100k sales on day one, 300k+ in a week, 500k+ in about 1.5 months, budget back in 12h",
+              "source": "https://wnhub.io/news/finance/item-51771",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Piece by Piece (generic cozy repair, No More Robots) is estimated at about 4.8k copies",
+              "source": "https://vaporlens.app/app/3179050/piece_by_piece/stats/details",
+              "confidence": "low"
+            },
+            {
+              "fact": "Several cozy restoration sims announced for 2026-2027 (Things Left Unsaid, an unnamed cozy restoration game, The Repair House)",
+              "source": "https://www.pcgamesn.com/the-repair-house/new-steam-game",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "The fastest-growing pocket, so competition is arriving now. Pick a narrow object category quickly and avoid a generic repair shop.",
+          "fullTheme": "Small-object restoration with nostalgia: watch and clock repair, vintage camera repair, plush and toy hospital, bookbinding / old-book restoration, kintsugi",
+          "detail": "Watch and clock repair, vintage cameras, plush toys, bookbinding"
+        },
+        {
+          "theme": "Florist atelier",
+          "whyOpen": "Supply is thin and small: Flowers and Favours: Florist Simulator has 291 reviews (94%) and Puni the Florist about 152 reviews, with no 10k+-review hit. Demand is indirect: Dressmaker-style creative expression and an audience of cozy and decorating players. Bouquet arranging is a visual creation that photographs well, like a finished dress.",
+          "evidence": [
+            {
+              "fact": "Flowers And Favours: Florist Simulator (Aug 2025) has 94% of 291 reviews",
+              "source": "https://gamegeeker.com/games/flowers-and-favours-florist-simulator-3269600",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Puni the Florist (June 2026) has about 152 reviews, Very Positive",
+              "source": "https://isthereanydeal.com/game/flowers-and-favours-florist-simulator/info/",
+              "confidence": "low"
+            }
+          ],
+          "risk": "No breakout has proven the ceiling. Flowers are many small 3D assets with the risk of tedious placement, and the demand signal is inferred rather than measured.",
+          "fullTheme": "Florist / bouquet atelier (first-person, arranging as the core verb)",
+          "detail": "First-person bouquet arranging as the core action"
+        },
+        {
+          "theme": "Thrift and vintage resale",
+          "whyOpen": "r/CozyGamers 'game you wish existed' threads ask for thrift and record-store games. The TCG Card Shop pack-opening reveal shows that 'what is in the box' sells. The main existing title, Thrifty Business, is top-down and sold only about 6.9k, so a first-person, reveal-centric version is unclaimed.",
+          "evidence": [
+            {
+              "fact": "Reddit r/CozyGamers thread lists wished-for bookstore and record-store management games with a twist",
+              "source": "https://redlib.belloworld.it/r/CozyGamers/comments/1doi1ki/a_game_you_wish_existed",
+              "confidence": "low"
+            },
+            {
+              "fact": "Thrifty Business estimated at about 6.9k copies, 95% of 102 reviews",
+              "source": "https://vaporlens.app/app/3693650/thrifty_business/stats/details",
+              "confidence": "low"
+            },
+            {
+              "fact": "TCG Card Shop Simulator sold about 400k in 10 days on the pack-opening loop",
+              "source": "https://newsletter.gamediscover.co/p/tcg-card-shop-simulator-the-second",
+              "confidence": "high"
+            }
+          ],
+          "risk": "Thrifty Business's weak result may mean the theme itself is soft. Success depends on the item-reveal and appraisal hook, not the shop.",
+          "fullTheme": "Thrift / vintage resale with a sort-and-price 'treasure hunt' reveal",
+          "detail": "Sort, price and reveal finds: a treasure-hunt loop"
+        },
+        {
+          "theme": "Record store",
+          "whyOpen": "Demand: Reddit wish lists, and nostalgia themes are working (ReStory). Supply: no notable record-store sim found in searches. It reuses the pack-opening dopamine of digging for rare pressings.",
+          "evidence": [
+            {
+              "fact": "A record-store management game is explicitly requested on r/CozyGamers",
+              "source": "https://redlib.belloworld.it/r/CozyGamers/comments/1doi1ki/a_game_you_wish_existed",
+              "confidence": "low"
+            },
+            {
+              "fact": "Nostalgic retro-object sim ReStory reached 500k+ copies",
+              "source": "https://wnhub.io/news/finance/item-51771",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "Music licensing is impossible for a solo developer, so the music must be original or royalty-free. Demand evidence is anecdotal.",
+          "fullTheme": "Record store / vinyl shop (crate digging, cleaning and grading records, listening booth)",
+          "detail": "Crate digging, cleaning and grading vinyl, a listening booth"
+        },
+        {
+          "theme": "Pet grooming salon",
+          "whyOpen": "Supply on Steam PC is weak. Exotica 2: Pet Shop Simulator sold about 13.7k at 78%, and Pets & Stuff is VR-only with 10 reviews. Grooming is a PowerWash-style reveal (matted to fluffy) with cute animals, two strong video hooks. Mobile hair and barber ASMR games show the verb appeals (Hair Tattoo: Barber Shop has 4.3k App Store ratings).",
+          "evidence": [
+            {
+              "fact": "Exotica 2: Pet Shop Simulator: about 13.7k copies, $122.8k, 78% of 522 reviews",
+              "source": "https://raijin.gg/app/2824380/Exotica_2_Pet_Shop_Simulator",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Pets & Stuff (VR groomer/vet sim, May 2025) has 10 Steam reviews",
+              "source": "https://gg.deals/game/pets-stuff/",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Mobile 'Hair Tattoo: Barber Shop Game' has 4.3k ratings at 4.1 on iOS",
+              "source": "https://apps.apple.com/us/app/-/id1621682855",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "Fur, cutting and animal animation are the hardest technical art problems on this list, and there is no AI art, so asset quality decides it.",
+          "fullTheme": "Pet grooming salon (first-person wash, brush, clip)",
+          "detail": "First-person wash, brush and clip"
+        },
+        {
+          "theme": "Barber or hair salon",
+          "whyOpen": "Haircut and ASMR games are mobile staples, but Steam PC has only small entries (The Barber Shop, 2025, a minor management title). Before-and-after transformations are native to TikTok.",
+          "evidence": [
+            {
+              "fact": "The Barber Shop (2025, PC) is a small management sim; no notable first-person barber hit was found on Steam",
+              "source": "https://playpile.gg/games/the-barber-shop",
+              "confidence": "low"
+            }
+          ],
+          "risk": "Hair simulation is technically hard, and mobile clones lower perceived value.",
+          "fullTheme": "Barber / hair salon in first-person on PC",
+          "detail": "First-person, on PC"
+        },
+        {
+          "theme": "Bookbinding or a story bookshop",
+          "whyOpen": "Bookshop Simulator proved paying demand (about 50.9k copies, 93%) with a plain execution. Reddit asks for a bookstore where you can enter the books. That is room for a differentiated, narrative or crafting take.",
+          "evidence": [
+            {
+              "fact": "Bookshop Simulator: about 50.9k copies, $488.3k, 93% of 1,593 reviews",
+              "source": "https://raijin.gg/app/3467040/Bookshop_Simulator",
+              "confidence": "medium"
+            },
+            {
+              "fact": "r/CozyGamers wish for a bookstore game where you explore the books' worlds at night",
+              "source": "https://redlib.belloworld.it/r/CozyGamers/comments/1doi1ki/a_game_you_wish_existed",
+              "confidence": "low"
+            }
+          ],
+          "risk": "The plain bookshop is now taken, so the twist has to carry the game, which adds scope.",
+          "fullTheme": "Bookbinding / bookshop with a magical or narrative layer (beyond Bookshop Simulator's plain reskin)",
+          "detail": "A magical or narrative layer beyond a plain bookshop sim"
+        }
+      ],
+      "whatWinsNow": [
+        "One tactile, real-world process verb that is satisfying with no context in a 15-second clip, such as pack ripping (TCG), feeding fabric through a sewing machine (Dressmaker), reviving a dead console (ReStory) or grime stripping off (PowerWash).",
+        "A visible before-and-after or reveal: a broken item restored, a dirty scene cleaned, a rare card pulled, a finished garment. Reveals are what spread on TikTok and Shorts.",
+        "A specific, nostalgic or hobby-culture theme with an existing real-world fandom (TCG collecting, retro tech, sewing) rather than a generic 'X store'.",
+        "Validate before full production: Dressmaker went viral on social posts, shipped a 3-week itch.io prototype (100k downloads), then reached 200k to 400k+ wishlists. ReStory had 100k+ wishlists before launch.",
+        "Streamer-friendly emergent chaos and commentary space: Supermarket Simulator grew slowly to 38k CCU on 19.3M hours watched across 46k channels, with a weak launch.",
+        "Price in the $15-25 range with Early Access plus frequent updates, then 1.0 on consoles. TCG went from EA in Sept 2024 to 1.0 on all platforms in Sept 2026 and 4M players.",
+        "Visible business growth: the store expands, new rooms and machines arrive, and the space can be customised.",
+        "Polish and a distinctive art direction (anime cozy for ReStory, a warm boutique for Dressmaker) to stand apart from asset-flip shovelware."
+      ],
+      "whatFails": [
+        "Close reskins of the leader: Grocery Store Sim got about 5% of Supermarket Sim's sales, and most clones in the July 2026 flood drew minimal players.",
+        "Janky execution on a good theme: Bakery Simulator's 66% Mixed reviews capped it at about 50k copies.",
+        "Cozy without a hook: Piece by Piece (about 4.8k) and Thrifty Business (about 6.9k) had good reviews but no clip-able moment and no pre-launch virality.",
+        "AI-generated or asset-flip visuals in a crowded tag. Players and press now explicitly call out janky, AI-assisted retail shovelware.",
+        "Sequels and novelty decay: PowerWash Simulator 2's Steam peak was about 13% of the original's (19.5k vs 148k).",
+        "Weak animation of animals or people in a theme that depends on them (Exotica 2 at 78%)."
+      ],
+      "soloAiFeasibility": "Feasible, and the genre's history supports it: TCG Card Shop Simulator was solo, Supermarket Simulator came from a 4-person team, and Dressmaker began as a 3-week prototype. Code is the cheap part, since shop loops, inventory, customers, economy, saving and UI suit AI coding tools. The hard parts are (1) 3D art volume: dozens to hundreds of props, plus store furniture and upgrades; (2) the one hero interaction, which needs bespoke tuning of physics, shaders, sound and haptics, because that clip is the whole marketing; (3) customer NPC animation. Asset-pack-friendly approaches: stylised low-poly kits (Synty-style shop and interior packs, Kenney, Quaternius), the Unity Asset Store or Fab for furniture, Mixamo for customer animations, and a restricted object set so one hand-made hero object per job can carry the visuals. Lean toward themes where the 'customer' can be a note, phone order or drop-off box to avoid NPC animation, and where items are small and on a workbench (a repair, craft or florist bench). A bench-scale game has far less 3D scope than a walk-around store, and the camera stays on the satisfying close-up.",
+      "webFeasibility": "A cut-down vertical slice (one bench, one craft or repair loop, 3-5 jobs) is realistic in Three.js, Babylon.js or a Godot 4 web export on desktop browsers, and on phones with tap controls if the scene is bench-scale. Problems in the browser: large asset downloads (aim for under 30-50MB and use compressed glTF/KTX2), Godot 4 web needs SharedArrayBuffer/COOP headers and is weak on iOS Safari, cloth/soft-body physics and big stores tank mobile framerates, pointer lock doesn't work for first-person walking on mobile, and saving is fragile. Dressmaker shows that an itch.io prototype can be a strong validation step (100k downloads fed 400k+ wishlists), so a free browser or itch demo linked from TikTok is sensible for testing the hook. It must carry a prominent 'Wishlist on Steam' link, though, because wishlists and a Steam demo timed for Next Fest are what drive launch visibility. Treat the browser build as a marketing and validation tool, not the product.",
+      "monetization": "Premium on Steam is the norm. Implied average realized prices are about $10-12 for Supermarket Sim (Raijin $21.8M / 1.8M) and about $11.7 for TCG ($12.9M / 1.1M). List prices are $14.99 for Dressmaker and $24.99 for PowerWash Simulator 2. Early Access is standard, with TCG spending 2 years in EA before a simultaneous 1.0 on PS5, Xbox, Switch and Switch 2. DLC extends the tail: House Flipper 2 announced a Sakura DLC at 1M sales, and Gas Station Simulator has a Tidal Wave DLC. Game Pass deals exist for larger studios (PowerWash 2 was day one). Console ports are a second wave, and knockoffs race to fill console stores first. The original Supermarket Simulator had no official mobile version; mobile copycats fill that space with ads. Revenue tiers: breakout $5M-$27M+, solid mid-tier $0.25M-$1.1M (Tavern Manager, Grocery Store, Bookshop, Boba), and the long tail under $100k.",
+      "marketing": "Streamers and video drive the genre. Supermarket Simulator launched quietly at about 3k CCU, then streaming took it to a 38k CCU peak in 2 weeks, with 19.3M hours watched across 46k channels in 30 days (Stream Hatchet). TCG Card Shop Simulator rode pack-opening culture to about 400k copies in 10 days. Dressmaker went viral several times on social posts, released an itch.io prototype (100k downloads), got a Wholesome Direct slot (June 2026), and had 200k wishlists at the date reveal in July and 400k+ at launch. That converted to #9 top seller and budget recouped within a day. ReStory had 100k+ wishlists and a publisher (tinyBuild), then sold 100k on day one. The pattern: a viral short-form clip of the core verb, then a free prototype or demo, then a showcase or Next Fest, then a 200k+ wishlist launch. Clones that skip this step and rely on Steam tag traffic land in the 5k-50k range.",
+      "sources": [
+        "https://raijin.gg/app/2670630/Supermarket_Simulator",
+        "https://www.steampageanalyzer.com/games/2670630",
+        "https://wnhub.io/news/stores-and-publishing/item-43033",
+        "https://newsletter.gamediscover.co/p/are-derivative-games-now-the-only",
+        "https://streamhatchet.com/?p=17566",
+        "https://www.notebookcheck.net/65-000-reviews-even-before-official-launch-New-management-sim-hits-Steam-with-a-25-launch-discount-and-future-multiplayer-plans.1040173.0.html",
+        "https://raijin.gg/app/3070070/TCG_Card_Shop_Simulator",
+        "https://newsletter.gamediscover.co/p/tcg-card-shop-simulator-the-second",
+        "https://finalboss.io/tcg-card-shop-simulators-1-0-release-brings-ps5-switch-and-playable-cards",
+        "https://pushsquare.com/news/2026/08/after-several-ps-store-knock-offs-the-real-tcg-card-shop-simulator-hits-ps5-next-month",
+        "https://raijin.gg/app/2968420/PowerWash_Simulator_2",
+        "https://www.futurlab.co.uk/news/remarkably-satisfying-one-month-of-powerwash-simulator-2",
+        "https://www.gematsu.com/2025/08/powerwash-simulator-2-priced-at-24-99",
+        "https://wnhub.io/news/other/item-42728",
+        "https://www.weareplaystation.fr/communautes/jeux-independants/actualites-communaute/house-flipper-2-sest-vendu-a-1-million-dexemplaires",
+        "https://newsletter.gamediscover.co/p/house-flipper-2-how-the-sequel-cleaned",
+        "https://wnhub.io/news/stores-and-publishing/item-43329",
+        "https://multiplayer.it/notizie/gas-station-simulator-ha-venduto-piu-di-milione-di-copie-e-simulatore-benzinaio.html",
+        "https://raijin.gg/app/1190000/Car_Mechanic_Simulator_2021",
+        "https://gurugamer.com/pc-console/a-tiny-dressmaking-game-is-suddenly-taking-over-steam-27344",
+        "https://www.gamedeveloper.com/press-release/highly-anticipated-dressmaker-gets-a-release-date-200k-wishlists",
+        "https://gamesindustryafrica.com/2026/06/10/south-africas-free-lives-and-cozy-lives-turn-heads-at-wholesome-direct-with-dressmaker/",
+        "https://www.pcgamer.com/gaming-industry/steam-week-in-review-a-torrent-of-janky-retail-sims-continues-to-flood-steam-and-theres-no-end-in-sight/",
+        "https://www.shanethegamer.com/pc-mac/steams-retail-sim-flood-keeps-rising-as-2026-nears-2025s-full-year-total-already/",
+        "https://raijin.gg/app/2756770/Tavern_Manager_Simulator",
+        "https://raijin.gg/app/1031120/Bakery_Simulator",
+        "https://www.dekudeals.com/items/liquor-store-simulator",
+        "https://raijin.gg/app/3467040/Bookshop_Simulator",
+        "https://raijin.gg/app/3150440/Laundry_Store_Simulator",
+        "https://raijin.gg/app/3432750/Laundering_Simulator__Clean_Cash_and_Laundry",
+        "https://raijin.gg/app/1563180/Internet_Cafe_Simulator_2",
+        "https://raijin.gg/app/2961880/Grocery_Store_Simulator",
+        "https://raijin.gg/app/3683770/Boba_Cafe_Simulator",
+        "https://raijin.gg/app/1480560/Lawn_Mowing_Simulator",
+        "https://wnhub.io/news/stores-and-publishing/item-45772",
+        "https://wnhub.io/news/finance/item-51771",
+        "https://80.lv/articles/nostalgic-repair-sim-restory-recouped-its-budget-in-12-hours/",
+        "https://ingamenews.com/pc-gaming/restory-chill-electronics-repairs-hits-100-000-sales-on-steam/",
+        "https://www.pcgamesn.com/the-repair-house/new-steam-game",
+        "https://vaporlens.app/app/3179050/piece_by_piece/stats/details",
+        "https://vaporlens.app/app/3693650/thrifty_business/stats/details",
+        "https://www.gematsu.com/2025/12/cozy-thrift-shop-management-simulation-game-thrifty-business-announced-for-pc",
+        "https://redlib.belloworld.it/r/CozyGamers/comments/1doi1ki/a_game_you_wish_existed",
+        "https://gamegeeker.com/games/flowers-and-favours-florist-simulator-3269600",
+        "https://isthereanydeal.com/game/flowers-and-favours-florist-simulator/info/",
+        "https://raijin.gg/app/2824380/Exotica_2_Pet_Shop_Simulator",
+        "https://gg.deals/game/pets-stuff/",
+        "https://apps.apple.com/us/app/-/id1621682855",
+        "https://playpile.gg/games/the-barber-shop",
+        "https://www.wasdland.com/game/tailor-simulator-3484750/",
+        "https://spartanshield.org/44030/feature/crafting-a-new-narrative-tiktoks-impact-on-the-revival-of-traditional-hobbies/",
+        "https://www.gonintendo.com/contents/28825-a-little-to-the-left-breaks-1-million-units-sold",
+        "https://www.gfinityesports.com/article/unpacking-sold-100000-copies-after-10-days"
+      ],
+      "label": "First-person craft & shop sims"
+    },
+    {
+      "genre": "Top-down / isometric / side-view cozy management & tycoon (shops, cafes, inns, bathhouses, zoos/museums, idle tycoons on mobile and web)",
+      "summary": "This is one of the most proven genres there is, on every platform: mobile idle tycoons reach tens to hundreds of millions of downloads (Good Pizza Great Pizza 300M+, Idle Miner Tycoon 150M+, Eatventure 69.3M), web portal hits reach hundreds of millions of plays (Monkey Mart about 300M on Poki), and premium cozy shop games regularly sell 150k-500k+ (Tiny Bookshop 500k+ in 2025, Maltese's Fluffy Onsen about 188k, Bear and Breakfast 157k-357k). Supply is growing fast. Steam Cozy-tag releases went from 632 in all of 2025 to 1,041 by late September 2026 (+143% year over year), and 2,730 more pages are still unreleased. Cozy games still succeed at 2.6x the Steam average (11% reach 1,000 reviews, against 4.2%). The games winning now pair a specific, charming venue that hasn't been done before (bookshop on wheels, animal onsen) with one simple, readable loop. On mobile and web, the format that wins is the walk-around station-stocking idle tycoon (Monkey Mart, Eatventure, My Perfect Hotel). Generic restaurants, cafes, supermarkets, hotels and inns are saturated. The remaining gaps are specific, unusual venues and cozy art on top of proven web/mobile idle loops.",
+      "trackRecord": [
+        {
+          "name": "Tiny Bookshop",
+          "studio": "neoludic games (pub. Skystone Games / 2P Games)",
+          "year": 2025,
+          "teamSize": "2-5 (estimate, not verified)",
+          "price": "~$20 (not verified)",
+          "camera": "top-down / side vignette, hand-drawn",
+          "theme": "mobile seaside bookshop in a trailer",
+          "coreLoop": "Stock books, park in a new spot, read customers and hand-recommend books, decorate and upgrade the trailer.",
+          "result": "500,000+ copies sold (Switch + Steam, Aug 2025 launch), physical release, PS5 Apr 2026; swept German Developer Award 2025",
+          "confidence": "high",
+          "source": "https://gonintendo.com/contents/55621-tiny-bookshop-getting-physical-switch-release-game-hits-500k-sold",
+          "whyItWorked": "Recommending a book to a customer is a personal, wholesome action that hadn't been done in a game before. The bookshop theme itself (BookTok, cottagecore) markets the game, and the hand-painted art reads instantly in a thumbnail.",
+          "clipMoment": "Matching a customer to the right book; decorating the little trailer in a new seaside spot"
+        },
+        {
+          "name": "Maltese's Fluffy Onsen",
+          "studio": "Sinkhole Studio / Moonlab Studio",
+          "year": 2025,
+          "teamSize": "2-5 (estimate)",
+          "price": "~$4-5 (implied by revenue/units; not verified)",
+          "camera": "side-view, idle strip",
+          "theme": "hot-spring bathhouse for fluffy animals",
+          "coreLoop": "Place baths of different temperatures and add-ons, satisfy each animal's preferences, collect coins idly in the background.",
+          "result": "~188k units / ~$814k revenue (VGI estimate); 2,875 Steam reviews, 95% positive; spun off 'Summer Fever' follow-up",
+          "confidence": "medium",
+          "source": "https://www.steampulse.org/game/3404470",
+          "whyItWorked": "A cheap, idle 'play while you work' format paired with a bathhouse theme few games use and cute animal guests. The low price drives volume.",
+          "clipMoment": "Fluffy dogs/animals soaking in steaming tubs"
+        },
+        {
+          "name": "Two Point Museum",
+          "studio": "Two Point Studios (SEGA)",
+          "year": 2025,
+          "teamSize": "10+",
+          "price": "$34.99-$39.99 (not verified)",
+          "camera": "isometric 3D",
+          "theme": "museum tycoon (expeditions, exhibits)",
+          "coreLoop": "Send expeditions for exhibits, arrange displays, manage guests, staff and buzz.",
+          "result": "Estimates: 229.4k Steam copies / $4.1M (one tracker) up to 665k units / $14.9M (VGI), all platforms; Switch 2 port Oct 2025",
+          "confidence": "low",
+          "source": "https://steampulse.org/game/2185060",
+          "whyItWorked": "A trusted brand plus a theme no one had done (museum). Shows that big studios do take new tycoon themes, but at a high production cost.",
+          "clipMoment": "Absurd exhibits (ghosts, aliens) and visitor gags"
+        },
+        {
+          "name": "Chef RPG",
+          "studio": "World 2 Studio",
+          "year": 2024,
+          "teamSize": "2-5 (estimate)",
+          "price": "~$20 (implied; not verified)",
+          "camera": "top-down pixel art",
+          "theme": "restaurant + life-sim/RPG hybrid",
+          "coreLoop": "Forage/fight for ingredients, cook mini-games, run your restaurant, befriend townsfolk.",
+          "result": "Early Access Sep 2024; 2,472 reviews, 88% positive; ~165k est. copies / ~$3.3M est. revenue; full release planned 2026",
+          "confidence": "medium",
+          "source": "https://vaporlens.app/app/1796790/chef_rpg/stats/details",
+          "whyItWorked": "Stardew-style life sim plus a restaurant management loop. The cooking mini-games are well liked, but reviews call it buggy with shallow characters.",
+          "clipMoment": "Cooking mini-games and service rush"
+        },
+        {
+          "name": "Rusty's Retirement",
+          "studio": "Mister Morris Games (solo)",
+          "year": 2024,
+          "teamSize": "1",
+          "price": "under $10 (exact not verified)",
+          "camera": "side-view strip at bottom of desktop",
+          "theme": "idle robot farm",
+          "coreLoop": "Plant crops, robots harvest automatically, upgrade, all while the game sits on your desktop beneath your work.",
+          "result": "100k sales in first 5 days; 500k+ copies on Steam",
+          "confidence": "high",
+          "source": "https://en.wikipedia.org/wiki/Rusty%27s_Retirement",
+          "whyItWorked": "Created a new format (the desktop-strip idle game) that fits how people actually use their PC, and streamers left it running on screen.",
+          "clipMoment": "A tiny farm running along the bottom of someone's work screen"
+        },
+        {
+          "name": "TCG Card Shop Simulator (adjacent: first-person)",
+          "studio": "OPNeon Games (solo, Malaysia)",
+          "year": 2024,
+          "teamSize": "1",
+          "price": "~$15 (not verified)",
+          "camera": "first-person",
+          "theme": "trading card shop",
+          "coreLoop": "Stock shelves, open packs, price cards, run tournaments.",
+          "result": "~400k copies in 10 days; 3.5M+ units across Steam/Xbox/PC by later reports",
+          "confidence": "medium",
+          "source": "https://newsletter.gamediscover.co/p/tcg-card-shop-simulator-the-second",
+          "whyItWorked": "A solo dev took a niche everyone already loved (card collecting) and gave it a pack-opening gambling moment that spread with influencers. Proves solo devs can win with a theme-specific shop.",
+          "clipMoment": "Opening packs and pulling a rare foil"
+        },
+        {
+          "name": "Kebab Chefs! - Restaurant Simulator (adjacent: first-person co-op)",
+          "studio": "Biotech Gameworks",
+          "year": 2023,
+          "teamSize": "2-5 (estimate)",
+          "price": "~$15 (implied ~$14/copy; not verified)",
+          "camera": "first-person",
+          "theme": "kebab restaurant",
+          "coreLoop": "Prep meat and sides, assemble kebabs to order, serve, expand restaurant, with co-op friends.",
+          "result": "242.8k copies / $3.5M revenue; #2 'X Simulator' title behind Supermarket Simulator at time of report",
+          "confidence": "medium",
+          "source": "https://wnhub.io/news/stores-and-publishing/item-44009",
+          "whyItWorked": "A specific national food (not just 'restaurant') plus co-op chaos for streamers.",
+          "clipMoment": "Co-op friends botching kebab orders"
+        },
+        {
+          "name": "Bear and Breakfast",
+          "studio": "Gummy Cat",
+          "year": 2022,
+          "teamSize": "2-5 (estimate)",
+          "price": "~$20 (not verified)",
+          "camera": "isometric 2D",
+          "theme": "forest B&B run by a bear",
+          "coreLoop": "Clear land, build and decorate cabins, attract tourist guests, explore story.",
+          "result": "5,238 Steam reviews, 90% positive; estimates range 157k units / $2.3M (VGI) to 357k / $7.1M (VaporLens)",
+          "confidence": "medium",
+          "source": "https://www.steampulse.org/game/1136370",
+          "whyItWorked": "Cute animal lead plus a hospitality theme that was new at the time; a strong pitch made in one sentence.",
+          "clipMoment": "Bear building and decorating cabins for humans"
+        },
+        {
+          "name": "Monkey Mart",
+          "studio": "TinyDobbins",
+          "year": 2022,
+          "teamSize": "1-5 (estimate)",
+          "price": "Free (web, ads)",
+          "camera": "top-down 3D low-poly",
+          "theme": "supermarket run by a monkey",
+          "coreLoop": "Grow/harvest goods, carry them to stations, stock shelves, take cash, hire helpers, unlock new stations.",
+          "result": "~300M plays on Poki (reported); 4.6 rating from 3.79M votes on Poki; dev cost reportedly <$10k, 1-3 months",
+          "confidence": "medium",
+          "source": "https://app.cinevva.com/guides/publish-game-poki",
+          "whyItWorked": "Brought the mobile 'carry stacks between stations' idle-arcade loop to the browser with a cute mascot; zero install, plays instantly on school/phone browsers.",
+          "clipMoment": "Monkey carrying a towering stack of bananas"
+        },
+        {
+          "name": "Eatventure",
+          "studio": "Lessmore (acq. by Miniclip end of 2024)",
+          "year": 2022,
+          "teamSize": "small (exact not found)",
+          "price": "F2P (IAP + ads)",
+          "camera": "top-down 3D",
+          "theme": "restaurant chain idle",
+          "coreLoop": "Tap-upgrade cooking stations and staff, unlock new restaurants/cities.",
+          "result": "69.3M downloads, ~$28M IAP lifetime (AppMagic) as of acquisition report",
+          "confidence": "medium",
+          "source": "https://mobilegamer.biz/miniclip-has-acquired-lessmore-maker-of-eatventure-and-we-are-warriors/",
+          "whyItWorked": "Restaurant idle with a clear sense of progress across many venues; heavy UA with ad-based monetization.",
+          "clipMoment": "Restaurant filling up with staff after upgrades (UA ads)"
+        },
+        {
+          "name": "My Perfect Hotel",
+          "studio": "SayGames",
+          "year": 2022,
+          "teamSize": "10+ (publisher)",
+          "price": "F2P (IAP + ads)",
+          "camera": "top-down 3D",
+          "theme": "hotel idle-arcade",
+          "coreLoop": "Walk around cleaning rooms, collecting cash, unlocking rooms/amenities, hiring staff.",
+          "result": "US iOS weekly revenue ~$69K-$178K across 2023-2024 quarters; US iOS weekly downloads 62K-230K (Sensor Tower)",
+          "confidence": "medium",
+          "source": "https://sensortower.com/blog/2024-q3-ios-top-5-idler%20games-units-us-602ae7fb241bc16eb874f8e1",
+          "whyItWorked": "The same station-walking loop as Monkey Mart, themed as a hotel; hypercasual-scale UA.",
+          "clipMoment": "Character running between rooms with stacks of towels"
+        },
+        {
+          "name": "Let's Build a Zoo",
+          "studio": "Springloaded (pub. No More Robots)",
+          "year": 2021,
+          "teamSize": "2-5 (estimate)",
+          "price": "~$20 (not verified)",
+          "camera": "top-down pixel art",
+          "theme": "zoo with animal splicing",
+          "coreLoop": "Build enclosures, breed/splice animals, manage visitors, moral choices.",
+          "result": "32k units / ~$500k first week PC (recouped dev costs); $1M first week on consoles; $3M total by Oct 2022; 250k+ Game Pass players",
+          "confidence": "high",
+          "source": "https://gameworldobserver.com/2022/10/07/lets-build-a-zoo-revenue-1-million-console-first-week",
+          "whyItWorked": "A small pixel-art zoo with a weird hook (combining animals into new species) that looked different from Planet Zoo.",
+          "clipMoment": "Spliced hybrid animals"
+        },
+        {
+          "name": "Potion Craft: Alchemist Simulator",
+          "studio": "niceplay games (pub. tinyBuild)",
+          "year": 2021,
+          "teamSize": "5-10 (estimate)",
+          "price": "~$20 (not verified)",
+          "camera": "side-view, illustrated manuscript",
+          "theme": "potion shop",
+          "coreLoop": "Grind ingredients by hand, steer the potion on a map, sell to customers, haggle.",
+          "result": "100k copies in first 3 days of Early Access; #1 Steam global top seller 3 days",
+          "confidence": "high",
+          "source": "https://nichegamer.com/potion-craft-sold-over-100k-copies-in-its-first-three-days/",
+          "whyItWorked": "Tactile physical crafting (mortar and pestle, stirring) in a distinctive medieval-manuscript art style.",
+          "clipMoment": "Grinding ingredients with the pestle"
+        },
+        {
+          "name": "Coffee Talk",
+          "studio": "Toge Productions",
+          "year": 2020,
+          "teamSize": "2-5 (estimate)",
+          "price": "~$13 (not verified)",
+          "camera": "side-view pixel art",
+          "theme": "night coffee shop for fantasy patrons (narrative)",
+          "coreLoop": "Brew drinks to order, listen to and influence customers' stories.",
+          "result": "~369k units / $3.3M all platforms (VGI); ~172.7k Steam copies / $1.3M (other tracker)",
+          "confidence": "medium",
+          "source": "https://en.wikipedia.org/wiki/Coffee_Talk_(video_game)",
+          "whyItWorked": "Lo-fi mood plus drink-making plus character stories. More a visual novel than a tycoon, and spawned the 'serve and listen' sub-genre.",
+          "clipMoment": "Latte art and a customer's emotional story"
+        },
+        {
+          "name": "Good Pizza, Great Pizza",
+          "studio": "TapBlaze",
+          "year": 2014,
+          "teamSize": "~12",
+          "price": "F2P (60% ads / 40% IAP); also paid on Steam",
+          "camera": "side-view counter",
+          "theme": "pizza shop",
+          "coreLoop": "Read a quirky customer's order, assemble the pizza by hand, get paid, buy toppings and upgrades.",
+          "result": "300M+ downloads; 1M+ daily players; profitable without VC",
+          "confidence": "high",
+          "source": "https://gamesbeat.com/how-to-culturalize-a-hit-mobile-game-good-pizza-great-pizza-interview/",
+          "whyItWorked": "One tactile, readable action (topping a pizza) plus funny customer requests. A single-screen format that runs on any phone.",
+          "clipMoment": "Weird customer orders and the reaction to a sloppy pizza"
+        }
+      ],
+      "saturation": {
+        "level": "high",
+        "evidence": "Steam: 632 Cozy-tagged games released in 2025; 1,041 by Sep 27 2026 (+143% vs same weeks of 2025, while all of Steam grew 45%); 2,730 more Cozy pages announced but unreleased, 333 dated within 90 days (high confidence, https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report). Odds are still good. 11% of cozy games released Jan 2024-Jun 2025 reached 1,000 reviews (~$150k gross), against 4.2% for all of Steam. Cozy farming succeeded at 27.8% and cozy puzzle at 5.9%. Price matters: under $5 hit 1,000 reviews only 2.7% of the time, $20+ hit it 45.2% (same source; medium confidence because price is confounded with production budget). All of Steam: 19,000+ releases in 2025 (~55/day) (https://howtomarketagame.com/2026/01/08/how-many-games-were-released-in-2025/). Saturation by sub-theme, from the searches (qualitative, medium confidence): restaurant/cafe/food is very high (GPGP, Cook Serve Delicious, Chef RPG, Kebab Chefs, Coffee Talk-likes, Eatventure and hundreds of mobile clones). Supermarket/shop simulators are very high since the 2024 boom (Supermarket Simulator 2.6M units, TCG Card Shop 3.5M+). Tavern/inn/hotel is high (Travellers Rest, Bear and Breakfast, My Perfect Hotel and clones). Zoo/theme park/hospital/museum is high at the big-budget end (Planet Zoo 5.4M copies / $144M, Two Point series) but medium for small cozy ones. Bathhouse/onsen is medium-low (Maltese's Fluffy Onsen, Onsen Master, Bathhouse Creatures, Animal Spa are the visible ones). Aquarium is low (Megaquarium 2018 is the reference game: 3,410 reviews, 95%). Web portals: Poki has 1,500+ curated titles from 600+ devs, 100M monthly players, and 1B gameplays in a month in 2025 (https://app.cinevva.com/guides/publish-game-poki). The Monkey Mart-style idle-arcade loop is well established there and on mobile."
+      },
+      "takenThemes": [
+        "Pizza shop / burger / generic restaurant (Good Pizza Great Pizza, Cook Serve Delicious, Eatventure, endless mobile clones)",
+        "Coffee shop / cafe with narrative customers (Coffee Talk series and many look-alikes)",
+        "Supermarket / convenience store (Supermarket Simulator, Monkey Mart)",
+        "Trading card shop (TCG Card Shop Simulator)",
+        "Kebab / specific-cuisine co-op restaurant sims in first person (Kebab Chefs and the 'X Simulator' wave)",
+        "Potion / alchemy shop (Potion Craft plus many 'witch shop' games)",
+        "Fantasy tavern / inn (Travellers Rest) and woodland B&B (Bear and Breakfast)",
+        "Hotel idle-arcade on mobile (My Perfect Hotel and SayGames/Homa-style clones)",
+        "Mining idle (Idle Miner Tycoon 150M+ downloads)",
+        "Big zoo / theme park / hospital / museum tycoons (Planet Zoo, Parkitect, Two Point Hospital/Museum): don't compete on scope",
+        "Bookshop (Tiny Bookshop, 500k+ in 2025)",
+        "Thrift store (Thrifty Business, launched May 2026 by the Sticky Business dev)",
+        "Desktop-strip idle farm (Rusty's Retirement and its 2024-25 imitators)"
+      ],
+      "openThemes": [
+        {
+          "theme": "Cozy walk-and-restock venue",
+          "whyOpen": "The format is proven at huge scale on the web and on mobile (Monkey Mart ~300M Poki plays; Eatventure 69.3M downloads / $28M IAP; My Perfect Hotel up to $178K/week in US iOS alone). Nearly all of these games share the same low-poly hypercasual look and supermarket/restaurant/hotel themes. A Steam-quality cozy art direction on this browser-proven loop looks under-supplied. That last point is my inference from the portal listings; I found no direct count.",
+          "evidence": [
+            {
+              "fact": "Monkey Mart has ~300M plays on Poki and reportedly cost <$10k and 1-3 months to make",
+              "source": "https://app.cinevva.com/guides/publish-game-poki",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Monkey Mart rated 4.6 from 3,792,016 votes on Poki",
+              "source": "https://poki.com/hi/g/monkey-mart",
+              "confidence": "high"
+            },
+            {
+              "fact": "Eatventure: 69.3M downloads, ~$28M IAP since Feb 2022 (AppMagic)",
+              "source": "https://mobilegamer.biz/miniclip-has-acquired-lessmore-maker-of-eatventure-and-we-are-warriors/",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Poki revenue share: 100% on self-brought traffic, 50/50 on Poki traffic; Poki hit 1B gameplays in a month in 2025",
+              "source": "https://app.cinevva.com/guides/publish-game-poki",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "The format is easy to clone and portal/mobile revenue depends on ads, so the art and theme have to carry the difference; Poki curation is selective.",
+          "fullTheme": "Cozy idle-arcade 'walk-and-stock' loop (Monkey Mart / My Perfect Hotel format) with a handmade cozy art style and a venue that hasn't been used: e.g. bathhouse, flower stall, ramen night market, plant nursery",
+          "detail": "The Monkey Mart / My Perfect Hotel loop with handmade art and an unused venue"
+        },
+        {
+          "theme": "Animal or spirit bathhouse",
+          "whyOpen": "A cheap idle onsen game sold ~188k units with 95% positive reviews in 2025, and I could only find a handful of competitors (Onsen Master, Bathhouse Creatures, Animal Spa). Nobody has yet made the 'Tiny Bookshop of bathhouses', meaning a premium, narrative, top-down version. Spirited Away-style spirit bathhouse aesthetics remain popular.",
+          "evidence": [
+            {
+              "fact": "Maltese's Fluffy Onsen: ~188k units, ~$814k revenue (VGI), 2,875 reviews, 95% positive, May 2025",
+              "source": "https://www.steampulse.org/game/3404470",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Bathhouse Creatures (Jun 2025, $4.99) and Onsen Master (Whitethorn) are the other visible bathhouse managers",
+              "source": "https://gamegeeker.com/games/bathhouse-creatures-3209920",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "Several small entrants appeared in 2025, so the window is narrowing, and onsen games aimed at the Japanese market may crowd the niche.",
+          "fullTheme": "Bathhouse / onsen / spa for animals or spirits (top-down or side-view)",
+          "detail": "Onsen or spa, top-down or side view"
+        },
+        {
+          "theme": "Small cozy aquarium",
+          "whyOpen": "Animal and exhibit tycoons are very proven (Planet Zoo 5.4M copies; Let's Build a Zoo $3M; Two Point Museum 229k-665k), but aquarium supply is thin and old. Megaquarium (2018) is still the reference game, with 3,410 reviews and 95% positive, and it is a systems-heavy tycoon, not cozy. Fish and coral show off well in clips and suit a 2D top-down view on a phone.",
+          "evidence": [
+            {
+              "fact": "Megaquarium: 3,410 Steam reviews, 95% positive; OpenCritic 75",
+              "source": "https://gg.deals/game/megaquarium/",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Planet Zoo: 5.4M copies, ~$144M revenue (estimate)",
+              "source": "https://raijin.gg/app/703080/Planet_Zoo",
+              "confidence": "low"
+            },
+            {
+              "fact": "Let's Build a Zoo: $3M total revenue by Oct 2022, recouped dev costs in week 1",
+              "source": "https://gameworldobserver.com/2022/10/07/lets-build-a-zoo-revenue-1-million-console-first-week",
+              "confidence": "high"
+            }
+          ],
+          "risk": "Aquarium players may expect deep simulation (water chemistry, compatibility); a cozy version must find a hook that is satisfying on video, such as breeding rare fish or tank decoration.",
+          "fullTheme": "Small cozy aquarium (or cozy natural-history museum / botanical greenhouse) manager",
+          "detail": "Or a cozy natural-history museum or greenhouse"
+        },
+        {
+          "theme": "Tiny curation shop",
+          "whyOpen": "Tiny Bookshop (500k+) and Coffee Talk (~369k) show demand for a 'read the customer, give them the right thing' loop wrapped in a hobby fandom. Bookshop and thrift store are now taken (Tiny Bookshop 2025, Thrifty Business May 2026), but other hobby fandoms with active communities (vinyl, tea, knitting, houseplants) appear to have no notable management game. That is my inference; the searches surfaced no such games.",
+          "evidence": [
+            {
+              "fact": "Tiny Bookshop: 500,000+ copies sold after Aug 2025 launch",
+              "source": "https://gonintendo.com/contents/55621-tiny-bookshop-getting-physical-switch-release-game-hits-500k-sold",
+              "confidence": "high"
+            },
+            {
+              "fact": "Coffee Talk: ~369k units / $3.3M all platforms (VGI)",
+              "source": "https://en.wikipedia.org/wiki/Coffee_Talk_(video_game)",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Thrifty Business (thrift shop) launched May 18, 2026, showing studios are now moving into hobby-shop themes",
+              "source": "https://www.gematsu.com/2026/04/thrifty-business-launches-may-18",
+              "confidence": "high"
+            }
+          ],
+          "risk": "Recommendation loops need a lot of written content (items, customers), and fast followers of Tiny Bookshop will crowd the space in 2026-27.",
+          "fullTheme": "Tiny-venue 'curation/recommendation' shops in the Tiny Bookshop mould: record store, tea house, yarn/craft shop, perfume shop, plant nursery",
+          "detail": "Tiny Bookshop's 'recommend the right thing' with records, tea, yarn or plants"
+        },
+        {
+          "theme": "Browser-tab idle venue",
+          "whyOpen": "Rusty's Retirement (solo dev) sold 500k+ and Maltese's Fluffy Onsen ~188k in this 'runs while you work' format. Farming is the most copied theme here. Run-a-venue themes in the strip format are fewer. The same idle design ports naturally to a browser tab or phone (a game that progresses while you're away).",
+          "evidence": [
+            {
+              "fact": "Rusty's Retirement: 100k in 5 days, 500k+ on Steam, solo developer",
+              "source": "https://en.wikipedia.org/wiki/Rusty%27s_Retirement",
+              "confidence": "high"
+            },
+            {
+              "fact": "GameDiscoverCo analysed how Rusty's Retirement 'idle-farmed its way to 300k Steam sales'",
+              "source": "https://newsletter.gamediscover.co/p/how-rusty-s-retirement-idle-farmed",
+              "confidence": "high"
+            }
+          ],
+          "risk": "The desktop-strip format was copied quickly after 2024, and low prices (under $10) cap revenue per player.",
+          "fullTheme": "Desktop/browser-tab idle venue: a cozy shop, bathhouse or cafe that runs in a strip or small window",
+          "detail": "A cozy shop, bathhouse or café that runs in a strip or small window"
+        },
+        {
+          "theme": "Grow it, then serve it",
+          "whyOpen": "Players say they want it: an r/CozyGamers 'game you wish existed' thread asks for a coffee game with more management, less stress, and Harvest Moon-style depth. Supply exists only for taverns (Travellers Rest) and restaurants (Chef RPG, ~165k est. copies). Cozy farming has the best success rate of any cozy sub-niche (27.8% reach 1,000 reviews).",
+          "evidence": [
+            {
+              "fact": "r/CozyGamers 'A game you wish existed' thread includes request for cozy coffee management + Harvest Moon-like game",
+              "source": "https://redlib.belloworld.it/r/CozyGamers/comments/1doi1ki/a_game_you_wish_existed",
+              "confidence": "low"
+            },
+            {
+              "fact": "Cozy farming sims: 27.8% reach 1,000 reviews vs 11% cozy average",
+              "source": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Chef RPG (restaurant + RPG): 2,472 reviews, ~165k est. copies in Early Access",
+              "source": "https://vaporlens.app/app/1796790/chef_rpg/stats/details",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "Hybrids need two full loops' worth of content, which is the scope trap for a solo developer; keep one loop shallow.",
+          "fullTheme": "Grow-it-then-serve-it hybrids in an untaken venue (coffee farm-to-cup, tea plantation to tea house, orchard to cider bar)",
+          "detail": "Coffee farm to cup, tea field to teahouse, in an untaken venue"
+        },
+        {
+          "theme": "Single-dish street-food stall",
+          "whyOpen": "GPGP proves that a single-screen order-assembly game has enormous reach (300M+ downloads). Kebab Chefs (242.8k, $3.5M) shows that a specific cuisine sells better than a generic restaurant. A side-view counter is the easiest management format to run in a phone browser and the easiest to clip on TikTok. Specific Asian street foods have fan bases on TikTok (my inference; not quantified in these searches).",
+          "evidence": [
+            {
+              "fact": "Good Pizza Great Pizza: 300M+ downloads, 1M+ daily players, 12-person team, 60% ads / 40% IAP",
+              "source": "https://gamesbeat.com/how-to-culturalize-a-hit-mobile-game-good-pizza-great-pizza-interview/",
+              "confidence": "high"
+            },
+            {
+              "fact": "Kebab Chefs: 242.8k copies, $3.5M revenue",
+              "source": "https://wnhub.io/news/stores-and-publishing/item-44009",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "Food assembly games are crowded on mobile; only a cuisine, characters or aesthetic that stand out will break through.",
+          "fullTheme": "Single-screen street-food stall or night market with one tactile assembly action (GPGP format with a specific cuisine: taiyaki, boba, crêpes, tacos, dumplings)",
+          "detail": "A night-market stall with one satisfying assembly action"
+        }
+      ],
+      "whatWinsNow": [
+        "A specific, charming venue that explains itself in one sentence (bookshop in a trailer, onsen for fluffy dogs, a bear's B&B) rather than a generic restaurant or shop",
+        "One tactile action that looks good on video and repeats every few seconds: topping a pizza, grinding a potion, recommending a book, carrying a stack of goods",
+        "Visible growth of the venue: a stall becomes a shop becomes a chain, so before/after clips are easy to make",
+        "Cute animals as guests, staff or owner (Bear and Breakfast, Maltese's Fluffy Onsen, Let's Build a Zoo, Monkey Mart)",
+        "Idle/background-friendly design that fits real life (Rusty's Retirement, Fluffy Onsen) or no-install instant play in the browser (Monkey Mart)",
+        "Price $15-20 for a premium cozy game: 45.2% of $20+ cozy games reach 1,000 reviews against 2.7% under $5. Very cheap idle games can still win on volume",
+        "Early Access plus a steady update cadence for systems-heavy hybrids (Chef RPG, Travellers Rest, Potion Craft)"
+      ],
+      "whatFails": [
+        "Generic themes (cafe, restaurant, supermarket, hotel) with no twist. They get lost in hundreds of clones and in 1,000+ cozy releases a year",
+        "Pricing under $5 for a premium Steam game without an idle/background hook: only 2.7% reach 1,000 reviews",
+        "Scope creep in hybrids: shallow characters and bugs drag down reviews (Chef RPG reviewers call out bugs and shallow characters)",
+        "Competing with SEGA/Frontier on the scope of zoo, theme park, hospital or museum sims",
+        "Hypercasual web/mobile clones with no art identity: the loop is a commodity, so they depend entirely on paid user acquisition",
+        "Cozy puzzle and management hybrids that don't stand out: cozy puzzle has the lowest success rate (5.9%)"
+      ],
+      "soloAiFeasibility": "High, if you choose 2D top-down or side-view. Code is the easy part: management sims are mostly state machines, queues, economy tables and UI, which AI coding tools handle well. The hard parts are (1) art volume: every new station, item, customer and decoration needs a sprite, and the premium hits (Tiny Bookshop, Potion Craft, Coffee Talk) succeeded on a distinctive art style; (2) content volume and balancing (items, customers, upgrade curves, and recommendation writing for Tiny Bookshop-likes); (3) game feel and juice on the one tactile action. Approaches that suit asset packs: side-view counter games (one background, many ingredient sprites), top-down pixel-art venues using itch.io packs (Modern Interiors / LimeZu-style 16x16 tilesets, cozy cafe/farm packs), and low-poly 3D Synty-style packs for a Monkey Mart-style 3D top-down idle-arcade. Commission one illustrator for the hero character, animal guests and key art, and buy packs for environments. Avoid big isometric 3D park/zoo sims; their need for many animations and pathfinding crowds is too big for one person.",
+      "webFeasibility": "Excellent, the best genre for a link-first launch. Monkey Mart shows a management game can reach about 300M plays in the browser. Side-view counter games and top-down 2D venues run easily in Phaser/PixiJS/Godot web on phones, and low-poly 3D top-down runs in Three.js/Babylon if draw calls stay low. What breaks: precise drag-placement building UIs on small touch screens (use grid snapping and tap-to-place), long saves (use localStorage plus cloud save), large audio/art downloads (keep the first load under ~10-20MB), and iOS Safari audio unlock. Recommended path: free browser build on itch.io and your own link from TikTok/YouTube to test the theme and hook; submit the polished version to Poki/CrazyGames for ad revenue (100% of revenue on self-referred traffic, 50/50 on Poki traffic); then a deeper premium Steam version ($10-20) with a demo for Next Fest, using the web numbers as proof. Idle formats (Fluffy Onsen, Rusty's) translate directly to a browser tab.",
+      "monetization": "Premium Steam/Switch at $5-20: Tiny Bookshop 500k+ copies, Bear and Breakfast 157k-357k, Coffee Talk ~369k units / $3.3M, Kebab Chefs 242.8k / $3.5M, Fluffy Onsen ~188k / $814k at a low price, Let's Build a Zoo $3M by year 2 including consoles. DLC and spin-off packs (Fluffy Onsen 'Summer Fever') and console and physical ports extend the long tail (Tiny Bookshop to PS5 and physical in Apr 2026). Mobile F2P: ads plus IAP. GPGP is 60% ads / 40% IAP with 300M+ downloads; Eatventure ~$28M lifetime IAP on 69.3M downloads (~$0.40 IAP per download); My Perfect Hotel ~$69K-$178K weekly US iOS revenue. Web portals: ad revenue share on Poki (100% on self-referred traffic, 50/50 otherwise). One studio (Emolingo) grew from 2 to 5 full-time staff on Poki revenue. Cozy Steam games that reach 1,000 reviews correspond to roughly $150k gross.",
+      "marketing": "Theme virality and the press: Tiny Bookshop rode BookTok and cozy-game press and awards. Streamer and YouTuber spread: TCG Card Shop (~400k in 10 days) and Supermarket Simulator grew through influencers trying games 'live'. Rusty's Retirement spread because a game running on the desktop is a novelty that shows well on stream (100k in 5 days). Steam top-seller momentum: Potion Craft held #1 global top seller for 3 days at Early Access launch (100k in 3 days). Publisher-led launches with sales threads and Game Pass: Let's Build a Zoo (No More Robots; 250k+ Game Pass users). Web portals: Poki's front page and recommendation feed (100M monthly players) do the distribution; Monkey Mart's 3.79M rating votes show the scale. Mobile hits (Eatventure, My Perfect Hotel) are driven by paid UA from publishers such as SayGames and Miniclip, which a solo dev should not try to copy. No wishlist figures were found for these specific titles in this research.",
+      "sources": [
+        "https://gonintendo.com/contents/55621-tiny-bookshop-getting-physical-switch-release-game-hits-500k-sold",
+        "https://www.gematsu.com/2025/12/tiny-bookshop-coming-to-ps5-on-april-10-2026-alongside-physical-edition",
+        "https://www.steampulse.org/game/3404470",
+        "https://gamegeeker.com/games/bathhouse-creatures-3209920",
+        "https://www.thexboxhub.com/manage-the-hot-springs-of-onsen-master/",
+        "https://steampulse.org/game/2185060",
+        "https://en.wikipedia.org/wiki/Two_Point_Museum",
+        "https://vaporlens.app/app/1796790/chef_rpg/stats/details",
+        "https://en.wikipedia.org/wiki/Rusty%27s_Retirement",
+        "https://newsletter.gamediscover.co/p/how-rusty-s-retirement-idle-farmed",
+        "https://newsletter.gamediscover.co/p/tcg-card-shop-simulator-the-second",
+        "https://wnhub.io/news/stores-and-publishing/item-44009",
+        "https://www.steampulse.org/game/1136370",
+        "https://vaporlens.app/app/1136370/bear_and_breakfast/stats/details",
+        "https://poki.com/hi/g/monkey-mart",
+        "https://app.cinevva.com/guides/publish-game-poki",
+        "https://poki.com/blog/how-emolingo-games-built-business-html5-web-games-poki",
+        "https://mobilegamer.biz/miniclip-has-acquired-lessmore-maker-of-eatventure-and-we-are-warriors/",
+        "https://sensortower.com/blog/2024-q3-ios-top-5-idler%20games-units-us-602ae7fb241bc16eb874f8e1",
+        "https://sensortower.com/blog/2023-q4-unified-top-5-tycoon%20games-units-us-602ae798241bc16eb86ec5ed",
+        "https://gameworldobserver.com/2022/10/07/lets-build-a-zoo-revenue-1-million-console-first-week",
+        "https://gameworldobserver.com/2021/11/16/lets-build-a-zoo-recoups-dev-costs-generating-almost-500k-in-first-week",
+        "https://nichegamer.com/potion-craft-sold-over-100k-copies-in-its-first-three-days/",
+        "https://en.wikipedia.org/wiki/Coffee_Talk_(video_game)",
+        "https://gamesbeat.com/how-to-culturalize-a-hit-mobile-game-good-pizza-great-pizza-interview/",
+        "https://www.pocketgamer.biz/idle-miner-tycoon-hits-150-million-downloads",
+        "https://raijin.gg/app/703080/Planet_Zoo",
+        "https://raijin.gg/app/453090/Parkitect",
+        "https://gg.deals/game/megaquarium/",
+        "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+        "https://www.steampageanalyzer.com/niches/cozy",
+        "https://howtomarketagame.com/2026/01/08/how-many-games-were-released-in-2025/",
+        "https://www.gematsu.com/2026/04/thrifty-business-launches-may-18",
+        "https://redlib.belloworld.it/r/CozyGamers/comments/1doi1ki/a_game_you_wish_existed",
+        "https://www.pcgamesn.com/travellers-rest-multiplayer",
+        "https://www.globalgamesforum.com/ctv/idle-tycoon-games-a-market-overview"
+      ],
+      "label": "Top-down management & tycoon"
+    },
+    {
+      "genre": "Other evergreen cozy genres",
+      "summary": "Cozy as a whole is proven and over-supplied in volume but still has above-average odds: 632 Cozy-tagged Steam games shipped in 2025 (382 in 2024) and 1,041 already in 2026 by late Sept (+143%), yet 11% of 2024-H1 2025 cozy releases reached 1,000 reviews vs 4.2% Steam-wide (steampageanalyzer, medium). PER GENRE: (1) FARMING/LIFE SIM: very high saturation (362 Farming Sim releases in 2025, 361 by Sept 2026, median 29 reviews, 8% hit 1k reviews); still works only with a strong hook such as magic + romance (Fields of Mistria, 610K est. Steam pre-1.0) or a format twist (Rusty's Retirement desktop-idle, 500K+); polished-but-generic big-budget ones flopped (Tales of the Shire, Sugardew Island, Amber Isle called disappointing). (2) RELAXING TOWN/DIORAMA BUILDERS: City Builder 10.5% hit rate, 415 releases in 2026 so far (+27%), Tiny Glade (2 devs) sold 616K in a month and Dorfromantik ~0.5-0.9M, but the winners rely on custom procedural tech or tight puzzle scoring, which is hard to copy. (3) CLEANING/RESTORATION/ORGANIZING: Unpacking and A Little to the Left each sold 1M+ with few true successors; restoration sims (Cozy Game Restoration, The Repair House, Things Left Unsaid) are only now arriving in 2026-27, so supply of good ones is still thin. (4) COZY COOKING (non-management): Cooking tag has 365 releases in 2026 (+64%), median 22 reviews, 7.9% hit rate; mostly restaurant management; narrative cooking (Venba) is critically loved but rare. (5) FISHING: proven and getting crowded fast after Dredge (1.1-1.6M), Webfishing (1-5M est. at $5, solo dev) and Cast n Chill (180-580K est., 95% of 8,097 reviews); pure fishing is now medium-high saturation. (6) DECORATING/ROOM DESIGN: lots of small Steam entries (My Cozy Room, Cozy Home Designer, Whisper of the House at only ~235 reviews) and mobile is dominated by F2P giants; demand is real but plain decorating sandboxes sell weakly without a puzzle or story frame. (7) COZY SURVIVAL-CRAFT: Open World Survival Craft has the best odds of any niche (28.3% reach 1k reviews, +39% growth) and solo-dev Dinkum sold 1M+, but content and netcode volume are heavy. (8) COZY CO-OP 2-4P: Webfishing proved a $5 hangout around one relaxing verb can sell millions; press and players explicitly ask for 'more games like Webfishing' and couples lists complain of too few low-stress co-op games. Best demand-to-supply gaps: tactile restoration/organizing with a theme (deep dive), small co-op 'hangout' games around a non-fishing relaxing verb, and desktop-idle/low-attention cozy games with non-farm themes.",
+      "trackRecord": [
+        {
+          "name": "Fields of Mistria",
+          "studio": "NPC Studio",
+          "year": 2026,
+          "teamSize": "small (unverified)",
+          "price": "~$15-20 (unverified)",
+          "camera": "top-down",
+          "theme": "magical farm + town rebuild + romance",
+          "coreLoop": "Farm, mine, befriend and romance villagers while rebuilding a magic-touched town.",
+          "result": "100K downloads in first EA week (Aug 2024); ~610K est. Steam copies, ~$5.1M gross by July 2026; 1.0 launched Aug 6 2026 with ~30K concurrent and reported 1M sold around 1.0; ~97% positive",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/2142790/Fields_of_Mistria",
+          "whyItWorked": "Stardew-faithful core plus an anime/magic aesthetic and a romance cast; long, transparent Early Access built community.",
+          "clipMoment": "Romance/dating scenes and character art shared by fans"
+        },
+        {
+          "name": "Tiny Bookshop",
+          "studio": "neoludic games (pub. Skystone/2P)",
+          "year": 2025,
+          "teamSize": "2-5 (unverified)",
+          "price": "~$20 (unverified; est. avg realised ~$14)",
+          "camera": "top-down / illustrated",
+          "theme": "mobile bookshop in a seaside town",
+          "coreLoop": "Stock and arrange a book trailer, then recommend the right book to each customer.",
+          "result": "200K+ sold within 12 days of 7 Aug 2025 launch; 96% positive of ~6,818 reviews; SteamPulse est. 163K units/$2.3M (likely stale low estimate)",
+          "confidence": "medium",
+          "source": "https://automaton-media.com/articles/newsjp/tiny-bookshop-20250820-354314/",
+          "whyItWorked": "A hobby theme with a built-in audience (book lovers/BookTok) and a gentle 'give the right recommendation' puzzle; called the strongest non-gacha cozy launch of 2025.",
+          "clipMoment": "Arranging shelves and decorating the trailer; book-recommendation moments"
+        },
+        {
+          "name": "Cast n Chill",
+          "studio": "Wombat Brawler",
+          "year": 2025,
+          "teamSize": "1-2 (unverified)",
+          "price": "~$10 (unverified; implied by revenue/units)",
+          "camera": "side (pixel art)",
+          "theme": "idle/active fishing with dog companion",
+          "coreLoop": "Fish actively or leave it idle, upgrade boat/gear, unlock new waters.",
+          "result": "95% positive of 8,097 reviews; sales estimates diverge: 180K copies/$1.6M (raijin) vs ~582K (another tracker)",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/3483740/Cast_n_Chill",
+          "whyItWorked": "Combines two proven hooks (cozy fishing + idle/background play) with a pretty pixel style and a dog; demo before launch.",
+          "clipMoment": "Calm pixel-art sunset fishing with the dog"
+        },
+        {
+          "name": "Webfishing",
+          "studio": "lamedeveloper",
+          "year": 2024,
+          "teamSize": "1",
+          "price": "$5",
+          "camera": "third-person 3D (low-fi)",
+          "theme": "multiplayer chatroom fishing as animal characters",
+          "coreLoop": "Hang out on an island with up to a lobby of players, fish, chat, draw, customise.",
+          "result": "~20K peak concurrent and 98% of 6,200+ reviews two weeks after Oct 2024 launch; sales estimates 1.0-2.1M (Feb 2025 trackers) up to ~5M (Jan 2026 estimate, low confidence)",
+          "confidence": "medium",
+          "source": "https://vaporlens.app/app/3146520/webfishing/stats/details",
+          "whyItWorked": "Cheap social hangout with one relaxing verb; emergent meme content (chat, drawings, guitar) made it a streamer/TikTok staple.",
+          "clipMoment": "Players drawing on the ground, playing guitar together, chat chaos"
+        },
+        {
+          "name": "Tiny Glade",
+          "studio": "Pounce Light",
+          "year": 2024,
+          "teamSize": "2",
+          "price": "~$15 (unverified)",
+          "camera": "free 3D diorama",
+          "theme": "castle/village diorama building, no goals",
+          "coreLoop": "Drag walls, paths and roofs that procedurally sprout detail; no resources or score.",
+          "result": "616,528 units in first month; 10,600 concurrent at launch; Overwhelmingly Positive",
+          "confidence": "high",
+          "source": "https://gigazine.net/gsc_news/en/20241120-tiny-glade-600k-sold-reason",
+          "whyItWorked": "Every drag gesture produces a beautiful result on video; years of GIFs on social built huge wishlists before launch.",
+          "clipMoment": "Dragging a wall and watching it auto-grow arches, ivy and windows"
+        },
+        {
+          "name": "Rusty's Retirement",
+          "studio": "Mister Morris Games",
+          "year": 2024,
+          "teamSize": "1",
+          "price": "~$7 (unverified)",
+          "camera": "side (desktop strip)",
+          "theme": "robot idle farm that lives on the bottom/side of your desktop",
+          "coreLoop": "Let robots farm while you work; check in to upgrade.",
+          "result": "100K in first 5 days, ~330K within months, 500K+ on Steam per Wikipedia",
+          "confidence": "high",
+          "source": "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+          "whyItWorked": "Format innovation (desktop overlay) gave an old farm theme a fresh reason to exist; tiny scope, cheap price.",
+          "clipMoment": "Screen shots of a tiny farm running under someone's work spreadsheet"
+        },
+        {
+          "name": "Dinkum",
+          "studio": "James Bendon",
+          "year": 2022,
+          "teamSize": "1",
+          "price": "~$20 EA (unverified)",
+          "camera": "3D third-person",
+          "theme": "Australian-outback life sim + light survival, co-op",
+          "coreLoop": "Gather, craft, build a town and invite NPCs, with online co-op.",
+          "result": "350K sold in first EA month; 1M+ units after ~8 years dev",
+          "confidence": "high",
+          "source": "https://automaton-media.com/en/interviews/eight-years-in-development-and-over-1-million-units-sold-solo-creator-of-hit-survival-life-sim-dinkum-talks-development-and-upcoming-nintendo-switch-edition/",
+          "whyItWorked": "Animal Crossing-like loop on PC (where AC is absent) with co-op and a distinctive, under-used regional theme.",
+          "clipMoment": "Co-op friends building a town; Aussie wildlife"
+        },
+        {
+          "name": "DREDGE",
+          "studio": "Black Salt Games",
+          "year": 2023,
+          "teamSize": "4",
+          "price": "~$25 (unverified)",
+          "camera": "top-down 3D",
+          "theme": "fishing + cosmic horror",
+          "coreLoop": "Fish by day, flee horrors by night, Tetris-pack your hold.",
+          "result": "1M+ units overall; Steam est. 1.1M/$16.2M to 1.6M/$26.8M",
+          "confidence": "medium",
+          "source": "https://www.vgchartz.com/article/458692/dredge-sales-top-1-million-units/",
+          "whyItWorked": "Genre-mash (cozy fishing x horror) gave a familiar loop a strong hook; inventory packing is satisfying.",
+          "clipMoment": "Pulling up mutated fish; night-time monster encounters"
+        },
+        {
+          "name": "A Little to the Left",
+          "studio": "Max Inferno (pub. Secret Mode)",
+          "year": 2022,
+          "teamSize": "2-5",
+          "price": "~$15 (unverified)",
+          "camera": "flat 2D",
+          "theme": "tidying/ordering household objects (puzzle)",
+          "coreLoop": "Drag objects into the 'right' order; multiple solutions; a cat messes things up.",
+          "result": "999,999 copies by Nov 2023",
+          "confidence": "high",
+          "source": "https://gamedeveloper.com/press-release/a-little-to-the-left-cleans-up-with-999-999-sales",
+          "whyItWorked": "Pure, legible satisfaction (straightening, sorting) that reads instantly in a 10-second clip.",
+          "clipMoment": "Snapping crooked frames straight; the cat knocking things over"
+        },
+        {
+          "name": "Unpacking",
+          "studio": "Witch Beam",
+          "year": 2021,
+          "teamSize": "2-5",
+          "price": "~$20 (unverified)",
+          "camera": "isometric pixel art",
+          "theme": "unpacking possessions into a series of homes (story via objects)",
+          "coreLoop": "Unbox items, place them; the life story emerges from what you unpack.",
+          "result": "100K in 10 days; 1M+ copies by first anniversary; 20 awards",
+          "confidence": "high",
+          "source": "https://en.wikipedia.org/wiki/Unpacking_(video_game)",
+          "whyItWorked": "Organizing + environmental storytelling; extremely relatable; short and finishable.",
+          "clipMoment": "Finding a spot for the diploma / the ex's items"
+        },
+        {
+          "name": "Dorfromantik",
+          "studio": "Toukana Interactive",
+          "year": 2022,
+          "teamSize": "4",
+          "price": "~$15 (unverified)",
+          "camera": "top-down hex",
+          "theme": "relaxing village tile placement",
+          "coreLoop": "Place hex tiles to match edges and fulfill quests for more tiles.",
+          "result": "Est. 527K Steam copies/$4.4M to 876K/$7.2M",
+          "confidence": "medium",
+          "source": "https://raijin.gg/app/1455840/Dorfromantik",
+          "whyItWorked": "Board-game-like scoring under a calm aesthetic; easy to learn, endless replay.",
+          "clipMoment": "Completing a long river or forest region"
+        },
+        {
+          "name": "Whisper of the House",
+          "studio": "(indie, pub. press release)",
+          "year": 2025,
+          "teamSize": "small (unverified)",
+          "price": "unknown",
+          "camera": "pixel art",
+          "theme": "organizing and decorating houses",
+          "coreLoop": "Organize and decorate rooms for clients.",
+          "result": "~96.6% positive but only ~235 reviews after Aug 2025 launch (mid performer)",
+          "confidence": "medium",
+          "source": "https://www.gamedeveloper.com/press-release/organizing-decorating-cozy-the-pixel-art-sim-whisper-of-the-house-arrives-on-steam-august-27",
+          "whyItFailed": "Well-liked but no sharp hook beyond 'Unpacking-ish decorating'; low visibility shows demand alone does not sell a lookalike.",
+          "clipMoment": "n/a"
+        },
+        {
+          "name": "Tales of the Shire / Sugardew Island / Amber Isle",
+          "studio": "Wētā Workshop / various",
+          "year": 2025,
+          "teamSize": "10+ (Tales of the Shire)",
+          "price": "$30-40 (unverified)",
+          "camera": "3D third-person / top-down",
+          "theme": "licensed or generic life-sim / farming",
+          "coreLoop": "Standard life-sim chores (cook, farm, befriend).",
+          "result": "Named among 2025's disappointing cozy games: unfinished-feeling, poor Switch performance (no sales figures found)",
+          "confidence": "low",
+          "source": "https://www.pockettactics.com/disappointing-cozy-games",
+          "whyItFailed": "Generic Stardew/AC chores without a fresh hook, plus technical problems; even a big license could not carry it.",
+          "clipMoment": "Negative: performance and bug clips"
+        }
+      ],
+      "saturation": {
+        "level": "high",
+        "evidence": "Cozy tag: 632 releases in 2025 vs 382 in 2024, and 1,041 already in 2026 by Sept 27 (+143% YoY); 11% of 661 cozy games (2024-H1 2025) reached 1,000 reviews vs 4.2% Steam-wide (https://www.steampageanalyzer.com/niches/cozy, medium). Farming Sim: 362 releases in 2025, 361 by Sept 2026 (+37%), median 29 reviews, 8% hit 1k reviews (https://www.steampageanalyzer.com/niches/farming-sim, medium). Life Sim: 1,043 in 2026 (+53%), median 36 reviews, 8.6% hit rate. Cooking: 365 in 2026 (+64%), median 22 reviews, 7.9% (https://www.steampageanalyzer.com/niches/cooking). City Builder: 415 in 2026 (+27%), 10.5% hit rate (https://www.steampageanalyzer.com/niches/city-builder). Fastest-filling niches in 2026: Shop Keeper +634%, Bullet Heaven +406%, Automation +170%, Idler +150%, Cozy +143%; Open World Survival Craft had the best odds (28.3% reach 1k reviews) on modest +39% growth (https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest, medium). The 'cozy' keyword on Steam rose ~675% since 2022 (Steam Trender via wnhub, medium). Wishlist conversion median ~0.15x first week for games with 25K+ wishlists, 0.10x above $10 (GameDiscoverCo, medium). Takeaway: volume is very high and still accelerating, but the median is tiny (20-36 reviews), so outcomes depend on the hook, not the genre label."
+      },
+      "takenThemes": [
+        "Generic Stardew-like farm + village romance (Stardew, Fields of Mistria, Coral Island, dozens more)",
+        "Animal Crossing-like island life (Dinkum, many clones)",
+        "Cozy fishing: plain lake/sea fishing (Cast n Chill, Webfishing, Dredge for horror-fishing)",
+        "Castle/village diorama with procedural building (Tiny Glade, Townscaper)",
+        "Hex tile village scoring (Dorfromantik and many clones)",
+        "Moving-in/unboxing (Unpacking)",
+        "Tidying puzzle with household objects + cat (A Little to the Left)",
+        "Bookshop / mobile shop (Tiny Bookshop); shopkeeping in general is the fastest-filling niche of 2026 (+634%)",
+        "Restaurant/cafe management (covered elsewhere and crowded)",
+        "Desktop-idle robot farm (Rusty's Retirement)",
+        "Retro game cartridge restoration (Cozy Game Restoration, 2026)"
+      ],
+      "openThemes": [
+        {
+          "theme": "Hobby restoration",
+          "whyOpen": "Demand: organizing/tidying hits Unpacking and A Little to the Left each sold 1M+, restoration is a huge evergreen YouTube/TikTok format, and Tiny Bookshop proved hobby communities (books) carry a cozy game. Supply: genuine restoration sims are only arriving now (Cozy Game Restoration releasing Sept 2026, The Repair House, Things Left Unsaid slated for 2027), so most object categories are still unclaimed.",
+          "evidence": [
+            {
+              "fact": "A Little to the Left sold 999,999 copies by Nov 2023",
+              "source": "https://gamedeveloper.com/press-release/a-little-to-the-left-cleans-up-with-999-999-sales",
+              "confidence": "high"
+            },
+            {
+              "fact": "Unpacking passed 1M copies by its first anniversary",
+              "source": "https://en.wikipedia.org/wiki/Unpacking_(video_game)",
+              "confidence": "high"
+            },
+            {
+              "fact": "Cozy Game Restoration (cleaning/restoring 108 fictional cartridges) launches on Steam Sept 24 2026; Things Left Unsaid (ASMR antique restoration) not until 2027",
+              "source": "https://nichegamer.com/restore-forgotten-retro-cartridges-in-cozy-game-restoration/",
+              "confidence": "medium"
+            },
+            {
+              "fact": "The Repair House covers broad household objects (instruments, jukeboxes, furniture, toys) — a generalist, leaving focused hobby niches open",
+              "source": "https://www.pcgamesn.com/the-repair-house/new-steam-game",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "The space is visibly filling in 2026-27, and a generalist restoration sim could outshine a narrow one unless the chosen object has its own passionate community.",
+          "fullTheme": "CLEANING/RESTORATION: tactile restoration of one beloved object category other than cartridges (e.g. vintage teddy bears/plush, old books and bindings, ceramic kintsugi, watches, sneakers, vinyl records), each object carrying a tiny owner story",
+          "detail": "Tactile restoration of one beloved kind of object (plush, books, records, kintsugi)",
+          "genre": "Cleaning & restoration"
+        },
+        {
+          "theme": "Story told through objects",
+          "whyOpen": "Demand: two 1M+ sellers with no clear 2025-26 successor at that level; Whisper of the House (organizing + decorating) is well liked at ~96% but tiny (~235 reviews), which suggests players reward a strong emotional/story hook rather than just decorating. Supply: few games pair organizing with narrative.",
+          "evidence": [
+            {
+              "fact": "Unpacking 100K units in 10 days, 1M+ by year one, 20 awards",
+              "source": "https://www.nintendolife.com/news/2021/12/indie-hit-unpacking-sold-over-100k-units-in-just-10-days",
+              "confidence": "high"
+            },
+            {
+              "fact": "Whisper of the House: ~96.6% positive of ~235 reviews after Aug 2025 launch",
+              "source": "https://www.gamedeveloper.com/press-release/organizing-decorating-cozy-the-pixel-art-sim-whisper-of-the-house-arrives-on-steam-august-27",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "Short, handcrafted content per level is labour-intensive in art (each object hand-drawn), and lookalikes of Unpacking get called clones.",
+          "fullTheme": "ORGANIZING/STORY: Unpacking-style 'story told through objects' in a new life domain (e.g. sorting a grandparent's attic, packing a suitcase for each trip, filling a lunchbox or a pencil case through school years, curating a museum drawer)",
+          "detail": "Unpacking-style, set in a new part of life",
+          "genre": "Organizing"
+        },
+        {
+          "theme": "Cozy co-op hangout (not fishing)",
+          "whyOpen": "Demand: Webfishing (solo dev, $5) sold an est. 1-2M+ copies with ~20K peak CCU; press explicitly asks for 'more games like Webfishing'; couples co-op lists complain that most co-op recommendations are combat-heavy or 100-hour epics. Supply: similar-game lists are padded with large MMO/life sims (Palia, Dinkum) rather than small hangout games.",
+          "evidence": [
+            {
+              "fact": "Webfishing reached ~20K concurrent players and 98% of 6,200+ reviews within two weeks of Oct 2024 launch",
+              "source": "https://mein-mmo.de/indie-spiel-20-000-gleichzeitige-spieler/",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Webfishing sales estimates 1.04-2.06M across Gamalytic/SteamSpy/VG Insights (early 2025); one Jan 2026 estimate ~5M",
+              "source": "https://vaporlens.app/app/3146520/webfishing/stats/details",
+              "confidence": "low"
+            },
+            {
+              "fact": "Vice: 'I want more games like Webfishing'",
+              "source": "https://www.vice.com/en/article/i-want-more-games-like-webfishing/",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Couples-gaming guides note a gap: most co-op lists push 100-hour epics, Souls-likes or competitive shooters",
+              "source": "https://www.twoaveragegamers.com/couples-games-actually-finish-together-2026/",
+              "confidence": "low"
+            }
+          ],
+          "risk": "Networking/lobbies and moderation are the hard part, and hangout games live or die on a meme moment you cannot plan.",
+          "fullTheme": "COZY CO-OP 2-4P: small-price 'hangout' game around one relaxing verb that is NOT fishing (e.g. birdwatching/photography walks, stargazing camp, community garden plots, kite flying, foraging), with drawing/emotes for emergent clips",
+          "detail": "A cheap 2–4 player hangout around one relaxing activity: birdwatching, stargazing, a community garden",
+          "genre": "Co-op"
+        },
+        {
+          "theme": "Low-attention idle, not farming",
+          "whyOpen": "Demand: Rusty's Retirement (solo) sold 500K+ by reframing a farm as a desktop strip; Cast n Chill's idle fishing reached 8K+ reviews at 95%. Supply: Idler grew +150% in 2026, so the format is filling, but most new idlers are numbers games, not cozy themed object worlds.",
+          "evidence": [
+            {
+              "fact": "Rusty's Retirement: 100K in 5 days, ~330K soon after, 500K+ on Steam",
+              "source": "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+              "confidence": "high"
+            },
+            {
+              "fact": "Cast n Chill: 95% of 8,097 reviews; est. 180K-582K copies",
+              "source": "https://raijin.gg/app/3483740/Cast_n_Chill",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Idler niche +150% releases in 2026 vs same weeks 2025",
+              "source": "https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "Idle is the fastest-growing format after shopkeeping, so the window is closing; differentiation must come from theme and art, and it does not translate well to a browser link.",
+          "fullTheme": "DESKTOP-IDLE / LOW-ATTENTION COZY with a non-farm theme (e.g. a windowsill herb garden, aquarium/pond, bakery oven strip, tiny train line, bird feeder) that runs at the screen edge",
+          "detail": "A screen-edge game with a fresh theme: windowsill herbs, an aquarium, a tiny shop",
+          "genre": "Idle"
+        },
+        {
+          "theme": "Heritage cooking story",
+          "whyOpen": "Demand: Venba won critical acclaim as a cooking-as-puzzle story; cooking is a top food-TikTok category. Supply: Cooking tag is dominated by restaurant/management games; median cooking release gets only 22 reviews, which shows generic cooking is crowded but narrative heritage cooking is rare.",
+          "evidence": [
+            {
+              "fact": "Venba: narrative cooking game (Indian family in 1980s Canada) praised as 'must-play' (GamesRadar 4.5/5)",
+              "source": "https://store.steampowered.com/app/1491670/Venba/",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Cooking tag: 365 releases in 2026 (+64%), median 22 reviews, 7.9% reach 1k reviews",
+              "source": "https://www.steampageanalyzer.com/niches/cooking",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "Short narrative games have a small sales ceiling and need authentic cultural writing; the reach comes from the community whose cuisine it is.",
+          "fullTheme": "COZY COOKING (non-management): narrative 'cook one family's recipes' games for a specific cuisine (e.g. Filipino, Polish, Ethiopian, Korean grandma kitchen), where cooking steps are the puzzle",
+          "detail": "Cook one family's recipes, Venba-style, for a specific cuisine",
+          "genre": "Cooking"
+        },
+        {
+          "theme": "Diorama builder, new setting",
+          "whyOpen": "Demand: Tiny Glade (2 devs) sold 616K in one month and City Builder releases still hit 1k reviews at 2.5x the Steam rate. Supply: Tiny Glade/Townscaper took medieval villages and castles; few polished builders exist for other settings.",
+          "evidence": [
+            {
+              "fact": "Tiny Glade: 616,528 units in first month, 2-person studio",
+              "source": "https://gigazine.net/gsc_news/en/20241120-tiny-glade-600k-sold-reason",
+              "confidence": "high"
+            },
+            {
+              "fact": "City Builder: 10.5% of 574 games (2024-H1 2025) reached 1k reviews; 415 releases in 2026 (+27%)",
+              "source": "https://www.steampageanalyzer.com/niches/city-builder",
+              "confidence": "medium"
+            }
+          ],
+          "risk": "Tiny Glade's magic is its custom procedural geometry and rendering; a builder with asset-pack pieces snapped to a grid will look ordinary next to it.",
+          "fullTheme": "TOWN/VILLAGE BUILDER: goal-less diorama builders for an unused setting (harbour/lighthouse coast, Japanese garden/zen pond, underwater coral reef, treehouse village)",
+          "detail": "Goal-less builders for an unused place: harbour, lighthouse, mountain village",
+          "genre": "Builder"
+        },
+        {
+          "theme": "Survival-craft in a fresh region",
+          "whyOpen": "Demand: Open World Survival Craft has the best odds of any niche (28.3% of games reach 1k reviews) and solo-dev Dinkum sold 1M+ on a regional theme. Supply: growth is modest (+39%) compared with cozy (+143%).",
+          "evidence": [
+            {
+              "fact": "Open World Survival Craft: 28.3% reach 1,000 reviews, growth +39% in 2026",
+              "source": "https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest",
+              "confidence": "medium"
+            },
+            {
+              "fact": "Dinkum (solo): 350K in first EA month, 1M+ total",
+              "source": "https://newsletter.gamediscover.co/p/dinkums-350k-sales-in-a-month-serendipity",
+              "confidence": "high"
+            }
+          ],
+          "risk": "The biggest content and 3D-art load of any option here (Dinkum took ~8 years), so it is a poor first project for a solo dev.",
+          "fullTheme": "COZY SURVIVAL-CRAFT / LIFE SIM with an under-used real region or biome (as Dinkum did with the Australian outback): e.g. Nordic fjord cabin, Pacific-island, Scottish highlands, Canadian lake country",
+          "detail": "A real, under-used region or biome, as Dinkum did with Australia",
+          "genre": "Survival-craft"
+        }
+      ],
+      "whatWinsNow": [
+        "One tactile action that reads instantly in a 5-10 second vertical clip (drag a wall that blooms detail, snap a crooked frame straight, peel a sticker, land a fish).",
+        "A familiar loop + one sharp hook: fishing x horror (Dredge), farm x desktop overlay (Rusty's Retirement), shop x book recommendations (Tiny Bookshop), fishing x chatroom (Webfishing).",
+        "Themes with a pre-existing hobby community (books, retro games, regional culture) that share the game themselves.",
+        "Small and finishable or tiny-price: Webfishing $5, Rusty's Retirement ~$7, Unpacking/A Little to the Left as short premium puzzles; $20+ cozy games have the best 1k-review rate (45.2%) only when content justifies it.",
+        "Very high polish and review scores (95-98% positive across every hit listed); a long public dev-log/GIF trail before launch (Tiny Glade) or long Early Access with a 1.0 spike (Fields of Mistria).",
+        "Social/emergent moments for streamers in multiplayer (drawing, music, chat in Webfishing).",
+        "Idle or low-attention play modes that let people play while working (Rusty's Retirement, Cast n Chill)."
+      ],
+      "whatFails": [
+        "Generic Stardew/Animal Crossing chores with no hook: median Farming Sim gets ~29 reviews and only 8% reach 1k.",
+        "Big-budget or licensed cozy games with technical issues (Tales of the Shire, Sugardew Island, Amber Isle named 2025's disappointments).",
+        "Lookalikes of a single hit that copy its theme (decorating/organizing games without a story hook stay at a few hundred reviews, e.g. Whisper of the House ~235).",
+        "Entering the fastest-filling niches late (Shop Keeper +634%, Idler +150% in 2026) without differentiation.",
+        "Over-scoped content-heavy designs (survival-craft, full life sim) for tiny teams, which take years before revenue."
+      ],
+      "soloAiFeasibility": "Most feasible for a solo AI-assisted dev: (a) tactile restoration/organizing (2D or simple 3D; logic for scrubbing masks, sticker peeling, drag-and-snap is cheap to code; the hard part is drawing many hand-made objects with personality, so pick a pixel or flat-vector style and/or buy object packs and repaint them); (b) desktop-idle cozy (tiny scope, pixel art packs work well); (c) narrative cooking (2D illustrated, small number of recipes). Medium: small co-op hangout (code is fine with Godot/Unity netcode or Steam lobbies, but testing, moderation and server cost are real; low-poly asset packs like Synty/Kenney/Quaternius fit the Webfishing look). Hard: Tiny Glade-like builders (custom procedural mesh tech and lighting, which AI can help code but needs strong art direction) and survival-craft/life sims (huge content, animation and 3D art volume). Content volume, not code, is the bottleneck in every one of these genres.",
+      "webFeasibility": "Strong for 2D restoration/organizing, cooking and diorama-lite builders: a 10-20 minute slice in Godot web, Phaser/PixiJS or Three.js runs fine in a phone browser and is ideal as a TikTok link (touch drag maps naturally to tidy/scrub/peel). Co-op hangout games can prototype in-browser with WebRTC/WebSocket lobbies (Webfishing's very name nods to that vibe) but need a relay server. What breaks: heavy 3D lighting/procedural geometry (Tiny Glade-tier) on mobile GPUs, large asset downloads, and desktop-overlay idle games (they need a native app). Path: itch.io/web demo to validate clips and collect emails, then a Steam page + demo for Next Fest is still where wishlists and sales come from (median first-week conversion ~0.10-0.15x of wishlists).",
+      "monetization": "Premium on Steam dominates: hits cluster at $5-10 (Webfishing $5, Rusty's Retirement, Cast n Chill roughly $1.6M gross on ~180K est. copies) or $15-25 for content-rich games (Tiny Bookshop ~$2.3M on ~163K est. early units; Fields of Mistria ~$5.1M on ~610K). Early Access works for content-heavy life sims (Fields of Mistria, Dinkum). Console ports (Switch especially) and later mobile ports add a long tail (Unpacking, A Little to the Left, Dorfromantik went multi-platform). Mobile decorating is dominated by F2P ad/IAP titles; premium mobile is a port, not a launch platform. Small paid DLC/level packs fit puzzle-organizers (A Little to the Left added content updates). Figures are tracker estimates (medium/low confidence).",
+      "marketing": "Tiny Glade built its audience through years of GIFs on social media and launched to 10,600 CCU and 616K first-month sales. Webfishing spread by streamer/TikTok meme clips (20K peak CCU in two weeks). Tiny Bookshop used a Steam demo and BookTok-friendly theme to sell 200K+ in 12 days. Rusty's Retirement got 100K in 5 days off a strong demo and a novel 'game at the bottom of your screen' screenshot. Fields of Mistria sold 100K in its first EA week from Stardew-community word of mouth and peaked near 30K CCU at 1.0. GameDiscoverCo: median first-week sales ~0.15x wishlists for 25K+ wishlist games (0.10x above $10), so a solo dev should aim for 10K-30K wishlists via demo + Next Fest before launch.",
+      "sources": [
+        "https://www.steampageanalyzer.com/niches/farming-sim",
+        "https://www.steampageanalyzer.com/niches/cozy",
+        "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report",
+        "https://www.steampageanalyzer.com/niches/city-builder",
+        "https://www.steampageanalyzer.com/niches/cooking",
+        "https://www.steampageanalyzer.com/niches/life-sim",
+        "https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest",
+        "https://www.destructoid.com/this-genre-exploded-on-steam-in-2025-and-proves-were-still-resisting-our-grim-reality/",
+        "https://wnhub.io/news/other/item-48719",
+        "https://respawn.outlookindia.com/gaming/gaming-news/steam-vibe-shift-why-cozy-is-the-most-dominant-keyword-of-2026",
+        "https://gigazine.net/gsc_news/en/20241120-tiny-glade-600k-sold-reason",
+        "https://wnhub.io/news/stores-and-publishing/item-45586",
+        "https://en.wikipedia.org/wiki/A_Little_to_the_Left",
+        "https://gamedeveloper.com/press-release/a-little-to-the-left-cleans-up-with-999-999-sales",
+        "https://en.wikipedia.org/wiki/Unpacking_(video_game)",
+        "https://www.nintendolife.com/news/2021/12/indie-hit-unpacking-sold-over-100k-units-in-just-10-days",
+        "https://automaton-media.com/articles/newsjp/tiny-bookshop-20250820-354314/",
+        "https://steampulse.org/game/2133760",
+        "https://www.vgchartz.com/article/458692/dredge-sales-top-1-million-units/",
+        "https://raijin.gg/app/1562430/DREDGE",
+        "https://vaporlens.app/app/3146520/webfishing/stats/details",
+        "https://mein-mmo.de/indie-spiel-20-000-gleichzeitige-spieler/",
+        "https://www.vice.com/en/article/i-want-more-games-like-webfishing/",
+        "https://www.wasdland.com/game/webfishing-3146520/similar-games/",
+        "https://raijin.gg/app/2142790/Fields_of_Mistria",
+        "https://destructoid.com/?p=576727",
+        "https://www.gamespark.jp/article/2026/08/06/170276.html",
+        "https://raijin.gg/app/1455840/Dorfromantik",
+        "https://raijin.gg/app/3483740/Cast_n_Chill",
+        "https://en.wikipedia.org/wiki/Rusty%27s_Retirement",
+        "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+        "https://automaton-media.com/en/interviews/eight-years-in-development-and-over-1-million-units-sold-solo-creator-of-hit-survival-life-sim-dinkum-talks-development-and-upcoming-nintendo-switch-edition/",
+        "https://newsletter.gamediscover.co/p/dinkums-350k-sales-in-a-month-serendipity",
+        "https://www.pockettactics.com/disappointing-cozy-games",
+        "https://www.gamedeveloper.com/press-release/organizing-decorating-cozy-the-pixel-art-sim-whisper-of-the-house-arrives-on-steam-august-27",
+        "https://nichegamer.com/restore-forgotten-retro-cartridges-in-cozy-game-restoration/",
+        "https://www.pcgamesn.com/the-repair-house/new-steam-game",
+        "https://store.steampowered.com/app/1491670/Venba/",
+        "https://www.twoaveragegamers.com/couples-games-actually-finish-together-2026/",
+        "https://newsletter.gamediscover.co/p/the-state-of-steam-wishlist-conversions"
+      ],
+      "label": "Other evergreen genres"
+    }
+  ]
+}
