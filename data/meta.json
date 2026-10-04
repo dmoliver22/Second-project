@@ -13,6 +13,10 @@
   "changelog": [
     {
       "date": "2026-10-04",
+      "note": "Every box (cards, callouts, suggestions, panels, chat answers) has a Copy button that copies its text without the buttons."
+    },
+    {
+      "date": "2026-10-04",
       "note": "Idea lab: 80 ideas generated from four lenses, scored by two independent judges, top 12 critiqued by a player/market critic and a build/distribution critic. Five finalists (Leaflings, If It Fits, Lemon Ink, Cuttings, Fold Together) added with full plans. New scoring factors: originality and fit for a solo creator."
     },
     {

@@ -560,3 +560,23 @@ textarea.brief { width: 100%; font-family: var(--font-data); font-size: .78rem; 
 .build-steps li:last-child { border-bottom: 0; }
 .build-gate { font-size: .86rem; background: var(--accent-wash); border-radius: 6px; padding: 6px 10px; }
 @media (max-width: 640px) { .build-steps li { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+
+/* ---------- copy buttons on boxes ---------- */
+.has-copy { position: relative; }
+.copy-btn {
+  position: absolute; top: -11px; right: 12px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px;
+  font: inherit; font-size: .72rem; font-weight: 600; line-height: 1; cursor: pointer;
+  color: var(--ink-2); background: var(--surface); border: 1px solid var(--line-strong); border-radius: 999px;
+  transition: opacity .15s;
+}
+.copy-btn svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.copy-btn:hover { color: var(--accent); border-color: var(--accent); }
+.copy-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.copy-btn.done { color: var(--good-ink); border-color: var(--good); }
+@media (hover: hover) {
+  .copy-btn { opacity: 0; }
+  .has-copy:hover > .copy-btn, .has-copy:focus-within > .copy-btn, .copy-btn.done { opacity: 1; }
+}
+@media (hover: none) { .copy-btn span { display: none; } .copy-btn.done span { display: inline; } }
+.copying .copy-btn, .copying .ask-btn, .copying .btn { display: none !important; }

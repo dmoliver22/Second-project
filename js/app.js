@@ -1150,6 +1150,69 @@
     label();
   }
 
+  // ---------- copy buttons on every box ----------
+  const COPY_BOXES = ".card, .callout, .sugg, .kpi, .takeaway, .hero-rec, .panel, .msg.assistant, .look-layout, .money-shot, .fact, .climb > li, .cal-month";
+  const ICON_COPY = "M9 9h10v10H9z M15 9V5H5v10h4";
+  const ICON_DONE = "M5 12.5l4.5 4.5L19 7.5";
+  function boxText(box) {
+    box.classList.add("copying");
+    const text = box.innerText.replace(/\n{3,}/g, "\n\n").trim();
+    box.classList.remove("copying");
+    return text;
+  }
+  async function copyText(text) {
+    try { await navigator.clipboard.writeText(text); return true; } catch (e) { /* blocked in some frames; fall back */ }
+    const ta = h("textarea", { style: "position:fixed;top:0;left:0;opacity:0" });
+    ta.value = text;
+    document.body.append(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    ta.remove();
+    return ok;
+  }
+  function copyButton(box) {
+    const btn = h("button", { type: "button", class: "copy-btn", title: "Copy text", "aria-label": "Copy the text in this box" }, svgIcon(ICON_COPY), h("span", { text: "Copy" }));
+    btn.addEventListener("click", async (e) => {
+      e.preventDefault(); e.stopPropagation();
+      const ok = await copyText(boxText(box));
+      const label = btn.querySelector("span");
+      if (ok) {
+        btn.replaceChild(svgIcon(ICON_DONE), btn.querySelector("svg"));
+        label.textContent = "Copied";
+        btn.classList.add("done");
+      } else {
+        const r = document.createRange(); r.selectNodeContents(box);
+        const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+        label.textContent = "Selected: press Ctrl/Cmd+C";
+      }
+      clearTimeout(btn._t);
+      btn._t = setTimeout(() => { btn.replaceChild(svgIcon(ICON_COPY), btn.querySelector("svg")); label.textContent = "Copy"; btn.classList.remove("done"); }, 1800);
+    });
+    return btn;
+  }
+  function addCopyButtons(root) {
+    if (!(root instanceof Element)) return;
+    const boxes = root.matches(COPY_BOXES) ? [root, ...root.querySelectorAll(COPY_BOXES)] : root.querySelectorAll(COPY_BOXES);
+    boxes.forEach((box) => {
+      if (box.querySelector(":scope > .copy-btn") || box.matches(".chat") || box.querySelector(".chart")) return;
+      box.classList.add("has-copy");
+      box.append(copyButton(box));
+    });
+  }
+  function watchCopyBoxes() {
+    addCopyButtons(document.body);
+    new MutationObserver((records) => {
+      for (const r of records) {
+        if (r.target instanceof Element && r.target.closest(".has-copy")) {
+          const box = r.target.closest(COPY_BOXES);
+          if (box && !box.querySelector(":scope > .copy-btn")) box.append(copyButton(box));
+        }
+        r.addedNodes.forEach(addCopyButtons);
+      }
+    }).observe(document.body, { childList: true, subtree: true });
+  }
+
   window.Atlas = { h, data: () => D, ranked: rankedConcepts };
 
   async function start() {
@@ -1166,6 +1229,7 @@
     drawer().addEventListener("click", (e) => { if (e.target === drawer()) drawer().close(); });
     window.addEventListener("hashchange", route);
     route();
+    watchCopyBoxes();
   }
   start();
 })();
