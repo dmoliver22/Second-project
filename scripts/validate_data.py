@@ -139,6 +139,25 @@ if concepts:
         if missing:
             problems.append(f"concepts.json preset {pr.get('id')}: weights missing {sorted(missing)}")
 
+pit = load("pitches.json") if (DATA / "pitches.json").exists() else None
+if pit:
+    keys = {f["key"] for f in (concepts or {}).get("scoring", {}).get("factors", [])}
+    seen = set()
+    for i, x in enumerate(pit.get("pitches", [])):
+        w = f"pitches.json [{i}] {x.get('name', '?')}"
+        need(x, ["id", "name", "family", "theme", "hook", "oneLiner", "loop", "clip", "look", "path", "effort", "why", "risk", "firstStep", "scores"], w)
+        if x.get("id") in seen:
+            problems.append(f"{w}: duplicate id")
+        seen.add(x.get("id"))
+        if x.get("path") not in ("web-first", "browser test → Steam", "Steam-first"):
+            problems.append(f"{w}: path must be web-first | browser test → Steam | Steam-first")
+        if x.get("effort") not in ("small", "medium", "large"):
+            problems.append(f"{w}: effort must be small | medium | large")
+        for k in keys:
+            v = (x.get("scores") or {}).get(k)
+            if not isinstance(v, int) or not 1 <= v <= 10:
+                problems.append(f"{w}: scores.{k} must be an integer 1-10")
+
 live = DATA / "live" / "steam.json"
 if live.exists():
     try:

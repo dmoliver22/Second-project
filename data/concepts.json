@@ -555,7 +555,13 @@
         "reach": "Weak portal fit: a 'draw your own leaf' build for CrazyGames or YouTube Playables, and a Discord Activity where a server shares one herbarium",
         "graduate": "iOS/Android app, where camera games belong; Steam not needed"
       },
-      "origin": "Idea lab"
+      "origin": "Idea lab",
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "medium"
+      }
     },
     {
       "id": "if-it-fits",
@@ -981,7 +987,13 @@
         "reach": "Poki or CrazyGames early, then YouTube Playables; a Discord Activity sandbox later",
         "graduate": "$4–5 Steam and mobile premium edition with 100 rooms"
       },
-      "origin": "Idea lab"
+      "origin": "Idea lab",
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "medium"
+      }
     },
     {
       "id": "lemon-ink",
@@ -1412,7 +1424,13 @@
         "reach": "Discord Activity (notes in a server) and a portal 'dead-letter office' story edition on Poki/CrazyGames/YouTube Playables",
         "graduate": "iOS/Android app with real occasion reminders; Steam not needed"
       },
-      "origin": "Idea lab"
+      "origin": "Idea lab",
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "small"
+      }
     },
     {
       "id": "cuttings",
@@ -1860,7 +1878,13 @@
         "reach": "Discord Activities (pass cuttings around a server) plus creator videos; portals, Playables and TikTok Minis are a poor fit because the gift loop needs network calls",
         "graduate": "iOS/Android app with a home-screen widget and notifications; Steam not needed"
       },
-      "origin": "Idea lab"
+      "origin": "Idea lab",
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "medium"
+      }
     },
     {
       "id": "fold-together",
@@ -2323,7 +2347,13 @@
         "reach": "CrazyGames two-player category with keyboard mode, YouTube Playables for the offline same-device mode, then a Discord Activity for long-distance couples and friends",
         "graduate": "Steam at $3–5 with controller support and Remote Play Together, launched through Couch Co-Op Fest; mobile apps optional"
       },
-      "origin": "Idea lab"
+      "origin": "Idea lab",
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "medium"
+      }
     },
     {
       "id": "treat-box",
@@ -2708,7 +2738,13 @@
           "deliverable": "Shelf themes; sticker drop",
           "gate": "1%+ buy cosmetics"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "small"
+      }
     },
     {
       "id": "tea-cart",
@@ -3098,7 +3134,13 @@
           "deliverable": "Seasonal teas, events",
           "gate": "Retention holding"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Top-down management & tycoon",
+        "theme": "Cozy walk-and-restock venue",
+        "path": "web-first",
+        "effort": "small"
+      }
     },
     {
       "id": "cozy-corner",
@@ -3488,7 +3530,13 @@
           "deliverable": "New theme daily, packs monthly",
           "gate": "Gallery submissions growing"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "medium"
+      }
     },
     {
       "id": "pond-party",
@@ -3899,7 +3947,13 @@
           "deliverable": "Bigger worlds, $4.99",
           "gate": "Strong group retention"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "medium"
+      }
     },
     {
       "id": "petal-drop",
@@ -4286,7 +4340,13 @@
           "deliverable": "Steam and Switch deluxe",
           "gate": "1M+ web plays"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "small"
+      }
     },
     {
       "id": "daily-tidy",
@@ -4698,7 +4758,13 @@
           "deliverable": "Steam and mobile collection",
           "gate": "10k+ daily players"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "small"
+      }
     },
     {
       "id": "driftgarden",
@@ -5201,7 +5267,13 @@
           "deliverable": "New sea region DLC",
           "gate": "Base game above 90% positive"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Other evergreen genres",
+        "theme": "Survival-craft in a fresh region",
+        "path": "Steam-first",
+        "effort": "large"
+      }
     },
     {
       "id": "lantern-stall",
@@ -5626,7 +5698,13 @@
           "deliverable": "Port with a partner",
           "gate": "PC traction"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Top-down management & tycoon",
+        "theme": "Single-dish street-food stall",
+        "path": "browser test → Steam",
+        "effort": "medium"
+      }
     },
     {
       "id": "terraces",
@@ -6060,7 +6138,13 @@
           "deliverable": "Touch-first port, then console",
           "gate": "PC traction"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Other evergreen genres",
+        "theme": "Diorama builder, new setting",
+        "path": "browser test → Steam",
+        "effort": "medium"
+      }
     },
     {
       "id": "lamplighters-rest",
@@ -6489,7 +6573,13 @@
           "deliverable": "Next October's paid chapter",
           "gate": "Base game still selling"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Top-down management & tycoon",
+        "theme": null,
+        "path": "browser test → Steam",
+        "effort": "large"
+      }
     },
     {
       "id": "bloom-harbor-roblox",
@@ -6795,7 +6885,13 @@
           "deliverable": "Seeds and events",
           "gate": "Growth in concurrent players"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "Roblox",
+        "effort": "small"
+      }
     },
     {
       "id": "quilt-porch",
@@ -7192,7 +7288,13 @@
           "deliverable": "Packs, Android tablets, Switch 2",
           "gate": "Retention holds"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Web & link originals",
+        "theme": null,
+        "path": "web-first",
+        "effort": "small"
+      }
     },
     {
       "id": "sill",
@@ -7504,7 +7606,13 @@
           "deliverable": "Seasonal plants",
           "gate": "Followers gained"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Top-down management & tycoon",
+        "theme": "Browser-tab idle venue",
+        "path": "Steam-first",
+        "effort": "small"
+      }
     },
     {
       "id": "well-loved",
@@ -7946,7 +8054,13 @@
           "deliverable": "Seasonal jobs, paid plush pack, Switch port with a partner",
           "gate": "1,000+ Steam reviews"
         }
-      ]
+      ],
+      "finder": {
+        "family": "First-person craft & shop sims",
+        "theme": "Small-object restoration",
+        "path": "browser test → Steam",
+        "effort": "medium"
+      }
     },
     {
       "id": "glaze-day",
@@ -8394,7 +8508,13 @@
           "deliverable": "Raku pack, seasonal glazes, Switch port",
           "gate": "1,000+ Steam reviews"
         }
-      ]
+      ],
+      "finder": {
+        "family": "First-person craft & shop sims",
+        "theme": "Hand-craft studio (Dressmaker-adjacent)",
+        "path": "browser test → Steam",
+        "effort": "medium"
+      }
     },
     {
       "id": "stem-and-ribbon",
@@ -8840,7 +8960,13 @@
           "deliverable": "Wedding pack, seasonal events, Switch port",
           "gate": "1,000+ Steam reviews"
         }
-      ]
+      ],
+      "finder": {
+        "family": "First-person craft & shop sims",
+        "theme": "Florist atelier",
+        "path": "browser test → Steam",
+        "effort": "medium"
+      }
     },
     {
       "id": "soak-and-snooze",
@@ -9290,7 +9416,13 @@
           "deliverable": "Seasonal events, paid species packs, then a mobile port",
           "gate": "Steam passes 25,000 units or web revenue covers the port"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Top-down management & tycoon",
+        "theme": "Animal or spirit bathhouse",
+        "path": "web-first",
+        "effort": "medium"
+      }
     },
     {
       "id": "tidepool-lane",
@@ -9737,7 +9869,13 @@
           "deliverable": "Reef and fjord packs, Switch and tablet versions",
           "gate": "25,000+ Steam units"
         }
-      ]
+      ],
+      "finder": {
+        "family": "Top-down management & tycoon",
+        "theme": "Small cozy aquarium",
+        "path": "Steam-first",
+        "effort": "large"
+      }
     }
   ]
 }

@@ -93,7 +93,7 @@
   const FILES = {
     meta: "data/meta.json", market: "data/market.json", games: "data/games.json", niches: "data/niches.json",
     playbook: "data/playbook.json", insights: "data/insights.json", concepts: "data/concepts.json", live: "data/live/steam.json",
-    gotomarket: "data/gotomarket.json", verification: "data/verification.json", culture: "data/culture.json", ideation: "data/ideation.json", genres: "data/genres.json",
+    gotomarket: "data/gotomarket.json", verification: "data/verification.json", culture: "data/culture.json", ideation: "data/ideation.json", genres: "data/genres.json", pitches: "data/pitches.json",
   };
   let D = null;
 
@@ -106,7 +106,7 @@
         if (!r.ok) throw new Error(r.status);
         out[k] = await r.json();
       } catch (e) {
-        if (!["live", "verification", "ideation", "genres"].includes(k)) throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
+        if (!["live", "verification", "ideation", "genres", "pitches"].includes(k)) throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
         out[k] = null;
       }
     }));
@@ -160,6 +160,7 @@
     overview: { label: "Briefing", icon: "M3 12l9-8 9 8M5 10v10h14V10", render: renderOverview },
     ask: { label: "Ask the atlas", icon: "M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12zM8 11h.01M12 11h.01M16 11h.01", render: () => window.AtlasAsk.render() },
     saved: { label: "Saved", icon: "M6 3h12v18l-6-4.5L6 21z", render: renderSaved },
+    finder: { label: "Game finder", icon: "M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zM8 8h.01M16 8h.01M12 12h.01M8 16h.01M16 16h.01", render: renderFinder },
     concepts: { label: "What to build", icon: "M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z", render: renderConcepts },
     launch: { label: "Launch & grow", icon: "M5 19l4-4M14 4l6 6-8 8-6-6zM14 4l-2-2M20 10l2 2M3 21l2-2", render: renderLaunch },
     spread: { label: "What spreads", icon: "M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4", render: renderSpread },
@@ -360,6 +361,7 @@
         h("div", { class: "sugg-list" }, rankedSplit().main.map(suggestionRow)),
         h("div", { class: "chips", style: "gap:18px" }, h("a", { href: "#concepts", text: "Compare all five side by side →" }),
           h("a", { href: "#concepts", text: "Rank by your own weights →", onclick: () => store.set("openWeights", true) }),
+          h("a", { href: "#finder", text: "Browse every idea or roll for one →" }),
           activePreset(weights()) ? null : h("span", { class: "chip accent", text: "Ranked with your custom weights" }))),
       I.decisions ? section("The calls", "What the data says to do, decision by decision. Click evidence to see the game or chart behind it.",
         h("div", { class: "grid grid-2" }, I.decisions.map((d) => h("article", { class: "card decision" },
@@ -579,7 +581,12 @@
             t.evidence && t.evidence.length ? h("details", {}, h("summary", { text: "Evidence (" + t.evidence.length + ")", style: "cursor:pointer;font-size:.85rem;color:var(--accent)" }),
               h("ul", { class: "list-plain", style: "margin-top:8px" }, t.evidence.map((e) => h("li", { style: "font-size:.85rem" }, e.fact, " ", conf(confOf(e.confidence)), " ", srcOne(e.source))))) : null,
             t.risk ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Watch out:"), " ", t.risk) : null,
-            t.conceptId && conceptName(t.conceptId) ? h("div", { class: "chips" }, h("button", { type: "button", class: "btn primary", text: "Our game for this: " + conceptName(t.conceptId), onclick: () => goConcept(t.conceptId) })) : null,
+            (() => { const games = gamesForTheme(t.theme, t.conceptIds);
+              return h("div", { class: "our-games" }, h("div", { class: "eyebrow", text: games.length ? "Our games for this (" + games.length + ")" : "No game for this yet" }),
+                games.length ? h("ul", { class: "list-plain" }, games.map((it) => h("li", {}, h("button", { type: "button", class: "link-btn our-game", onclick: () => openItem(it) },
+                  h("b", { text: it.name }), h("span", { class: "muted", text: " · " + (it.kind === "concept" ? "full plan" : it.kind === "generated" ? "generated" : "pitch") + " · " + it.score.toFixed(1) })),
+                  h("div", { class: "muted", style: "font-size:.82rem", text: it.hook })))) : null,
+                genButton({ kind: "theme", family: g.label || g.genre, theme: t.theme, detail: t.detail }, { label: "New ideas for this theme" })); })(),
             askBtn("Ask about this gap", `Is "${t.theme}" (${g.label || g.genre}) a good first game for me? What would the core loop, the clip and the first playable look like?`))))) : null,
         g.takenThemes && g.takenThemes.length ? h("div", { class: "section", style: "gap:8px" }, h("h3", { text: "Already done well (don't clone)" }), h("div", { class: "chips" }, g.takenThemes.map((t) => h("span", { class: "chip wrap", text: t })))) : null,
         proven.length ? section("Track record", "Hits and misses in this genre. Click a row for the details and source.",
@@ -602,6 +609,7 @@
       ].filter(Boolean));
     }
     draw();
+    const offGen = Generated.on(() => { if (!document.body.contains(body)) { offGen(); return; } draw(); });
     return h("div", { class: "view" },
       viewHead("Proven genres", P.title || "Evergreen genres and the gaps inside them", P.intro),
       takeaway("genres"),
@@ -1291,7 +1299,7 @@
     function backfill() {
       if (backfilled || readOnly) return;
       backfilled = true;
-      [...items.values()].filter((x) => (x.kind === "concept" || x.kind === "idea") && !x.snapshot).forEach((x) => {
+      [...items.values()].filter((x) => (x.kind === "concept" || x.kind === "idea" || x.kind === "pitch") && !x.snapshot).forEach((x) => {
         const snap = snapshotFor(x);
         if (!snap.snapshot) return;
         if (mode === "db") write(x.id, () => col.doc(x.id).update(snap), "update");
@@ -1336,6 +1344,7 @@
     if (!D) return null;
     if (item.kind === "concept") return D.concepts.concepts.find((c) => c.id === item.ref) || null;
     if (item.kind === "idea") return (D.ideation ? D.ideation.ideas.find((x) => x.id === item.ref) : null) || null;
+    if (item.kind === "pitch") return ((D.pitches && D.pitches.pitches) || []).find((x) => x.id === item.ref) || (typeof Generated !== "undefined" && Generated.get(item.ref)) || null;
     return null;
   }
   // a full copy of the plan or idea as it is right now, kept with the save
@@ -1383,7 +1392,7 @@
   });
 
   function renderSaved() {
-    const KINDS = [["", "All"], ["concept", "Game suggestions"], ["idea", "Idea lab"], ["chat", "Chat answers"], ["own", "Your own"]];
+    const KINDS = [["", "All"], ["concept", "Game suggestions"], ["pitch", "Pitches"], ["idea", "Idea lab"], ["chat", "Chat answers"], ["own", "Your own"]];
     let kind = store.get("savedKind", "");
     let openId = null;
     const view = h("div", { class: "view" });
@@ -1433,6 +1442,18 @@
           noteBox(item),
           h("div", { class: "chips saved-actions" }, c ? h("button", { type: "button", class: "btn primary", text: item.snapshot ? "Open your saved plan" : "See the plan", onclick: () => (item.snapshot ? openSaved(item) : goConcept(c.id)) }) : null,
             savedState(item) === "updated" ? h("button", { type: "button", class: "btn", text: "See the latest plan", onclick: () => goConcept(item.ref) }) : null, removeBtn, when));
+      }
+      if (item.kind === "pitch") {
+        const x = item.snapshot || liveFor(item);
+        return h("article", { class: "card saved-card" },
+          h("div", { class: "card-top" }, h("div", {}, h("div", { class: "eyebrow", text: "Pitch" + (x && x.theme ? " · " + x.theme : "") }), h("h3", { text: x ? x.name : item.title })),
+            x && x.scores ? h("span", { class: "chip good", text: weighted(x.scores, weights()).toFixed(1) + " / 10" }) : null),
+          h("p", { class: "ink-2", text: x ? x.hook : item.hook }),
+          x && x.look && x.look.palette ? h("div", { class: "look-line" }, swatches(x.look, true), h("span", { text: x.look.short })) : null,
+          x && x.oneLiner ? h("p", { style: "font-size:.9rem", text: x.oneLiner }) : null,
+          copyNote(item),
+          noteBox(item),
+          h("div", { class: "chips saved-actions" }, x ? h("button", { type: "button", class: "btn primary", text: "Details", onclick: () => openPitch(x, String(x.id).startsWith("gen-") ? "generated" : "pitch") }) : null, removeBtn, when));
       }
       if (item.kind === "idea") {
         const x = item.snapshot || ideaById(item.ref);
@@ -1529,6 +1550,314 @@
     return view;
   }
 
+  // ---------- game finder: every suggestion in one pool ----------
+  const FAMILIES = ["First-person craft & shop sims", "Top-down management & tycoon", "Other evergreen genres", "Web & link originals"];
+  const PATHS = ["web-first", "browser test → Steam", "Steam-first", "Roblox"];
+  const EFFORTS = ["small", "medium", "large"];
+  const intScores = (sc) => { const o = {}; Object.keys(sc || {}).forEach((k) => { const v = sc[k]; o[k] = typeof v === "number" ? v : v && v.score; }); return o; };
+  function weighted(scores, w) {
+    let t = 0, s = 0;
+    D.concepts.scoring.factors.forEach((f) => { const v = scores[f.key]; if (typeof v === "number") { t += v * w[f.key]; s += w[f.key]; } });
+    return s ? +(t / s).toFixed(2) : 0;
+  }
+
+  // ideas you generated and kept: same store pattern as Saved (account db on claude.ai, this browser otherwise)
+  const Generated = (() => {
+    let items = new Map(), mode = "local", col = null;
+    const listeners = new Set();
+    const emit = () => listeners.forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });
+    const fromLocal = () => { items = new Map((store.get("generated", []) || []).filter((x) => x && x.id).map((x) => [x.id, x])); };
+    async function init() {
+      fromLocal(); emit();
+      if (!window.claude || typeof window.claude.use !== "function") return;
+      let db = null;
+      try { db = await window.claude.use("db"); } catch (e) { db = null; }
+      if (!db) return;
+      col = db.collection("generated");
+      let first = true;
+      col.onSnapshot((snap) => {
+        const next = new Map(snap.docs.map((d) => [d.id, Object.assign({}, d.data(), { id: d.id })]));
+        if (first) {
+          first = false; mode = "db";
+          [...items.values()].filter((x) => !next.has(x.id)).forEach((x) => { next.set(x.id, x); const b = Object.assign({}, x); delete b.id; col.doc(x.id).set(b).catch(() => {}); });
+          store.set("generated", []);
+        }
+        items = next; emit();
+      }, () => { mode = "local"; col = null; fromLocal(); emit(); });
+    }
+    async function add(p) {
+      const body = Object.assign({}, p); delete body.id;
+      if (mode === "db") { await col.doc(p.id).set(body); return; }
+      items.set(p.id, p); store.set("generated", [...items.values()]); emit();
+    }
+    async function remove(id) {
+      if (mode === "db") { await col.doc(id).delete(); return; }
+      items.delete(id); store.set("generated", [...items.values()]); emit();
+    }
+    return { init, add, remove, list: () => [...items.values()], has: (id) => items.has(id), get: (id) => items.get(id), on: (fn) => { listeners.add(fn); return () => listeners.delete(fn); }, synced: () => mode === "db" };
+  })();
+
+  // one shape for full plans, research pitches and generated pitches
+  function pool() {
+    const w = weights();
+    const out = [];
+    D.concepts.concepts.forEach((c) => {
+      const f = c.finder || {};
+      out.push({ kind: "concept", id: c.id, name: c.name, hook: c.hook || c.oneLiner, oneLiner: c.oneLiner, family: f.family || "Web & link originals", theme: f.theme || null,
+        path: f.path || "web-first", effort: f.effort || "medium", genre: (c.spec || {}).genre, camera: c.look && c.look.camera ? c.look.camera.split(/[,.;]/)[0] : "",
+        price: (c.spec || {}).price, clip: c.look && c.look.clip, look: c.look, scores: intScores(c.scores), score: weighted(intScores(c.scores), w), track: c.track, origin: c.origin || "Market research", src: c });
+    });
+    ((D.pitches && D.pitches.pitches) || []).forEach((p) => out.push(Object.assign({}, p, { kind: "pitch", origin: "Pitch", score: weighted(p.scores, w), src: p })));
+    Generated.list().forEach((p) => out.push(Object.assign({}, p, { kind: "generated", origin: "Generated by you", score: weighted(p.scores || {}, w), src: p })));
+    return out;
+  }
+  const poolEntry = (it) => ({ id: (it.kind === "concept" ? "concept:" : "pitch:") + it.id, kind: it.kind === "concept" ? "concept" : "pitch", ref: it.id, title: it.name, hook: it.hook || "" });
+  // which games answer an open theme
+  function gamesForTheme(theme, ids) {
+    return pool().filter((it) => it.theme === theme || (it.kind === "concept" && (ids || []).includes(it.id))).sort((a, b) => b.score - a.score);
+  }
+  function openItem(it) {
+    if (it.kind === "concept") { const d = drawer(); if (d.open) d.close(); goConcept(it.id); return; }
+    openPitch(it.src, it.kind);
+  }
+  function openPitch(p, kind) {
+    const sc = D.concepts.scoring.factors.filter((f) => typeof (p.scores || {})[f.key] === "number").map((f) => f.label + " " + p.scores[f.key]).join(" · ");
+    openPanel((kind === "generated" ? "Generated by you" : "Pitch") + " · " + (p.family || "") + (p.theme ? " · " + p.theme : ""), p.name, [
+      ["Hook", p.hook], ["What you do", p.oneLiner], ["Core loop", (p.loop || []).join(" → ")], ["The 5-second clip", p.clip],
+      ["Look", [p.look && p.look.short, p.look && p.look.vibe, p.look && p.look.palette ? "Palette: " + p.look.palette.map((c) => c.name + " " + c.hex).join(", ") : ""].filter(Boolean)],
+      ["Genre and camera", [p.genre, p.camera].filter(Boolean).join(" · ")], ["Ship path", p.path], ["Effort", p.effort], ["Price and money", [p.price, p.money].filter(Boolean).join(". ")],
+      ["Borrows from", (p.comps || []).join(", ")], ["Why it could work", p.why], ["Risk", p.risk], ["First playable to test the hook", p.firstStep],
+      ["Scores (1–10)", sc], p.seed ? ["Generated from", p.seed] : null].filter(Boolean), [], null);
+    const head = drawer().querySelector(".drawer-body .section");
+    if (head) head.append(h("div", { class: "chips" }, saveBtn({ id: "pitch:" + p.id, kind: "pitch", ref: p.id, title: p.name, hook: p.hook || "" }),
+      genButton({ kind: "idea", item: p }, { inDrawer: true }),
+      askBtn("Expand into a full plan", `Expand the pitch "${p.name}" (${p.hook}) into a full plan for me: the look, the core loop, the steps from browser slice to launch with the signal for each step, marketing, money and the biggest risks. Pitch details: ${JSON.stringify({ oneLiner: p.oneLiner, loop: p.loop, clip: p.clip, path: p.path, comps: p.comps, why: p.why, risk: p.risk })}`)));
+  }
+
+  // ---------- generate similar ideas (asks Claude from the page) ----------
+  let sampleFn = null, sampleChecked = false;
+  async function getSampler() {
+    if (sampleChecked) return sampleFn;
+    sampleChecked = true;
+    try { sampleFn = window.claude && typeof window.claude.use === "function" ? await window.claude.use("sample") : null; } catch (e) { sampleFn = null; }
+    if (sampleFn && typeof sampleFn.json !== "function") sampleFn = null;
+    return sampleFn;
+  }
+  // seed = {kind:"idea", item} | {kind:"theme", family, theme, detail}
+  function genPrompt(seed) {
+    const G = D.genres ? D.genres.genres : [];
+    const fam = seed.kind === "idea" ? seed.item.family : seed.family;
+    const theme = seed.kind === "idea" ? seed.item.theme : seed.theme;
+    const g = G.find((x) => x.label === fam);
+    const t = g && (g.openThemes || []).find((x) => x.theme === theme);
+    const names = pool().map((x) => x.name).join(", ");
+    const calib = D.concepts.concepts.slice(-8).map((c) => c.name + ": " + Object.entries(intScores(c.scores)).map(([k, v]) => k + " " + v).join(", ")).join("\n");
+    const factorKeys = D.concepts.scoring.factors.map((f) => f.key + " (" + f.label + ")").join(", ");
+    return [
+      "You design cozy video games for a one-person studio that builds with AI coding tools. Art, music and writing must be human-made or bought asset packs (never AI art). The creator markets on TikTok and YouTube, tests games free in the browser (itch.io / own site) and takes proven ones to Steam or web portals. Never give time estimates.",
+      "Write exactly 3 NEW game pitches on PROVEN loops with an under-served theme and one tactile moment that clips well. Not novelty toys, not straight clones of taken themes. Each must be clearly different from the seed and from each other (different venue, verb, audience or format) and must not reuse any existing name.",
+      seed.kind === "idea" ? "SEED (make 3 ideas in the same spirit, same family" + (theme ? " and theme" : "") + "): " + JSON.stringify({ name: seed.item.name, hook: seed.item.hook, oneLiner: seed.item.oneLiner, genre: seed.item.genre, family: fam, theme }) : "SEED THEME: " + theme + " (" + (seed.detail || "") + "), family: " + fam,
+      g ? "RESEARCH FOR THIS FAMILY: what wins now: " + (g.whatWinsNow || []).join(" ") + " | what fails: " + (g.whatFails || []).join(" ") + " | taken themes (don't clone): " + (g.takenThemes || []).join(", ") + (t ? " | why this theme is open: " + t.whyOpen + " | risk: " + (t.risk || "") : "") : "",
+      "EXISTING NAMES (don't reuse): " + names,
+      "Score every pitch honestly 1-10 on: " + factorKeys + ". Calibrate against these existing scores:\n" + calib,
+      'Reply with ONLY a JSON array of 3 objects with these keys: name, hook (max 14 words), oneLiner, genre, camera, loop (array of 3-5 steps), clip, look {short, vibe, palette: [{name, hex "#RRGGBB"} x5]}, path ("web-first" | "browser test → Steam" | "Steam-first"), effort ("small" | "medium" | "large"), price, money, comps (array of real games), why, risk, firstStep, scores {' + D.concepts.scoring.factors.map((f) => f.key).join(", ") + "} (integers).",
+    ].filter(Boolean).join("\n\n");
+  }
+  function normalizePitch(p, seed) {
+    const fam = seed.kind === "idea" ? seed.item.family : seed.family;
+    const theme = seed.kind === "idea" ? seed.item.theme : seed.theme;
+    const clamp = (v) => Math.max(1, Math.min(10, Math.round(Number(v) || 5)));
+    const scores = {};
+    D.concepts.scoring.factors.forEach((f) => (scores[f.key] = clamp((p.scores || {})[f.key])));
+    const str = (v, n) => String(v == null ? "" : v).slice(0, n || 600);
+    const pal = ((p.look && p.look.palette) || []).filter((c) => /^#[0-9a-f]{6}$/i.test(String(c && c.hex))).slice(0, 6).map((c) => ({ name: str(c.name, 40), hex: c.hex }));
+    const name = str(p.name, 60).trim() || "Untitled idea";
+    return {
+      id: "gen-" + slug(name).slice(0, 40) + "-" + Date.now().toString(36).slice(-5),
+      name, family: fam || "Other evergreen genres", theme: theme || null,
+      hook: str(p.hook, 160), oneLiner: str(p.oneLiner, 400), genre: str(p.genre, 80), camera: str(p.camera, 40),
+      loop: (Array.isArray(p.loop) ? p.loop : []).slice(0, 6).map((x) => str(x, 140)), clip: str(p.clip, 300),
+      look: { short: str(p.look && p.look.short, 120), vibe: str(p.look && p.look.vibe, 500), palette: pal },
+      path: PATHS.includes(p.path) ? p.path : "browser test → Steam", effort: EFFORTS.includes(p.effort) ? p.effort : "medium",
+      price: str(p.price, 120), money: str(p.money, 300), comps: (Array.isArray(p.comps) ? p.comps : []).slice(0, 5).map((x) => str(x, 60)),
+      why: str(p.why, 500), risk: str(p.risk, 300), firstStep: str(p.firstStep, 400), scores,
+      seed: seed.kind === "idea" ? "More like " + seed.item.name : "Theme: " + theme, createdAt: new Date().toISOString(),
+    };
+  }
+  // a button that generates 3 ideas into a results box placed after it (or into opts.target)
+  function genButton(seed, opts) {
+    const o = opts || {};
+    const wrap = h("span", { class: "gen-wrap", hidden: "" });
+    const btn = h("button", { type: "button", class: "ask-btn gen-btn" }, svgIcon("M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"), o.label || "More like this");
+    wrap.append(btn);
+    getSampler().then((s) => { if (s) wrap.hidden = false; });
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const target = o.target || (o.inDrawer ? drawer().querySelector(".drawer-body") : null);
+      const box = genResults(seed);
+      if (o.inDrawer && target) { target.insertBefore(box, target.children[1] || null); box.scrollIntoView({ behavior: "smooth", block: "nearest" }); }
+      else if (target) target.prepend(box);
+      else { const host = btn.closest(".card, .finder-card, article") || btn.parentElement; host.after(box); }
+    });
+    return wrap;
+  }
+  function genResults(seed) {
+    const box = h("div", { class: "gen-box" });
+    const status = h("p", { class: "muted", "aria-live": "polite", text: "Writing 3 new ideas… this can take up to a minute." });
+    const ctl = new AbortController();
+    const stop = h("button", { type: "button", class: "btn", text: "Stop", onclick: () => ctl.abort() });
+    const head = h("div", { class: "card-top", style: "align-items:center" }, h("b", { text: seed.kind === "idea" ? "More like " + seed.item.name : "New ideas for: " + seed.theme }), stop);
+    const list = h("div", { class: "grid grid-3" });
+    box.append(head, status, list);
+    (async () => {
+      const s = await getSampler();
+      if (!s) { status.textContent = "Generating needs the dashboard open on claude.ai."; stop.remove(); return; }
+      try {
+        const res = await s.json(genPrompt(seed), { signal: ctl.signal, modelTier: "default", cache: false });
+        const arr = (Array.isArray(res) ? res : res && Array.isArray(res.pitches) ? res.pitches : []).slice(0, 3).map((p) => normalizePitch(p, seed));
+        if (!arr.length) throw { code: "invalid_json" };
+        status.textContent = "Keep the ones you like: kept ideas join the Game finder and the theme they belong to.";
+        list.replaceChildren(...arr.map((p) => genCard(p)));
+      } catch (e) {
+        const code = e && e.code;
+        status.textContent = code === "cancelled" ? "Stopped." : code === "not_granted" ? "Generating isn't allowed for this page. You can turn it on from the page's permissions." : code === "rate_limited" ? "Too many requests just now. Try again in a little while." : code === "invalid_json" ? "The ideas came back garbled. Try again." : "Couldn't generate ideas right now. Try again.";
+      }
+      stop.remove();
+      head.append(h("button", { type: "button", class: "btn", text: "Close", onclick: () => box.remove() }));
+    })();
+    return box;
+  }
+  function genCard(p) {
+    const keep = h("button", { type: "button", class: "btn primary", text: "Keep" });
+    keep.addEventListener("click", async () => {
+      keep.disabled = true; keep.textContent = "Keeping…";
+      try { await Generated.add(p); keep.textContent = "Kept"; } catch (e) { keep.disabled = false; keep.textContent = "Keep (retry)"; }
+    });
+    return h("article", { class: "card finder-card" },
+      h("div", { class: "eyebrow", text: [p.genre, p.path].filter(Boolean).join(" · ") }),
+      h("h3", { text: p.name }), h("p", { class: "ink-2", text: p.hook }),
+      p.look && p.look.palette && p.look.palette.length ? h("div", { class: "look-line" }, swatches(p.look, true), h("span", { text: p.look.short })) : null,
+      h("p", { style: "font-size:.88rem", text: p.oneLiner }),
+      h("div", { class: "chips" }, keep, h("button", { type: "button", class: "btn", text: "Details", onclick: () => openPitch(p, "generated") })));
+  }
+
+  // ---------- smart roll ----------
+  function rollPicks(cands, n) {
+    const seen = store.get("rollSeen", []);
+    const savedIds = new Set(Saved.list().map((x) => x.ref));
+    const byId = new Map(pool().map((x) => [x.id, x]));
+    const famLike = {}, themeLike = {};
+    Saved.list().forEach((s) => { const it = byId.get(s.ref); if (!it) return; famLike[it.family] = (famLike[it.family] || 0) + 1; if (it.theme) themeLike[it.theme] = (themeLike[it.theme] || 0) + 1; });
+    const ranked = [...cands].sort((a, b) => b.score - a.score);
+    const top5 = new Set(ranked.slice(0, 5).map((x) => x.id));
+    let left = cands.filter((x) => !savedIds.has(x.id) && x.track !== "side");
+    if (!left.length) left = cands.slice();
+    const adj = (x) => x.score + Math.min(0.75, 0.25 * (famLike[x.family] || 0)) + Math.min(0.7, 0.35 * (themeLike[x.theme] || 0)) - (seen.includes(x.id) ? 1.5 : 0);
+    const picks = [];
+    while (picks.length < n && left.length) {
+      const vals = left.map((x) => {
+        let v = adj(x);
+        picks.forEach((p) => { if (p.family === x.family) v -= 1.1; if (p.theme && p.theme === x.theme) v -= 1.2; });
+        return v;
+      });
+      const max = Math.max(...vals);
+      const ws = vals.map((v) => Math.exp((v - max) / 0.55));
+      let r = Math.random() * ws.reduce((a, b) => a + b, 0), i = 0;
+      while (r > ws[i] && i < ws.length - 1) { r -= ws[i]; i++; }
+      const x = left.splice(i, 1)[0];
+      const why = [];
+      if (top5.has(x.id)) why.push("Top 5 for your weights");
+      else why.push("Scores " + x.score.toFixed(1) + " for your weights");
+      if (themeLike[x.theme]) why.push("Same theme as " + themeLike[x.theme] + " you saved");
+      else if (famLike[x.family]) why.push("Like " + famLike[x.family] + " you saved");
+      if (!seen.includes(x.id)) why.push("New to you");
+      if (picks.length && picks.every((p) => p.family !== x.family)) why.push("A different genre");
+      if (x.kind === "generated") why.push("One you generated");
+      picks.push(Object.assign({}, x, { why }));
+    }
+    store.set("rollSeen", [...picks.map((p) => p.id), ...seen.filter((id) => !picks.some((p) => p.id === id))].slice(0, 40));
+    return picks;
+  }
+
+  function finderCard(it, why) {
+    const P = { "web-first": "Web first", "browser test → Steam": "Browser test → Steam", "Steam-first": "Steam first", Roblox: "Roblox" };
+    return h("article", { class: "card finder-card" + (why ? " rolled" : "") },
+      h("div", { class: "card-top" },
+        h("div", {}, h("div", { class: "eyebrow", text: it.kind === "concept" ? "Full plan" + (it.origin && it.origin !== "Market research" ? " · " + it.origin : "") : it.kind === "generated" ? "Generated by you" : "Pitch" }), h("h3", { text: it.name })),
+        h("span", { class: "chip good", text: it.score.toFixed(1) })),
+      why ? h("div", { class: "chips" }, why.map((t) => h("span", { class: "chip accent", text: t }))) : null,
+      h("p", { class: "ink-2", text: it.hook }),
+      it.look && it.look.palette && it.look.palette.length ? h("div", { class: "look-line" }, swatches(it.look, true), h("span", { text: it.look.short })) : null,
+      it.clip ? h("p", { style: "font-size:.86rem" }, h("b", { text: "The clip: " }), it.clip) : null,
+      h("div", { class: "chips" }, [it.genre, P[it.path] || it.path, it.effort ? "Effort: " + it.effort : null].filter(Boolean).map((t) => h("span", { class: "chip", text: t }))),
+      h("div", { class: "chips finder-actions" },
+        h("button", { type: "button", class: "btn primary", text: it.kind === "concept" ? "See the plan" : "Details", onclick: () => openItem(it) }),
+        saveBtn(poolEntry(it)),
+        genButton({ kind: "idea", item: it }),
+        it.kind === "generated" ? h("button", { type: "button", class: "btn", text: "Delete", title: "Remove this generated idea from the list", onclick: () => Generated.remove(it.id) }) : null));
+  }
+
+  function renderFinder() {
+    let fam = store.get("fFam", ""), path = store.get("fPath", ""), effort = store.get("fEffort", ""), src = store.get("fSrc", ""), sort = store.get("fSort", "score"), group = store.get("fGroup", true), q = "";
+    const controls = h("div", { class: "section", style: "gap:10px" });
+    const rollBox = h("div", { class: "section", id: "roll-box" });
+    const genHost = h("div", { class: "section" });
+    const listBox = h("div", { class: "section" });
+    const count = h("span", { class: "result-count" });
+    const SORTS = { score: ["Best for your weights", (x) => x.score], provenDemand: ["Proven demand", (x) => x.scores.provenDemand || 0], marketability: ["Clip appeal", (x) => x.scores.marketability || 0], soloSpeed: ["Fastest to build", (x) => x.scores.soloSpeed || 0], instantPlay: ["Plays from a link", (x) => x.scores.instantPlay || 0], monetization: ["Revenue potential", (x) => x.scores.monetization || 0] };
+    const filtered = () => pool().filter((x) => (!fam || x.family === fam) && (!path || x.path === path) && (!effort || x.effort === effort) && (!src || x.kind === src)
+      && (!q || (x.name + " " + x.hook + " " + (x.theme || "") + " " + (x.genre || "")).toLowerCase().includes(q)));
+    const sel = (id, label, val, opts, on) => { const s = h("select", { id }, opts.map(([v, t]) => { const o = h("option", { value: v, text: t }); if (v === val) o.selected = true; return o; })); s.addEventListener("change", () => on(s.value)); return h("div", { class: "field" }, h("label", { for: id, text: label }), s); };
+    function drawControls() {
+      const all = pool();
+      const search = h("input", { type: "search", id: "f-q", placeholder: "Search ideas", value: q });
+      search.addEventListener("input", () => { q = search.value.trim().toLowerCase(); drawList(); });
+      controls.replaceChildren(
+        h("div", { class: "chips", role: "group", "aria-label": "Genre family" }, ["", ...FAMILIES].map((f) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(fam === f), onclick: () => { fam = f; store.set("fFam", f); drawControls(); drawList(); } },
+          h("span", { class: "p-name", text: f || "All" }), h("span", { class: "muted", style: "font-size:.75rem", text: String(all.filter((x) => !f || x.family === f).length) })))),
+        h("div", { class: "filters" },
+          sel("f-path", "Ship path", path, [["", "Any"], ...PATHS.map((p) => [p, p])], (v) => { path = v; store.set("fPath", v); drawList(); }),
+          sel("f-effort", "Effort", effort, [["", "Any"], ...EFFORTS.map((p) => [p, p])], (v) => { effort = v; store.set("fEffort", v); drawList(); }),
+          sel("f-src", "Source", src, [["", "Everything"], ["concept", "Full plans"], ["pitch", "Pitches"], ["generated", "Generated by you"]], (v) => { src = v; store.set("fSrc", v); drawList(); }),
+          sel("f-sort", "Sort by", sort, Object.entries(SORTS).map(([k, v]) => [k, v[0]]), (v) => { sort = v; store.set("fSort", v); drawList(); }),
+          h("div", { class: "field" }, h("label", { for: "f-q", text: "Search" }), search),
+          h("label", { class: "check" }, (() => { const c = h("input", { type: "checkbox" }); c.checked = group; c.addEventListener("change", () => { group = c.checked; store.set("fGroup", group); drawList(); }); return c; })(), " Group by theme"),
+          count));
+    }
+    function drawList() {
+      const rows = filtered().sort((a, b) => SORTS[sort][1](b) - SORTS[sort][1](a) || b.score - a.score);
+      count.textContent = rows.length + " ideas";
+      if (!rows.length) { listBox.replaceChildren(h("div", { class: "empty", text: "Nothing matches these filters." })); return; }
+      if (!group) { listBox.replaceChildren(h("div", { class: "grid grid-3" }, rows.map((x) => finderCard(x)))); return; }
+      const groups = new Map();
+      rows.forEach((x) => { const k = x.family + "||" + (x.theme || "Other ideas"); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(x); });
+      const famOrder = (k) => FAMILIES.indexOf(k.split("||")[0]);
+      listBox.replaceChildren(...[...groups.entries()].sort((a, b) => famOrder(a[0]) - famOrder(b[0]) || (a[0].endsWith("||Other ideas") ? 1 : 0) - (b[0].endsWith("||Other ideas") ? 1 : 0)).map(([k, items]) => {
+        const [f, t] = k.split("||");
+        const th = D.genres && t !== "Other ideas" ? D.genres.genres.flatMap((g) => g.openThemes || []).find((x) => x.theme === t) : null;
+        return h("section", { class: "section finder-group" },
+          h("div", { class: "card-top", style: "align-items:baseline" }, h("div", {}, h("div", { class: "eyebrow", text: f }), h("h2", { style: "font-size:var(--step-1)", text: t + " (" + items.length + ")" }), th && th.detail ? h("p", { class: "muted", style: "font-size:.85rem", text: th.detail }) : null),
+            th ? genButton({ kind: "theme", family: f, theme: t, detail: th.detail }, { label: "New ideas for this theme" }) : null),
+          h("div", { class: "grid grid-3" }, items.map((x) => finderCard(x))));
+      }));
+    }
+    function roll() {
+      const picks = rollPicks(filtered(), 3);
+      rollBox.replaceChildren(h("div", { class: "card-top", style: "align-items:center" }, h("h2", { style: "font-size:var(--step-1)", text: "Rolled for you" }),
+        h("button", { type: "button", class: "btn", text: "Roll again", onclick: roll })),
+        picks.length ? h("div", { class: "grid grid-3" }, picks.map((p) => finderCard(p, p.why))) : h("div", { class: "empty", text: "Nothing to roll with these filters." }));
+    }
+    drawControls(); drawList();
+    const off = Generated.on(() => { if (!document.body.contains(listBox)) { off(); return; } drawControls(); drawList(); });
+    return h("div", { class: "view" },
+      viewHead("Game finder", "Every game idea, organized", "All " + pool().length + " suggestions in one place: the full plans, the research pitches for every proven-genre theme, and ideas you generate. Filter and sort them, roll for a smart pick, or press More like this on any idea to get three new ones."),
+      takeaway("finder"),
+      h("div", { class: "roll-bar" },
+        h("button", { type: "button", class: "btn primary roll-btn", onclick: roll }, svgIcon("M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2zM8 8h.01M16 8h.01M12 12h.01M8 16h.01M16 16h.01"), "Roll 3 ideas"),
+        h("p", { class: "muted", style: "font-size:.85rem;max-width:60ch", text: "Not random: picks lean to the highest scores for your current weights and filters, toward genres you've saved, away from ideas it already showed you, and mix genres." })),
+      rollBox, controls, genHost, listBox);
+  }
+
   // ---------- copy buttons on every box ----------
   const COPY_BOXES = ".card, .callout, .sugg, .kpi, .takeaway, .hero-rec, .panel, .msg.assistant, .look-layout, .money-shot, .fact, .climb > li, .cal-month";
   const ICON_COPY = "M9 9h10v10H9z M15 9V5H5v10h4";
@@ -1608,6 +1937,7 @@
     drawer().addEventListener("click", (e) => { if (e.target === drawer()) drawer().close(); });
     window.addEventListener("hashchange", route);
     Saved.init();
+    Generated.init();
     route();
     watchCopyBoxes();
   }

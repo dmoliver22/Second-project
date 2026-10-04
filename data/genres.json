@@ -327,7 +327,9 @@
           "risk": "Dressmaker clones will flood in within 6-12 months. Craft steps need careful physical feel (yarn and clay are hard to simulate convincingly), and a weak version reads as a mini-game.",
           "fullTheme": "Hand-craft studio 'Dressmaker-adjacent' sims: knitting / yarn shop, pottery and ceramics glazing, candle and soap making, jewellery bench",
           "detail": "Knitting or yarn shop, pottery and ceramics, candle or soap making",
-          "conceptId": "glaze-day"
+          "conceptIds": [
+            "glaze-day"
+          ]
         },
         {
           "theme": "Small-object restoration",
@@ -352,7 +354,9 @@
           "risk": "The fastest-growing pocket, so competition is arriving now. Pick a narrow object category quickly and avoid a generic repair shop.",
           "fullTheme": "Small-object restoration with nostalgia: watch and clock repair, vintage camera repair, plush and toy hospital, bookbinding / old-book restoration, kintsugi",
           "detail": "Watch and clock repair, vintage cameras, plush toys, bookbinding",
-          "conceptId": "well-loved"
+          "conceptIds": [
+            "well-loved"
+          ]
         },
         {
           "theme": "Florist atelier",
@@ -372,7 +376,9 @@
           "risk": "No breakout has proven the ceiling. Flowers are many small 3D assets with the risk of tedious placement, and the demand signal is inferred rather than measured.",
           "fullTheme": "Florist / bouquet atelier (first-person, arranging as the core verb)",
           "detail": "First-person bouquet arranging as the core action",
-          "conceptId": "stem-and-ribbon"
+          "conceptIds": [
+            "stem-and-ribbon"
+          ]
         },
         {
           "theme": "Thrift and vintage resale",
@@ -396,7 +402,8 @@
           ],
           "risk": "Thrifty Business's weak result may mean the theme itself is soft. Success depends on the item-reveal and appraisal hook, not the shop.",
           "fullTheme": "Thrift / vintage resale with a sort-and-price 'treasure hunt' reveal",
-          "detail": "Sort, price and reveal finds: a treasure-hunt loop"
+          "detail": "Sort, price and reveal finds: a treasure-hunt loop",
+          "conceptIds": []
         },
         {
           "theme": "Record store",
@@ -415,7 +422,8 @@
           ],
           "risk": "Music licensing is impossible for a solo developer, so the music must be original or royalty-free. Demand evidence is anecdotal.",
           "fullTheme": "Record store / vinyl shop (crate digging, cleaning and grading records, listening booth)",
-          "detail": "Crate digging, cleaning and grading vinyl, a listening booth"
+          "detail": "Crate digging, cleaning and grading vinyl, a listening booth",
+          "conceptIds": []
         },
         {
           "theme": "Pet grooming salon",
@@ -439,7 +447,8 @@
           ],
           "risk": "Fur, cutting and animal animation are the hardest technical art problems on this list, and there is no AI art, so asset quality decides it.",
           "fullTheme": "Pet grooming salon (first-person wash, brush, clip)",
-          "detail": "First-person wash, brush and clip"
+          "detail": "First-person wash, brush and clip",
+          "conceptIds": []
         },
         {
           "theme": "Barber or hair salon",
@@ -453,7 +462,8 @@
           ],
           "risk": "Hair simulation is technically hard, and mobile clones lower perceived value.",
           "fullTheme": "Barber / hair salon in first-person on PC",
-          "detail": "First-person, on PC"
+          "detail": "First-person, on PC",
+          "conceptIds": []
         },
         {
           "theme": "Bookbinding or a story bookshop",
@@ -472,7 +482,8 @@
           ],
           "risk": "The plain bookshop is now taken, so the twist has to carry the game, which adds scope.",
           "fullTheme": "Bookbinding / bookshop with a magical or narrative layer (beyond Bookshop Simulator's plain reskin)",
-          "detail": "A magical or narrative layer beyond a plain bookshop sim"
+          "detail": "A magical or narrative layer beyond a plain bookshop sim",
+          "conceptIds": []
         }
       ],
       "whatWinsNow": [
@@ -832,7 +843,10 @@
           "risk": "The format is easy to clone and portal/mobile revenue depends on ads, so the art and theme have to carry the difference; Poki curation is selective.",
           "fullTheme": "Cozy idle-arcade 'walk-and-stock' loop (Monkey Mart / My Perfect Hotel format) with a handmade cozy art style and a venue that hasn't been used: e.g. bathhouse, flower stall, ramen night market, plant nursery",
           "detail": "The Monkey Mart / My Perfect Hotel loop with handmade art and an unused venue",
-          "conceptId": "soak-and-snooze"
+          "conceptIds": [
+            "soak-and-snooze",
+            "tea-cart"
+          ]
         },
         {
           "theme": "Animal or spirit bathhouse",
@@ -852,7 +866,9 @@
           "risk": "Several small entrants appeared in 2025, so the window is narrowing, and onsen games aimed at the Japanese market may crowd the niche.",
           "fullTheme": "Bathhouse / onsen / spa for animals or spirits (top-down or side-view)",
           "detail": "Onsen or spa, top-down or side view",
-          "conceptId": "soak-and-snooze"
+          "conceptIds": [
+            "soak-and-snooze"
+          ]
         },
         {
           "theme": "Small cozy aquarium",
@@ -877,7 +893,9 @@
           "risk": "Aquarium players may expect deep simulation (water chemistry, compatibility); a cozy version must find a hook that is satisfying on video, such as breeding rare fish or tank decoration.",
           "fullTheme": "Small cozy aquarium (or cozy natural-history museum / botanical greenhouse) manager",
           "detail": "Or a cozy natural-history museum or greenhouse",
-          "conceptId": "tidepool-lane"
+          "conceptIds": [
+            "tidepool-lane"
+          ]
         },
         {
           "theme": "Tiny curation shop",
@@ -901,7 +919,8 @@
           ],
           "risk": "Recommendation loops need a lot of written content (items, customers), and fast followers of Tiny Bookshop will crowd the space in 2026-27.",
           "fullTheme": "Tiny-venue 'curation/recommendation' shops in the Tiny Bookshop mould: record store, tea house, yarn/craft shop, perfume shop, plant nursery",
-          "detail": "Tiny Bookshop's 'recommend the right thing' with records, tea, yarn or plants"
+          "detail": "Tiny Bookshop's 'recommend the right thing' with records, tea, yarn or plants",
+          "conceptIds": []
         },
         {
           "theme": "Browser-tab idle venue",
@@ -920,7 +939,10 @@
           ],
           "risk": "The desktop-strip format was copied quickly after 2024, and low prices (under $10) cap revenue per player.",
           "fullTheme": "Desktop/browser-tab idle venue: a cozy shop, bathhouse or cafe that runs in a strip or small window",
-          "detail": "A cozy shop, bathhouse or café that runs in a strip or small window"
+          "detail": "A cozy shop, bathhouse or café that runs in a strip or small window",
+          "conceptIds": [
+            "sill"
+          ]
         },
         {
           "theme": "Grow it, then serve it",
@@ -944,7 +966,8 @@
           ],
           "risk": "Hybrids need two full loops' worth of content, which is the scope trap for a solo developer; keep one loop shallow.",
           "fullTheme": "Grow-it-then-serve-it hybrids in an untaken venue (coffee farm-to-cup, tea plantation to tea house, orchard to cider bar)",
-          "detail": "Coffee farm to cup, tea field to teahouse, in an untaken venue"
+          "detail": "Coffee farm to cup, tea field to teahouse, in an untaken venue",
+          "conceptIds": []
         },
         {
           "theme": "Single-dish street-food stall",
@@ -963,7 +986,10 @@
           ],
           "risk": "Food assembly games are crowded on mobile; only a cuisine, characters or aesthetic that stand out will break through.",
           "fullTheme": "Single-screen street-food stall or night market with one tactile assembly action (GPGP format with a specific cuisine: taiyaki, boba, crêpes, tacos, dumplings)",
-          "detail": "A night-market stall with one satisfying assembly action"
+          "detail": "A night-market stall with one satisfying assembly action",
+          "conceptIds": [
+            "lantern-stall"
+          ]
         }
       ],
       "whatWinsNow": [
@@ -1274,7 +1300,9 @@
           "fullTheme": "CLEANING/RESTORATION: tactile restoration of one beloved object category other than cartridges (e.g. vintage teddy bears/plush, old books and bindings, ceramic kintsugi, watches, sneakers, vinyl records), each object carrying a tiny owner story",
           "detail": "Tactile restoration of one beloved kind of object (plush, books, records, kintsugi)",
           "genre": "Cleaning & restoration",
-          "conceptId": "well-loved"
+          "conceptIds": [
+            "well-loved"
+          ]
         },
         {
           "theme": "Story told through objects",
@@ -1294,7 +1322,8 @@
           "risk": "Short, handcrafted content per level is labour-intensive in art (each object hand-drawn), and lookalikes of Unpacking get called clones.",
           "fullTheme": "ORGANIZING/STORY: Unpacking-style 'story told through objects' in a new life domain (e.g. sorting a grandparent's attic, packing a suitcase for each trip, filling a lunchbox or a pencil case through school years, curating a museum drawer)",
           "detail": "Unpacking-style, set in a new part of life",
-          "genre": "Organizing"
+          "genre": "Organizing",
+          "conceptIds": []
         },
         {
           "theme": "Cozy co-op hangout (not fishing)",
@@ -1324,7 +1353,8 @@
           "risk": "Networking/lobbies and moderation are the hard part, and hangout games live or die on a meme moment you cannot plan.",
           "fullTheme": "COZY CO-OP 2-4P: small-price 'hangout' game around one relaxing verb that is NOT fishing (e.g. birdwatching/photography walks, stargazing camp, community garden plots, kite flying, foraging), with drawing/emotes for emergent clips",
           "detail": "A cheap 2–4 player hangout around one relaxing activity: birdwatching, stargazing, a community garden",
-          "genre": "Co-op"
+          "genre": "Co-op",
+          "conceptIds": []
         },
         {
           "theme": "Low-attention idle, not farming",
@@ -1349,7 +1379,10 @@
           "risk": "Idle is the fastest-growing format after shopkeeping, so the window is closing; differentiation must come from theme and art, and it does not translate well to a browser link.",
           "fullTheme": "DESKTOP-IDLE / LOW-ATTENTION COZY with a non-farm theme (e.g. a windowsill herb garden, aquarium/pond, bakery oven strip, tiny train line, bird feeder) that runs at the screen edge",
           "detail": "A screen-edge game with a fresh theme: windowsill herbs, an aquarium, a tiny shop",
-          "genre": "Idle"
+          "genre": "Idle",
+          "conceptIds": [
+            "sill"
+          ]
         },
         {
           "theme": "Heritage cooking story",
@@ -1369,7 +1402,8 @@
           "risk": "Short narrative games have a small sales ceiling and need authentic cultural writing; the reach comes from the community whose cuisine it is.",
           "fullTheme": "COZY COOKING (non-management): narrative 'cook one family's recipes' games for a specific cuisine (e.g. Filipino, Polish, Ethiopian, Korean grandma kitchen), where cooking steps are the puzzle",
           "detail": "Cook one family's recipes, Venba-style, for a specific cuisine",
-          "genre": "Cooking"
+          "genre": "Cooking",
+          "conceptIds": []
         },
         {
           "theme": "Diorama builder, new setting",
@@ -1389,7 +1423,10 @@
           "risk": "Tiny Glade's magic is its custom procedural geometry and rendering; a builder with asset-pack pieces snapped to a grid will look ordinary next to it.",
           "fullTheme": "TOWN/VILLAGE BUILDER: goal-less diorama builders for an unused setting (harbour/lighthouse coast, Japanese garden/zen pond, underwater coral reef, treehouse village)",
           "detail": "Goal-less builders for an unused place: harbour, lighthouse, mountain village",
-          "genre": "Builder"
+          "genre": "Builder",
+          "conceptIds": [
+            "terraces"
+          ]
         },
         {
           "theme": "Survival-craft in a fresh region",
@@ -1409,7 +1446,10 @@
           "risk": "The biggest content and 3D-art load of any option here (Dinkum took ~8 years), so it is a poor first project for a solo dev.",
           "fullTheme": "COZY SURVIVAL-CRAFT / LIFE SIM with an under-used real region or biome (as Dinkum did with the Australian outback): e.g. Nordic fjord cabin, Pacific-island, Scottish highlands, Canadian lake country",
           "detail": "A real, under-used region or biome, as Dinkum did with Australia",
-          "genre": "Survival-craft"
+          "genre": "Survival-craft",
+          "conceptIds": [
+            "driftgarden"
+          ]
         }
       ],
       "whatWinsNow": [
