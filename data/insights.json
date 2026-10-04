@@ -392,6 +392,7 @@
     }
   ],
   "suggestedQuestions": [
+    "Compare the five suggestions for my team and budget. Which should I pick?",
     "If I only have $200k and 3 people, what should I build?",
     "Pressure-test Driftgarden: what is most likely to kill it?",
     "Which outliers should I copy, and exactly what should I take from each?",
@@ -426,7 +427,7 @@
       "linkText": "See your first 90 days"
     },
     "concepts": {
-      "text": "Driftgarden ranks first on the default weights because it sits on two gaps at once. Lantern Stall is the better first game if your team can't build online multiplayer. Move the weights to match your studio.",
+      "text": "Five different bets, each on a different gap. Driftgarden and Lantern Stall are the strongest: co-op in uncrowded settings. Terraces is the most marketable. Lamplighter's Rest and Quilt Porch are smaller and safer to build but have lower ceilings. Pick by the drivers you believe and the team you can hire.",
       "link": "#ask",
       "linkText": "Ask which fits your studio"
     },

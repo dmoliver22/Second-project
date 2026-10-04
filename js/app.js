@@ -47,6 +47,7 @@
     up: "M4 17l6-6 4 4 6-8M14 7h6v6",
     flat: "M4 12h16M14 6l6 6-6 6",
     down: "M4 7l6 6 4-4 6 8M14 17h6v-6",
+    warn: "M12 3l9.5 17h-19zM12 10v4M12 17h.01",
   };
 
   const store = {
@@ -206,9 +207,84 @@
       compact ? null : askBtn("Ask how to apply this", `What exactly should my studio take from ${o.name}'s story (${o.stat})? Be specific to my plan.`));
   }
 
+  // ---------- concept helpers ----------
+  function rankedSplit(w) {
+    w = w || weights();
+    const all = D.concepts.concepts.map((c) => ({ c, score: scoreConcept(c, w) })).sort((a, b) => b.score - a.score);
+    return { all, main: all.filter((r) => r.c.track !== "side").slice(0, 5), side: all.filter((r) => r.c.track === "side") };
+  }
+  function specRows(c) {
+    const sp = c.spec || {};
+    return [
+      ["Genre", sp.genre], ["Players", sp.players], ["Setting", sp.setting], ["What you do", sp.coreVerb], ["Look", sp.look],
+      ["Session", c.sessionLength], ["Price", c.pricing.base], ["Business model", c.pricing.model], ["Launch platforms", c.platforms.launch.join(", ")],
+      ["Team", sp.team], ["Time to launch", c.devMonths + " months"], ["Budget", c.budgetUSD.label], ["Audience", sp.audience],
+      ["Closest games", (c.comps || []).slice(0, 3).join(", ")], ["Stands out by", sp.differentiator],
+    ].filter((r) => r[1]);
+  }
+  const STRENGTH = {
+    strong: { label: "Strong signal", n: 3 }, medium: { label: "Medium signal", n: 2 }, supporting: { label: "Supporting", n: 1 }, caution: { label: "Watch out", n: 0 },
+  };
+  let pendingNiche = null;
+  function refAction(ref) {
+    if (!ref) return null;
+    if (ref.game) { const g = D.games.find((x) => x.id === ref.game); return g ? h("button", { type: "button", class: "chip ev", text: "Game: " + g.name, onclick: () => openGame(g) }) : null; }
+    if (ref.niche) { const n = D.niches.niches.find((x) => x.name === ref.niche); return n ? h("button", { type: "button", class: "chip ev", text: "Niche: " + (n.shortName || n.name), onclick: () => { pendingNiche = n.id; location.hash = "#gaps"; } }) : null; }
+    if (ref.link) return h("a", { class: "chip ev", href: ref.link, text: "See " + (VIEWS[ref.link.slice(1)] || { label: "more" }).label });
+    return null;
+  }
+  function driverList(drivers, opts) {
+    opts = opts || {};
+    const list = (drivers || []).filter((d) => !opts.noCaution || d.strength !== "caution").slice(0, opts.limit || 99);
+    return h("ul", { class: "drivers" }, list.map((d) => {
+      const st = STRENGTH[d.strength] || STRENGTH.supporting;
+      return h("li", { class: "driver " + d.strength },
+        d.strength === "caution" ? h("span", { class: "dir peaking", title: st.label }, svgIcon(ICON.warn), "Watch out") : h("span", { class: "strength", title: st.label }, pips(st.n, 3)),
+        h("div", { class: "driver-body" }, h("b", { text: d.signal }), opts.brief ? null : h("p", { class: "ink-2", text: d.detail }), opts.brief ? null : refAction(d.ref)));
+    }));
+  }
+  function miniBar(v, max) { return h("span", { class: "mini-bar", "aria-hidden": "true" }, h("i", { style: `width:${(v / (max || 10)) * 100}%` })); }
+
+  function suggestionRow(r, i) {
+    const c = r.c, sp = c.spec || {};
+    const caution = (c.drivers || []).find((d) => d.strength === "caution");
+    return h("article", { class: "sugg" + (i === 0 ? " top" : "") },
+      h("div", { class: "sugg-rank" }, h("span", { class: "eyebrow", text: i === 0 ? "#1 · Top pick" : "#" + (i + 1) }),
+        h("span", { class: "sugg-score", text: r.score.toFixed(1) }), miniBar(r.score)),
+      h("div", { class: "sugg-main" },
+        h("h3", { text: c.name }), h("p", { class: "ink-2", text: c.hook }),
+        h("div", { class: "chips" }, [sp.genre, sp.players, sp.price, c.devMonths + " months", c.budgetUSD.label].map((t) => h("span", { class: "chip", text: t })))),
+      h("div", { class: "sugg-drivers" }, h("div", { class: "eyebrow", text: "Driven by" }), driverList(c.drivers, { noCaution: true, limit: 3, brief: true }),
+        caution ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Watch out:"), " ", caution.signal) : null),
+      h("div", { class: "sugg-actions" }, h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(c.id) }),
+        askBtn("Pressure-test", `Pressure-test ${c.name} for my studio: the biggest risks, what to validate first, and what you would change.`)));
+  }
+
+  function compareTable(main, onPick) {
+    const S = D.concepts.scoring;
+    const best = {};
+    S.factors.forEach((f) => (best[f.key] = Math.max(...main.map((r) => r.c.scores[f.key].score))));
+    const topScore = Math.max(...main.map((r) => r.score));
+    const specLabels = specRows(main[0].c).map((x) => x[0]);
+    const row = (label, cells, cls) => h("tr", { class: cls || "" }, h("th", { scope: "row", text: label }), cells);
+    return h("div", { class: "table-wrap compare-wrap" }, h("table", { class: "compare" },
+      h("thead", {}, h("tr", {}, h("th", { text: "" }), main.map((r, i) => h("th", { scope: "col" },
+        h("button", { type: "button", class: "compare-head", onclick: () => onPick(r.c.id) },
+          h("span", { class: "eyebrow", text: "#" + (i + 1) }), h("span", { class: "compare-name", text: r.c.name }), h("span", { class: "muted", style: "font-size:.75rem", text: "See plan ↓" })))))),
+      h("tbody", {},
+        row("Hook", main.map((r) => h("td", { class: "ink-2", text: r.c.hook }))),
+        row("Overall score", main.map((r) => h("td", { class: r.score === topScore ? "best" : "" }, h("span", { class: "score-cell" }, miniBar(r.score), h("b", { text: r.score.toFixed(1) })))), "score-row"),
+        S.factors.map((f) => row(f.label, main.map((r) => {
+          const v = r.c.scores[f.key].score;
+          return h("td", { class: v === best[f.key] ? "best" : "", title: r.c.scores[f.key].why }, h("span", { class: "score-cell" }, miniBar(v), h("span", { text: v })));
+        }))),
+        row("Driven by", main.map((r) => h("td", {}, driverList(r.c.drivers, { noCaution: true, limit: 2, brief: true })))),
+        row("Watch out", main.map((r) => { const d = (r.c.drivers || []).find((x) => x.strength === "caution"); return h("td", { class: "ink-2", text: d ? d.signal : "—" }); })),
+        specLabels.map((label) => row(label, main.map((r) => { const hit = specRows(r.c).find((x) => x[0] === label); return h("td", { text: hit ? hit[1] : "—" }); }))))));
+  }
+
   function renderOverview() {
     const I = D.insights, M = D.market;
-    const top = rankedConcepts()[0];
     const niches = [...D.niches.niches].sort((a, b) => b.opportunity - a.opportunity);
     const rel = (M.steamCozyReleasesByYear || []).filter((r) => r.count != null);
     const relBox = chartBox();
@@ -218,18 +294,9 @@
 
     return h("div", { class: "view" },
       viewHead("Briefing · data as of " + D.meta.asOf, I.headline, I.subhead),
-      h("div", { class: "hero-rec" },
-        h("div", { class: "section" },
-          h("div", { class: "eyebrow", text: "What to build first" }),
-          h("h2", { text: top.c.name }),
-          h("p", { class: "ink-2", text: top.c.oneLiner }),
-          h("p", { text: top.c.pitch }),
-          h("div", { class: "chips" }, h("a", { class: "btn primary", href: "#concepts", text: "See the build & run plan" }),
-            askBtn("Pressure-test it", `Pressure-test ${top.c.name} for my studio: what is most likely to make it fail, and what should I validate first?`))),
-        h("div", { class: "section" },
-          h("div", { class: "eyebrow", text: "Opportunity score" }),
-          h("div", { class: "score-big", text: top.score.toFixed(1) }),
-          h("p", { class: "muted", text: "Top of six concepts, weighted across demand, competition, fit for a small team, revenue potential, marketability and momentum. Adjust the weights on What to build." }))),
+      section("Five games to consider", "Ranked by the data. Each shows what kind of game it is and the market signals behind it.",
+        h("div", { class: "sugg-list" }, rankedSplit().main.map(suggestionRow)),
+        h("div", {}, h("a", { href: "#concepts", text: "Compare all five side by side →" }))),
       I.decisions ? section("The calls", "What the data says to do, decision by decision. Click evidence to see the game or chart behind it.",
         h("div", { class: "grid grid-2" }, I.decisions.map((d) => h("article", { class: "card decision" },
           h("div", { class: "card-top" }, h("div", { class: "eyebrow", text: d.topic }), conf(d.confidence)),
@@ -363,6 +430,7 @@
     const list = h("div", {});
     const box = chartBox();
     const openNiche = (id) => { const el = document.getElementById("niche-" + id); if (el) { el.open = true; el.scrollIntoView({ behavior: "smooth", block: "center" }); } };
+    if (pendingNiche) { const id = pendingNiche; pendingNiche = null; later(() => setTimeout(() => openNiche(id), 50)); }
     later(() => C.scatter(box, niches.map((n) => ({
       x: n.supply, y: n.demand, label: n.name, short: n.shortName, emphasis: topIds.has(n.id),
       tip: `Demand ${n.demand} · Supply ${n.supply} · Opportunity ${n.opportunity}`, sub: n.opportunityNote, onClick: () => openNiche(n.id),
@@ -566,36 +634,48 @@
     const S = D.concepts.scoring;
     const w = weights();
     const wrap = h("div", { class: "view" });
-    const tabs = h("div", { class: "concept-tabs", role: "tablist" });
-    const detail = h("div", { class: "section" });
+    const compare = h("div", {});
+    const tabs = h("div", { class: "concept-tabs", role: "tablist", "aria-label": "Suggestions" });
+    const sideTabs = h("div", { class: "concept-tabs side", role: "tablist", "aria-label": "Side bets" });
+    const detail = h("div", { class: "section", id: "concept-detail" });
     let selected = store.get("concept", null);
 
     const sliders = h("div", { class: "weights" }, S.factors.map((f) => {
       const out = h("b", { text: w[f.key] });
       const input = h("input", { type: "range", min: "0", max: "5", step: "1", value: String(w[f.key]), id: "w-" + f.key, "aria-label": f.label + " weight" });
-      input.addEventListener("input", () => { w[f.key] = +input.value; out.textContent = input.value; store.set("weights", w); drawTabs(); });
+      input.addEventListener("input", () => { w[f.key] = +input.value; out.textContent = input.value; store.set("weights", w); drawAll(); });
       return h("div", { class: "weight", title: f.description }, h("div", { class: "weight-top" }, h("label", { for: "w-" + f.key, text: f.label }), out), input);
     }));
-    const reset = h("button", { class: "btn", type: "button", text: "Reset weights", onclick: () => { store.set("weights", null); D.concepts.scoring.factors.forEach((f) => { w[f.key] = f.weight; const el = document.getElementById("w-" + f.key); if (el) { el.value = f.weight; el.previousSibling.lastChild.textContent = f.weight; } }); drawTabs(); } });
+    const reset = h("button", { class: "btn", type: "button", text: "Reset weights", onclick: () => { store.set("weights", null); S.factors.forEach((f) => { w[f.key] = f.weight; const el = document.getElementById("w-" + f.key); if (el) { el.value = f.weight; el.previousSibling.lastChild.textContent = f.weight; } }); drawAll(); } });
 
-    function drawTabs() {
-      const ranked = D.concepts.concepts.map((c) => ({ c, score: scoreConcept(c, w) })).sort((a, b) => b.score - a.score);
-      if (!selected || !ranked.find((r) => r.c.id === selected)) selected = ranked[0].c.id;
-      tabs.replaceChildren(...ranked.map((r, i) => h("button", { type: "button", role: "tab", class: "concept-tab", "aria-selected": String(r.c.id === selected), onclick: () => { selected = r.c.id; store.set("concept", selected); drawTabs(); } },
-        h("span", { class: "t-score", text: "#" + (i + 1) + " · " + r.score.toFixed(1) + " / 10" }), h("span", { class: "t-name", text: r.c.name }), h("span", { class: "muted", style: "font-size:.78rem", text: r.c.niche }))));
-      const cur = ranked.find((r) => r.c.id === selected);
-      detail.replaceChildren(conceptDetail(cur.c, cur.score, ranked.indexOf(cur) + 1));
+    const pick = (id, scroll) => { selected = id; store.set("concept", id); drawAll(); if (scroll) detail.scrollIntoView({ behavior: "smooth", block: "start" }); };
+    const tab = (r, label) => h("button", { type: "button", role: "tab", class: "concept-tab", "aria-selected": String(r.c.id === selected), onclick: () => pick(r.c.id) },
+      h("span", { class: "t-score", text: label + " · " + r.score.toFixed(1) + " / 10" }), h("span", { class: "t-name", text: r.c.name }), h("span", { class: "muted", style: "font-size:.78rem", text: (r.c.spec || {}).genre || r.c.niche }));
+
+    function drawAll() {
+      const { all, main, side } = rankedSplit(w);
+      if (!selected || !all.find((r) => r.c.id === selected)) selected = main[0].c.id;
+      compare.replaceChildren(compareTable(main, (id) => pick(id, true)));
+      tabs.replaceChildren(...main.map((r, i) => tab(r, "#" + (i + 1))));
+      sideTabs.replaceChildren(...side.map((r) => tab(r, "Side bet")));
+      const cur = all.find((r) => r.c.id === selected);
+      const rank = main.indexOf(cur);
+      detail.replaceChildren(conceptDetail(cur.c, cur.score, rank >= 0 ? rank + 1 : null));
       afterMount.splice(0).forEach((fn) => fn());
     }
 
     append(wrap, [
-      viewHead("What to build", "Game concepts ranked by the data", D.concepts.intro),
+      viewHead("What to build", "Five games the data points to", D.concepts.intro),
       takeaway("concepts"),
       h("div", { class: "callout warn" }, h("b", { text: "Read this first" }), h("p", { class: "ink-2", text: D.concepts.caveat })),
-      panel("Scoring weights", "Drag to match what matters to you. The ranking updates live and is saved in this browser.", sliders, h("div", {}, reset)),
-      tabs, detail,
+      section("Side by side", "Bold marks the best of the five on each factor. Hover a factor score for the reasoning; click a name for its full plan.", compare),
+      h("details", { class: "panel weights-panel" }, h("summary", {}, h("b", { text: "Change what matters" }), h("span", { class: "muted", text: " Scoring weights; the ranking updates live and is saved in this browser" })),
+        sliders, h("div", {}, reset)),
+      section("Full plans", null, tabs,
+        h("div", { class: "side-bets" }, h("div", { class: "eyebrow", text: "Side bets: small projects to run alongside, not instead" }), sideTabs),
+        detail),
     ]);
-    later(drawTabs);
+    later(drawAll);
     return wrap;
   }
 
@@ -608,7 +688,7 @@
     return h("div", { class: "section", style: "gap:20px" },
       h("div", { class: "hero-rec" },
         h("div", { class: "section" },
-          h("div", { class: "eyebrow", text: "Concept #" + rank + " · " + c.niche }),
+          h("div", { class: "eyebrow", text: (rank ? "Suggestion #" + rank : "Side bet · " + (c.sideRole || "")) + " · " + c.niche }),
           h("h2", { text: c.name }), h("p", { class: "ink-2", style: "font-size:var(--step-1)", text: c.oneLiner }), h("p", { text: c.pitch }),
           h("div", { class: "chips" }, askBtn("Pressure-test this", `Pressure-test ${c.name} for my studio: the biggest risks, what to validate first, and what you would change.`),
             askBtn("Adapt it to my studio", `Adapt the ${c.name} plan to my studio's team, budget and skills. What changes in scope, team, timeline and money?`)),
@@ -617,6 +697,9 @@
             h("dt", { text: "Session" }), h("dd", { text: c.sessionLength }), h("dt", { text: "Art direction" }), h("dd", { text: c.artDirection }))),
         h("div", { class: "section" }, h("div", { class: "eyebrow", text: "Score" }), h("div", { class: "score-big", text: score.toFixed(1) }), factorBox,
           h("p", { class: "panel-note", text: "Hover a bar for the reasoning behind each factor." }))),
+      h("div", { class: "grid grid-2" },
+        panel("What drives this suggestion", "The market signals behind it, strongest first", driverList(c.drivers)),
+        panel("What the game is", null, h("dl", { class: "kv spec" }, specRows(c).map(([k, v]) => [h("dt", { text: k }), h("dd", { text: v })])))),
       h("div", { class: "grid grid-2" },
         panel("Why now", null, list(c.whyNow)),
         panel("Design pillars", null, list(c.pillars))),

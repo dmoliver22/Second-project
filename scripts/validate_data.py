@@ -91,6 +91,16 @@ if concepts:
         need(c, ["id", "name", "niche", "oneLiner", "pitch", "coreLoop", "features", "platforms", "pricing",
                  "team", "budgetUSD", "devMonths", "milestones", "marketingPlan", "liveOps", "kpis",
                  "killCriteria", "risks", "revenueScenarios"], w)
+        need(c, ["track", "hook", "spec", "drivers"], w)
+        if c.get("track") not in ("main", "side"):
+            problems.append(f"{w}: track must be main|side")
+        for k in ("genre", "players", "setting", "coreVerb", "look", "team", "audience", "differentiator"):
+            if not (c.get("spec") or {}).get(k):
+                problems.append(f"{w}: spec.{k} missing")
+        for j, d in enumerate(c.get("drivers") or []):
+            if d.get("strength") not in ("strong", "medium", "supporting", "caution"):
+                problems.append(f"{w}: drivers[{j}].strength must be strong|medium|supporting|caution")
+            need(d, ["signal", "detail"], f"{w} drivers[{j}]")
         for f in factors:
             s = c.get("scores", {}).get(f)
             if not s or not isinstance(s.get("score"), (int, float)):

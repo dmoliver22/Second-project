@@ -1,14 +1,44 @@
 {
-  "intro": "Six game concepts built from the gaps and trends in this atlas, each with a plan to build, launch and run it. Recommended path: make the top-ranked concept your flagship. If you can't hire a network programmer, start with the couples co-op game instead, because it needs much simpler tech.",
+  "intro": "Five game suggestions built from the gaps, trends and outliers in this atlas, ranked by the data. Each shows the signals that drive it, what the game is, and a plan to build, launch and run it. Two smaller side bets follow for audience-building and experiments.",
   "caveat": "No dataset can guarantee a hit. Most Steam games earn very little, and even acclaimed cozy games have failed commercially (Wanderstop, Venba). These are the best-supported bets in this data. Each one comes with targets and kill criteria, so you learn early and cheaply whether it's working. Scores are research-based judgements; adjust the weights to fit your team.",
   "scoring": {
     "factors": [
-      { "key": "demand", "label": "Player demand", "weight": 3, "description": "How strongly players want this, from niche demand scores, comparable sales and player requests." },
-      { "key": "gap", "label": "Low competition", "weight": 3, "description": "How uncrowded the niche is (11 minus supply). Higher means fewer direct competitors." },
-      { "key": "scopeFit", "label": "Fits a small team", "weight": 3, "description": "How realistic it is for a 3–6 person studio to ship it well within two years." },
-      { "key": "monetization", "label": "Revenue potential", "weight": 2, "description": "Price point, DLC and expansion headroom, and audience willingness to pay." },
-      { "key": "marketability", "label": "Easy to market", "weight": 2, "description": "Whether the hook reads in one capsule image or a five-second clip, and appeals to streamers." },
-      { "key": "momentum", "label": "Trend momentum", "weight": 2, "description": "Whether the underlying trends are rising, peaking or declining." }
+      {
+        "key": "demand",
+        "label": "Player demand",
+        "weight": 3,
+        "description": "How strongly players want this, from niche demand scores, comparable sales and player requests."
+      },
+      {
+        "key": "gap",
+        "label": "Low competition",
+        "weight": 3,
+        "description": "How uncrowded the niche is (11 minus supply). Higher means fewer direct competitors."
+      },
+      {
+        "key": "scopeFit",
+        "label": "Fits a small team",
+        "weight": 3,
+        "description": "How realistic it is for a 3–6 person studio to ship it well within two years."
+      },
+      {
+        "key": "monetization",
+        "label": "Revenue potential",
+        "weight": 2,
+        "description": "Price point, DLC and expansion headroom, and audience willingness to pay."
+      },
+      {
+        "key": "marketability",
+        "label": "Easy to market",
+        "weight": 2,
+        "description": "Whether the hook reads in one capsule image or a five-second clip, and appeals to streamers."
+      },
+      {
+        "key": "momentum",
+        "label": "Trend momentum",
+        "weight": 2,
+        "description": "Whether the underlying trends are rising, peaking or declining."
+      }
     ]
   },
   "concepts": [
@@ -18,18 +48,51 @@
       "niche": "Cozy survival-lite crafting · co-op 1–4 · ocean setting",
       "oneLiner": "Grow a floating garden-boat with up to three friends and sail a flooded, sunlit archipelago. No death, no hunger bars, no rush.",
       "pitch": "The islands have slipped beneath a gentle sea. You and your friends tend a houseboat that is also a garden: plant on the deck, fish over the rail, salvage sunken cottages, and graft new rooms onto the hull as it grows. Each island has a small community to help and a biome to bring back to life. It keeps survival-craft's 'gather, craft, expand, explore' loop, the best-performing niche in the research, removes everything punishing, and is built for co-op from day one.",
-      "genreTags": ["Co-op 1–4", "Survival-lite", "No fail states", "Ocean", "Gardening", "Fishing", "Boat building"],
+      "genreTags": [
+        "Co-op 1–4",
+        "Survival-lite",
+        "No fail states",
+        "Ocean",
+        "Gardening",
+        "Fishing",
+        "Boat building"
+      ],
       "audience": "Friend groups and couples aged 18–40 who play Stardew, Dinkum or Webfishing together and bounced off Raft or Valheim as too stressful. Also solo cozy players who want exploration beyond a farm.",
-      "comps": ["Dinkum", "Raft", "Webfishing", "Lightyear Frontier", "Sun Haven", "Stardew Valley (co-op)"],
+      "comps": [
+        "Dinkum",
+        "Raft",
+        "Webfishing",
+        "Lightyear Frontier",
+        "Sun Haven",
+        "Stardew Valley (co-op)"
+      ],
       "sessionLength": "30–90 minutes; one in-game day at sea takes about 20 minutes",
       "artDirection": "Bright stylized 3D with a watercolor sea and chunky, readable silhouettes. The capsule should say 'a garden on a boat' at thumbnail size.",
       "scores": {
-        "demand": { "score": 9, "why": "Cozy crafting/survival-lite and co-op 2–4 both score demand 9. 28% of open-world survival-craft games reach 1,000 reviews, the best of 23 niches measured." },
-        "gap": { "score": 7, "why": "Survival-lite supply is 5 and ocean settings are 3, against farming at 9. Few games combine no-death survival with co-op and the sea." },
-        "scopeFit": { "score": 4, "why": "3D plus online co-op is the hardest scope in this list. Feasible for 5–6 people over about 24 months with peer-to-peer networking and no servers, but it needs a network programmer." },
-        "monetization": { "score": 8, "why": "Supports a $19.99 price, friend 4-packs, a supporter pack and paid expansions. Co-op means each sale tends to pull in more sales." },
-        "marketability": { "score": 8, "why": "Co-op chaos and boat-building make great clips and streams. 'Garden on a boat' reads instantly." },
-        "momentum": { "score": 8, "why": "Co-op keywords and cozy survival-crafting are both rising among successful Steam games; Webfishing and Dinkum show friend-group cozy selling." }
+        "demand": {
+          "score": 9,
+          "why": "Cozy crafting/survival-lite and co-op 2–4 both score demand 9. 28% of open-world survival-craft games reach 1,000 reviews, the best of 23 niches measured."
+        },
+        "gap": {
+          "score": 7,
+          "why": "Survival-lite supply is 5 and ocean settings are 3, against farming at 9. Few games combine no-death survival with co-op and the sea."
+        },
+        "scopeFit": {
+          "score": 4,
+          "why": "3D plus online co-op is the hardest scope in this list. Feasible for 5–6 people over about 24 months with peer-to-peer networking and no servers, but it needs a network programmer."
+        },
+        "monetization": {
+          "score": 8,
+          "why": "Supports a $19.99 price, friend 4-packs, a supporter pack and paid expansions. Co-op means each sale tends to pull in more sales."
+        },
+        "marketability": {
+          "score": 8,
+          "why": "Co-op chaos and boat-building make great clips and streams. 'Garden on a boat' reads instantly."
+        },
+        "momentum": {
+          "score": 8,
+          "why": "Co-op keywords and cozy survival-crafting are both rising among successful Steam games; Webfishing and Dinkum show friend-group cozy selling."
+        }
       },
       "whyNow": [
         "Cozy crafting/survival-lite is the strongest data-backed gap: demand 9, supply 5, and the niche is filling more slowly than Steam overall.",
@@ -43,7 +106,14 @@
         "The boat is your home: building and decorating happen on something that travels.",
         "Every island is a small story: help a community, restore a biome, unlock a crop."
       ],
-      "coreLoop": ["Wake on deck", "Tend and harvest the garden", "Fish and salvage", "Craft rooms and tools", "Sail to a new island", "Help islanders, unlock seeds"],
+      "coreLoop": [
+        "Wake on deck",
+        "Tend and harvest the garden",
+        "Fish and salvage",
+        "Craft rooms and tools",
+        "Sail to a new island",
+        "Help islanders, unlock seeds"
+      ],
       "features": {
         "mvp": [
           "2-player online co-op over Steam's peer-to-peer networking (no servers to run)",
@@ -67,7 +137,17 @@
           "Switch 2 and PS5 ports through a porting partner; boat-design share codes"
         ]
       },
-      "platforms": { "launch": ["PC (Steam)", "Steam Deck"], "later": ["Switch 2", "PS5", "Xbox (a Game Pass deal is worth pitching)"] },
+      "platforms": {
+        "launch": [
+          "PC (Steam)",
+          "Steam Deck"
+        ],
+        "later": [
+          "Switch 2",
+          "PS5",
+          "Xbox (a Game Pass deal is worth pitching)"
+        ]
+      },
       "pricing": {
         "base": "$17.99 in Early Access, $19.99 at 1.0",
         "model": "Premium with free updates, then a paid expansion",
@@ -87,13 +167,41 @@
         "Later: console ports, plush of the boat's mascot, merch once the community is large."
       ],
       "team": [
-        { "role": "Founder / creative director and designer", "count": 1, "note": "Owns the vision, systems design and the publisher conversations." },
-        { "role": "Network and tools programmer", "count": 1, "note": "The most important hire. Owns co-op sync from week one." },
-        { "role": "Gameplay programmer", "count": 1, "note": "Farming, fishing, crafting and boat-building systems." },
-        { "role": "3D environment and props artist", "count": 1, "note": "Islands, boat modules and decor." },
-        { "role": "Technical artist / animator", "count": 1, "note": "Water shader, characters, the game's look." },
-        { "role": "Community and marketing lead", "count": 1, "note": "From month 3: short video, Discord, festivals, creators." },
-        { "role": "Contractors", "count": 4, "note": "Composer and sound, localization, QA, console porting." }
+        {
+          "role": "Founder / creative director and designer",
+          "count": 1,
+          "note": "Owns the vision, systems design and the publisher conversations."
+        },
+        {
+          "role": "Network and tools programmer",
+          "count": 1,
+          "note": "The most important hire. Owns co-op sync from week one."
+        },
+        {
+          "role": "Gameplay programmer",
+          "count": 1,
+          "note": "Farming, fishing, crafting and boat-building systems."
+        },
+        {
+          "role": "3D environment and props artist",
+          "count": 1,
+          "note": "Islands, boat modules and decor."
+        },
+        {
+          "role": "Technical artist / animator",
+          "count": 1,
+          "note": "Water shader, characters, the game's look."
+        },
+        {
+          "role": "Community and marketing lead",
+          "count": 1,
+          "note": "From month 3: short video, Discord, festivals, creators."
+        },
+        {
+          "role": "Contractors",
+          "count": 4,
+          "note": "Composer and sound, localization, QA, console porting."
+        }
       ],
       "budgetUSD": {
         "label": "$0.9–1.6M",
@@ -101,42 +209,179 @@
       },
       "devMonths": 24,
       "milestones": [
-        { "name": "Co-op prototype", "startMonth": 0, "endMonth": 3, "kind": "build", "deliverable": "Two players farm, fish and sail together", "gate": "Pairs play 45+ minutes unprompted in 3 of 5 tests" },
-        { "name": "Steam page live", "startMonth": 3, "endMonth": 4, "kind": "launch", "deliverable": "Capsule, GIF screenshots, trailer, Chinese page", "gate": "12%+ visit-to-wishlist conversion" },
-        { "name": "Vertical slice", "startMonth": 3, "endMonth": 8, "kind": "build", "deliverable": "One island at final quality", "gate": "Stable peer-to-peer sync with 4 players" },
-        { "name": "Demo and Next Fest", "startMonth": 9, "endMonth": 11, "kind": "launch", "deliverable": "60–90 minute public demo", "gate": "2k+ wishlists before the fest, 7k+ after" },
-        { "name": "Early Access content", "startMonth": 8, "endMonth": 14, "kind": "build", "deliverable": "5 islands, 3 biomes, roadmap", "gate": "Closed playtest above 85% positive" },
-        { "name": "Early Access launch", "startMonth": 14, "endMonth": 15, "kind": "launch", "deliverable": "Steam EA at $17.99", "gate": "20k+ wishlists going in" },
-        { "name": "Early Access updates", "startMonth": 15, "endMonth": 24, "kind": "live", "deliverable": "Content update every 10–12 weeks", "gate": "Reviews stay 90%+" },
-        { "name": "1.0 launch", "startMonth": 24, "endMonth": 25, "kind": "launch", "deliverable": "Full archipelago, ending, $19.99", "gate": "Second sales spike" },
-        { "name": "Console ports", "startMonth": 22, "endMonth": 30, "kind": "build", "deliverable": "Switch 2 and PS5 with a porting partner", "gate": "Partner signed by month 20" },
-        { "name": "Paid expansion", "startMonth": 28, "endMonth": 33, "kind": "live", "deliverable": "New sea region DLC", "gate": "Base game above 90% positive" }
+        {
+          "name": "Co-op prototype",
+          "startMonth": 0,
+          "endMonth": 3,
+          "kind": "build",
+          "deliverable": "Two players farm, fish and sail together",
+          "gate": "Pairs play 45+ minutes unprompted in 3 of 5 tests"
+        },
+        {
+          "name": "Steam page live",
+          "startMonth": 3,
+          "endMonth": 4,
+          "kind": "launch",
+          "deliverable": "Capsule, GIF screenshots, trailer, Chinese page",
+          "gate": "12%+ visit-to-wishlist conversion"
+        },
+        {
+          "name": "Vertical slice",
+          "startMonth": 3,
+          "endMonth": 8,
+          "kind": "build",
+          "deliverable": "One island at final quality",
+          "gate": "Stable peer-to-peer sync with 4 players"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "startMonth": 9,
+          "endMonth": 11,
+          "kind": "launch",
+          "deliverable": "60–90 minute public demo",
+          "gate": "2k+ wishlists before the fest, 7k+ after"
+        },
+        {
+          "name": "Early Access content",
+          "startMonth": 8,
+          "endMonth": 14,
+          "kind": "build",
+          "deliverable": "5 islands, 3 biomes, roadmap",
+          "gate": "Closed playtest above 85% positive"
+        },
+        {
+          "name": "Early Access launch",
+          "startMonth": 14,
+          "endMonth": 15,
+          "kind": "launch",
+          "deliverable": "Steam EA at $17.99",
+          "gate": "20k+ wishlists going in"
+        },
+        {
+          "name": "Early Access updates",
+          "startMonth": 15,
+          "endMonth": 24,
+          "kind": "live",
+          "deliverable": "Content update every 10–12 weeks",
+          "gate": "Reviews stay 90%+"
+        },
+        {
+          "name": "1.0 launch",
+          "startMonth": 24,
+          "endMonth": 25,
+          "kind": "launch",
+          "deliverable": "Full archipelago, ending, $19.99",
+          "gate": "Second sales spike"
+        },
+        {
+          "name": "Console ports",
+          "startMonth": 22,
+          "endMonth": 30,
+          "kind": "build",
+          "deliverable": "Switch 2 and PS5 with a porting partner",
+          "gate": "Partner signed by month 20"
+        },
+        {
+          "name": "Paid expansion",
+          "startMonth": 28,
+          "endMonth": 33,
+          "kind": "live",
+          "deliverable": "New sea region DLC",
+          "gate": "Base game above 90% positive"
+        }
       ],
       "marketingPlan": [
-        { "when": "Months 0–3", "action": "Post short co-op clips weekly on TikTok, Shorts, Reels and Bluesky; note which hook earns saves and shares. Open the Discord and a mailing list." },
-        { "when": "Months 3–4", "action": "Steam page goes live with 'cozy co-op survival' in the first line, GIF-led screenshots and a Simplified Chinese page." },
-        { "when": "Months 4–9", "action": "Apply to Wholesome Direct (June), cozy festivals and Day of the Devs. Enter themed Steam fests (cozy, fishing, survival). Run closed playtests with Steam Playtest." },
-        { "when": "Months 9–11", "action": "Public demo in Steam Next Fest. Send keys to co-op, cozy and couples creators. Target 2k+ wishlists before the fest." },
-        { "when": "Months 12–14", "action": "Pitch publishers and porting partners with wishlist data. Prepare the press kit. Reach out to Bilibili and Weibo creators for China." },
-        { "when": "Month 14", "action": "Early Access launch, timed away from big releases. 10% launch discount and the friend 4-pack." },
-        { "when": "Months 15–24", "action": "Each update ships with a trailer, a devlog and a sale." },
-        { "when": "Month 24", "action": "1.0 relaunch as a second marketing beat: new trailer, press push and showcase slot." }
+        {
+          "when": "Months 0–3",
+          "action": "Post short co-op clips weekly on TikTok, Shorts, Reels and Bluesky; note which hook earns saves and shares. Open the Discord and a mailing list."
+        },
+        {
+          "when": "Months 3–4",
+          "action": "Steam page goes live with 'cozy co-op survival' in the first line, GIF-led screenshots and a Simplified Chinese page."
+        },
+        {
+          "when": "Months 4–9",
+          "action": "Apply to Wholesome Direct (June), cozy festivals and Day of the Devs. Enter themed Steam fests (cozy, fishing, survival). Run closed playtests with Steam Playtest."
+        },
+        {
+          "when": "Months 9–11",
+          "action": "Public demo in Steam Next Fest. Send keys to co-op, cozy and couples creators. Target 2k+ wishlists before the fest."
+        },
+        {
+          "when": "Months 12–14",
+          "action": "Pitch publishers and porting partners with wishlist data. Prepare the press kit. Reach out to Bilibili and Weibo creators for China."
+        },
+        {
+          "when": "Month 14",
+          "action": "Early Access launch, timed away from big releases. 10% launch discount and the friend 4-pack."
+        },
+        {
+          "when": "Months 15–24",
+          "action": "Each update ships with a trailer, a devlog and a sale."
+        },
+        {
+          "when": "Month 24",
+          "action": "1.0 relaunch as a second marketing beat: new trailer, press push and showcase slot."
+        }
       ],
       "liveOps": [
-        { "when": "Weekly", "what": "Devlog or patch notes, a Discord community event, bug triage from the in-game feedback button." },
-        { "when": "Every 10–12 weeks", "what": "Content update against a public roadmap. Fields of Mistria held 98% positive with this approach." },
-        { "when": "Seasonal", "what": "In-game festivals timed to Steam's seasonal sales." },
-        { "when": "Ongoing", "what": "Community-voted features, boat-design contests, a creator program with keys." },
-        { "when": "After 1.0", "what": "Paid expansion and ports, then fund game two from revenue." }
+        {
+          "when": "Weekly",
+          "what": "Devlog or patch notes, a Discord community event, bug triage from the in-game feedback button."
+        },
+        {
+          "when": "Every 10–12 weeks",
+          "what": "Content update against a public roadmap. Fields of Mistria held 98% positive with this approach."
+        },
+        {
+          "when": "Seasonal",
+          "what": "In-game festivals timed to Steam's seasonal sales."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Community-voted features, boat-design contests, a creator program with keys."
+        },
+        {
+          "when": "After 1.0",
+          "what": "Paid expansion and ports, then fund game two from revenue."
+        }
       ],
       "kpis": [
-        { "metric": "Prototype retention", "target": "3 of 5 pairs play 45+ min", "why": "Proves co-op is fun before you spend on content." },
-        { "metric": "Steam page conversion", "target": "12%+ visit to wishlist", "why": "8–12% is the median; 12–18% is good." },
-        { "metric": "Wishlists before Next Fest", "target": "2,000+", "why": "Below about 2k, games see little lift from Next Fest." },
-        { "metric": "Wishlists at Early Access launch", "target": "20,000+", "why": "About 7k reaches Popular Upcoming; 20k gives a healthy first week." },
-        { "metric": "First-week sales", "target": "0.10–0.15× wishlists", "why": "The median conversion for games over $10." },
-        { "metric": "Steam review score", "target": "90%+ positive", "why": "Cozy hits sit at 92–98%. Players punish jank." },
-        { "metric": "Year-one units", "target": "60,000 (base case)", "why": "Covers about half of a lean budget in year one; ports and the long tail cover the rest." }
+        {
+          "metric": "Prototype retention",
+          "target": "3 of 5 pairs play 45+ min",
+          "why": "Proves co-op is fun before you spend on content."
+        },
+        {
+          "metric": "Steam page conversion",
+          "target": "12%+ visit to wishlist",
+          "why": "8–12% is the median; 12–18% is good."
+        },
+        {
+          "metric": "Wishlists before Next Fest",
+          "target": "2,000+",
+          "why": "Below about 2k, games see little lift from Next Fest."
+        },
+        {
+          "metric": "Wishlists at Early Access launch",
+          "target": "20,000+",
+          "why": "About 7k reaches Popular Upcoming; 20k gives a healthy first week."
+        },
+        {
+          "metric": "First-week sales",
+          "target": "0.10–0.15× wishlists",
+          "why": "The median conversion for games over $10."
+        },
+        {
+          "metric": "Steam review score",
+          "target": "90%+ positive",
+          "why": "Cozy hits sit at 92–98%. Players punish jank."
+        },
+        {
+          "metric": "Year-one units",
+          "target": "60,000 (base case)",
+          "why": "Covers about half of a lean budget in year one; ports and the long tail cover the rest."
+        }
       ],
       "killCriteria": [
         "The 2-player prototype isn't fun after 3 months: pivot to Lantern Stall, the couples concept.",
@@ -145,18 +390,108 @@
         "Peer-to-peer sync still unstable at month 8: cap co-op at 2 players and ship."
       ],
       "risks": [
-        { "risk": "Netcode complexity and scope creep", "mitigation": "Hire the network programmer first, use Steam's peer-to-peer networking, cap at 4 players, no persistent server world." },
-        { "risk": "Survival-genre stress creeping in", "mitigation": "Playtest with cozy players, not survival fans. Keep the no-fail-state pillar non-negotiable." },
-        { "risk": "Festival slots and attention are crowded", "mitigation": "A hook that reads at thumbnail size, early applications, wishlists built from short video." },
-        { "risk": "Running out of money before Early Access revenue", "mitigation": "Marketing or porting-only publisher deal, grants, and burn kept under about $70k a month." },
-        { "risk": "Copycats after success", "mitigation": "Ship updates fast and own the community." }
+        {
+          "risk": "Netcode complexity and scope creep",
+          "mitigation": "Hire the network programmer first, use Steam's peer-to-peer networking, cap at 4 players, no persistent server world."
+        },
+        {
+          "risk": "Survival-genre stress creeping in",
+          "mitigation": "Playtest with cozy players, not survival fans. Keep the no-fail-state pillar non-negotiable."
+        },
+        {
+          "risk": "Festival slots and attention are crowded",
+          "mitigation": "A hook that reads at thumbnail size, early applications, wishlists built from short video."
+        },
+        {
+          "risk": "Running out of money before Early Access revenue",
+          "mitigation": "Marketing or porting-only publisher deal, grants, and burn kept under about $70k a month."
+        },
+        {
+          "risk": "Copycats after success",
+          "mitigation": "Ship updates fast and own the community."
+        }
       ],
       "revenueAssumptions": "Assumes $19.99. Net to studio ≈ $9.80 per unit after discounts, regional pricing, refunds and Steam's 30% (about 49% of list price). Publisher share not deducted.",
       "revenueScenarios": [
-        { "scenario": "Miss", "units": 8000, "netUSD": 78400, "note": "Under 1,000 reviews. The studio needs other funding to continue." },
-        { "scenario": "Base", "units": 60000, "netUSD": 588000, "note": "About 3,000+ reviews. Recoups half a lean budget in year one; long tail and ports do the rest." },
-        { "scenario": "Strong", "units": 250000, "netUSD": 2450000, "note": "Top-tier cozy outcome, around Coral Island or Sun Haven. Funds game two." },
-        { "scenario": "Breakout", "units": 1000000, "netUSD": 9800000, "note": "Dinkum or Webfishing territory. Rare." }
+        {
+          "scenario": "Miss",
+          "units": 8000,
+          "netUSD": 78400,
+          "note": "Under 1,000 reviews. The studio needs other funding to continue."
+        },
+        {
+          "scenario": "Base",
+          "units": 60000,
+          "netUSD": 588000,
+          "note": "About 3,000+ reviews. Recoups half a lean budget in year one; long tail and ports do the rest."
+        },
+        {
+          "scenario": "Strong",
+          "units": 250000,
+          "netUSD": 2450000,
+          "note": "Top-tier cozy outcome, around Coral Island or Sun Haven. Funds game two."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 1000000,
+          "netUSD": 9800000,
+          "note": "Dinkum or Webfishing territory. Rare."
+        }
+      ],
+      "track": "main",
+      "hook": "A garden on a houseboat, for you and three friends. Nothing can hurt you.",
+      "spec": {
+        "genre": "Co-op survival-lite crafting",
+        "players": "1–4, online co-op",
+        "setting": "A flooded, sunlit archipelago",
+        "coreVerb": "Grow, fish, salvage and build onto your boat",
+        "look": "Bright stylized 3D",
+        "team": "6 + contractors",
+        "audience": "Friend groups and couples, 18–40",
+        "differentiator": "Survival-craft's loop with no way to fail, built co-op first, and a home that sails",
+        "price": "$19.99"
+      },
+      "drivers": [
+        {
+          "signal": "Survival-lite crafting is the strongest data-backed gap",
+          "detail": "Demand 9, supply 5. 28% of open-world survival-craft games reach 1,000 reviews, the best of 23 niches measured.",
+          "strength": "strong",
+          "ref": {
+            "niche": "Cozy crafting/survival-lite"
+          }
+        },
+        {
+          "signal": "Co-op for 2–4 players is wide open",
+          "detail": "Demand 9, supply 6. Co-op wording is rising among $100k+ Steam games (1.4% → 2.1%).",
+          "strength": "strong",
+          "ref": {
+            "niche": "Cozy co-op/multiplayer (2-4 players)"
+          }
+        },
+        {
+          "signal": "Friend groups multiply sales",
+          "detail": "Webfishing (solo developer, est. 1.3M copies) and Dinkum (1M+) spread because friends bought them to play together.",
+          "strength": "strong",
+          "ref": {
+            "game": "webfishing"
+          }
+        },
+        {
+          "signal": "Ocean settings are almost empty",
+          "detail": "Supply 3, against farming at 9. Players keep asking for cozy games that aren't farms.",
+          "strength": "medium",
+          "ref": {
+            "niche": "Cozy ocean/underwater"
+          }
+        },
+        {
+          "signal": "Online co-op is expensive to build",
+          "detail": "Netcode is why the gap exists. It's the hardest scope of the five and needs a network programmer.",
+          "strength": "caution",
+          "ref": {
+            "link": "#playbook"
+          }
+        }
       ]
     },
     {
@@ -165,18 +500,50 @@
       "niche": "Cozy co-op for couples · non-Western setting · shop sim",
       "oneLiner": "Run a night-market food stall with your partner: one cooks, one shops and serves, and nobody gets yelled at.",
       "pitch": "A two-player co-op game set in an East or Southeast Asian night market. Pick a culture your team knows first-hand. Each evening one player cooks while the other buys ingredients, chats with regulars and decorates the stall. Regulars bring small stories; market families teach you recipes. It has Overcooked's teamwork without the timer stress, the warmth of Venba and Wanderstop, and shop-sim progression. A Friend's Pass lets the second player join free, so every copy sold recruits another player.",
-      "genreTags": ["2-player co-op", "Couch + online", "Cooking", "Shop sim", "Night market", "Asymmetric roles"],
+      "genreTags": [
+        "2-player co-op",
+        "Couch + online",
+        "Cooking",
+        "Shop sim",
+        "Night market",
+        "Asymmetric roles"
+      ],
       "audience": "Couples and close friends looking for a gentle game to share. Couples-gaming threads mostly turn up stressful co-op games. Also players who want cozy games set outside pastoral Europe.",
-      "comps": ["Overcooked (minus the stress)", "Venba", "Wanderstop", "Mineko's Night Market", "Unpacking", "Tiny Bookshop"],
+      "comps": [
+        "Overcooked (minus the stress)",
+        "Venba",
+        "Wanderstop",
+        "Mineko's Night Market",
+        "Unpacking",
+        "Tiny Bookshop"
+      ],
       "sessionLength": "One night at the market takes about 25 minutes, a natural stopping point for an evening session",
       "artDirection": "Warm 2.5D lit by lanterns, steam and neon; food rendered lovingly enough to be the screenshot.",
       "scores": {
-        "demand": { "score": 8, "why": "Couples co-op scores demand 8, and Reddit couples threads keep asking for it. Food and cooking content performs well on social." },
-        "gap": { "score": 6, "why": "Couples supply is 4 and non-Western settings 3, but shop sims are flooding (supply 8, +634% in 2026), which pulls this down." },
-        "scopeFit": { "score": 7, "why": "Two players, one location, mostly 2.5D. Remote Play Together covers online play cheaply; true online co-op is optional." },
-        "monetization": { "score": 6, "why": "$17.99 premium plus recipe-pack DLC. The Friend's Pass means a lower sale per player but wider reach." },
-        "marketability": { "score": 8, "why": "Couple creators, food clips and cultural press angles. The hook reads in one screenshot." },
-        "momentum": { "score": 7, "why": "Co-op is rising; non-Western settings get strong press, though shop sims are peaking." }
+        "demand": {
+          "score": 8,
+          "why": "Couples co-op scores demand 8, and Reddit couples threads keep asking for it. Food and cooking content performs well on social."
+        },
+        "gap": {
+          "score": 6,
+          "why": "Couples supply is 4 and non-Western settings 3, but shop sims are flooding (supply 8, +634% in 2026), which pulls this down."
+        },
+        "scopeFit": {
+          "score": 7,
+          "why": "Two players, one location, mostly 2.5D. Remote Play Together covers online play cheaply; true online co-op is optional."
+        },
+        "monetization": {
+          "score": 6,
+          "why": "$17.99 premium plus recipe-pack DLC. The Friend's Pass means a lower sale per player but wider reach."
+        },
+        "marketability": {
+          "score": 8,
+          "why": "Couple creators, food clips and cultural press angles. The hook reads in one screenshot."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Co-op is rising; non-Western settings get strong press, though shop sims are peaking."
+        }
       },
       "whyNow": [
         "Couples co-op is demand 8 and supply 4. Couples threads mostly get It Takes Two and A Way Out, not cozy games.",
@@ -189,7 +556,14 @@
         "The market is a neighborhood: regulars, families and stories that unfold over weeks.",
         "Authentic food and place, made with people who grew up there."
       ],
-      "coreLoop": ["Plan tonight's menu", "Shop the market for ingredients", "Cook and serve together", "Chat with regulars", "Earn and upgrade the stall", "Learn a new family recipe"],
+      "coreLoop": [
+        "Plan tonight's menu",
+        "Shop the market for ingredients",
+        "Cook and serve together",
+        "Chat with regulars",
+        "Earn and upgrade the stall",
+        "Learn a new family recipe"
+      ],
       "features": {
         "mvp": [
           "Couch co-op plus Steam Remote Play Together",
@@ -210,7 +584,16 @@
           "Mobile companion recipe book (optional)"
         ]
       },
-      "platforms": { "launch": ["PC (Steam)", "Steam Deck"], "later": ["Switch 2", "PS5"] },
+      "platforms": {
+        "launch": [
+          "PC (Steam)",
+          "Steam Deck"
+        ],
+        "later": [
+          "Switch 2",
+          "PS5"
+        ]
+      },
       "pricing": {
         "base": "$17.99",
         "model": "Premium, Friend's Pass, recipe-pack DLC",
@@ -227,56 +610,633 @@
         "Later: a physical cookbook with real recipes (Stardew's cookbook shows the appetite)."
       ],
       "team": [
-        { "role": "Founder / designer", "count": 1, "note": "Co-op design and the economy of a market night." },
-        { "role": "Programmer", "count": 1, "note": "Gameplay, couch co-op, Remote Play support." },
-        { "role": "Artist (2.5D, food and characters)", "count": 1, "note": "The food has to look delicious." },
-        { "role": "Writer / narrative designer", "count": 1, "note": "Part-time; regulars' stories." },
-        { "role": "Contractors", "count": 3, "note": "Cultural consultant, composer, localization." }
+        {
+          "role": "Founder / designer",
+          "count": 1,
+          "note": "Co-op design and the economy of a market night."
+        },
+        {
+          "role": "Programmer",
+          "count": 1,
+          "note": "Gameplay, couch co-op, Remote Play support."
+        },
+        {
+          "role": "Artist (2.5D, food and characters)",
+          "count": 1,
+          "note": "The food has to look delicious."
+        },
+        {
+          "role": "Writer / narrative designer",
+          "count": 1,
+          "note": "Part-time; regulars' stories."
+        },
+        {
+          "role": "Contractors",
+          "count": 3,
+          "note": "Cultural consultant, composer, localization."
+        }
       ],
-      "budgetUSD": { "label": "$350–650k", "note": "Four people for about 16 months plus contractors and festivals. No Early Access: a polished premium launch with a Next Fest demo." },
+      "budgetUSD": {
+        "label": "$350–650k",
+        "note": "Four people for about 16 months plus contractors and festivals. No Early Access: a polished premium launch with a Next Fest demo."
+      },
       "devMonths": 16,
       "milestones": [
-        { "name": "Two-player prototype", "startMonth": 0, "endMonth": 2, "kind": "build", "deliverable": "One night at the market playable in couch co-op", "gate": "Couples laugh and ask for another night" },
-        { "name": "Steam page live", "startMonth": 2, "endMonth": 3, "kind": "launch", "deliverable": "Food-led capsule and trailer", "gate": "12%+ conversion" },
-        { "name": "Production", "startMonth": 3, "endMonth": 12, "kind": "build", "deliverable": "Recipes, regulars, decorating", "gate": "Playtests above 85% positive" },
-        { "name": "Demo and Next Fest", "startMonth": 9, "endMonth": 11, "kind": "launch", "deliverable": "Two-night demo", "gate": "2k+ wishlists before, 7k+ after" },
-        { "name": "Polish and localization", "startMonth": 12, "endMonth": 16, "kind": "build", "deliverable": "Five languages, Deck Verified", "gate": "15k+ wishlists" },
-        { "name": "Launch", "startMonth": 16, "endMonth": 17, "kind": "launch", "deliverable": "PC release", "gate": "90%+ positive" },
-        { "name": "Festival updates and DLC", "startMonth": 17, "endMonth": 24, "kind": "live", "deliverable": "Free festivals, paid recipe packs", "gate": "Stable review score" },
-        { "name": "Switch 2 port", "startMonth": 19, "endMonth": 24, "kind": "build", "deliverable": "Port with a partner", "gate": "PC traction" }
+        {
+          "name": "Two-player prototype",
+          "startMonth": 0,
+          "endMonth": 2,
+          "kind": "build",
+          "deliverable": "One night at the market playable in couch co-op",
+          "gate": "Couples laugh and ask for another night"
+        },
+        {
+          "name": "Steam page live",
+          "startMonth": 2,
+          "endMonth": 3,
+          "kind": "launch",
+          "deliverable": "Food-led capsule and trailer",
+          "gate": "12%+ conversion"
+        },
+        {
+          "name": "Production",
+          "startMonth": 3,
+          "endMonth": 12,
+          "kind": "build",
+          "deliverable": "Recipes, regulars, decorating",
+          "gate": "Playtests above 85% positive"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "startMonth": 9,
+          "endMonth": 11,
+          "kind": "launch",
+          "deliverable": "Two-night demo",
+          "gate": "2k+ wishlists before, 7k+ after"
+        },
+        {
+          "name": "Polish and localization",
+          "startMonth": 12,
+          "endMonth": 16,
+          "kind": "build",
+          "deliverable": "Five languages, Deck Verified",
+          "gate": "15k+ wishlists"
+        },
+        {
+          "name": "Launch",
+          "startMonth": 16,
+          "endMonth": 17,
+          "kind": "launch",
+          "deliverable": "PC release",
+          "gate": "90%+ positive"
+        },
+        {
+          "name": "Festival updates and DLC",
+          "startMonth": 17,
+          "endMonth": 24,
+          "kind": "live",
+          "deliverable": "Free festivals, paid recipe packs",
+          "gate": "Stable review score"
+        },
+        {
+          "name": "Switch 2 port",
+          "startMonth": 19,
+          "endMonth": 24,
+          "kind": "build",
+          "deliverable": "Port with a partner",
+          "gate": "PC traction"
+        }
       ],
       "marketingPlan": [
-        { "when": "Months 0–3", "action": "Food and couple-reaction clips on TikTok and Reels; start the Discord." },
-        { "when": "Months 3–9", "action": "Apply to Wholesome Direct and cultural showcases; pitch the setting's story to press." },
-        { "when": "Months 9–11", "action": "Next Fest demo; send keys to couples gaming creators." },
-        { "when": "Month 16", "action": "Launch near Valentine's Day or Lunar New Year." }
+        {
+          "when": "Months 0–3",
+          "action": "Food and couple-reaction clips on TikTok and Reels; start the Discord."
+        },
+        {
+          "when": "Months 3–9",
+          "action": "Apply to Wholesome Direct and cultural showcases; pitch the setting's story to press."
+        },
+        {
+          "when": "Months 9–11",
+          "action": "Next Fest demo; send keys to couples gaming creators."
+        },
+        {
+          "when": "Month 16",
+          "action": "Launch near Valentine's Day or Lunar New Year."
+        }
       ],
       "liveOps": [
-        { "when": "Monthly", "what": "Free festival night or recipe in the first months after launch." },
-        { "when": "Quarterly", "what": "Paid recipe pack plus a sale." },
-        { "when": "Holidays", "what": "Valentine's Day and Lunar New Year events and sales." }
+        {
+          "when": "Monthly",
+          "what": "Free festival night or recipe in the first months after launch."
+        },
+        {
+          "when": "Quarterly",
+          "what": "Paid recipe pack plus a sale."
+        },
+        {
+          "when": "Holidays",
+          "what": "Valentine's Day and Lunar New Year events and sales."
+        }
       ],
       "kpis": [
-        { "metric": "Wishlists at launch", "target": "15,000+", "why": "Enough for a healthy first week at $17.99." },
-        { "metric": "Friend's Pass activations", "target": "40%+ of owners", "why": "Shows the game is played as a pair, which is the point." },
-        { "metric": "Review score", "target": "90%+", "why": "Cozy norm." },
-        { "metric": "Year-one units", "target": "40,000 (base case)", "why": "Recoups the budget in about 18 months." }
+        {
+          "metric": "Wishlists at launch",
+          "target": "15,000+",
+          "why": "Enough for a healthy first week at $17.99."
+        },
+        {
+          "metric": "Friend's Pass activations",
+          "target": "40%+ of owners",
+          "why": "Shows the game is played as a pair, which is the point."
+        },
+        {
+          "metric": "Review score",
+          "target": "90%+",
+          "why": "Cozy norm."
+        },
+        {
+          "metric": "Year-one units",
+          "target": "40,000 (base case)",
+          "why": "Recoups the budget in about 18 months."
+        }
       ],
       "killCriteria": [
         "Couples in playtests don't ask for 'one more night' by month 2: rethink the role split.",
         "Fewer than 7,000 wishlists after Next Fest: cut content and ship lean, or push for a showcase slot."
       ],
       "risks": [
-        { "risk": "Shop-sim flood", "mitigation": "Lead with co-op and the setting in every asset; never call it a 'simulator'." },
-        { "risk": "Cultural authenticity", "mitigation": "Team members or paid consultants from that culture; credit them visibly." },
-        { "risk": "Co-op only appeals to pairs", "mitigation": "A solo mode with a helper character." }
+        {
+          "risk": "Shop-sim flood",
+          "mitigation": "Lead with co-op and the setting in every asset; never call it a 'simulator'."
+        },
+        {
+          "risk": "Cultural authenticity",
+          "mitigation": "Team members or paid consultants from that culture; credit them visibly."
+        },
+        {
+          "risk": "Co-op only appeals to pairs",
+          "mitigation": "A solo mode with a helper character."
+        }
       ],
       "revenueAssumptions": "Assumes $17.99. Net ≈ $8.80 per unit after discounts, regional pricing, refunds and Steam's 30%. Friend's Pass players are not counted as sales.",
       "revenueScenarios": [
-        { "scenario": "Miss", "units": 6000, "netUSD": 52800, "note": "Below 1,000 reviews." },
-        { "scenario": "Base", "units": 40000, "netUSD": 352000, "note": "Close to recouping in 18 months with DLC and the Switch port." },
-        { "scenario": "Strong", "units": 150000, "netUSD": 1320000, "note": "Unpacking-level breakout in year one." },
-        { "scenario": "Breakout", "units": 600000, "netUSD": 5280000, "note": "Tiny Bookshop-plus. Rare." }
+        {
+          "scenario": "Miss",
+          "units": 6000,
+          "netUSD": 52800,
+          "note": "Below 1,000 reviews."
+        },
+        {
+          "scenario": "Base",
+          "units": 40000,
+          "netUSD": 352000,
+          "note": "Close to recouping in 18 months with DLC and the Switch port."
+        },
+        {
+          "scenario": "Strong",
+          "units": 150000,
+          "netUSD": 1320000,
+          "note": "Unpacking-level breakout in year one."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 600000,
+          "netUSD": 5280000,
+          "note": "Tiny Bookshop-plus. Rare."
+        }
+      ],
+      "track": "main",
+      "hook": "Run a night-market food stall with your partner. Nobody gets yelled at.",
+      "spec": {
+        "genre": "Co-op cooking and shop sim",
+        "players": "2 (couch + online), plus a solo mode",
+        "setting": "An East or Southeast Asian night market",
+        "coreVerb": "Cook, shop, serve and get to know regulars",
+        "look": "Warm, lantern-lit 2.5D",
+        "team": "4 + contractors",
+        "audience": "Couples and close friends",
+        "differentiator": "Overcooked-style teamwork with no timers to fail, and a Friend's Pass so the second player plays free",
+        "price": "$17.99"
+      },
+      "drivers": [
+        {
+          "signal": "Couples play is under-served",
+          "detail": "Demand 8, supply 4: tied for the top opportunity score (5.6).",
+          "strength": "strong",
+          "ref": {
+            "niche": "Cozy games for couples"
+          }
+        },
+        {
+          "signal": "Couples keep getting pointed at stressful games",
+          "detail": "Reddit couples threads mostly recommend It Takes Two and A Way Out, not cozy games.",
+          "strength": "medium",
+          "ref": {
+            "link": "#gaps"
+          }
+        },
+        {
+          "signal": "Non-Western settings stand out",
+          "detail": "Supply 3, and a strong press hook in a market full of pastoral Europe.",
+          "strength": "medium",
+          "ref": {
+            "niche": "Non-Western/cultural settings"
+          }
+        },
+        {
+          "signal": "The shop loop sells",
+          "detail": "Tiny Bookshop (500k+) and Supermarket Simulator (est. 1.8M) prove players love running a shop.",
+          "strength": "supporting",
+          "ref": {
+            "game": "tiny-bookshop"
+          }
+        },
+        {
+          "signal": "Shop sims are flooding",
+          "detail": "Up 634% in 2026; the median 'X Simulator' grosses about $70k. Lead with co-op and the setting, never 'simulator'.",
+          "strength": "caution",
+          "ref": {
+            "niche": "Shop/management sim (cafe, bakery, potion shop)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "terraces",
+      "name": "Terraces",
+      "track": "main",
+      "niche": "Relaxing builder · non-Western setting · clip-able toy",
+      "hook": "Carve a mountain into terraces and watch water, rice and villages find their way down.",
+      "oneLiner": "Sculpt a misty mountainside into terraced fields. Water cascades from step to step, and villages grow wherever it reaches.",
+      "pitch": "A relaxing builder inspired by the rice terraces of Southeast Asia and the Andes, made with people from those places. You don't place buildings: you shape the land. Cut a terrace and water spills down to fill it; plant along the flow and a hamlet appears. Each mountain is a gentle puzzle about where water goes, with no fail state and no timer. It takes Tiny Glade's lesson (an action that's satisfying in five seconds markets itself) and Dorfromantik's light goals, and puts them somewhere builders haven't been.",
+      "genreTags": [
+        "Builder",
+        "Sandbox with light goals",
+        "Water flow",
+        "Non-Western setting",
+        "Single-player"
+      ],
+      "spec": {
+        "genre": "Relaxing builder / creative sandbox",
+        "players": "1",
+        "setting": "Terraced mountains of Southeast Asia and the Andes",
+        "coreVerb": "Sculpt land, guide water, grow villages",
+        "look": "Soft stylized 3D, mist and morning light",
+        "team": "4 + contractors",
+        "audience": "Tiny Glade, Townscaper and Dorfromantik players",
+        "differentiator": "You shape the land, not the buildings, and the water does the rest",
+        "price": "$19.99"
+      },
+      "audience": "Players of Tiny Glade, Townscaper, Dorfromantik and Islanders; people who watch satisfying-building clips; cozy players who prefer creative toys to chores.",
+      "comps": [
+        "Tiny Glade",
+        "Townscaper",
+        "Dorfromantik",
+        "Islanders"
+      ],
+      "sessionLength": "20–60 minutes; one mountain is a 1–2 hour project",
+      "artDirection": "Soft stylized 3D with mist and morning light. The water and the terrace steps are the hero of every screenshot.",
+      "drivers": [
+        {
+          "signal": "Relaxing builders have strong demand and price well",
+          "detail": "Demand 8, supply 6. City builders priced $20+ reach 1,000 reviews 46.5% of the time, among the best rates measured.",
+          "strength": "strong",
+          "ref": {
+            "niche": "Town/city builder (relaxing)"
+          }
+        },
+        {
+          "signal": "Clip-able toys market themselves",
+          "detail": "Tiny Glade (2 people) reached 1.3M wishlists from GIFs and sold 616k in under a month.",
+          "strength": "strong",
+          "ref": {
+            "game": "tiny-glade"
+          }
+        },
+        {
+          "signal": "Small teams win in builders",
+          "detail": "Townscaper (1 person, 500k+), Dorfromantik (4 people) and Islanders (3 people).",
+          "strength": "medium",
+          "ref": {
+            "game": "townscaper"
+          }
+        },
+        {
+          "signal": "A setting nobody has built in",
+          "detail": "Non-Western settings: supply 3. A press hook and a reason to localize for Asian markets.",
+          "strength": "medium",
+          "ref": {
+            "niche": "Non-Western/cultural settings"
+          }
+        },
+        {
+          "signal": "The water has to feel magical",
+          "detail": "Terrain and water tech carry the whole game. It needs a strong technical artist, and polish takes time.",
+          "strength": "caution",
+          "ref": {
+            "link": "#trends"
+          }
+        }
+      ],
+      "scores": {
+        "demand": {
+          "score": 8,
+          "why": "Relaxing town builders score demand 8, and $20+ city builders reach 1,000 reviews 46.5% of the time."
+        },
+        "gap": {
+          "score": 6,
+          "why": "Builder supply is 6, but no relaxing builder owns terraces or water-shaping, and non-Western settings sit at supply 3."
+        },
+        "scopeFit": {
+          "score": 6,
+          "why": "Single-player with no netcode, but terrain and water tools need a strong technical artist and long polish."
+        },
+        "monetization": {
+          "score": 7,
+          "why": "Supports $19.99, paid mountain packs, a soundtrack and later tablet ports. Builders have long tails."
+        },
+        "marketability": {
+          "score": 9,
+          "why": "Water cascading down terraces is exactly the five-second clip that sold Tiny Glade and Townscaper."
+        },
+        "momentum": {
+          "score": 6,
+          "why": "Decorating and tinkering builders are rising, though the wider builder space is steady rather than booming."
+        }
+      },
+      "whyNow": [
+        "Relaxing builders combine strong demand (8) with some of the best price-to-success rates on Steam.",
+        "Tiny Glade and Townscaper proved that tiny teams can break out in builders with a single satisfying action.",
+        "No relaxing builder has claimed terraces, water or a non-Western landscape."
+      ],
+      "pillars": [
+        "Shape, don't place: the land is your tool, buildings follow",
+        "Water is alive: every cut changes where it flows",
+        "Nothing to lose: no timers, no fail states, undo everything",
+        "A real place, made with the people who know it"
+      ],
+      "coreLoop": [
+        "Survey the mountain",
+        "Carve a terrace",
+        "Watch the water flow down",
+        "Plant along the water",
+        "A hamlet grows",
+        "Reach the mountain's goal"
+      ],
+      "features": {
+        "mvp": [
+          "Terrain sculpting with water that flows step to step",
+          "Rice, tea and flowers that grow where water reaches",
+          "Hamlets that appear on their own",
+          "One mountain with three light goals",
+          "A 30-minute demo and a photo mode"
+        ],
+        "launch": [
+          "8 mountains across 3 regions, each with its own crops and architecture",
+          "Free sandbox mode with no goals",
+          "Seasons and weather that change the water",
+          "Photo mode and shareable mountain seeds",
+          "Steam Deck Verified; 8 languages including Simplified Chinese, Japanese, Korean, Indonesian and Spanish"
+        ],
+        "postLaunch": [
+          "Free monthly photo challenges",
+          "Paid mountain packs ($4.99) from new regions",
+          "iPad and Switch 2 ports (sculpting suits touch)",
+          "Workshop sharing for mountains"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "PC (Steam)",
+          "Steam Deck"
+        ],
+        "later": [
+          "iPad",
+          "Switch 2",
+          "PS5"
+        ]
+      },
+      "pricing": {
+        "base": "$19.99",
+        "model": "Premium plus paid mountain packs",
+        "details": [
+          "Builders priced $20+ reach 1,000 reviews far more often than cheaper ones.",
+          "10% launch discount; join Steam's city-builder and cozy fests.",
+          "Regional pricing matters: Southeast Asia and Latin America are part of the audience."
+        ]
+      },
+      "monetizationPlan": [
+        "Premium base game",
+        "Mountain packs ($4.99) every few months",
+        "Soundtrack with traditional instruments",
+        "Art book and prints of player-made mountains (later)",
+        "No microtransactions"
+      ],
+      "team": [
+        {
+          "role": "Founder / designer",
+          "count": 1,
+          "note": "Goals, pacing and the feel of each mountain."
+        },
+        {
+          "role": "Technical artist (terrain and water)",
+          "count": 1,
+          "note": "The most important hire. The water is the game."
+        },
+        {
+          "role": "Gameplay and tools programmer",
+          "count": 1,
+          "note": "Sculpting tools, growth systems, save and share."
+        },
+        {
+          "role": "Environment artist",
+          "count": 1,
+          "note": "Architecture, crops and the regional look."
+        },
+        {
+          "role": "Contractors",
+          "count": 3,
+          "note": "Composer, cultural consultants from each region, localization."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$450–800k",
+        "note": "Four people for about 20 months plus contractors and festivals. Most of the risk sits in the first 3 months: if the water toy isn't satisfying by then, stop or change course cheaply."
+      },
+      "devMonths": 20,
+      "milestones": [
+        {
+          "name": "Water toy prototype",
+          "startMonth": 0,
+          "endMonth": 3,
+          "kind": "build",
+          "deliverable": "Sculpt a slope and watch water fill terraces",
+          "gate": "Strangers keep sculpting 15+ minutes; clips earn saves and shares"
+        },
+        {
+          "name": "Steam page live",
+          "startMonth": 3,
+          "endMonth": 4,
+          "kind": "launch",
+          "deliverable": "GIF-led page, Chinese and Japanese pages",
+          "gate": "12%+ visit-to-wishlist"
+        },
+        {
+          "name": "Vertical slice",
+          "startMonth": 4,
+          "endMonth": 9,
+          "kind": "build",
+          "deliverable": "One mountain at final quality",
+          "gate": "Runs well on Steam Deck"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "startMonth": 10,
+          "endMonth": 12,
+          "kind": "launch",
+          "deliverable": "30-minute demo with photo mode",
+          "gate": "10k+ wishlists after the fest"
+        },
+        {
+          "name": "Production",
+          "startMonth": 9,
+          "endMonth": 19,
+          "kind": "build",
+          "deliverable": "8 mountains, sandbox, seasons",
+          "gate": "Playtests above 90% positive"
+        },
+        {
+          "name": "Launch",
+          "startMonth": 20,
+          "endMonth": 21,
+          "kind": "launch",
+          "deliverable": "PC release at $19.99",
+          "gate": "30k+ wishlists going in"
+        },
+        {
+          "name": "Photo challenges and packs",
+          "startMonth": 21,
+          "endMonth": 30,
+          "kind": "live",
+          "deliverable": "Monthly challenges, paid mountain packs",
+          "gate": "Reviews stay 92%+"
+        },
+        {
+          "name": "iPad and Switch 2 ports",
+          "startMonth": 22,
+          "endMonth": 28,
+          "kind": "build",
+          "deliverable": "Touch-first port, then console",
+          "gate": "PC traction"
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Months 1–4",
+          "action": "Post a water clip every week from the first prototype on TikTok, Shorts, Reels and r/CityBuilders. The water is the trailer."
+        },
+        {
+          "when": "Months 3–9",
+          "action": "Steam page, Wholesome Direct and builder showcases, Bilibili and regional creators in Southeast Asia."
+        },
+        {
+          "when": "Months 10–12",
+          "action": "Next Fest demo with photo mode; send keys to builder YouTubers and 'satisfying' channels."
+        },
+        {
+          "when": "Months 12–19",
+          "action": "A photo-mode contest on the demo to keep clips flowing; pitch press on the setting and the team behind it."
+        },
+        {
+          "when": "Month 20",
+          "action": "Launch timed with a Steam city-builder or cozy fest."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Monthly",
+          "what": "Photo challenge with a theme; feature winners in-game."
+        },
+        {
+          "when": "Every 3–4 months",
+          "what": "New mountain pack with a sale on the base game."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Workshop sharing, devlogs on how the water works, regional festivals as events."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Prototype clip test",
+          "target": "Saves/shares above your channel average",
+          "why": "Proves the core action markets itself before you spend on content."
+        },
+        {
+          "metric": "Wishlists at launch",
+          "target": "30,000+",
+          "why": "Builders with a clip-able hook wishlist well; Tiny Glade reached 1.3M."
+        },
+        {
+          "metric": "Steam review score",
+          "target": "92%+",
+          "why": "Builder hits sit at 94–97%."
+        },
+        {
+          "metric": "Year-one units",
+          "target": "60,000 (base case)",
+          "why": "Recoups the budget in about 18 months with packs and ports."
+        }
+      ],
+      "killCriteria": [
+        "Testers stop sculpting within 10 minutes after 3 months of iteration: the water toy isn't working.",
+        "Under 5,000 wishlists after 6 months of weekly clips: the hook isn't landing; rethink the setting or the action."
+      ],
+      "risks": [
+        {
+          "risk": "Water and terrain tech takes longer than planned",
+          "mitigation": "Prototype the water first, before any content. Cap the simulation to what reads well on screen."
+        },
+        {
+          "risk": "A sandbox with no goals gets boring",
+          "mitigation": "Light goals per mountain (feed a village, reach the summit) plus a free sandbox mode."
+        },
+        {
+          "risk": "Cultural authenticity",
+          "mitigation": "Paid consultants and, ideally, team members from each region; credit them visibly."
+        },
+        {
+          "risk": "Performance on Steam Deck",
+          "mitigation": "Test on Deck from the vertical slice onward."
+        }
+      ],
+      "revenueAssumptions": "Assumes $19.99. Net to studio ≈ $9.80 per unit after discounts, regional pricing, refunds and Steam's 30%.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 8000,
+          "netUSD": 78400,
+          "note": "The water didn't sell in clips."
+        },
+        {
+          "scenario": "Base",
+          "units": 60000,
+          "netUSD": 588000,
+          "note": "A solid builder; packs and ports carry it past break-even."
+        },
+        {
+          "scenario": "Strong",
+          "units": 300000,
+          "netUSD": 2940000,
+          "note": "Townscaper or Dorfromantik territory."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 900000,
+          "netUSD": 8820000,
+          "note": "A Tiny Glade-like year. Rare."
+        }
       ]
     },
     {
@@ -285,73 +1245,370 @@
       "niche": "Spooky cozy · narrative · single-player",
       "oneLiner": "Keep a lighthouse inn on a foggy coast and help gentle ghosts finish their unfinished business.",
       "pitch": "Players asked for 'cozy, but with Dredge's mystery'. You run a small inn at the foot of a lighthouse. By day you cook, garden and repair; by night ghosts drift in, each with something left undone. Solving their stories restores the town and the coastline. No fail states, no jump scares, just a soft unease and a lot of warmth. It has a built-in Halloween marketing moment every year.",
-      "genreTags": ["Spooky cozy", "Mystery", "Narrative", "Inn management", "Single-player"],
+      "genreTags": [
+        "Spooky cozy",
+        "Mystery",
+        "Narrative",
+        "Inn management",
+        "Single-player"
+      ],
       "audience": "Dredge, Spiritfarer and Strange Horticulture fans; cozy players who want more story and a darker edge.",
-      "comps": ["Dredge", "Spiritfarer", "Strange Horticulture", "Wanderstop", "Cozy Grove"],
+      "comps": [
+        "Dredge",
+        "Spiritfarer",
+        "Strange Horticulture",
+        "Wanderstop",
+        "Cozy Grove"
+      ],
       "sessionLength": "One day/night cycle takes about 30 minutes",
       "artDirection": "Hand-painted 2D or stylized 3D, fog and lamplight, a muted palette with warm interiors.",
       "scores": {
-        "demand": { "score": 6, "why": "Spooky cozy demand is 6. Dredge (1M+ in its first year) and Spiritfarer (1M+) show the ceiling." },
-        "gap": { "score": 7, "why": "Supply is 4: few games commit to gentle-spooky." },
-        "scopeFit": { "score": 7, "why": "Single-player and content-led. Manageable with 4 people in 18 months." },
-        "monetization": { "score": 5, "why": "Premium narrative games have less long-tail and DLC headroom than systemic ones." },
-        "marketability": { "score": 7, "why": "A seasonal Halloween hook, a strong mood and streamable stories." },
-        "momentum": { "score": 6, "why": "Cozy hybrids are rising, but narrative cozy is commercially harder." }
+        "demand": {
+          "score": 6,
+          "why": "Spooky cozy demand is 6. Dredge (1M+ in its first year) and Spiritfarer (1M+) show the ceiling."
+        },
+        "gap": {
+          "score": 7,
+          "why": "Supply is 4: few games commit to gentle-spooky."
+        },
+        "scopeFit": {
+          "score": 7,
+          "why": "Single-player and content-led. Manageable with 4 people in 18 months."
+        },
+        "monetization": {
+          "score": 5,
+          "why": "Premium narrative games have less long-tail and DLC headroom than systemic ones."
+        },
+        "marketability": {
+          "score": 7,
+          "why": "A seasonal Halloween hook, a strong mood and streamable stories."
+        },
+        "momentum": {
+          "score": 6,
+          "why": "Cozy hybrids are rising, but narrative cozy is commercially harder."
+        }
       },
       "whyNow": [
         "Players explicitly ask for cozy games with a darker or more mysterious edge (r/GirlGamers, Dredge threads).",
         "Spooky cozy supply is low (4) and Halloween gives a free marketing moment every year."
       ],
-      "pillars": ["Unease, never fear", "Every ghost is a short story with a satisfying end", "The inn grows as the coast heals"],
-      "coreLoop": ["Run the inn by day", "Gather and cook", "Meet a ghost at night", "Find clues around town", "Lay the ghost to rest", "Restore a piece of the coast"],
-      "features": {
-        "mvp": ["Inn day loop and one ghost story", "Cooking and garden basics", "45-minute demo"],
-        "launch": ["20 ghost stories, 5 town areas, inn upgrades", "Steam Deck Verified, 6 languages"],
-        "postLaunch": ["Free Halloween story each year", "Paid story chapter DLC", "Switch 2 port"]
-      },
-      "platforms": { "launch": ["PC (Steam)", "Steam Deck"], "later": ["Switch 2", "PS5", "Xbox"] },
-      "pricing": { "base": "$19.99", "model": "Premium plus paid story chapters", "details": ["Launch in October.", "Halloween sale every year."] },
-      "monetizationPlan": ["Premium base game", "Story chapter DLC ($6.99) each autumn", "Soundtrack and artbook"],
-      "team": [
-        { "role": "Founder / writer-designer", "count": 1, "note": "The ghost stories are the product." },
-        { "role": "Programmer", "count": 1, "note": "Inn systems, dialogue tools." },
-        { "role": "Artists", "count": 2, "note": "Environment and characters." },
-        { "role": "Contractors", "count": 2, "note": "Composer and sound, localization." }
+      "pillars": [
+        "Unease, never fear",
+        "Every ghost is a short story with a satisfying end",
+        "The inn grows as the coast heals"
       ],
-      "budgetUSD": { "label": "$400–750k", "note": "Four people for 18 months." },
+      "coreLoop": [
+        "Run the inn by day",
+        "Gather and cook",
+        "Meet a ghost at night",
+        "Find clues around town",
+        "Lay the ghost to rest",
+        "Restore a piece of the coast"
+      ],
+      "features": {
+        "mvp": [
+          "The inn's day loop: cook, garden, repair a room",
+          "One complete ghost story with clues around town",
+          "Fog, lamplight and the lighthouse beam",
+          "A 45-minute demo ending on a cliffhanger"
+        ],
+        "launch": [
+          "20 ghost stories, each 20–40 minutes",
+          "5 town areas that change as the coast heals",
+          "Inn upgrades and recipes guests remember",
+          "Steam Deck Verified; 6 languages"
+        ],
+        "postLaunch": [
+          "A free Halloween story every October",
+          "Paid story chapter each autumn ($6.99)",
+          "Switch 2 port",
+          "Spring festival update to keep the town alive off-season"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "PC (Steam)",
+          "Steam Deck"
+        ],
+        "later": [
+          "Switch 2",
+          "PS5",
+          "Xbox"
+        ]
+      },
+      "pricing": {
+        "base": "$19.99",
+        "model": "Premium plus paid story chapters",
+        "details": [
+          "Launch in October.",
+          "Halloween sale every year."
+        ]
+      },
+      "monetizationPlan": [
+        "Premium base game",
+        "Story chapter DLC ($6.99) each autumn",
+        "Soundtrack and artbook"
+      ],
+      "team": [
+        {
+          "role": "Founder / writer-designer",
+          "count": 1,
+          "note": "The ghost stories are the product."
+        },
+        {
+          "role": "Programmer",
+          "count": 1,
+          "note": "Inn systems, dialogue and clue tools."
+        },
+        {
+          "role": "Environment artist",
+          "count": 1,
+          "note": "Town, inn interiors, fog and light."
+        },
+        {
+          "role": "Character artist / animator",
+          "count": 1,
+          "note": "Ghosts, guests and townsfolk."
+        },
+        {
+          "role": "Contractors",
+          "count": 2,
+          "note": "Composer and sound, localization."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$400–750k",
+        "note": "Four people for 18 months."
+      },
       "devMonths": 18,
       "milestones": [
-        { "name": "Prototype", "startMonth": 0, "endMonth": 3, "kind": "build", "deliverable": "Inn loop and one ghost", "gate": "Testers want the next ghost" },
-        { "name": "Steam page", "startMonth": 3, "endMonth": 4, "kind": "launch", "deliverable": "Moody trailer", "gate": "12%+ conversion" },
-        { "name": "Production", "startMonth": 4, "endMonth": 16, "kind": "build", "deliverable": "Stories and town", "gate": "Narrative playtests" },
-        { "name": "Next Fest demo", "startMonth": 10, "endMonth": 12, "kind": "launch", "deliverable": "Demo", "gate": "7k+ wishlists" },
-        { "name": "October launch", "startMonth": 18, "endMonth": 19, "kind": "launch", "deliverable": "Release", "gate": "90%+ positive" },
-        { "name": "Story DLC", "startMonth": 22, "endMonth": 30, "kind": "live", "deliverable": "Next autumn's chapter", "gate": "Sales tail" }
+        {
+          "name": "Prototype",
+          "startMonth": 0,
+          "endMonth": 3,
+          "kind": "build",
+          "deliverable": "Inn loop and one ghost story",
+          "gate": "Testers ask what happens to the next ghost"
+        },
+        {
+          "name": "Steam page",
+          "startMonth": 3,
+          "endMonth": 4,
+          "kind": "launch",
+          "deliverable": "Moody trailer and capsule",
+          "gate": "12%+ visit-to-wishlist"
+        },
+        {
+          "name": "Vertical slice",
+          "startMonth": 4,
+          "endMonth": 8,
+          "kind": "build",
+          "deliverable": "3 ghosts, the inn at final quality",
+          "gate": "Tone test: cozy players say 'eerie, not scary'"
+        },
+        {
+          "name": "Next Fest demo",
+          "startMonth": 10,
+          "endMonth": 12,
+          "kind": "launch",
+          "deliverable": "45-minute demo",
+          "gate": "7k+ wishlists"
+        },
+        {
+          "name": "Production",
+          "startMonth": 8,
+          "endMonth": 17,
+          "kind": "build",
+          "deliverable": "All 20 stories and the town",
+          "gate": "Narrative playtests above 90% positive"
+        },
+        {
+          "name": "October launch",
+          "startMonth": 18,
+          "endMonth": 19,
+          "kind": "launch",
+          "deliverable": "PC release at $19.99",
+          "gate": "20k+ wishlists going in"
+        },
+        {
+          "name": "Seasonal updates",
+          "startMonth": 19,
+          "endMonth": 24,
+          "kind": "live",
+          "deliverable": "Spring festival, quality-of-life patches",
+          "gate": "Reviews hold 92%+"
+        },
+        {
+          "name": "Autumn story DLC",
+          "startMonth": 24,
+          "endMonth": 30,
+          "kind": "live",
+          "deliverable": "Next October's paid chapter",
+          "gate": "Base game still selling"
+        }
       ],
       "marketingPlan": [
-        { "when": "Months 0–6", "action": "Ghost-story micro-fiction clips; atmospheric GIFs." },
-        { "when": "Months 6–12", "action": "Spooky and cozy showcases; Next Fest demo." },
-        { "when": "Month 18", "action": "Launch in October alongside Halloween sales and coverage." }
+        {
+          "when": "Months 0–6",
+          "action": "Post atmospheric GIFs and 30-second ghost micro-stories; start a mailing list."
+        },
+        {
+          "when": "Months 4–10",
+          "action": "Apply to Wholesome Direct and spooky and cozy showcases; run the Steam page through Halloween events."
+        },
+        {
+          "when": "Months 10–12",
+          "action": "Next Fest demo ending on a cliffhanger; keys to cozy and narrative streamers."
+        },
+        {
+          "when": "Months 12–17",
+          "action": "Press on 'cozy with a darker edge'; Dredge and Spiritfarer comparisons in pitches."
+        },
+        {
+          "when": "Month 18",
+          "action": "Launch in early October, ahead of Halloween sales and coverage."
+        }
       ],
       "liveOps": [
-        { "when": "Every October", "what": "New ghost story and Halloween event." },
-        { "when": "Quarterly", "what": "Bug fixes and quality-of-life patches." }
+        {
+          "when": "Every October",
+          "what": "A free Halloween ghost and a sale; paid story chapter from year two."
+        },
+        {
+          "when": "Spring",
+          "what": "Festival update so the town has a second seasonal beat."
+        },
+        {
+          "when": "Quarterly",
+          "what": "Bug fixes and quality-of-life patches, with devlogs."
+        }
       ],
       "kpis": [
-        { "metric": "Wishlists at launch", "target": "20,000+", "why": "Narrative games depend on the launch spike." },
-        { "metric": "Review score", "target": "92%+", "why": "Narrative games live on word of mouth." }
+        {
+          "metric": "Prototype pull",
+          "target": "4 of 5 testers want the next ghost",
+          "why": "Narrative games live on curiosity."
+        },
+        {
+          "metric": "Wishlists at launch",
+          "target": "20,000+",
+          "why": "Narrative games depend on the launch spike."
+        },
+        {
+          "metric": "Review score",
+          "target": "92%+",
+          "why": "Word of mouth sells story games."
+        },
+        {
+          "metric": "Year-one units",
+          "target": "35,000 (base case)",
+          "why": "Near break-even with the first story DLC."
+        }
       ],
-      "killCriteria": ["Playtesters don't care about the second ghost: rework the writing before building more."],
+      "killCriteria": [
+        "Testers don't care about the second ghost: rework the writing before building more.",
+        "Tone tests read as 'horror' to cozy players: soften it before production.",
+        "Under 7,000 wishlists after Next Fest: cut to 12 stories and launch lean."
+      ],
       "risks": [
-        { "risk": "Narrative games are critically loved but sell less", "mitigation": "Add a systemic inn loop for replay value." },
-        { "risk": "Too scary for cozy players", "mitigation": "Tone tests with cozy players; no jump scares." }
+        {
+          "risk": "Narrative games are loved by critics but sell less",
+          "mitigation": "A systemic inn loop for replay value, and a modest budget."
+        },
+        {
+          "risk": "Too scary for cozy players",
+          "mitigation": "Regular tone tests; no jump scares, ever."
+        },
+        {
+          "risk": "One launch window a year",
+          "mitigation": "Plan around October; if you slip, slip a full year or launch in spring with a festival hook."
+        },
+        {
+          "risk": "Content-heavy scope",
+          "mitigation": "Build the story tools first so the writer can work without a programmer."
+        }
       ],
       "revenueAssumptions": "Assumes $19.99. Net ≈ $9.80 per unit.",
       "revenueScenarios": [
-        { "scenario": "Miss", "units": 5000, "netUSD": 49000, "note": "Venba and Botany Manor-level sales." },
-        { "scenario": "Base", "units": 35000, "netUSD": 343000, "note": "Near break-even with DLC." },
-        { "scenario": "Strong", "units": 150000, "netUSD": 1470000, "note": "Strange Horticulture-like." },
-        { "scenario": "Breakout", "units": 700000, "netUSD": 6860000, "note": "Dredge-like." }
+        {
+          "scenario": "Miss",
+          "units": 5000,
+          "netUSD": 49000,
+          "note": "Venba and Botany Manor-level sales."
+        },
+        {
+          "scenario": "Base",
+          "units": 35000,
+          "netUSD": 343000,
+          "note": "Near break-even with DLC."
+        },
+        {
+          "scenario": "Strong",
+          "units": 150000,
+          "netUSD": 1470000,
+          "note": "Strange Horticulture-like."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 700000,
+          "netUSD": 6860000,
+          "note": "Dredge-like."
+        }
+      ],
+      "track": "main",
+      "hook": "Keep a lighthouse inn and help gentle ghosts finish what they left undone.",
+      "spec": {
+        "genre": "Spooky-cozy narrative with inn management",
+        "players": "1",
+        "setting": "A foggy coastal town below a lighthouse",
+        "coreVerb": "Run the inn by day, solve ghost stories by night",
+        "look": "Hand-painted, fog and lamplight",
+        "team": "4 + contractors",
+        "audience": "Dredge, Spiritfarer and Strange Horticulture fans",
+        "differentiator": "Gentle unease with no jump scares, and a Halloween marketing moment every year",
+        "price": "$19.99"
+      },
+      "drivers": [
+        {
+          "signal": "Players ask for cozy with a darker edge",
+          "detail": "Recurring 'cozy but like Dredge' requests on Reddit.",
+          "strength": "medium",
+          "ref": {
+            "link": "#gaps"
+          }
+        },
+        {
+          "signal": "Spooky cozy is lightly supplied",
+          "detail": "Demand 6, supply 4.",
+          "strength": "medium",
+          "ref": {
+            "niche": "Cozy horror / spooky cozy"
+          }
+        },
+        {
+          "signal": "The ceiling is proven",
+          "detail": "Dredge (1M+ in its first year, ~4 people), Spiritfarer (1M+) and Strange Horticulture (750k+, 2 people).",
+          "strength": "strong",
+          "ref": {
+            "game": "dredge"
+          }
+        },
+        {
+          "signal": "A built-in yearly marketing beat",
+          "detail": "Halloween sales, coverage and seasonal content every October.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#playbook"
+          }
+        },
+        {
+          "signal": "Narrative cozy sells less than systemic cozy",
+          "detail": "Wanderstop (est. ~97k) and Venba (est. ~49k) were acclaimed but sold modestly. The inn loop is there to add replay value.",
+          "strength": "caution",
+          "ref": {
+            "game": "wanderstop"
+          }
+        }
       ]
     },
     {
@@ -360,61 +1617,238 @@
       "niche": "Roblox cozy experience · gardening · social",
       "oneLiner": "A free cozy harbor garden on Roblox where friends grow, trade and show off rare plants.",
       "pitch": "Grow a Garden showed idle gardening may be the largest cozy fantasy of any format, peaking at 22M concurrent players. This is a small, fast Roblox experience built around growing, trading and decorating a shared harbor garden. It's a low-cost way to test a cozy loop, reach a huge young audience and build Roblox skills, while the main PC game is in development.",
-      "genreTags": ["Roblox", "Free-to-play", "Gardening", "Trading", "Social"],
+      "genreTags": [
+        "Roblox",
+        "Free-to-play",
+        "Gardening",
+        "Trading",
+        "Social"
+      ],
       "audience": "Roblox players aged 9–16 who play gardening and pet experiences with friends.",
-      "comps": ["Grow a Garden", "Adopt Me!"],
+      "comps": [
+        "Grow a Garden",
+        "Adopt Me!"
+      ],
       "sessionLength": "5–20 minutes, several times a day",
       "artDirection": "Bright Roblox-native style with rare plants that look collectible.",
       "scores": {
-        "demand": { "score": 10, "why": "Roblox cozy demand is 10. Grow a Garden reached 35B+ visits." },
-        "gap": { "score": 2, "why": "Supply is 9. Every Roblox trend is cloned within weeks." },
-        "scopeFit": { "score": 6, "why": "Cheap to ship, but it needs live ops, trend speed and Luau skills a PC team may not have." },
-        "monetization": { "score": 7, "why": "Game passes and items; top creators earn a lot, the median earns little." },
-        "marketability": { "score": 6, "why": "Discovery is algorithmic and winner-takes-most." },
-        "momentum": { "score": 8, "why": "Roblox creator payouts exceeded $1.5B in 2025." }
+        "demand": {
+          "score": 10,
+          "why": "Roblox cozy demand is 10. Grow a Garden reached 35B+ visits."
+        },
+        "gap": {
+          "score": 2,
+          "why": "Supply is 9. Every Roblox trend is cloned within weeks."
+        },
+        "scopeFit": {
+          "score": 6,
+          "why": "Cheap to ship, but it needs live ops, trend speed and Luau skills a PC team may not have."
+        },
+        "monetization": {
+          "score": 7,
+          "why": "Game passes and items; top creators earn a lot, the median earns little."
+        },
+        "marketability": {
+          "score": 6,
+          "why": "Discovery is algorithmic and winner-takes-most."
+        },
+        "momentum": {
+          "score": 8,
+          "why": "Roblox creator payouts exceeded $1.5B in 2025."
+        }
       },
-      "whyNow": ["Grow a Garden proved the fantasy at enormous scale in 2025.", "Roblox paid creators more than $1.5B in 2025."],
-      "pillars": ["Rare plants worth showing off", "Trading with friends", "Updates every week"],
-      "coreLoop": ["Plant seeds", "Wait and visit friends", "Harvest rare plants", "Trade or sell", "Buy new seeds"],
-      "features": {
-        "mvp": ["Garden plots, 20 seeds, rarity tiers", "Trading", "Ships in 6–8 weeks"],
-        "launch": ["Weekly seed drops", "Game passes (extra plots, faster growth)"],
-        "postLaunch": ["Weekly events", "Seasonal plants", "Crossover cosmetics with the PC game"]
-      },
-      "platforms": { "launch": ["Roblox (PC, mobile, console)"], "later": [] },
-      "pricing": { "base": "Free", "model": "Game passes and items (Robux)", "details": ["Avoid pay-to-win; sell cosmetics and convenience."] },
-      "monetizationPlan": ["Game passes", "Cosmetic items", "Limited-time event items"],
-      "team": [
-        { "role": "Roblox (Luau) developers", "count": 2, "note": "Hire or contract people with shipped experiences." },
-        { "role": "Artist", "count": 1, "note": "Part-time." }
+      "whyNow": [
+        "Grow a Garden proved the fantasy at enormous scale in 2025.",
+        "Roblox paid creators more than $1.5B in 2025."
       ],
-      "budgetUSD": { "label": "$40–120k", "note": "3–4 months to launch, then weekly updates. Run it as an experiment with a fixed budget." },
+      "pillars": [
+        "Rare plants worth showing off",
+        "Trading with friends",
+        "Updates every week"
+      ],
+      "coreLoop": [
+        "Plant seeds",
+        "Wait and visit friends",
+        "Harvest rare plants",
+        "Trade or sell",
+        "Buy new seeds"
+      ],
+      "features": {
+        "mvp": [
+          "Garden plots, 20 seeds, rarity tiers",
+          "Trading",
+          "Ships in 6–8 weeks"
+        ],
+        "launch": [
+          "Weekly seed drops",
+          "Game passes (extra plots, faster growth)"
+        ],
+        "postLaunch": [
+          "Weekly events",
+          "Seasonal plants",
+          "Crossover cosmetics with the PC game"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Roblox (PC, mobile, console)"
+        ],
+        "later": []
+      },
+      "pricing": {
+        "base": "Free",
+        "model": "Game passes and items (Robux)",
+        "details": [
+          "Avoid pay-to-win; sell cosmetics and convenience."
+        ]
+      },
+      "monetizationPlan": [
+        "Game passes",
+        "Cosmetic items",
+        "Limited-time event items"
+      ],
+      "team": [
+        {
+          "role": "Roblox (Luau) developers",
+          "count": 2,
+          "note": "Hire or contract people with shipped experiences."
+        },
+        {
+          "role": "Artist",
+          "count": 1,
+          "note": "Part-time."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$40–120k",
+        "note": "3–4 months to launch, then weekly updates. Run it as an experiment with a fixed budget."
+      },
       "devMonths": 3,
       "milestones": [
-        { "name": "Build", "startMonth": 0, "endMonth": 2, "kind": "build", "deliverable": "Core loop and trading", "gate": "Friends-and-family test" },
-        { "name": "Soft launch", "startMonth": 2, "endMonth": 3, "kind": "launch", "deliverable": "Public experience", "gate": "Day-1 retention 25%+" },
-        { "name": "Weekly updates", "startMonth": 3, "endMonth": 9, "kind": "live", "deliverable": "Seeds and events", "gate": "Growth in concurrent players" }
+        {
+          "name": "Build",
+          "startMonth": 0,
+          "endMonth": 2,
+          "kind": "build",
+          "deliverable": "Core loop and trading",
+          "gate": "Friends-and-family test"
+        },
+        {
+          "name": "Soft launch",
+          "startMonth": 2,
+          "endMonth": 3,
+          "kind": "launch",
+          "deliverable": "Public experience",
+          "gate": "Day-1 retention 25%+"
+        },
+        {
+          "name": "Weekly updates",
+          "startMonth": 3,
+          "endMonth": 9,
+          "kind": "live",
+          "deliverable": "Seeds and events",
+          "gate": "Growth in concurrent players"
+        }
       ],
       "marketingPlan": [
-        { "when": "Launch", "action": "Roblox sponsored ads in small tests; TikTok clips of rare plants." },
-        { "when": "Weekly", "action": "Update countdowns; reach out to Roblox YouTubers." }
+        {
+          "when": "Launch",
+          "action": "Roblox sponsored ads in small tests; TikTok clips of rare plants."
+        },
+        {
+          "when": "Weekly",
+          "action": "Update countdowns; reach out to Roblox YouTubers."
+        }
       ],
-      "liveOps": [{ "when": "Weekly", "what": "New seeds or an event every week; Roblox audiences expect it." }],
+      "liveOps": [
+        {
+          "when": "Weekly",
+          "what": "New seeds or an event every week; Roblox audiences expect it."
+        }
+      ],
       "kpis": [
-        { "metric": "Day-1 retention", "target": "25%+", "why": "Roblox benchmark for a viable experience." },
-        { "metric": "Concurrent players at month 2", "target": "1,000+", "why": "Signals the algorithm is picking it up." }
+        {
+          "metric": "Day-1 retention",
+          "target": "25%+",
+          "why": "Roblox benchmark for a viable experience."
+        },
+        {
+          "metric": "Concurrent players at month 2",
+          "target": "1,000+",
+          "why": "Signals the algorithm is picking it up."
+        }
       ],
-      "killCriteria": ["No growth after 8 weeks of updates: stop and keep the lessons."],
+      "killCriteria": [
+        "No growth after 8 weeks of updates: stop and keep the lessons."
+      ],
       "risks": [
-        { "risk": "Clone competition", "mitigation": "Ship fast and own a distinct look." },
-        { "risk": "Distracts the main team", "mitigation": "Separate contractors and a fixed budget." }
+        {
+          "risk": "Clone competition",
+          "mitigation": "Ship fast and own a distinct look."
+        },
+        {
+          "risk": "Distracts the main team",
+          "mitigation": "Separate contractors and a fixed budget."
+        }
       ],
       "revenueAssumptions": "Net is DevEx payout after Roblox's share. 'Units' here means monthly active players at the year-one peak.",
       "revenueScenarios": [
-        { "scenario": "Miss", "units": 2000, "netUSD": 3000, "note": "Most Roblox experiences." },
-        { "scenario": "Base", "units": 50000, "netUSD": 60000, "note": "A small but steady experience." },
-        { "scenario": "Strong", "units": 1000000, "netUSD": 900000, "note": "Top few hundred on Roblox." },
-        { "scenario": "Breakout", "units": 20000000, "netUSD": 20000000, "note": "Grow a Garden scale. Extremely rare." }
+        {
+          "scenario": "Miss",
+          "units": 2000,
+          "netUSD": 3000,
+          "note": "Most Roblox experiences."
+        },
+        {
+          "scenario": "Base",
+          "units": 50000,
+          "netUSD": 60000,
+          "note": "A small but steady experience."
+        },
+        {
+          "scenario": "Strong",
+          "units": 1000000,
+          "netUSD": 900000,
+          "note": "Top few hundred on Roblox."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 20000000,
+          "netUSD": 20000000,
+          "note": "Grow a Garden scale. Extremely rare."
+        }
+      ],
+      "track": "side",
+      "sideRole": "A cheap experiment on Roblox",
+      "hook": "Grow, trade and show off rare plants with friends, free on Roblox.",
+      "spec": {
+        "genre": "Roblox gardening and trading",
+        "players": "Massively social",
+        "setting": "A shared harbor garden",
+        "coreVerb": "Grow, trade and show off",
+        "look": "Roblox-native, collectible plants",
+        "team": "2–3 Roblox developers",
+        "audience": "Roblox players aged 9–16",
+        "differentiator": "Rare plants worth trading",
+        "price": "Free"
+      },
+      "drivers": [
+        {
+          "signal": "Gardening is a giant fantasy on Roblox",
+          "detail": "Grow a Garden peaked at 22M concurrent players in 2025.",
+          "strength": "strong",
+          "ref": {
+            "game": "grow-a-garden"
+          }
+        },
+        {
+          "signal": "Winner-takes-most",
+          "detail": "Supply 9 and trends are cloned within weeks.",
+          "strength": "caution",
+          "ref": {
+            "niche": "Roblox cozy experiences"
+          }
+        }
       ]
     },
     {
@@ -423,63 +1857,332 @@
       "niche": "Accessibility-first cozy puzzle · players 50+",
       "oneLiner": "Piece together quilts square by square; each finished quilt tells a family's story.",
       "pitch": "A relaxing tile-placement puzzle built for older players: large readable text, no timers, one-handed controls, generous undo. Each quilt is a puzzle whose patterns score when they match; finishing one unlocks a chapter of the family it belongs to. It's a Dorfromantik-style calm puzzle aimed squarely at the 52M US gamers over 50, who mostly play puzzle games on tablets.",
-      "genreTags": ["Puzzle", "Tile placement", "Accessibility", "Tablet", "Story"],
+      "genreTags": [
+        "Puzzle",
+        "Tile placement",
+        "Accessibility",
+        "Tablet",
+        "Story"
+      ],
       "audience": "Players 50+ who play puzzle and word games on tablets and PCs, plus cozy puzzle fans of any age.",
-      "comps": ["Dorfromantik", "A Little to the Left", "Islanders", "Unpacking"],
+      "comps": [
+        "Dorfromantik",
+        "A Little to the Left",
+        "Islanders",
+        "Unpacking"
+      ],
       "sessionLength": "One quilt takes 10–20 minutes",
       "artDirection": "Tactile fabric textures, high-contrast patterns, big friendly UI.",
       "scores": {
-        "demand": { "score": 7, "why": "Older-adult cozy demand is 7; 73% of US gamers over 50 play puzzle games." },
-        "gap": { "score": 8, "why": "Supply is 3: almost nobody targets this audience on purpose." },
-        "scopeFit": { "score": 8, "why": "2D, single-player, puzzle content. Three people in about 12 months." },
-        "monetization": { "score": 4, "why": "This audience spends less and plays mostly on mobile." },
-        "marketability": { "score": 4, "why": "Hard to reach through Steam and gaming creators; needs Facebook and craft communities." },
-        "momentum": { "score": 5, "why": "A steady market, not a rising trend." }
+        "demand": {
+          "score": 7,
+          "why": "Older-adult cozy demand is 7; 73% of US gamers over 50 play puzzle games."
+        },
+        "gap": {
+          "score": 8,
+          "why": "Supply is 3: almost nobody targets this audience on purpose."
+        },
+        "scopeFit": {
+          "score": 8,
+          "why": "2D, single-player, puzzle content. Three people in about 12 months."
+        },
+        "monetization": {
+          "score": 4,
+          "why": "This audience spends less and plays mostly on mobile."
+        },
+        "marketability": {
+          "score": 4,
+          "why": "Hard to reach through Steam and gaming creators; needs Facebook and craft communities."
+        },
+        "momentum": {
+          "score": 5,
+          "why": "A steady market, not a rising trend."
+        }
       },
-      "whyNow": ["52.4M US gamers are 50+ and 73% of them play puzzle games.", "Accessibility for older players is a recurring request with almost no targeted supply."],
-      "pillars": ["Readable at arm's length", "Never rushed", "Every quilt is a memory"],
-      "coreLoop": ["Draw a fabric square", "Place it to match patterns", "Complete a quilt", "Unlock a family story", "Choose the next quilt"],
-      "features": {
-        "mvp": ["10 quilts", "Accessibility options from day one", "Tablet and PC input"],
-        "launch": ["40 quilts, a daily quilt mode, family story chapters"],
-        "postLaunch": ["Seasonal quilt packs", "A real-world quilting pattern book tie-in"]
-      },
-      "platforms": { "launch": ["PC (Steam)", "iPad"], "later": ["Switch 2", "Apple Arcade pitch", "Android tablets"] },
-      "pricing": { "base": "$12.99 on PC, $6.99 premium on mobile", "model": "Premium plus quilt packs", "details": ["No ads or energy systems; this audience hates them."] },
-      "monetizationPlan": ["Premium base game", "$2.99 seasonal quilt packs", "Pitch Apple Arcade for an upfront deal"],
-      "team": [
-        { "role": "Designer / programmer", "count": 1, "note": "Puzzle systems." },
-        { "role": "Artist", "count": 1, "note": "Fabric patterns and UI." },
-        { "role": "Writer and accessibility consultant", "count": 1, "note": "Part-time." }
+      "whyNow": [
+        "52.4M US gamers are 50+ and 73% of them play puzzle games.",
+        "Accessibility for older players is a recurring request with almost no targeted supply."
       ],
-      "budgetUSD": { "label": "$200–400k", "note": "Three people for about 12 months." },
+      "pillars": [
+        "Readable at arm's length",
+        "Never rushed",
+        "Every quilt is a memory"
+      ],
+      "coreLoop": [
+        "Draw a fabric square",
+        "Place it to match patterns",
+        "Complete a quilt",
+        "Unlock a family story",
+        "Choose the next quilt"
+      ],
+      "features": {
+        "mvp": [
+          "The core tile puzzle with pattern matching",
+          "10 quilts",
+          "Accessibility from day one: text size, high contrast, no timers, generous undo",
+          "Mouse, touch and one-handed controls"
+        ],
+        "launch": [
+          "40 quilts across 5 family chapters",
+          "A daily quilt",
+          "Story vignettes unlocked by finished quilts",
+          "A quilt gallery to revisit and share"
+        ],
+        "postLaunch": [
+          "Seasonal quilt packs ($2.99)",
+          "A real-world quilting pattern booklet tie-in",
+          "Android tablets and Switch 2",
+          "Large-print, color-blind and screen-reader improvements based on player feedback"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "PC (Steam)",
+          "iPad"
+        ],
+        "later": [
+          "Switch 2",
+          "Apple Arcade pitch",
+          "Android tablets"
+        ]
+      },
+      "pricing": {
+        "base": "$12.99 on PC, $6.99 premium on mobile",
+        "model": "Premium plus quilt packs",
+        "details": [
+          "No ads or energy systems; this audience hates them."
+        ]
+      },
+      "monetizationPlan": [
+        "Premium base game",
+        "$2.99 seasonal quilt packs",
+        "Pitch Apple Arcade for an upfront deal"
+      ],
+      "team": [
+        {
+          "role": "Designer / programmer",
+          "count": 1,
+          "note": "Puzzle systems and input."
+        },
+        {
+          "role": "Artist",
+          "count": 1,
+          "note": "Fabric patterns, UI and the porches."
+        },
+        {
+          "role": "Writer and accessibility consultant",
+          "count": 1,
+          "note": "Part-time; family stories and an accessibility review at every milestone."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$200–400k",
+        "note": "Three people for about 12 months."
+      },
       "devMonths": 12,
       "milestones": [
-        { "name": "Prototype", "startMonth": 0, "endMonth": 2, "kind": "build", "deliverable": "Core puzzle", "gate": "Over-50 testers finish 3 quilts unprompted" },
-        { "name": "Production", "startMonth": 2, "endMonth": 11, "kind": "build", "deliverable": "Content and story", "gate": "Accessibility review" },
-        { "name": "Launch", "startMonth": 12, "endMonth": 13, "kind": "launch", "deliverable": "PC and iPad", "gate": "90%+ positive" },
-        { "name": "Packs and ports", "startMonth": 13, "endMonth": 20, "kind": "live", "deliverable": "Seasonal packs, Switch 2", "gate": "Retention" }
+        {
+          "name": "Prototype",
+          "startMonth": 0,
+          "endMonth": 2,
+          "kind": "build",
+          "deliverable": "Core puzzle on PC and iPad",
+          "gate": "Testers over 50 finish 3 quilts without help"
+        },
+        {
+          "name": "Steam page and iPad pre-order",
+          "startMonth": 2,
+          "endMonth": 3,
+          "kind": "launch",
+          "deliverable": "Calm, readable trailer",
+          "gate": "Craft-community response"
+        },
+        {
+          "name": "Production",
+          "startMonth": 3,
+          "endMonth": 10,
+          "kind": "build",
+          "deliverable": "40 quilts and 5 family chapters",
+          "gate": "Accessibility review passes"
+        },
+        {
+          "name": "Polish and partners",
+          "startMonth": 9,
+          "endMonth": 12,
+          "kind": "build",
+          "deliverable": "Craft-community partnerships, Apple Arcade pitch",
+          "gate": "A partner or 10k wishlists"
+        },
+        {
+          "name": "Launch",
+          "startMonth": 12,
+          "endMonth": 13,
+          "kind": "launch",
+          "deliverable": "PC and iPad",
+          "gate": "90%+ positive"
+        },
+        {
+          "name": "Seasonal packs and ports",
+          "startMonth": 13,
+          "endMonth": 20,
+          "kind": "live",
+          "deliverable": "Packs, Android tablets, Switch 2",
+          "gate": "Retention holds"
+        }
       ],
       "marketingPlan": [
-        { "when": "Months 0–12", "action": "Quilting and craft communities, Facebook groups, AARP-style outlets, puzzle newsletters." },
-        { "when": "Launch", "action": "Mother's Day or holiday timing; gift-friendly pricing." }
+        {
+          "when": "Months 0–6",
+          "action": "Quilting and craft communities: Facebook groups, Pinterest, quilting YouTubers and magazines."
+        },
+        {
+          "when": "Months 3–9",
+          "action": "Accessibility and older-gamer outlets (AARP-style), puzzle newsletters."
+        },
+        {
+          "when": "Months 9–12",
+          "action": "Apple Arcade pitch; Steam puzzle fest demo."
+        },
+        {
+          "when": "Month 12",
+          "action": "Launch near Mother's Day or the winter holidays; gift-friendly pricing."
+        }
       ],
-      "liveOps": [{ "when": "Seasonal", "what": "A new quilt pack each season." }],
+      "liveOps": [
+        {
+          "when": "Daily",
+          "what": "The daily quilt; the habit this audience keeps."
+        },
+        {
+          "when": "Seasonal",
+          "what": "A new quilt pack each season."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Accessibility fixes from player feedback, announced plainly."
+        }
+      ],
       "kpis": [
-        { "metric": "Testers over 50 completing 3 quilts", "target": "70%+", "why": "Proves the audience fit." },
-        { "metric": "Year-one units", "target": "30,000 across platforms", "why": "Recoups a small budget." }
+        {
+          "metric": "Older testers completing 3 quilts",
+          "target": "70%+",
+          "why": "Proves the audience fit."
+        },
+        {
+          "metric": "Day-7 return (daily quilt)",
+          "target": "30%+",
+          "why": "Shows the habit is forming."
+        },
+        {
+          "metric": "Review score",
+          "target": "90%+",
+          "why": "Calm-puzzle norm."
+        },
+        {
+          "metric": "Year-one units",
+          "target": "30,000 across platforms",
+          "why": "Recoups a small budget."
+        }
       ],
-      "killCriteria": ["Older testers find it confusing after two UI iterations: rethink the core puzzle."],
+      "killCriteria": [
+        "Older testers find it confusing after two UI iterations: rethink the core puzzle.",
+        "No craft community or platform partner bites by month 9: launch small on PC and iPad only."
+      ],
       "risks": [
-        { "risk": "Reaching the audience", "mitigation": "Marketing through craft communities and partners, not gaming press." },
-        { "risk": "Low spend", "mitigation": "Keep the budget small; pitch Apple Arcade." }
+        {
+          "risk": "Reaching the audience",
+          "mitigation": "Marketing through craft communities and partners, not gaming press."
+        },
+        {
+          "risk": "Low spend",
+          "mitigation": "Keep the budget small; pitch Apple Arcade for an upfront deal."
+        },
+        {
+          "risk": "Puzzle depth runs out",
+          "mitigation": "Introduce one new pattern rule per family chapter."
+        }
       ],
       "revenueAssumptions": "Blended net ≈ $5.50 per unit across PC ($12.99) and mobile ($6.99) after store fees and discounts.",
       "revenueScenarios": [
-        { "scenario": "Miss", "units": 5000, "netUSD": 27500, "note": "Audience not reached." },
-        { "scenario": "Base", "units": 30000, "netUSD": 165000, "note": "Small, sustainable." },
-        { "scenario": "Strong", "units": 150000, "netUSD": 825000, "note": "A craft-community hit." },
-        { "scenario": "Breakout", "units": 600000, "netUSD": 3300000, "note": "A mainstream tablet hit." }
+        {
+          "scenario": "Miss",
+          "units": 5000,
+          "netUSD": 27500,
+          "note": "Audience not reached."
+        },
+        {
+          "scenario": "Base",
+          "units": 30000,
+          "netUSD": 165000,
+          "note": "Small, sustainable."
+        },
+        {
+          "scenario": "Strong",
+          "units": 150000,
+          "netUSD": 825000,
+          "note": "A craft-community hit."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 600000,
+          "netUSD": 3300000,
+          "note": "A mainstream tablet hit."
+        }
+      ],
+      "track": "main",
+      "hook": "Piece together quilts square by square; each one tells a family's story.",
+      "spec": {
+        "genre": "Tile-placement puzzle with story",
+        "players": "1",
+        "setting": "Family porches across generations",
+        "coreVerb": "Place fabric squares so patterns match",
+        "look": "Tactile fabric, high contrast, big UI",
+        "team": "3",
+        "audience": "Players 50+ and calm-puzzle fans",
+        "differentiator": "Built for older players: readable at arm's length, never timed, playable one-handed",
+        "price": "$12.99"
+      },
+      "drivers": [
+        {
+          "signal": "Older players are the least-served cozy audience",
+          "detail": "Demand 7, supply 3: tied for the top opportunity score (5.6).",
+          "strength": "strong",
+          "ref": {
+            "niche": "Cozy games for older adults / accessibility-first"
+          }
+        },
+        {
+          "signal": "A big audience that already plays puzzles",
+          "detail": "52.4M US gamers are 50+, and 73% of them play puzzle games (AARP).",
+          "strength": "medium",
+          "ref": {
+            "niche": "Cozy games for older adults / accessibility-first"
+          }
+        },
+        {
+          "signal": "Calm tile puzzles sell",
+          "detail": "Dorfromantik (4 people, est. 527k–874k on Steam) and A Little to the Left (~1M).",
+          "strength": "medium",
+          "ref": {
+            "game": "dorfromantik"
+          }
+        },
+        {
+          "signal": "Smallest scope of the five",
+          "detail": "2D, single-player, 3 people, about 12 months.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#playbook"
+          }
+        },
+        {
+          "signal": "Low spend and hard to reach on Steam",
+          "detail": "This audience spends less and plays mostly on tablets. Marketing has to go through craft communities, not gaming press.",
+          "strength": "caution",
+          "ref": {
+            "link": "#gaps"
+          }
+        }
       ]
     },
     {
@@ -488,62 +2191,247 @@
       "niche": "Idle desktop companion · social",
       "oneLiner": "A tiny window-box garden that grows along the bottom of your screen while you work, and your friends' plants can visit.",
       "pitch": "A small studio launchpad. Desktop idle games spread fast (Rusty's Retirement sold 330k+ copies on Steam at $7; Bongo Cat peaked at 194k concurrent players). Sill is a window box that sits at the bottom of the screen, grows while you work, and lets friends' plants pollinate yours. It's 4–6 months for two people. The goal is cash flow, Steam followers and a mailing list to launch the flagship to, not a fortune.",
-      "genreTags": ["Idle", "Desktop companion", "Gardening", "Friends"],
+      "genreTags": [
+        "Idle",
+        "Desktop companion",
+        "Gardening",
+        "Friends"
+      ],
       "audience": "People who work at a PC and want something gentle on screen: students, writers, remote workers.",
-      "comps": ["Rusty's Retirement", "Bongo Cat", "Spirit City: Lofi Sessions", "Tiny Pasture", "Ropuka's Idle Island"],
+      "comps": [
+        "Rusty's Retirement",
+        "Bongo Cat",
+        "Spirit City: Lofi Sessions",
+        "Tiny Pasture",
+        "Ropuka's Idle Island"
+      ],
       "sessionLength": "Runs for hours in the background, with short check-ins",
       "artDirection": "Crisp pixel or vector plants that look good at 120px tall.",
       "scores": {
-        "demand": { "score": 7, "why": "Idle/desktop demand is 7 and players explicitly ask for 'something cozy to run while working'." },
-        "gap": { "score": 2, "why": "Supply is 10: idle releases are up 150% in 2026." },
-        "scopeFit": { "score": 10, "why": "Two people, 4–6 months." },
-        "monetization": { "score": 4, "why": "Low price, small supporter-pack upside." },
-        "marketability": { "score": 7, "why": "Desktop screenshots and streamer overlays spread well." },
-        "momentum": { "score": 5, "why": "The format is now flooding; the early hits have already happened." }
+        "demand": {
+          "score": 7,
+          "why": "Idle/desktop demand is 7 and players explicitly ask for 'something cozy to run while working'."
+        },
+        "gap": {
+          "score": 2,
+          "why": "Supply is 10: idle releases are up 150% in 2026."
+        },
+        "scopeFit": {
+          "score": 10,
+          "why": "Two people, 4–6 months."
+        },
+        "monetization": {
+          "score": 4,
+          "why": "Low price, small supporter-pack upside."
+        },
+        "marketability": {
+          "score": 7,
+          "why": "Desktop screenshots and streamer overlays spread well."
+        },
+        "momentum": {
+          "score": 5,
+          "why": "The format is now flooding; the early hits have already happened."
+        }
       },
-      "whyNow": ["Rusty's Retirement shows the format can fund a solo developer.", "A cheap, fast first release builds the audience the flagship launches to."],
-      "pillars": ["Never in the way", "Something new every time you glance down", "Friends make it better"],
-      "coreLoop": ["Plant", "Work while it grows", "Glance and harvest", "Trade cuttings with friends", "Unlock new pots and plants"],
-      "features": {
-        "mvp": ["Window-box strip, 15 plants, offline growth"],
-        "launch": ["Friends' plants visiting through Steam", "60 plants, pots and charms"],
-        "postLaunch": ["Seasonal plants", "Cross-promotion for the flagship game"]
-      },
-      "platforms": { "launch": ["PC (Steam)"], "later": ["Mac"] },
-      "pricing": { "base": "$7.99", "model": "Premium plus $3.99 supporter pack", "details": ["Idle games do best between $10 and $14.99 for reaching 1,000 reviews; $7.99 is an impulse-buy compromise."] },
-      "monetizationPlan": ["Premium", "Supporter pack", "Seasonal plant DLC"],
-      "team": [
-        { "role": "Programmer", "count": 1, "note": "Desktop overlay, Steam friends integration." },
-        { "role": "Artist", "count": 1, "note": "Plants and pots." }
+      "whyNow": [
+        "Rusty's Retirement shows the format can fund a solo developer.",
+        "A cheap, fast first release builds the audience the flagship launches to."
       ],
-      "budgetUSD": { "label": "$25–70k", "note": "Two people for 4–6 months." },
+      "pillars": [
+        "Never in the way",
+        "Something new every time you glance down",
+        "Friends make it better"
+      ],
+      "coreLoop": [
+        "Plant",
+        "Work while it grows",
+        "Glance and harvest",
+        "Trade cuttings with friends",
+        "Unlock new pots and plants"
+      ],
+      "features": {
+        "mvp": [
+          "Window-box strip, 15 plants, offline growth"
+        ],
+        "launch": [
+          "Friends' plants visiting through Steam",
+          "60 plants, pots and charms"
+        ],
+        "postLaunch": [
+          "Seasonal plants",
+          "Cross-promotion for the flagship game"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "PC (Steam)"
+        ],
+        "later": [
+          "Mac"
+        ]
+      },
+      "pricing": {
+        "base": "$7.99",
+        "model": "Premium plus $3.99 supporter pack",
+        "details": [
+          "Idle games do best between $10 and $14.99 for reaching 1,000 reviews; $7.99 is an impulse-buy compromise."
+        ]
+      },
+      "monetizationPlan": [
+        "Premium",
+        "Supporter pack",
+        "Seasonal plant DLC"
+      ],
+      "team": [
+        {
+          "role": "Programmer",
+          "count": 1,
+          "note": "Desktop overlay, Steam friends integration."
+        },
+        {
+          "role": "Artist",
+          "count": 1,
+          "note": "Plants and pots."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$25–70k",
+        "note": "Two people for 4–6 months."
+      },
       "devMonths": 5,
       "milestones": [
-        { "name": "Build", "startMonth": 0, "endMonth": 4, "kind": "build", "deliverable": "Game", "gate": "Testers keep it open for a full workday" },
-        { "name": "Steam page and fest", "startMonth": 1, "endMonth": 4, "kind": "launch", "deliverable": "Page and demo", "gate": "5k+ wishlists" },
-        { "name": "Launch", "startMonth": 5, "endMonth": 6, "kind": "launch", "deliverable": "Release", "gate": "90%+ positive" },
-        { "name": "Updates", "startMonth": 6, "endMonth": 12, "kind": "live", "deliverable": "Seasonal plants", "gate": "Followers gained" }
+        {
+          "name": "Build",
+          "startMonth": 0,
+          "endMonth": 4,
+          "kind": "build",
+          "deliverable": "Game",
+          "gate": "Testers keep it open for a full workday"
+        },
+        {
+          "name": "Steam page and fest",
+          "startMonth": 1,
+          "endMonth": 4,
+          "kind": "launch",
+          "deliverable": "Page and demo",
+          "gate": "5k+ wishlists"
+        },
+        {
+          "name": "Launch",
+          "startMonth": 5,
+          "endMonth": 6,
+          "kind": "launch",
+          "deliverable": "Release",
+          "gate": "90%+ positive"
+        },
+        {
+          "name": "Updates",
+          "startMonth": 6,
+          "endMonth": 12,
+          "kind": "live",
+          "deliverable": "Seasonal plants",
+          "gate": "Followers gained"
+        }
       ],
       "marketingPlan": [
-        { "when": "Months 1–4", "action": "Desktop clips, 'what's on my screen' posts, the Idle Fest on Steam." },
-        { "when": "Launch", "action": "Twitch overlay angle for streamers." }
+        {
+          "when": "Months 1–4",
+          "action": "Desktop clips, 'what's on my screen' posts, the Idle Fest on Steam."
+        },
+        {
+          "when": "Launch",
+          "action": "Twitch overlay angle for streamers."
+        }
       ],
-      "liveOps": [{ "when": "Seasonal", "what": "New plants each season, each with a sale." }],
+      "liveOps": [
+        {
+          "when": "Seasonal",
+          "what": "New plants each season, each with a sale."
+        }
+      ],
       "kpis": [
-        { "metric": "Wishlists at launch", "target": "5,000+", "why": "Enough to make a cheap game profitable." },
-        { "metric": "Steam followers gained", "target": "10,000+", "why": "The real point: an audience for the flagship." }
+        {
+          "metric": "Wishlists at launch",
+          "target": "5,000+",
+          "why": "Enough to make a cheap game profitable."
+        },
+        {
+          "metric": "Steam followers gained",
+          "target": "10,000+",
+          "why": "The real point: an audience for the flagship."
+        }
       ],
-      "killCriteria": ["Under 2,000 wishlists after 3 months: ship it small anyway and move on."],
+      "killCriteria": [
+        "Under 2,000 wishlists after 3 months: ship it small anyway and move on."
+      ],
       "risks": [
-        { "risk": "Flooded format", "mitigation": "The friends feature is the differentiator; keep scope tiny." },
-        { "risk": "Distracts from the flagship", "mitigation": "Hard 6-month cap." }
+        {
+          "risk": "Flooded format",
+          "mitigation": "The friends feature is the differentiator; keep scope tiny."
+        },
+        {
+          "risk": "Distracts from the flagship",
+          "mitigation": "Hard 6-month cap."
+        }
       ],
       "revenueAssumptions": "Assumes $7.99. Net ≈ $3.90 per unit.",
       "revenueScenarios": [
-        { "scenario": "Miss", "units": 5000, "netUSD": 19500, "note": "Still gains followers." },
-        { "scenario": "Base", "units": 40000, "netUSD": 156000, "note": "Funds several months of the flagship." },
-        { "scenario": "Strong", "units": 150000, "netUSD": 585000, "note": "Tiny Pasture-like." },
-        { "scenario": "Breakout", "units": 500000, "netUSD": 1950000, "note": "Rusty's Retirement-like." }
+        {
+          "scenario": "Miss",
+          "units": 5000,
+          "netUSD": 19500,
+          "note": "Still gains followers."
+        },
+        {
+          "scenario": "Base",
+          "units": 40000,
+          "netUSD": 156000,
+          "note": "Funds several months of the flagship."
+        },
+        {
+          "scenario": "Strong",
+          "units": 150000,
+          "netUSD": 585000,
+          "note": "Tiny Pasture-like."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 500000,
+          "netUSD": 1950000,
+          "note": "Rusty's Retirement-like."
+        }
+      ],
+      "track": "side",
+      "sideRole": "A quick first release to build an audience",
+      "hook": "A tiny window-box garden along the bottom of your screen.",
+      "spec": {
+        "genre": "Idle desktop companion",
+        "players": "1, and friends' plants visit",
+        "setting": "A window box on your desktop",
+        "coreVerb": "Plant, glance, harvest, trade cuttings",
+        "look": "Crisp pixel plants",
+        "team": "2",
+        "audience": "People who work at a PC",
+        "differentiator": "Friends' plants visit and pollinate yours",
+        "price": "$7.99"
+      },
+      "drivers": [
+        {
+          "signal": "Desktop idle games can fund a solo developer",
+          "detail": "Rusty's Retirement: 500k+ copies at $6.99, 26% of sales from China.",
+          "strength": "strong",
+          "ref": {
+            "game": "rustys-retirement"
+          }
+        },
+        {
+          "signal": "The format is flooding",
+          "detail": "Idle supply is 10 and releases are up 150% in 2026.",
+          "strength": "caution",
+          "ref": {
+            "niche": "Idle/desktop companion"
+          }
+        }
       ]
     }
   ]

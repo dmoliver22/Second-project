@@ -4,9 +4,9 @@ An analytics dashboard of the cozy game market, built to guide a new cozy-game s
 
 | Section | What's in it |
 |---|---|
-| **Briefing** | The answers first: what to build, the seven decisions with their evidence, your next 90 days, outliers, then the supporting numbers |
+| **Briefing** | The answers first: five ranked game suggestions with what drives each, the seven decisions with their evidence, your next 90 days, outliers, then the supporting numbers |
 | **Ask the atlas** | Chat with the data. Answers come from this dashboard's files and fit the studio profile you fill in. Works in the claude.ai Artifact version, using the viewer's Claude account. |
-| **What to build** | 6 ranked game concepts, each with a full build-and-run plan: team, budget, roadmap, marketing, live ops, targets, kill criteria, revenue scenarios. Scoring weights are adjustable. |
+| **What to build** | 5 ranked game suggestions compared side by side (scores, drivers, genre, players, setting, price, team, budget…), plus 2 side bets. Each has the market signals that drive it, a characteristics spec, and a full build-and-run plan: team, budget, roadmap, marketing, live ops, targets, kill criteria, revenue scenarios. Scoring weights are adjustable. |
 | **Outliers** | Games that broke the pattern (overperformers, surprises, cautionary tales), what to steal from each, plus copies-per-developer and "loved but few found them" views |
 | **Market gaps** | 26 niches scored for demand vs supply on an opportunity map, plus what players say they wish existed |
 | **Trends** | 15 trends (rising / peaking / declining) with evidence, Steam release volume, audience, cautionary tales |
@@ -34,7 +34,7 @@ All content lives in `data/`. The code only renders it.
 | `data/market.json` | Trends, Steam release counts, audience, platforms, benchmarks, publishers, flops |
 | `data/playbook.json` | Operating steps, funding, budgets, localization, failure modes |
 | `data/insights.json` | Headline, KPI tiles, key findings, the Briefing decisions and 90-day plan, outliers, "So what" takeaways, suggested chat questions, monetization guidance |
-| `data/concepts.json` | Game concepts, their factor scores and plans, scoring weights |
+| `data/concepts.json` | Game suggestions (`track`: main or side), their hook, `spec` (characteristics), `drivers` (market signals, with strength: strong, medium, supporting or caution), factor scores, full plans, and the scoring weights |
 | `data/meta.json` | As-of date, methodology, change log |
 | `data/live/steam.json` | Live Steam review counts and prices (written by the refresher, don't edit by hand) |
 

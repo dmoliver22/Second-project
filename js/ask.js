@@ -94,9 +94,13 @@
     out.push("HEADLINE: " + I.headline);
     out.push("KEY FINDINGS:\n" + I.keyFindings.map((f) => "- " + f.title + ": " + f.detail).join("\n"));
     if (I.decisions) out.push("RECOMMENDED DECISIONS:\n" + I.decisions.map((d) => "- " + d.topic + ": " + d.call + " Why: " + d.why).join("\n"));
-    out.push("GAME CONCEPTS (ranked with the viewer's current weights; score /10):\n" + ranked.map((r) =>
-      `- [${r.c.id}] ${r.c.name} — ${r.score.toFixed(1)} — ${r.c.niche}. ${r.c.oneLiner} Budget ${r.c.budgetUSD.label}, ${r.c.devMonths} months, price ${r.c.pricing.base}. Factors: ` +
-      Object.entries(r.c.scores).map(([k, v]) => k + " " + v.score).join(", ")).join("\n"));
+    out.push("GAME SUGGESTIONS (five main suggestions plus side bets, ranked with the viewer's current weights; score /10):\n" + ranked.map((r) => {
+      const sp = r.c.spec || {};
+      return `- [${r.c.id}] ${r.c.name} (${r.c.track === "side" ? "side bet" : "main suggestion"}) — ${r.score.toFixed(1)} — ${r.c.hook} ` +
+        `Genre: ${sp.genre}; players: ${sp.players}; setting: ${sp.setting}; team: ${sp.team}; ${r.c.devMonths} months; budget ${r.c.budgetUSD.label}; price ${r.c.pricing.base}. ` +
+        "Factors: " + Object.entries(r.c.scores).map(([k, v]) => k + " " + v.score).join(", ") + ". Drivers: " +
+        (r.c.drivers || []).map((d) => `${d.signal} [${d.strength}]`).join("; ");
+    }).join("\n"));
     out.push("NICHES (demand, supply 0-10; opportunity = demand×(11−supply)/10):\n" + D.niches.niches.map((n) =>
       `- ${n.name}: demand ${n.demand}, supply ${n.supply}, opp ${n.opportunity}. ${cut(n.opportunityNote, 160)}`).join("\n"));
     out.push("TRENDS:\n" + M.trends.map((t) => `- ${t.name} (${t.direction}, strength ${t.strength}/5): ${cut(t.summary, 200)}`).join("\n"));
