@@ -13,6 +13,10 @@
   "changelog": [
     {
       "date": "2026-10-04",
+      "note": "Added the shipping ladder (ship & test → first money → reach → graduate) with move-up and kill signals, and each game's path up it. Steam is now the top step for proven PC-suited games, not the default."
+    },
+    {
+      "date": "2026-10-04",
       "note": "Every suggestion now has a Look & feel section: an 'imagine' description, a screen-layout walkthrough, named color palette, visual references, shapes, characters, camera, lighting, textures, interface, type, motion, sound, the key screenshot and clip, what to avoid, and a copyable art brief for an illustrator."
     },
     {

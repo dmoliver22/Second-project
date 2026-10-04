@@ -31,10 +31,10 @@
       "confidence": "medium"
     },
     {
-      "value": "45% vs 3%",
-      "label": "Cozy Steam games priced $20+ vs. under $5 that reach 1,000 reviews: why winners graduate to a paid version",
-      "source": "Steam Page Analyzer (verified)",
-      "sourceUrl": "https://www.steampageanalyzer.com/niches/cozy",
+      "value": "$0",
+      "label": "Cost to ship a playable web game on your own site (free static hosting; ~$10–15 a year for a domain). Steam needs $100, a 30-day wait and a 2-week coming-soon page.",
+      "source": "Hosting providers; Steamworks",
+      "sourceUrl": "https://partner.steamgames.com/doc/gettingstarted",
       "confidence": "high"
     }
   ],
@@ -287,9 +287,13 @@
     },
     {
       "topic": "Where the link goes",
-      "call": "Your own phone-first page for each game, plus one portal: Poki (exclusive on the web, 100% of ads on your traffic) or CrazyGames + itch.io (non-exclusive).",
-      "why": "A tap from a video must start the game in seconds with no login. Poki's exclusivity doesn't cover Steam or app stores.",
+      "call": "Your own site on free hosting is the link in every video, with an itch.io mirror. Add a portal only once a game shows traction, and decide Poki or CrazyGames per game then.",
+      "why": "You own the analytics and the email list from day one, it costs almost nothing, and it doesn't lock a game into Poki's web exclusivity before you know it's worth it.",
       "evidence": [
+        {
+          "text": "The shipping ladder",
+          "link": "#launch"
+        },
         {
           "text": "Platform comparison",
           "link": "#launch"
@@ -319,20 +323,20 @@
     },
     {
       "topic": "How to make money",
-      "call": "Rewarded ads on the free web game; a paid expanded version ($3–15 on Steam/Switch/mobile) for the games that catch on; your YouTube channel as a bonus.",
-      "why": "Web ads alone are small. Free web → paid version is proven, and cozy players pay for premium.",
+      "call": "Climb a ladder: free with tips and email → a $2–5 unlock or paid itch.io download → portal ads → an app or Steam version for proven games.",
+      "why": "You can charge long before Steam. Each step up is triggered by a signal (plays, returns, payers), not by a schedule, and the same HTML5 code climbs every step.",
       "evidence": [
         {
-          "text": "shapez: 10M+ web players → 650k+ Steam",
+          "text": "The shipping ladder",
           "link": "#launch"
         },
         {
-          "text": "Bongo Cat: huge reach, ~$2–4k/month",
+          "text": "shapez: free web → 650k+ Steam",
+          "link": "#launch"
+        },
+        {
+          "text": "Bongo Cat: reach isn't revenue",
           "game": "bongo-cat"
-        },
-        {
-          "text": "Gaming YouTube RPM ~$1–4",
-          "link": "#launch"
         }
       ],
       "confidence": "medium"
@@ -393,15 +397,16 @@
     },
     {
       "when": "Weeks 5–7",
-      "what": "Launch it on your page plus one portal (Poki or CrazyGames). Track views → clicks → plays → day-2 return per platform."
+      "what": "Launch the best one on your own site with an itch.io mirror (stage 1 of the ladder). Track views → clicks → plays → day-2 return per video."
     },
     {
       "when": "Weeks 8–12",
-      "what": "If day-2 return and plays are climbing, add daily content and plan the paid version. If not, ship the next prototype. Review the numbers at week 12."
+      "what": "If players come back and share, add a $2–5 unlock (stage 2). If not, ship the next prototype. Review the numbers at week 12 and only then think about portals."
     }
   ],
   "suggestedQuestions": [
     "I'm one person building with AI. Which of the five should I build first, and why?",
+    "Walk me through shipping Treat Box on my own site and itch.io this week, step by step.",
     "Design my recurring cast of characters for Treat Box and the other games.",
     "Which culture trends should my first month of TikTok content ride, week by week?",
     "Write me a 30-day content plan for TikTok and Shorts for Daily Tidy.",
@@ -447,9 +452,9 @@
       "linkText": "See how the concepts use these lessons"
     },
     "launch": {
-      "text": "The system is simple: one satisfying action, a phone-first web link, daily clips on three apps, a monthly devlog, and a paid version for whatever catches on. Most of the leverage is in testing many ideas quickly and owning your audience.",
+      "text": "Ship every game on your own site with an itch.io mirror, free. Charge a small one-time unlock once players come back. Add portals for reach when a game pulls, and save the app stores and Steam for games that have proven themselves. Each step is earned by a signal, not a schedule.",
       "link": "#concepts",
-      "linkText": "See the games to run through it"
+      "linkText": "See each game's path up the ladder"
     },
     "spread": {
       "text": "The games that spread share a handful of traits: instant start, one satisfying action, a result or creation worth posting, and a reason to come back daily. Cozy fits that well; dress-up, idle shops and merge puzzles already lead cozy web charts.",

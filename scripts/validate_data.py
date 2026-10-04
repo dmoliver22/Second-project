@@ -91,7 +91,8 @@ if concepts:
         need(c, ["id", "name", "niche", "oneLiner", "pitch", "coreLoop", "features", "platforms", "pricing",
                  "team", "budgetUSD", "devMonths", "milestones", "marketingPlan", "liveOps", "kpis",
                  "killCriteria", "risks", "revenueScenarios"], w)
-        need(c, ["track", "hook", "spec", "drivers", "look"], w)
+        need(c, ["track", "hook", "spec", "drivers", "look", "distribution"], w)
+        need(c.get("distribution") or {}, ["ship", "firstMoney", "reach", "graduate"], w + " distribution")
         lk = c.get("look") or {}
         need(lk, ["short", "vibe", "references", "palette", "shapes", "characters", "camera", "lighting", "ui", "motion", "sound", "screenshot", "clip", "avoid"], w + " look")
         for col in lk.get("palette", []):
@@ -113,7 +114,7 @@ if concepts:
 
 gtm = load("gotomarket.json")
 if gtm:
-    need(gtm, ["stack", "loop", "platforms", "channels", "caseStudies", "viralHits", "patterns", "ai", "aiRules"], "gotomarket.json")
+    need(gtm, ["ladder", "stack", "loop", "platforms", "channels", "caseStudies", "viralHits", "patterns", "ai", "aiRules"], "gotomarket.json")
     for i, p in enumerate(gtm.get("platforms", [])):
         need(p, ["name", "type", "revShare", "linkFromSocial"], f"gotomarket.json platforms[{i}] {p.get('name', '?')}")
 

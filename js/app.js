@@ -336,6 +336,7 @@
           return h("td", { class: v === best[f.key] ? "best" : "", title: r.c.scores[f.key].why }, h("span", { class: "score-cell" }, miniBar(v), h("span", { text: v })));
         }))),
         row("Driven by", main.map((r) => h("td", {}, driverList(r.c.drivers, { noCaution: true, limit: 2, brief: true })))),
+        row("Ship → graduate", main.map((r) => h("td", { class: "ink-2", style: "font-size:.82rem" }, r.c.distribution ? [h("div", {}, h("b", { text: "Ship: " }), r.c.distribution.ship), h("div", {}, h("b", { text: "Money: " }), r.c.distribution.firstMoney), h("div", {}, h("b", { text: "Graduate: " }), r.c.distribution.graduate)] : "—"))),
         row("Watch out", main.map((r) => { const d = (r.c.drivers || []).find((x) => x.strength === "caution"); return h("td", { class: "ink-2", text: d ? d.signal : "—" }); })),
         specLabels.map((label) => row(label, main.map((r) => { const hit = specRows(r.c).find((x) => x[0] === label); return h("td", { text: hit ? hit[1] : "—" }); }))))));
   }
@@ -419,7 +420,15 @@
     const view = h("div", { class: "view" },
       viewHead("Launch & grow", "How to get your games played and paid", "The system for one person building with AI: where the play link goes, how to market on TikTok, Shorts and YouTube, how the money works, and the rules for using AI."),
       takeaway("launch"),
-      section("The system", "Run every game through the same loop. Each step has a gate that tells you whether to keep going.",
+      G.ladder ? section("The shipping ladder", "Start every game free on your own site, then move it up a step only when the signals earn it. Thresholds are rules of thumb; adjust them after your first games.",
+        h("ol", { class: "ladder" }, G.ladder.map((st, i) => h("li", { class: "card ladder-step" },
+          h("div", { class: "eyebrow", text: "Stage " + (i + 1) + " · " + st.when }), h("h3", { text: st.stage }), h("p", { class: "ladder-goal", text: st.goal }),
+          h("div", {}, h("h4", { text: "Where it lives" }), h("ul", { class: "ink-2" }, st.where.map((x) => h("li", { text: x })))),
+          h("div", {}, h("h4", { text: "How it makes money" }), h("ul", { class: "ink-2" }, st.money.map((x) => h("li", { text: x })))),
+          h("details", {}, h("summary", { text: "Setup", style: "cursor:pointer;color:var(--accent);font-weight:600;font-size:.85rem" }), h("ul", { class: "ink-2", style: "margin-top:6px" }, st.setup.map((x) => h("li", { text: x })))),
+          h("div", { class: "ladder-up" }, h("h4", { text: i < G.ladder.length - 1 ? "Move up when" : "Keep" }), h("ul", {}, st.moveUp.map((x) => h("li", { text: x })))),
+          h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Stop if:"), " ", st.kill))))) : null,
+      section("Run each game through this loop", "Inside every stage, the same build → clip → measure rhythm. Each step has a gate.",
         h("ol", { class: "loop-steps" }, G.loop.map((st, i) => h("li", { class: "card" },
           h("div", { class: "eyebrow", text: "Step " + (i + 1) }), h("h3", { text: st.step }), h("p", { class: "ink-2", text: st.detail }),
           h("p", { class: "gate" }, h("b", { text: "Go on when: " }), st.gate))))),
@@ -949,6 +958,9 @@
         h("div", { class: "section" }, h("div", { class: "eyebrow", text: "Score" }), h("div", { class: "score-big", text: score.toFixed(1) }), factorBox,
           h("p", { class: "panel-note", text: "Hover a bar for the reasoning behind each factor." }))),
       lookPanel(c),
+      c.distribution ? panel("How it climbs the ladder", "Where this game ships first, how it starts earning, and where it goes if it works",
+        h("ol", { class: "climb" }, [["Ship & test", c.distribution.ship], ["First money", c.distribution.firstMoney], ["Reach", c.distribution.reach], ["Graduate", c.distribution.graduate]].map(([k, v], i) =>
+          h("li", {}, h("div", { class: "eyebrow", text: "Stage " + (i + 1) }), h("b", { text: k }), h("p", { class: "ink-2", text: v }))))) : null,
       h("div", { class: "grid grid-2" },
         panel("What drives this suggestion", "The market signals behind it, strongest first", driverList(c.drivers)),
         panel("What the game is", null, h("dl", { class: "kv spec" }, specRows(c).map(([k, v]) => [h("dt", { text: k }), h("dd", { text: v })])))),

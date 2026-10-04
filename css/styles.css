@@ -537,3 +537,21 @@ table.compare tr.score-row td { font-size: 1rem; }
 .look-avoid { display: flex; gap: 10px; align-items: flex-start; font-size: .88rem; }
 .look-avoid ul { color: var(--ink-2); }
 textarea.brief { width: 100%; font-family: var(--font-data); font-size: .78rem; line-height: 1.5; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px; resize: vertical; }
+
+/* ---------- shipping ladder ---------- */
+.ladder { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 1150px) { .ladder { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .ladder { grid-template-columns: minmax(0, 1fr); } }
+.ladder li + li { margin-top: 0; }
+.ladder-step { gap: 10px; }
+.ladder-step ul { font-size: .86rem; display: flex; flex-direction: column; gap: 4px; }
+.ladder-step ul li + li { margin-top: 0; }
+.ladder-step h4 { font-size: .82rem; margin-bottom: 4px; }
+.ladder-goal { font-weight: 700; color: var(--accent); }
+.ladder-up { background: var(--accent-wash); border-radius: 8px; padding: 8px 10px; }
+.ladder-up ul { color: var(--ink); }
+.climb { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; counter-reset: none; }
+@media (max-width: 860px) { .climb { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .climb { grid-template-columns: minmax(0, 1fr); } }
+.climb li { margin: 0; background: var(--surface-2); border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 3px; }
+.climb p { font-size: .86rem; }

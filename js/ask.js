@@ -98,6 +98,7 @@
       const sp = r.c.spec || {};
       return `- [${r.c.id}] ${r.c.name} (${r.c.track === "side" ? "side bet" : "main suggestion"}) — ${r.score.toFixed(1)} — ${r.c.hook} ` +
         `Genre: ${sp.genre}; players: ${sp.players}; setting: ${sp.setting}; team: ${sp.team}; ${r.c.devMonths} months; budget ${r.c.budgetUSD.label}; price ${r.c.pricing.base}. ` +
+        (r.c.distribution ? `Path: ship on ${r.c.distribution.ship}; first money: ${r.c.distribution.firstMoney}; reach: ${r.c.distribution.reach}; graduate: ${r.c.distribution.graduate}. ` : "") +
         (r.c.look ? `Look: ${r.c.look.vibe} On screen: ${r.c.look.layout || ""} Palette: ${r.c.look.palette.map((x) => x.name + " " + x.hex).join(", ")}. ` : "") +
         "Factors: " + Object.entries(r.c.scores).map(([k, v]) => k + " " + v.score).join(", ") + ". Drivers: " +
         (r.c.drivers || []).map((d) => `${d.signal} [${d.strength}]`).join("; ");
@@ -118,6 +119,7 @@
     const G = D.gotomarket;
     if (G) {
       out.push("GO-TO-MARKET STACK (recommended for a solo, AI-assisted, web-first cozy developer):\n" + G.stack.map((x) => `- ${x.layer}: ${x.choice}. ${x.why}`).join("\n"));
+      if (G.ladder) out.push("THE SHIPPING LADDER (recommended path for every game; Steam is the top step for proven PC games, not the start):\n" + G.ladder.map((st, i) => `${i + 1}. ${st.stage} (${st.when}): ${st.goal} Where: ${st.where.join("; ")}. Money: ${st.money.join("; ")}. Move up when: ${st.moveUp.join("; ")}. Stop if: ${st.kill}`).join("\n"));
       out.push("THE LOOP: " + G.loop.map((x, i) => `${i + 1}) ${x.step}: ${x.detail} Gate: ${x.gate}`).join(" "));
       out.push("PLATFORMS:\n" + G.platforms.map((p) => `- ${p.name} (${p.type}): share ${cut(p.revShare, 120)}; from a phone link: ${cut(p.linkFromSocial, 120)}; best for ${cut(p.bestFor, 80)}`).join("\n"));
       out.push("MARKETING CASE STUDIES:\n" + G.caseStudies.map((c) => `- ${c.game} (${c.channel}): ${cut(c.results, 140)}. Lesson: ${cut(c.lesson, 120)}`).join("\n"));
