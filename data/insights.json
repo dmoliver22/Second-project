@@ -251,20 +251,20 @@
   "decisions": [
     {
       "topic": "What to make",
-      "call": "Small web-first cozy games with a fresh action and a share built into play. Start with Treat Box and If It Fits; use Lemon Ink as the quickest pipeline test. Cuttings is the strongest growth loop if you're ready to run a small server.",
-      "why": "These scored best for a solo creator after 80 ideas were generated, double-scored and critiqued. They sit where the game data, the culture trends and phone-first distribution agree.",
+      "call": "Build proven loops with a fresh theme and one satisfying action, not novelty toys. Start with Soak & Snooze (an animal bathhouse on the walk-and-restock loop: it plays from a link and grows into a Steam game) and Treat Box (the fastest web test). The strongest Steam bet is Well Loved, a plush hospital in the craft-and-restore pattern behind 2026's breakouts.",
+      "why": "Copies of taken themes mostly land at 25k–120k copies, and well-reviewed sims with no hook sell under 10k. The 2026 breakouts are tactile craft and restoration (ReStory 500k+, Dressmaker #9 global top seller) and fresh-theme management (Maltese's Fluffy Onsen ~188k with 3–4 competitors). Dressmaker started as a free itch.io prototype, so the browser-first test still fits.",
       "evidence": [
         {
-          "text": "Idea lab: 80 ideas → 5 finalists",
+          "text": "Proven genres: hits, misses and open themes",
+          "link": "#genres"
+        },
+        {
+          "text": "The five plans side by side",
+          "link": "#concepts"
+        },
+        {
+          "text": "Idea lab experiments (keep as side tests)",
           "link": "#ideas"
-        },
-        {
-          "text": "Pop Mart +185% on blind boxes",
-          "link": "#culture"
-        },
-        {
-          "text": "'If it fits, I sits' cat culture",
-          "link": "#culture"
         }
       ],
       "confidence": "medium"
@@ -385,7 +385,7 @@
     },
     {
       "when": "Step 2",
-      "what": "Build rough phone prototypes of Treat Box and If It Fits, plus Lemon Ink as a quick test of the whole pipeline (no server, little art). Post 3–5 clips of each before polishing anything."
+      "what": "Build rough prototypes of Soak & Snooze (2D, in a phone browser) and Treat Box, plus a one-bench browser slice of Well Loved that shows a single before-and-after restore. Post 3–5 clips of each before polishing anything."
     },
     {
       "when": "Step 3",
@@ -405,14 +405,15 @@
     }
   ],
   "suggestedQuestions": [
-    "Of the Idea lab finalists, which should I build first and why?",
+    "Of the proven-genre suggestions, which should I build first and why?",
+    "What's the smallest browser slice of Well Loved that would test the hook?",
+    "Which open theme in Proven genres has the best odds for a solo developer, and why?",
     "I'm one person building with AI. Which of the five should I build first, and why?",
     "Walk me through shipping Treat Box on my own site and itch.io this week, step by step.",
     "Design my recurring cast of characters for Treat Box and the other games.",
     "Which culture trends should my first TikTok posts ride, in what order?",
     "Write me a content plan for the first 30 TikTok and Shorts posts for Daily Tidy.",
     "Should I go Poki-exclusive or CrazyGames + itch.io? Walk me through the trade-off.",
-    "What's the smallest version of Pond Party I could ship in two weeks?",
     "How do I turn a web game that catches on into a paid Steam version?",
     "Pressure-test Petal Drop: how do I stand out from the Suika clones?"
   ],
@@ -443,9 +444,9 @@
       "linkText": "See the web-first launch system"
     },
     "concepts": {
-      "text": "Ranked for you by default (one person, AI-assisted, web-first). Treat Box leads on the strongest culture signals; If It Fits and Cuttings from the Idea lab are close behind, then Daily Tidy and Cozy Corner. Treat close scores as ties, and use Custom to rank by what matters to you.",
-      "link": "#culture",
-      "linkText": "See the culture signals behind them"
+      "text": "Ranked by default for one person who tests in the browser and takes proven games to Steam. Treat Box and Soak & Snooze lead, with Petal Drop, Daily Tidy and Well Loved close behind; treat close scores as ties. The novelty toys from the Idea lab now sit under More ideas. Use the presets or Custom to rank by what matters to you.",
+      "link": "#genres",
+      "linkText": "See the proven-genre research"
     },
     "outliers": {
       "text": "The overperformers share a pattern: tiny team, one clear hook, friends or clips doing the marketing. The underperformers share one too: spending ahead of proof. Acclaim, reach and IP alone didn't save anyone.",
@@ -471,6 +472,11 @@
       "text": "Most ideas die for the same few reasons: they're fun for five minutes, need too many people online at once, or have no way to earn. The survivors pair a fresh action with a reason to come back and a share that's part of play.",
       "link": "#concepts",
       "linkText": "See the finalists' full plans"
+    },
+    "genres": {
+      "text": "Proven loops still sell, but copies of taken themes mostly land at 25k–120k copies and hookless ones under 10k. What breaks out now is a familiar loop with a fresh theme and one tactile moment that clips: restoring, crafting, a reveal. Open themes with evidence: plush and object restoration, pottery and craft studios, animal bathhouses, small aquariums, curation shops and co-op hangouts beyond fishing.",
+      "link": "#concepts",
+      "linkText": "See the games built on these gaps"
     }
   },
   "outliers": [

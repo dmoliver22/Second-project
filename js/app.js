@@ -138,7 +138,7 @@
   function weights() {
     const def = {};
     D.concepts.scoring.factors.forEach((f) => (def[f.key] = f.weight));
-    const saved = store.get("weights2", null);
+    const saved = store.get("weights3", null);
     return saved ? Object.assign(def, saved) : def;
   }
   function activePreset(w) {
@@ -310,7 +310,7 @@
       h("div", { class: "sugg-rank" }, h("span", { class: "eyebrow", text: i === 0 ? "#1 · Top pick" : "#" + (i + 1) }),
         h("span", { class: "sugg-score", text: r.score.toFixed(1) }), miniBar(r.score)),
       h("div", { class: "sugg-main" },
-        h("div", { class: "card-top", style: "justify-content:flex-start;gap:6px 10px;align-items:center;flex-wrap:wrap" }, h("h3", { text: c.name }), c.origin ? h("a", { class: "chip accent", href: "#ideas", text: "From the Idea lab" }) : null),
+        h("div", { class: "card-top", style: "justify-content:flex-start;gap:6px 10px;align-items:center;flex-wrap:wrap" }, h("h3", { text: c.name }), c.origin ? h("a", { class: "chip accent", href: c.origin === "Proven genres" ? "#genres" : "#ideas", text: c.origin === "Proven genres" ? "Proven genre" : "From the Idea lab" }) : null),
         h("p", { class: "ink-2", text: c.hook }),
         c.look ? h("div", { class: "look-line" }, swatches(c.look, true), h("span", { text: c.look.short })) : null,
         h("div", { class: "chips" }, [sp.genre, sp.players, sp.price, c.budgetUSD.label].map((t) => h("span", { class: "chip", text: t })))),
@@ -330,7 +330,7 @@
     return h("div", { class: "table-wrap compare-wrap" }, h("table", { class: "compare" },
       h("thead", {}, h("tr", {}, h("th", { text: "" }), main.map((r, i) => h("th", { scope: "col" },
         h("button", { type: "button", class: "compare-head", onclick: () => onPick(r.c.id) },
-          h("span", { class: "eyebrow", text: "#" + (i + 1) + (r.c.origin ? " · Idea lab" : "") }), h("span", { class: "compare-name", text: r.c.name }), h("span", { class: "muted", style: "font-size:.75rem", text: "See plan ↓" })))))),
+          h("span", { class: "eyebrow", text: "#" + (i + 1) + (r.c.origin ? " · " + (r.c.origin === "Proven genres" ? "Proven genre" : "Idea lab") : "") }), h("span", { class: "compare-name", text: r.c.name }), h("span", { class: "muted", style: "font-size:.75rem", text: "See plan ↓" })))))),
       h("tbody", {},
         row("Hook", main.map((r) => h("td", { class: "ink-2", text: r.c.hook }))),
         row("Look", main.map((r) => h("td", {}, h("div", { class: "section", style: "gap:6px" }, r.c.look ? swatches(r.c.look, true) : null, r.c.look ? h("span", { class: "ink-2", style: "font-size:.82rem", text: r.c.look.short }) : null)))),
@@ -1027,10 +1027,10 @@
     const sliders = h("div", { class: "weights" }, S.factors.map((f) => {
       const out = h("b", { text: w[f.key] });
       const input = h("input", { type: "range", min: "0", max: "5", step: "1", value: String(w[f.key]), id: "w-" + f.key, "aria-label": f.label + " weight" });
-      input.addEventListener("input", () => { w[f.key] = +input.value; out.textContent = input.value; store.set("weights2", w); drawAll(); });
+      input.addEventListener("input", () => { w[f.key] = +input.value; out.textContent = input.value; store.set("weights3", w); drawAll(); });
       return h("div", { class: "weight", title: f.description }, h("div", { class: "weight-top" }, h("label", { for: "w-" + f.key, text: f.label }), out), input);
     }));
-    const reset = h("button", { class: "btn", type: "button", text: "Reset weights", onclick: () => { store.set("weights2", null); S.factors.forEach((f) => { w[f.key] = f.weight; const el = document.getElementById("w-" + f.key); if (el) { el.value = f.weight; el.previousSibling.lastChild.textContent = f.weight; } }); drawAll(); } });
+    const reset = h("button", { class: "btn", type: "button", text: "Reset weights", onclick: () => { store.set("weights3", null); S.factors.forEach((f) => { w[f.key] = f.weight; const el = document.getElementById("w-" + f.key); if (el) { el.value = f.weight; el.previousSibling.lastChild.textContent = f.weight; } }); drawAll(); } });
 
     const presetBar = h("div", { class: "chips preset-bar", role: "group", "aria-label": "Rank for" });
     const weightsPanel = h("details", { class: "panel weights-panel" }, h("summary", {}, h("b", { text: "Your weights" }), h("span", { class: "muted", text: " Drag to set how much each factor counts (0 = ignore, 5 = most). The ranking here and on the Briefing updates live and is remembered in this browser." })),
@@ -1039,7 +1039,7 @@
     store.set("openWeights", false);
     weightsPanel.addEventListener("toggle", () => drawPresets());
     const openWeights = () => { weightsPanel.open = true; drawPresets(); const first = weightsPanel.querySelector("input"); if (first) first.focus({ preventScroll: true }); weightsPanel.scrollIntoView({ behavior: "smooth", block: "nearest" }); };
-    const applyPreset = (p) => { Object.assign(w, p.weights); store.set("weights2", w); S.factors.forEach((f) => { const el = document.getElementById("w-" + f.key); if (el) { el.value = w[f.key]; el.previousSibling.lastChild.textContent = w[f.key]; } }); drawAll(); };
+    const applyPreset = (p) => { Object.assign(w, p.weights); store.set("weights3", w); S.factors.forEach((f) => { const el = document.getElementById("w-" + f.key); if (el) { el.value = w[f.key]; el.previousSibling.lastChild.textContent = w[f.key]; } }); drawAll(); };
     const drawPresets = () => {
       const cur = activePreset(w);
       presetBar.replaceChildren(h("span", { class: "muted", style: "font-size:.85rem", text: "Rank for:" }),

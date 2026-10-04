@@ -13,6 +13,10 @@
   "changelog": [
     {
       "date": "2026-10-04",
+      "note": "Proven genres: research on first-person craft and shop sims, top-down management and other evergreen cozy genres (hits, misses, saturation, open themes). Five new suggestions on proven loops (Well Loved, Glaze Day, Stem & Ribbon, Soak & Snooze, Tidepool Lane). New 'Proven demand' factor; originality weighs less; new default preset 'Solo + AI, proven genre → Steam'."
+    },
+    {
+      "date": "2026-10-04",
       "note": "Custom weights moved up next to the 'Rank for' buttons (a Custom button opens them); the Briefing links to them and says when your custom weights are in use."
     },
     {

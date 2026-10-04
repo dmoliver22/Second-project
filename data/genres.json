@@ -326,7 +326,8 @@
           ],
           "risk": "Dressmaker clones will flood in within 6-12 months. Craft steps need careful physical feel (yarn and clay are hard to simulate convincingly), and a weak version reads as a mini-game.",
           "fullTheme": "Hand-craft studio 'Dressmaker-adjacent' sims: knitting / yarn shop, pottery and ceramics glazing, candle and soap making, jewellery bench",
-          "detail": "Knitting or yarn shop, pottery and ceramics, candle or soap making"
+          "detail": "Knitting or yarn shop, pottery and ceramics, candle or soap making",
+          "conceptId": "glaze-day"
         },
         {
           "theme": "Small-object restoration",
@@ -350,7 +351,8 @@
           ],
           "risk": "The fastest-growing pocket, so competition is arriving now. Pick a narrow object category quickly and avoid a generic repair shop.",
           "fullTheme": "Small-object restoration with nostalgia: watch and clock repair, vintage camera repair, plush and toy hospital, bookbinding / old-book restoration, kintsugi",
-          "detail": "Watch and clock repair, vintage cameras, plush toys, bookbinding"
+          "detail": "Watch and clock repair, vintage cameras, plush toys, bookbinding",
+          "conceptId": "well-loved"
         },
         {
           "theme": "Florist atelier",
@@ -369,7 +371,8 @@
           ],
           "risk": "No breakout has proven the ceiling. Flowers are many small 3D assets with the risk of tedious placement, and the demand signal is inferred rather than measured.",
           "fullTheme": "Florist / bouquet atelier (first-person, arranging as the core verb)",
-          "detail": "First-person bouquet arranging as the core action"
+          "detail": "First-person bouquet arranging as the core action",
+          "conceptId": "stem-and-ribbon"
         },
         {
           "theme": "Thrift and vintage resale",
@@ -828,7 +831,8 @@
           ],
           "risk": "The format is easy to clone and portal/mobile revenue depends on ads, so the art and theme have to carry the difference; Poki curation is selective.",
           "fullTheme": "Cozy idle-arcade 'walk-and-stock' loop (Monkey Mart / My Perfect Hotel format) with a handmade cozy art style and a venue that hasn't been used: e.g. bathhouse, flower stall, ramen night market, plant nursery",
-          "detail": "The Monkey Mart / My Perfect Hotel loop with handmade art and an unused venue"
+          "detail": "The Monkey Mart / My Perfect Hotel loop with handmade art and an unused venue",
+          "conceptId": "soak-and-snooze"
         },
         {
           "theme": "Animal or spirit bathhouse",
@@ -847,7 +851,8 @@
           ],
           "risk": "Several small entrants appeared in 2025, so the window is narrowing, and onsen games aimed at the Japanese market may crowd the niche.",
           "fullTheme": "Bathhouse / onsen / spa for animals or spirits (top-down or side-view)",
-          "detail": "Onsen or spa, top-down or side view"
+          "detail": "Onsen or spa, top-down or side view",
+          "conceptId": "soak-and-snooze"
         },
         {
           "theme": "Small cozy aquarium",
@@ -871,7 +876,8 @@
           ],
           "risk": "Aquarium players may expect deep simulation (water chemistry, compatibility); a cozy version must find a hook that is satisfying on video, such as breeding rare fish or tank decoration.",
           "fullTheme": "Small cozy aquarium (or cozy natural-history museum / botanical greenhouse) manager",
-          "detail": "Or a cozy natural-history museum or greenhouse"
+          "detail": "Or a cozy natural-history museum or greenhouse",
+          "conceptId": "tidepool-lane"
         },
         {
           "theme": "Tiny curation shop",
@@ -1267,7 +1273,8 @@
           "risk": "The space is visibly filling in 2026-27, and a generalist restoration sim could outshine a narrow one unless the chosen object has its own passionate community.",
           "fullTheme": "CLEANING/RESTORATION: tactile restoration of one beloved object category other than cartridges (e.g. vintage teddy bears/plush, old books and bindings, ceramic kintsugi, watches, sneakers, vinyl records), each object carrying a tiny owner story",
           "detail": "Tactile restoration of one beloved kind of object (plush, books, records, kintsugi)",
-          "genre": "Cleaning & restoration"
+          "genre": "Cleaning & restoration",
+          "conceptId": "well-loved"
         },
         {
           "theme": "Story told through objects",

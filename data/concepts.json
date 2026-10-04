@@ -1,18 +1,18 @@
 {
-  "intro": "Game suggestions from two rounds: the first five came from the market research; the second five came out of the Idea lab, where 80 ideas were generated, scored by two judges and attacked by two critics. Everything is ranked for your model by default: one person building with AI, web-first, marketed on TikTok and YouTube.",
+  "intro": "Game suggestions from three rounds: the market research, the Idea lab (80 ideas scored and critiqued), and Proven genres (evergreen loops with open themes). Ranked by default for one person building with AI who tests games free in the browser and takes the proven ones to Steam. Switch presets or set your own weights to re-rank.",
   "caveat": "No dataset can guarantee a hit, and most games, web or Steam, earn very little. Each suggestion is a bet backed by specific signals, with gates that tell you early whether it's working. The scores are research-based judgements, so treat close scores as ties.",
   "scoring": {
     "factors": [
       {
         "key": "originality",
         "label": "Originality",
-        "weight": 3,
+        "weight": 1,
         "description": "Is this genuinely new (a fresh verb, fantasy or format), or a reskin of an existing hit?"
       },
       {
         "key": "provenDemand",
         "label": "Proven demand",
-        "weight": 3,
+        "weight": 4,
         "description": "How well this genre and core loop have sold before: many past hits with the same loop score high, untested formats score low. Different from originality."
       },
       {
@@ -30,7 +30,7 @@
       {
         "key": "soloSpeed",
         "label": "Fast to build solo",
-        "weight": 3,
+        "weight": 2,
         "description": "How quickly one person with AI coding tools can ship a good v1, keeping art human-directed."
       },
       {
@@ -42,13 +42,13 @@
       {
         "key": "instantPlay",
         "label": "Plays from a link",
-        "weight": 3,
+        "weight": 1,
         "description": "How well it works when a phone viewer taps a link: instant start in the browser, touch controls, no install."
       },
       {
         "key": "monetization",
         "label": "Revenue potential",
-        "weight": 2,
+        "weight": 3,
         "description": "Ads, purchases, a paid expanded version, ports."
       },
       {
@@ -66,7 +66,7 @@
       {
         "key": "culture",
         "label": "Cultural tailwind",
-        "weight": 2,
+        "weight": 1,
         "description": "How strongly trends outside games (collectibles, wellness, hobbies, social and seasonal) support the theme and format."
       },
       {
@@ -80,7 +80,7 @@
       {
         "id": "solo-web",
         "label": "Solo + AI, web-first",
-        "note": "Your model: speed, instant play and clip appeal weigh most.",
+        "note": "Your model: ship from a link first. Speed, instant play and clip appeal weigh most; proven loops count, novelty for its own sake doesn't.",
         "weights": {
           "demand": 3,
           "gap": 2,
@@ -91,9 +91,28 @@
           "momentum": 1,
           "scopeFit": 0,
           "culture": 2,
-          "originality": 3,
+          "originality": 1,
           "creatorFit": 2,
           "provenDemand": 3
+        }
+      },
+      {
+        "id": "solo-proven",
+        "label": "Solo + AI, proven genre → Steam",
+        "note": "One person building a proven loop with a fresh theme: test it free in the browser, then build the Steam game. Proven demand, revenue and clip appeal weigh most.",
+        "weights": {
+          "originality": 1,
+          "provenDemand": 4,
+          "demand": 3,
+          "gap": 2,
+          "soloSpeed": 2,
+          "creatorFit": 2,
+          "instantPlay": 1,
+          "monetization": 3,
+          "marketability": 3,
+          "momentum": 1,
+          "culture": 1,
+          "scopeFit": 0
         }
       },
       {
@@ -110,9 +129,9 @@
           "momentum": 2,
           "scopeFit": 3,
           "culture": 1,
-          "originality": 2,
+          "originality": 1,
           "creatorFit": 0,
-          "provenDemand": 3
+          "provenDemand": 4
         }
       }
     ]
@@ -7484,6 +7503,2239 @@
           "name": "Updates",
           "deliverable": "Seasonal plants",
           "gate": "Followers gained"
+        }
+      ]
+    },
+    {
+      "id": "well-loved",
+      "name": "Well Loved",
+      "origin": "Proven genres",
+      "track": "main",
+      "niche": "First-person restoration sim · plush toy hospital · keepsakes with stories",
+      "oneLiner": "Run a tiny plush hospital: wash, de-pill, stitch and restuff worn, much-loved toys, then hand them back and read what their owners say.",
+      "hook": "Fix a child's first bear without erasing the love marks.",
+      "pitch": "A first-person, bench-scale restoration game set in a small plush hospital above a high-street shop. Each job arrives in a cardboard box with a note from its owner: a child's first bear with a split seam, a grandmother's rabbit gone flat and grey, a dog's chew toy that's 'part of the family'. You assess the damage, wash it in a basin, shave the pills off in clean stripes, open a seam and restuff it until it plumps up, close the seam with an invisible ladder stitch, and replace a lost button eye. The twist is that restoring is not replacing. Owners want their plush to still look like theirs, so you read the note to learn which worn spots to keep: the bald patch on the ear she rubbed to fall asleep stays. The reward is a before-and-after photo card and the owner's reply, in a letter or a drawing. Between jobs you can rescue unclaimed and thrifted plush for a small shelf, then sell them or keep them in your own collection. It takes ReStory's restore-a-beloved-object loop and Dressmaker's hands-on craft, and points them at adult plush collecting (Jellycat and friends), a category with a huge fan culture and almost no games.",
+      "genreTags": [
+        "First-person",
+        "Restoration",
+        "Crafting",
+        "Cozy",
+        "Narrative",
+        "Relaxing",
+        "Sewing"
+      ],
+      "audience": "Adult plush collectors and kidults (Jellycat, Squishmallows, vintage teddy fans), players who loved ReStory, PowerWash and Unpacking, and the large audience that watches plush and teddy restoration videos. Skews toward women aged 18-35, and toward parents who will share the game with children.",
+      "comps": [
+        "ReStory: Chill Electronics Repairs",
+        "Dressmaker",
+        "PowerWash Simulator",
+        "Unpacking",
+        "Tiny Bookshop",
+        "A Little to the Left"
+      ],
+      "sessionLength": "One plush takes 10-15 minutes from box to reply letter; a shift of three jobs is a natural evening stop.",
+      "artDirection": "Soft, warm, slightly storybook 3D on a single workbench; plush fabrics rendered closely enough that you can tell mohair from minky.",
+      "scores": {
+        "originality": {
+          "score": 5,
+          "why": "The restore-a-beloved-object loop is ReStory's; plush as the object and the 'keep the love marks' judgment are the fresh parts."
+        },
+        "provenDemand": {
+          "score": 8,
+          "why": "Restoration and before/after loops have sold many times (ReStory 500k+, House Flipper 2 1M+, PowerWash 17M players)."
+        },
+        "demand": {
+          "score": 8,
+          "why": "Plush and teddy restoration is an evergreen satisfying-video format, and adult plush collecting is a large, very online fandom."
+        },
+        "gap": {
+          "score": 7,
+          "why": "Searches find only kids' mobile apps and itch.io jam games about plush repair; generalist restoration sims (The Repair House) touch toys but nobody owns plush."
+        },
+        "soloSpeed": {
+          "score": 5,
+          "why": "Bench-scale keeps the scope small, but soft-body restuffing, fabric shaders and the stitch interaction need careful tuning in 3D."
+        },
+        "creatorFit": {
+          "score": 4,
+          "why": "Needs a set of hand-made 3D plush models and wear states; that art is the main cost for one person, though the videos make themselves."
+        },
+        "instantPlay": {
+          "score": 5,
+          "why": "A fixed bench camera with drag-to-stitch and tap-to-tool works on a phone, but a 3D build still loads slower and runs hotter than a 2D one."
+        },
+        "monetization": {
+          "score": 7,
+          "why": "$14.99 premium, plush-pack DLC, and an unusually natural merch line (a real plush of the mascot bear) on top."
+        },
+        "marketability": {
+          "score": 9,
+          "why": "A grey, flattened childhood bear turning plump and clean next to its owner's note is a 10-second clip that makes people stop and comment."
+        },
+        "momentum": {
+          "score": 8,
+          "why": "Tactile restoration is 2026's breakout pattern (ReStory, Dressmaker); restoration supply is only arriving in 2026-27."
+        },
+        "culture": {
+          "score": 9,
+          "why": "Adult plush collecting (Jellycat, Labubu, kidult toys), nostalgia, and repair/visible-mending culture all point at this theme."
+        },
+        "scopeFit": {
+          "score": 8,
+          "why": "A bench-scale first-person sim is well within a small team's reach."
+        }
+      },
+      "whyNow": [
+        "Tactile restoration is the 2026 breakout pattern: ReStory sold 100k on day one and 500k+ in about 1.5 months (wnhub), and Dressmaker launched with 400k+ wishlists and recouped its budget in under 24 hours (GuruGamer).",
+        "Restoration supply is thin and generalist: Cozy Game Restoration (cartridges), The Repair House (mixed household objects) and Things Left Unsaid (2027) leave plush unclaimed (evergreen research, PCGamesN).",
+        "Cozy games still beat the Steam odds: 11% of cozy releases reach 1,000 reviews vs 4.2% of Steam overall, even with 1,041 cozy releases by late Sept 2026 (Steam Page Analyzer).",
+        "Adult plush collecting gives the game a ready-made fandom that films and shares itself, the way BookTok carried Tiny Bookshop to 500k+ copies."
+      ],
+      "pillars": [
+        "Restore, don't replace: the owner's love marks matter as much as the repair.",
+        "Every step is a hand action you can feel: lather, shave, stuff, stitch, pull tight.",
+        "Every plush has a person behind it; the note and the reply are the story.",
+        "No timers and no failing: a wonky stitch is a choice the owner reacts to, not a game over."
+      ],
+      "coreLoop": [
+        "Open the box and read the owner's note",
+        "Assess: turn the plush, tag damage and love marks",
+        "Wash, dry and de-pill",
+        "Open the seam, restuff, ladder-stitch it closed",
+        "Replace eyes, embroider a nose, patch what's needed",
+        "Snap the before/after card and read the owner's reply",
+        "Earn, buy tools and fabrics, rescue a plush for the shelf"
+      ],
+      "features": {
+        "mvp": [
+          "One workbench, five tools (basin, fabric shaver, stuffing stick, needle and thread, eye kit)",
+          "Three plush jobs, each with an owner note and reply",
+          "A before/after photo card exported as an image for sharing",
+          "Wishlist-on-Steam button on every end screen"
+        ],
+        "launch": [
+          "30+ plush jobs across bears, rabbits, cats, dogs and odd creatures, with recurring owners whose stories continue",
+          "Love-mark system: keep or fix each worn spot, owners react to the choice",
+          "Rescue shelf: restore thrifted and unclaimed plush, then sell them or keep them in a personal collection room",
+          "Tool and workshop upgrades (steamer, fur brush, mohair patches, glass eyes)",
+          "Free-restore sandbox for clip-making"
+        ],
+        "postLaunch": [
+          "Free seasonal plush jobs (holiday bears, Easter rabbits)",
+          "Paid 'Vintage Ward' pack: antique mohair teddies with harder repairs ($4.99)",
+          "Creator-requested 'bring your own plush' photo-note mode, text only (players write the note)",
+          "Switch port if sales justify it; touch controls suit the bench"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "PC (Steam)",
+          "Steam Deck",
+          "Free browser slice (itch.io + own site)"
+        ],
+        "later": [
+          "Switch / Switch 2",
+          "iPad (premium port)"
+        ]
+      },
+      "pricing": {
+        "base": "$14.99",
+        "model": "Premium on Steam; free browser slice; paid itch.io supporter build first",
+        "details": [
+          "$14.99 matches Dressmaker's list price and sits in the $10-20 band where cozy games reach scale.",
+          "45.2% of $20+ cozy games reach 1,000 reviews vs 2.7% under $5 (Steam Page Analyzer; budget confound), so do not price it as an impulse toy.",
+          "A $5 itch.io supporter build funds early contract art while the Steam page collects wishlists."
+        ]
+      },
+      "monetizationPlan": [
+        "Premium base game on Steam.",
+        "Paid plush packs ($3.99-4.99) with new materials and harder repairs.",
+        "Soundtrack DLC (soft piano and music-box tracks).",
+        "Physical merch: a real plush of the hospital's mascot bear, made with a small plush manufacturer, sold via Kickstarter or the store page once wishlists justify it."
+      ],
+      "team": [
+        {
+          "role": "Founder / designer / programmer",
+          "count": 1,
+          "note": "Design, AI-assisted code (Three.js or Godot for the slice, Godot or Unity for Steam), devlogs and clips."
+        },
+        {
+          "role": "Contract 3D artist (soft goods)",
+          "count": 1,
+          "note": "Plush models with worn and restored texture sets; the most important hire."
+        },
+        {
+          "role": "Contract composer and sound designer",
+          "count": 1,
+          "note": "Fabric, brush and thread foley matter as much as music."
+        },
+        {
+          "role": "Plush repair consultant",
+          "count": 1,
+          "note": "A real teddy bear hospital or toy restorer, credited, to keep steps authentic."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$15-45k cash",
+        "note": "Founder time unpaid. Cash goes to plush models and texture sets, a workshop asset pack, music and foley, capsule art, Steam fee and a festival or two. No Early Access needed: the content is jobs, so ship 1.0."
+      },
+      "marketingPlan": [
+        {
+          "when": "Before the slice",
+          "action": "Post the restuffing and ladder-stitch interactions as raw GIFs and vertical clips; start a devlog series; ask followers to send stories of their own childhood plush."
+        },
+        {
+          "when": "With the slice",
+          "action": "Release the free browser slice with the before/after card; pin it in TikTok and Shorts bios; seed it with plush-collector and restoration creators."
+        },
+        {
+          "when": "Before the demo",
+          "action": "Open the Steam page (it must be live 30 days before release under Steam rules); apply to Wholesome Direct and cozy showcases; launch the itch.io supporter build."
+        },
+        {
+          "when": "Next Fest",
+          "action": "Steam demo with five jobs; send keys to cozy streamers and plush YouTubers; run a 'restore a viewer's bear' stream."
+        },
+        {
+          "when": "Launch",
+          "action": "Launch with a trailer cut entirely from before/after reveals; streamer keys in advance."
+        },
+        {
+          "when": "Ongoing",
+          "action": "One plush-reveal clip per post; feature community 'my real bear' stories (with permission) on socials."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Seasonal",
+          "what": "Free holiday plush jobs and a matching sale."
+        },
+        {
+          "when": "Each update",
+          "what": "A new tool or material plus a handful of new owners."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Paid plush packs and a merch drop if the mascot catches on."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Browser slice completion",
+          "target": "30%+ of players finish all three jobs",
+          "why": "Shows the restore loop holds attention beyond the novelty."
+        },
+        {
+          "metric": "Wishlists at launch",
+          "target": "15,000+",
+          "why": "At 0.10-0.15x first-week conversion (GameDiscoverCo) that is roughly 1,500-2,250 first-week copies, enough to hit Steam's discovery lists."
+        },
+        {
+          "metric": "Share cards exported",
+          "target": "1 in 5 sessions",
+          "why": "Players clipping their own reveals is the free marketing engine."
+        },
+        {
+          "metric": "Review score",
+          "target": "92%+",
+          "why": "Restoration and craft hits sit at 95-96%; anything lower stalls word of mouth."
+        }
+      ],
+      "killCriteria": [
+        "No reveal clip passes 50k views after a dozen posts: the hook is not landing; try a different hero object before building more.",
+        "Under 20% of browser-slice players finish the second job: the steps feel like chores; cut or merge steps.",
+        "Fewer than 7,000 wishlists after Next Fest: ship a smaller 1.0 at a lower price instead of expanding content."
+      ],
+      "risks": [
+        {
+          "risk": "Restoration is filling up in 2026-27",
+          "mitigation": "Own one object category completely and lead every asset with plush and owner stories, never 'repair simulator'."
+        },
+        {
+          "risk": "Soft-body restuffing looks rubbery",
+          "mitigation": "Fake it with blend shapes and squash shaders on a fixed camera; prototype this interaction first."
+        },
+        {
+          "risk": "Brand/IP temptation (Jellycat lookalikes)",
+          "mitigation": "Invent fictional plush makers with their own lore; reference the collector culture, never the trademarks."
+        },
+        {
+          "risk": "Too sad",
+          "mitigation": "Mostly warm and funny owners; grief stories are rare and handled gently."
+        }
+      ],
+      "revenueAssumptions": "Assumes $14.99. Net ≈ $7.30 per unit to the studio after Steam's 30%, discounts, regional pricing, refunds and sales tax. Itch.io supporter sales and merch not counted.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss (no-hook band)",
+          "units": 5000,
+          "netUSD": 36500,
+          "note": "Like Piece by Piece (~4.8k) or Thrifty Business (~6.9k): well reviewed, no viral reveal."
+        },
+        {
+          "scenario": "Base (themed-sim band)",
+          "units": 40000,
+          "netUSD": 292000,
+          "note": "Middle of the 25k-120k band where good themed sims land."
+        },
+        {
+          "scenario": "Strong (top of band)",
+          "units": 120000,
+          "netUSD": 876000,
+          "note": "Plush collectors share it widely; Switch port follows."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 400000,
+          "netUSD": 2920000,
+          "note": "ReStory-like. Rare; needs a clip that goes properly viral before launch."
+        }
+      ],
+      "spec": {
+        "genre": "First-person bench-scale restoration sim",
+        "players": "1",
+        "setting": "A small plush hospital above a high-street shop",
+        "coreVerb": "Wash, de-pill, restuff, stitch and hand back loved plush",
+        "look": "Warm storybook 3D on a single workbench",
+        "team": "Solo founder + contractors",
+        "audience": "Adult plush collectors and restoration-video fans",
+        "differentiator": "Owners' notes decide which love marks to keep: restoring, not replacing",
+        "price": "$14.99"
+      },
+      "drivers": [
+        {
+          "signal": "Restoration is 2026's breakout loop",
+          "detail": "ReStory: 100k sold on day one, 500k+ in about 1.5 months, budget back in 12 hours.",
+          "strength": "strong",
+          "ref": {
+            "link": "https://wnhub.io/news/finance/item-51771"
+          }
+        },
+        {
+          "signal": "Tactile craft plus a viral prototype works",
+          "detail": "Dressmaker's itch.io prototype got 100k+ downloads, then 400k+ wishlists and #9 global top seller at launch.",
+          "strength": "strong",
+          "ref": {
+            "link": "https://gurugamer.com/pc-console/a-tiny-dressmaking-game-is-suddenly-taking-over-steam-27344"
+          }
+        },
+        {
+          "signal": "Plush is unclaimed on Steam",
+          "detail": "Plush repair exists only as kids' mobile apps and itch.io jam games; The Repair House is a generalist that touches toys among many objects.",
+          "strength": "medium",
+          "ref": {
+            "link": "https://www.pcgamesn.com/the-repair-house/new-steam-game"
+          }
+        },
+        {
+          "signal": "Cozy odds are above average",
+          "detail": "11% of cozy games reach 1,000 reviews vs 4.2% of Steam (Steam Page Analyzer).",
+          "strength": "supporting",
+          "ref": {
+            "link": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report"
+          }
+        },
+        {
+          "signal": "Craft sims without a viral hook flop, and the space is filling",
+          "detail": "Piece by Piece (~4.8k copies) and Thrifty Business (~6.9k) were well reviewed but had no clip; Cozy Game Restoration, The Repair House and Things Left Unsaid all arrive in 2026-27. First-person 3D is also harder to build and to play from a phone link than 2D.",
+          "strength": "caution",
+          "ref": {
+            "link": "https://vaporlens.app/app/3179050/piece_by_piece/stats/details"
+          }
+        }
+      ],
+      "look": {
+        "short": "A teddy on a felt-topped workbench · warm storybook 3D · cream, honey and rosy pink",
+        "vibe": "Imagine a tiny attic workroom above a toy shop on a rainy afternoon: a desk lamp makes a warm circle on a green felt bench, a worn honey-coloured bear lies there with its stuffing showing, pin cushions and spools of thread sit around it, and a hand-written note in a child's pencil is propped against the lamp.",
+        "references": [
+          "Real teddy bear hospital photography (wooden benches, labelled drawers of glass eyes)",
+          "Studio Ghibli interiors for clutter that feels lived-in",
+          "Unpacking's warmth and readable props",
+          "Dressmaker's close-up workbench framing"
+        ],
+        "palette": [
+          {
+            "name": "Cotton cream",
+            "hex": "#F6EEDF"
+          },
+          {
+            "name": "Honey mohair",
+            "hex": "#D9A35B"
+          },
+          {
+            "name": "Rosy felt",
+            "hex": "#E3A6A1"
+          },
+          {
+            "name": "Bench green",
+            "hex": "#5E7F63"
+          },
+          {
+            "name": "Walnut",
+            "hex": "#6B4A35"
+          },
+          {
+            "name": "Lamp gold",
+            "hex": "#F2C46B"
+          },
+          {
+            "name": "Rain-window blue",
+            "hex": "#8DA4B8"
+          }
+        ],
+        "shapes": "Soft, rounded and slightly chunky; plush are a little oversized against the tools so they read as characters. No hard edges on anything you touch.",
+        "characters": "The plush are the characters. Owners appear only through notes, Polaroids and children's drawings, so there are no animated people to build.",
+        "camera": "First-person, seated at the bench. You look down at the plush; drag to turn it, and tilt up to see the shelf, window and door. You never walk.",
+        "lighting": "One warm desk lamp as the key light, soft cool daylight from a rainy window as fill; the plush catches a gentle rim light so fur reads.",
+        "textures": "Fur and fabric are the stars: mohair, minky, terry, corduroy and felt each with a clear look. Worn states get matted fur, pills, grey grime and faded noses; restored states are fluffy and bright.",
+        "ui": "Diegetic: a paper intake tag tied to each plush lists the damage; tools sit in a wooden caddy; the job board is a corkboard of notes.",
+        "type": "Rounded hand-lettered display font for titles; owners' notes in different real handwriting styles (scanned, commissioned); clean rounded sans for menus.",
+        "motion": "Stuffing pushes the plush out in soft squashes, the fabric shaver leaves clean stripes, a ladder stitch pulls a seam shut in one satisfying tug.",
+        "sound": "Close-mic foley: shaver buzz, suds, thread drawing through fabric, a soft 'pomf' as stuffing settles; quiet piano and music box, plus rain on the window.",
+        "screenshot": "A split before/after card: a flat, grey, one-eyed rabbit on the left, the same rabbit plump and clean on the right, with the owner's pencil note below.",
+        "clip": "The ladder stitch: the needle zig-zags through the split seam, then one pull closes it invisibly and the bear plumps up. Then the before/after card.",
+        "avoid": [
+          "Real plush brands or lookalike trademarks",
+          "Creepy or uncanny toys",
+          "Medical gore jokes about toy surgery",
+          "Clinical white hospital look",
+          "AI-generated art"
+        ],
+        "layout": "Landscape (portrait works for the browser slice). The plush sits centre-frame on the bench; the tool caddy runs along the bottom edge; the intake tag hangs top-left; the note leans against the lamp top-right; the window and rescue shelf are a tilt up away.",
+        "artBrief": "Commission one hero plush first (a honey mohair teddy) in three states (worn, mid-repair with open seam, restored) on one shared mesh, with blend shapes for flat-to-plump stuffing. Bench, lamp, tools and room can come from a stylised interior asset pack retextured to the palette. Each further plush reuses a small set of base bodies (bear, rabbit, cat, dog, creature) with new fabrics and faces, so the art bill grows by textures more than models."
+      },
+      "distribution": {
+        "ship": "Free browser slice (Three.js or Godot web) on itch.io and own site: one bench, three plush, share card, Wishlist button. First-person 3D is heavier in a phone browser than 2D, so the slice is bench-only, tap-and-drag, under 40MB.",
+        "firstMoney": "Paid itch.io supporter build ($5) with extra jobs, plus Ko-fi, while the Steam page collects wishlists.",
+        "reach": "Steam page and demo, Steam Next Fest, Wholesome Direct application, cozy streamers and plush/restoration creators. Not a Poki fit (first-person 3D).",
+        "graduate": "Steam 1.0 at $14.99, then Switch and a premium iPad port if it sells."
+      },
+      "steps": [
+        {
+          "name": "Hero interaction test",
+          "deliverable": "Restuff and ladder-stitch one bear in a browser build; post clips",
+          "gate": "One clip passes 50k views or 1,000+ saves/shares"
+        },
+        {
+          "name": "Browser hook slice",
+          "deliverable": "Three plush jobs with notes, replies and a before/after share card on itch.io and own site",
+          "gate": "10,000+ plays and 30%+ of players finish all three jobs"
+        },
+        {
+          "name": "Steam page and supporter build",
+          "deliverable": "Capsule, trailer of reveals, $5 itch.io build",
+          "gate": "2,000+ wishlists and 300+ paid supporter copies"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "deliverable": "Five-job Steam demo with love-mark choices and the rescue shelf",
+          "gate": "7,000+ wishlists after Next Fest and demo reviews/feedback 85%+ positive"
+        },
+        {
+          "name": "Content and polish",
+          "deliverable": "30+ jobs, collection room, upgrades, Deck Verified",
+          "gate": "15,000+ wishlists and playtesters asking for 'one more plush'"
+        },
+        {
+          "name": "Steam 1.0 launch",
+          "deliverable": "PC release at $14.99",
+          "gate": "90%+ positive and first-week sales near 0.10-0.15x wishlists"
+        },
+        {
+          "name": "Packs and ports",
+          "deliverable": "Seasonal jobs, paid plush pack, Switch port with a partner",
+          "gate": "1,000+ Steam reviews"
+        }
+      ]
+    },
+    {
+      "id": "glaze-day",
+      "name": "Glaze Day",
+      "origin": "Proven genres",
+      "track": "main",
+      "niche": "First-person craft sim · pottery studio · kiln-opening reveal",
+      "oneLiner": "Throw, trim and glaze pots in a small studio, then open the kiln to see how each glaze actually came out.",
+      "hook": "Every kiln opening is an unboxing you made yourself.",
+      "pitch": "A first-person, bench-scale pottery game. You center clay on the wheel by holding steady pressure until the wobble calms, open it, and pull the walls up in three slow passes. Push too hard and the pot slumps (which is funny, and you just start again). Leather-hard pots get trimmed, bisque-fired, then glazed by dipping, pouring and layering. You pack the kiln shelf by shelf, close the lid and wait for the firing. Then comes the clip: you lift the lid and the glazes are a little different every time. Runs, speckles, crawls, the odd rare ash drip or crystal bloom, depending on thickness, layering and where the pot sat in the kiln. Neighbours leave commission notes ('a mug big enough for my soup', 'a bowl for my late cat's water dish, to keep'), and at the weekend you sell the rest at a market stall where you price and arrange your table. Kintsugi is a side mode: people bring broken pieces and you mend them with gold seams. It is Dressmaker's hands-on craft with the TCG Card Shop pack-opening thrill built into the kiln, set in one of the biggest hobby booms on social media.",
+      "genreTags": [
+        "First-person",
+        "Crafting",
+        "Pottery",
+        "Cozy",
+        "Shop",
+        "Relaxing",
+        "Creative"
+      ],
+      "audience": "People who watch wheel-throwing videos and The Great Pottery Throw Down, pottery-class hobbyists and the much bigger group who want to try it, Dressmaker and ReStory players, and collectors who love an unboxing.",
+      "comps": [
+        "Dressmaker",
+        "TCG Card Shop Simulator (the reveal)",
+        "ReStory",
+        "Potion Craft",
+        "Tiny Bookshop",
+        "Let's Create! Pottery (mobile)"
+      ],
+      "sessionLength": "One kiln cycle (throw, trim, glaze, fire, open) takes about 20 minutes; a market weekend is a natural stopping point.",
+      "artDirection": "Earthy, sunlit studio in soft-stylised 3D; clay looks wet and glossy, fired glazes look like real ceramics.",
+      "scores": {
+        "originality": {
+          "score": 5,
+          "why": "Craft-sim loop is Dressmaker's and the reveal is TCG's; a procedural, slightly unpredictable kiln reveal is the fresh twist."
+        },
+        "provenDemand": {
+          "score": 7,
+          "why": "Craft sims and reveal loops are proven on Steam; pottery itself is proven only on mobile and in Double Fine's brawler Kiln, not as a cozy PC sim."
+        },
+        "demand": {
+          "score": 8,
+          "why": "Wheel-throwing is one of social media's most-watched hobby formats and pottery classes are booming; the research found no notable cozy pottery sim."
+        },
+        "gap": {
+          "score": 7,
+          "why": "No cozy pottery studio sim on Steam; Kiln (Double Fine, Apr 2026) is a team brawler but competes for 'pottery game' searches."
+        },
+        "soloSpeed": {
+          "score": 6,
+          "why": "Pots are revolved profiles and glazes are shaders, so code does much of the work; making wet clay feel right is the hard part."
+        },
+        "creatorFit": {
+          "score": 6,
+          "why": "Pots are shaped on the wheel by code, which saves art; glazes, the studio and customers still need hand-made work."
+        },
+        "instantPlay": {
+          "score": 6,
+          "why": "Wheel interactions are one-finger drags that work on a phone, and procedural meshes download light; still 3D in a mobile browser."
+        },
+        "monetization": {
+          "score": 6,
+          "why": "$14.99 premium plus glaze and kiln DLC; less merch potential than plush, and pottery players may be less used to buying games."
+        },
+        "marketability": {
+          "score": 9,
+          "why": "Kiln opening is a built-in unboxing, and collapsing pots make funny fail clips; players will post their best glaze."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Tactile craft is rising in 2026; Kiln's launch adds attention to pottery games but also some search competition."
+        },
+        "culture": {
+          "score": 8,
+          "why": "Pottery is a big hobby and video trend (wheel-throwing clips, 'pottery date' classes), though past its steepest growth."
+        },
+        "scopeFit": {
+          "score": 8,
+          "why": "A bench-scale first-person sim is well within a small team's reach."
+        }
+      },
+      "whyNow": [
+        "Tactile craft is the 2026 breakout: Dressmaker launched with 400k+ wishlists, peaked near 15,550 CCU and recouped in under 24 hours after a 100k-download itch.io prototype (GuruGamer, Games Industry Africa).",
+        "Reveals sell: TCG Card Shop Simulator sold about 400k copies in 10 days on the pack-opening moment (GameDiscoverCo). A kiln opening gives a craft game that same 'what did I get' moment.",
+        "The research names pottery and ceramics glazing as an open craft theme: searches found no notable pottery sim on Steam (first-person sims research).",
+        "Cozy releases reached 1,041 by late Sept 2026 (+143%), so the theme and the clip must stand out; pottery's social-media presence gives it that (Steam Page Analyzer)."
+      ],
+      "pillars": [
+        "Your hands make it: centering, pulling and trimming are physical, never menus.",
+        "The kiln decides the last 10%: glazes come out a little different every time.",
+        "Every pot has a home: a neighbour's commission or a stranger at the market.",
+        "Failure is funny, not punishing: slumped pots go back in the reclaim bucket."
+      ],
+      "coreLoop": [
+        "Read the commission notes and plan a firing",
+        "Center, open and pull pots on the wheel",
+        "Trim leather-hard pots and add handles",
+        "Glaze by dipping, pouring and layering",
+        "Pack and fire the kiln",
+        "Open the kiln: the reveal",
+        "Deliver commissions and sell at the weekend market; buy glazes and tools"
+      ],
+      "features": {
+        "mvp": [
+          "Wheel with centering, opening and pulling",
+          "Four glazes with procedural variation and layering",
+          "Small kiln with placement hot spots",
+          "Kiln-opening reveal with a photo export",
+          "Three neighbour commissions"
+        ],
+        "launch": [
+          "25+ glazes, rare effects (ash drip, crystalline, oil spot) to discover",
+          "Forms: mugs, bowls, vases, plates, teapots with lids and spouts",
+          "Weekend market stall: arrange, price, chat with buyers",
+          "Kintsugi side mode with owner stories",
+          "Studio upgrades: bigger kiln, wood-fired kiln, extruder, sgraffito tools",
+          "A shelf of your best pots to photograph and share"
+        ],
+        "postLaunch": [
+          "Free seasonal glazes and market events",
+          "Paid 'Raku Yard' pack: raku firing with dramatic smoke reveals ($4.99)",
+          "Photo mode challenges and a glaze-recipe book",
+          "Switch port if it sells"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "PC (Steam)",
+          "Steam Deck",
+          "Free browser slice (itch.io + own site)"
+        ],
+        "later": [
+          "Switch / Switch 2",
+          "iPad (premium port)"
+        ]
+      },
+      "pricing": {
+        "base": "$14.99",
+        "model": "Premium on Steam; free browser slice; paid itch.io supporter build first",
+        "details": [
+          "Matches Dressmaker's $14.99 and sits in the $10-20 band where cozy craft games recoup.",
+          "Glaze packs extend revenue cheaply because glazes are mostly shader work.",
+          "A $5 itch.io supporter build funds sound and studio art early."
+        ]
+      },
+      "monetizationPlan": [
+        "Premium base game.",
+        "Paid firing packs (raku, wood-fire) at $3.99-4.99.",
+        "Soundtrack DLC (acoustic, lofi-friendly).",
+        "Later: real-world collaboration with a ceramic studio for a limited glaze or mug drop, if the audience asks."
+      ],
+      "team": [
+        {
+          "role": "Founder / designer / programmer",
+          "count": 1,
+          "note": "Wheel physics, procedural glaze shaders (AI coding helps here), economy, devlogs."
+        },
+        {
+          "role": "Contract 3D artist",
+          "count": 1,
+          "note": "Studio, wheel, kiln, tools and the market stall; pots themselves are procedural."
+        },
+        {
+          "role": "Contract technical artist (shaders)",
+          "count": 1,
+          "note": "Part-time; makes glazes look like real ceramics. Worth paying for."
+        },
+        {
+          "role": "Contract composer and sound designer",
+          "count": 1,
+          "note": "Wet clay, wheel hum, kiln ticking as it cools: sound sells the tactility."
+        },
+        {
+          "role": "Potter consultant",
+          "count": 1,
+          "note": "A working potter to check the process and appear in devlogs."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$15-40k cash",
+        "note": "Founder time unpaid. Procedural pots keep the art bill low; most cash goes to the studio set, shader polish, sound and capsule art. Ship 1.0 rather than Early Access unless wishlists come in low."
+      },
+      "marketingPlan": [
+        {
+          "when": "Before the slice",
+          "action": "Post kiln-opening reveals and pot-collapse fails as vertical clips; side-by-side with a real potter's wheel footage."
+        },
+        {
+          "when": "With the slice",
+          "action": "Free browser slice with one wheel, four glazes and a kiln; ask players to post their best pot; seed with pottery TikTokers."
+        },
+        {
+          "when": "Before the demo",
+          "action": "Steam page live (30 days before release minimum per Steam rules); apply to Wholesome Direct; itch.io supporter build."
+        },
+        {
+          "when": "Next Fest",
+          "action": "Demo with commissions and one market weekend; streamer keys with a 'rate my glaze' prompt."
+        },
+        {
+          "when": "Launch",
+          "action": "Trailer of kiln reveals; community glaze-sharing challenge at launch."
+        },
+        {
+          "when": "Ongoing",
+          "action": "A regular 'kiln opening' clip; feature player pots on socials."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Seasonal",
+          "what": "Free seasonal glazes and market themes."
+        },
+        {
+          "when": "Each update",
+          "what": "A new form or tool and a few new neighbours."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Paid firing packs and community glaze challenges."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Kiln openings per browser session",
+          "target": "3+",
+          "why": "Shows the reveal pulls players back to the wheel."
+        },
+        {
+          "metric": "Wishlists at launch",
+          "target": "15,000+",
+          "why": "About 1,500-2,250 first-week copies at 0.10-0.15x (GameDiscoverCo)."
+        },
+        {
+          "metric": "Player-posted pots",
+          "target": "Hundreds of posts under the game's hashtag by Next Fest",
+          "why": "User clips are the growth engine for reveal games."
+        },
+        {
+          "metric": "Review score",
+          "target": "92%+",
+          "why": "Craft hits sit at 95-96%."
+        }
+      ],
+      "killCriteria": [
+        "Testers center and pull a pot but don't fire a second kiln: the reveal is not varied enough; deepen glaze variation before content.",
+        "Kiln-opening clips never pass 50k views: pottery may sell as a hobby but not as a game clip; rethink the reveal.",
+        "Fewer than 7,000 wishlists after Next Fest: ship a lean 1.0."
+      ],
+      "risks": [
+        {
+          "risk": "Wet clay feels like a lathe minigame",
+          "mitigation": "Prototype the wheel first with sound and shader feedback; get a potter's sign-off."
+        },
+        {
+          "risk": "Kiln (Double Fine) owns the word and searches",
+          "mitigation": "Never use 'kiln' in the name; lead with 'cozy pottery studio' and the reveal."
+        },
+        {
+          "risk": "Glaze randomness feels unfair",
+          "mitigation": "Variation is visual and mostly positive; commissions accept a range; a glaze notebook teaches what drives results."
+        },
+        {
+          "risk": "Dressmaker clones flood craft sims",
+          "mitigation": "Ship the slice and clips early to claim pottery before others do."
+        }
+      ],
+      "revenueAssumptions": "Assumes $14.99. Net ≈ $7.30 per unit to the studio after Steam's 30%, discounts, regional pricing, refunds and sales tax.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss (no-hook band)",
+          "units": 6000,
+          "netUSD": 43800,
+          "note": "Like the craft sims that sold under 10k without a viral moment."
+        },
+        {
+          "scenario": "Base (themed-sim band)",
+          "units": 45000,
+          "netUSD": 328500,
+          "note": "Middle of the 25k-120k band."
+        },
+        {
+          "scenario": "Strong (top of band)",
+          "units": 120000,
+          "netUSD": 876000,
+          "note": "Pottery hobbyists adopt it; glaze sharing keeps it on feeds."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 400000,
+          "netUSD": 2920000,
+          "note": "Dressmaker-like. Rare; needs a viral prototype first."
+        }
+      ],
+      "spec": {
+        "genre": "First-person bench-scale craft sim",
+        "players": "1",
+        "setting": "A small pottery studio with a weekend market stall",
+        "coreVerb": "Throw, trim, glaze and fire pots, then open the kiln",
+        "look": "Earthy, sunlit soft-stylised 3D",
+        "team": "Solo founder + contractors",
+        "audience": "Pottery fans and hobbyists, craft-sim players",
+        "differentiator": "A kiln opening where glazes come out a little different each time",
+        "price": "$14.99"
+      },
+      "drivers": [
+        {
+          "signal": "Craft sims are the 2026 breakout",
+          "detail": "Dressmaker: 400k+ wishlists, #9 global top seller, recouped in under 24h; its itch.io prototype had 100k+ downloads.",
+          "strength": "strong",
+          "ref": {
+            "link": "https://gurugamer.com/pc-console/a-tiny-dressmaking-game-is-suddenly-taking-over-steam-27344"
+          }
+        },
+        {
+          "signal": "Reveals drive sales",
+          "detail": "TCG Card Shop Simulator sold ~400k copies in 10 days on pack opening; the kiln opening is the same mechanic for craft.",
+          "strength": "strong",
+          "ref": {
+            "link": "https://newsletter.gamediscover.co/p/tcg-card-shop-simulator-the-second"
+          }
+        },
+        {
+          "signal": "Pottery is an open craft theme",
+          "detail": "Research found no notable pottery or ceramics-glazing sim on Steam (absence of evidence, not a full audit).",
+          "strength": "medium",
+          "ref": {
+            "link": "https://gamesindustryafrica.com/2026/06/10/south-africas-free-lives-and-cozy-lives-turn-heads-at-wholesome-direct-with-dressmaker/"
+          }
+        },
+        {
+          "signal": "Code-heavy, art-light",
+          "detail": "Pots are procedural and glazes are shaders, which suits a solo developer with AI coding tools better than most craft themes.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#soloAiFeasibility"
+          }
+        },
+        {
+          "signal": "Clones and a big-name pottery game",
+          "detail": "Dressmaker clones are coming, and Double Fine's Kiln (Apr 2026, a pottery brawler) competes for 'pottery game' searches. Themed sims mostly land at 25k-120k copies; first-person 3D is harder to build and to play from a phone link than 2D.",
+          "strength": "caution",
+          "ref": {
+            "link": "https://www.doublefine.com/news/announcing-our-new-game-kiln"
+          }
+        }
+      ],
+      "look": {
+        "short": "A clay-spattered wheel in a sunlit studio · soft-stylised 3D · terracotta, slip grey and celadon",
+        "vibe": "Imagine a converted garage studio on a summer morning: dust in the light from a big window, a splattered wheel in front of you, wet clay glistening as it spins, shelves of bisque pots waiting, and a little electric kiln in the corner ticking as it cools.",
+        "references": [
+          "Pottery studio photography and wheel-throwing videos",
+          "The Great Pottery Throw Down's studio",
+          "Japanese mingei and studio ceramics for glaze looks",
+          "Dressmaker's close-up bench framing"
+        ],
+        "palette": [
+          {
+            "name": "Terracotta",
+            "hex": "#C46A45"
+          },
+          {
+            "name": "Slip grey",
+            "hex": "#B8B1A7"
+          },
+          {
+            "name": "Celadon",
+            "hex": "#9CC3A8"
+          },
+          {
+            "name": "Cobalt",
+            "hex": "#2F5C9A"
+          },
+          {
+            "name": "Tenmoku brown",
+            "hex": "#5B3A24"
+          },
+          {
+            "name": "Studio plaster",
+            "hex": "#F1EBE1"
+          },
+          {
+            "name": "Kiln glow",
+            "hex": "#F08A3C"
+          }
+        ],
+        "shapes": "Soft-stylised, slightly simplified studio props with generous bevels; pots are smooth procedural forms with real proportions so they read as pottery, not toys.",
+        "characters": "Neighbours appear through handwritten commission notes and at the market as hands, sleeves and voices at the edge of the table. No full animated people.",
+        "camera": "First-person, seated at the wheel, looking down into the pot; swivel to the glaze buckets, kiln and shelves. You never walk except a cut to the market stall.",
+        "lighting": "Bright, soft morning light from one big window; the kiln gives a hot orange glow when opened.",
+        "textures": "Wet clay is glossy and streaky; bone-dry clay is matte and chalky; glazes range from glassy celadon to speckled oatmeal and drippy tenmoku with visible runs.",
+        "ui": "Diegetic: commission notes on a clipboard, a glaze notebook with swatches, the kiln's control dial, chalk prices at the market.",
+        "type": "Warm humanist serif for titles, handwritten notes from neighbours, chalk lettering at the market.",
+        "motion": "Clay rises in a slow spiral under your fingers, slumps in a wobbly collapse, glaze sheets off a dipped bowl, and kiln shelves come out one by one.",
+        "sound": "Wheel hum, wet hands on clay, the wire cutting a pot free, glaze clinking as pots cool, gentle acoustic guitar and lofi-friendly music.",
+        "screenshot": "Lifting the kiln lid: a shelf of glossy pots in celadon, cobalt and speckled oatmeal, steam and orange glow rising.",
+        "clip": "Open the kiln, lift out one bowl, turn it in the light: a rare blue drip has run down the side. Or a pot slowly slumping on the wheel.",
+        "avoid": [
+          "Real pottery brand names",
+          "Generic low-poly mugs that look like clip-art",
+          "Fake Japanese aesthetics without care (kintsugi needs respectful handling)",
+          "AI-generated art"
+        ],
+        "layout": "Landscape. The spinning pot fills the lower centre with your clay-covered hands at the edges; a pressure ring around the pot shows centering; tools sit on the wheel tray at the bottom; the commission clipboard hangs top-left.",
+        "artBrief": "Buy a stylised workshop asset pack and retexture it to the palette; commission the wheel, kiln and glaze buckets as hero props. Pots are procedural (revolved profile), so the main art spend is a glaze shader library: base colour, speckle, run, crawl and break-over-edges, with randomised variation. Hands come from a hand asset with clay-covered textures."
+      },
+      "distribution": {
+        "ship": "Free browser slice (Three.js or Godot web) on itch.io and own site: wheel, four glazes, kiln reveal, photo export, Wishlist button. First-person 3D is heavier in a phone browser than 2D, so the slice is bench-only, tap-and-drag, under 40MB.",
+        "firstMoney": "Paid itch.io supporter build ($5) with more glazes and forms, plus Ko-fi, while the Steam page collects wishlists.",
+        "reach": "Steam page and demo, Steam Next Fest, Wholesome Direct application, cozy streamers and pottery creators. Not a Poki fit (first-person 3D).",
+        "graduate": "Steam 1.0 at $14.99, then Switch and iPad if it sells."
+      },
+      "steps": [
+        {
+          "name": "Wheel and kiln test",
+          "deliverable": "Center, pull and fire one pot in a browser build; post reveal clips",
+          "gate": "One kiln-reveal clip passes 50k views or 1,000+ saves/shares"
+        },
+        {
+          "name": "Browser hook slice",
+          "deliverable": "Wheel, four glazes, kiln, three commissions, photo export",
+          "gate": "10,000+ plays and the average player opens the kiln 3+ times"
+        },
+        {
+          "name": "Steam page and supporter build",
+          "deliverable": "Capsule, reveal trailer, $5 itch.io build",
+          "gate": "2,000+ wishlists and 300+ paid supporter copies"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "deliverable": "Demo with commissions, one market weekend and rare glazes",
+          "gate": "7,000+ wishlists after Next Fest"
+        },
+        {
+          "name": "Content and polish",
+          "deliverable": "25+ glazes, all forms, market, kintsugi mode, Deck Verified",
+          "gate": "15,000+ wishlists"
+        },
+        {
+          "name": "Steam 1.0 launch",
+          "deliverable": "PC release at $14.99",
+          "gate": "90%+ positive and first-week sales near 0.10-0.15x wishlists"
+        },
+        {
+          "name": "Firing packs and ports",
+          "deliverable": "Raku pack, seasonal glazes, Switch port",
+          "gate": "1,000+ Steam reviews"
+        }
+      ]
+    },
+    {
+      "id": "stem-and-ribbon",
+      "name": "Stem & Ribbon",
+      "origin": "Proven genres",
+      "track": "main",
+      "niche": "First-person craft sim · florist atelier · read the customer",
+      "oneLiner": "Run a small florist: hear each customer's story, pick stems from the buckets, hand-tie the bouquet, ribbon it, and watch them react.",
+      "hook": "An apology, a first date, a funeral: say it with the right stems.",
+      "pitch": "A first-person, bench-scale florist game. A customer comes to the counter with a small story: an apology to a sister, a nervous first date, a funeral for a beekeeper, a graduation. You pick stems from the buckets behind you, condition them (strip leaves below the waterline, cut at an angle under water, peel guard petals), then build a hand-tied spiral by adding each stem at an angle and turning the bunch in your hand, or arrange a vase. You wrap it in paper, pull a ribbon into a bow and tuck in a card. The customer reacts, and there is never one right answer: colour, mood, scent, season and budget all count, the way Tiny Bookshop rewards a good recommendation without a single correct book. Stock changes with the seasons. Peonies come and go, dahlias arrive late, and what you ordered at the morning flower market decides what you can say today. Regulars return, so the first-date customer may come back for an anniversary. It joins Tiny Bookshop's 'give them the right thing' with Dressmaker's hands-on craft.",
+      "genreTags": [
+        "First-person",
+        "Crafting",
+        "Florist",
+        "Cozy",
+        "Narrative",
+        "Shop",
+        "Relaxing"
+      ],
+      "audience": "Cozy and narrative players (Tiny Bookshop, Coffee Talk), people who watch bouquet-wrapping and floristry videos, wedding and gift culture, and plant and flower lovers. Skews women aged 18-40.",
+      "comps": [
+        "Tiny Bookshop",
+        "Dressmaker",
+        "Coffee Talk",
+        "Puni the Florist",
+        "Flowers and Favours: Florist Simulator",
+        "Unpacking"
+      ],
+      "sessionLength": "One customer takes 5-8 minutes; a shop opening of four or five customers is a natural evening stop.",
+      "artDirection": "Painterly, light-filled 3D atelier; flowers are the colour and everything else stays quiet and neutral so bouquets pop.",
+      "scores": {
+        "originality": {
+          "score": 4,
+          "why": "Florist games already exist; the hand-tied first-person craft, story-led orders and seasonal stock are refinements, not a new idea."
+        },
+        "provenDemand": {
+          "score": 7,
+          "why": "Tiny Bookshop's recommendation loop (500k+) and Dressmaker's craft loop are proven; florist games themselves have not broken out."
+        },
+        "demand": {
+          "score": 7,
+          "why": "Flowers are a strong social-media and gifting theme, but measured demand for florist games is modest (Flowers and Favours ~291 reviews)."
+        },
+        "gap": {
+          "score": 4,
+          "why": "Puni the Florist (June 2026), Flowers and Favours (2025), Hanako's Flower Shop, Paper Florist and Flower Shop Simulator (PS5) already occupy the theme, though none is a breakout."
+        },
+        "soloSpeed": {
+          "score": 5,
+          "why": "Many flower species each need models and seasonal variants, and a convincing hand-tied spiral is fiddly; the bench scope helps."
+        },
+        "creatorFit": {
+          "score": 4,
+          "why": "Dozens of flower stems, buckets and wraps must be modelled and look lovely up close; heavy art for one person."
+        },
+        "instantPlay": {
+          "score": 5,
+          "why": "Pick-and-place stems work with taps and drags on a phone, but dozens of flower meshes are heavy for a 3D browser build."
+        },
+        "monetization": {
+          "score": 6,
+          "why": "$14.99 premium with seasonal flower packs; a modest ceiling given the competition."
+        },
+        "marketability": {
+          "score": 8,
+          "why": "A finished hand-tied bouquet with a ribbon pulled tight, plus a customer moved by it, clips well; it is quieter than a restoration before/after."
+        },
+        "momentum": {
+          "score": 6,
+          "why": "Craft sims are rising, but florist games are already filling up in 2025-26."
+        },
+        "culture": {
+          "score": 7,
+          "why": "Bouquet and floristry videos are popular, but flowers are a steady interest rather than a rising one."
+        },
+        "scopeFit": {
+          "score": 8,
+          "why": "One shop and a counter; content volume (flowers and stories) is the main load."
+        }
+      },
+      "whyNow": [
+        "Tiny Bookshop sold 500k+ copies on a 'read the customer, give them the right thing' loop (GoNintendo), and Coffee Talk about 369k (VGI), so the recommendation half is proven.",
+        "Dressmaker's tactile craft loop reached 400k+ wishlists and #9 global top seller (GuruGamer); arranging is the same kind of visible creation.",
+        "Existing florist games are small: Flowers and Favours has 94% of 291 reviews and Puni the Florist about 152 (first-person sims research), so no one owns the theme yet.",
+        "Cozy releases hit 1,041 by late Sept 2026 (+143%); 11% still reach 1,000 reviews vs 4.2% of Steam (Steam Page Analyzer)."
+      ],
+      "pillars": [
+        "Listen first: every bouquet answers a story.",
+        "Your hands tie it: conditioning, spiralling and the bow are physical.",
+        "The season decides the palette: what's in the buckets shapes what you can say.",
+        "No wrong bouquet, only different reactions."
+      ],
+      "coreLoop": [
+        "Order stock at the morning flower market",
+        "Hear a customer's story",
+        "Pick stems from the buckets",
+        "Condition and hand-tie or arrange in a vase",
+        "Wrap, ribbon and write the card",
+        "See the customer's reaction and earn",
+        "Unlock new stems, papers and vases as seasons turn"
+      ],
+      "features": {
+        "mvp": [
+          "One counter and bench, ten stems in buckets",
+          "Hand-tied spiral and simple wrap with ribbon",
+          "Three customers with stories and reactions",
+          "Bouquet photo export"
+        ],
+        "launch": [
+          "60+ stems across four seasons, with a morning market to order stock",
+          "40+ customers, many returning across seasons with continuing stories",
+          "Vase arrangements, buttonholes, wreaths at winter",
+          "Shop upgrades: cold room, new papers and ribbons, window display",
+          "Floriography notebook that fills in as you learn"
+        ],
+        "postLaunch": [
+          "Free seasonal events (Valentine's, Mother's Day rush without timers)",
+          "Paid 'Wedding Season' pack ($4.99)",
+          "Free-arrange sandbox and photo mode",
+          "Switch port if it sells"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "PC (Steam)",
+          "Steam Deck",
+          "Free browser slice (itch.io + own site)"
+        ],
+        "later": [
+          "Switch / Switch 2",
+          "iPad (premium port)"
+        ]
+      },
+      "pricing": {
+        "base": "$14.99",
+        "model": "Premium on Steam; free browser slice; paid itch.io supporter build first",
+        "details": [
+          "$14.99 matches Dressmaker and sits within the $10-20 cozy band.",
+          "Seasonal and wedding packs extend the tail.",
+          "Launch near Valentine's or Mother's Day for natural press hooks."
+        ]
+      },
+      "monetizationPlan": [
+        "Premium base game.",
+        "Paid seasonal flower packs and a wedding pack ($3.99-4.99).",
+        "Soundtrack DLC.",
+        "Possible real-world florist collaborations for seasonal events (press, not revenue)."
+      ],
+      "team": [
+        {
+          "role": "Founder / designer / programmer",
+          "count": 1,
+          "note": "Design, AI-assisted code, the stem-picking and spiral interaction, devlogs."
+        },
+        {
+          "role": "Contract 3D artist (botanical)",
+          "count": 1,
+          "note": "Flower heads and stems with bud, open and wilted states; the biggest cost."
+        },
+        {
+          "role": "Contract writer",
+          "count": 1,
+          "note": "Part-time; human-written customer stories and reactions (the founder can write some)."
+        },
+        {
+          "role": "Contract composer and sound designer",
+          "count": 1,
+          "note": "Paper crinkle, snips, water, ribbon pull."
+        },
+        {
+          "role": "Florist consultant",
+          "count": 1,
+          "note": "A working florist to check technique and seasonal stock, and appear in devlogs."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$20-50k cash",
+        "note": "Founder time unpaid. Flower art volume and writing push this higher than the other bench games; botanical asset packs can cover filler greens."
+      },
+      "marketingPlan": [
+        {
+          "when": "Before the slice",
+          "action": "Post hand-tied spiral and ribbon-pull clips; pair each with a one-line customer story caption."
+        },
+        {
+          "when": "With the slice",
+          "action": "Free browser slice with three customers; invite players to share their bouquet for a given story ('what would you give for an apology?')."
+        },
+        {
+          "when": "Before the demo",
+          "action": "Steam page live (30 days before release minimum per Steam rules); Wholesome Direct application; itch.io supporter build."
+        },
+        {
+          "when": "Next Fest",
+          "action": "Demo with one full season; streamer keys with 'chat picks the story' prompts."
+        },
+        {
+          "when": "Launch",
+          "action": "Launch near Valentine's or Mother's Day; florist creators react to in-game bouquets."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Seasonal flower clips matched to real seasons."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Seasonal",
+          "what": "Free seasonal stems and holiday customers."
+        },
+        {
+          "when": "Each update",
+          "what": "New returning-customer story chapters."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Paid flower and wedding packs."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Customers served per browser session",
+          "target": "3+ (all slice customers)",
+          "why": "Shows the story-plus-craft loop holds."
+        },
+        {
+          "metric": "Wishlists at launch",
+          "target": "15,000+",
+          "why": "About 1,500-2,250 first-week copies at 0.10-0.15x."
+        },
+        {
+          "metric": "Wishlists vs florist competitors",
+          "target": "Above Puni the Florist's review count within the first launch window",
+          "why": "Proves it stands out in a theme others already hold."
+        },
+        {
+          "metric": "Review score",
+          "target": "92%+",
+          "why": "Cozy craft norm."
+        }
+      ],
+      "killCriteria": [
+        "Clips perform no better than existing florist games' trailers (no clip passes 50k views): the theme is not standing out; consider pivoting the bench to plush or pottery.",
+        "Testers skip the story and just make pretty bouquets: the recommendation half is not working; rewrite reactions.",
+        "Fewer than 7,000 wishlists after Next Fest: ship lean."
+      ],
+      "risks": [
+        {
+          "risk": "Crowded theme: several florist games in 2025-26",
+          "mitigation": "Lead with the customer stories and the hand-tied spiral; never call it a 'florist simulator'."
+        },
+        {
+          "risk": "Flower art volume",
+          "mitigation": "Fewer species done beautifully; reuse stems across bud/open/wilted states; buy greenery packs."
+        },
+        {
+          "risk": "Picking and placing many stems gets tedious",
+          "mitigation": "Grab small handfuls, snap to the spiral, and keep each bouquet to 7-15 stems."
+        },
+        {
+          "risk": "Writing load",
+          "mitigation": "Short stories with returning regulars rather than many one-offs; a paid human writer."
+        }
+      ],
+      "revenueAssumptions": "Assumes $14.99. Net ≈ $7.30 per unit to the studio after Steam's 30%, discounts, regional pricing, refunds and sales tax.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss (no-hook band)",
+          "units": 4000,
+          "netUSD": 29200,
+          "note": "Where existing florist games sit; likely if it reads as 'another florist game'."
+        },
+        {
+          "scenario": "Base (themed-sim band)",
+          "units": 30000,
+          "netUSD": 219000,
+          "note": "Low-middle of the 25k-120k band, discounted for competition."
+        },
+        {
+          "scenario": "Strong (top of band)",
+          "units": 100000,
+          "netUSD": 730000,
+          "note": "The story hook lands with Tiny Bookshop's audience."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 300000,
+          "netUSD": 2190000,
+          "note": "Unlikely given the competition; needs a big showcase moment."
+        }
+      ],
+      "spec": {
+        "genre": "First-person bench-scale craft and recommendation sim",
+        "players": "1",
+        "setting": "A small florist's atelier on a high street",
+        "coreVerb": "Listen, pick stems, hand-tie, wrap and ribbon",
+        "look": "Painterly, light-filled 3D",
+        "team": "Solo founder + contractors",
+        "audience": "Cozy narrative players and flower lovers",
+        "differentiator": "Customer stories with no single right answer, hand-tied first-person craft, and seasonal stock",
+        "price": "$14.99"
+      },
+      "drivers": [
+        {
+          "signal": "Recommendation loop is proven",
+          "detail": "Tiny Bookshop: 500k+ copies on reading customers and recommending the right thing.",
+          "strength": "strong",
+          "ref": {
+            "link": "https://gonintendo.com/contents/55621-tiny-bookshop-getting-physical-switch-release-game-hits-500k-sold"
+          }
+        },
+        {
+          "signal": "Craft loop is the 2026 breakout",
+          "detail": "Dressmaker: 400k+ wishlists, #9 global top seller, recouped in under 24h.",
+          "strength": "strong",
+          "ref": {
+            "link": "https://gurugamer.com/pc-console/a-tiny-dressmaking-game-is-suddenly-taking-over-steam-27344"
+          }
+        },
+        {
+          "signal": "No florist game has broken out",
+          "detail": "Flowers and Favours: 94% of 291 reviews; Puni the Florist: ~152 reviews. Room for a standout, but no proof of a high ceiling.",
+          "strength": "medium",
+          "ref": {
+            "link": "https://gamegeeker.com/games/flowers-and-favours-florist-simulator-3269600"
+          }
+        },
+        {
+          "signal": "Flowers are big outside games",
+          "detail": "Bouquet-wrapping and seasonal-flower content are everyday social formats; weddings and gifting give natural seasonal hooks.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Theme is already crowded",
+          "detail": "Puni the Florist (June 2026), Flowers and Favours (2025), Hanako's Flower Shop, Paper Florist and Flower Shop Simulator (PS5) already cover florists. Craft sims without a viral hook sold under 10k (Piece by Piece ~4.8k). First-person 3D is harder to build and to play from a phone link than 2D.",
+          "strength": "caution",
+          "ref": {
+            "link": "https://vaporlens.app/app/3396290/puni_the_florist"
+          }
+        }
+      ],
+      "look": {
+        "short": "A hand-tied bouquet on a zinc counter · painterly 3D · peony pink, sage and kraft paper",
+        "vibe": "Imagine a narrow florist's shop on a spring morning: zinc buckets of peonies and ranunculus behind you, wet stems on a wooden bench, a roll of kraft paper and spools of silk ribbon, the door bell jingling as someone comes in out of the rain with a story.",
+        "references": [
+          "Small-studio florist photography (seasonal, garden-style)",
+          "Dutch still-life paintings for flower colour",
+          "Tiny Bookshop's warm painterly palette",
+          "Dressmaker's close-up bench framing"
+        ],
+        "palette": [
+          {
+            "name": "Peony pink",
+            "hex": "#E9A3B5"
+          },
+          {
+            "name": "Ranunculus coral",
+            "hex": "#F08A6E"
+          },
+          {
+            "name": "Sage leaf",
+            "hex": "#93AE8A"
+          },
+          {
+            "name": "Kraft paper",
+            "hex": "#C9A57A"
+          },
+          {
+            "name": "Zinc",
+            "hex": "#A9B2B7"
+          },
+          {
+            "name": "Limewash",
+            "hex": "#F4F0E8"
+          },
+          {
+            "name": "Deep plum",
+            "hex": "#5A2E45"
+          }
+        ],
+        "shapes": "Soft painterly forms; flowers slightly simplified but botanically accurate in silhouette so each species is recognisable at a glance.",
+        "characters": "Customers appear across the counter from the chest up with simple, gentle animation (or as silhouettes against the rainy window), with hand-written order cards; regulars have clear silhouettes and props.",
+        "camera": "First-person behind the counter; turn to the buckets behind you, back to the bench, up to the customer. You never walk.",
+        "lighting": "Cool, soft daylight through the shop window with warm practical lamps; flowers glow with subtle subsurface scattering.",
+        "textures": "Petals with soft translucency, waxy leaves, crinkly kraft paper, glossy silk ribbon, wet zinc.",
+        "ui": "Diegetic: order cards clipped to a string, a chalkboard of today's stock, a floriography notebook.",
+        "type": "Elegant hand-lettered display, handwritten order cards, simple serif for body.",
+        "motion": "Stems spiral into the hand as you turn the bunch, paper folds crisply, a ribbon pulls into a bow in one tug, petals tremble slightly.",
+        "sound": "Snips, water sloshing in buckets, paper crinkle, ribbon zip, door bell, rain; gentle strings and piano.",
+        "screenshot": "A finished hand-tied bouquet in kraft paper and plum ribbon on the bench, with a customer's handwritten story card beside it.",
+        "clip": "Spiral the last stem in, wrap the paper, pull the ribbon tight, hand it over, and the customer's eyes go wet.",
+        "avoid": [
+          "Generic 'flower simulator' look",
+          "Overly saturated candy colours",
+          "Rigid flower-meaning quizzes",
+          "AI-generated art"
+        ],
+        "layout": "Landscape. The bench and bouquet-in-progress fill the lower centre with your hands at the edges; the buckets are one turn behind; the customer and order card are one tilt up; stock chalkboard top-right.",
+        "artBrief": "Commission a set of 12-15 hero flowers with bud, open and wilted states, plus greenery; buy a botanical pack for fillers. Bench, buckets and shop come from a retextured interior pack. Customers can be simple chest-up characters or silhouettes; spend the art budget on flowers."
+      },
+      "distribution": {
+        "ship": "Free browser slice (Three.js or Godot web) on itch.io and own site: one bench, ten stems, three customers, photo export, Wishlist button. First-person 3D is heavier in a phone browser than 2D, so the slice is bench-only, tap-and-drag, under 40MB.",
+        "firstMoney": "Paid itch.io supporter build ($5) with more stems and customers, plus Ko-fi, while the Steam page collects wishlists.",
+        "reach": "Steam page and demo, Steam Next Fest, Wholesome Direct application, cozy streamers and florist creators. Not a Poki fit (first-person 3D).",
+        "graduate": "Steam 1.0 at $14.99, then Switch and iPad if it sells."
+      },
+      "steps": [
+        {
+          "name": "Hand-tie test",
+          "deliverable": "Spiral, wrap and ribbon one bouquet in a browser build; post clips",
+          "gate": "One clip passes 50k views or 1,000+ saves/shares"
+        },
+        {
+          "name": "Browser hook slice",
+          "deliverable": "Three customers with stories, ten stems, reactions, photo export",
+          "gate": "10,000+ plays and 30%+ serve all three customers"
+        },
+        {
+          "name": "Steam page and supporter build",
+          "deliverable": "Capsule, trailer, $5 itch.io build",
+          "gate": "2,000+ wishlists and 300+ paid supporter copies"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "deliverable": "One full season with returning customers",
+          "gate": "7,000+ wishlists after Next Fest"
+        },
+        {
+          "name": "Content and polish",
+          "deliverable": "Four seasons, 60+ stems, 40+ customers, Deck Verified",
+          "gate": "15,000+ wishlists"
+        },
+        {
+          "name": "Steam 1.0 launch",
+          "deliverable": "PC release at $14.99 near Valentine's or Mother's Day",
+          "gate": "90%+ positive and first-week sales near 0.10-0.15x wishlists"
+        },
+        {
+          "name": "Packs and ports",
+          "deliverable": "Wedding pack, seasonal events, Switch port",
+          "gate": "1,000+ Steam reviews"
+        }
+      ]
+    },
+    {
+      "id": "soak-and-snooze",
+      "name": "Soak & Snooze",
+      "origin": "Proven genres",
+      "track": "main",
+      "niche": "Walk-and-restock idle-arcade management · animal hot-spring inn · web first, then Steam",
+      "oneLiner": "Run a tiny mountain hot-spring inn for animals: carry towels, warm stones and tea between steaming pools until a pile of capybaras melts into the water.",
+      "pitch": "Soak & Snooze takes the walk-and-restock loop that Monkey Mart and My Perfect Hotel proved on portals and phones and sets it in a small snowy onsen whose guests are animals. You are Momo, a young red panda innkeeper. You run between pools with stacks of towels on your head, top up warm stones, pour tea, hand out cold bottled milk after the bath, scrub the tubs and collect coins, then spend them on new pools, rooms and helpers. Every species has its own preference and a little ritual. Capybaras pile into the yuzu bath and doze. Snow monkeys want hot stones and a snowball afterwards. Foxes are fussy about temperature. Otters will only relax with a rubber duck. A cozy hand-painted art style and a rare venue set it apart from the low-poly look every portal clone shares. It launches free on Poki and CrazyGames, which tests the hook and pays from ads, and grows into a premium Steam game with decorating, regulars with stories, seasons and a desktop 'soak window' idle mode.",
+      "genreTags": [
+        "Idle-arcade management",
+        "Walk-and-restock",
+        "Hot spring / onsen",
+        "Cute animals",
+        "Web portal first",
+        "Top-down 2D"
+      ],
+      "audience": "Two groups. On the web: phone and school-browser players who already love Monkey Mart-style games (Poki has 100M monthly players). On Steam: cozy players who bought Maltese's Fluffy Onsen, Bear and Breakfast or Cats & Soup and want a hands-on, prettier and deeper version, plus the capybara-meme crowd on TikTok.",
+      "comps": [
+        "Monkey Mart",
+        "My Perfect Hotel",
+        "Maltese's Fluffy Onsen",
+        "Cats & Soup",
+        "Bear and Breakfast",
+        "Capybara Spa"
+      ],
+      "sessionLength": "Web: 3-5 minute bites that end when a new pool unlocks. Steam: one opening shift (sunset to lanterns-out) is a short evening session, and the optional soak window runs idle beside your work.",
+      "artDirection": "Hand-painted top-down 2D of a small wooden mountain inn in snow: cedar, steam, yuzu-yellow floats and round, sleepy animals.",
+      "scores": {
+        "originality": {
+          "score": 4,
+          "why": "The loop is a straight Monkey Mart / My Perfect Hotel loop and animal onsens already exist (Fluffy Onsen, Capybara Spa, Capy Spa), so only the cozy art, multi-species rituals and portal-to-Steam plan are new."
+        },
+        "provenDemand": {
+          "score": 8,
+          "why": "Walk-and-restock is one of the most proven loops anywhere (Monkey Mart ~300M Poki plays, My Perfect Hotel up to $178K a week in US iOS alone), and an animal onsen already sold ~188k on Steam."
+        },
+        "demand": {
+          "score": 8,
+          "why": "Fluffy Onsen's 95% from 2,875 reviews and Monkey Mart's 4.6 rating from 3.79M votes show both the theme and the loop are wanted."
+        },
+        "gap": {
+          "score": 5,
+          "why": "Bathhouse supply is medium-low on Steam (3-4 visible games), but walk-and-restock is a commodity on portals and several small capybara-spa games already exist."
+        },
+        "soloSpeed": {
+          "score": 7,
+          "why": "The code (queues, stations, economy tables) is easy with AI tools; the slow part is drawing and animating each animal's soak, ritual and walk cycle."
+        },
+        "creatorFit": {
+          "score": 6,
+          "why": "Clips make themselves (capybara piles, towel stacks), but every new species needs commissioned sprites, so art spend grows with content."
+        },
+        "instantPlay": {
+          "score": 9,
+          "why": "One-thumb movement with auto-pickup and auto-drop at stations is the native control scheme of this genre on phones; a 2D build loads small."
+        },
+        "monetization": {
+          "score": 7,
+          "why": "Portal ads (100% of revenue on traffic you bring to Poki), then a $12.99 Steam version with species and season DLC, then mobile; Fluffy Onsen's ~$4-5 price shows the ceiling is real but modest per copy."
+        },
+        "marketability": {
+          "score": 9,
+          "why": "A heap of capybaras melting into a steaming pool with a rubber duck on one head reads in one second with no context."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Cozy releases are up 143% year on year and capybara content keeps circulating, but the capybara meme is mature rather than rising."
+        },
+        "culture": {
+          "score": 8,
+          "why": "Capybara and animal-onsen content is a strong internet favourite, though the capybara wave has peaked a little."
+        },
+        "scopeFit": {
+          "score": 9,
+          "why": "A 2D top-down management game with one venue type is well within reach of a 3-6 person studio."
+        }
+      },
+      "whyNow": [
+        "Maltese's Fluffy Onsen sold ~188k units (~$814k) at 95% positive in 2025 with only 3-4 visible bathhouse competitors; nobody has yet made the hands-on, nicely drawn version (steampulse).",
+        "Monkey Mart reached ~300M plays on Poki and reportedly cost under $10k to make, and Poki hit 1B gameplays in a month in 2025: the walk-and-restock loop has a ready audience on phones (cinevva / Poki).",
+        "Cozy games still reach 1,000 reviews at 11% against 4.2% for all of Steam, even with 1,041 cozy releases by late September 2026, and cute-animal hospitality games keep selling (Bear and Breakfast 157k-357k)."
+      ],
+      "pillars": [
+        "Every guest melts: the payoff of every task is an animal visibly relaxing, slumping and dozing.",
+        "Carry, drop, soak: one thumb, auto-pickup and auto-drop, towering towel stacks you can feel.",
+        "Each species has a ritual: preferences are learned by watching, not by reading menus.",
+        "A small inn that grows by hand: new pools, rooms and helpers appear where you can see them, never a spreadsheet.",
+        "Nobody is ever angry: guests wait, doze off, or wander to the foot bath; there is no fail state."
+      ],
+      "coreLoop": [
+        "Guests arrive and pick a pool by temperature and type",
+        "Carry towels, warm stones, tea and snacks to their pools",
+        "Guests melt, perform their ritual and leave coins (and sometimes a postcard)",
+        "Scrub the empty pool and restock the shelves",
+        "Spend coins on new pools, rooms and helpers",
+        "Unlock a new species with its own ritual"
+      ],
+      "features": {
+        "mvp": [
+          "One snowy inn with 3 pools (warm, hot, yuzu), towel shelf, stone brazier and tea counter",
+          "3 species with rituals: capybaras (pile up in the yuzu bath), snow monkeys (hot stones, then a snowball), red pandas (tea, then a nap on the ledge)",
+          "One-thumb movement with auto-pickup and auto-drop, a carry stack that wobbles and grows",
+          "Coins, 8-10 purchasable upgrades, one helper (a baby capybara who carries towels)",
+          "Local save, 'Wishlist on Steam' and 'Follow on TikTok' buttons on the end screen"
+        ],
+        "launch": [
+          "Web (Poki/CrazyGames): 3 inns along a mountain valley, 8 species, 20+ pools and amenities, helpers, ad-for-reward double coins",
+          "Steam: 5 inns, 16 species including foxes, otters, penguins (cold plunge), tortoise elders (very long soaks) and hedgehogs (tiny tubs)",
+          "Steam: free decorating (lanterns, plants, screens, rubber duck collection), guest rooms with futons to lay out",
+          "Steam: regulars with small stories told through postcards they mail back after a stay",
+          "Steam: four seasons (snow, blossom, fireflies, maple) that change guests and decorations",
+          "Steam: 'soak window' mode, a small always-on-top window where guests keep soaking idle while you work",
+          "Steam: photo mode and Steam Deck verified controls"
+        ],
+        "postLaunch": [
+          "Free seasonal events (New Year's yuzu bath, summer fireworks night)",
+          "Paid species packs ($2.99-$3.99): e.g. a seaside onsen with sea otters and seals",
+          "Mobile premium or free-with-ads port from the web codebase",
+          "Switch port if Steam sales clear the base case"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Web (itch.io, own site, then Poki / CrazyGames)",
+          "PC (Steam)",
+          "Steam Deck"
+        ],
+        "later": [
+          "iOS / Android",
+          "Switch"
+        ]
+      },
+      "pricing": {
+        "base": "Free on web (ads); $12.99 on Steam",
+        "model": "Free web portal version with ad revenue share, premium Steam version, species-pack DLC",
+        "details": [
+          "The web version is the advert and the test: same core loop, smaller valley, no decorating or stories.",
+          "Steam is priced above Fluffy Onsen (~$4-5) because the content is deeper; under $5 only 2.7% of cozy games reach 1,000 reviews (budget-confounded).",
+          "Launch discount and a bundle with the soundtrack; species packs keep the long tail moving."
+        ]
+      },
+      "monetizationPlan": [
+        "Poki / CrazyGames ad revenue share: 100% on traffic you bring with your own links, 50/50 on portal traffic.",
+        "Ko-fi / Patreon supporter build with the newest species early, while the Steam page collects wishlists.",
+        "Premium Steam version at $12.99.",
+        "Species and season packs ($2.99-$3.99) plus a soundtrack DLC.",
+        "Later: mobile port and plush or sticker merch of the capybara pile if the clip becomes the brand."
+      ],
+      "team": [
+        {
+          "role": "Founder / designer / programmer",
+          "count": 1,
+          "note": "Builds everything in code with AI tools; owns the economy curve and the feel of carrying."
+        },
+        {
+          "role": "Commissioned illustrator-animator",
+          "count": 1,
+          "note": "Paid per species: idle, walk, soak and ritual frames, plus key art and the Steam capsule."
+        },
+        {
+          "role": "Composer / sound designer",
+          "count": 1,
+          "note": "Commissioned or licensed: shamisen-and-koto-light lo-fi, water and steam foley."
+        },
+        {
+          "role": "Asset packs",
+          "count": 0,
+          "note": "Bought top-down Japanese-interior and nature tilesets for floors, walls, plants and props."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$15–45k",
+        "note": "Out-of-pocket estimate for a solo creator: commissioned animal animation is most of it, then music, asset packs, Steam fee and festival costs. Founder time not counted."
+      },
+      "marketingPlan": [
+        {
+          "when": "Before the demo",
+          "action": "Post the capybara-pile clip and 'towel stack fails' on TikTok and Shorts with the free browser link; start a devlog series ('building a hot spring for animals')."
+        },
+        {
+          "when": "Before the demo",
+          "action": "Ship to CrazyGames and pitch Poki with the web build; put the Steam page link on the end screen."
+        },
+        {
+          "when": "Next Fest",
+          "action": "Steam demo with one inn and 6 species; send keys to cozy and idle-game YouTubers and to animal-meme accounts."
+        },
+        {
+          "when": "Launch",
+          "action": "Launch with a new species reveal clip and a soak-window trailer showing guests soaking under a spreadsheet."
+        },
+        {
+          "when": "Ongoing",
+          "action": "One new 'guest ritual' clip per species, player photo-mode reposts, seasonal events on the web version that point to Steam."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Seasonal",
+          "what": "Free season events on both web and Steam (yuzu bath for New Year, fireflies in summer)."
+        },
+        {
+          "when": "Each update",
+          "what": "A new species with its own ritual; the web version gets a taste, Steam gets the full pack."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Portal leaderboards for 'most guests melted' and community photo contests on Discord."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Web average playtime per session",
+          "target": "8+ minutes on CrazyGames / Poki",
+          "why": "Portals rank games by engagement; this is the signal they promote."
+        },
+        {
+          "metric": "Web-to-Steam click-through",
+          "target": "2%+ of web players click the Steam link",
+          "why": "Shows the free version is feeding wishlists, not replacing the sale."
+        },
+        {
+          "metric": "Wishlists at launch",
+          "target": "20,000+",
+          "why": "At 0.10-0.15x first-week conversion this means 2,000-3,000 launch-week sales, enough for top-seller visibility at $12.99."
+        },
+        {
+          "metric": "Steam review score",
+          "target": "92%+",
+          "why": "Fluffy Onsen sits at 95%; cozy hits all live above 90%."
+        },
+        {
+          "metric": "Year-one Steam units",
+          "target": "40,000 (base case)",
+          "why": "Middle of the 25k-120k band for themed management games."
+        }
+      ],
+      "killCriteria": [
+        "The browser slice's capybara clip and towel-stack clips together stay under 50k views after 10+ posts: the theme isn't carrying; try another venue on the same code.",
+        "Portal players average under 5 minutes per session after tuning: the loop is not sticky enough to graduate to a paid version.",
+        "Fewer than 7,000 Steam wishlists after Next Fest: ship the Steam version lean at a lower price and lean on the web revenue."
+      ],
+      "risks": [
+        {
+          "risk": "The walk-and-restock loop is a commodity on portals; Poki curation is selective",
+          "mitigation": "Lead with hand-drawn animals and rituals in every asset; launch on CrazyGames and your own links first so the game earns traffic before pitching Poki."
+        },
+        {
+          "risk": "Small capybara-spa games already exist (Capybara Spa on Steam, Capy Spa on consoles, CapybaraOnsen idle on iOS) and Fluffy Onsen has a follow-up",
+          "mitigation": "Make the multi-species inn and rituals the brand, not just capybaras; never use 'capybara' as the whole pitch or name."
+        },
+        {
+          "risk": "Free web version cannibalises Steam sales",
+          "mitigation": "Keep decorating, stories, seasons, the soak window and most species Steam-only; the web version ends with a clear 'the inn keeps growing on Steam' screen."
+        },
+        {
+          "risk": "Spirited Away look-alike accusations",
+          "mitigation": "A small rural wooden inn, real animals only, no spirits, no towering red bathhouse, no witch owner, no train or bridge motifs."
+        },
+        {
+          "risk": "Animal art volume and animation quality (Exotica 2 at 78% shows weak animal animation hurts)",
+          "mitigation": "Cut-out (bone-rigged) sprites reused across species, few frames per ritual, and species added only as budget allows."
+        }
+      ],
+      "revenueAssumptions": "Steam at $12.99: net ≈ $6.50 per unit after launch discounts, regional pricing, refunds, Steam's 30% and taxes. Web ad revenue is not included in the units below; treat it as a bonus that can be anywhere from pocket money to a living (one studio grew from 2 to 5 staff on Poki revenue) and depends on getting featured.",
+      "revenueScenarios": [
+        {
+          "scenario": "Flop (no viral hook)",
+          "units": 6000,
+          "netUSD": 39000,
+          "note": "The <10k band of well-reviewed sims without a clip (Piece by Piece ~4.8k, Thrifty Business ~6.9k)."
+        },
+        {
+          "scenario": "Clone band (base)",
+          "units": 40000,
+          "netUSD": 260000,
+          "note": "Middle of the 25k-120k band where themed management games land."
+        },
+        {
+          "scenario": "Strong",
+          "units": 120000,
+          "netUSD": 780000,
+          "note": "Top of the clone band, close to Fluffy Onsen's ~188k but at a higher price."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 350000,
+          "netUSD": 2275000,
+          "note": "Bear and Breakfast upper estimate level, driven by a viral clip plus web traffic. Rare."
+        }
+      ],
+      "hook": "A pile of capybaras melting into a steaming pool, rubber duck on one head, and you ran the towels.",
+      "spec": {
+        "genre": "Walk-and-restock idle-arcade management",
+        "players": "1",
+        "setting": "A small wooden hot-spring inn in a snowy mountain valley, for animals",
+        "coreVerb": "Carry, restock, soak and expand",
+        "look": "Hand-painted top-down 2D, steam and cedar",
+        "team": "Solo + commissioned illustrator-animator and composer",
+        "audience": "Portal players on phones, then cozy Steam players",
+        "differentiator": "The Monkey Mart loop with handmade cozy art, species rituals and a free-web-to-premium-Steam ladder",
+        "price": "Free on web; $12.99 on Steam"
+      },
+      "drivers": [
+        {
+          "signal": "An animal onsen already sold ~188k",
+          "detail": "Maltese's Fluffy Onsen: ~188k units, ~$814k, 2,875 reviews at 95% positive (May 2025), with only 3-4 visible bathhouse competitors (Onsen Master, Bathhouse Creatures, Animal Spa).",
+          "strength": "strong",
+          "ref": {
+            "link": "https://www.steampulse.org/game/3404470"
+          }
+        },
+        {
+          "signal": "The loop is huge on portals and phones",
+          "detail": "Monkey Mart ~300M Poki plays, rated 4.6 from 3.79M votes, reportedly made for under $10k; My Perfect Hotel earned ~$69K-$178K a week in US iOS alone. Poki has 100M monthly players.",
+          "strength": "strong",
+          "ref": {
+            "link": "https://app.cinevva.com/guides/publish-game-poki"
+          }
+        },
+        {
+          "signal": "Capybaras and onsen are a culture, not just a game theme",
+          "detail": "Capybara memes, zoo capybaras in yuzu baths and wellness / self-care content give free reach; cute-animal hospitality keeps selling (Bear and Breakfast 157k-357k).",
+          "strength": "medium",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Cozy still beats the Steam average",
+          "detail": "11% of cozy games reach 1,000 reviews vs 4.2% of Steam, despite 1,041 cozy releases by late September 2026 (632 in all of 2025).",
+          "strength": "supporting",
+          "ref": {
+            "link": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report"
+          }
+        },
+        {
+          "signal": "Crowded loop, cheap competitors",
+          "detail": "Walk-and-restock clones flood portals and mobile with paid UA; the Shop Keeper tag is up 634% and Idler up 150% in 2026; small capybara-spa games already exist; Fluffy Onsen sells at ~$4-5, and under-$5 cozy games reach 1,000 reviews only 2.7% of the time. The art and rituals must carry the difference.",
+          "strength": "caution",
+          "ref": {
+            "niche": "Shop/management sim (cafe, bakery, potion shop)"
+          }
+        }
+      ],
+      "look": {
+        "short": "A tiny snowy mountain onsen seen from above · hand-painted 2D · cedar, steam and yuzu yellow",
+        "vibe": "Imagine looking down through falling snow into a little wooden inn on a mountainside at dusk. Three round stone pools glow teal, wrapped in steam. In the middle one, five capybaras are piled together with their eyes closed and yuzu fruit bobbing around them; one has a yellow rubber duck on its head. A small red panda in an indigo happi coat trots between them with a wobbling tower of folded towels on its head. Paper lanterns are just coming on.",
+        "layout": "Portrait on phones, landscape on Steam. Seen from above at a slight three-quarter angle, like looking into a dollhouse with the roof off. The inn fills the screen: an entrance gate at the bottom where guests queue, a wooden corridor up the middle, pools on either side, the towel shelf, stone brazier and tea counter along the walls. Unbought plots are shown as snowy patches with a wooden price sign that fills up as you stand on it. Coins and a small guest counter sit at the top; there are no other menus during play.",
+        "references": [
+          "Monkey Mart and My Perfect Hotel for readability of stations and carry stacks (not their look)",
+          "Japanese ryokan and rural onsen photography in snow",
+          "Children's picture-book watercolour animals (soft, round, sleepy)",
+          "Zoo capybara yuzu-bath photos",
+          "Cats & Soup for how cute idle animals can carry a whole game"
+        ],
+        "palette": [
+          {
+            "name": "Steam white",
+            "hex": "#F3EEE6"
+          },
+          {
+            "name": "Spring teal",
+            "hex": "#6FB7B0"
+          },
+          {
+            "name": "Cedar",
+            "hex": "#8A5A3B"
+          },
+          {
+            "name": "Yuzu",
+            "hex": "#F2B53A"
+          },
+          {
+            "name": "Persimmon",
+            "hex": "#E0784A"
+          },
+          {
+            "name": "Moss",
+            "hex": "#6E8B4E"
+          },
+          {
+            "name": "Dusk indigo",
+            "hex": "#2E3550"
+          }
+        ],
+        "shapes": "Everything soft and round: pebble-shaped pools, bean-shaped animals, pillowy steam clouds, chunky timber with rounded ends. Very few sharp corners; roofs are thick and snow-capped.",
+        "characters": "Animals drawn as simple round masses with tiny legs and big closed-eye expressions. Momo, the red panda innkeeper, has an indigo happi coat and a bushy striped tail that bobs when running. Each species has one readable silhouette and one prop: capybara + yuzu, snow monkey + hot stone, fox + little towel folded on its head, otter + rubber duck, tortoise elder + long pipe of steam.",
+        "camera": "Fixed top-down three-quarter view that follows Momo gently; it pulls back as the inn grows so the whole place stays readable on a phone.",
+        "lighting": "Dusk to night. Warm lantern pools of orange light on snow, teal glow from the water, steam catching the light. Each new pool you buy lights its lanterns one by one.",
+        "textures": "Painted watercolour wash on wood and stone, soft grain on the tatami, sparkly snow edges; flat colour on characters so they stay readable at small size.",
+        "ui": "Wooden price signs and paper tags floating over stations; coins are little copper mon with a hole; guest wishes shown as tiny thought bubbles with a single icon (towel, stone, tea, duck).",
+        "type": "A rounded hand-lettered display font for signs and titles; a clean rounded sans for numbers. Small Japanese signage only where it is correct and checked.",
+        "motion": "Carry stacks sway with each step; guests slowly sink into the water, ears flatten, eyes close, steam puffs rise in rhythm; coins hop out of pools in arcs to your feet.",
+        "sound": "Water lapping, wooden footsteps, soft 'plop' as a guest sinks, wind chimes, distant snow wind; gentle koto/shamisen-flavoured lo-fi that thins out at night.",
+        "screenshot": "A full inn at night in snow: six glowing pools, a capybara pile in the yuzu bath, monkeys on hot stones, Momo mid-run with a towel tower.",
+        "clip": "Five capybaras slide one by one into the yuzu pool, slump into a pile, eyes close in sequence, and a rubber duck is placed on the top one's head. Then a coin shower.",
+        "avoid": [
+          "Spirited Away look-alikes: towering red multi-storey bathhouse, spirits, a witch owner, bridges and trains",
+          "Low-poly hypercasual 3D that looks like every portal clone",
+          "Stress UI: red timers, angry faces, fail screens",
+          "Generic 'Japanese' mash-ups (torii everywhere, ninja, geisha imagery)",
+          "AI-generated art or music"
+        ],
+        "artBrief": "Commission one illustrator-animator for 2D top-down sprites at a three-quarter view. Each species needs: idle, walk, sink-into-water, soaking loop (eyes closed, slow breathing), its ritual, and a happy exit, all as cut-out parts that can be bone-rigged in the engine so frames stay few. Characters are round, soft, readable at 64-96 px tall on a phone. Environments come from a bought top-down Japanese interior / nature tileset repainted toward the palette; the illustrator does pools, steam, lanterns, key art and the Steam capsule. Test every new sprite by placing it in a pool pile next to a capybara: if it doesn't read as a melted, happy animal at phone size, redraw it."
+      },
+      "distribution": {
+        "ship": "Free 2D browser slice (one inn, 3 species) on itch.io and own site, linked from TikTok and Shorts",
+        "firstMoney": "CrazyGames / Poki ad revenue share plus a Ko-fi supporter build with extra species",
+        "reach": "Poki / CrazyGames featuring, Steam page + demo, Next Fest, cozy and idle-game YouTubers, animal-meme accounts",
+        "graduate": "Premium Steam 1.0 at $12.99 with species DLC, then mobile and Switch if it sells"
+      },
+      "steps": [
+        {
+          "name": "Browser slice",
+          "deliverable": "One snowy inn, 3 pools, 3 species with rituals, carry stack, coins and upgrades, playable on a phone from a TikTok link",
+          "gate": "Phone players average 6+ minutes and one clip passes 100k views"
+        },
+        {
+          "name": "Portal build",
+          "deliverable": "Polished web version with 3 inns and 8 species submitted to CrazyGames, then Poki, with a Steam link on the end screen",
+          "gate": "Accepted on a portal, 8+ minutes average playtime and 4.3+ rating"
+        },
+        {
+          "name": "Steam page and supporter build",
+          "deliverable": "Steam page with the capybara-pile capsule and trailer; Ko-fi build with decorating and new species",
+          "gate": "2,000+ wishlists and 2%+ of web players clicking through to Steam"
+        },
+        {
+          "name": "Steam depth",
+          "deliverable": "Decorating, guest rooms, postcards from regulars, seasons and the soak-window idle mode",
+          "gate": "Playtesters ask to keep playing after the slice ends and 85%+ rate it positive"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "deliverable": "Steam demo with one inn, 6 species and the soak window; creator keys sent",
+          "gate": "7,000+ wishlists after Next Fest and 10+ creator videos"
+        },
+        {
+          "name": "Steam launch",
+          "deliverable": "Steam 1.0 at $12.99, Deck verified, launch-day species reveal on web and social",
+          "gate": "20,000+ wishlists before launch, then 92%+ positive"
+        },
+        {
+          "name": "Species packs and ports",
+          "deliverable": "Seasonal events, paid species packs, then a mobile port",
+          "gate": "Steam passes 25,000 units or web revenue covers the port"
+        }
+      ]
+    },
+    {
+      "id": "tidepool-lane",
+      "name": "Tidepool Lane",
+      "origin": "Proven genres",
+      "track": "main",
+      "niche": "Cozy builder-manager · small seaside aquarium · Steam-first with a browser hook test",
+      "oneLiner": "Turn an old boathouse into a tiny seaside aquarium: gather creatures from the rock pools, design glowing tanks, welcome school trips and nurse a stranded seal pup back to the sea.",
+      "pitch": "Tidepool Lane is a small, warm take on the aquarium tycoon that Megaquarium has owned since 2018. You inherit a leaky boathouse in a fishing village and turn it, floor by floor, into a tiny public aquarium seen side-on like a dollhouse. At low tide you walk the rock pools to find hermit crabs, anemones and starfish; back inside you design tanks (rocks, plants, sand, light colour), keep each one's water happy with a few simple needs, open a touch pool, a jellyfish room and a café, and welcome visitors and noisy school trips. Every so often the village calls: a seal pup on the beach, a turtle caught in netting. You nurse it in the rescue pool and then release it while everyone watches from the slipway. It is honestly Steam-first. Tank design and building want a mouse and a bigger screen, and creature art is the bottleneck, so the browser version is a small hook test (one rock pool, one tank, one rescue), not a portal game.",
+      "genreTags": [
+        "Builder-manager",
+        "Aquarium",
+        "Sea creatures",
+        "Rescue and release",
+        "Side-on cutaway 2D",
+        "Steam-first"
+      ],
+      "audience": "Cozy management players who liked Megaquarium, Let's Build a Zoo or Bear and Breakfast but want something gentler; aquarium-lovers and 'jellyfish ASMR' viewers; families and teachers (school trips, real marine facts); marine-rescue fans who follow seal-hospital content.",
+      "comps": [
+        "Megaquarium",
+        "Let's Build a Zoo (Aquarium Odyssey DLC)",
+        "Bear and Breakfast",
+        "Tiny Bookshop",
+        "Two Point Museum",
+        "Dave the Diver (the café-and-sea mood)"
+      ],
+      "sessionLength": "One tide cycle (low tide foraging, then opening hours, then evening care) is a natural evening session; the browser slice is a single 5-10 minute tide.",
+      "artDirection": "Side-on dollhouse cutaway of a seaside boathouse aquarium in a linocut / risograph print style: inky outlines, flat sea colours and tanks that glow when lit.",
+      "scores": {
+        "originality": {
+          "score": 5,
+          "why": "An aquarium tycoon is not new (Megaquarium, Let's Build a Zoo's aquarium DLC), but a tiny cozy one built around rock-pool foraging, tank design and rescue-and-release is a real twist."
+        },
+        "provenDemand": {
+          "score": 6,
+          "why": "Animal tycoons are very proven (Planet Zoo 5.4M, Let's Build a Zoo $3M), but the aquarium-specific reference, Megaquarium, is mid-sized at 3,410 reviews."
+        },
+        "demand": {
+          "score": 6,
+          "why": "Our niche data puts cozy ocean/underwater demand at 6/10 (a qualitative estimate); Megaquarium's 95% shows love but not mass demand."
+        },
+        "gap": {
+          "score": 7,
+          "why": "Ocean/underwater supply is 3/10 and Megaquarium is still the reference, but small idle and fishkeeping aquariums are appearing in 2026 (ARC Aquarium, Lured In, We Love Fish Tanks, Loopquarium)."
+        },
+        "soloSpeed": {
+          "score": 4,
+          "why": "Building placement, visitor pathing, tank needs and dozens of creatures is a lot more than a station loop, and every creature needs commissioned art."
+        },
+        "creatorFit": {
+          "score": 4,
+          "why": "Creature art volume is the bottleneck for one person; side-view fish and cut-out rigging help, but mammals and the rescue scenes still cost real money."
+        },
+        "instantPlay": {
+          "score": 5,
+          "why": "A rock pool and one tank work in a phone browser; the full building-and-design game wants a mouse and a bigger screen."
+        },
+        "monetization": {
+          "score": 6,
+          "why": "Premium Steam at $17.99 with creature-region DLC and a later tablet/Switch port; no portal ad income to lean on."
+        },
+        "marketability": {
+          "score": 8,
+          "why": "A dark tank lighting up full of jellyfish and a seal pup flopping back into the sea are both instant, emotional clips."
+        },
+        "momentum": {
+          "score": 6,
+          "why": "Cozy is up 143% and ocean themes are getting attention, but the aquarium sub-genre is steady rather than rising."
+        },
+        "culture": {
+          "score": 7,
+          "why": "Aquarium visits and jellyfish videos are evergreen relaxation content, and marine conservation and seal-rescue stories have warm public support."
+        },
+        "scopeFit": {
+          "score": 7,
+          "why": "A 2D side-on builder is realistic for a 3-6 person studio, though creature count drives cost."
+        }
+      },
+      "whyNow": [
+        "Megaquarium (2018) is still the aquarium reference, with 3,410 Steam reviews at 95%, and it is a systems-heavy tycoon, not cozy; the research found aquarium supply 'low' (gg.deals / management research).",
+        "Animal management sells for small teams when the hook is clear: Let's Build a Zoo recouped its costs in its first week and reached $3M (gameworldobserver).",
+        "Cozy games reach 1,000 reviews at 11% vs 4.2% for Steam, and 45.2% of $20+ cozy games do (budget-confounded): a fuller-priced, content-rich cozy game is the shape that works on Steam (steampageanalyzer)."
+      ],
+      "pillars": [
+        "Small and loved: one boathouse that grows floor by floor, never a theme park.",
+        "Design a tank, then watch it come alive: placement is quick, the payoff is the reveal when the lights come on.",
+        "Care, not chemistry: each tank has 3 readable needs (warmth, clean glass and water, good neighbours); no spreadsheets.",
+        "Rescue and release: the best moments are animals going home.",
+        "Real sea life, lightly taught: every creature has a true fact card that teachers and kids can enjoy."
+      ],
+      "coreLoop": [
+        "Low tide: walk the rock pools and collect creatures and shells",
+        "Design or extend a tank and switch on its lights",
+        "Open the doors: visitors, school trips and café customers",
+        "Care rounds: scrub glass, feed, balance the three needs",
+        "Earn and expand: new rooms, bigger tanks, a new floor",
+        "Rescue call: nurse an animal and release it to the sea"
+      ],
+      "features": {
+        "mvp": [
+          "Browser hook test: one rock pool at low tide, one tank to design (rocks, plants, sand, light colour), 8 creatures, one seal-pup rescue and release",
+          "Side-on cutaway with tap-to-place on a grid and a 'lights on' reveal",
+          "Three tank needs shown as icons, scrubbing the glass as the tactile action",
+          "'Wishlist on Steam' and email sign-up at the end"
+        ],
+        "launch": [
+          "Steam: a three-floor boathouse plus pier, 45+ creatures across rock pool, kelp forest, open sea and deep jellyfish room",
+          "Touch pool with kids' reactions, a café upstairs with sea views, a gift shop",
+          "School trips and visitor types with small requests (find the octopus, see a seahorse)",
+          "Rescue centre with 6 rescue stories (seal pup, turtle, otter pup, puffin, porpoise, octopus) ending in a release scene",
+          "Tide and season calendar (spring rock pools, summer visitors, autumn storms that bring rescues, winter jellyfish blooms)",
+          "Photo mode and tank sharing via codes; Steam Deck verified"
+        ],
+        "postLaunch": [
+          "Free updates: new rescue stories and seasonal visitors",
+          "Paid region packs ($4.99): tropical reef wing, cold northern fjord wing",
+          "Tablet and Switch ports (tap-to-place already built for the browser test)",
+          "An optional desktop 'tank window' that shows one of your tanks idling beside your work"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "PC (Steam)",
+          "Steam Deck",
+          "Web hook test (itch.io and own site)"
+        ],
+        "later": [
+          "Switch",
+          "iPad / Android tablets"
+        ]
+      },
+      "pricing": {
+        "base": "$17.99",
+        "model": "Premium Steam, region-pack DLC, free browser hook test",
+        "details": [
+          "Priced near $20 where cozy games reach 1,000 reviews far more often (45.2% at $20+, budget-confounded).",
+          "Below Megaquarium's original price tier but with a cozier, smaller promise.",
+          "Region packs add creatures without diluting the base game."
+        ]
+      },
+      "monetizationPlan": [
+        "Paid itch.io alpha ($5) or Ko-fi supporter build once the first floor plays well.",
+        "Premium Steam release at $17.99.",
+        "Region-pack DLC ($4.99 each) and a soundtrack.",
+        "Tablet and Switch ports; possible educational licensing for classrooms if teachers ask for it."
+      ],
+      "team": [
+        {
+          "role": "Founder / designer / programmer",
+          "count": 1,
+          "note": "Building grid, visitor pathing, tank needs and economy, all in code with AI tools."
+        },
+        {
+          "role": "Commissioned illustrator (creatures)",
+          "count": 1,
+          "note": "The biggest cost: 45+ creatures as cut-out sprites in a linocut style, plus rescue scenes and key art."
+        },
+        {
+          "role": "Composer / sound designer",
+          "count": 1,
+          "note": "Commissioned: sea shanty-tinged gentle score, bubbles, gulls, hull creaks."
+        },
+        {
+          "role": "Marine-biology fact checker",
+          "count": 1,
+          "note": "Paid freelancer or a friendly aquarium educator to check fact cards and rescue procedures."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$25–70k",
+        "note": "Out-of-pocket estimate for a solo creator: creature illustration is most of it, then music, a fact checker, Steam fee and festivals. Founder time not counted."
+      },
+      "marketingPlan": [
+        {
+          "when": "Before the demo",
+          "action": "Post 'design a tank, lights on' clips and the seal-release scene with the browser hook-test link; devlogs on how each creature was drawn and the real animal behind it."
+        },
+        {
+          "when": "Before the demo",
+          "action": "Reach out to aquarium and marine-rescue accounts and teachers' communities; apply to Wholesome Direct and nature-themed showcases."
+        },
+        {
+          "when": "Next Fest",
+          "action": "Steam demo with the ground floor, touch pool and one rescue; keys to cozy management YouTubers and Megaquarium players' communities."
+        },
+        {
+          "when": "Launch",
+          "action": "Launch trailer built around a full jellyfish room lighting up; a charity tie-in with a marine rescue organisation for launch sales."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Player tank-design showcases, rescue-story updates, seasonal visitors."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Seasonal",
+          "what": "Free seasonal visitors and migrations (winter jellyfish bloom, spring seal pups)."
+        },
+        {
+          "when": "Each update",
+          "what": "A new rescue story or creature set; paid region packs on bigger updates."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Community tank-design contests using share codes."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Browser hook test completion",
+          "target": "40%+ of players reach the seal release",
+          "why": "Proves the rescue moment lands before money goes into creatures."
+        },
+        {
+          "metric": "Steam page conversion to wishlist",
+          "target": "12%+",
+          "why": "Shows the capsule and trailer sell a cozy aquarium."
+        },
+        {
+          "metric": "Wishlists at launch",
+          "target": "20,000+",
+          "why": "At 0.10x first-week conversion above $10, this means about 2,000 launch-week sales."
+        },
+        {
+          "metric": "Review score",
+          "target": "92%+",
+          "why": "Megaquarium sits at 95%; aquarium fans are discerning."
+        },
+        {
+          "metric": "Year-one units",
+          "target": "35,000 (base case)",
+          "why": "Inside the 25k-120k band and enough to fund ports and region packs."
+        }
+      ],
+      "killCriteria": [
+        "The seal-release and tank-lighting clips stay under 50k views across 10+ posts: the hook is not strong enough to justify the creature budget.",
+        "Fewer than 3,000 wishlists by the time the demo is ready: shrink to a smaller, cheaper game (one floor, 20 creatures) or a desktop tank-window idle.",
+        "Fewer than 7,000 wishlists after Next Fest: cut creature count and launch lean at $12.99."
+      ],
+      "risks": [
+        {
+          "risk": "Creature art volume and cost for one person",
+          "mitigation": "Linocut cut-out style rigged with bones in the engine; side-view fish need only swim and turn; share rigs across similar species; launch with fewer, better creatures."
+        },
+        {
+          "risk": "New small aquarium games in 2026 (ARC Aquarium, Lured In at $7.99, We Love Fish Tanks, Loopquarium) and Let's Build a Zoo's 50+ species Aquarium Odyssey DLC",
+          "mitigation": "Lead with the boathouse, rock-pool foraging and rescue-and-release; avoid 'aquarium simulator' and idle-fishkeeping framing."
+        },
+        {
+          "risk": "Aquarium players expect deep simulation",
+          "mitigation": "Be clear on the store page that it is cozy; an optional 'keeper mode' adds stricter compatibility for Megaquarium fans."
+        },
+        {
+          "risk": "Well-reviewed sims without a hook sell under 10k (Piece by Piece ~4.8k, Thrifty Business ~6.9k)",
+          "mitigation": "Do not enter production until the browser hook test produces a clip that spreads."
+        },
+        {
+          "risk": "Building UI on small screens",
+          "mitigation": "Steam-first; phone browser only gets the rock pool, one tank and the rescue."
+        }
+      ],
+      "revenueAssumptions": "Assumes $17.99. Net ≈ $8.80 per unit after discounts, regional pricing, refunds, Steam's 30% and taxes. No ad revenue: the browser version is a free marketing test.",
+      "revenueScenarios": [
+        {
+          "scenario": "Flop (no viral hook)",
+          "units": 5000,
+          "netUSD": 44000,
+          "note": "The <10k band of well-reviewed cozy sims with no clip (Piece by Piece ~4.8k)."
+        },
+        {
+          "scenario": "Clone band (base)",
+          "units": 35000,
+          "netUSD": 308000,
+          "note": "Lower-middle of the 25k-120k band for themed management games."
+        },
+        {
+          "scenario": "Strong",
+          "units": 100000,
+          "netUSD": 880000,
+          "note": "Upper clone band; the rescue clip spreads and creators pick it up."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 250000,
+          "netUSD": 2200000,
+          "note": "Bear and Breakfast-level hit with a Switch port. Rare."
+        }
+      ],
+      "hook": "Design a tank, switch the lights on, then carry a rescued seal pup back to the sea.",
+      "spec": {
+        "genre": "Cozy builder-manager (aquarium)",
+        "players": "1",
+        "setting": "A converted boathouse aquarium in a small fishing village",
+        "coreVerb": "Forage, design tanks, care, welcome visitors, rescue and release",
+        "look": "Side-on linocut-print cutaway with glowing tanks",
+        "team": "Solo + commissioned creature illustrator, composer, fact checker",
+        "audience": "Cozy management players, aquarium lovers, families and teachers",
+        "differentiator": "A tiny, cozy aquarium with rock-pool foraging and rescue-and-release, instead of Megaquarium's systems tycoon",
+        "price": "$17.99"
+      },
+      "drivers": [
+        {
+          "signal": "Cozy ocean is under-supplied",
+          "detail": "Our niche data scores cozy ocean/underwater at supply 3, demand 6 (both qualitative estimates, not counts).",
+          "strength": "strong",
+          "ref": {
+            "niche": "Cozy ocean/underwater"
+          }
+        },
+        {
+          "signal": "Megaquarium is still the reference",
+          "detail": "Released 2018, 3,410 Steam reviews at 95% positive, and a systems tycoon rather than a cozy game: nobody has made the small, warm version.",
+          "strength": "medium",
+          "ref": {
+            "link": "https://gg.deals/game/megaquarium/"
+          }
+        },
+        {
+          "signal": "Animal management sells for small teams",
+          "detail": "Let's Build a Zoo: 32k units in its first PC week, recouped costs, $3M by Oct 2022; Planet Zoo 5.4M copies at the big-budget end.",
+          "strength": "medium",
+          "ref": {
+            "link": "https://gameworldobserver.com/2022/10/07/lets-build-a-zoo-revenue-1-million-console-first-week"
+          }
+        },
+        {
+          "signal": "Fuller-priced cozy games do best",
+          "detail": "11% of cozy games reach 1,000 reviews vs 4.2% of Steam; 45.2% at $20+ vs 2.7% under $5 (budget-confounded).",
+          "strength": "supporting",
+          "ref": {
+            "link": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report"
+          }
+        },
+        {
+          "signal": "New small aquariums and the creature-art bottleneck",
+          "detail": "ARC Aquarium (Jan 2026), Lured In ($7.99, Jul 2026), We Love Fish Tanks and Loopquarium are entering, and Let's Build a Zoo's DLC added 50+ sea species. Well-reviewed sims without a hook sell under 10k (Piece by Piece ~4.8k). 45+ creatures is the real cost for one person.",
+          "strength": "caution",
+          "ref": {
+            "link": "#gaps"
+          }
+        }
+      ],
+      "look": {
+        "short": "A seaside boathouse aquarium cut open like a dollhouse · linocut print style · tanks that glow in the dark",
+        "vibe": "Imagine a weathered blue boathouse on a slipway, sliced open so you can see every floor at once like a dollhouse. On the ground floor, kids press their faces to a tank of orange garibaldi and swaying kelp; upstairs, a little café with mugs steaming by a round window; in the basement, a dark room where jellyfish glow pink and violet. Outside, the tide is out and the rock pools shine. Everything is printed in inky linocut lines on cream paper, and the only true light comes from the water.",
+        "layout": "Landscape. The building is shown side-on as a cross-section filling the middle of the screen: ground floor at the waterline, café and offices above, the dark jellyfish room below, the pier and rock pools to the right, the village street to the left where visitors arrive. Tanks sit in the walls as glowing windows. You place rooms and tanks on a simple grid. A tide clock in the top corner shows when the rock pools are open; the toolbar along the bottom has rooms, tanks, decorations and the creature book.",
+        "references": [
+          "Linocut and risograph prints of sea creatures (the look of a seaside print shop)",
+          "Dollhouse cross-section illustrations",
+          "Small British, Breton and New England harbour aquariums",
+          "Jellyfish exhibit photography for the glow room",
+          "Tiny Bookshop for the warm seaside-town mood"
+        ],
+        "palette": [
+          {
+            "name": "Paper cream",
+            "hex": "#F4EDE0"
+          },
+          {
+            "name": "Harbour blue",
+            "hex": "#2F5D7C"
+          },
+          {
+            "name": "Sea glass",
+            "hex": "#8CC7B8"
+          },
+          {
+            "name": "Coral",
+            "hex": "#E9765B"
+          },
+          {
+            "name": "Kelp",
+            "hex": "#5F7D3A"
+          },
+          {
+            "name": "Jelly violet",
+            "hex": "#9A7BD1"
+          },
+          {
+            "name": "Deep ink",
+            "hex": "#14202E"
+          }
+        ],
+        "shapes": "Chunky print shapes with inky outlines and slight misregistration; boathouse planks, round porthole windows, arched tank frames; creatures simplified into bold, readable silhouettes.",
+        "characters": "Visitors are small, stocky print figures with one colour accent each (a yellow raincoat, a red bobble hat); school trips are a line of matching caps with one teacher at the front. You play a keeper in rubber boots and a knitted jumper. Creatures are the stars: each has a bold silhouette, a few rigged parts and one signature motion (octopus curling, seahorse bobbing, crab sidestepping, seal rolling).",
+        "camera": "Side-on, panning and zooming across the cutaway; a close-up mode frames a single tank full screen for designing and for photos.",
+        "lighting": "The building is muted, printed and flat; light comes from the water. Each tank has its own glow colour that you choose, and turning on a new tank brightens the whole room. Night opening hours make the jellyfish room the brightest thing on screen.",
+        "textures": "Paper grain over everything, visible ink texture, halftone dots in shadows, soft caustic ripples moving inside tanks.",
+        "ui": "Tide-table and specimen-label styling: creature cards like museum labels with a print of the animal and one true fact; needs shown as three small icons on each tank (sun for warmth, droplet for clean, fish pair for neighbours).",
+        "type": "A sturdy slab-serif for labels and signs, like a harbour notice board; a clean humanist sans for numbers.",
+        "motion": "Fish swim in simple loops with a slight wobble; kelp sways; visitors press noses to glass and point; bubbles drift up; on release, the seal pup flops, pauses, looks back and slides into the sea.",
+        "sound": "Bubbles and filters humming, gulls, rope creaks, rain on the roof in storms, kids' delighted gasps; a gentle score of accordion, guitar and glass harmonica.",
+        "screenshot": "The full boathouse at dusk: the jellyfish room glowing violet below, a lit reef tank on the ground floor with a school trip in front of it, the café warm above, rock pools catching the sunset outside.",
+        "clip": "A dark, empty tank: you place rocks, kelp and three jellyfish, press the light switch, and the tank blooms violet while a line of children turns to look. Second clip: the whole village on the slipway as a rescued seal pup slides back into the sea.",
+        "avoid": [
+          "Glossy 3D aquarium realism (can't compete, too costly)",
+          "Sad or graphic injury imagery in rescues: show a bandage and a blanket, never wounds",
+          "Captivity-unease: no dolphins or whales in tanks; big animals are rescued and released",
+          "Generic cartoon 'Finding Nemo' clown fish styling",
+          "AI-generated art or music"
+        ],
+        "artBrief": "Commission one illustrator who can work in a linocut / risograph style for side-view sea creatures. Each creature is drawn as 3-6 separate cut-out parts (body, fins, tail, tentacles) for bone rigging in the engine, with a palette of at most three ink colours plus paper. Start with the 8 hook-test creatures (hermit crab, shore crab, beadlet anemone, starfish, blenny, moon jellyfish, seahorse, seal pup). Environments are flat printed planes: building cross-section, rock pools, village street. Tank glow is done in code (additive light and caustics), so the illustrator never paints lighting. Check every creature at 1/4 size: the silhouette alone should name the animal."
+      },
+      "distribution": {
+        "ship": "Free browser hook test (one rock pool, one tank, one seal rescue) on itch.io and own site, linked from TikTok and Shorts",
+        "firstMoney": "Paid itch.io alpha or Ko-fi supporter build of the first floor while the Steam page collects wishlists",
+        "reach": "Steam page + demo, Next Fest, Wholesome-style showcases, cozy management YouTubers, aquarium and marine-rescue accounts",
+        "graduate": "Steam 1.0 at $17.99, then Switch and tablets if it sells; not a Poki/CrazyGames game"
+      },
+      "steps": [
+        {
+          "name": "Browser hook test",
+          "deliverable": "One rock pool, one tank to design with a lights-on reveal, 8 creatures and a seal-pup rescue and release, playable in a phone browser",
+          "gate": "40%+ of players reach the release and one clip passes 100k views"
+        },
+        {
+          "name": "Steam page",
+          "deliverable": "Capsule of the glowing boathouse cutaway, trailer built on the lights-on and release clips",
+          "gate": "12%+ page conversion and 2,000+ wishlists"
+        },
+        {
+          "name": "First floor supporter build",
+          "deliverable": "Paid itch.io or Ko-fi build: ground floor, touch pool, 15 creatures, visitors and school trips",
+          "gate": "200+ paying supporters and 85%+ positive feedback"
+        },
+        {
+          "name": "Production",
+          "deliverable": "Three floors, café, jellyfish room, 45+ creatures, rescue centre, tide and season calendar",
+          "gate": "Playtesters finish a full season and ask what lives in the next room"
+        },
+        {
+          "name": "Demo and Next Fest",
+          "deliverable": "Ground floor plus one rescue story; creator keys",
+          "gate": "7,000+ wishlists after Next Fest"
+        },
+        {
+          "name": "Steam launch",
+          "deliverable": "Steam 1.0 at $17.99, Deck verified, charity tie-in with a marine rescue",
+          "gate": "20,000+ wishlists before launch, then 92%+ positive"
+        },
+        {
+          "name": "Region packs and ports",
+          "deliverable": "Reef and fjord packs, Switch and tablet versions",
+          "gate": "25,000+ Steam units"
         }
       ]
     }
