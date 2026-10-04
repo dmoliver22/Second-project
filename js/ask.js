@@ -98,7 +98,7 @@
       const sp = r.c.spec || {};
       return `- [${r.c.id}] ${r.c.name} (${r.c.track === "side" ? "side bet" : "main suggestion"}) — ${r.score.toFixed(1)} — ${r.c.hook} ` +
         `Genre: ${sp.genre}; players: ${sp.players}; setting: ${sp.setting}; team: ${sp.team}; ${r.c.devMonths} months; budget ${r.c.budgetUSD.label}; price ${r.c.pricing.base}. ` +
-        (r.c.look ? `Look: ${r.c.look.vibe} Palette: ${r.c.look.palette.map((x) => x.name + " " + x.hex).join(", ")}. ` : "") +
+        (r.c.look ? `Look: ${r.c.look.vibe} On screen: ${r.c.look.layout || ""} Palette: ${r.c.look.palette.map((x) => x.name + " " + x.hex).join(", ")}. ` : "") +
         "Factors: " + Object.entries(r.c.scores).map(([k, v]) => k + " " + v.score).join(", ") + ". Drivers: " +
         (r.c.drivers || []).map((d) => `${d.signal} [${d.strength}]`).join("; ");
     }).join("\n"));

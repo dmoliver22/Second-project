@@ -519,15 +519,9 @@ table.compare tr.score-row td { font-size: 1rem; }
 .chip.wrap { white-space: normal; align-self: flex-start; }
 
 /* ---------- look & feel ---------- */
-.phone { width: 100%; max-width: 230px; aspect-ratio: 9 / 16; border-radius: 22px; padding: 6px; background: var(--ink); box-shadow: var(--shadow); flex: none; }
-.phone svg { display: block; width: 100%; height: 100%; border-radius: 16px; }
-.phone.small { max-width: 72px; border-radius: 12px; padding: 3px; }
-.phone.small svg { border-radius: 9px; }
-.sugg-rank .phone.small { margin-top: 8px; }
-.compare .phone.small { max-width: 64px; }
-.look-top { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 22px; align-items: start; }
-.look-top.no-sketch { grid-template-columns: minmax(0, 1fr); }
-@media (max-width: 760px) { .look-top { grid-template-columns: minmax(0, 1fr); } .look-top .phone { max-width: 200px; } }
+.look-top { display: block; }
+.look-layout { background: var(--surface-2); border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; max-width: 80ch; }
+.look-layout p { font-size: .92rem; color: var(--ink-2); }
 .look-vibe { font-size: var(--step-1); line-height: 1.5; color: var(--ink); max-width: 62ch; }
 .swatches { display: flex; flex-wrap: wrap; gap: 8px; }
 .swatch { display: flex; align-items: center; gap: 8px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 5px 10px 5px 5px; }

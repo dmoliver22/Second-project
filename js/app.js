@@ -258,7 +258,6 @@
     return h("div", { class: "swatches" + (small ? " small" : ""), role: "list", "aria-label": "Palette" }, (look.palette || []).map((c) =>
       h("div", { class: "swatch", role: "listitem", title: c.name + " " + c.hex }, h("i", { style: "background:" + c.hex }), small ? null : h("span", {}, h("b", { text: c.name }), h("code", { text: c.hex })))));
   }
-  function sketchOf(c, small) { return window.AtlasSketch && c.look ? window.AtlasSketch.sketch(c.id, c.look.palette, { small, label: "Mood sketch of " + c.name }) : null; }
   function artBrief(c) {
     const L = c.look;
     return [
@@ -275,7 +274,6 @@
   function lookPanel(c) {
     const L = c.look;
     if (!L) return null;
-    const sk = sketchOf(c);
     const brief = artBrief(c);
     const ta = h("textarea", { class: "brief", readonly: true, rows: "12", "aria-label": "Art brief" });
     ta.value = brief;
@@ -286,11 +284,11 @@
     } });
     const rows = [["Shapes", L.shapes], ["Characters", L.characters], ["Camera", L.camera], ["Lighting", L.lighting], ["Textures", L.textures], ["Interface", L.ui], ["Type", L.type], ["Motion", L.motion], ["Sound", L.sound]];
     return h("section", { class: "panel look" },
-      h("div", { class: "panel-head" }, h("h3", { text: "Look & feel" }), h("p", { text: sk ? "Mood sketch: composition and palette, not final art" : "Palette and art direction" })),
-      h("div", { class: "look-top" + (sk ? "" : " no-sketch") },
-        sk,
+      h("div", { class: "panel-head" }, h("h3", { text: "Look & feel" }), h("p", { text: "How the game looks, sounds and moves" })),
+      h("div", { class: "look-top" },
         h("div", { class: "section" },
           h("p", { class: "look-vibe", text: L.vibe }),
+          L.layout ? h("div", { class: "look-layout" }, h("div", { class: "eyebrow", text: "On screen" }), h("p", { text: L.layout })) : null,
           swatches(L),
           h("div", { class: "chips" }, h("span", { class: "muted", style: "font-size:.8rem", text: "Looks like (in spirit):" }), L.references.map((x) => h("span", { class: "chip", text: x }))),
           h("div", { class: "grid grid-2", style: "gap:10px" },
@@ -307,7 +305,7 @@
     const caution = (c.drivers || []).find((d) => d.strength === "caution");
     return h("article", { class: "sugg" + (i === 0 ? " top" : "") },
       h("div", { class: "sugg-rank" }, h("span", { class: "eyebrow", text: i === 0 ? "#1 · Top pick" : "#" + (i + 1) }),
-        h("span", { class: "sugg-score", text: r.score.toFixed(1) }), miniBar(r.score), sketchOf(c, true)),
+        h("span", { class: "sugg-score", text: r.score.toFixed(1) }), miniBar(r.score)),
       h("div", { class: "sugg-main" },
         h("h3", { text: c.name }), h("p", { class: "ink-2", text: c.hook }),
         c.look ? h("div", { class: "look-line" }, swatches(c.look, true), h("span", { text: c.look.short })) : null,
@@ -331,7 +329,7 @@
           h("span", { class: "eyebrow", text: "#" + (i + 1) }), h("span", { class: "compare-name", text: r.c.name }), h("span", { class: "muted", style: "font-size:.75rem", text: "See plan ↓" })))))),
       h("tbody", {},
         row("Hook", main.map((r) => h("td", { class: "ink-2", text: r.c.hook }))),
-        row("Look", main.map((r) => h("td", {}, h("div", { class: "section", style: "gap:6px" }, sketchOf(r.c, true), r.c.look ? swatches(r.c.look, true) : null, r.c.look ? h("span", { class: "ink-2", style: "font-size:.82rem", text: r.c.look.short }) : null)))),
+        row("Look", main.map((r) => h("td", {}, h("div", { class: "section", style: "gap:6px" }, r.c.look ? swatches(r.c.look, true) : null, r.c.look ? h("span", { class: "ink-2", style: "font-size:.82rem", text: r.c.look.short }) : null)))),
         row("Overall score", main.map((r) => h("td", { class: r.score === topScore ? "best" : "" }, h("span", { class: "score-cell" }, miniBar(r.score), h("b", { text: r.score.toFixed(1) })))), "score-row"),
         S.factors.map((f) => row(f.label, main.map((r) => {
           const v = r.c.scores[f.key].score;

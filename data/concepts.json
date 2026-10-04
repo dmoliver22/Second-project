@@ -470,7 +470,8 @@
           "Toothy 'ugly-cute' faces that read as Labubu",
           "Casino-style flashing and coin showers",
           "Neon colors or glossy plastic textures"
-        ]
+        ],
+        "layout": "Portrait phone screen. Top: a slim rounded banner showing this month's series as seven little circles (six regular, one gold for the secret), filled in as you collect them. Middle two-thirds: the shelf itself, three wooden planks with five treats per row sitting side by side like plush toys in a shop window. Bottom third: the shop counter in warm wood, with today's paper box in the center and the shop cat asleep beside it. When you tap the box, everything else dims slightly, the box wobbles, the lid flips back and the treat pops up in the middle of the screen before hopping onto the shelf."
       }
     },
     {
@@ -854,7 +855,8 @@
           "The generic supermarket-tycoon look",
           "Harsh pop-up ads and badges",
           "Overly detailed characters that blur on a phone"
-        ]
+        ],
+        "layout": "Portrait phone screen. Top: a string of paper lanterns across the sky, lit or unlit to show progress, and a coin jar counter. Middle: the street in 3/4 view, your cart in the center with a queue of chubby customers to its right and the next shop plots waiting to be unlocked further along. Bottom: a chalkboard menu of drinks and a row of wooden sign buttons for upgrades and helpers. In focus mode the whole thing collapses into a slim horizontal strip along the bottom edge of the screen while a timer counts down."
       }
     },
     {
@@ -1238,7 +1240,8 @@
           "Realistic furniture-catalog 3D",
           "A cluttered interface over the room",
           "Tiny props that vanish on a phone"
-        ]
+        ],
+        "layout": "Portrait phone screen. Top: today's theme on a sticky note ('Rainy reading nook') and a camera button. Middle: the tiny isometric room floating on a soft dusk background, two walls and a floor, large enough to place things precisely. Bottom: a pull-up drawer of props sorted into tabs (furniture, lights, plants, little things), like flicking through a mail-order catalog. A 'Gallery' button switches to a scrolling wall of other players' rooms as polaroids, each with a heart."
       }
     },
     {
@@ -1649,7 +1652,8 @@
           "Realistic fish or gore",
           "Open chat bubbles",
           "Neon or harsh outlines"
-        ]
+        ],
+        "layout": "Portrait phone screen. Top: the sky (golden hour to night) with the pond's name and how many friends are there. Middle: the whole round pond seen from above at an angle, a wooden dock jutting in from one side, lily pads scattered around, and up to eight critters sitting along the edge with lines in the water. Bottom: a big emote wheel button, a cast button and your catch book. A rare catch pops up as a trading card in the center of the screen while everyone's critters react around the pond."
       }
     },
     {
@@ -2033,7 +2037,8 @@
           "Fruit (it reads as a Suika clone)",
           "Harsh red warnings",
           "Generic clip-art flowers"
-        ]
+        ],
+        "layout": "Portrait phone screen. Top: the window frame and sky, with a seed packet showing your score in the top-left and a garden tag showing the next flower in the top-right. Middle to bottom: a tall terracotta pot drawn in cross-section, its rim about a third of the way down, with a faint dashed line just above it marking 'too full'. Your finger slides the next bud left and right along the top; lifting drops it. Flowers pile up inside the pot from the bottom, and the biggest blooms stick out over the rim when you're close to the end."
       }
     },
     {
@@ -2442,7 +2447,8 @@
           "Clutter too small to read on a phone",
           "Realistic photo textures",
           "Busy UI over the scene"
-        ]
+        ],
+        "layout": "Portrait phone screen. Top: today's date, the scene name ('The Rainy Desk') and a small move counter. Middle: the scene as a square board seen from directly above, filling most of the screen, with every object large enough to grab with a thumb and its 'home' shown as a faint outline. Bottom: a lightbulb hint button and a streak flame. When you finish, the board shrinks to the top and a receipt-style result card slides up from the bottom, ready to share."
       }
     },
     {
@@ -2957,7 +2963,8 @@
           "Grim survival tones",
           "Realistic water",
           "Dark storms as threats"
-        ]
+        ],
+        "layout": "Landscape on PC. Over-the-shoulder view of your character on the deck of the houseboat, with garden beds, the cabin and friends visible around you and open sea beyond. Bottom-left: a crate-style hotbar of tools and seeds. Top-right: a hand-drawn sea chart showing the next island. When you sail, the camera pulls back to show the whole boat crossing the water."
       }
     },
     {
@@ -3388,7 +3395,8 @@
           "Stereotyped or costume-like depictions",
           "Timers and red alarms",
           "Generic 'Asian' mash-ups"
-        ]
+        ],
+        "layout": "Landscape. A side view across the front of your stall: the counter runs along the bottom third with ingredients and bowls; behind it two cooks work at the wok and steamer; above and behind them, a softly blurred crowd and strings of lanterns. Paper order tickets hang along the top edge. Couch co-op splits nothing: both players share the one stall."
       }
     },
     {
@@ -3828,7 +3836,8 @@
           "Busy UI",
           "Over-saturated colors",
           "Cultural pastiche without consultants"
-        ]
+        ],
+        "layout": "Landscape on PC, portrait on tablet. A whole mountain seen from above at an angle, slowly rotatable, with tilt-shift blur at the edges so it looks like a model. Tools sit in a slim tray at the bottom edge (carve, plant, path); the mountain's goal is a small card in the top corner. Nearly the whole screen is landscape."
       }
     },
     {
@@ -4263,7 +4272,8 @@
           "Jump scares",
           "Gore or horror imagery",
           "Pitch-black scenes"
-        ]
+        ],
+        "layout": "Landscape. A 2D cutaway of the inn like a doll's house: kitchen, common room and guest rooms side by side, with the foggy village and the lighthouse visible through the windows and beyond. Ghosts drift in from the right edge at night. The guest ledger opens as a book over the scene."
       }
     },
     {
@@ -4560,7 +4570,8 @@
         "avoid": [
           "Pay-to-win shortcuts",
           "Cluttered HUD"
-        ]
+        ],
+        "layout": "Standard Roblox third-person view. A harbor of wooden piers, each holding a player's garden plot, with trading stalls along the boardwalk. The HUD shows seeds, coins and a rarity book."
       }
     },
     {
@@ -4957,7 +4968,8 @@
           "Small text",
           "Fast animations",
           "Low-contrast pastel-on-pastel"
-        ]
+        ],
+        "layout": "Portrait on tablet and phone, landscape on PC. The quilt grid fills most of the screen with big squares; the next three fabric squares wait in a basket at the bottom; a simple progress ribbon runs along the top. Nothing else on screen, and nothing moves on its own."
       }
     },
     {
@@ -5263,7 +5275,8 @@
         "avoid": [
           "Distracting motion",
           "Bright flashing notifications"
-        ]
+        ],
+        "layout": "A strip about 120 pixels tall along the bottom of your desktop, above the taskbar, showing a windowsill with three to five pots. Everything else on your screen stays visible and usable."
       }
     }
   ]
