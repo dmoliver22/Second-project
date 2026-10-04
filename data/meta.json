@@ -13,6 +13,10 @@
   "changelog": [
     {
       "date": "2026-10-04",
+      "note": "Saved ideas keep a full copy of the plan or Idea lab write-up as it was when you saved it, and say when the dashboard's version has changed or been removed since."
+    },
+    {
+      "date": "2026-10-04",
       "note": "Saved tab: save any game suggestion, Idea lab idea or chat answer, add your own ideas, and keep notes on each. On claude.ai they're stored with the dashboard on your account; the chat knows what you've saved."
     },
     {

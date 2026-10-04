@@ -608,3 +608,5 @@ textarea.brief { width: 100%; font-family: var(--font-data); font-size: .78rem; 
 .own-form { max-width: 640px; gap: 10px; }
 .own-form input[type="text"] { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line-strong); border-radius: 8px; padding: 8px 10px; }
 .copying .save-btn, .copying .saved-note-state { display: none !important; }
+.saved-copy { font-size: .8rem; color: var(--muted); }
+.saved-copy.changed { color: var(--warn-ink); }

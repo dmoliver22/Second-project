@@ -1004,14 +1004,14 @@
   function conceptDetail(c, score, rank, isMore) {
     const S = D.concepts.scoring;
     const factorBox = chartBox();
-    later(() => C.barH(factorBox, S.factors.map((f) => ({ label: f.label, value: c.scores[f.key].score, display: c.scores[f.key].score + "/10", sub: c.scores[f.key].why })), { max: 10 }));
+    later(() => C.barH(factorBox, S.factors.filter((f) => c.scores[f.key]).map((f) => ({ label: f.label, value: c.scores[f.key].score, display: c.scores[f.key].score + "/10", sub: c.scores[f.key].why })), { max: 10 }));
     const list = (arr) => h("ul", { class: "ink-2", style: "font-size:.92rem" }, (arr || []).map((x) => h("li", { text: x })));
     return h("div", { class: "section", style: "gap:20px" },
       h("div", { class: "hero-rec" },
         h("div", { class: "section" },
-          h("div", { class: "eyebrow", text: (rank ? "Suggestion #" + rank : isMore ? "More ideas" : "Side bet · " + (c.sideRole || "")) + " · " + c.niche }),
+          h("div", { class: "eyebrow", text: (rank ? "Suggestion #" + rank : typeof isMore === "string" ? isMore : isMore ? "More ideas" : "Side bet · " + (c.sideRole || "")) + " · " + c.niche }),
           h("h2", { text: c.name }), h("p", { class: "ink-2", style: "font-size:var(--step-1)", text: c.oneLiner }), h("p", { text: c.pitch }),
-          h("div", { class: "chips" }, saveBtn(conceptEntry(c)), askBtn("Pressure-test this", `Pressure-test ${c.name} for my studio: the biggest risks, what to validate first, and what you would change.`),
+          h("div", { class: "chips" }, isMore === "Saved copy" ? null : saveBtn(conceptEntry(c)), askBtn("Pressure-test this", `Pressure-test ${c.name} for my studio: the biggest risks, what to validate first, and what you would change.`),
             askBtn("Adapt it to my studio", `Adapt the ${c.name} plan to my studio's team, budget and skills. What changes in scope, team, timeline and money?`)),
           h("div", { class: "chips" }, (c.genreTags || []).map((t) => h("span", { class: "chip accent", text: t }))),
           h("dl", { class: "kv" }, h("dt", { text: "Audience" }), h("dd", { text: c.audience }), h("dt", { text: "Comparables" }), h("dd", { text: (c.comps || []).join(", ") }),
@@ -1184,12 +1184,14 @@
     }
     async function init() {
       fromLocal();
+      backfill();
       emit();
       if (!window.claude || typeof window.claude.use !== "function") return;
       let db = null;
       try { db = await window.claude.use("db"); } catch (e) { db = null; }
       if (!db) return;
       col = db.collection("saved");
+      backfilled = false;
       let first = true;
       col.onSnapshot((snap) => {
         const next = new Map(snap.docs.map((d) => [d.id, Object.assign({}, d.data(), { id: d.id })]));
@@ -1203,12 +1205,25 @@
           else store.set("saved", []);
         }
         items = next;
+        backfill();
         emit();
       }, () => { mode = "local"; col = null; fromLocal(); emit(); });
     }
+    // saves made before copies were kept get one now (the closest to what was saved)
+    let backfilled = false;
+    function backfill() {
+      if (backfilled || readOnly) return;
+      backfilled = true;
+      [...items.values()].filter((x) => (x.kind === "concept" || x.kind === "idea") && !x.snapshot).forEach((x) => {
+        const snap = snapshotFor(x);
+        if (!snap.snapshot) return;
+        if (mode === "db") write(x.id, () => col.doc(x.id).update(snap), "update");
+        else { items.set(x.id, Object.assign({}, x, snap)); toLocal(); }
+      });
+    }
     function add(entry) {
       if (readOnly) return;
-      const body = Object.assign({ note: "" }, entry, { savedAt: new Date().toISOString() });
+      const body = Object.assign({ note: "" }, entry, { savedAt: new Date().toISOString() }, snapshotFor(entry));
       delete body.id;
       lastError = "";
       if (mode === "db") return write(entry.id, () => col.doc(entry.id).set(body), "set");
@@ -1239,6 +1254,30 @@
   })();
 
   const ICON_SAVE = "M6 3h12v18l-6-4.5L6 21z";
+  // the live record behind a saved concept or idea (null if it has since been removed)
+  function liveFor(item) {
+    if (!D) return null;
+    if (item.kind === "concept") return D.concepts.concepts.find((c) => c.id === item.ref) || null;
+    if (item.kind === "idea") return (D.ideation ? D.ideation.ideas.find((x) => x.id === item.ref) : null) || null;
+    return null;
+  }
+  // a full copy of the plan or idea as it is right now, kept with the save
+  function snapshotFor(entry) {
+    const live = liveFor(entry);
+    return live ? { snapshot: JSON.parse(JSON.stringify(live)), snapshotAt: new Date().toISOString(), dataAsOf: D.meta.asOf } : {};
+  }
+  function stableStr(v) {
+    if (Array.isArray(v)) return "[" + v.map(stableStr).join(",") + "]";
+    if (v && typeof v === "object") return "{" + Object.keys(v).sort().map((k) => JSON.stringify(k) + ":" + stableStr(v[k])).join(",") + "}";
+    return JSON.stringify(v);
+  }
+  // "same" | "updated" | "removed" | "nocopy"
+  function savedState(item) {
+    const live = liveFor(item);
+    if (!item.snapshot) return live ? "nocopy" : "removed";
+    if (!live) return "removed";
+    return stableStr(live) === stableStr(item.snapshot) ? "same" : "updated";
+  }
   const conceptEntry = (c) => ({ id: "concept:" + c.id, kind: "concept", ref: c.id, title: c.name, hook: c.hook || c.oneLiner || "" });
   const ideaEntry = (x) => ({ id: "idea:" + x.id, kind: "idea", ref: x.id, title: x.title, hook: x.finalHook || x.hook || "" });
   function hashText(t) { let a = 5381; for (let i = 0; i < t.length; i++) a = ((a << 5) + a + t.charCodeAt(i)) | 0; return (a >>> 0).toString(36); }
@@ -1269,6 +1308,8 @@
   function renderSaved() {
     const KINDS = [["", "All"], ["concept", "Game suggestions"], ["idea", "Idea lab"], ["chat", "Chat answers"], ["own", "Your own"]];
     let kind = store.get("savedKind", "");
+    let openId = null;
+    const view = h("div", { class: "view" });
     const status = h("div", {});
     const filters = h("div", { class: "chips", role: "group", "aria-label": "Filter saved ideas" });
     const listBox = h("div", { class: "section" });
@@ -1288,11 +1329,20 @@
       ta.addEventListener("blur", commit);
       return h("div", { class: "saved-note-wrap" }, ta, state);
     }
+    function copyNote(item) {
+      const st = savedState(item);
+      const when = item.snapshotAt ? fmtDate(item.snapshotAt) : "";
+      const what = item.kind === "concept" ? "plan" : "write-up";
+      if (st === "same") return h("p", { class: "saved-copy", text: "Your saved copy of the " + what + " (" + when + ") matches the dashboard." });
+      if (st === "updated") return h("p", { class: "saved-copy changed", text: "The dashboard's " + what + " has been updated since you saved it. Your copy from " + when + " is kept." });
+      if (st === "removed") return h("p", { class: "saved-copy changed", text: item.snapshot ? "Removed from the dashboard since. Your copy from " + when + " is kept." : "Removed from the dashboard since, and no copy was kept." });
+      return null;
+    }
     function card(item) {
       const removeBtn = Saved.readOnly() ? null : h("button", { type: "button", class: "btn", text: "Remove", onclick: () => Saved.remove(item.id) });
       const when = h("span", { class: "muted", style: "font-size:.78rem", text: item.savedAt ? "Saved " + fmtDate(item.savedAt) : "" });
       if (item.kind === "concept") {
-        const c = conceptById(item.ref);
+        const c = item.snapshot || conceptById(item.ref);
         const rank = ranked.findIndex((r) => r.c.id === item.ref);
         const score = rank >= 0 ? ranked[rank].score : null;
         const sp = c ? c.spec || {} : {};
@@ -1302,18 +1352,22 @@
           h("p", { class: "ink-2", text: c ? c.hook : item.hook }),
           c && c.look ? h("div", { class: "look-line" }, swatches(c.look, true), h("span", { text: c.look.short })) : null,
           c ? h("div", { class: "chips" }, [sp.genre, sp.players, sp.price].filter(Boolean).map((t) => h("span", { class: "chip", text: t }))) : null,
+          copyNote(item),
           noteBox(item),
-          h("div", { class: "chips saved-actions" }, c ? h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(c.id) }) : null, removeBtn, when));
+          h("div", { class: "chips saved-actions" }, c ? h("button", { type: "button", class: "btn primary", text: item.snapshot ? "Open your saved plan" : "See the plan", onclick: () => (item.snapshot ? openSaved(item) : goConcept(c.id)) }) : null,
+            savedState(item) === "updated" ? h("button", { type: "button", class: "btn", text: "See the latest plan", onclick: () => goConcept(item.ref) }) : null, removeBtn, when));
       }
       if (item.kind === "idea") {
-        const x = ideaById(item.ref);
+        const x = item.snapshot || ideaById(item.ref);
         return h("article", { class: "card saved-card" },
           h("div", { class: "card-top" }, h("div", {}, h("div", { class: "eyebrow", text: "Idea lab" + (x ? " · " + x.stageLabel : "") }), h("h3", { text: x ? x.title : item.title })),
             x ? h("span", { class: "chip" + (x.stage === "finalist" ? " good" : ""), text: x.total + " / 100" }) : null),
           h("p", { class: "ink-2", text: x ? x.finalHook || x.hook : item.hook }),
           x && x.oneLiner ? h("p", { style: "font-size:.9rem", text: x.oneLiner }) : null,
+          copyNote(item),
           noteBox(item),
-          h("div", { class: "chips saved-actions" }, x ? h("button", { type: "button", class: "btn primary", text: "Scores and critiques", onclick: () => openIdea(x) }) : null,
+          h("div", { class: "chips saved-actions" }, x ? h("button", { type: "button", class: "btn primary", text: item.snapshot ? "Your saved write-up" : "Scores and critiques", onclick: () => openIdea(x) }) : null,
+            savedState(item) === "updated" ? h("button", { type: "button", class: "btn", text: "See the latest", onclick: () => openIdea(ideaById(item.ref)) }) : null,
             x && x.conceptId && conceptById(x.conceptId) ? h("button", { type: "button", class: "btn", text: "See the plan", onclick: () => goConcept(x.conceptId) }) : null, removeBtn, when));
       }
       const body = item.kind === "chat" && window.AtlasAsk && window.AtlasAsk.md ? h("div", { class: "md" }, window.AtlasAsk.md(item.text || "")) : h("p", { class: "ink-2", style: "white-space:pre-wrap", text: item.text || "" });
@@ -1341,10 +1395,36 @@
       return form;
     }
 
+    function openSaved(item) { openId = item.id; paint(); window.scrollTo(0, 0); }
+    function savedPlan(item) {
+      const c = item.snapshot;
+      const st = savedState(item);
+      let body;
+      try { body = conceptDetail(c, scoreConcept(c, weights()), null, "Saved copy"); }
+      catch (e) { console.error(e); body = h("div", { class: "error-box", text: "Part of this saved copy couldn't be displayed: " + e.message }); }
+      const banner = h("div", { class: "callout" + (st === "same" ? "" : " warn") },
+        h("b", { text: "Your saved copy, from " + fmtDate(item.snapshotAt) + " (dashboard data as of " + (item.dataAsOf || "?") + ")" }),
+        h("p", { class: "ink-2", text: st === "same" ? "It matches the plan on What to build today." : st === "updated" ? "The plan on What to build has changed since you saved it. This is the version you saved; the latest is one click away." : "This plan has been removed from the dashboard. Your saved copy is below." }),
+        h("div", { class: "chips" }, h("button", { type: "button", class: "btn", text: "← Back to Saved", onclick: () => { openId = null; paint(); window.scrollTo(0, 0); } }),
+          st === "updated" ? h("button", { type: "button", class: "btn primary", text: "See the latest plan", onclick: () => goConcept(item.ref) }) : null));
+      return [viewHead("Saved", c.name, c.hook || c.oneLiner), banner, item.note ? h("div", { class: "takeaway" }, h("div", { class: "eyebrow", text: "Your note" }), h("p", { style: "white-space:pre-wrap", text: item.note })) : null, body];
+    }
+    function paint() {
+      const item = openId ? Saved.get(openId) : null;
+      if (item && item.snapshot) {
+        view.replaceChildren(...savedPlan(item).filter(Boolean));
+        afterMount.splice(0).forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });
+        return;
+      }
+      openId = null;
+      view.replaceChildren(...[viewHead("Saved", "Your saved ideas", "Game ideas you've kept, with your own notes and a copy of each plan as it was when you saved it. Save from any suggestion, Idea lab idea or chat answer."),
+        status, filters, listBox, Saved.readOnly() ? null : addForm()].filter(Boolean));
+    }
+
     let shownIds = "";
     function draw(force) {
       const all = Saved.list();
-      const ids = all.map((x) => x.id).join("|") + "#" + kind + "#" + Saved.readOnly();
+      const ids = all.map((x) => x.id + (x.snapshot ? "+" : "")).join("|") + "#" + kind + "#" + Saved.readOnly();
       status.replaceChildren(h("div", { class: "section", style: "gap:8px" },
         h("p", { class: "panel-note", text: Saved.synced() ? "Saved to this dashboard on your claude.ai account, so they're here on any device where you open it." : "Saved in this browser only. Open the dashboard on claude.ai to keep saved ideas across devices." }),
         Saved.error() ? h("div", { class: "callout warn" }, h("p", { text: Saved.error() })) : null));
@@ -1363,11 +1443,13 @@
         all.length >= 2 ? askBtn("Which of my saved ideas should I build first?", "Here are the ideas I've saved: " + all.map((x) => x.title + (x.note ? " (my note: " + x.note + ")" : "")).join("; ") + ". Compare them for my studio and tell me which to build first, which to combine, and which to drop, and why.") : null].filter(Boolean));
     }
     draw(true);
-    const off = Saved.on(() => { if (!document.body.contains(listBox)) { off(); return; } draw(false); });
-    return h("div", { class: "view" },
-      viewHead("Saved", "Your saved ideas", "Game ideas you've kept, with your own notes. Save from any suggestion, Idea lab idea or chat answer."),
-      status, filters, listBox,
-      Saved.readOnly() ? null : addForm());
+    paint();
+    const off = Saved.on(() => {
+      if (!document.body.contains(view)) { off(); return; }
+      if (openId) { if (!Saved.has(openId)) { openId = null; paint(); } return; }
+      draw(false);
+    });
+    return view;
   }
 
   // ---------- copy buttons on every box ----------
