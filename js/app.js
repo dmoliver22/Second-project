@@ -93,7 +93,7 @@
   const FILES = {
     meta: "data/meta.json", market: "data/market.json", games: "data/games.json", niches: "data/niches.json",
     playbook: "data/playbook.json", insights: "data/insights.json", concepts: "data/concepts.json", live: "data/live/steam.json",
-    gotomarket: "data/gotomarket.json", verification: "data/verification.json", culture: "data/culture.json",
+    gotomarket: "data/gotomarket.json", verification: "data/verification.json", culture: "data/culture.json", ideation: "data/ideation.json",
   };
   let D = null;
 
@@ -106,7 +106,7 @@
         if (!r.ok) throw new Error(r.status);
         out[k] = await r.json();
       } catch (e) {
-        if (!["live", "verification"].includes(k)) throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
+        if (!["live", "verification", "ideation"].includes(k)) throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
         out[k] = null;
       }
     }));
@@ -162,6 +162,7 @@
     concepts: { label: "What to build", icon: "M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z", render: renderConcepts },
     launch: { label: "Launch & grow", icon: "M5 19l4-4M14 4l6 6-8 8-6-6zM14 4l-2-2M20 10l2 2M3 21l2-2", render: renderLaunch },
     spread: { label: "What spreads", icon: "M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4", render: renderSpread },
+    ideas: { label: "Idea lab", icon: "M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0012 3z", render: renderIdeas },
     culture: { label: "Culture signals", icon: "M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20", render: renderCulture },
     outliers: { label: "Outliers", icon: "M12 3v4M12 17v4M3 12h4M17 12h4M12 12h.01M7 7l2 2M15 15l2 2M17 7l-2 2M9 15l-2 2", render: renderOutliers },
     gaps: { label: "Market gaps", icon: "M12 3v18M3 12h18M7 7h.01M17 17h.01", render: renderGaps },
@@ -516,6 +517,60 @@
           { label: "Results", get: (r) => r.results }, { label: "Money", cls: "ink-2", get: (r) => r.monetization }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }],
           G.cozyMobileWeb.map((x) => Object.assign({ __click: () => openPanel(x.platform, x.name, [["Genre", x.genre], ["Results", x.results], ["How it makes money", x.monetization], ["Lesson", x.lesson]], x.sources, confOf(x.confidence)) }, x))),
         G.mobileBenchmarks.length ? panel("Mobile benchmarks", null, tableOf([{ label: "Metric", get: (r) => r.metric }, { label: "Value", get: (r) => r.value }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }], G.mobileBenchmarks)) : null),
+    );
+  }
+
+  function renderIdeas() {
+    const X = D.ideation;
+    if (!X) return h("div", { class: "error-box", text: "Ideation data is missing (data/ideation.json)." });
+    const crit = ["originality", "clarity", "clip", "spread", "buildable", "demand", "money"];
+    const critLabel = { originality: "Originality", clarity: "5-second clarity", clip: "Clip appeal", spread: "Built-in spread", buildable: "Solo buildable", demand: "Demand", money: "Money" };
+    const lenses = uniq(X.ideas.map((x) => x.lens));
+    let lens = store.get("ideaLens", ""), stage = store.get("ideaStage", "");
+    const stages = [["", "All"], ["finalist", "Finalists"], ["critiqued", "Critiqued"], ["cut", "Cut at scoring"], ["duplicate", "Merged duplicates"]];
+    const bar = h("div", { class: "chips" });
+    const table = h("div", {});
+    const openIdea = (x) => {
+      const blocks = [["Hook", x.hook], ["In one line", x.oneLiner], ["Core loop", x.coreLoop], ["How it spreads", x.howItSpreads], ["How it makes money", x.monetization], ["What's new", x.whatsNew], ["Closest existing", x.closestExisting], ["Build notes", x.buildNotes],
+        ["Scores (average of two scorers, 1–5)", crit.map((c) => critLabel[c] + ": " + x.avg[c]).join(" · ") + " · Total " + x.total + "/100"],
+        ["Scorer A", x.verdictA], ["Scorer B", x.verdictB]];
+      if (x.market) blocks.push(["Player & market critic: " + x.market.verdict, [x.market.fatalFlaw && "Biggest risk: " + x.market.fatalFlaw, "Return play: " + x.market.returnPlay, "Best clip opens on: " + x.market.firstFrame, "Competitors: " + x.market.competitors, "Money: " + x.market.moneyPath, ...(x.market.fixes || []).map((f) => "Fix: " + f)].filter(Boolean)]);
+      if (x.build) blocks.push(["Build & distribution critic: " + x.build.verdict, ["Hardest risk: " + x.build.hardestRisk, "Server: " + x.build.needsServer, "Art load: " + x.build.artLoad, "Phone browser issues: " + x.build.mobileWebIssues, "Privacy & safety: " + x.build.privacySafety, "Smallest first version: " + x.build.stage1MVP, "Portals and in-app platforms: " + x.build.portalFit, ...(x.build.fixes || []).map((f) => "Fix: " + f)]]);
+      openPanel(x.lensLabel + " · " + x.stageLabel, x.title, blocks, [], null);
+    };
+    const draw = () => {
+      bar.replaceChildren(
+        ...stages.map(([k, label]) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(stage === k), onclick: () => { stage = k; store.set("ideaStage", k); draw(); } },
+          h("span", { class: "p-name", text: label }), h("span", { class: "muted", style: "font-size:.75rem", text: String(X.ideas.filter((x) => !k || x.stage === k || (k === "critiqued" && x.stage === "finalist")).length) }))),
+        h("span", { class: "muted", style: "font-size:.8rem;margin-left:8px", text: "Lens:" }),
+        ...["", ...lenses].map((k) => h("button", { type: "button", class: "chip" + (lens === k ? " accent" : ""), style: "cursor:pointer;font:inherit;font-size:.74rem;font-weight:600", text: k ? X.ideas.find((x) => x.lens === k).lensLabel : "All lenses", onclick: () => { lens = k; store.set("ideaLens", k); draw(); } })));
+      const rows = X.ideas.filter((x) => (!lens || x.lens === lens) && (!stage || x.stage === stage || (stage === "critiqued" && x.stage === "finalist"))).sort((a, b) => b.total - a.total);
+      table.replaceChildren(tableOf([
+        { label: "Idea", get: (r) => h("div", {}, h("b", { text: r.title }), h("div", { class: "muted", style: "font-size:.8rem", text: r.hook })) },
+        { label: "Lens", get: (r) => r.lensLabel },
+        { label: "Score", num: true, get: (r) => h("span", { class: "score-cell" }, miniBar(r.total, 100), h("b", { text: r.total })) },
+        { label: "Origin.", num: true, get: (r) => r.avg.originality }, { label: "Clip", num: true, get: (r) => r.avg.clip }, { label: "Spread", num: true, get: (r) => r.avg.spread }, { label: "Build", num: true, get: (r) => r.avg.buildable }, { label: "Demand", num: true, get: (r) => r.avg.demand },
+        { label: "Outcome", get: (r) => h("span", { class: "chip" + (r.stage === "finalist" ? " good" : r.stage === "critiqued" ? " warn" : ""), text: r.stageLabel }) },
+      ], rows.map((x) => Object.assign({ __click: () => openIdea(x) }, x))));
+    };
+    draw();
+    const fin = X.ideas.filter((x) => x.stage === "finalist").sort((a, b) => (a.finalRank || 99) - (b.finalRank || 99));
+    const conceptName = (id) => (D.concepts.concepts.find((c) => c.id === id) || {}).name;
+    return h("div", { class: "view" },
+      viewHead("Idea lab", "How the game ideas were found", X.summary),
+      takeaway("ideas"),
+      h("div", { class: "kpis" }, X.funnel.map((f) => h("div", { class: "kpi" }, h("div", { class: "kpi-value", text: String(f.count) }), h("div", { class: "kpi-label", text: f.label })))),
+      section("How the run worked", null, h("ol", { class: "loop-steps" }, X.method.map((m, i) => h("li", { class: "card" }, h("div", { class: "eyebrow", text: "Step " + (i + 1) }), h("h3", { text: m.step }), h("p", { class: "ink-2", text: m.detail }))))),
+      fin.length ? section("What survived", "The ideas that made it through scoring and both critics, with the fixes applied. Full plans are on What to build.",
+        h("div", { class: "grid grid-2" }, fin.map((x) => h("article", { class: "card" },
+          h("div", { class: "card-top" }, h("h3", { text: x.title }), h("span", { class: "chip good", text: "Score " + x.total })),
+          h("p", { class: "ink-2", text: x.finalHook || x.hook }),
+          x.whySurvived ? h("p", { style: "font-size:.88rem" }, h("b", { text: "Why it survived: " }), x.whySurvived) : null,
+          x.mainFix ? h("p", { style: "font-size:.88rem" }, h("b", { text: "What the critics changed: " }), x.mainFix) : null,
+          h("div", { class: "chips" }, x.conceptId && conceptName(x.conceptId) ? h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(x.conceptId) }) : null,
+            h("button", { type: "button", class: "btn", text: "Scores and critiques", onclick: () => openIdea(x) })))))) : null,
+      X.cutLessons && X.cutLessons.length ? section("Why most ideas were cut", null, h("ul", { class: "list-plain" }, X.cutLessons.map((t) => h("li", { class: "ink-2", text: t })))) : null,
+      section("All " + X.ideas.length + " ideas", "Click any idea for its full write-up, both scorers' grades and, for the top 12, both critiques.", bar, table),
     );
   }
 
