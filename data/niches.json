@@ -121,7 +121,7 @@
       "supply": 7,
       "demand": 6,
       "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] Steam Page Analyzer lists puzzle games among the genres the Cozy tag overlaps with; no puzzle-only count verified this session.",
-      "demandEvidence": "AARP: puzzle/logic is the #1 genre for US gamers 50+ (73% play), card/tile 69%, word 58%; 52.4M US gamers aged 50+. But >80% of them play on mobile and 30% only on smartphones, so premium PC puzzle demand is narrower.",
+      "demandEvidence": "AARP: 52.4M US gamers aged 50+ (45% of that age group). Puzzle, card and word games are their top genres (the often-quoted '73% play puzzle games' could not be verified). >80% of them play on mobile and 30% only on smartphones, so premium PC puzzle demand is narrower.",
       "exampleHits": [
         "Projected Dreams (recommended in non-farming cozy lists)"
       ],
@@ -306,7 +306,7 @@
       "supply": 5,
       "demand": 7,
       "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified count; fishing is commonly a sub-feature in farming/life sims.",
-      "demandEvidence": "Webfishing (Oct 2024): ~24k peak CCU, 98% positive; one estimate ~1.3M copies / ~$5.6M gross (estimates vary widely). Japanese press covered it.",
+      "demandEvidence": "Webfishing (Oct 2024): ~24k peak CCU, 98% positive; tracker estimates range from ~1.0M to ~2.1M copies (no official figure). Japanese press covered it.",
       "exampleHits": [
         "Webfishing",
         "Dredge"
@@ -375,7 +375,7 @@
       "supply": 3,
       "demand": 7,
       "supplyEvidence": "[QUALITATIVE ESTIMATE - no session-verified count for this exact sub-niche] No session-verified count of cozy games explicitly designed for 50+ players.",
-      "demandEvidence": "AARP: 45% of US adults 50+ game (52.4M people); 45% of them play daily (52% of women); average 12 hours/week; puzzle/logic 73%, card/tile 69%, word 58%. AARP has published dedicated research on older gamers' accessibility preferences.",
+      "demandEvidence": "AARP: 45% of US adults 50+ game (52.4M people); 45% of them play daily (52% of women); average 12 hours/week; puzzle, card and word games are their top genres (exact shares unverified). AARP has published dedicated research on older gamers' accessibility preferences.",
       "exampleHits": [],
       "exampleMisses": [],
       "opportunityNote": "Large, under-targeted audience. Best fit: puzzle/tile/word-adjacent cozy loops, big readable UI, no time pressure, mobile/tablet + PC. Spend is low, so keep budgets lean.",

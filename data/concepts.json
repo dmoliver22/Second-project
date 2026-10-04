@@ -1,47 +1,1695 @@
 {
-  "intro": "Five game suggestions built from the gaps, trends and outliers in this atlas, ranked by the data. Each shows the signals that drive it, what the game is, and a plan to build, launch and run it. Two smaller side bets follow for audience-building and experiments.",
-  "caveat": "No dataset can guarantee a hit. Most Steam games earn very little, and even acclaimed cozy games have failed commercially (Wanderstop, Venba). These are the best-supported bets in this data. Each one comes with targets and kill criteria, so you learn early and cheaply whether it's working. Scores are research-based judgements; adjust the weights to fit your team.",
+  "intro": "Game suggestions built from the gaps, trends, outliers and go-to-market research in this atlas. They're ranked for your model by default: one person building with AI, games playable from a link, marketing on TikTok and YouTube. Switch the scoring to 'Small studio, Steam' to see the flagship-style ideas rise.",
+  "caveat": "No dataset can guarantee a hit, and most games, web or Steam, earn very little. Each suggestion is a bet backed by specific signals, with gates that tell you early whether it's working. The scores are research-based judgements, so treat close scores as ties.",
   "scoring": {
     "factors": [
       {
         "key": "demand",
         "label": "Player demand",
         "weight": 3,
-        "description": "How strongly players want this, from niche demand scores, comparable sales and player requests."
+        "description": "How strongly players want this, from niche demand, comparable hits and player requests."
       },
       {
         "key": "gap",
         "label": "Low competition",
-        "weight": 3,
-        "description": "How uncrowded the niche is (11 minus supply). Higher means fewer direct competitors."
+        "weight": 2,
+        "description": "How uncrowded the space is. Higher means fewer direct competitors."
       },
       {
-        "key": "scopeFit",
-        "label": "Fits a small team",
+        "key": "soloSpeed",
+        "label": "Fast to build solo",
         "weight": 3,
-        "description": "How realistic it is for a 3–6 person studio to ship it well within two years."
+        "description": "How quickly one person with AI coding tools can ship a good v1, keeping art human-directed."
+      },
+      {
+        "key": "instantPlay",
+        "label": "Plays from a link",
+        "weight": 3,
+        "description": "How well it works when a phone viewer taps a link: instant start in the browser, touch controls, no install."
       },
       {
         "key": "monetization",
         "label": "Revenue potential",
         "weight": 2,
-        "description": "Price point, DLC and expansion headroom, and audience willingness to pay."
+        "description": "Ads, purchases, a paid expanded version, ports."
       },
       {
         "key": "marketability",
-        "label": "Easy to market",
-        "weight": 2,
-        "description": "Whether the hook reads in one capsule image or a five-second clip, and appeals to streamers."
+        "label": "Clip appeal",
+        "weight": 3,
+        "description": "Whether a 5–15 second clip sells it on TikTok and Shorts, and whether players make their own clips."
       },
       {
         "key": "momentum",
         "label": "Trend momentum",
-        "weight": 2,
+        "weight": 1,
         "description": "Whether the underlying trends are rising, peaking or declining."
+      },
+      {
+        "key": "scopeFit",
+        "label": "Fits a small team",
+        "weight": 0,
+        "description": "How realistic it is for a 3–6 person studio to ship within two years (used by the studio preset)."
+      }
+    ],
+    "presets": [
+      {
+        "id": "solo-web",
+        "label": "Solo + AI, web-first",
+        "note": "Your model: speed, instant play and clip appeal weigh most.",
+        "weights": {
+          "demand": 3,
+          "gap": 2,
+          "soloSpeed": 3,
+          "instantPlay": 3,
+          "monetization": 2,
+          "marketability": 3,
+          "momentum": 1,
+          "scopeFit": 0
+        }
+      },
+      {
+        "id": "studio-steam",
+        "label": "Small studio, Steam",
+        "note": "A funded 3–6 person team launching premium games on Steam.",
+        "weights": {
+          "demand": 3,
+          "gap": 3,
+          "soloSpeed": 0,
+          "instantPlay": 0,
+          "monetization": 2,
+          "marketability": 2,
+          "momentum": 2,
+          "scopeFit": 3
+        }
       }
     ]
   },
   "concepts": [
+    {
+      "id": "tea-cart",
+      "name": "Tea Cart",
+      "track": "main",
+      "niche": "Idle shop management · portal-native",
+      "hook": "Start with one tea cart. Brew, serve, hire helpers, and grow it into a little tea street.",
+      "oneLiner": "A walk-and-serve idle shop game: brew tea, serve cute customers, hire helpers and expand from a cart to a whole street.",
+      "pitch": "On Poki, the Cozy category is led by idle shop games like Monkey Mart and My Perfect Hotel, and idle/clicker mobile revenue grew 40% in H1 2025. Good Pizza, Great Pizza reached 300M+ downloads with a 12-person team, earning about 60% from ads and 40% from purchases. Tea Cart is a portal-native idle shop with a warm identity: tea from around the world, regular customers with small stories, and a street that grows as you play. On Steam, shop sims are flooding (the Shop Keeper tag is up 634%), but on the web this is the genre players are already looking for.",
+      "genreTags": [
+        "Idle tycoon",
+        "Shop management",
+        "Mobile web",
+        "Portal-native"
+      ],
+      "spec": {
+        "genre": "Idle walk-and-serve shop",
+        "players": "1",
+        "setting": "A tea cart that grows into a tea street",
+        "coreVerb": "Brew, serve, upgrade, expand",
+        "look": "Chunky 3D or 2.5D, bright and cute",
+        "team": "You + AI + a contract artist",
+        "audience": "Poki/CrazyGames idle-tycoon players",
+        "differentiator": "A cozy theme with recurring regulars in a genre of generic marts",
+        "price": "Free (ads + purchases)"
+      },
+      "audience": "Casual portal and mobile players who love steady upgrade loops; broad age range.",
+      "comps": [
+        "Monkey Mart",
+        "My Perfect Hotel",
+        "Good Pizza, Great Pizza",
+        "Cat Snack Bar"
+      ],
+      "sessionLength": "5–20 minutes, many times",
+      "artDirection": "Chunky, bright and cute, readable on small screens; a cast of regular customers worth recognizing.",
+      "drivers": [
+        {
+          "signal": "Idle shops lead Poki's Cozy category",
+          "detail": "Monkey Mart and My Perfect Hotel top the Cozy list.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "The model pays on mobile and web",
+          "detail": "Good Pizza, Great Pizza: 300M+ downloads, 12 people, ~60% ads / 40% purchases; idle/clicker revenue +40% H1 2025.",
+          "strength": "strong",
+          "ref": {
+            "game": "good-pizza-great-pizza"
+          }
+        },
+        {
+          "signal": "Fast to build",
+          "detail": "Well-understood upgrade loops; AI handles the systems, art carries the identity.",
+          "strength": "medium",
+          "ref": {
+            "link": "#launch"
+          }
+        },
+        {
+          "signal": "Purchases per player are small",
+          "detail": "Cat Snack Bar earns ~$0.20 per install from purchases; ads carry these games.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Weak clip appeal and crowded",
+          "detail": "Upgrade loops don't make great TikToks, and clones are everywhere. Growth leans on portal traffic.",
+          "strength": "caution",
+          "ref": {
+            "link": "#spread"
+          }
+        }
+      ],
+      "scores": {
+        "demand": {
+          "score": 8,
+          "why": "Idle shops top the cozy web charts and the genre is growing."
+        },
+        "gap": {
+          "score": 4,
+          "why": "Very crowded with tycoon clones."
+        },
+        "soloSpeed": {
+          "score": 8,
+          "why": "Proven systems; balancing the economy takes iteration."
+        },
+        "instantPlay": {
+          "score": 10,
+          "why": "Built for portals and phones."
+        },
+        "monetization": {
+          "score": 7,
+          "why": "Ads plus purchases; the most proven money model on portals."
+        },
+        "marketability": {
+          "score": 6,
+          "why": "Steady upgrades are less clip-able than a single satisfying action."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Idle/clicker revenue is growing."
+        },
+        "scopeFit": {
+          "score": 9,
+          "why": "Small team-friendly."
+        }
+      },
+      "whyNow": [
+        "The web's cozy traffic is already looking for idle shop games.",
+        "A warm theme and recurring regulars stand out among generic marts.",
+        "It earns from portal traffic even when your own clips are quiet."
+      ],
+      "pillars": [
+        "Always something to upgrade",
+        "Regulars you get to know",
+        "A street that grows with you",
+        "Never pay to win"
+      ],
+      "coreLoop": [
+        "Brew tea",
+        "Serve customers",
+        "Earn coins",
+        "Hire helpers",
+        "Expand the street",
+        "Unlock new teas"
+      ],
+      "features": {
+        "mvp": [
+          "One cart, 3 teas, customers and coins",
+          "Helper hiring",
+          "Phone and portal-ready"
+        ],
+        "launch": [
+          "Street expansion with 8 shops",
+          "20 regular customers with tiny stories",
+          "Offline earnings",
+          "Rewarded boosts"
+        ],
+        "postLaunch": [
+          "Seasonal teas and events",
+          "Mobile app version",
+          "Cosmetic decorations"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Poki or CrazyGames",
+          "Your own site"
+        ],
+        "later": [
+          "iOS/Android"
+        ]
+      },
+      "pricing": {
+        "base": "Free",
+        "model": "Rewarded and interstitial ads plus small purchases",
+        "details": [
+          "Rewarded boosts carry most revenue.",
+          "Optional ad-free purchase and cosmetic decorations."
+        ]
+      },
+      "monetizationPlan": [
+        "Rewarded boosts",
+        "Interstitials between days (sparingly)",
+        "Ad-free purchase",
+        "Cosmetic decorations"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), economy tuning",
+          "count": 1,
+          "note": "Balance the upgrade curve with data."
+        },
+        {
+          "role": "Contract artist",
+          "count": 1,
+          "note": "Cart, street, customers."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$4–12k",
+        "note": "Art for the street and customers; analytics tooling."
+      },
+      "devMonths": 2,
+      "milestones": [
+        {
+          "name": "Core loop",
+          "startMonth": 0,
+          "endMonth": 0.7,
+          "kind": "build",
+          "deliverable": "Cart, serving, upgrades",
+          "gate": "Testers play 10+ minutes"
+        },
+        {
+          "name": "Portal submission",
+          "startMonth": 0.7,
+          "endMonth": 2,
+          "kind": "build",
+          "deliverable": "Street expansion, regulars, SDK",
+          "gate": "Portal accepts it"
+        },
+        {
+          "name": "Launch",
+          "startMonth": 2,
+          "endMonth": 2.5,
+          "kind": "launch",
+          "deliverable": "Live on portal and site",
+          "gate": "Average session 8+ minutes"
+        },
+        {
+          "name": "Updates",
+          "startMonth": 2.5,
+          "endMonth": 8,
+          "kind": "live",
+          "deliverable": "Seasonal teas, events",
+          "gate": "Retention holding"
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Pre-launch",
+          "action": "Clips of the street growing (timelapse) and cute regulars."
+        },
+        {
+          "when": "Launch",
+          "action": "Portal featuring plus your own traffic (100% yours on Poki)."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Seasonal tea reveals; regular-customer story shorts."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Monthly",
+          "what": "A seasonal tea and event."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Economy tuning from analytics."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Average session",
+          "target": "8+ minutes",
+          "why": "Portals reward engagement."
+        },
+        {
+          "metric": "Day-1 retention",
+          "target": "25%+",
+          "why": "Healthy for casual idle."
+        },
+        {
+          "metric": "Portal ranking",
+          "target": "Top 100 in Cozy",
+          "why": "Drives free traffic."
+        }
+      ],
+      "killCriteria": [
+        "Session length under 5 minutes after tuning: the loop isn't sticky.",
+        "Portal rejects it twice: rethink the hook or quality bar."
+      ],
+      "risks": [
+        {
+          "risk": "Lost among clones",
+          "mitigation": "Distinct theme, regulars and art; quality over quantity."
+        },
+        {
+          "risk": "Low revenue per player",
+          "mitigation": "Scale through portal traffic; add the mobile version only if it ranks."
+        }
+      ],
+      "revenueAssumptions": "Assumes ~$5 per 1,000 plays from ads (≈1.5 ads per play at a ~$5 blended eCPM, 100% kept on your own traffic at Poki) plus ~$1 per 1,000 plays from purchases. Low-confidence estimates; measure your own.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 300000,
+          "volume": "300k plays",
+          "netUSD": 1800,
+          "note": "Lost in the portal crowd."
+        },
+        {
+          "scenario": "Base",
+          "units": 8000000,
+          "volume": "8M plays",
+          "netUSD": 48000,
+          "note": "A steady portal earner."
+        },
+        {
+          "scenario": "Strong",
+          "units": 60000000,
+          "volume": "60M plays + mobile",
+          "netUSD": 400000,
+          "note": "A top cozy portal game."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 500000000,
+          "volume": "500M plays + mobile",
+          "netUSD": 3500000,
+          "note": "Monkey Mart-level. Rare."
+        }
+      ]
+    },
+    {
+      "id": "cozy-corner",
+      "name": "Cozy Corner",
+      "track": "main",
+      "niche": "Decorating and dress-up · themed challenges",
+      "hook": "Decorate a tiny room to today's theme, then see how everyone else did it.",
+      "oneLiner": "A little decorating game: each day's theme ('rainy reading nook'), a tiny room, and a gallery of everyone's take.",
+      "pitch": "Dress-up and decorating lead cozy web charts: SnapStyle Dress Up was one of Poki's two named top performers of 2025, and Roblox's Dress to Impress passed 9.7B visits on 'style to a theme, then everyone votes'. Cozy Corner brings that loop to decorating: a daily theme, a tiny room, a few minutes to make it yours, and a gallery where you browse and heart other people's rooms. Every room is a screenshot made for TikTok ('rating your rainy-day nooks').",
+      "genreTags": [
+        "Decorating",
+        "Dress-up",
+        "Daily theme",
+        "Gallery",
+        "Mobile web"
+      ],
+      "spec": {
+        "genre": "Room decorating with daily themes",
+        "players": "1, with a shared gallery",
+        "setting": "Tiny rooms: nooks, cafés, treehouses",
+        "coreVerb": "Place, style and share a room",
+        "look": "Isometric, warm and detailed props",
+        "team": "You + AI + a contract artist",
+        "audience": "Dress-up, decorating and 'room tour' fans",
+        "differentiator": "A daily theme plus a gallery and votes, the Dress to Impress loop applied to rooms",
+        "price": "Free (web) · prop packs"
+      },
+      "audience": "Decorating and dress-up fans, often teens to 30s, who share rooms and outfits on TikTok and Pinterest.",
+      "comps": [
+        "SnapStyle Dress Up",
+        "Dress to Impress (Roblox)",
+        "Unpacking",
+        "Animal Crossing (decorating)"
+      ],
+      "sessionLength": "5–10 minutes a theme",
+      "artDirection": "Isometric rooms with richly detailed props and a strong palette. Props are the content and the purchases, so the art bar is high and must be human.",
+      "drivers": [
+        {
+          "signal": "Dress-up and decorating lead cozy web charts",
+          "detail": "SnapStyle Dress Up was one of Poki's two named top performers of 2025; decorating is core to Poki's Cozy category.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Theme + vote is a proven loop",
+          "detail": "Dress to Impress (Roblox): 9.7B visits and a ~1.5–1.7M concurrent peak.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Every room is content",
+          "detail": "Players post their rooms; 'rating your rooms' is a ready video format.",
+          "strength": "medium",
+          "ref": {
+            "link": "#launch"
+          }
+        },
+        {
+          "signal": "Decorating is a top cozy motivation",
+          "detail": "Customization and self-expression rank high among what cozy players want.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#trends"
+          }
+        },
+        {
+          "signal": "Lots of art, and galleries need moderation",
+          "detail": "Props are the product, so art cost is ongoing; a public gallery needs filtering.",
+          "strength": "caution",
+          "ref": {
+            "link": "#launch"
+          }
+        }
+      ],
+      "scores": {
+        "demand": {
+          "score": 8,
+          "why": "Dress-up/decorating top web charts; Dress to Impress shows huge demand for theme-and-vote."
+        },
+        "gap": {
+          "score": 5,
+          "why": "Dress-up is busy; room-decorating dailies with a gallery are rarer."
+        },
+        "soloSpeed": {
+          "score": 7,
+          "why": "The code is simple; the prop art is the work."
+        },
+        "instantPlay": {
+          "score": 10,
+          "why": "Drag-and-place on a phone; instant start."
+        },
+        "monetization": {
+          "score": 6,
+          "why": "Prop packs and rewarded ads; decorating players buy cosmetics."
+        },
+        "marketability": {
+          "score": 8,
+          "why": "Room reveals and 'rate my room' clips; players post their own."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Dress-up and decorating keep rising on web and Roblox."
+        },
+        "scopeFit": {
+          "score": 8,
+          "why": "Small team-friendly."
+        }
+      },
+      "whyNow": [
+        "Decorating and dress-up are where cozy web traffic is.",
+        "The daily theme and gallery give endless content without new mechanics.",
+        "Room screenshots are native to TikTok and Pinterest."
+      ],
+      "pillars": [
+        "A tiny room, a big personality",
+        "A new theme every day",
+        "Everyone's take is worth seeing",
+        "Props worth collecting"
+      ],
+      "coreLoop": [
+        "See today's theme",
+        "Decorate your corner",
+        "Snap a photo",
+        "Browse and heart other rooms",
+        "Unlock new props",
+        "Come back for tomorrow's theme"
+      ],
+      "features": {
+        "mvp": [
+          "One room, 60 props, snap-to-grid placement",
+          "Photo card export",
+          "Phone-first controls"
+        ],
+        "launch": [
+          "Daily themes and a public gallery with hearts",
+          "Prop collection and unlocks",
+          "Room styles (café, treehouse, attic)",
+          "Moderated gallery"
+        ],
+        "postLaunch": [
+          "Seasonal prop packs",
+          "Friend galleries",
+          "A Roblox version (where theme-and-vote thrives)"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (mobile web)",
+          "Poki or CrazyGames"
+        ],
+        "later": [
+          "iOS/Android",
+          "Roblox"
+        ]
+      },
+      "pricing": {
+        "base": "Free; prop packs $1.99–3.99",
+        "model": "Free with rewarded ads and cosmetic prop packs",
+        "details": [
+          "Rewarded ad to unlock a bonus prop for today's theme.",
+          "Prop packs as one-time purchases; no gacha."
+        ]
+      },
+      "monetizationPlan": [
+        "Rewarded ads",
+        "Prop packs",
+        "Seasonal bundles"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Daily theme posts and gallery highlights."
+        },
+        {
+          "role": "Contract artist",
+          "count": 1,
+          "note": "Props and rooms; the core product."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$5–20k",
+        "note": "Mostly props: an initial set, then monthly packs."
+      },
+      "devMonths": 2.5,
+      "milestones": [
+        {
+          "name": "Prototype + clip test",
+          "startMonth": 0,
+          "endMonth": 0.7,
+          "kind": "build",
+          "deliverable": "One room, 30 props, photo export; 5 clips",
+          "gate": "Room clips earn saves"
+        },
+        {
+          "name": "Gallery + themes",
+          "startMonth": 0.7,
+          "endMonth": 2,
+          "kind": "build",
+          "deliverable": "Daily themes, gallery, moderation",
+          "gate": "Testers browse others' rooms"
+        },
+        {
+          "name": "Web launch",
+          "startMonth": 2,
+          "endMonth": 2.5,
+          "kind": "launch",
+          "deliverable": "Live on site and portal",
+          "gate": "15%+ day-2 return"
+        },
+        {
+          "name": "Daily themes",
+          "startMonth": 2.5,
+          "endMonth": 9,
+          "kind": "live",
+          "deliverable": "New theme daily, packs monthly",
+          "gate": "Gallery submissions growing"
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Week 1",
+          "action": "Speed-decorating clips and before/after reveals."
+        },
+        {
+          "when": "Launch",
+          "action": "Daily 'rating your rooms' posts from the gallery; invite decorating creators."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Theme suggestions from comments; seasonal reveal trailers."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Daily",
+          "what": "New theme; feature top rooms."
+        },
+        {
+          "when": "Monthly",
+          "what": "Prop pack and seasonal theme week."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Gallery submissions per player",
+          "target": "1+ a week",
+          "why": "The gallery is the loop."
+        },
+        {
+          "metric": "Day-2 return",
+          "target": "15%+",
+          "why": "Daily themes need a habit."
+        },
+        {
+          "metric": "Prop pack conversion",
+          "target": "1–3% of players",
+          "why": "Cosmetic economy check."
+        }
+      ],
+      "killCriteria": [
+        "Players decorate once and never browse the gallery: the social loop isn't landing.",
+        "Clips underperform after 10 posts: change the room style or hook."
+      ],
+      "risks": [
+        {
+          "risk": "Art cost never ends",
+          "mitigation": "Modular props that recombine; packs pay for themselves."
+        },
+        {
+          "risk": "Gallery abuse",
+          "mitigation": "Pre-made props only (no free text), hearts not comments, reports."
+        }
+      ],
+      "revenueAssumptions": "Assumes ~$5 per 1,000 plays from ads (≈1.5 ads per play at a ~$5 blended eCPM, 100% kept on your own traffic at Poki) plus ~$2.50 per 1,000 plays from prop packs. Low-confidence estimates; measure your own.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 300000,
+          "volume": "300k plays",
+          "netUSD": 2250,
+          "note": "Not enough gallery activity."
+        },
+        {
+          "scenario": "Base",
+          "units": 6000000,
+          "volume": "6M plays",
+          "netUSD": 45000,
+          "note": "A steady decorating crowd."
+        },
+        {
+          "scenario": "Strong",
+          "units": 60000000,
+          "volume": "60M plays",
+          "netUSD": 450000,
+          "note": "A portal favorite with a busy gallery."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 400000000,
+          "volume": "400M plays + Roblox",
+          "netUSD": 3000000,
+          "note": "Dress to Impress-style. Rare."
+        }
+      ]
+    },
+    {
+      "id": "pond-party",
+      "name": "Pond Party",
+      "track": "main",
+      "niche": "Browser multiplayer hangout · cozy fishing",
+      "hook": "Send a link, and your friends are fishing next to you in seconds. No download.",
+      "oneLiner": "A tiny browser hangout where friends fish together, show off catches, and sit by the water. One link joins a pond.",
+      "pitch": "Webfishing (solo developer, est. 1.0–2.1M copies) proved a cozy fishing hangout spreads through friend groups and funny clips. fly.pieter.com proved a browser multiplayer game that starts from a link can make serious money fast. Pond Party joins them: open a link, pick a little critter, and you're at a pond with friends. Fish, trade, decorate the dock, and react with preset emotes. It's safe by design: no open voice or text chat, which matters for cozy players who are tired of toxic spaces.",
+      "genreTags": [
+        "Multiplayer",
+        "Hangout",
+        "Fishing",
+        "Mobile web",
+        "Links invite friends"
+      ],
+      "spec": {
+        "genre": "Browser multiplayer fishing hangout",
+        "players": "1–8 per pond, joined by link",
+        "setting": "Little ponds and docks through the seasons",
+        "coreVerb": "Fish, show off catches, hang out",
+        "look": "Chunky low-poly critters, warm light",
+        "team": "You + AI + a contract artist",
+        "audience": "Friend groups, Discord servers, streamer communities",
+        "differentiator": "Every share is an invite: the link puts your friend at your pond instantly",
+        "price": "Free (web) · cosmetics · $4.99 Steam"
+      },
+      "audience": "Friend groups and online communities who want a low-stakes place to hang out; streamers with chat communities.",
+      "comps": [
+        "Webfishing",
+        "fly.pieter.com",
+        "Gartic Phone",
+        "Animal Crossing (fishing)"
+      ],
+      "sessionLength": "10–40 minutes with friends",
+      "artDirection": "Chunky, readable low-poly critters with lots of hats. The look should be instantly recognizable in a clip.",
+      "drivers": [
+        {
+          "signal": "Cozy fishing hangouts spread through friends",
+          "detail": "Webfishing: solo developer, est. 1.0–2.1M copies, ~97% positive; fishing demand 7, supply 5.",
+          "strength": "strong",
+          "ref": {
+            "game": "webfishing"
+          }
+        },
+        {
+          "signal": "Browser multiplayer from a link can earn fast",
+          "detail": "fly.pieter.com reached a reported $1M ARR run-rate in 17 days from sponsors and in-game ads (it later fell back).",
+          "strength": "medium",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Link-sharing is a built-in growth loop",
+          "detail": "Gartic Phone grew on 'send the room link' play; every invite is a new player.",
+          "strength": "medium",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Safe-by-design social play is wanted",
+          "detail": "58% of women gamers report toxicity in gaming spaces; preset emotes and no open chat are a selling point.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#trends"
+          }
+        },
+        {
+          "signal": "Servers, moderation and a slow cool-down",
+          "detail": "Real-time multiplayer needs servers and abuse handling; fly.pieter.com's revenue fell to ~$12k/month within months.",
+          "strength": "caution",
+          "ref": {
+            "link": "#spread"
+          }
+        }
+      ],
+      "scores": {
+        "demand": {
+          "score": 8,
+          "why": "Fishing demand 7 and co-op demand 9; Webfishing and Grow a Garden show social cozy at scale."
+        },
+        "gap": {
+          "score": 6,
+          "why": "Few browser-native cozy hangouts; Webfishing is a Steam download."
+        },
+        "soloSpeed": {
+          "score": 6,
+          "why": "Netcode and servers are real work even with AI; keep it to small rooms."
+        },
+        "instantPlay": {
+          "score": 9,
+          "why": "A link drops you into a pond in seconds; touch fishing works on phones."
+        },
+        "monetization": {
+          "score": 6,
+          "why": "Cosmetics, sponsor billboards and a paid Steam version; real-time servers cost money."
+        },
+        "marketability": {
+          "score": 9,
+          "why": "Funny emergent moments, streamer communities joining by link."
+        },
+        "momentum": {
+          "score": 8,
+          "why": "Co-op and social cozy are rising."
+        },
+        "scopeFit": {
+          "score": 7,
+          "why": "A small team could do it comfortably."
+        }
+      },
+      "whyNow": [
+        "Webfishing proved the fantasy but needs a download; nobody owns the browser version.",
+        "Link-to-join multiplayer turns every viewer into an inviter.",
+        "Cozy players want social spaces without toxicity."
+      ],
+      "pillars": [
+        "One link, you're there",
+        "Nothing to lose, nothing to fight",
+        "Catches worth showing off",
+        "Safe by design: emotes, not open chat"
+      ],
+      "coreLoop": [
+        "Open the link",
+        "Pick a critter",
+        "Fish together",
+        "Show off and trade catches",
+        "Decorate the dock",
+        "Invite another friend"
+      ],
+      "features": {
+        "mvp": [
+          "Private ponds joined by link (up to 8)",
+          "Fishing with 20 fish and rarities",
+          "Preset emotes and a photo button",
+          "Works on phone browsers"
+        ],
+        "launch": [
+          "Collection book and dock decorating",
+          "Seasonal fish and weather",
+          "Cosmetic hats",
+          "Streamer mode: chat can vote on the weather"
+        ],
+        "postLaunch": [
+          "Steam version with bigger worlds ($4.99)",
+          "Discord Activity version",
+          "New ponds each season"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (mobile web)"
+        ],
+        "later": [
+          "Steam",
+          "Discord Activities",
+          "CrazyGames"
+        ]
+      },
+      "pricing": {
+        "base": "Free on the web; $4.99 on Steam",
+        "model": "Free with cosmetics and sponsor spots; paid Steam version",
+        "details": [
+          "Cosmetics priced fairly; Bongo Cat's free-with-hats model earned only ~$2–4k a month at huge scale.",
+          "Sponsor billboards at the pond (the fly.pieter.com model).",
+          "A paid Steam version with bigger worlds for the most engaged groups."
+        ]
+      },
+      "monetizationPlan": [
+        "Cosmetic hats and dock items",
+        "Sponsored pond billboards",
+        "Paid Steam version",
+        "Supporter pack"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Keep rooms small; use a managed real-time service."
+        },
+        {
+          "role": "Contract 3D artist",
+          "count": 1,
+          "note": "Critters, hats, ponds."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$5–20k + servers",
+        "note": "Art plus a managed multiplayer service; server costs scale with players (budget per concurrent user)."
+      },
+      "devMonths": 3,
+      "milestones": [
+        {
+          "name": "Two-player prototype",
+          "startMonth": 0,
+          "endMonth": 0.7,
+          "kind": "build",
+          "deliverable": "Two phones fishing at one pond via link",
+          "gate": "Friends stay 15+ minutes"
+        },
+        {
+          "name": "Clip test",
+          "startMonth": 0.5,
+          "endMonth": 1.2,
+          "kind": "launch",
+          "deliverable": "Clips of funny catches and hats",
+          "gate": "Comments ask for the link"
+        },
+        {
+          "name": "Web beta",
+          "startMonth": 1.2,
+          "endMonth": 2.5,
+          "kind": "build",
+          "deliverable": "8-player ponds, collection book, cosmetics",
+          "gate": "Rooms average 3+ players"
+        },
+        {
+          "name": "Public launch",
+          "startMonth": 2.5,
+          "endMonth": 3,
+          "kind": "launch",
+          "deliverable": "Open to everyone",
+          "gate": "Invites per player above 1"
+        },
+        {
+          "name": "Seasons",
+          "startMonth": 3,
+          "endMonth": 9,
+          "kind": "live",
+          "deliverable": "Seasonal fish, events",
+          "gate": "Weekly active groups growing"
+        },
+        {
+          "name": "Steam version",
+          "startMonth": 6,
+          "endMonth": 9,
+          "kind": "launch",
+          "deliverable": "Bigger worlds, $4.99",
+          "gate": "Strong group retention"
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Weeks 1–4",
+          "action": "Clips of rare catches, hat combos and funny group moments."
+        },
+        {
+          "when": "Launch",
+          "action": "Invite streamers to host 'chat fishing' streams; every viewer can join by link."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Weekly 'rarest catch' features; seasonal event trailers; monthly devlog."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Weekly",
+          "what": "Rotating rare fish and a small event."
+        },
+        {
+          "when": "Seasonal",
+          "what": "New pond, weather and fish set."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Moderation of names and reports; server cost review."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Invites per player",
+          "target": "1+",
+          "why": "Above 1 means it grows on its own."
+        },
+        {
+          "metric": "Average room size",
+          "target": "3+ players",
+          "why": "It's a hangout; solo ponds mean it isn't working."
+        },
+        {
+          "metric": "Server cost per active user",
+          "target": "Below revenue per user",
+          "why": "Multiplayer economics have to hold."
+        }
+      ],
+      "killCriteria": [
+        "Pairs leave within 10 minutes in testing: the fishing isn't fun enough together.",
+        "Server costs exceed revenue after two months: shrink rooms or move to the Steam version."
+      ],
+      "risks": [
+        {
+          "risk": "Server costs spike with a viral moment",
+          "mitigation": "Managed service with caps; queue rather than crash."
+        },
+        {
+          "risk": "Abuse and moderation",
+          "mitigation": "No open chat; preset emotes; name filters; private ponds by default."
+        },
+        {
+          "risk": "A short-lived spike",
+          "mitigation": "Seasonal content and the Steam version for committed groups."
+        }
+      ],
+      "revenueAssumptions": "Cosmetics assume ~$0.20 per player (in line with cat idle games' purchase revenue per install), plus sponsor spots. Steam copies net ≈ $2.45 at $4.99. Server costs not deducted.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 50000,
+          "volume": "50k players",
+          "netUSD": 10000,
+          "note": "A small community; servers roughly break even."
+        },
+        {
+          "scenario": "Base",
+          "units": 500000,
+          "volume": "500k players + 20k Steam",
+          "netUSD": 150000,
+          "note": "Steady groups and a Steam version."
+        },
+        {
+          "scenario": "Strong",
+          "units": 3000000,
+          "volume": "3M players + 150k Steam",
+          "netUSD": 970000,
+          "note": "A streamer-driven hit."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 15000000,
+          "volume": "15M players + 1M Steam",
+          "netUSD": 5450000,
+          "note": "Webfishing-level, in a browser. Rare."
+        }
+      ]
+    },
+    {
+      "id": "petal-drop",
+      "name": "Petal Drop",
+      "track": "main",
+      "niche": "Cozy physics merge · Suika-like · short sessions",
+      "hook": "Drop seeds into a pot. Matching ones bloom into bigger flowers. Don't let it overflow.",
+      "oneLiner": "A Suika-style merge game in a flower pot: drop buds, merge them into bigger blooms, chase the giant sunflower.",
+      "pitch": "Suika Game's sales rose more than 50,000x once streamers and VTubers found it; merge-2 mobile revenue rose 94% in H1 2025; Poki's Cozy charts are full of merge and block puzzles. Petal Drop takes that proven loop and gives it a cozy identity: hand-painted flowers, soft physics, a garden that fills with everything you've bloomed, and a daily seeded pot with a shareable bloom card. It's the fastest game here to build and the easiest to clip.",
+      "genreTags": [
+        "Merge puzzle",
+        "Physics",
+        "Short sessions",
+        "Mobile web"
+      ],
+      "spec": {
+        "genre": "Physics merge puzzle (Suika-like)",
+        "players": "1, with daily leaderboards",
+        "setting": "A flower pot and the garden it fills",
+        "coreVerb": "Drop, merge, bloom",
+        "look": "Hand-painted flowers, soft pastel physics",
+        "team": "You + AI + a contract illustrator",
+        "audience": "Suika and Block Blast players who want something prettier",
+        "differentiator": "A garden that remembers every bloom, and a daily pot everyone plays",
+        "price": "Free (web) · $3.99 deluxe"
+      },
+      "audience": "Casual puzzle players on phones; streamers and VTubers who play short score-chasers.",
+      "comps": [
+        "Suika Game",
+        "Block Blast!",
+        "Merge games on Poki"
+      ],
+      "sessionLength": "3–6 minutes a run",
+      "artDirection": "Hand-painted flowers with personality; a soft squash-and-stretch on every merge. The art is the differentiator in a genre full of clones.",
+      "drivers": [
+        {
+          "signal": "Merge physics is a proven viral loop",
+          "detail": "Suika Game's sales rose more than 50,000x after streamers found it; 10M+ downloads reported.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Merge is growing and leads cozy web charts",
+          "detail": "Merge-2 mobile revenue +94% in H1 2025; merge and block puzzles sit in Poki's Cozy and trending lists.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Fastest build here",
+          "detail": "Physics merge is a small, well-understood system: days to a playable, weeks to polish.",
+          "strength": "medium",
+          "ref": {
+            "link": "#launch"
+          }
+        },
+        {
+          "signal": "Streamer-friendly tension",
+          "detail": "Near-overflow moments make reaction clips, the pattern that spread Suika.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Clones everywhere",
+          "detail": "Fruit-merge clones are all over portals. Only distinct art and the garden meta will make it stand out.",
+          "strength": "caution",
+          "ref": {
+            "link": "#spread"
+          }
+        }
+      ],
+      "scores": {
+        "demand": {
+          "score": 8,
+          "why": "Suika, Block Blast (70M daily players) and portal charts show huge demand for merge and block puzzles."
+        },
+        "gap": {
+          "score": 4,
+          "why": "Crowded with fruit clones; few with real cozy art or a meta layer."
+        },
+        "soloSpeed": {
+          "score": 10,
+          "why": "The smallest system in this list."
+        },
+        "instantPlay": {
+          "score": 10,
+          "why": "One-finger drop, instant restart, perfect on a phone browser."
+        },
+        "monetization": {
+          "score": 5,
+          "why": "Ads plus a cheap deluxe version; Suika's paid Switch version shows the upside."
+        },
+        "marketability": {
+          "score": 8,
+          "why": "Near-miss tension and satisfying merges clip well; streamers love score-chasers."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Merge keeps growing on mobile and web."
+        },
+        "scopeFit": {
+          "score": 10,
+          "why": "Tiny scope."
+        }
+      },
+      "whyNow": [
+        "Merge is still growing, but the web versions are mostly generic fruit.",
+        "A cozy art direction is the cheapest way to stand out in a proven genre.",
+        "It doubles as your fastest first release to test the whole pipeline: build, clip, ship, measure."
+      ],
+      "pillars": [
+        "One finger, instant restart",
+        "Every merge feels like a bloom",
+        "Your garden remembers everything you grew",
+        "A daily pot everyone shares"
+      ],
+      "coreLoop": [
+        "Drop a bud",
+        "Merge matching blooms",
+        "Chain bigger flowers",
+        "Avoid overflow",
+        "Plant blooms in your garden",
+        "Try today's pot"
+      ],
+      "features": {
+        "mvp": [
+          "Physics merge with 10 flower tiers",
+          "Score and instant restart",
+          "Phone-first controls",
+          "Bloom card to share"
+        ],
+        "launch": [
+          "Daily seeded pot and leaderboard",
+          "The garden: every bloom you've made, decorated by you",
+          "Seasonal flower sets",
+          "Rewarded 'shake the pot' rescue"
+        ],
+        "postLaunch": [
+          "Deluxe version on Steam and Switch ($3.99)",
+          "Friend pots (challenge links)",
+          "Themed pots: herbs, succulents, wildflowers"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (mobile web)",
+          "Poki or CrazyGames"
+        ],
+        "later": [
+          "Steam",
+          "Switch",
+          "iOS/Android"
+        ]
+      },
+      "pricing": {
+        "base": "Free on the web; $3.99 deluxe",
+        "model": "Free with rewarded ads; paid deluxe version",
+        "details": [
+          "Rewarded rescue ad only.",
+          "Deluxe: all flower sets, garden themes, no ads.",
+          "Suika sold well on Switch at a low price; aim for an impulse buy."
+        ]
+      },
+      "monetizationPlan": [
+        "Rewarded ads (rescue, bonus seed)",
+        "Deluxe version on Steam, Switch and mobile",
+        "Flower-set packs (cosmetic)"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Tune the physics feel; film near-misses."
+        },
+        {
+          "role": "Contract illustrator",
+          "count": 1,
+          "note": "Ten flower tiers and the pot/garden art."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$2–8k",
+        "note": "Illustration for flower tiers and garden pieces; optional sound designer."
+      },
+      "devMonths": 1.5,
+      "milestones": [
+        {
+          "name": "Physics prototype",
+          "startMonth": 0,
+          "endMonth": 0.3,
+          "kind": "build",
+          "deliverable": "Merge loop with placeholder art",
+          "gate": "Testers restart 3+ times unprompted"
+        },
+        {
+          "name": "Clip test",
+          "startMonth": 0.3,
+          "endMonth": 0.8,
+          "kind": "launch",
+          "deliverable": "5 clips with final flower art",
+          "gate": "Above-average saves and shares"
+        },
+        {
+          "name": "Web launch",
+          "startMonth": 0.8,
+          "endMonth": 1.5,
+          "kind": "launch",
+          "deliverable": "Daily pot, garden, bloom card",
+          "gate": "15%+ day-2 return"
+        },
+        {
+          "name": "Live updates",
+          "startMonth": 1.5,
+          "endMonth": 6,
+          "kind": "live",
+          "deliverable": "Seasonal sets, friend pots",
+          "gate": "Plays growing"
+        },
+        {
+          "name": "Deluxe version",
+          "startMonth": 3,
+          "endMonth": 5,
+          "kind": "launch",
+          "deliverable": "Steam and Switch deluxe",
+          "gate": "1M+ web plays"
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Week 1",
+          "action": "Near-overflow clips and 'first sunflower' moments; test cozy vs funny hooks."
+        },
+        {
+          "when": "Launch",
+          "action": "Send to VTubers and casual streamers; daily-pot challenge posts."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Weekly 'highest score' and 'prettiest garden' features; seasonal flower reveals."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Daily",
+          "what": "A new seeded pot and leaderboard."
+        },
+        {
+          "when": "Monthly",
+          "what": "A new flower set or garden theme."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Restarts per session",
+          "target": "3+",
+          "why": "The 'one more go' signal."
+        },
+        {
+          "metric": "Day-2 return",
+          "target": "15%+",
+          "why": "Shows the daily pot works."
+        },
+        {
+          "metric": "Web plays by month 3",
+          "target": "1M+",
+          "why": "Worth a deluxe version."
+        }
+      ],
+      "killCriteria": [
+        "Testers don't restart without prompting: the physics feel is off.",
+        "Clips underperform a generic fruit-merge clip: the art isn't differentiating enough."
+      ],
+      "risks": [
+        {
+          "risk": "Seen as a clone",
+          "mitigation": "Lead with the art and the garden; never use fruit."
+        },
+        {
+          "risk": "Low ad revenue per play",
+          "mitigation": "Treat the web game as the funnel for the deluxe version and your channel."
+        }
+      ],
+      "revenueAssumptions": "Ad revenue assumes ~$5 per 1,000 plays to you (≈1.5 rewarded or interstitial ads per play at a blended eCPM of ~$5, with 100% kept on your own traffic at Poki). That's a low-confidence estimate; measure your own. Deluxe copies net ≈ $2.70 each at $3.99.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 200000,
+          "volume": "200k plays",
+          "netUSD": 1000,
+          "note": "Lost among clones; still tests your pipeline."
+        },
+        {
+          "scenario": "Base",
+          "units": 5000000,
+          "volume": "5M plays + 8k deluxe",
+          "netUSD": 46600,
+          "note": "A solid portal game and a cheap paid version."
+        },
+        {
+          "scenario": "Strong",
+          "units": 50000000,
+          "volume": "50M plays + 80k deluxe",
+          "netUSD": 466000,
+          "note": "A portal hit; Switch and mobile ports pay."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 300000000,
+          "volume": "300M plays + 1M deluxe",
+          "netUSD": 4200000,
+          "note": "Suika-level moment. Rare."
+        }
+      ]
+    },
+    {
+      "id": "daily-tidy",
+      "name": "Daily Tidy",
+      "track": "main",
+      "niche": "Daily cozy puzzle · tidying · shareable result",
+      "hook": "One cozy mess a day. Tidy it, then share your result without spoilers.",
+      "oneLiner": "A new little scene to tidy every day: a desk, a picnic, a sewing box. Put things where they belong and share your result card.",
+      "pitch": "Wordle showed that one short daily puzzle with a spoiler-free result spreads on its own, and the New York Times now counts billions of solves a year. A Little to the Left and Unpacking showed that tidying is one of the most satisfying things to watch in a clip. Daily Tidy puts the two together: one hand-made cozy scene a day, a few minutes to solve, and a result card ('🧺 tidied in 4 moves, 1 hint') players paste into group chats. Every day's scene is also a ready-made TikTok: 'today's Daily Tidy, can you do it in fewer moves?'",
+      "genreTags": [
+        "Daily puzzle",
+        "Tidying",
+        "Shareable result",
+        "Mobile web"
+      ],
+      "spec": {
+        "genre": "Daily tidying puzzle",
+        "players": "1, with a shared daily result",
+        "setting": "Small everyday scenes: desks, kitchens, picnics, craft boxes",
+        "coreVerb": "Drag things to where they belong",
+        "look": "Soft flat illustration, tactile objects",
+        "team": "You + AI + a contract illustrator",
+        "audience": "Wordle-style daily players and A Little to the Left fans",
+        "differentiator": "Tidying is the cozy action people love watching; a daily seed and a result card make every player a promoter",
+        "price": "Free (web) · $4.99 collection"
+      },
+      "audience": "Daily-puzzle players (the Wordle and Connections crowd) and cozy puzzle fans; skews adult and phone-first.",
+      "comps": [
+        "Wordle",
+        "A Little to the Left",
+        "Unpacking",
+        "NYT Connections"
+      ],
+      "sessionLength": "2–5 minutes a day, plus the archive",
+      "artDirection": "Soft, flat, hand-drawn objects with satisfying snap animations. One recognizable house style, ideally with a recurring mascot.",
+      "drivers": [
+        {
+          "signal": "Daily puzzles with a shareable result spread themselves",
+          "detail": "Wordle went from 90 players to millions; NYT counted 11.1B puzzle solves in 2024.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Tidying is proven, clip-friendly cozy",
+          "detail": "A Little to the Left (~1M copies, 100k+ wishlists at launch from satisfying clips) and Unpacking (1M+).",
+          "strength": "strong",
+          "ref": {
+            "game": "a-little-to-the-left"
+          }
+        },
+        {
+          "signal": "Built for phones and links",
+          "detail": "Two-minute sessions with drag input: exactly what a TikTok viewer can play after tapping a link.",
+          "strength": "medium",
+          "ref": {
+            "link": "#launch"
+          }
+        },
+        {
+          "signal": "Daily cadence = daily content",
+          "detail": "Every day's scene is a new short video: the game produces its own marketing schedule.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#launch"
+          }
+        },
+        {
+          "signal": "Needs a steady supply of hand-made scenes",
+          "detail": "One scene a day is a content treadmill. Build a scene editor early and keep a 30-day buffer.",
+          "strength": "caution",
+          "ref": {
+            "link": "#launch"
+          }
+        }
+      ],
+      "scores": {
+        "demand": {
+          "score": 8,
+          "why": "Daily puzzles are a mass habit (NYT 11.1B solves) and tidying games sold ~1M copies each."
+        },
+        "gap": {
+          "score": 6,
+          "why": "Many daily word and number puzzles, very few cozy tidying dailies."
+        },
+        "soloSpeed": {
+          "score": 8,
+          "why": "Simple 2D drag puzzle; the real work is a scene editor and steady art."
+        },
+        "instantPlay": {
+          "score": 10,
+          "why": "Two-minute sessions with drag input, ideal from a link on a phone."
+        },
+        "monetization": {
+          "score": 5,
+          "why": "Ads and a paid archive or collection; daily games monetize modestly unless they become a habit at scale."
+        },
+        "marketability": {
+          "score": 9,
+          "why": "Satisfying tidying clips plus 'beat my moves' challenges; players share results themselves."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Daily puzzle portfolios keep growing (NYT); tidying stays popular."
+        },
+        "scopeFit": {
+          "score": 9,
+          "why": "Small scope for any team."
+        }
+      },
+      "whyNow": [
+        "The daily-puzzle habit is bigger than ever, but it's almost all words and numbers.",
+        "Tidying is one of the best-performing cozy actions in short clips.",
+        "A daily game gives you a reason to post every day without inventing new content."
+      ],
+      "pillars": [
+        "Two minutes, every day",
+        "Every object has a satisfying home",
+        "Share the result, never the solution",
+        "One house style and mascot people recognize"
+      ],
+      "coreLoop": [
+        "Open today's scene",
+        "Drag things into place",
+        "Use a hint if stuck",
+        "Finish and get your result card",
+        "Share it",
+        "Come back tomorrow"
+      ],
+      "features": {
+        "mvp": [
+          "One playable scene with snap-to-place and a move counter",
+          "Result card copied to clipboard",
+          "Phone-first touch controls",
+          "Loads in under 3 seconds"
+        ],
+        "launch": [
+          "A new scene every day (30-day buffer)",
+          "Streaks and a calendar",
+          "Archive of past scenes",
+          "Email or account-free streak saving",
+          "Scene editor for you to make scenes fast"
+        ],
+        "postLaunch": [
+          "Weekend 'big tidy' scenes",
+          "Seasonal themes",
+          "Paid collection on Steam and mobile with all past scenes",
+          "Player-made scenes (later)"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (mobile web)",
+          "Poki or CrazyGames"
+        ],
+        "later": [
+          "Steam collection",
+          "iOS/Android app"
+        ]
+      },
+      "pricing": {
+        "base": "Free daily on the web; $4.99 for the collection",
+        "model": "Free with rewarded ads, plus a paid archive and collection",
+        "details": [
+          "Today's scene is always free; the archive and themed packs are the paid unlock.",
+          "Rewarded ad for an extra hint, never a forced ad mid-puzzle.",
+          "Later: a $4.99 Steam or mobile collection of 200+ scenes."
+        ]
+      },
+      "monetizationPlan": [
+        "Rewarded ads for hints",
+        "Archive unlock ($2.99 one-time) via itch.io or a merchant of record",
+        "Steam and mobile collection once there are 200+ scenes",
+        "Sponsored themed weeks (later, if traffic is large)"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Film and post today's scene daily."
+        },
+        {
+          "role": "Contract illustrator",
+          "count": 1,
+          "note": "Owns the house style and object sets; the visible craft must be human."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$3–15k",
+        "note": "Mostly illustration: a style guide and object sets up front, then a monthly retainer. Hosting is cheap."
+      },
+      "devMonths": 2,
+      "milestones": [
+        {
+          "name": "Prototype + clip test",
+          "startMonth": 0,
+          "endMonth": 0.5,
+          "kind": "build",
+          "deliverable": "5 scenes playable on a phone; 5 clips posted",
+          "gate": "Clips earn saves and 'where can I play' comments"
+        },
+        {
+          "name": "Scene editor + style",
+          "startMonth": 0.5,
+          "endMonth": 1.5,
+          "kind": "build",
+          "deliverable": "Editor, house style, 30 scenes",
+          "gate": "You can make a scene in under an hour"
+        },
+        {
+          "name": "Web launch",
+          "startMonth": 1.5,
+          "endMonth": 2,
+          "kind": "launch",
+          "deliverable": "Daily scenes live on your site and a portal",
+          "gate": "20%+ of day-1 players return on day 2"
+        },
+        {
+          "name": "Daily content",
+          "startMonth": 2,
+          "endMonth": 8,
+          "kind": "live",
+          "deliverable": "A scene and a short video every day",
+          "gate": "Daily players growing week on week"
+        },
+        {
+          "name": "Paid collection",
+          "startMonth": 6,
+          "endMonth": 9,
+          "kind": "launch",
+          "deliverable": "Steam and mobile collection",
+          "gate": "10k+ daily players"
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Week 1",
+          "action": "Five clips of the most satisfying tidies; test hooks like 'only 1% finish this in 6 moves'."
+        },
+        {
+          "when": "Launch",
+          "action": "Daily post: today's scene in 15 seconds, link to play (TikTok bio, YouTube long-form description)."
+        },
+        {
+          "when": "Monthly",
+          "action": "Long-form devlog: how the scenes are made, the month's hardest tidy, player stats."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Feature the best player result cards and streaks; seasonal themes."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Daily",
+          "what": "New scene, new short video."
+        },
+        {
+          "when": "Weekly",
+          "what": "A bigger weekend scene; look at which scenes got shared most."
+        },
+        {
+          "when": "Seasonal",
+          "what": "Holiday themes; collection packs."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Day-2 return",
+          "target": "20%+",
+          "why": "A daily game lives or dies on the habit."
+        },
+        {
+          "metric": "Share rate",
+          "target": "10%+ of finishes shared",
+          "why": "Shares are the growth engine."
+        },
+        {
+          "metric": "Daily players at month 3",
+          "target": "10,000+",
+          "why": "Enough to make a paid collection worth it."
+        }
+      ],
+      "killCriteria": [
+        "Clips don't get saves or shares after 10 posts: try a different object world or hook.",
+        "Day-2 return under 10% after a month: the puzzles aren't satisfying enough; rework before adding content."
+      ],
+      "risks": [
+        {
+          "risk": "Content treadmill",
+          "mitigation": "Scene editor from week 2; 30-day buffer; seasonal packs reuse objects."
+        },
+        {
+          "risk": "Easy to copy",
+          "mitigation": "Ship fast, own the name and the house style, build the daily community."
+        },
+        {
+          "risk": "Ads feel uncozy",
+          "mitigation": "Rewarded only; never interrupt a puzzle."
+        }
+      ],
+      "revenueAssumptions": "Ad revenue assumes ~$5 per 1,000 plays to you (≈1.5 rewarded or interstitial ads per play at a blended eCPM of ~$5, with 100% kept on your own traffic at Poki). That's a low-confidence estimate; measure your own. Collection copies net ≈ $3.40 each at $4.99.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 300000,
+          "volume": "300k plays",
+          "netUSD": 1500,
+          "note": "A small daily crowd; good practice and footage."
+        },
+        {
+          "scenario": "Base",
+          "units": 5000000,
+          "volume": "5M plays + 5k collections",
+          "netUSD": 42000,
+          "note": "A steady daily audience and a growing list."
+        },
+        {
+          "scenario": "Strong",
+          "units": 50000000,
+          "volume": "50M plays + 50k collections",
+          "netUSD": 420000,
+          "note": "A real daily habit: a business on its own."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 500000000,
+          "volume": "500M plays + licensing",
+          "netUSD": 3000000,
+          "note": "Wordle-scale. Very rare, and a licensing or acquisition story."
+        }
+      ]
+    },
     {
       "id": "driftgarden",
       "name": "Driftgarden",
@@ -92,6 +1740,14 @@
         "momentum": {
           "score": 8,
           "why": "Co-op keywords and cozy survival-crafting are both rising among successful Steam games; Webfishing and Dinkum show friend-group cozy selling."
+        },
+        "soloSpeed": {
+          "score": 3,
+          "why": "3D online co-op with a sailing world is the heaviest build here, even with AI writing code; art and netcode testing take months."
+        },
+        "instantPlay": {
+          "score": 2,
+          "why": "A 3D online co-op game is a Steam download, not a tap-to-play link."
         }
       },
       "whyNow": [
@@ -470,7 +2126,7 @@
         },
         {
           "signal": "Friend groups multiply sales",
-          "detail": "Webfishing (solo developer, est. 1.3M copies) and Dinkum (1M+) spread because friends bought them to play together.",
+          "detail": "Webfishing (solo developer, est. 1.0–2.1M copies) and Dinkum (1M+) spread because friends bought them to play together.",
           "strength": "strong",
           "ref": {
             "game": "webfishing"
@@ -526,7 +2182,7 @@
         },
         "gap": {
           "score": 6,
-          "why": "Couples supply is 4 and non-Western settings 3, but shop sims are flooding (supply 8, +634% in 2026), which pulls this down."
+          "why": "Couples supply is 4 and non-Western settings 3, but shop sims are flooding (supply 8; the Shop Keeper tag is up 634% year on year), which pulls this down."
         },
         "scopeFit": {
           "score": 7,
@@ -543,6 +2199,14 @@
         "momentum": {
           "score": 7,
           "why": "Co-op is rising; non-Western settings get strong press, though shop sims are peaking."
+        },
+        "soloSpeed": {
+          "score": 6,
+          "why": "A 2.5D two-player game is buildable solo, but co-op testing and food art take time."
+        },
+        "instantPlay": {
+          "score": 6,
+          "why": "Works in a browser; online co-op via a share link is feasible, couch co-op on one phone less so."
         }
       },
       "whyNow": [
@@ -854,7 +2518,7 @@
         },
         {
           "signal": "Shop sims are flooding",
-          "detail": "Up 634% in 2026; the median 'X Simulator' grosses about $70k. Lead with co-op and the setting, never 'simulator'.",
+          "detail": "The Shop Keeper tag is up 634% year on year (same weeks of 2026 vs 2025); the median 'X Simulator' grosses about $70k. Lead with co-op and the setting, never 'simulator'.",
           "strength": "caution",
           "ref": {
             "niche": "Shop/management sim (cafe, bakery, potion shop)"
@@ -963,6 +2627,14 @@
         "momentum": {
           "score": 6,
           "why": "Decorating and tinkering builders are rising, though the wider builder space is steady rather than booming."
+        },
+        "soloSpeed": {
+          "score": 5,
+          "why": "The water and terrain feel need lots of iteration; AI helps with code but the feel is hand-tuned."
+        },
+        "instantPlay": {
+          "score": 6,
+          "why": "WebGL can run it (Townscaper had a web toy), but sculpting is better with a mouse or tablet than a phone."
         }
       },
       "whyNow": [
@@ -1286,6 +2958,14 @@
         "momentum": {
           "score": 6,
           "why": "Cozy hybrids are rising, but narrative cozy is commercially harder."
+        },
+        "soloSpeed": {
+          "score": 4,
+          "why": "Content-heavy: 20 stories of human writing and hand-painted art."
+        },
+        "instantPlay": {
+          "score": 5,
+          "why": "Plays in a browser, but a story game wants longer sessions than a tap from a video."
         }
       },
       "whyNow": [
@@ -1655,6 +3335,14 @@
         "momentum": {
           "score": 8,
           "why": "Roblox creator payouts exceeded $1.5B in 2025."
+        },
+        "soloSpeed": {
+          "score": 8,
+          "why": "Small Roblox experience, though Luau and live ops are their own skills."
+        },
+        "instantPlay": {
+          "score": 5,
+          "why": "The link opens Roblox, which needs the app and an account on phones."
         }
       },
       "whyNow": [
@@ -1876,7 +3564,7 @@
       "scores": {
         "demand": {
           "score": 7,
-          "why": "Older-adult cozy demand is 7; 73% of US gamers over 50 play puzzle games."
+          "why": "Older-adult cozy demand is 7; 52.4M US gamers are 50+, and most play on phones and tablets."
         },
         "gap": {
           "score": 8,
@@ -1897,10 +3585,18 @@
         "momentum": {
           "score": 5,
           "why": "A steady market, not a rising trend."
+        },
+        "soloSpeed": {
+          "score": 8,
+          "why": "2D puzzle with simple input; the work is pattern art and puzzle tuning."
+        },
+        "instantPlay": {
+          "score": 9,
+          "why": "Tile placement is natural with touch and loads instantly."
         }
       },
       "whyNow": [
-        "52.4M US gamers are 50+ and 73% of them play puzzle games.",
+        "52.4M US gamers are 50+ (AARP), and more than 80% of them play on mobile devices.",
         "Accessibility for older players is a recurring request with almost no targeted supply."
       ],
       "pillars": [
@@ -2152,8 +3848,8 @@
           }
         },
         {
-          "signal": "A big audience that already plays puzzles",
-          "detail": "52.4M US gamers are 50+, and 73% of them play puzzle games (AARP).",
+          "signal": "A big audience, mostly on phones and tablets",
+          "detail": "52.4M US gamers are 50+ (AARP), more than 80% play on mobile devices, and 30% play only on smartphones.",
           "strength": "medium",
           "ref": {
             "niche": "Cozy games for older adults / accessibility-first"
@@ -2231,6 +3927,14 @@
         "momentum": {
           "score": 5,
           "why": "The format is now flooding; the early hits have already happened."
+        },
+        "soloSpeed": {
+          "score": 9,
+          "why": "Tiny scope: a desktop strip with plants."
+        },
+        "instantPlay": {
+          "score": 3,
+          "why": "A desktop overlay is a download; a browser-tab version loses the point."
         }
       },
       "whyNow": [

@@ -106,6 +106,25 @@ if concepts:
             if not s or not isinstance(s.get("score"), (int, float)):
                 problems.append(f"{w}: scores.{f}.score missing")
 
+gtm = load("gotomarket.json")
+if gtm:
+    need(gtm, ["stack", "loop", "platforms", "channels", "caseStudies", "viralHits", "patterns", "ai", "aiRules"], "gotomarket.json")
+    for i, p in enumerate(gtm.get("platforms", [])):
+        need(p, ["name", "type", "revShare", "linkFromSocial"], f"gotomarket.json platforms[{i}] {p.get('name', '?')}")
+
+ver = load("verification.json")
+if ver:
+    for i, v in enumerate(ver.get("items", [])):
+        if v.get("status") not in ("confirmed", "revised", "unverified"):
+            problems.append(f"verification.json items[{i}]: status must be confirmed|revised|unverified")
+
+if concepts:
+    keys = {f["key"] for f in concepts.get("scoring", {}).get("factors", [])}
+    for pr in concepts.get("scoring", {}).get("presets", []):
+        missing = keys - set(pr.get("weights", {}))
+        if missing:
+            problems.append(f"concepts.json preset {pr.get('id')}: weights missing {sorted(missing)}")
+
 live = DATA / "live" / "steam.json"
 if live.exists():
     try:

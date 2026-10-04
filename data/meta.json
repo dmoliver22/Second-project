@@ -2,7 +2,7 @@
   "title": "Cozy Market Atlas",
   "asOf": "2026-10-03",
   "version": 1,
-  "methodology": "Compiled on 3 Oct 2026 from Steam Page Analyzer, GameDiscoverCo, How To Market A Game, VG Insights, Gamalytic and Raijin estimates, publisher and developer statements, and press coverage. Every figure carries a source link and a confidence level. Page fetches were blocked in the research environment, so figures were taken from search-result summaries of the cited pages; spot-check any number before you put money behind it. Third-party Steam sales estimates often disagree with each other by 2–5x.",
+  "methodology": "Compiled on 3–4 Oct 2026 from Steam Page Analyzer, GameDiscoverCo, How To Market A Game, VG Insights, Gamalytic and Raijin estimates, publisher and developer statements, and press coverage. Every figure carries a source link and a confidence level. Page fetches were blocked in the research environment, so figures were taken from search-result summaries of the cited pages; spot-check any number before you put money behind it. Third-party Steam sales estimates often disagree with each other by 2–5x.",
   "howToUpdate": [
     "Edit the JSON files in data/: games.json for games, niches.json for gaps, market.json for trends and benchmarks, playbook.json for operations, concepts.json for game ideas, insights.json for the headline findings.",
     "Run python3 scripts/validate_data.py to catch missing or malformed fields.",
@@ -11,6 +11,10 @@
     "Once a quarter, ask Claude to re-run the cozy market research and update data/, then add a line to this change log."
   ],
   "changelog": [
+    {
+      "date": "2026-10-04",
+      "note": "Re-aimed at a solo, AI-assisted, web-first cozy business: new Launch & grow and What spreads pages (platforms, monetization, TikTok/YouTube marketing, viral hits, AI rules), five new web-first game suggestions, scoring presets (Solo + AI vs. Small studio), and a fact-check of 15 key figures (12 confirmed, 3 revised)."
+    },
     {
       "date": "2026-10-04",
       "note": "Five main game suggestions (new: Terraces), each with the market signals that drive it and a characteristics spec; side-by-side comparison; Roblox and desktop-idle ideas moved to side bets."

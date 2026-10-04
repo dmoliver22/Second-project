@@ -1,0 +1,126 @@
+{
+  "checkedOn": "2026-10-04",
+  "method": "Each figure was searched for its original source. Full pages could not be opened from the research environment, so checks rely on search-result summaries of the cited pages.",
+  "items": [
+    {
+      "id": 1,
+      "claim": "28% of open-world survival-craft Steam games reach 1,000 reviews (Steam Page Analyzer)",
+      "status": "confirmed",
+      "verifiedValue": "28.3% of 138 games released Jan 1 2024–Jun 30 2025 (vs 4.2% all Steam; 6.7x)",
+      "note": "Cohort window matters. 90 OWSC releases in 2025 and 92 in 2024; 2026 YTD +39% on the same weeks.",
+      "source": "https://www.steampageanalyzer.com/niches/open-world-survival-craft"
+    },
+    {
+      "id": 2,
+      "claim": "11% of Cozy-tagged Steam games reach 1,000 reviews vs 4.2% of all Steam games",
+      "status": "confirmed",
+      "verifiedValue": "11% of 661 Cozy games released Jan 2024–Jun 2025 vs 4.2% all Steam (2.6x)",
+      "note": "1,000 reviews is treated as roughly $150k gross by rule of thumb. Measured Sept 27 2026.",
+      "source": "https://www.steampageanalyzer.com/niches/cozy"
+    },
+    {
+      "id": 3,
+      "claim": "Cozy-tagged Steam releases: 156 (2023), 382 (2024), 632 (2025), 1,041 (2026 to 27 Sep)",
+      "status": "confirmed",
+      "verifiedValue": "25 (2020), 45 (2021), 97 (2022), 156 (2023), 382 (2024), 632 (2025), 1,041 (2026 to Sep 27; +143% on same weeks 2025)",
+      "note": "A further 2,730 unreleased Cozy pages exist, 333 dated within 90 days.",
+      "source": "https://www.steampageanalyzer.com/blog/cozy-games-steam-2026-niche-report"
+    },
+    {
+      "id": 4,
+      "claim": "Cozy games priced $20+ reach 1,000 reviews 45.2% vs 2.7% under $5; city builders $20+ 46.5%",
+      "status": "confirmed",
+      "verifiedValue": "Cozy: $20+ 45.2%, <$5 2.7%. City Builder: $20+ 46.5% (city builders overall 10.5%; $5–9.99 2.6%)",
+      "note": "Price correlates with production scope; this is not proof that raising the price causes success.",
+      "source": "https://www.steampageanalyzer.com/niches/cozy ; https://www.steampageanalyzer.com/niches/city-builder"
+    },
+    {
+      "id": 5,
+      "claim": "Shop-sim releases +634% and idle +150% in 2026",
+      "status": "revised",
+      "verifiedValue": "Steam tag 'Shop Keeper' (not 'shop sim'): 477 releases Jan 1–Sep 27 2026 vs 65 in the same weeks of 2025 (+634%). 'Idler' +150%. Automation +170%, Cozy +143%; all Steam +45%.",
+      "note": "Numbers match. Relabel as 'Shop Keeper tag' and note it compares the same weeks (YTD), not full years.",
+      "source": "https://www.steampageanalyzer.com/blog/steam-niches-2026-filling-fastest"
+    },
+    {
+      "id": 6,
+      "claim": "Webfishing ~1.3M copies (estimate)",
+      "status": "revised",
+      "verifiedValue": "Estimates range from about 1.0M to 2.1M: Gamalytic ~1.04M, SteamSpy ~1.44M, VG Insights ~1.60M, PlayTracker ~2.06M",
+      "note": "No official figure. 1.3M sits inside the range but matches no single tool; show it as a range or cite one tool.",
+      "source": "https://steamcommunity.com/app/3146520/discussions/0/4635988093614218860"
+    },
+    {
+      "id": 7,
+      "claim": "Tiny Glade 616k copies in under a month and 1.3M wishlists at launch",
+      "status": "confirmed",
+      "verifiedValue": "616,528 copies about one month after the Sept 23 2024 launch; about 1.3M wishlists around launch (later 1.9M+)",
+      "note": "Developer-shared data via GameDiscoverCo/press.",
+      "source": "https://gigazine.net/gsc_news/en/20241120-tiny-glade-600k-sold-reason"
+    },
+    {
+      "id": 8,
+      "claim": "Rusty's Retirement: 26% of sales from China; 500k+ copies",
+      "status": "confirmed",
+      "verifiedValue": "China 26% of sales (Japan 10%, Korea 6%, Taiwan 4%); 500k copies (dev, Feb 2025), about 550k by July 2025; 100k in the first ~5 days",
+      "note": "Regional split comes from a Wikipedia summary of developer data; the original primary source was not seen.",
+      "source": "https://en.wikipedia.org/wiki/Rusty's_Retirement ; https://x.com/MrMorrisGames/status/1894091532275224627"
+    },
+    {
+      "id": 9,
+      "claim": "Wishlist-to-first-week conversion 0.15x median; 0.10x for games over $10",
+      "status": "confirmed",
+      "verifiedValue": "Median 0.15x for games with 25k+ wishlists at launch; 0.10x for titles priced above $10; about 0.14x excluding NSFW",
+      "note": "The sample is games with more than 25k wishlists only, so it should not be applied to small launches without that caveat. Spread is an order of magnitude.",
+      "source": "https://newsletter.gamediscover.co/p/the-state-of-steam-wishlist-conversions ; https://gamedevreports.substack.com/p/gamediscoverco-the-state-of-steam"
+    },
+    {
+      "id": 10,
+      "claim": "Next Fest: little lift below ~2,000 pre-fest wishlists",
+      "status": "confirmed",
+      "verifiedValue": "Games need about 2,000+ pre-fest wishlists for algorithmic lift. Data from 208 games (Feb 2025): <1k invisible after day 2, 1–2k modest gains, 2k+ momentum possible. Spearman r = 0.825 between pre-fest and in-fest wishlists.",
+      "note": "Chris Zukowski (How To Market A Game) benchmarks.",
+      "source": "https://howtomarketagame.com/2025/03/26/archive-january-2026-benchmarks-how-many-wishlists-can-i-get-from-steam-next-fest/"
+    },
+    {
+      "id": 11,
+      "claim": "Stardew Valley 50M copies (Feb 2026)",
+      "status": "confirmed",
+      "verifiedValue": "50M+ copies, announced by ConcernedApe at the 10th anniversary (Feb 2026); VGChartz logs 50M as of Feb 26 2026 (41M+ in Dec 2024)",
+      "note": "",
+      "source": "https://www.vgchartz.com/game/226110/stardew-valley/summary ; https://www.pcgames.de/Nintendo-Switch-2-Konsolen-280469/News/Update-stardew-valley-bugfixes-verbesserungen-wie-oft-verkauft-1509863/"
+    },
+    {
+      "id": 12,
+      "claim": "'Cozy' in short descriptions of $100k+ Steam games: 0.4% (2022) to 3.1% (2025)",
+      "status": "confirmed",
+      "verifiedValue": "0.4% (2022) to 3.1% (2025) of $100k+ lifetime-revenue games; +675%",
+      "note": "GameDiscoverCo keyword study (top 1,000 keywords in short descriptions), reported Feb 2026.",
+      "source": "https://respawn.outlookindia.com/gaming/gaming-news/steam-vibe-shift-why-cozy-is-the-most-dominant-keyword-of-2026"
+    },
+    {
+      "id": 13,
+      "claim": "Grow a Garden peak ~22M concurrent players",
+      "status": "confirmed",
+      "verifiedValue": "21.6M concurrent (late June 2025, per Roblox via AP), beating Fortnite's 15.2M",
+      "note": "Display as 21.6M. One outlier report of 47M (Aug 2025) was not corroborated and should not be used.",
+      "source": "https://fortune.com/2025/07/30/roblox-video-game-grow-a-garden-viral-summer-hit/"
+    },
+    {
+      "id": 14,
+      "claim": "52.4M US gamers aged 50+, 73% play puzzle games (AARP)",
+      "status": "revised",
+      "verifiedValue": "52.4M confirmed (AARP 2023 study, 2022 data; 45% of 50+). The 73% figure was not found for puzzle games: AARP's 2019 data says 73% played on smartphones/tablets. 2023: 80%+ play on mobile; puzzle, card and word games are the top genres.",
+      "note": "Drop or replace '73% play puzzle games'; it appears to be a misattributed device statistic.",
+      "source": "https://www.aarp.org/research/topics/technology/info-2023/2023-gamers-50-plus.html"
+    },
+    {
+      "id": 15,
+      "claim": "Median 'X Simulator' Steam game grosses ~$70k",
+      "status": "confirmed",
+      "verifiedValue": "Median gross about $70k (median 5–7k copies) for 'X Simulator' games released since July 2023",
+      "note": "Simon Carless / GameDiscoverCo, mid-2024. Supermarket Simulator was the top title ($22.2M at the time).",
+      "source": "https://gameworldobserver.com/2024/07/02/simulator-games-trend-drug-dealer-simulator-2-100k-copies"
+    }
+  ]
+}

@@ -265,10 +265,10 @@
       const X = (m) => x0 + ((x1 - x0) * m) / total;
       const H = padT + tasks.length * rowH + 4;
       const svg = s("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opts.title || "Timeline" });
-      const step = total > 24 ? 6 : 3;
+      const step = total > 24 ? 6 : total > 8 ? 3 : total > 3 ? 1 : 0.5;
       for (let m = 0; m <= total; m += step) {
         svg.appendChild(s("line", { x1: X(m), x2: X(m), y1: padT - 6, y2: H, class: m === 0 ? "axis-line" : "grid-line" }));
-        svg.appendChild(s("text", { x: X(m), y: 12, "text-anchor": "middle" }, "M" + m));
+        svg.appendChild(s("text", { x: X(m), y: 12, "text-anchor": "middle" }, total <= 3 ? "W" + Math.round(m * 4.3) : "M" + m));
       }
       tasks.forEach((t, i) => {
         const y = padT + i * rowH;
@@ -278,7 +278,7 @@
         const color = t.kind === "launch" ? "var(--series-2)" : t.kind === "live" ? "var(--series-3)" : "var(--series-1)";
         const w = Math.max(6, X(t.end) - X(t.start));
         g.appendChild(s("rect", { class: "mark", x: X(t.start) + 1, y: y + 8, width: w - 2, height: rowH - 16, rx: 4, fill: color }));
-        bindTip(g, () => [t.name, `Month ${t.start}–${t.end}`, t.sub]);
+        bindTip(g, () => [t.name, total <= 3 ? `Week ${Math.round(t.start * 4.3)}–${Math.round(t.end * 4.3)}` : `Month ${t.start}–${t.end}`, t.sub]);
         svg.appendChild(g);
       });
       el.appendChild(svg);

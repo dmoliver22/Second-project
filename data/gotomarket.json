@@ -1,0 +1,2815 @@
+{
+  "stack": [
+    {
+      "layer": "Where the link goes",
+      "choice": "Your own one-page site for each game (or one hub site)",
+      "why": "One tap from a video to playing in under 5 seconds on a phone, no login or install. You keep the email list, the Discord invite and the 'get the full version' button.",
+      "confidence": "medium"
+    },
+    {
+      "layer": "Portal",
+      "choice": "Pick one: Poki (web-exclusive; you keep 100% of ad revenue on players you bring, 50% on players Poki brings) or CrazyGames + itch.io (non-exclusive; ~60% of ads, 70% of purchases)",
+      "why": "Portals add their own audience on top of yours. Poki's 7-year web exclusivity doesn't cover Steam or app stores.",
+      "confidence": "high"
+    },
+    {
+      "layer": "Ads",
+      "choice": "Rewarded ads (watch to get a bonus) through the portal SDK, or Google H5 Games Ads on your own site",
+      "why": "Rewarded ads are opt-in, so they don't break the cozy mood. Expect small numbers: web eCPMs run ~$15–28 in the US and $1–3 in emerging markets (low-confidence estimates).",
+      "confidence": "low"
+    },
+    {
+      "layer": "The paid version",
+      "choice": "An expanded version on Steam (and later Switch) at $3–15 for games that catch on",
+      "why": "Free web game → paid version is proven (shapez: 10M+ demo players → 650k+ Steam copies; Cookie Clicker, A Dark Room, Vampire Survivors). Cozy players pay for premium.",
+      "confidence": "medium"
+    },
+    {
+      "layer": "Payments on the web",
+      "choice": "itch.io (you set its cut, default 10%) or a merchant of record like Paddle (5% + $0.50) for premium unlocks",
+      "why": "A merchant of record handles sales tax and VAT for you.",
+      "confidence": "high"
+    },
+    {
+      "layer": "Upside platforms",
+      "choice": "Apply to YouTube Playables, TikTok Minis and Discord Activities once a game has traction",
+      "why": "They let players start inside the app they're already in, but all three are invite or partner-gated.",
+      "confidence": "high"
+    },
+    {
+      "layer": "Tracking",
+      "choice": "UTM links per platform and per video, plus play, return and revenue analytics on the site",
+      "why": "Nobody publishes a views → clicks → plays benchmark for game links. You have to measure your own.",
+      "confidence": "medium"
+    }
+  ],
+  "loop": [
+    {
+      "step": "Pick a verb",
+      "detail": "One satisfying action (merge, tidy, decorate, fish, pour) that reads in a 5-second clip.",
+      "gate": "You can describe the game in one sentence a stranger repeats back."
+    },
+    {
+      "step": "Prototype in days",
+      "detail": "Ugly but playable on a phone browser. Use AI for the code; keep the look human-directed.",
+      "gate": "Playable on a phone in under a week."
+    },
+    {
+      "step": "Clip-test",
+      "detail": "Post 3–5 short clips of the core action on TikTok, Shorts and Reels before polishing.",
+      "gate": "Saves and shares beat your channel average; comments ask where to play."
+    },
+    {
+      "step": "Ship the web v1",
+      "detail": "Phone-perfect, instant start, a shareable result, email capture.",
+      "gate": "Players come back the next day (track it)."
+    },
+    {
+      "step": "Grow or kill",
+      "detail": "Double down on the one game in five that pulls; archive the rest without regret.",
+      "gate": "Plays and returns keep rising for 2–4 weeks."
+    },
+    {
+      "step": "Graduate",
+      "detail": "Winners get an expanded paid version (Steam/Switch), a devlog series, and daily or seasonal content.",
+      "gate": "Enough players and followers to launch to (e.g. a few thousand wishlists)."
+    }
+  ],
+  "platforms": [
+    {
+      "name": "Poki",
+      "type": "web portal",
+      "audience": "~90M monthly players (Poki blog, Jul 2025); 100M MAU and 625M players in 2025 reported Mar 2026; 1B gameplays in one month",
+      "audienceNumeric": 100000000,
+      "revShare": "50/50 on traffic Poki brings; 100% to developer on traffic the developer brings (e.g. players who arrive via your own link/search for the title)",
+      "requirements": "HTML5/WebGL build with Poki SDK (gameplayStart/stop, commercialBreak, rewardedBreak); curated - Poki selects games after submission/playtest; mobile + desktop support expected; small fast-loading builds",
+      "exclusivity": "Preferred deal is Web Exclusive (only Poki on the open web) for 7 years by default; Steam, app stores and consoles are excluded from exclusivity. Non-exclusive = one-time flat license fee, no rev share",
+      "linkFromSocial": "Excellent: poki.com/en/g/<game> loads in browser in seconds, no login, no install, mobile-friendly. Because developer-referred traffic earns 100%, a TikTok/YouTube link straight to the Poki page is unusually lucrative. Caveat: Poki page shows other games (players can drift)",
+      "monetization": [
+        "Interstitial (commercialBreak) ads",
+        "Rewarded ads (rewardedBreak)",
+        "No IAP/premium unlock in standard deal",
+        "Exclusivity still allows paid Steam/mobile version"
+      ],
+      "cozyFit": "Medium. Top hits skew .io, obby, driving, puzzle, idle and merge; cozy puzzle/idle/merge/decorating fit if sessions are short and rewarded-ad hooks exist. Long narrative cozy games underperform",
+      "bestFor": "Ad-funded free web version with maximum reach; route your own social traffic here for 100% share",
+      "caseStudies": [
+        {
+          "game": "Emolingo Games portfolio (incl. Rainbow Obby)",
+          "result": "All 8 Poki games >10M plays; two >75M; Rainbow Obby 100M gameplays; ~3 months dev per title",
+          "source": "https://poki.com/blog/how-emolingo-games-built-business-html5-web-games-poki"
+        },
+        {
+          "game": "Top Poki studios (aggregate)",
+          "result": "Top studios earn up to ~EUR 1M/year; 600+ studios in network",
+          "source": "https://app.cinevva.com/guides/publish-game-poki"
+        }
+      ],
+      "risks": "Curated - acceptance not guaranteed; 7-year web exclusivity blocks CrazyGames/itch web/own-domain ad version; no IAP; revenue depends on Poki featuring",
+      "sources": [
+        "https://sdk.poki.com/deals",
+        "https://poki.com/blog/how-emolingo-games-built-business-html5-web-games-poki",
+        "https://www.cbinsights.com/company/poki",
+        "https://app.cinevva.com/guides/publish-game-poki"
+      ],
+      "confidence": "high (rev share/exclusivity from sdk.poki.com); medium (100M MAU)"
+    },
+    {
+      "name": "CrazyGames",
+      "type": "web portal",
+      "audience": "Developer portal claims 50M+ monthly players (earlier: ~30-35M); Google case study: ~30M monthly uniques playing ~300M games",
+      "audienceNumeric": 50000000,
+      "revShare": "~60% of ad revenue (50-70% depending on performance) and 70% of IAP to developer; payout via Tipalti, EUR 100 minimum",
+      "requirements": "HTML5/WebGL; initial download <=50MB (<=20MB for mobile homepage eligibility), total <=250MB, <=1500 files; CrazyGames SDK required for Full Launch (monetized); QA review 1-2 days; Basic Launch = no SDK, no revenue",
+      "exclusivity": "None required (free to publish)",
+      "linkFromSocial": "Excellent: instant browser play, no login required (optional CrazyGames account for cloud saves), mobile web supported if under size limits",
+      "monetization": [
+        "Interstitial/video ads via SDK",
+        "Rewarded ads",
+        "Banner ads",
+        "IAP via Xsolla for invited games (70% share)"
+      ],
+      "cozyFit": "Medium. Same casual mix as Poki; open submission makes it the easiest major portal to test a cozy game",
+      "bestFor": "Non-exclusive portal reach with ads + IAP; good first portal if Poki exclusivity is unwanted",
+      "caseStudies": [
+        {
+          "game": "CrazyGames platform (aggregate)",
+          "result": "Pays out 'millions of euros' to developers annually; 99% of its revenue is ads",
+          "source": "https://www.google.com/ads/publisher/stories/crazy_games/"
+        }
+      ],
+      "risks": "Ad revenue share can drop to 50% for low performers; Basic Launch earns nothing; discovery competitive",
+      "sources": [
+        "https://docs.crazygames.com/requirements/technical",
+        "https://docs.crazygames.com/requirements/intro/",
+        "https://start-it-x.prezly.com/crazygames-launches-new-developer-portal-with-revenue-share-options",
+        "https://www.google.com/ads/publisher/stories/crazy_games/",
+        "https://app.cinevva.com/guides/publish-game-crazygames"
+      ],
+      "confidence": "high (tech limits from docs.crazygames.com); medium (rev share, audience)"
+    },
+    {
+      "name": "itch.io",
+      "type": "storefront",
+      "audience": null,
+      "audienceNumeric": null,
+      "revShare": "Open revenue sharing: developer chooses itch.io's cut 0-100%, default 10% (plus payment processor fees)",
+      "requirements": "Upload ZIP with index.html as 'HTML' project for in-browser play; any web engine (Godot, Unity WebGL, Phaser, etc.); downloadable builds also supported",
+      "exclusivity": "None",
+      "linkFromSocial": "Good: itch page with embedded web build plays without login; mobile support depends on build and embed settings; 'Run game' click needed; less polished on phones than portals",
+      "monetization": [
+        "Paid download/premium",
+        "Pay-what-you-want with $0 minimum (donations)",
+        "Paid web game unlock via purchase",
+        "Devlogs / community",
+        "No built-in ads"
+      ],
+      "cozyFit": "High. Strong cozy/indie/jam community; good home for a free web demo + paid full version",
+      "bestFor": "Free web demo with PWYW tip jar, selling a premium desktop build, and testing ideas in game jams",
+      "caseStudies": [
+        {
+          "game": "Small indie dev (forum self-report)",
+          "result": "5 yrs: 63,537 pageviews, 13,761 browser plays, 6,760 downloads, $19.99 donations - free web games rarely monetize via tips",
+          "source": "https://itch.io/post/5702228"
+        },
+        {
+          "game": "Vampire Survivors",
+          "result": "Browser version on itch.io as free trial; full game $3 on Steam, became breakout hit",
+          "source": "https://howtomarketagame.com/2022/01/31/vampire-survivors-success-an-opportunity-in-the-steam-marketplace/"
+        }
+      ],
+      "risks": "Little organic traffic; donations on free content are tiny; payments/ payouts subject to itch.io holds and tax forms",
+      "sources": [
+        "https://www.gamedeveloper.com/business/itch-io-launches-open-revenue-sharing",
+        "https://docs.monogame.net/articles/tutorials/building_2d_games/26_publish_to_itch/",
+        "https://itch.io/post/5702228"
+      ],
+      "confidence": "high (rev share); low (donation case study)"
+    },
+    {
+      "name": "Newgrounds",
+      "type": "web portal",
+      "audience": null,
+      "audienceNumeric": null,
+      "revShare": "Revenue program shares ad revenue from your pages and in-game ads; exact % not published in sources found; paid NET 30",
+      "requirements": "HTML5 upload; Newgrounds.io API supports HTML5, Unity, Godot, GameMaker, Construct, GDevelop, Stencyl, Scratch (medals, scoreboards, cloud saves)",
+      "exclusivity": "None",
+      "linkFromSocial": "Good on desktop (instant play, no login); mobile experience inconsistent",
+      "monetization": [
+        "Ad revenue share",
+        "Supporter-driven community"
+      ],
+      "cozyFit": "Low-medium: audience skews toward action, comedy, animation and edgier content; cozy games get less traction",
+      "bestFor": "Community feedback, legacy Flash-portal audience; minor revenue",
+      "caseStudies": [],
+      "risks": "Small revenue; skewed audience; numbers undisclosed",
+      "sources": [
+        "https://newgrounds.wiki.gg/wiki/Newgrounds_API",
+        "https://app.cinevva.com/guides/web-game-monetization"
+      ],
+      "confidence": "low"
+    },
+    {
+      "name": "GameDistribution / GameMonetize / Playgama (syndication networks)",
+      "type": "web portal",
+      "audience": "Syndicate one build to thousands of third-party game sites; Playgama claims 220M MAU reach across partner sites",
+      "audienceNumeric": null,
+      "revShare": "GameMonetize: 45% to developer; GameDistribution: % in T&C, not advertised; Playgama: up to 50% of ads + IAP (Bridge SDK route cited at 80% for some platforms)",
+      "requirements": "HTML5 build + network SDK for ads; Playgama Bridge is an open-source SDK that ports one integration to many platforms (Poki, CrazyGames, Yandex, etc.)",
+      "exclusivity": "Typically non-exclusive (conflicts with Poki web exclusivity)",
+      "linkFromSocial": "Poor as a link target - your game is scattered across many sites you don't control; better as a passive long-tail channel",
+      "monetization": [
+        "Ads via network SDK (interstitial, rewarded)",
+        "IAP (Playgama)"
+      ],
+      "cozyFit": "Medium - same casual mix",
+      "bestFor": "Long-tail passive revenue after a game has peaked elsewhere",
+      "caseStudies": [],
+      "risks": "Low share; clone-heavy ecosystem; your game ends up on low-quality sites; no audience relationship",
+      "sources": [
+        "https://app.cinevva.com/guides/web-game-monetization",
+        "https://playgama.com/blog/?p=14174",
+        "https://wnhub.io/news/other/item-46427",
+        "https://gdevelop.io/blog/playgama-spotlight-empowering-web-games"
+      ],
+      "confidence": "low-medium"
+    },
+    {
+      "name": "Yandex Games",
+      "type": "web portal",
+      "audience": "~50M monthly active players (2025), CIS-heavy but multilingual",
+      "audienceNumeric": 50000000,
+      "revShare": "Not found in sources (ads + IAP rev share)",
+      "requirements": "HTML5 + Yandex Games SDK; localization recommended",
+      "exclusivity": "None found",
+      "linkFromSocial": "OK - instant browser play, but Russian-centric UX/payments; poor fit for a Western TikTok audience",
+      "monetization": [
+        "Ads",
+        "IAP (developer IAP revenue +75% YoY in 2025)"
+      ],
+      "cozyFit": "Medium",
+      "bestFor": "Extra long-tail distribution via Playgama Bridge",
+      "caseStudies": [],
+      "risks": "Sanctions/payout complexity for Western devs; low eCPMs",
+      "sources": [
+        "https://yandex.com/dev/games/doc/en",
+        "https://wnhub.io/news/monetization/item-47819"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "YouTube Playables",
+      "type": "social mini-games",
+      "audience": "Rolled out to YouTube's ~2.49B MAU base in 50+ markets; individual hits show 90-106M plays (e.g. Tall Man Run 106M)",
+      "audienceNumeric": null,
+      "revShare": "Revenue sharing is a pilot with selected publishers only; percentage not public; per-game revenue reported monthly (15th), daily total with 48h delay",
+      "requirements": "Invite/early access via Interest Form (only finished/playable games accepted); HTML5 + Playables SDK; initial bundle <30MiB (recommend <15MiB), total <=250MiB, single file <=30MiB, <8,000 files; certification review",
+      "exclusivity": "None stated",
+      "linkFromSocial": "Best-in-class in theory: game lives inside YouTube, so Shorts/long-form viewers never leave the app. But no guaranteed way to link a specific Playable from your Short, and indie access is gated",
+      "monetization": [
+        "Ads (pilot rev share)",
+        "No IAP documented for general devs"
+      ],
+      "cozyFit": "Medium-high for short-session puzzle/merge/idle; current catalog dominated by hypercasual ports from large publishers",
+      "bestFor": "Upside bet - apply via Interest Form once a polished HTML5 build exists; do not depend on it",
+      "caseStudies": [
+        {
+          "game": "Tall Man Run / Build A Queen / Snake Clash / Stealth Master",
+          "result": "90M-106M plays each on Playables",
+          "source": "https://mobilegamer.biz/youtube-has-quietly-rolled-out-playables-across-europe/"
+        }
+      ],
+      "risks": "Gatekept, pilot-only monetization, opaque revenue, no direct link-to-game guarantee",
+      "sources": [
+        "https://developers.google.com/youtube/gaming/playables/reference/monetization",
+        "https://developers.google.com/youtube/gaming/playables/support/faq",
+        "https://playables.in/youtube-playables-game-size-limit-developer-guide/",
+        "https://mobilegamer.biz/youtube-has-quietly-rolled-out-playables-across-europe/"
+      ],
+      "confidence": "high (monetization pilot status, official docs); medium (size limits via secondary guide)"
+    },
+    {
+      "name": "TikTok Minis / Mini Games",
+      "type": "social mini-games",
+      "audience": "Inside TikTok (1B+ users); available regions incl. US, Japan, Indonesia, Thailand, Philippines, Vietnam, Malaysia, Brazil, Saudi Arabia, Turkey; ~1,300 mini games reported (Indonesia press)",
+      "audienceNumeric": null,
+      "revShare": "Not public. Developers earn from in-app ads and IAP/one-time purchases; TikTok 'Growth Max' ad product sells user acquisition into Mini Games",
+      "requirements": "Approved partners only (point of contact assigned); register app on TikTok for Developers; Mini Games JS SDK (login, payments, rewarded ads, lifecycle); US launch requires TikTok approval; some regions require licenses (e.g. Vietnam G1)",
+      "exclusivity": "None found",
+      "linkFromSocial": "Ideal if accepted: player taps from a TikTok video/anchor straight into the game without leaving TikTok, no install. Outside Minis, a bio link opens TikTok's in-app browser - works fine for an instant web game",
+      "monetization": [
+        "Rewarded ads",
+        "In-app ads",
+        "IAP / one-time purchase / subscriptions"
+      ],
+      "cozyFit": "Medium - short-session casual dominates",
+      "bestFor": "Future upside; apply once a game has traction. Meanwhile use a TikTok business account bio link (no 1,000-follower gate) to a web build",
+      "caseStudies": [],
+      "risks": "Partner-gated; rev share opaque; regulatory/US TikTok ownership uncertainty",
+      "sources": [
+        "https://developers.tiktok.com/docs/en/monetization-overview",
+        "https://developers.tiktok.com/doc/mini-games-sdk-overview",
+        "https://developers.tiktok.com/docs/en/minis-preparation-stage",
+        "https://ads.tiktok.com/help/article/about-tiktok-mini-games",
+        "https://www.medcom.id/teknologi/news-teknologi/GNGG1WAN-tiktok-punya-1-300-mini-game-bidik-peluang-baru-iklan-dan-monetisasi"
+      ],
+      "confidence": "high (SDK/approval from developers.tiktok.com); low (catalog size)"
+    },
+    {
+      "name": "Discord Activities",
+      "type": "chat platform",
+      "audience": "Discord 200M+ MAU; apps used by 25%+ of MAU",
+      "audienceNumeric": 200000000,
+      "revShare": "Discord platform fee 15% on first $1M cumulative gross (Growth tier, since Jun 2024), then 30%; purchases must be offered via Discord Premium Apps at price no higher than elsewhere",
+      "requirements": "Web app (HTML5) via Embedded App SDK, runs in iframe in voice channels/DMs; open to all developers since 2024",
+      "exclusivity": "None",
+      "linkFromSocial": "Medium: requires Discord account and launching inside a server/voice call; a TikTok viewer can't one-tap into it. Works best for multiplayer/social cozy games with a community server",
+      "monetization": [
+        "IAP / one-time purchases (SKUs)",
+        "Subscriptions",
+        "Store page"
+      ],
+      "cozyFit": "High for social cozy (farm/merge played together in voice)",
+      "bestFor": "A social/co-op cozy game with community; second platform after the web version",
+      "caseStudies": [
+        {
+          "game": "Farm Merge Valley (CoolGames)",
+          "result": "Six-figure revenue in first month on Discord; #1 game on Discord; 400K+ active players across Facebook+Discord; 230K+ community server",
+          "source": "https://discord.com/developer-case-studies/farm-merge-valley"
+        },
+        {
+          "game": "Death by AI (Playroom)",
+          "result": "~700K peak DAU, ~7M players within weeks",
+          "source": "https://discord.com/blog/build-where-the-world-plays"
+        }
+      ],
+      "risks": "Login + server friction from social links; discoverability inside Discord app directory",
+      "sources": [
+        "https://discord.com/developer-case-studies/farm-merge-valley",
+        "https://gigazine.net/gsc_news/en/20240607-discord-monetization-terms",
+        "https://discord.com/blog/feast-your-moniteyes-on-todays-exciting-developer-updates",
+        "https://support-dev.discord.com/hc/en-us/articles/23810643331735"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Reddit (Devvit interactive posts)",
+      "type": "UGC platform",
+      "audience": null,
+      "audienceNumeric": null,
+      "revShare": "Developer Funds 2025 (Apr 1-Dec 31 2025) paid by engagement tiers: 500 daily qualified engagers=$500 ... 1M=$75,000; up to $116,500/app. 2026 continuation not verified",
+      "requirements": "Devvit web (HTML5) app/post; Reddit hackathons with Phaser ($40K prize pool, Jun 2026)",
+      "exclusivity": "None",
+      "linkFromSocial": "Good: a Reddit post link opens the game inline in the post; login needed to save/interact",
+      "monetization": [
+        "Developer Funds engagement payouts",
+        "Reddit Gold in apps (pilot)"
+      ],
+      "cozyFit": "Medium-high (daily puzzle/cozy loop posts do well; Farm Merge Valley got a Reddit version)",
+      "bestFor": "Extra channel for a daily-puzzle/cozy loop",
+      "caseStudies": [
+        {
+          "game": "Farm Merge Valley",
+          "result": "Reddit version announced Jul 2025",
+          "source": "https://automaton-media.com/articles/newsjp/farm-merge-valley-20250731-351436/"
+        }
+      ],
+      "risks": "Funds program time-limited; Reddit-specific build",
+      "sources": [
+        "https://phaser.io/news/2026/06/reddit-and-phaser-launch-a-40-000-game-dev-hackathon",
+        "https://tourism-pro-counties-prototype.trycloudflare.com/docs/blog/2025/12/18/november-payouts"
+      ],
+      "confidence": "low (tiers seen only on a mirror of Reddit dev docs)"
+    },
+    {
+      "name": "Telegram Mini Apps",
+      "type": "chat platform",
+      "audience": "Telegram ~1B users; Hamster Kombat reportedly 239M users mid-2024",
+      "audienceNumeric": null,
+      "revShare": "Telegram takes no commission, but Stars are bought via Apple/Google (30%); effective take e.g. $2.40 purchase -> ~$1.30 to developer",
+      "requirements": "Web app (HTML5) launched via bot/link; Stars for digital goods",
+      "exclusivity": "None",
+      "linkFromSocial": "Medium: t.me link opens instantly only if the viewer has Telegram installed + logged in; poor for a Western TikTok audience",
+      "monetization": [
+        "Telegram Stars IAP",
+        "Ads (third-party networks)"
+      ],
+      "cozyFit": "Low-medium; ecosystem dominated by crypto tap-to-earn",
+      "bestFor": "Not a priority for a Western cozy audience",
+      "caseStudies": [
+        {
+          "game": "Hamster Kombat",
+          "result": "Reported 239M users by mid-2024 (crypto-driven)",
+          "source": "https://mobileecosystemforum.com/2026/02/24/telegrams-gaming-have-indie-games-found-a-new-love/"
+        }
+      ],
+      "risks": "Crypto-speculation audience, poor Stars payout, regional skew",
+      "sources": [
+        "https://mobileecosystemforum.com/2026/02/24/telegrams-gaming-have-indie-games-found-a-new-love/",
+        "https://www.theblock.co/amp/post/298954/telegram-launches-digital-mini-app-payment-system-telegram-stars"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Facebook Instant Games",
+      "type": "social mini-games",
+      "audience": "Facebook casual gaming audience (250M+ monthly players claimed by third party); growth slowed since 2018-20",
+      "audienceNumeric": null,
+      "revShare": "IAP 70/30 to developer on web; Android: developer gets 100% after Google's 30%; Audience Network ads share not disclosed",
+      "requirements": "HTML5 + Instant Games SDK; new games since Aug 1 2025 must use 'Zero Permissions' connection; legacy Facebook Web Games (canvas) sunset Sep 30 2026",
+      "exclusivity": "None",
+      "linkFromSocial": "Medium: fb.gg link plays instantly for logged-in Facebook users; poor for TikTok viewers without FB login",
+      "monetization": [
+        "Audience Network ads (rewarded > interstitial > banner)",
+        "IAP"
+      ],
+      "cozyFit": "Medium-high: older casual audience likes merge/farm/word/puzzle (Farm Merge Valley started here)",
+      "bestFor": "Secondary port for merge/farm cozy games",
+      "caseStudies": [
+        {
+          "game": "Farm Merge Valley",
+          "result": "Combined 400K+ active players across Facebook + Discord",
+          "source": "https://discord.com/developer-case-studies/farm-merge-valley"
+        }
+      ],
+      "risks": "Platform in managed decline; policy churn (Zero Permissions); legacy Web Games ended Sep 30 2026",
+      "sources": [
+        "https://developers.facebook.com/blog/post/2025/07/31/web-and-instant-games-changes/",
+        "https://ppc.land/meta-announces-web-games-sunset-by-september-2026/",
+        "https://developers.facebook.com/documentation/games/monetize/in-app-ads/overview",
+        "https://pocketgamer.biz/news/68022/in-app-purchases-come-to-facebook-instant-games/"
+      ],
+      "confidence": "high (policy changes); medium (audience)"
+    },
+    {
+      "name": "Roblox",
+      "type": "UGC platform",
+      "audience": "123M DAU Q2 2026 (down from 152M peak Q3 2025, +10% YoY)",
+      "audienceNumeric": 123000000,
+      "revShare": "Developer cashes out Robux via DevEx at ~$0.0035/Robux (one source notes a Sept 2025 adjustment - verify current rate); effective share of consumer spend is low (~25-30%)",
+      "requirements": "Must rebuild in Roblox Studio (Luau) - cannot reuse a web build; DevEx needs age/verification thresholds",
+      "exclusivity": "Game exists only on Roblox",
+      "linkFromSocial": "Medium-poor: link opens roblox.com experience page; needs Roblox app install + account on mobile; kids/teen audience already has it",
+      "monetization": [
+        "Game passes / developer products (Robux)",
+        "Premium payouts (engagement)",
+        "Rewarded video ads (Roblox ads)",
+        "Subscriptions"
+      ],
+      "cozyFit": "High for social cozy (pet sims, cafe/roleplay, gardening like Grow a Garden-type hits) but hyper-competitive",
+      "bestFor": "Only if building specifically for Roblox's young audience",
+      "caseStudies": [
+        {
+          "game": "Creator economy (aggregate)",
+          "result": "Top 10 creators avg $65.7M, top 1,000 avg $1.4M, median creator ~$1,500 (12 months to Jun 30 2026); total DevEx ~$1.5B in 2025",
+          "source": "https://www.dexerto.com/roblox/robloxs-top-creators-average-65-7-million-a-year-but-most-make-far-less-3408675/"
+        }
+      ],
+      "risks": "Separate codebase; extreme hit-driven distribution; young audience; low per-Robux payout",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/0001315098/000162828026051059/ex991-robloxq22026earnin.htm",
+        "https://create.roblox.com/docs/production/monetization/developer-exchange",
+        "https://www.dexerto.com/roblox/robloxs-top-creators-average-65-7-million-a-year-but-most-make-far-less-3408675/",
+        "https://statista.com/statistics/1376672/roblox-developer-payout"
+      ],
+      "confidence": "high (DAU, SEC); medium (DevEx rate)"
+    },
+    {
+      "name": "Steam (free web demo -> paid Steam, Steam demo, Playtest)",
+      "type": "storefront",
+      "audience": null,
+      "audienceNumeric": null,
+      "revShare": "Valve takes 30% up to $10M per game, 25% $10-50M, 20% above; $100 Steam Direct fee per game (recouped after $1,000 AGR)",
+      "requirements": "Desktop build (Windows/Mac/Linux, Steam Deck); store page live well before launch to collect wishlists; demos and Steam Playtest (free sign-up beta) available",
+      "exclusivity": "None (web version on Poki/itch allowed; Poki exclusivity explicitly excludes Steam)",
+      "linkFromSocial": "Poor for instant play (needs Steam account + client + download) but best for monetizing cozy fans: link 'Play free in browser' first, then 'Wishlist on Steam' in-game and in descriptions",
+      "monetization": [
+        "Premium price (cozy indies typically $5-20)",
+        "DLC",
+        "Soundtrack"
+      ],
+      "cozyFit": "Very high - cozy is a strong Steam niche",
+      "bestFor": "The paid tier of the funnel; wishlists from web players drive launch visibility",
+      "caseStudies": [
+        {
+          "game": "shapez",
+          "result": "Free browser demo at shapez.io drew 10M+ players; Steam version sold 650K+ units",
+          "source": "https://wnhub.io/news/analytics/item-3862"
+        },
+        {
+          "game": "Cookie Clicker",
+          "result": "Free in browser 8 years, Steam launch Sep 2021 hit ~60K concurrent players",
+          "source": "https://www.pcgamesn.com/cookie-clicker/player-count"
+        }
+      ],
+      "risks": "Install friction; 30% cut; needs wishlist build-up; web version must leave a reason to buy",
+      "sources": [
+        "https://presskit.gg/field-guides/how-much-does-steam-take",
+        "https://fungies.io/steam-revenue-share-explained/",
+        "https://howtomarketagame.com/2026/06/30/nobody-plays-demos-and-that-is-ok/"
+      ],
+      "confidence": "high (fees); medium (case studies)"
+    },
+    {
+      "name": "Apple App Store / Google Play",
+      "type": "app store",
+      "audience": "Billions of devices",
+      "audienceNumeric": null,
+      "revShare": "Apple Small Business Program: 15% if <$1M proceeds prior year, else 30%; Google Play similarly 15% on first $1M (not verified in this search)",
+      "requirements": "Native or wrapped build (Capacitor/Unity/Godot export), Apple developer account, review process",
+      "exclusivity": "None",
+      "linkFromSocial": "Weakest instant path: store page then install; games convert only ~8.7% of App Store page visitors and ~17.9% on Google Play (US 2025)",
+      "monetization": [
+        "Premium",
+        "IAP",
+        "Rewarded/interstitial ads (AdMob, AppLovin)",
+        "Subscriptions"
+      ],
+      "cozyFit": "High (cozy mobile market large) but UA-cost-driven",
+      "bestFor": "Later port after web traction proves the game",
+      "caseStudies": [],
+      "risks": "Install friction kills social-link conversion; review/policy overhead; paid UA economics",
+      "sources": [
+        "https://apple.com/newsroom/2020/11/apple-announces-app-store-small-business-program",
+        "https://www.apptweak.com/en/aso-blog/average-app-conversion-rate-per-category-2019",
+        "https://maf.ad/en/blog/mobile-game-conversion-rates/"
+      ],
+      "confidence": "high (Apple fee); medium (conversion)"
+    },
+    {
+      "name": "Self-hosted web game on own domain (PWA) with ads",
+      "type": "self-hosted",
+      "audience": "Only the traffic you bring (social + SEO)",
+      "audienceNumeric": null,
+      "revShare": "Google H5 Games Ads (AdSense, Ad Placement API): standard AdSense publisher share (AdSense content is 68% to publisher - not verified in this search); AdinPlay/Venatus: undisclosed, aimed at established portals",
+      "requirements": "Host HTML5 build (Cloudflare Pages/Netlify/GitHub Pages); H5 Games Ads requires owning an H5 games site and AdSense approval/policy compliance (sites with too little content get rejected); PWA manifest for 'Add to Home Screen'",
+      "exclusivity": "Conflicts with Poki web exclusivity if same game",
+      "linkFromSocial": "Best control: one-tap to your domain, instant, no login, add email capture + Steam wishlist button + share link; you own the player relationship",
+      "monetization": [
+        "H5 Games Ads interstitial + rewarded (Ad Placement API)",
+        "Premium unlock via Stripe/Paddle/itch",
+        "Cosmetic IAP",
+        "Email list -> Steam/mobile launch"
+      ],
+      "cozyFit": "High - full control over pacing; can sell 'full version' or cosmetics to cozy fans who dislike ads",
+      "bestFor": "Owning the funnel from TikTok/YouTube; pairing ads with a paid unlock",
+      "caseStudies": [
+        {
+          "game": "shapez.io",
+          "result": "Self-hosted web demo -> 10M+ players -> 650K+ Steam units",
+          "source": "https://wnhub.io/news/analytics/item-3862"
+        }
+      ],
+      "risks": "AdSense approval uncertain and low fill/eCPM at small scale; you pay hosting/bandwidth; no platform discovery",
+      "sources": [
+        "https://adsense.google.com/start/h5-games-ads/",
+        "https://developers.google.com/ad-placement/docs/beta",
+        "https://adinplay.com",
+        "https://www.venatus.com/publishers/browser-game-monetization"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "adBenchmarks": [
+    {
+      "metric": "Web game eCPM, United States",
+      "value": "$15-28",
+      "numeric": null,
+      "source": "https://app.cinevva.com/guides/web-game-monetization",
+      "confidence": "low"
+    },
+    {
+      "metric": "Web game eCPM, EU",
+      "value": "$8-15",
+      "numeric": null,
+      "source": "https://app.cinevva.com/guides/web-game-monetization",
+      "confidence": "low"
+    },
+    {
+      "metric": "Web game eCPM, Tier 3 (India, Brazil)",
+      "value": "$1-3",
+      "numeric": null,
+      "source": "https://app.cinevva.com/guides/web-game-monetization",
+      "confidence": "low"
+    },
+    {
+      "metric": "Rewarded video eCPM US Android (mobile)",
+      "value": "$16.49",
+      "numeric": 16.49,
+      "source": "https://www.applixir.com/?p=3187",
+      "confidence": "low"
+    },
+    {
+      "metric": "Rewarded video eCPM US iOS (mobile)",
+      "value": "$19.63",
+      "numeric": 19.63,
+      "source": "https://www.applixir.com/?p=3187",
+      "confidence": "low"
+    },
+    {
+      "metric": "Rewarded video eCPM Western Europe",
+      "value": "~$3-7",
+      "numeric": null,
+      "source": "https://blog.playio.co/rewarded-ad-benchmarks-2026",
+      "confidence": "low"
+    },
+    {
+      "metric": "Rewarded video eCPM emerging markets (LatAm/SEA)",
+      "value": "$1-3",
+      "numeric": null,
+      "source": "https://blog.playio.co/rewarded-ad-benchmarks-2026",
+      "confidence": "low"
+    },
+    {
+      "metric": "Rewarded video completion rate",
+      "value": ">95% (opt-in)",
+      "numeric": 0.95,
+      "source": "https://blog.playio.co/rewarded-ad-benchmarks-2026",
+      "confidence": "low"
+    },
+    {
+      "metric": "Typical monthly earnings, well-performing casual game on major portal",
+      "value": "$200-2,000/month",
+      "numeric": null,
+      "source": "https://app.cinevva.com/guides/web-game-monetization",
+      "confidence": "low"
+    },
+    {
+      "metric": "Realistic first web game on Poki",
+      "value": "$500-3,000/month",
+      "numeric": null,
+      "source": "https://app.cinevva.com/guides/publish-game-poki",
+      "confidence": "low"
+    },
+    {
+      "metric": "Top Poki studios annual revenue",
+      "value": "up to EUR 1M/year",
+      "numeric": 1000000,
+      "source": "https://app.cinevva.com/guides/publish-game-poki",
+      "confidence": "medium"
+    },
+    {
+      "metric": "Revenue per 1,000 plays (web portal)",
+      "value": "No reliable public benchmark found; derive as (ads per play x eCPM x dev share). E.g. 1.5 ads/play x $5 blended eCPM x 50% = ~$3.75 per 1,000 plays (illustrative, not sourced)",
+      "numeric": null,
+      "source": "",
+      "confidence": "low"
+    },
+    {
+      "metric": "Portal developer revenue shares",
+      "value": "itch.io 90% default; CrazyGames 60% ads/70% IAP; Poki 50% (100% own traffic); GameMonetize 45%",
+      "numeric": null,
+      "source": "https://app.cinevva.com/guides/web-game-monetization",
+      "confidence": "medium"
+    }
+  ],
+  "webPayments": [
+    {
+      "option": "itch.io payments",
+      "fees": "Developer-chosen itch cut 0-100% (default 10%) + processor fees; itch can act as collector of tax",
+      "notes": "Easiest premium unlock / PWYW for web builds; no ads",
+      "source": "https://www.gamedeveloper.com/business/itch-io-launches-open-revenue-sharing"
+    },
+    {
+      "option": "Stripe (processor)",
+      "fees": "2.9% + $0.30 per US card; Stripe Tax +0.5%",
+      "notes": "You are merchant of record - must handle VAT/sales tax yourself",
+      "source": "https://dodopayments.com/blogs/paddle-vs-stripe"
+    },
+    {
+      "option": "Stripe Managed Payments (MoR)",
+      "fees": "3.5% on top of standard fees (~6.4% + $0.30 domestic)",
+      "notes": "MoR for digital goods since April 2026; handles tax",
+      "source": "https://support.stripe.com/questions/managed-payments-pricing"
+    },
+    {
+      "option": "Paddle (MoR)",
+      "fees": "5% + $0.50",
+      "notes": "Handles global tax; check game/digital content eligibility",
+      "source": "https://dodopayments.com/blogs/paddle-vs-stripe"
+    },
+    {
+      "option": "Xsolla (MoR, games-specific)",
+      "fees": "~5% + 'cost of channel' (undefined); all-in not public",
+      "notes": "Used by CrazyGames for IAP; web shops, many local payment methods",
+      "source": "https://dodopayments.com/blogs/xsolla-alternatives/"
+    },
+    {
+      "option": "Discord Premium Apps",
+      "fees": "15% on first $1M then 30%",
+      "notes": "Only inside Discord Activities",
+      "source": "https://gigazine.net/gsc_news/en/20240607-discord-monetization-terms"
+    },
+    {
+      "option": "Telegram Stars",
+      "fees": "0% Telegram, but Stars bought via Apple/Google 30%; ~54% effective payout in example",
+      "notes": "Telegram-only",
+      "source": "https://mobileecosystemforum.com/2026/02/24/telegrams-gaming-have-indie-games-found-a-new-love/"
+    }
+  ],
+  "webToPaidFunnels": [
+    {
+      "game": "shapez",
+      "path": "Free browser demo on shapez.io -> paid Steam version",
+      "result": "10M+ demo players; 650K+ Steam units; reported $1M+ revenue early",
+      "source": "https://wnhub.io/news/analytics/item-3862",
+      "confidence": "medium"
+    },
+    {
+      "game": "Cookie Clicker",
+      "path": "Free browser game for 8 years -> paid Steam release (achievements, cloud saves, extra content)",
+      "result": "~60K concurrent players at Steam launch (Sep 2021)",
+      "source": "https://www.pcgamesn.com/cookie-clicker/player-count",
+      "confidence": "medium"
+    },
+    {
+      "game": "Vampire Survivors",
+      "path": "Free browser version on itch.io -> $3 Steam early access",
+      "result": "Launched with ~90 wishlists, became a breakout hit",
+      "source": "https://howtomarketagame.com/2022/01/31/vampire-survivors-success-an-opportunity-in-the-steam-marketplace/",
+      "confidence": "medium"
+    },
+    {
+      "game": "Farm Merge Valley (CoolGames)",
+      "path": "Facebook Instant Games -> Discord Activity (IAP) -> Reddit version",
+      "result": "Six-figure revenue first month on Discord; 400K+ active players",
+      "source": "https://discord.com/developer-case-studies/farm-merge-valley",
+      "confidence": "high"
+    },
+    {
+      "game": "Steam demo benchmark",
+      "path": "Demo players -> wishlists -> buyers",
+      "result": "Median 19.3% of demo players wishlisted (Next Fest Jun 2026); demo-driven wishlists convert ~18-25% vs 8-12% non-demo",
+      "source": "https://recognizingpatterns.substack.com/p/steam-next-fest-june-2026-communities",
+      "confidence": "low-medium"
+    }
+  ],
+  "socialLinkNotes": [
+    {
+      "fact": "YouTube Shorts descriptions/comments have had no clickable links since Aug 31 2023; long-form descriptions still clickable; Related Video link on Shorts is clickable",
+      "source": "https://tubefilter.com/2023/08/10/youtube-shorts-comments-spam/",
+      "confidence": "high"
+    },
+    {
+      "fact": "TikTok bio link: personal accounts need 1,000 followers; Business accounts get it immediately",
+      "source": "https://stan.store/blog/tiktok-link-bio-requirements-2026-guide/",
+      "confidence": "medium"
+    }
+  ],
+  "channels": [
+    {
+      "name": "TikTok",
+      "howGamesGrowThere": "Discovery is interest-graph: a video from a 0-follower account can reach millions, so one hit clip drives a spike rather than steady growth. Documented indie outcomes: a single viral video typically yields ~1,000-2,000 Steam wishlists; sustained accounts (Mortal Rite) built 640k+ followers and 60k+ wishlists with zero ad spend. GameDiscoverCo's analysis of 1,500+ studio TikToks found likes/favorites correlate strongly with views, comments moderately, shares not. By 2026 several practitioners report TikTok organic reach for game devs weaker than Reels/Shorts, so cross-posting is standard.",
+      "linkMechanics": "Clickable bio link requires 1,000+ followers on a personal account, or a Business account (sources conflict: some say business accounts still need 1,000 followers, a 2026 guide says verified business accounts get links at 0 followers). Links are added via the mobile app. No clickable links in captions or comments for normal accounts, so the path is video -> profile -> bio link (extra tap = friction). Below the threshold, the URL can only be typed as plain text in the bio. Viewers are overwhelmingly on phones, so a 'play now' link must open a mobile-friendly web build or capture an email/wishlist; a desktop-only Steam page loses most mobile visitors at the click.",
+      "formatsThatWork": [
+        "Raw, unpolished dev footage over polished trailers (practitioner consensus across TikTok/Reels/Shorts)",
+        "One clear hook/pitch readable in the first frame (A Game About Digging A Hole: 'dig a hole to find a secret')",
+        "Satisfying/tactile loop clips (A Little to the Left tidying puzzles spread via TikTok creators)",
+        "Physics/emergent funny moments (Webfishing avatar-launching clips spread on TikTok and X)",
+        "Dev-on-camera series content (Mortal Rite averaged ~498k views per video across its account)",
+        "Story/relatable-character hooks for narrative games (I Just Want to be Single visual novel)"
+      ],
+      "cadence": "No hard sourced cadence benchmark found in this pass. Evidence implies volume matters: Mortal Rite's 126M views came from many videos averaging ~498k each (126.1M / 498k = ~253 videos, derived). Practitioner guides recommend posting the same clip to TikTok, Reels and Shorts because a clip that flops on one can hit on another.",
+      "benchmarks": [
+        {
+          "metric": "Wishlists from one viral TikTok",
+          "value": "~1,000-2,000 wishlists",
+          "source": "https://howtomarketagame.com/seven-great-tips-for-marketing-your-indie-game-on-tiktok/",
+          "confidence": "medium"
+        },
+        {
+          "metric": "Mortal Rite totals (organic, $0 ads)",
+          "value": "126,115,388 views; 647,800 followers; 61,749 wishlists; ~498,480 avg views/video",
+          "source": "https://newsletter.gamediscover.co/p/this-game-used-tiktok-to-get-120m",
+          "confidence": "high"
+        },
+        {
+          "metric": "Mortal Rite views per wishlist (derived)",
+          "value": "~2,040 views per wishlist (~0.05% view->wishlist)",
+          "source": "https://newsletter.gamediscover.co/p/this-game-used-tiktok-to-get-120m",
+          "confidence": "medium"
+        },
+        {
+          "metric": "I Just Want to be Single single-video result",
+          "value": "571k views -> ~2,900 wishlists (~197 views per wishlist, ~0.5%, derived); doubled total wishlists to ~6,000",
+          "source": "https://newsletter.gamediscover.co/p/why-tiktok-matters-for-game-discovery",
+          "confidence": "medium"
+        },
+        {
+          "metric": "GameDiscoverCo TikTok dataset",
+          "value": "1,500+ game-studio videos; top performers totaled ~700M views; likes/favorites strongly correlated with views, shares not",
+          "source": "https://newsletter.gamediscover.co/p/tiktok-how-data-changed-one-devs",
+          "confidence": "medium"
+        },
+        {
+          "metric": "Bio link threshold",
+          "value": "1,000 followers (personal) or Business account",
+          "source": "https://buffer.com/library/how-to-put-a-link-in-tiktok-bio/",
+          "confidence": "high"
+        },
+        {
+          "metric": "TikTok.com web traffic device split",
+          "value": "~74% mobile / ~26% desktop for website visits (app usage is additionally mobile-only, so true mobile share is higher)",
+          "source": "https://www.dreamgrow.com/tiktok-statistics/",
+          "confidence": "low"
+        }
+      ],
+      "pitfalls": [
+        "Views are spiky and mostly non-converting: ~2,000 views per wishlist in Mortal Rite's sustained case",
+        "No in-video/caption links; under 1,000 followers there is no clickable link at all unless using a business account",
+        "Mobile viewers cannot play a desktop/Steam game on the spot; intent decays before they reach a PC",
+        "2026 reports of weaker organic game reach on TikTok vs Reels/Shorts; do not single-home",
+        "Viral clips can attract an audience (e.g. meme/horror) that doesn't match a cozy game"
+      ],
+      "sources": [
+        "https://howtomarketagame.com/seven-great-tips-for-marketing-your-indie-game-on-tiktok/",
+        "https://newsletter.gamediscover.co/p/this-game-used-tiktok-to-get-120m",
+        "https://newsletter.gamediscover.co/p/why-tiktok-matters-for-game-discovery",
+        "https://newsletter.gamediscover.co/p/tiktok-how-data-changed-one-devs",
+        "https://buffer.com/library/how-to-put-a-link-in-tiktok-bio/",
+        "https://stan.store/blog/tiktok-link-bio-requirements-2026-guide/",
+        "https://www.cloutboost.com/blog/tiktoks-changing-landscape-for-game-marketing-in-2026-what-developers-need-to-know",
+        "https://presskit.gg/field-guides/tiktok-indie-game-marketing",
+        "https://www.dreamgrow.com/tiktok-statistics/"
+      ]
+    },
+    {
+      "name": "YouTube Shorts",
+      "howGamesGrowThere": "Same short clips as TikTok, but feeding a YouTube channel that also hosts long-form devlogs, so Shorts viewers can be converted into subscribers who later watch devlogs (where links work). In the A Game About Digging A Hole launch the same post did 2.2M views on Shorts vs 5M TikTok and 14.5M Instagram. One 2026 practitioner source says Reels and Shorts delivered higher organic reach than TikTok for most game creators it tested.",
+      "linkMechanics": "Since 31 Aug 2023 links in Shorts descriptions and comments are not clickable. Replacement: a 'Related video' link on each Short that points to one of your own long-form videos (devlog/trailer), plus channel-header links near the Subscribe button. Path for a play link: Short -> related long-form video -> description/pinned comment link -> game. Two hops of friction.",
+      "formatsThatWork": [
+        "Cut-downs of devlog highlights with Related-video link to the full devlog",
+        "Same satisfying/hook clips as TikTok (cross-post)",
+        "Before/after and progress clips that tease a longer video"
+      ],
+      "cadence": "No sourced cadence number found; cross-post every TikTok clip here.",
+      "benchmarks": [
+        {
+          "metric": "A Game About Digging A Hole Shorts views (same viral post)",
+          "value": "2.2M Shorts vs 5M TikTok vs 14.5M Instagram",
+          "source": "https://ca.linkedin.com/in/bmweeks",
+          "confidence": "medium"
+        },
+        {
+          "metric": "Shorts clickable links removed",
+          "value": "Effective 31 Aug 2023; Related-video link added Sept 2023",
+          "source": "https://tubefilter.com/2023/08/10/youtube-shorts-comments-spam/",
+          "confidence": "high"
+        },
+        {
+          "metric": "Shorts monetization threshold",
+          "value": "1,000 subs + 10M Shorts views in 90 days (current); 20M for new applicants from 1 Feb 2027",
+          "source": "https://tbreak.com/youtube-partner-program-8000-watch-hours/",
+          "confidence": "high"
+        }
+      ],
+      "pitfalls": [
+        "No direct link from a Short; must route through a long-form video",
+        "Shorts ad revenue is tiny (~$0.03-$0.10 RPM typical) so Shorts are a funnel, not income",
+        "Shorts-feed watch time does not count toward the 4,000-hour long-form YPP path"
+      ],
+      "sources": [
+        "https://tubefilter.com/2023/08/10/youtube-shorts-comments-spam/",
+        "https://9to5google.com/2023/08/10/youtube-shorts-links-spam/",
+        "https://ca.linkedin.com/in/bmweeks",
+        "https://support.google.com/youtube/answer/72851?hl=en",
+        "https://tbreak.com/youtube-partner-program-8000-watch-hours/",
+        "https://www.digitalapplied.com/blog/short-form-video-strategy-shorts-tiktok-reels-2026"
+      ]
+    },
+    {
+      "name": "YouTube long-form",
+      "howGamesGrowThere": "Devlog series build a compounding, invested audience and give the only place on YouTube where a clickable link sits next to the content (description, pinned comment). Proven devlog-driven outcomes: Jonas Tyroller's devlog audience gave Thronefall early players (game later ~1M copies year one, 565k wishlists); ThinMatrix (~254k subs) funded full-time indie dev via devlogs for Equilinox and now farming game Homegrown; DevDuck (160k+ subs) built a following for cozy 2D RPG Dauphin over 3.5 years; Dani's devlog channel made Karlson one of Steam's most-wishlisted games before release. Also: larger creators covering a demo (Gamescom/IGN + streamers for We Harvest Shadows; GameGrumps/Jerma for A Little to the Left) is the biggest lever and comes from YouTube.",
+      "linkMechanics": "Clickable links in description and pinned comment; end screens/cards link to other videos (external links in cards require YPP). Viewers skew more to TV/desktop than TikTok, so a desktop Steam/itch link converts better here than from short-form (no sourced split found).",
+      "formatsThatWork": [
+        "Episodic devlog with a narrative arc and a clear stake ('I made a game in X days', 'my game failed / how it sold')",
+        "Problem-solving 'coding adventure' style deep dives (Sebastian Lague, 1.4M subs)",
+        "Game-jam / challenge videos (Blackthornprod ~597k subs, 65M lifetime views)",
+        "Postmortem/sales-number reveal videos (popular in dev community; also attracts devs, not players)"
+      ],
+      "cadence": "No sourced cadence benchmark. Expanded YPP requires 3 public uploads in 90 days, a practical floor of ~1 long-form upload per month.",
+      "benchmarks": [
+        {
+          "metric": "Thronefall devlog reach",
+          "value": "Jonas Tyroller 177k subs; early-making-of devlog 79k views; game ~1M copies first year, 565k wishlists",
+          "source": "https://newsletter.gamediscover.co/p/deep-dive-how-thronefall-went-minimal",
+          "confidence": "medium"
+        },
+        {
+          "metric": "ThinMatrix channel size",
+          "value": "~254k subscribers",
+          "source": "https://sponsorradar.com/channels/thinmatrix",
+          "confidence": "medium"
+        },
+        {
+          "metric": "DevDuck channel size",
+          "value": "160k+ subscribers; cozy 2D RPG Dauphin, 3.5 yrs in development",
+          "source": "https://wnhub.io/news/other/item-48719",
+          "confidence": "medium"
+        },
+        {
+          "metric": "Gaming long-form RPM (median)",
+          "value": "~$1.15 per 1,000 views; ranges cited $1-$4",
+          "source": "https://outlierkit.com/resources/youtube-rpm-benchmarks/",
+          "confidence": "medium"
+        },
+        {
+          "metric": "YPP threshold (now)",
+          "value": "1,000 subs + 4,000 watch hours/12 months (8,000 for new applicants from 1 Feb 2027)",
+          "source": "https://tbreak.com/youtube-partner-program-8000-watch-hours/",
+          "confidence": "high"
+        }
+      ],
+      "pitfalls": [
+        "Devlog audiences skew toward other developers, not cozy players; wishlists may be lower-quality for the game",
+        "Long production time per video competes with game dev time (burnout risk for a solo dev)",
+        "Gaming RPM is low (~$1-4), so ad revenue alone rarely covers living costs below millions of views/month"
+      ],
+      "sources": [
+        "https://newsletter.gamediscover.co/p/deep-dive-how-thronefall-went-minimal",
+        "https://howtomarketagame.com/2024/10/07/what-jonas-tyrollers-games-reveal-about-the-steam-algorithm/",
+        "https://sponsorradar.com/channels/thinmatrix",
+        "https://wnhub.io/news/other/item-48719",
+        "https://sponsorradar.com/channels/sebastianlague",
+        "https://networthspot.com/blackthornprod/net-worth/",
+        "https://app.sensortower.com/vgi/game/karlson",
+        "https://outlierkit.com/resources/youtube-rpm-benchmarks/",
+        "https://support.google.com/youtube/answer/72851?hl=en",
+        "https://tbreak.com/youtube-partner-program-8000-watch-hours/"
+      ]
+    },
+    {
+      "name": "Instagram Reels",
+      "howGamesGrowThere": "Out of scope for this dev's plan but the evidence says not to skip it: same vertical clip; in the A Game About Digging A Hole launch Instagram delivered 14.5M views vs 5M TikTok; howtomarketagame documents Reels virality producing wishlist spikes (Infinitum: The Backrooms Story) despite Instagram usually being weak for games.",
+      "linkMechanics": "Bio link; link stickers in Stories; no clickable caption links.",
+      "formatsThatWork": [
+        "Identical clips to TikTok/Shorts; slightly more polish rewarded"
+      ],
+      "cadence": "Cross-post every short clip (zero marginal effort).",
+      "benchmarks": [
+        {
+          "metric": "Digging A Hole Instagram views",
+          "value": "14.5M (largest of the three platforms)",
+          "source": "https://ca.linkedin.com/in/bmweeks",
+          "confidence": "medium"
+        }
+      ],
+      "pitfalls": [
+        "Older evidence says Instagram static posts don't sell games; only Reels virality does"
+      ],
+      "sources": [
+        "https://ca.linkedin.com/in/bmweeks",
+        "https://howtomarketagame.com/?p=3248",
+        "https://www.cloutboost.com/blog/tiktoks-changing-landscape-for-game-marketing-in-2026-what-developers-need-to-know"
+      ]
+    },
+    {
+      "name": "Reddit",
+      "howGamesGrowThere": "Not researched in depth this pass (out of scope). Commonly cited by howtomarketagame as a top wishlist driver for some genres.",
+      "linkMechanics": "Links allowed in many subs but self-promo rules vary.",
+      "formatsThatWork": [
+        "GIF/clip posts in genre subreddits"
+      ],
+      "cadence": "n/a",
+      "benchmarks": [],
+      "pitfalls": [
+        "Strict self-promotion rules"
+      ],
+      "sources": []
+    },
+    {
+      "name": "X/Bluesky",
+      "howGamesGrowThere": "Historical viral launchpad: Choo-Choo Charles' announcement trailer did a couple million views on Twitter for a 20-year-old solo dev; Tiny Glade's early viral tweets preceded 10k wishlists in its first 24h of Steam page. Lower priority now; out of scope for this plan.",
+      "linkMechanics": "Links in posts allowed but X down-ranks external links (not verified this pass).",
+      "formatsThatWork": [
+        "Short GIF/clip of a novel mechanic"
+      ],
+      "cadence": "n/a",
+      "benchmarks": [
+        {
+          "metric": "Choo-Choo Charles trailer",
+          "value": "'a couple million views across Twitter'",
+          "source": "https://pcgamer.com/choo-choo-charles-interview",
+          "confidence": "medium"
+        }
+      ],
+      "pitfalls": [
+        "Mostly developer audience"
+      ],
+      "sources": [
+        "https://pcgamer.com/choo-choo-charles-interview",
+        "https://howtomarketagame.com/2023/06/12/marketing-your-steam-game-before-you-have-a-steam-page-the-tiny-glade-story/"
+      ]
+    },
+    {
+      "name": "Discord",
+      "howGamesGrowThere": "Retention/conversion layer, not discovery. Wishlists from players who followed devlogs, played the demo and joined Discord convert better than giveaway wishlists.",
+      "linkMechanics": "Invite link from bio/description.",
+      "formatsThatWork": [
+        "Playtest builds, dev updates, community screenshots"
+      ],
+      "cadence": "n/a",
+      "benchmarks": [],
+      "pitfalls": [
+        "Time sink for a solo dev"
+      ],
+      "sources": [
+        "https://www.immutable.com/guides/how-to-market-an-indie-game"
+      ]
+    }
+  ],
+  "caseStudies": [
+    {
+      "dev": "Round Toast Studios",
+      "game": "Mortal Rite (3D action RPG)",
+      "channel": "TikTok",
+      "whatTheyDid": "Sustained dev-account TikTok posting, no paid ads or agency",
+      "results": "126.1M views, 647.8k followers, 61,749 Steam wishlists, ~498k avg views/video",
+      "lesson": "Sustained volume works but conversion is ~2,000 views per wishlist; audience size != buyers",
+      "source": "https://newsletter.gamediscover.co/p/this-game-used-tiktok-to-get-120m",
+      "confidence": "high"
+    },
+    {
+      "dev": "Max Inferno / Secret Mode (pub.)",
+      "game": "A Little to the Left (cozy tidying puzzler)",
+      "channel": "TikTok, YouTube, Twitch",
+      "whatTheyDid": "Satisfying tidying clips; organic pickup by GameGrumps, Jerma985, VTubers",
+      "results": "Launched with 100k+ Steam wishlists",
+      "lesson": "Cozy 'satisfying' loop is natively shareable and creator-friendly",
+      "source": "https://newsletter.gamediscover.co/p/a-little-to-the-left-how-tidying",
+      "confidence": "high"
+    },
+    {
+      "dev": "Unnamed visual-novel dev (GameDiscoverCo example)",
+      "game": "I Just Want to be Single!!",
+      "channel": "TikTok",
+      "whatTheyDid": "One TikTok video went semi-viral",
+      "results": "571k views -> ~2,900 wishlists; doubled wishlists to ~6,000",
+      "lesson": "A single mid-sized hit can double a small game's audience; ~0.5% view->wishlist when the hook matches the game",
+      "source": "https://newsletter.gamediscover.co/p/why-tiktok-matters-for-game-discovery",
+      "confidence": "medium"
+    },
+    {
+      "dev": "Cyberwave (single developer) / Rokaplay",
+      "game": "A Game About Digging A Hole",
+      "channel": "TikTok, Instagram Reels, YouTube Shorts",
+      "whatTheyDid": "Game built in ~3 weeks; one-sentence hook, short trailer, natural-looking posts cross-posted",
+      "results": "5M TikTok + 14.5M Instagram + 2.2M Shorts views; 82k wishlists in 4 weeks; 250k+ copies week one; 1M+ sold at EUR 4.99",
+      "lesson": "Tiny scope + instantly legible hook + cross-posting everywhere; Reels outperformed TikTok",
+      "source": "https://www.gamesmarket.global/en/business/viral-hit-the-unlikely-smash-hit-of-a-game-about-digging-a-hole-by-cyberwave-und-rokaplay-e8a7fdd83064b0ffc558c65513937b0b | https://ca.linkedin.com/in/bmweeks | https://www.gamesmarket.global/games-and-products/viral-hit-a-game-about-digging-a-hole-tops-one-million-sales-82fed80996941736a1a54c31381ab20b",
+      "confidence": "medium"
+    },
+    {
+      "dev": "David Wehle (solo)",
+      "game": "We Harvest Shadows",
+      "channel": "Trailer events + demo + YouTube streamers (NOT primarily TikTok)",
+      "whatTheyDid": "Demo launched alongside Gamescom ONL/IGN trailer; rode Discovery Queue and New & Trending Free; kept demo up for creator coverage",
+      "results": "220k+ wishlists in 3 months; 14.17M store impressions; 1.3M page visits",
+      "lesson": "Often cited as a social case but growth came from Steam algorithm + YouTube streamers playing a free demo; free playable is the multiplier",
+      "source": "https://howtomarketagame.com/2024/11/18/how-we-harvest-shadows-220000-wishlists-in-3-months/",
+      "confidence": "high"
+    },
+    {
+      "dev": "lamedeveloper (solo)",
+      "game": "Webfishing",
+      "channel": "TikTok, X (player-made clips)",
+      "whatTheyDid": "Social fishing hangout; emergent physics (launching avatar) generated player clips; itch.io prototype 2022, Steam remake Oct 2024",
+      "results": "Estimates ~1.04M-2.06M copies (SteamSpy 1-2M owners; Raijin ~1.3M, ~$5.6M gross); Overwhelmingly Positive",
+      "lesson": "Make the game itself produce clippable, funny moments so players market it",
+      "source": "https://en.wikipedia.org/wiki/Webfishing | https://raijin.gg/app/3146520/WEBFISHING | https://steamspy.com/dev/lamedeveloper",
+      "confidence": "medium"
+    },
+    {
+      "dev": "Irox Games",
+      "game": "Bongo Cat (Steam idle/desktop pet)",
+      "channel": "Existing meme IP (Twitter 2018, TikTok 2023) + Steam virality",
+      "whatTheyDid": "Free desktop companion built on a known meme, cosmetic drops/IAP, online rooms",
+      "results": "All-time peak 194,508 concurrent players (4 May 2025); released 5 Mar 2025",
+      "lesson": "Free + always-on + cute + shareable cosmetics; desktop-pet/idle format shows cozy audiences will keep a game open",
+      "source": "https://steambase.io/apps/3419430 | https://meme.com/memes/bongo-cat",
+      "confidence": "high"
+    },
+    {
+      "dev": "Jordan Morris / Mister Morris Games (solo)",
+      "game": "Rusty's Retirement (idle farming desktop sim)",
+      "channel": "Steam + X; no sourced TikTok data found",
+      "whatTheyDid": "Cozy idle farm that sits at bottom of screen",
+      "results": "500k+ copies; #40 of 2024 Steam releases by Sep 2024; dev became a millionaire",
+      "lesson": "Cozy 'second-screen' idle formats sell; social-video role unverified",
+      "source": "https://en.wikipedia.org/wiki/Rusty%27s_Retirement",
+      "confidence": "medium"
+    },
+    {
+      "dev": "Pounce Light (2 people)",
+      "game": "Tiny Glade",
+      "channel": "X/Twitter GIFs, trailers, creator coverage",
+      "whatTheyDid": "Shared satisfying building GIFs before Steam page existed; demo; creator/streamer recommendations at launch",
+      "results": "10k wishlists first 24h of page; 1M+ wishlists 3 months pre-launch; 1.3M wishlists; 616k+ copies in <1 month",
+      "lesson": "Satisfying 'toy' footage of building is the most shareable cozy content",
+      "source": "https://gigazine.net/gsc_news/en/20241120-tiny-glade-600k-sold-reason | https://howtomarketagame.com/2023/06/12/marketing-your-steam-game-before-you-have-a-steam-page-the-tiny-glade-story/ | https://wnhub.io/news/stores-and-publishing/item-43844",
+      "confidence": "high"
+    },
+    {
+      "dev": "Jonas Tyroller & Paul Schnepf (Grizzly Games)",
+      "game": "Thronefall",
+      "channel": "YouTube long-form devlogs",
+      "whatTheyDid": "Devlog on the early making of the game; Next Fest demo with YouTuber pickup",
+      "results": "Devlog 79k views (177k-sub channel); early players from devlog; ~1M copies year one; 565k wishlists",
+      "lesson": "A devlog channel supplies the first wave that tips Steam's algorithm",
+      "source": "https://newsletter.gamediscover.co/p/deep-dive-how-thronefall-went-minimal | https://howtomarketagame.com/2024/10/07/what-jonas-tyrollers-games-reveal-about-the-steam-algorithm/",
+      "confidence": "medium"
+    },
+    {
+      "dev": "ThinMatrix (Karl)",
+      "game": "Equilinox; now Homegrown (farming)",
+      "channel": "YouTube long-form devlogs",
+      "whatTheyDid": "Weekly-style devlogs of full development from concept to release",
+      "results": "~254k subscribers; Equilinox shipped 2018; sales figures not found",
+      "lesson": "Devlogs sustain a solo career via channel + game; sales impact unverified",
+      "source": "https://sponsorradar.com/channels/thinmatrix",
+      "confidence": "low"
+    },
+    {
+      "dev": "DevDuck",
+      "game": "Dauphin (cozy 2D RPG)",
+      "channel": "YouTube long-form devlogs",
+      "whatTheyDid": "Multi-year cozy RPG devlog series",
+      "results": "160k+ subscribers over ~3.5 years of development",
+      "lesson": "Cozy devlogs can build a sizable channel; long timeline",
+      "source": "https://wnhub.io/news/other/item-48719",
+      "confidence": "medium"
+    },
+    {
+      "dev": "Dani",
+      "game": "Karlson",
+      "channel": "YouTube long-form devlogs (comedic)",
+      "whatTheyDid": "Personality-driven comedy devlogs",
+      "results": "Karlson reported among Steam's most-wishlisted upcoming games (~18th); 160k Steam followers",
+      "lesson": "Personality can outperform the game itself; but long dev delays erode momentum",
+      "source": "https://app.sensortower.com/vgi/game/karlson",
+      "confidence": "low"
+    },
+    {
+      "dev": "Blackthornprod (Liam & Noa Calice)",
+      "game": "Jam/challenge games, courses",
+      "channel": "YouTube long-form",
+      "whatTheyDid": "Game-dev challenge videos + tutorials, monetized via courses",
+      "results": "~597k subs; 65M lifetime views; ad income est. ~$25k/yr; courses drew criticism",
+      "lesson": "Dev-audience channels monetize via products more than ads; reputational risk with hard-sell courses",
+      "source": "https://networthspot.com/blackthornprod/net-worth/ | https://newgrounds.wiki.gg/wiki/BlackthornProd",
+      "confidence": "low"
+    },
+    {
+      "dev": "Sebastian Lague",
+      "game": "Coding Adventures (no commercial game focus)",
+      "channel": "YouTube long-form",
+      "whatTheyDid": "Deep technical project videos",
+      "results": "~1.4M subscribers",
+      "lesson": "Quality over cadence; audience is developers, not players",
+      "source": "https://sponsorradar.com/channels/sebastianlague",
+      "confidence": "medium"
+    },
+    {
+      "dev": "Max (The Sledding Corporation, solo)",
+      "game": "Sledding Game (multiplayer hangout)",
+      "channel": "YouTube, TikTok, Instagram dev-process clips",
+      "whatTheyDid": "Shared development process across all three; free demo",
+      "results": "Millions of views; demo added 80k wishlists in first week; Day One Game Pass; EA 30 Apr",
+      "lesson": "Social dev-clips + free demo = wishlist spike; hangout/social games spread well",
+      "source": "https://indiegame.com/en/archives/29724",
+      "confidence": "low"
+    },
+    {
+      "dev": "Renee (rikukat)",
+      "game": "Potions: A Curious Tale (cozy)",
+      "channel": "TikTok",
+      "whatTheyDid": "Developer's own viral TikTok",
+      "results": "Buzz/press coverage (no numbers found)",
+      "lesson": "Cozy dev-on-camera TikToks can trigger press",
+      "source": "https://gaymingmag.com/2025/12/confettis-cozy-corner-best-indie-cozy-games-of-2025/",
+      "confidence": "low"
+    },
+    {
+      "dev": "Gavin Eisenbeisz (solo, age 20)",
+      "game": "Choo-Choo Charles",
+      "channel": "X/Twitter trailer",
+      "whatTheyDid": "Absurd, instantly legible concept trailer",
+      "results": "Trailer 'a couple million views across Twitter'",
+      "lesson": "A concept that reads in 3 seconds is the viral unit",
+      "source": "https://pcgamer.com/choo-choo-charles-interview",
+      "confidence": "medium"
+    },
+    {
+      "dev": "NPC Studio",
+      "game": "Fields of Mistria (cozy farming)",
+      "channel": "Community + Steam (social role unverified)",
+      "whatTheyDid": "Anime-styled farming sim, $13.99 Early Access",
+      "results": "100k downloads first week of EA; 98% positive",
+      "lesson": "Cozy farming demand is large; distinct art style matters",
+      "source": "https://destructoid.com/?p=576727",
+      "confidence": "medium"
+    }
+  ],
+  "contentFormats": [
+    {
+      "format": "Satisfying loop / ASMR gameplay clip",
+      "example": "A Little to the Left tidying; Tiny Glade building GIFs",
+      "whyItWorks": "Watchable without context, loops, shareable; ideal for cozy",
+      "bestChannel": "TikTok / Reels / Shorts"
+    },
+    {
+      "format": "One-sentence absurd or clear hook",
+      "example": "A Game About Digging A Hole; Choo-Choo Charles",
+      "whyItWorks": "Concept understood in the first frame; drives curiosity click",
+      "bestChannel": "TikTok / Reels"
+    },
+    {
+      "format": "Raw dev-process clip (progress, before/after)",
+      "example": "Sledding Game dev clips; Mortal Rite account",
+      "whyItWorks": "Raw footage reported to beat polished trailers; builds follow-along audience",
+      "bestChannel": "TikTok / Shorts"
+    },
+    {
+      "format": "Emergent/funny player moment",
+      "example": "Webfishing avatar launching",
+      "whyItWorks": "Players make the content; spreads beyond dev's own account",
+      "bestChannel": "TikTok / X"
+    },
+    {
+      "format": "Episodic long-form devlog",
+      "example": "ThinMatrix, DevDuck, Jonas Tyroller",
+      "whyItWorks": "Compounding invested audience; clickable links; first wave for launches",
+      "bestChannel": "YouTube long-form"
+    },
+    {
+      "format": "Challenge / time-boxed build ('I made a game in X')",
+      "example": "Blackthornprod, Dani",
+      "whyItWorks": "Built-in stakes and title hook",
+      "bestChannel": "YouTube long-form (+ Shorts cutdown)"
+    },
+    {
+      "format": "Streamer/creator plays your free demo",
+      "example": "We Harvest Shadows, A Little to the Left",
+      "whyItWorks": "Borrowed audiences; biggest single lever in sourced cases",
+      "bestChannel": "YouTube / Twitch"
+    }
+  ],
+  "channelMonetization": [
+    {
+      "stream": "YouTube long-form ads (gaming)",
+      "benchmark": "Gaming median RPM ~$1.15; commonly cited $1-$4 per 1,000 views; all-niche median ~$2,300 per 1M long-form views",
+      "source": "https://outlierkit.com/resources/youtube-rpm-benchmarks/",
+      "confidence": "medium"
+    },
+    {
+      "stream": "YouTube Shorts ads",
+      "benchmark": "US Shorts RPM ~$0.33 (AIR data); typical $0.03-$0.10 per 1,000 views",
+      "source": "https://air.io/en/creators-spotlight/still-doubting-shorts-in-2025-were-not-heres-why | https://influencermarketinghub.com/youtube-shorts-rpm/",
+      "confidence": "medium"
+    },
+    {
+      "stream": "YPP eligibility",
+      "benchmark": "1,000 subs + 4,000 watch hrs/12mo or 10M Shorts views/90d; new applicants from 1 Feb 2027 need 8,000 hrs or 20M Shorts views",
+      "source": "https://support.google.com/youtube/answer/72851?hl=en | https://tbreak.com/youtube-partner-program-8000-watch-hours/ | https://ppc.land/new-youtube-creators-face-8-000-hour-bar-for-ad-revenue-from-february-2027/",
+      "confidence": "high"
+    },
+    {
+      "stream": "Expanded YPP (memberships, Super Thanks, Shopping)",
+      "benchmark": "500 subs + 3 uploads/90d + 3,000 watch hrs/12mo or 3M Shorts views/90d",
+      "source": "https://support.google.com/youtube/answer/72851?hl=en",
+      "confidence": "high"
+    },
+    {
+      "stream": "Courses/products (dev audience)",
+      "benchmark": "Blackthornprod ad income est. ~$25k/yr on 597k subs; courses are main product (and source of backlash)",
+      "source": "https://networthspot.com/blackthornprod/net-worth/",
+      "confidence": "low"
+    },
+    {
+      "stream": "Sponsorships",
+      "benchmark": "No sourced rate data found for devlog channels this pass",
+      "source": "https://sponsorradar.com/channels/thinmatrix",
+      "confidence": "low"
+    }
+  ],
+  "funnelBenchmarks": [
+    {
+      "metric": "Views per wishlist, sustained TikTok",
+      "value": "~2,040 (Mortal Rite, derived)",
+      "source": "https://newsletter.gamediscover.co/p/this-game-used-tiktok-to-get-120m",
+      "confidence": "medium"
+    },
+    {
+      "metric": "Views per wishlist, single well-matched viral clip",
+      "value": "~197 (I Just Want to be Single, derived)",
+      "source": "https://newsletter.gamediscover.co/p/why-tiktok-matters-for-game-discovery",
+      "confidence": "medium"
+    },
+    {
+      "metric": "Views per wishlist, multi-platform viral (upper bound, all wishlists attributed)",
+      "value": "~265 (21.7M views / 82k wishlists, Digging A Hole, derived)",
+      "source": "https://ca.linkedin.com/in/bmweeks",
+      "confidence": "low"
+    },
+    {
+      "metric": "Wishlist -> sale conversion (median, new Steam games)",
+      "value": "~10.5% (GameDiscoverCo per secondary source)",
+      "source": "https://www.immutable.com/guides/how-to-market-an-indie-game",
+      "confidence": "low"
+    },
+    {
+      "metric": "Pre-launch wishlists -> first-week sales",
+      "value": "avg ~36%, median ~20% (survey data per secondary source; ratio definition unclear)",
+      "source": "https://www.techspot.com/community/topics/data-shows-steam-wishlists-have-weak-correlation-with-actual-sales.295139/",
+      "confidence": "low"
+    },
+    {
+      "metric": "Views -> link clicks -> web plays",
+      "value": "No published benchmark found for game links from TikTok/Shorts; must be measured with UTM/link analytics",
+      "source": "",
+      "confidence": "low"
+    }
+  ],
+  "cozyContent": [
+    {
+      "finding": "Cozy creator audiences skew heavily female (e.g. Cozy.Games creator: 90%+ female followers; Cozysquirrel audience women 16-35); content is calm lifestyle + gameplay, not competitive",
+      "source": "https://creatordb.app/creatorstats/cozygames/ | https://collabstr.com/cozysquirrel",
+      "confidence": "medium"
+    },
+    {
+      "finding": "Cozy TikTok creators frame games as self-care/community and identity expression (academic study of CozyTok)",
+      "source": "https://link.springer.com/article/10.1007/s44538-026-00003-y",
+      "confidence": "medium"
+    },
+    {
+      "finding": "Cozy game supply is exploding: 2x as many cozy games released on Steam in 2024 vs 2023; first 8 months of 2025 nearly matched all of 2024 - discoverability is harder",
+      "source": "https://gtstu.com/?p=5085",
+      "confidence": "low"
+    },
+    {
+      "finding": "Satisfying building/tidying footage is the proven cozy viral format (Tiny Glade 1.3M wishlists; A Little to the Left 100k+ wishlists)",
+      "source": "https://gigazine.net/gsc_news/en/20241120-tiny-glade-600k-sold-reason | https://newsletter.gamediscover.co/p/a-little-to-the-left-how-tidying",
+      "confidence": "high"
+    },
+    {
+      "finding": "Idle/desktop-companion cozy formats (Bongo Cat 194k peak CCU, Rusty's Retirement 500k+ copies) hit big with low scope - well suited to a solo AI-assisted dev",
+      "source": "https://steambase.io/apps/3419430 | https://en.wikipedia.org/wiki/Rusty%27s_Retirement",
+      "confidence": "high"
+    },
+    {
+      "finding": "Cozy gaming grew from pandemic stress-relief into a durable online community",
+      "source": "https://qc.rollingstone.com/en/culture/why-cozy-gaming-went-from-pandemic-stress-release-to-thriving-online-community",
+      "confidence": "medium"
+    }
+  ],
+  "viralHits": [
+    {
+      "name": "Suika Game (Watermelon Game)",
+      "year": 2023,
+      "platform": "Nintendo Switch (Japan eShop 2021, global Oct 2023); many free web/mobile clones",
+      "genre": "Drop-and-merge physics puzzle",
+      "cozyLevel": "cozy",
+      "howItSpread": "Boom from 15 Sep 2023 after Japanese live streamers, especially VTubers, played it; spread from Japanese influencers to overseas audiences.",
+      "shareMechanic": "Watchable runs: fruit physics chain reactions and near-miss collapses make good clips; score chasing between streamers.",
+      "monetization": "Cheap paid download on Switch.",
+      "results": "Developer Aladdin X said sales rose 'more than 50,000 times' versus before the boom; 1M Switch downloads in the month to 6 Oct 2023, then another 1M in 10 days (2M in Japan); reports say downloads later passed 10M.",
+      "lesson": "The developer credited cute, friendly art, very simple rules, and a 'try to do better next time' feeling. Physics-driven merging gives a different, clippable outcome every run, and streamers carried it.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Suika_Game",
+        "https://automaton-media.com/en/news/20231005-22096/",
+        "https://afkgaming.com/gaming/general/what-is-the-suika-game-why-has-it-garnered-momentum"
+      ],
+      "confidence": "high for the 50,000x and 2M Japan figures; medium for 10M"
+    },
+    {
+      "name": "Wordle",
+      "year": 2021,
+      "platform": "Browser (single web page)",
+      "genre": "Daily word puzzle",
+      "cozyLevel": "cozy",
+      "howItSpread": "One puzzle a day for everyone. Players posted the spoiler-free emoji grid of green, yellow and grey squares on social media, which made people curious without giving the answer away.",
+      "shareMechanic": "Emoji result grid that shows how you did but not the word; shared daily streaks.",
+      "monetization": "None at first; sold to The New York Times for 'low seven figures'.",
+      "results": "90 players on 1 Nov 2021, 300,000 two months later, then millions of daily players; the NYT said it brought 'tens of millions of new users'. Wordle had 5.3B plays in 2024 within NYT Games' 11.1B total.",
+      "lesson": "A shareable result plus one shared puzzle per day lets every share recruit new players. Keeping the game scarce (one a day) makes people come back daily.",
+      "sources": [
+        "https://www.techradar.com/news/the-new-york-times-buys-wordle-for-an-undisclosed-sum",
+        "https://techcrunch.com/2022/05/04/wordle-new-york-times-user-growth",
+        "https://www.aol.com/exclusive-wordle-puzzle-ended-5-013624721.html"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "NYT Connections & Strands (daily puzzle portfolio)",
+      "year": 2023,
+      "platform": "Browser + NYT Games app",
+      "genre": "Daily grouping / word-search puzzle",
+      "cozyLevel": "cozy",
+      "howItSpread": "Copied Wordle's daily emoji-grid sharing and rode NYT's audience. Connections (June 2023) became the second most played NYT game after Wordle.",
+      "shareMechanic": "Coloured-square result grid; arguments about the day's 'purple' category.",
+      "monetization": "NYT Games subscription bundle.",
+      "results": "In 2024 NYT counted 11.1B puzzles solved: Wordle 5.3B, Mini 2.1B, Strands 1.3B. No Connections figure was found.",
+      "lesson": "The daily, shareable-grid format can be repeated across many puzzle types. A small portfolio of daily puzzles keeps people around.",
+      "sources": [
+        "https://www.aol.com/exclusive-wordle-puzzle-ended-5-013624721.html",
+        "https://english.aaj.tv/news/30352928"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Framed (framed.wtf)",
+      "year": 2022,
+      "platform": "Browser",
+      "genre": "Daily movie-still guessing game (Wordle-like)",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "Part of the 2022 wave of '-dle' clones; it took the Wordle loop (one puzzle a day, limited guesses, share grid) into a fandom niche, film fans.",
+      "shareMechanic": "Emoji result string showing how many guesses it took.",
+      "monetization": "Free web game; no monetization data found.",
+      "results": "Reported to have more than 1 million players every day.",
+      "lesson": "A niche theme plus the daily-share loop can reach a million daily players with tiny scope. Cozy versions could use plants, cats, recipes or cozy-game screenshots.",
+      "sources": [
+        "https://www.rollingstone.co.uk/culture/news/wordle-inspired-game-framed-challenges-film-buffs-13584/",
+        "https://www.tomsguide.com/news/framed-is-the-must-play-wordle-alternative-for-movie-buffs"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Infinite Craft (neal.fun)",
+      "year": 2024,
+      "platform": "Browser (neal.fun)",
+      "genre": "AI-generated element-combining sandbox",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "The creator's X announcement got more than 15M views in a week. Clips of absurd combinations went viral, and Twitch and YouTube creators played it. Players were crafting almost 1,000 items per second by 2 Feb 2024.",
+      "shareMechanic": "'First Discovery' tags and absurd recipe chains, posted as screenshots and clips.",
+      "monetization": "No revenue data found; neal.fun traffic was about 9.47M visits in one January month (Semrush).",
+      "results": "15M+ views on the launch post; reported as the third most searched game of 2024.",
+      "lesson": "Combining things with endless, surprising results plus a bragging-rights 'first discovery' produces user-made content without any multiplayer.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Infinite_Craft",
+        "https://knowyourmeme.com/memes/sites/infinite-craft",
+        "https://www.semrush.com/website/neal.fun/overview/",
+        "https://destructoid.com/how-to-play-stimulation-clicker-the-newest-game-from-infinite-crafts-neal-fun"
+      ],
+      "confidence": "high for the views and craft rate; medium for traffic and search rank"
+    },
+    {
+      "name": "The Password Game (neal.fun)",
+      "year": 2023,
+      "platform": "Browser",
+      "genre": "Escalating-rules comedy puzzle",
+      "cozyLevel": "not cozy",
+      "howItSpread": "The launch tweet got more than 11,000 retweets and the site had over 1M visits on day one. TikTok gameplay reactions spread it: one video got 8.1M views and 1.1M likes in a month.",
+      "shareMechanic": "Reaction-friendly absurd rules ('rule 14...'); viewers want to try it themselves.",
+      "monetization": "None disclosed.",
+      "results": "Played more than 10M times.",
+      "lesson": "Absurd escalation with no tutorial works as a TikTok format: the viewer sees the twist and clicks through to try it.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/The_Password_Game",
+        "https://knowyourmeme.com/memes/the-password-game"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Draw a Perfect Circle (neal.fun)",
+      "year": 2023,
+      "platform": "Browser (mouse/touch)",
+      "genre": "One-gesture skill toy",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "Viral after its Jan 2023 release; players shared their percentage scores on Twitter.",
+      "shareMechanic": "Single percentage score that is easy to compare.",
+      "monetization": "None disclosed.",
+      "results": "No play-count figures found.",
+      "lesson": "A 5-second game with one number as the result is a ready-made challenge clip ('can you beat 94%?').",
+      "sources": [
+        "https://wbgsv0a.gigazine.net/gsc_news/en/20230128-draw-a-perfect-circle",
+        "https://en.wikipedia.org/wiki/Neal_Agarwal"
+      ],
+      "confidence": "medium (virality qualitative)"
+    },
+    {
+      "name": "Stimulation Clicker (neal.fun)",
+      "year": 2025,
+      "platform": "Browser",
+      "genre": "Satirical clicker/incremental",
+      "cozyLevel": "not cozy",
+      "howItSpread": "Released 6 Jan 2025 and called the 'first viral link of the year'. It rode the creator's existing audience and satirised internet overstimulation.",
+      "shareMechanic": "The chaos on screen is the joke, so screen recordings are the share.",
+      "monetization": "None disclosed.",
+      "results": "No numbers found.",
+      "lesson": "Once a creator has an audience, each new small web toy launches into it. A portfolio site that keeps shipping tends to build on itself.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Stimulation_Clicker",
+        "https://destructoid.com/how-to-play-stimulation-clicker-the-newest-game-from-infinite-crafts-neal-fun"
+      ],
+      "confidence": "medium (qualitative)"
+    },
+    {
+      "name": "Cookie Clicker",
+      "year": 2013,
+      "platform": "Browser, later Steam (2021, $4.99) and mobile",
+      "genre": "Idle/incremental",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "Written in one evening and posted as a link on 4chan; it reached 50,000 players within hours. Years of free web play built the fanbase before the paid Steam release.",
+      "shareMechanic": "Huge-number bragging; 'it's still running in my tab'.",
+      "monetization": "Free web with ads; paid Steam version.",
+      "results": "Steam review score 96% across about 92K reviews. Sales estimates conflict: about 2.5M copies / $10.8M gross versus about 6.75M / $33.7M.",
+      "lesson": "A free web game that keeps going can later become a profitable paid version: the web builds the audience and the premium release earns the money.",
+      "sources": [
+        "https://wikipedia.com/wiki/Cookie_Clicker",
+        "https://raijin.gg/app/1454400/Cookie_Clicker",
+        "https://vaporlens.app/app/1454400/cookie_clicker/stats/details"
+      ],
+      "confidence": "high for origin; low for sales (estimates conflict)"
+    },
+    {
+      "name": "Universal Paperclips",
+      "year": 2017,
+      "platform": "Browser (later mobile)",
+      "genre": "Narrative incremental",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "Word of mouth about its escalating AI-paperclip-maximizer story; it became the most cited browser game of 2017 despite plain unstyled text.",
+      "shareMechanic": "'You have to play it to the end' recommendations; the story twist.",
+      "monetization": "Free web; paid mobile port.",
+      "results": "About 2 million players.",
+      "lesson": "A strong idea and escalating reveals can beat production values. Incremental loops hold attention.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Universal_Paperclips",
+        "https://if50.substack.com/p/2017-universal-paperclips?open=false"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Little Alchemy / Little Alchemy 2",
+      "year": 2010,
+      "platform": "Chrome Web Store / browser, later iOS & Android; on CrazyGames",
+      "genre": "Element-combining discovery",
+      "cozyLevel": "cozy",
+      "howItSpread": "A long-tail classroom and browser hit, and the template Infinite Craft later built on.",
+      "shareMechanic": "Recipe hunting; guides and hint sites.",
+      "monetization": "Free web; mobile apps.",
+      "results": "No download or revenue figures found.",
+      "lesson": "Combining things is a durable, cozy-compatible loop that people play for years.",
+      "sources": [
+        "https://www.giantbomb.com/games/3030-43795/",
+        "https://www.crazygames.com/jp/game/little-alchemy-2"
+      ],
+      "confidence": "medium (no metrics)"
+    },
+    {
+      "name": "Townscaper",
+      "year": 2020,
+      "platform": "Steam/Switch/mobile; later a free browser version",
+      "genre": "Goal-less toy town builder",
+      "cozyLevel": "cozy",
+      "howItSpread": "GIFs of the generative architecture were very shareable. A free browser version came after the paid release.",
+      "shareMechanic": "Screenshots and timelapses of pretty towns.",
+      "monetization": "Premium on PC, Switch and mobile.",
+      "results": "About 100K copies in just over two weeks of early access; 380K on Steam; more than 500K across PC, Mac and Switch before the Oct 2021 mobile launch.",
+      "lesson": "A toy with no fail state, where every click looks good, is very easy to film. Players' creations become the marketing.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Townscaper",
+        "https://www.mcvuk.com/business-news/when-we-made-townscaper/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "A Dark Room",
+      "year": 2013,
+      "platform": "Browser, then iOS",
+      "genre": "Minimalist text incremental RPG",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "The web version built a following, then the iOS port hit No. 1 in the UK (20K downloads in one day) and held the top premium spot in the US for 18 days.",
+      "shareMechanic": "Word of mouth about the mystery and reveal.",
+      "monetization": "Premium iOS app.",
+      "results": "2.26M downloads in under two years. A co-creator reported $697,270 after Apple's cut, of which $191,810 net went to him.",
+      "lesson": "A web prototype can prove demand before a paid port.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/A_Dark_Room",
+        "https://www.pocketgamer.com/a-dark-room/the-co-creator-of-top-selling-ios-game-a-dark-room-shares-its-sales-numbers-and/"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Sandspiel",
+      "year": 2018,
+      "platform": "Browser (Rust/WASM/WebGL); itch.io, CrazyGames",
+      "genre": "Falling-sand physics sandbox",
+      "cozyLevel": "cozy",
+      "howItSpread": "Satisfying particle visuals plus a public gallery where people share and fork creations.",
+      "shareMechanic": "Built-in save, share and fork gallery.",
+      "monetization": "Free.",
+      "results": "No metrics found.",
+      "lesson": "Satisfying physics plus shareable creations make a calming toy that is easy to clip. A gallery turns players into content makers.",
+      "sources": [
+        "https://maxbittker.com/making-sandspiel",
+        "https://dinogame.gg/blog/sandspiel-review/"
+      ],
+      "confidence": "medium (no metrics)"
+    },
+    {
+      "name": "Bloxd.io",
+      "year": 2022,
+      "platform": "Browser (CrazyGames, own site)",
+      "genre": "Voxel sandbox / minigames (Minecraft-like)",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "No-download Minecraft-style play for school and Chromebook audiences, on CrazyGames and its own domain.",
+      "shareMechanic": "Multiplayer with friends; building.",
+      "monetization": "Ads (CrazyGames gets 99% of its revenue from ads).",
+      "results": "Reported more than 15M monthly players and 8M+ registered accounts; 4.36M site visits in March 2026; about 14.8K concurrent players with a 27K daily peak.",
+      "lesson": "Familiar mechanics delivered instantly in the browser win the Chromebook and school audience.",
+      "sources": [
+        "https://village.ai/company/bloxd",
+        "https://google.co.jp/ads/publisher/stories/crazy_games"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Slither.io",
+      "year": 2016,
+      "platform": "Browser + iOS/Android",
+      "genre": ".io multiplayer arena",
+      "cozyLevel": "not cozy",
+      "howItSpread": "Instant multiplayer with no signup and simple mouse or touch input. YouTubers and app-store charts pushed it with zero marketing budget.",
+      "shareMechanic": "Leaderboard length; streamer clips.",
+      "monetization": "Ads (plus paid ad removal).",
+      "results": "More than $100K a day in ad revenue at its 2016 peak; 68M+ mobile downloads; 20M+ US downloads by May 2016.",
+      "lesson": "Instant start, one-input controls and a 'one more go' loop scale on ads alone.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Slither.io",
+        "https://www.loopinsight.com/2016/06/20/slither-io-game-goes-viral-brings-developer-100k-a-day/",
+        "https://sensortower.com/blog/top-mobile-games-may-2016"
+      ],
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Krunker.io",
+      "year": 2018,
+      "platform": "Browser",
+      "genre": "FPS (.io)",
+      "cozyLevel": "not cozy",
+      "howItSpread": "No-install shooter with modding; a large web audience.",
+      "shareMechanic": "Mods, custom maps, clips.",
+      "monetization": "Ads + cosmetics; acquired by FRVR in May 2022 (amount undisclosed).",
+      "results": "More than 200M unique players at acquisition.",
+      "lesson": "Browser games can be bought up by bigger companies. Player-made content (maps, mods) extends a game's life.",
+      "sources": [
+        "https://www.gamedeveloper.com/press-release/frvr-acquires-popular-free-to-play-shooter-krunkerio"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Vampire Survivors",
+      "year": 2021,
+      "platform": "Started as an HTML5 browser game on itch.io; then Steam, mobile, consoles",
+      "genre": "Auto-shooter roguelite ('bullet heaven')",
+      "cozyLevel": "not cozy",
+      "howItSpread": "Cheap price, a one-button feel and screen-filling chaos made it ideal for streamers and YouTube.",
+      "shareMechanic": "Screen-filling power-fantasy clips.",
+      "monetization": "Cheap premium + DLC; free mobile with ads.",
+      "results": "1M copies, then 2.5M by April 2022; reported around 6M on Steam plus 3M mobile downloads.",
+      "lesson": "A solo developer's HTML5 prototype can become a hit. A satisfying auto-play loop is very watchable.",
+      "sources": [
+        "https://mobilegamer.biz/vampire-survivors-mobile-hits-3m-downloads/",
+        "https://orbispatches.com/gaming-faq/how-successful-is-vampire-survivors"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "fly.pieter.com",
+      "year": 2025,
+      "platform": "Browser (three.js multiplayer)",
+      "genre": "Casual MMO flight sim, 'vibe-coded' with Cursor + Claude",
+      "cozyLevel": "not cozy",
+      "howItSpread": "The creator built it in public on X, with daily progress posts to his large following. The 'made 100% with AI' story itself was the hook (100M+ views on X).",
+      "shareMechanic": "Build-in-public story; multiplayer link sharing.",
+      "monetization": "Sponsor billboards and branded planes sold to startups (in-world ads), not ad networks.",
+      "results": "$1M ARR in 17 days (creator-reported). Later reported around $138K MRR, though that figure came from a 2026 roundup.",
+      "lesson": "For an AI-assisted solo developer, the process (daily build videos) is the content. Selling in-world sponsorships directly can beat ad networks when the audience is your own.",
+      "sources": [
+        "https://levels.io/full-multiplayer-python-websockets-game-ai",
+        "https://vgtimes.com/tech-and-hardware/122582-dutch-startup-founder-creates-game-using-ai-in-180-minutes-and-earns-87000-in-one-month.html",
+        "https://www.indiehackers.com/post/2NUIOp80SUWuPmmfKoS9"
+      ],
+      "confidence": "medium (self-reported; the later MRR figure is low)"
+    },
+    {
+      "name": "Grow a Garden (Roblox)",
+      "year": 2025,
+      "platform": "Roblox",
+      "genre": "Idle farming / collecting with real-time shared events",
+      "cozyLevel": "cozy",
+      "howItSpread": "A 16-year-old built it in days. It went from 500 to about 100K concurrent players in two weeks, then rare-seed and mutation hype plus weather events spread on TikTok and YouTube.",
+      "shareMechanic": "Rare mutations and pets to flex; scheduled global events everyone shows up for; trading.",
+      "monetization": "Robux microtransactions (seeds, pets, boosts).",
+      "results": "Peaked at 21.3M concurrent players on 21 Jun 2025 and 22.3M on 23 Aug 2025. Reported about $12M revenue in May 2025 alone.",
+      "lesson": "A cozy, slow, idle farm can become the biggest game in the world when combined with rarity, trading and timed shared events.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Grow_a_Garden",
+        "https://www.pocketgamer.biz/roblox-game-grow-a-garden-beats-steam-with-record-concurrent-user-high-of-89m",
+        "https://gamesbeat.com/janzen-madsen-interview/",
+        "https://www.calcalistech.com/ctechnews/article/dj4lxef8r"
+      ],
+      "confidence": "high for concurrent players; medium for revenue"
+    },
+    {
+      "name": "Steal a Brainrot (Roblox)",
+      "year": 2025,
+      "platform": "Roblox",
+      "genre": "Collect-and-steal tycoon built on TikTok 'Italian brainrot' memes",
+      "cozyLevel": "not cozy",
+      "howItSpread": "Built directly on a live TikTok meme (Italian brainrot characters), so existing meme traffic flowed into the game.",
+      "shareMechanic": "Meme characters; steal and raid moments.",
+      "monetization": "Robux microtransactions; licensing agent appointed.",
+      "results": "25.4M concurrent players (some reports say 25.8M in Oct 2025), a record for any single game.",
+      "lesson": "Riding a live meme can get huge reach, but the game is tied to how long the trend lasts.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Steal_a_Brainrot",
+        "https://www.pocketgamer.biz/robloxs-steal-a-brainrot-becomes-first-game-to-surpass-25m-concurrent-players"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Dress to Impress (Roblox)",
+      "year": 2024,
+      "platform": "Roblox",
+      "genre": "Social fashion / dress-up competition",
+      "cozyLevel": "cozy",
+      "howItSpread": "TikTok, driven largely by adult creators. The 'Pose 28' emote became its own meme; the official TikTok has 2.5M+ followers averaging 5–10M views per post.",
+      "shareMechanic": "Themed outfit reveal and voting makes a natural before/after clip format.",
+      "monetization": "Robux (VIP, items).",
+      "results": "9.7B visits; concurrent peak reported between 1.5M and 1.73M (Dec 2024); won three Roblox Innovation Awards; made by a 17-year-old.",
+      "lesson": "Dress-up plus a theme and a reveal is a natural short-form video format.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dress_to_Impress_(video_game)",
+        "https://rowatcher.com/news/dress-to-impress-how-a-teen-developer-s-fashion-game-hit-9-7-billion-visits",
+        "https://mvstampede.net/6639/ae/dress-to-impress-the-tiktok-viral-fashion-game"
+      ],
+      "confidence": "medium-high (sources disagree on the peak)"
+    },
+    {
+      "name": "SnapStyle Dress Up (Poki)",
+      "year": 2025,
+      "platform": "Poki (web), later iOS",
+      "genre": "Dress-up + photo decorating",
+      "cozyLevel": "cozy",
+      "howItSpread": "Named one of Poki's top performing games of 2025 alongside Plonky.",
+      "shareMechanic": "Players take a photo of the finished look and decorate it, giving them something to share.",
+      "monetization": "Poki ad revenue share.",
+      "results": "One of Poki's two named top performers of 2025; no play counts found.",
+      "lesson": "Dress-up with a 'take a photo' ending is one of the strongest cozy genres on the biggest web portal.",
+      "sources": [
+        "https://medium.com/poki/2025-at-poki-a-year-in-review-6e2315f41cb5",
+        "https://poki.com/en/g/snapstyle-dress-up"
+      ],
+      "confidence": "medium (ranking from Poki's year-in-review via search summary)"
+    },
+    {
+      "name": "Monkey Mart (Poki)",
+      "year": 2022,
+      "platform": "Poki (web), later iOS/Android",
+      "genre": "Idle shop management / 'hyper-casual tycoon'",
+      "cozyLevel": "cozy",
+      "howItSpread": "Poki front-page staple, top of Poki's Cozy category; walking around triggers jobs automatically, so no tutorial is needed.",
+      "shareMechanic": "Low; portal discovery.",
+      "monetization": "Poki ad revenue share; mobile ports.",
+      "results": "Listed first in Poki's Cozy category (4.6 stars); no play counts found.",
+      "lesson": "Walk-to-work idle management (grow, stock, serve, hire helpers) is the main cozy portal format.",
+      "sources": [
+        "https://poki.com/en/cozy",
+        "https://poki.com/en/g/monkey-mart"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Bongo Cat",
+      "year": 2025,
+      "platform": "Steam (free)",
+      "genre": "Desktop companion / idle pet",
+      "cozyLevel": "cozy",
+      "howItSpread": "Built on an existing meme; free; runs in the background while you type. Tradeable hat drops on the Steam Marketplace kept people running it.",
+      "shareMechanic": "Cat-on-taskbar screenshots; selling rare hats.",
+      "monetization": "Steam Marketplace fees from cosmetic trading.",
+      "results": "All-time peak of about 194.5K concurrent players (May 2025). Despite that, net revenue was only about $2K–$4K a month (Mar–Jun 2025) and the developer said it was not profitable.",
+      "lesson": "Ambient 'leave it open' games can get huge concurrent counts, but a free game with no strong monetization earns very little.",
+      "sources": [
+        "https://steambase.io/apps/3419430",
+        "https://wnhub.io/news/stores-and-publishing/item-48117",
+        "https://www.esports.net/news/bongo-cat-steam-popularity"
+      ],
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Rusty's Retirement",
+      "year": 2024,
+      "platform": "Steam (PC/Mac)",
+      "genre": "Idle farming that sits in a strip at the bottom or side of the screen",
+      "cozyLevel": "cozy",
+      "howItSpread": "The new format (it sits at the bottom of your screen while you work) was the hook; it started the 'bottom-of-screen idle' trend.",
+      "shareMechanic": "Desktop screenshots showing the farm under work apps.",
+      "monetization": "Cheap premium.",
+      "results": "100K copies in about 5 days; more than 330K on Steam (GameDiscover); later reports of more than 500K.",
+      "lesson": "A cozy game that doesn't compete for attention (always on, multitasking) is a strong new form, and a browser tab can do the same thing.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rusty%27s_Retirement",
+        "https://newsletter.gamediscover.co/p/how-rustys-retirement-idle-farmed",
+        "https://www.gamenguide.com/articles/105189/20240502/rustys-retirement-idle-farming-simulator-sells-100k-copies-in-5-days.htm"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Placid Plastic Duck Simulator",
+      "year": 2022,
+      "platform": "Steam ($1.99), later PS4/PS5",
+      "genre": "Ambient watch-ducks simulator",
+      "cozyLevel": "cozy",
+      "howItSpread": "Zero marketing. It was picked up by large Japanese and Korean Twitter accounts and by YouTuber RTGame (2.75M subscribers).",
+      "shareMechanic": "Absurdly calm premise; 'look at my ducks'.",
+      "monetization": "$1.99 premium + DLC ducks.",
+      "results": "98% positive across about 20K reviews. Sales estimates range from about 410K to 1.45M (they conflict); more than 70K in the first months.",
+      "lesson": "A tiny, silly, peaceful game made at a game jam can go viral on its premise alone. A low price lets people buy on impulse.",
+      "sources": [
+        "https://newsletter.gamediscover.co/p/how-did-the-plastic-duck-game-become",
+        "https://raijin.gg/app/1999360/Placid_Plastic_Duck_Simulator",
+        "https://www.pushsquare.com/news/2023/06/viral-hit-placid-plastic-duck-simulator-brings-sonys-tech-demo-full-circle-on-ps5-ps4"
+      ],
+      "confidence": "high for zero-marketing and RTGame; low for sales"
+    },
+    {
+      "name": "Is This Seat Taken?",
+      "year": 2025,
+      "platform": "PC, Switch, iOS, Android (PS5 Aug 2026)",
+      "genre": "Cozy seating/logic puzzle",
+      "cozyLevel": "cozy",
+      "howItSpread": "A demo plus a very clear premise (seat picky passengers) that works well as short clips.",
+      "shareMechanic": "Relatable 'who sits where' scenarios.",
+      "monetization": "Premium.",
+      "results": "About 165.9K Steam copies and about $1.4M gross (estimate, July 2026).",
+      "lesson": "Relatable social-puzzle premises (seating, packing, sorting) fit cozy players and are easy to explain in a 10-second clip.",
+      "sources": [
+        "https://raijin.gg/app/3035120/Is_This_Seat_Taken",
+        "https://en.wikipedia.org/wiki/Is_This_Seat_Taken%3F"
+      ],
+      "confidence": "low-medium (third-party estimate)"
+    },
+    {
+      "name": "Cats & Soup",
+      "year": 2021,
+      "platform": "iOS/Android",
+      "genre": "Cozy idle (cats cooking soup)",
+      "cozyLevel": "cozy",
+      "howItSpread": "Cute cats, ASMR sound and screenshot-friendly art; kept up by events and collaborations.",
+      "shareMechanic": "Cute cat moments; collection.",
+      "monetization": "Hybrid IAP + rewarded ads.",
+      "results": "More than 80M cumulative downloads (earlier 50M milestone); a 23% in-app and ad revenue lift after monetization optimisation.",
+      "lesson": "Cute animals doing cozy jobs, idle progress and ASMR make a durable recipe for both ads and in-app purchases.",
+      "sources": [
+        "https://www.pockettactics.com/cats-and-soup/50-million-downloads",
+        "https://unity.com/resources/neowiz-cats-soupplay",
+        "https://www.invenglobal.com/articles/24343/neowiz-ceo-designate-park-sung-jun-eyes-expansion-of-cats-soup-ip-in-china"
+      ],
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Block Blast!",
+      "year": 2024,
+      "platform": "iOS/Android (web clones like 'Blocky Blast Puzzle' chart on Poki)",
+      "genre": "Block-placement puzzle",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "TikTok 'satisfying clear' and high-score clips; later official TikTok collaborations.",
+      "shareMechanic": "Score screenshots; combo clears.",
+      "monetization": "Ads + IAP.",
+      "results": "40M DAU and 160M MAU by Nov 2024; 70M DAU and 300M MAU by Jan 2026.",
+      "lesson": "Satisfying line clears with no fail stress work at huge scale. Its web clone sits on Poki's Cozy and Trending lists.",
+      "sources": [
+        "https://www.pocketgamer.biz/block-blast-surges-past-40m-daily-active-users",
+        "https://www.pocketgamer.biz/block-blast-reaches-70m-daily-active-users-and-300m-monthly-active-users-worldwide"
+      ],
+      "confidence": "high"
+    },
+    {
+      "name": "Sprunki (Incredibox mod)",
+      "year": 2024,
+      "platform": "Browser (fan mod; huge web-clone ecosystem)",
+      "genre": "Music-mixing toy + horror lore",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "Kids shared songs they made on TikTok and YouTube. A hidden 'horror mode' twist and character lore created reaction and theory content.",
+      "shareMechanic": "Every mix is unique, so players share songs and react to the horror reveal.",
+      "monetization": "Fan mod; clone sites run ads (no figures).",
+      "results": "One YouTube gameplay video got 2.5M+ views in a month; no aggregate numbers found.",
+      "lesson": "A creative toy where every output is shareable, plus a secret to discover, spreads fast with young audiences on short-form video.",
+      "sources": [
+        "https://knowyourmeme.com/memes/subcultures/sprunki"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Gartic Phone",
+      "year": 2020,
+      "platform": "Browser",
+      "genre": "Party drawing telephone",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "Streamers play it with chat and friends; funny drawing chains become TikTok clips (3.2M and 10.2M-view examples).",
+      "shareMechanic": "End-of-round replay of the drawing chain, which works as a clip.",
+      "monetization": "Ads.",
+      "results": "707.6K followers on Twitch; individual TikTok clips with 3–10M plays.",
+      "lesson": "A built-in replay of player-made chaos at the end of each round makes clips without extra work.",
+      "sources": [
+        "https://knowyourmeme.com/editorials/guides/what-is-gartic-phone-and-why-do-streamers-love-it-the-multiplayer-drawing-game-explained"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "GeoGuessr",
+      "year": 2013,
+      "platform": "Browser (+apps)",
+      "genre": "Geography guessing",
+      "cozyLevel": "cozy-adjacent",
+      "howItSpread": "Streamers and creators (e.g. Rainbolt clips) plus esports events; its World Cup peaked at 254,918 concurrent viewers.",
+      "shareMechanic": "Superhuman-guess clips; challenge links.",
+      "monetization": "Subscription (85–90% of revenue); free-to-play ended Feb 2024.",
+      "results": "2024 revenue SEK 310.9M (+33%); about €21M revenue at a 45–50% margin (earlier report); 85M registered and 15M MAU.",
+      "lesson": "A browser game can support subscriptions once creators make it a spectator sport. A good clip format is worth more than features.",
+      "sources": [
+        "https://omr.com/de/daily/geoguessr-world-cup-wachstum",
+        "https://private-equity-bros.beehiiv.com/p/this-simple-app-was-bootstrapped-to-a-400m-valuation",
+        "https://www.tubefilter.com/?p=182125"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Tiny Glade",
+      "year": 2024,
+      "platform": "Steam",
+      "genre": "Goal-less cozy castle builder",
+      "cozyLevel": "cozy",
+      "howItSpread": "Constant work-in-progress GIFs and TikToks before launch (teasing even its Coming Soon page). Cozy, Sims and city-builder streamers played it, and players built shareable things like Helm's Deep.",
+      "shareMechanic": "Satisfying procedural building clips; recreations of famous places.",
+      "monetization": "Premium.",
+      "results": "616K copies in under a month; 10.6K concurrent players at launch.",
+      "lesson": "Satisfying procedural 'every click looks good' building plus regular development clips builds demand before launch.",
+      "sources": [
+        "https://newsletter.gamediscover.co/p/how-tiny-glade-built-its-way-to-600k",
+        "https://howtomarketagame.com/2023/06/12/marketing-your-steam-game-before-you-have-a-steam-page-the-tiny-glade-story/",
+        "https://wnhub.io/news/stores-and-publishing/item-45586"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "portalGenres": [
+    {
+      "genre": "Dress-up / fashion / avatar styling",
+      "evidence": "SnapStyle Dress Up was named one of Poki's two top performing games of 2025. Vortella's Dress Up is in Poki's Cozy top list. Dress to Impress (Roblox) is the off-portal proof: 9.7B visits.",
+      "cozyCompatible": true,
+      "source": "https://medium.com/poki/2025-at-poki-a-year-in-review-6e2315f41cb5 ; https://poki.com/en/cozy",
+      "confidence": "medium-high"
+    },
+    {
+      "genre": "Idle / walk-to-work management tycoon (shop, hotel, restaurant)",
+      "evidence": "Poki's Cozy category is led by Monkey Mart (4.6 stars) and My Perfect Hotel (4.5). CrazyGames highlights idle tycoons (Idle Train Empire Tycoon, Idle Blogger Simulator) for short sessions. AppMagic H1 2025: clicker/idle revenue up 40% year on year (mobile).",
+      "cozyCompatible": true,
+      "source": "https://poki.com/en/cozy ; https://www.analyticsinsight.net/games/best-mobile-games-to-play-on-crazygames-in-2025 ; https://appmagic.rocks/research/casual-report-h1-2025",
+      "confidence": "medium"
+    },
+    {
+      "genre": "Block / merge puzzle (Suika-likes, block blast)",
+      "evidence": "Blocky Blast Puzzle is in Poki's top-5 trending and Cozy lists. Fruit Merge: Juicy Drop is listed among CrazyGames picks. AppMagic: Merge-2 revenue up 94% year on year in H1 2025 (mobile). Block Blast has 300M MAU on mobile.",
+      "cozyCompatible": true,
+      "source": "https://www.gfinityesports.com/article/top-10-games-to-play-on-poki-game-platform-2025 ; https://poki.com/en/cozy ; https://appmagic.rocks/research/casual-report-h1-2025",
+      "confidence": "medium"
+    },
+    {
+      "genre": "Cooking / food serving",
+      "evidence": "Sushi Party is in Poki's top-5 Cozy list; Poki describes its cozy category as decorating rooms, cooking meals and caring for animals (85+ cozy games).",
+      "cozyCompatible": true,
+      "source": "https://poki.com/en/cozy",
+      "confidence": "medium"
+    },
+    {
+      "genre": "Crafting / element combination & discovery",
+      "evidence": "Little Alchemy 2 is hosted on CrazyGames. Infinite Craft was the third most searched game of 2024 (reported).",
+      "cozyCompatible": true,
+      "source": "https://www.crazygames.com/jp/game/little-alchemy-2 ; https://en.wikipedia.org/wiki/Infinite_Craft",
+      "confidence": "medium"
+    },
+    {
+      "genre": "Draw-to-solve / brain-teaser puzzles (YouTube Playables)",
+      "evidence": "Draw & Escape puzzles are reported as the strongest Playables category. Tricky Twist: Brain Puzzle got 394K plays a day, the most of any 2026 new release. Playables added 1B+ plays in 65 days (Jul–Sep 2026) and its catalogue went from 788 to 1,477 titles.",
+      "cozyCompatible": true,
+      "source": "https://mediacube.io/en/blog/youtube-playables-game-mechanics ; https://mediacube.io/en/blog/youtube-playables-updates",
+      "confidence": "medium"
+    },
+    {
+      "genre": "Hyper-casual runner/crowd games (YouTube Playables)",
+      "evidence": "Tall Man Run has 106M plays; Build A Queen, Snake Clash and Stealth Master each have 90M+. Top publishers are SayGames, Voodoo, Supersonic and CrazyLabs.",
+      "cozyCompatible": false,
+      "source": "https://mobilegamer.biz/youtube-has-quietly-rolled-out-playables-across-europe/",
+      "confidence": "medium"
+    },
+    {
+      "genre": "Voxel sandbox / building (Minecraft-likes)",
+      "evidence": "Bloxd.io reports more than 15M monthly players and ranks #4 among tracked web games.",
+      "cozyCompatible": true,
+      "source": "https://village.ai/company/bloxd",
+      "confidence": "medium"
+    },
+    {
+      "genre": "Ragdoll / launch physics",
+      "evidence": "Zombie Launcher X was #1 on CrazyGames for 6 weeks straight; Rocket Toilet 3D is also popular.",
+      "cozyCompatible": false,
+      "source": "https://www.analyticsinsight.net/games/most-popular-crazy-games-in-2025",
+      "confidence": "medium (secondary listicle)"
+    },
+    {
+      "genre": "Rage/trap platformers and parkour",
+      "evidence": "Plonky (ninja parkour) was a Poki top performer in 2025; Level Devil is #1 in Poki trending.",
+      "cozyCompatible": false,
+      "source": "https://medium.com/poki/2025-at-poki-a-year-in-review-6e2315f41cb5 ; https://www.gfinityesports.com/article/top-10-games-to-play-on-poki-game-platform-2025",
+      "confidence": "medium"
+    },
+    {
+      "genre": "Multiplayer .io / kart / shooter",
+      "evidence": "Smash Karts is in Poki's top-5 trending; Shell Shockers is among the most played on CrazyGames in 2025; Krunker has 200M+ unique players.",
+      "cozyCompatible": false,
+      "source": "https://www.gfinityesports.com/article/top-10-games-to-play-on-poki-game-platform-2025 ; https://www.analyticsinsight.net/games/most-popular-crazy-games-in-2025",
+      "confidence": "medium"
+    },
+    {
+      "genre": "Driving / stunt and endless runner",
+      "evidence": "Drive Mad and Subway Surfers are in Poki's top-5 trending.",
+      "cozyCompatible": false,
+      "source": "https://www.gfinityesports.com/article/top-10-games-to-play-on-poki-game-platform-2025",
+      "confidence": "medium"
+    }
+  ],
+  "platformEconomics": [
+    {
+      "genre": "PLATFORM ECONOMICS (context, not a genre)",
+      "evidence": "Poki 2025: 625M players, 100M monthly, 11.1B gameplays, 1,018 games passed 1M plays. Top developers earn $50K–$1M a year. Poki's split is reported as 50/50 for portal traffic and 100% to the developer for players they bring themselves (bookmarks, search, social). CrazyGames: 99% of revenue from ads, 30–50M+ MAU depending on source.",
+      "cozyCompatible": true,
+      "source": "https://medium.com/poki/2025-at-poki-a-year-in-review-6e2315f41cb5 ; https://mobidictum.com/poki-wins-best-in-business-award-dutch-game-awards/ ; https://google.co.jp/ads/publisher/stories/crazy_games",
+      "confidence": "medium (the 100% own-traffic split comes from a search summary; check Poki's developer terms)"
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "Shareable, spoiler-free result",
+      "detail": "One compact artifact (emoji grid, % score, photo of an outfit) that shows how you did and makes others curious. This drove Wordle's growth from 90 players to millions.",
+      "examples": [
+        "Wordle",
+        "NYT Connections",
+        "Framed",
+        "Draw a Perfect Circle",
+        "SnapStyle Dress Up"
+      ]
+    },
+    {
+      "pattern": "Daily cadence and scarcity",
+      "detail": "One shared puzzle per day gives everyone the same topic to talk about, builds streaks and brings people back daily. The format works across many themes (NYT: 11.1B puzzles in 2024).",
+      "examples": [
+        "Wordle",
+        "Connections",
+        "Strands",
+        "Framed",
+        "Grow a Garden timed weather events"
+      ]
+    },
+    {
+      "pattern": "Emergent combinations and user-made content",
+      "detail": "Systems that produce surprising, unique outputs (recipes, mixes, builds), so players make the content for you. 'First Discovery'-style tags add bragging rights.",
+      "examples": [
+        "Infinite Craft",
+        "Little Alchemy",
+        "Sprunki",
+        "Sandspiel gallery",
+        "Tiny Glade",
+        "Townscaper",
+        "Gartic Phone"
+      ]
+    },
+    {
+      "pattern": "Streamer- and VTuber-friendly drama",
+      "detail": "Visible near-misses, chain reactions or comedic chaos that streamers react to. Suika's 2023 boom came from VTubers; Placid Duck took off after RTGame covered it with zero marketing.",
+      "examples": [
+        "Suika Game",
+        "Placid Plastic Duck Simulator",
+        "Gartic Phone",
+        "GeoGuessr",
+        "Vampire Survivors"
+      ]
+    },
+    {
+      "pattern": "Satisfying physics and merging",
+      "detail": "Objects that bump, roll, merge or clear lines with juicy feedback. Watchable without sound and readable in a 3-second hook.",
+      "examples": [
+        "Suika Game",
+        "Block Blast",
+        "Sandspiel",
+        "Zombie Launcher X",
+        "Tiny Glade"
+      ]
+    },
+    {
+      "pattern": "'One more go' short loop with a visible score",
+      "detail": "Runs of 30 seconds to 5 minutes; when you fail you instantly know what to do better. Suika's developer explicitly credited this 'try to do better next time' feeling.",
+      "examples": [
+        "Suika Game",
+        "Slither.io",
+        "Block Blast",
+        "Draw a Perfect Circle"
+      ]
+    },
+    {
+      "pattern": "Instant start, no tutorial, one input",
+      "detail": "Clicking the link means you are playing within seconds, with no signup or download, and the controls are obvious (tap, drag, walk). This matters for traffic from a TikTok link in bio, where every extra step loses players.",
+      "examples": [
+        "Slither.io",
+        "The Password Game",
+        "Draw a Perfect Circle",
+        "Monkey Mart",
+        "Bloxd.io"
+      ]
+    },
+    {
+      "pattern": "Ambient / leave-it-running companion",
+      "detail": "Cozy games that live beside work or study (bottom-of-screen, taskbar, background tab) and reward you for keeping them open. They reach large concurrent counts but need a monetization plan (Bongo Cat earned only about $2–4K a month).",
+      "examples": [
+        "Rusty's Retirement",
+        "Bongo Cat",
+        "Placid Plastic Duck Simulator",
+        "Cookie Clicker"
+      ]
+    },
+    {
+      "pattern": "Cute + simple + cheap or free",
+      "detail": "Cute animals and food, rules you can explain in one sentence, and a price low enough to buy on impulse (free web; about $2 on Steam).",
+      "examples": [
+        "Suika Game",
+        "Cats & Soup",
+        "Placid Plastic Duck Simulator",
+        "Bongo Cat"
+      ]
+    },
+    {
+      "pattern": "Rarity, collection and social flexing",
+      "detail": "Rare drops, mutations and cosmetics give people reasons to post and trade. Combined with cozy farming this drove the biggest concurrent counts ever recorded.",
+      "examples": [
+        "Grow a Garden",
+        "Steal a Brainrot",
+        "Bongo Cat hats",
+        "Dress to Impress"
+      ]
+    },
+    {
+      "pattern": "Build in public and the creator's own audience",
+      "detail": "The making of the game is itself content (daily development clips, 'made with AI'), and every new release launches into the existing audience.",
+      "examples": [
+        "fly.pieter.com",
+        "Tiny Glade",
+        "neal.fun (Password Game, Infinite Craft, Stimulation Clicker)"
+      ]
+    },
+    {
+      "pattern": "Absurd escalation / premise as the hook",
+      "detail": "A premise funny enough to explain in the video's caption, where the escalation is the punchline.",
+      "examples": [
+        "The Password Game",
+        "Stimulation Clicker",
+        "Universal Paperclips",
+        "Placid Plastic Duck Simulator",
+        "Is This Seat Taken?"
+      ]
+    },
+    {
+      "pattern": "Web first, then a paid port",
+      "detail": "A free browser version proves the hook and builds an audience; a paid Steam or mobile version earns the money.",
+      "examples": [
+        "Cookie Clicker",
+        "A Dark Room",
+        "Vampire Survivors",
+        "Universal Paperclips"
+      ]
+    }
+  ],
+  "ai": {
+    "successStories": [
+      {
+        "name": "fly.pieter.com (browser multiplayer flight sim)",
+        "builder": "Pieter Levels (@levelsio), solo, not a game dev",
+        "howBuilt": "Cursor + Three.js, Grok 3 for server code; vibe-coded and iterated live in public on X",
+        "timeToBuild": "First version in ~3 hours (often reported as ~30 min); features added daily",
+        "results": "Self-reported $1M ARR run-rate (~$87k MRR) 17 days after launch, ~320k players; ~$38k earned in first 10 days; Indie Hackers reported it had fallen to ~$12k MRR / $144k ARR by May 2025 (spike then decay). Success heavily attributed to his ~600k X followers and an Elon Musk share.",
+        "monetization": "Sold in-game ad placements (blimps, balloons, billboards; ~$5k/month per slot reported) + paid planes (F-16 $29.99)",
+        "source": "https://levels.io/full-multiplayer-python-websockets-game-ai ; https://avgeekery.com/?p=39779 ; https://www.indiehackers.com/post/2NUIOp80SUWuPmmfKoS9 ; https://404media.co/this-game-created-by-ai-vibe-coding-makes-50-000-a-month-yours-probably-wont",
+        "confidence": "medium (figures self-reported, vary by date; decline to ~$12k MRR by May 2025 reported by Indie Hackers)"
+      },
+      {
+        "name": "WW2 multiplayer dogfight arena",
+        "builder": "Nicolas Zullo",
+        "howBuilt": "Zero human-written code, ~500 prompts, Three.js browser game",
+        "timeToBuild": "~20 hours, ~EUR 20 API cost",
+        "results": "~45,000 players and ~1.5M views on X (reported)",
+        "monetization": "None reported",
+        "source": "https://ziva.sh/blogs/vibe-coding-games (via search summary)",
+        "confidence": "low-medium (secondary summary, could not verify primary)"
+      },
+      {
+        "name": "The Great Taxi Assignment",
+        "builder": "Tomas Bencko",
+        "howBuilt": "Vibe Jam 2025 entry; >=80% of code/assets AI-generated per jam rules",
+        "timeToBuild": "Within the 1-month jam window",
+        "results": "1st place Vibe Jam 2025 ($10,000) out of ~1,170 entries; GTA-like taxi sim",
+        "monetization": "Jam prize",
+        "source": "https://getcoai.com/video/the-best-ai-made-videogames-2025-vibe-coding-game-jam/",
+        "confidence": "medium"
+      },
+      {
+        "name": "Vibeware / Vector Tango",
+        "builder": "Matt Gordon / Robert Scoble",
+        "howBuilt": "Vibe Jam 2025 entries (AI-coded browser games)",
+        "timeToBuild": "Within jam month",
+        "results": "2nd ($5,000) and 3rd ($2,500) place Vibe Jam 2025",
+        "monetization": "Jam prizes",
+        "source": "https://getcoai.com/video/the-best-ai-made-videogames-2025-vibe-coding-game-jam/",
+        "confidence": "medium"
+      },
+      {
+        "name": "A Game About Capybaras Delivering Food (cozy-adjacent)",
+        "builder": "@leocooout",
+        "howBuilt": "Vibe Jam 2026 entry; 90%+ of code AI-written per rules; Three.js recommended",
+        "timeToBuild": "Within the April-May 2026 jam month",
+        "results": "Gold, $25,000, out of 945 entries; jam games drew 240k+ players in total. Notable as a cute/cozy theme winning.",
+        "monetization": "Jam prize; no commercial data found",
+        "source": "https://x.com/levelsio/status/2067364066193203333 ; https://levels.io/vibe-jam-2026-winners-quality ; https://colyseus.io/blog/vibe-jam-2026/",
+        "confidence": "medium (winner names from levelsio post via search summary)"
+      },
+      {
+        "name": "Fanto's Mega-Mart / WenWare",
+        "builder": "@e_c_t_o / @underpaid_mom",
+        "howBuilt": "Vibe Jam 2026 entries, 90%+ AI code",
+        "timeToBuild": "Jam month",
+        "results": "Silver $10,000 and Bronze $5,000",
+        "monetization": "Jam prizes",
+        "source": "https://x.com/levelsio/status/2067364066193203333",
+        "confidence": "medium"
+      },
+      {
+        "name": "CODEX MORTIS (Vampire Survivors-like)",
+        "builder": "Solo dev marketed as '100% AI-developed'",
+        "howBuilt": "TypeScript + PixiJS + bitECS + Electron; art by ChatGPT; shaders/animations by Claude Code; no engine",
+        "timeToBuild": "~3 months",
+        "results": "Demo ~10,500 players, 71-min avg session; but reception 'predominantly negative' with art called 'mushy'; AI-first marketing provoked backlash",
+        "monetization": "Premium Steam Early Access",
+        "source": "https://gigazine.net/gsc_news/en/20251215-codex-mortis ; https://www.xataka.com/videojuegos/primer-videojuego-hecho-integramente-ia-llega-a-steam-rechazo-jugadores-ha-sido-casi-unanime ; https://app.cinevva.com/signals/2026-03-23-solo-devs-shipping-not-vibing",
+        "confidence": "medium"
+      },
+      {
+        "name": "Catvivors",
+        "builder": "Przemek Chojecki (AI researcher), solo",
+        "howBuilt": "Claude Code + Codex; roguelite auto-battler about cats",
+        "timeToBuild": "Not reported",
+        "results": "Shipped to Steam Early Access 13 Mar 2026 with 6 characters, 15+ weapons, 24 levels; sales not disclosed",
+        "monetization": "Premium $4.99",
+        "source": "https://app.cinevva.com/news/2026-03-22-solo-devs-shipping-games-with-ai ; https://pchojecki.medium.com/ai-helped-me-solo-dev-a-game-on-steam-f84a2425be10",
+        "confidence": "medium (shipping confirmed; no revenue data)"
+      },
+      {
+        "name": "Void Balls",
+        "builder": "BigDevSoon",
+        "howBuilt": "8 parallel Claude Code agents each owning a domain; C#, 173 scripts, 88 test files",
+        "timeToBuild": "10 days",
+        "results": "Complete game with 5 enemy types, 15 power-up cards, bosses; commercial results not reported",
+        "monetization": "Not reported",
+        "source": "https://app.cinevva.com/signals/2026-03-23-solo-devs-shipping-not-vibing",
+        "confidence": "low-medium"
+      },
+      {
+        "name": "Meet Claude",
+        "builder": "Unnamed dev",
+        "howBuilt": "Code, writing, art, music and deployment all generative AI (mainly Claude)",
+        "timeToBuild": "Not reported",
+        "results": "Released on Steam 13 Mar 2026; no sales data found",
+        "monetization": "Premium Steam",
+        "source": "https://store.steampowered.com/app/4437280/Meet_Claude/",
+        "confidence": "medium (exists; results unknown)"
+      },
+      {
+        "name": "Storm-cloud browser game",
+        "builder": "Gonzo ML author + son",
+        "howBuilt": "Claude designed and wrote 21 JS files with procedural audio; Claude fixed 18 integration bugs before first playtest",
+        "timeToBuild": "Two evenings",
+        "results": "Worked on first run; hobby project, no commercial results",
+        "monetization": "None",
+        "source": "https://gonzoml.substack.com/p/how-we-built-a-full-browser-game",
+        "confidence": "medium"
+      },
+      {
+        "name": "Librarian: Tidy Up the Arcane Library (cozy; cautionary)",
+        "builder": "ArtRising, 2-person Japanese team",
+        "howBuilt": "Mostly human-made; gen AI used to refine 4 assets (1 UI, 3 landscape) and proofread text; carries Steam AI disclosure",
+        "timeToBuild": "Not reported",
+        "results": "Breakout cozy hit Apr 2026 (29k concurrent viewers on Twitch per one report); hit ~38% positive within 48h after AI discovery, some streamers cancelled; later 'Very Positive' with ~13.9k English reviews",
+        "monetization": "Premium Steam",
+        "source": "https://kotaku.com/librarian-tidy-up-arcane-library-steam-game-cozy-ai-2000702089 ; https://www.ico-optics.org/librarian-tidy-up-arcane-library-cozy-hit-ignites-ai-art-debate/ ; https://store.steampowered.com/app/4197610/",
+        "confidence": "medium (review figures from search summaries; concurrent figure ambiguous players vs viewers)"
+      },
+      {
+        "name": "Dragon Snacks (vs. Iron Nest)",
+        "builder": "Dragon Snacks Games",
+        "howBuilt": "AI used only in build pipeline (e.g. networking architecture), not player-facing content",
+        "timeToBuild": "Not reported",
+        "results": "Cited as model of invisible AI use; comparison game Iron Nest (zero AI) was #1 wishlists gained at June 2026 Next Fest with 99% positive",
+        "monetization": "Premium Steam",
+        "source": "https://recognizingpatterns.substack.com/p/use-ai-to-build-your-game-just-keep",
+        "confidence": "low-medium"
+      }
+    ],
+    "sentiment": [
+      {
+        "finding": "GDC 2026 State of the Industry: 52% of industry professionals say gen AI is having a negative impact (30% in 2025, 18% in 2024); only 7% positive. 36% use gen AI tools at work.",
+        "numeric": 52,
+        "source": "https://gdconf.com/article/gdc-2026-state-of-the-game-industry-reveals-impact-of-layoffs-generative-ai-and-more/ ; https://www.techspot.com/news/111128-more-than-50-game-developers-generative-ai-harming.html",
+        "confidence": "high"
+      },
+      {
+        "finding": "By discipline, visual/technical artists (64%), designers/narrative (63%) and programmers (59%) are most negative (GDC 2026).",
+        "numeric": 64,
+        "source": "https://www.techspot.com/news/111128-more-than-50-game-developers-generative-ai-harming.html",
+        "confidence": "medium-high"
+      },
+      {
+        "finding": "Quantic Foundry survey (N=1,799, Oct-Dec 2025): 85% of gamers negative toward gen AI in games, 63% picked the most negative option; most negative about AI art, music, sound, narrative, dialogue (i.e. visible/creative uses).",
+        "numeric": 85,
+        "source": "https://quanticfoundry.com/2025/12/18/gen-ai/",
+        "confidence": "high"
+      },
+      {
+        "finding": "Circana PlayerPulse 2025: just over 25% of US players say gen AI use makes them less likely to buy (up from ~22% in Mar 2024) - stated purchase impact is far smaller than stated dislike.",
+        "numeric": 25,
+        "source": "https://www.gamespot.com/articles/genai-in-games-most-players-just-dont-care-study-finds/1100-6538972/",
+        "confidence": "medium-high"
+      },
+      {
+        "finding": "Controlled study of ~10k Steam games released Jan-Oct 2025: AI-disclosed games got ~52.6% fewer reviews than comparable non-AI games (avg 4 vs 7 first-month reviews), after controlling for genre, timing, dev experience, publisher.",
+        "numeric": 52.6,
+        "source": "https://www.digitalcitizen.life/steam-games-that-disclose-ai-use-may-sell-far-less-new-study-finds/ ; https://opencritic.com/news/33528/ai-is-ruining-game-sales-numbers-show",
+        "confidence": "medium-high"
+      },
+      {
+        "finding": "Game Oracle: for established studios with existing followings, AI use was associated with 40-60% lower sales; ~53% fewer reviews for high-potential titles.",
+        "numeric": null,
+        "source": "https://games.gg/news/ai-content-labels-killing-game-sales/ ; https://recognizingpatterns.substack.com/p/use-ai-to-build-your-game-just-keep",
+        "confidence": "medium"
+      },
+      {
+        "finding": "Sulka Haro census of 53,597 Steam releases (mid-2023 to mid-2026): AI-disclosed games are ~1/3 of new releases but only ~10-27% of estimated sales (up from 3-6% in 2024) - underperform, but the gap is narrowing.",
+        "numeric": 30.8,
+        "source": "https://fragwyz.substack.com/p/three-years-of-ai-on-steam ; https://app.cinevva.com/news/2026-07-20-steam-ai-disclosure-study",
+        "confidence": "medium-high"
+      },
+      {
+        "finding": "Cozy audience specifically: Librarian (cozy, Apr 2026) dropped to ~38% positive within 48h over AI-refined assets in just 4 images + proofreading; streamers cancelled; players asked for AI-free alternatives. It later recovered to Very Positive - visible AI art is the trigger, and cozy players are among the most sensitive.",
+        "numeric": 38,
+        "source": "https://kotaku.com/librarian-tidy-up-arcane-library-steam-game-cozy-ai-2000702089 ; https://blog.subimpact.net/2026/06/ai-refined-assets-are-killing-vibe-of.html",
+        "confidence": "medium"
+      },
+      {
+        "finding": "Backlash pattern 2025-26: review bombing, cancelled sponsorships, boycotts, rescinded awards over AI art/voices (e.g. Party Animals AI contest entries May 2026; Kickstarter RPG forced refunds over 'slop art').",
+        "numeric": null,
+        "source": "https://vgtimes.com/articles/168308-ai-in-games-backlash-boycotts.html ; https://www.ingamenews.com/2026/05/devs-behind-beloved-party-game-face.html ; https://www.rascal.news/years-late-rpg-adventure-project-embraces-ai-is-forced-to-refund-angry-backers/",
+        "confidence": "medium"
+      },
+      {
+        "finding": "Code vs content: players and platforms treat AI-written code as invisible/acceptable (Steam exempts coding assistants from disclosure since Jan 2026; Playdate allows code assistants while banning AI art/music/writing); AI art/voice/writing is what gets flagged and punished. CODEX MORTIS' AI-first marketing drew hostility despite working gameplay.",
+        "numeric": null,
+        "source": "https://www.notebookcheck.net/Steam-updates-AI-disclosure-form-requiring-developers-to-report-visible-and-in-game-AI-but-not-background-tools.1206103.0.html ; https://engadget.com/gaming/panic-says-the-playdate-catalog-wont-accept-games-made-with-generative-ai-160615022.html ; https://www.xataka.com/videojuegos/primer-videojuego-hecho-integramente-ia-llega-a-steam-rechazo-jugadores-ha-sido-casi-unanime",
+        "confidence": "high"
+      }
+    ],
+    "policies": [
+      {
+        "platform": "Steam",
+        "policy": "Since Jan 16 2026: disclose gen AI content players consume (art, sound, text/narrative, store page and marketing assets) and live-generated AI content; behind-the-scenes efficiency tools incl. coding assistants (e.g. Copilot) are exempt. Dev remains liable for copyright/safety. Disclosure appears on store page.",
+        "source": "https://www.notebookcheck.net/Steam-updates-AI-disclosure-form-requiring-developers-to-report-visible-and-in-game-AI-but-not-background-tools.1206103.0.html ; https://games.slashdot.org/story/26/01/19/1735231/valve-has-significantly-rewritten-steams-rules-for-how-developers-must-disclose-ai-use",
+        "confidence": "high"
+      },
+      {
+        "platform": "Steam (stats)",
+        "policy": "Disclosures: 7,818 of ~114k games (7%) by July 2025, ~1 in 5 2025 releases; AI-flagged share of releases 10.9% (2024), 19.9% (2025), 30.8% (2026 YTD); ~60% of uses are visuals.",
+        "source": "https://www.videogameschronicle.com/news/steam-games-disclosing-generative-ai-use-are-up-800-this-year/ ; https://fragwyz.substack.com/p/three-years-of-ai-on-steam",
+        "confidence": "high"
+      },
+      {
+        "platform": "itch.io",
+        "policy": "Mandatory 'Generative AI Disclosure' field (required for asset pages, extended to games); 'Yes' tags page AI-Generated with sub-tags (Graphics, Sound, Text & Dialog, Code); 'No' gets a 'No AI' tag; untagged AI content de-indexed from browse.",
+        "source": "https://80.lv/articles/asset-creators-on-itch-io-now-have-to-disclose-the-use-of-generative-ai/ ; https://www.gamesmarket.global/itchio-now-requires-gen-ai-content-to-be-tagged-in-all-games-and-asset-packs-711e824843d410eab51fcd9436836294",
+        "confidence": "medium-high (note: a code-only 'AI-Generated' sub-tag exists, so disclosing AI code there is visible)"
+      },
+      {
+        "platform": "Poki",
+        "policy": "AI allowed if it 'empowers, not shortcuts'; no AI watermarks/prompt artifacts; review all text; may ask for tools/prompts used due to IP concerns; heavy AI/template content without distinct personality and polish risks rejection after Web Fit Test.",
+        "source": "https://sdk.poki.com/working-with-ai ; https://sdk.poki.com/poki-quality-guidelines",
+        "confidence": "high"
+      },
+      {
+        "platform": "CrazyGames",
+        "policy": "No specific AI policy found in this research; check its developer docs before submitting.",
+        "source": "https://playgama.com/blog/?p=14392",
+        "confidence": "low"
+      },
+      {
+        "platform": "Playdate Catalog (Panic)",
+        "policy": "From Apr 2026 bans AI-generated art, music and writing in submissions; code-assist LLMs allowed but must be disclosed on the listing.",
+        "source": "https://engadget.com/gaming/panic-says-the-playdate-catalog-wont-accept-games-made-with-generative-ai-160615022.html ; https://www.timeextension.com/news/2026/04/playdate-has-had-enough-of-all-this-generative-ai-nonsense",
+        "confidence": "high"
+      },
+      {
+        "platform": "Epic Games Store",
+        "policy": "Shows no AI label; CEO Tim Sweeney publicly says AI tags 'make no sense' because AI will be in nearly all production.",
+        "source": "https://pcgamer.com/software/ai/epic-boss-tim-sweeney-thinks-stores-like-steam-should-stop-labelling-games-as-being-made-with-ai-it-makes-no-sense-he-says-because-ai-will-be-involved-in-nearly-all-future-production/",
+        "confidence": "high"
+      },
+      {
+        "platform": "YouTube",
+        "policy": "Must disclose realistic synthetic content; from May 2026 auto-labels undisclosed photoreal AI and shows labels more prominently (overlay on Shorts); 'inauthentic'/mass-produced low-effort content is demonetized. Gameplay footage of a game with AI-assisted code does not need a label.",
+        "source": "https://www.techwyse.com/news/platform-updates/youtube-automatic-ai-labels-disclosure-may-2026 ; https://the-decoder.com/youtube-will-try-to-automatically-flag-ai-videos-starting-this-month/",
+        "confidence": "medium"
+      },
+      {
+        "platform": "TikTok",
+        "policy": "Requires AI-generated content labels (auto-labels via C2PA); reports of 1.3B+ videos labelled and stepped-up enforcement in late 2025 (51k synthetic videos removed, 8.6k accounts banned).",
+        "source": "https://dynamoi.com/learn/faqs/is-ai-music-allowed-on-tiktok ; https://shortsfast.com/blog/is-faceless-ai-content-against-youtube-tiktok-tos-2026/",
+        "confidence": "low-medium (secondary sources; enforcement numbers unverified)"
+      },
+      {
+        "platform": "Apple App Store / Google Play",
+        "policy": "Not researched in depth here (search budget exhausted); no game-specific AI disclosure label found in this pass. Verify current guidelines before shipping mobile.",
+        "source": "n/a",
+        "confidence": "low"
+      }
+    ],
+    "marketEffects": [
+      {
+        "finding": "Steam released ~20,000+ games in 2025 (GameDiscoverCo: 20,558; SteamDB 20,008); ~half got under 10 reviews (6,608 with 1-9, 2,174 with zero).",
+        "source": "https://howtomarketagame.com/2026/01/08/how-many-games-were-released-in-2025/ ; https://mp1st.com/news/18k-games-released-steam-2025-half-have-10-reviews",
+        "confidence": "high"
+      },
+      {
+        "finding": "AI-flagged Steam launches grew from ~13/month to ~530/month and account for 60-90% of all growth in Steam's monthly release count; projected to exceed half of releases by 2027-28.",
+        "source": "https://fragwyz.substack.com/p/three-years-of-ai-on-steam ; https://www.pcgamer.com/gaming-industry/steam-week-in-review-take-cover-because-it-looks-like-more-than-half-of-steam-games-will-have-an-ai-disclosure-by-2027-2028/",
+        "confidence": "medium-high"
+      },
+      {
+        "finding": "AI-disclosed games capture a disproportionately small share of revenue (10-27% of sales vs ~33% of releases) - volume up, average outcomes down; 'AI slop' stigma attaches to the label.",
+        "source": "https://app.cinevva.com/news/2026-07-20-steam-ai-disclosure-study",
+        "confidence": "medium-high"
+      },
+      {
+        "finding": "Vibe Jam scale: 2025 had ~1,170 entries; 2026 had 945 entries and 240k+ players total - many builders, few breakouts; attention concentrated on winners and well-followed creators.",
+        "source": "https://getcoai.com/video/the-best-ai-made-videogames-2025-vibe-coding-game-jam/ ; https://colyseus.io/blog/vibe-jam-2026/",
+        "confidence": "medium"
+      },
+      {
+        "finding": "fly.pieter.com's success is widely attributed to distribution (Levels' ~600k X followers, Musk share) rather than technology; 404 Media headline: 'yours probably won't' make the same.",
+        "source": "https://404media.co/this-game-created-by-ai-vibe-coding-makes-50-000-a-month-yours-probably-wont ; https://www.indiehackers.com/post/2NUIOp80SUWuPmmfKoS9",
+        "confidence": "high"
+      },
+      {
+        "finding": "Analyst framing: AI lowers creation barriers so discoverability gets harder; originality, quality and audience connection become the differentiators.",
+        "source": "https://www.athena-productions.com/read/state-of-ai-2026-246",
+        "confidence": "medium"
+      }
+    ],
+    "moats": [
+      {
+        "moat": "Owned audience / distribution",
+        "why": "The single clearest determinant in the evidence: fly.pieter.com rode a 600k-follower account; most technically similar vibe-coded games got little traction. With 20k+ Steam releases/year, reach is scarcer than code.",
+        "source": "https://www.indiehackers.com/post/2NUIOp80SUWuPmmfKoS9 ; https://howtomarketagame.com/2026/01/08/how-many-games-were-released-in-2025/"
+      },
+      {
+        "moat": "Human-feeling art direction and taste",
+        "why": "The visible layer is what players judge and punish; AI art reads as 'mushy' (CODEX MORTIS) and triggers cozy backlash (Librarian). A distinctive, human-directed style differentiates from the AI-flagged third of Steam.",
+        "source": "https://www.xataka.com/videojuegos/primer-videojuego-hecho-integramente-ia-llega-a-steam-rechazo-jugadores-ha-sido-casi-unanime ; https://kotaku.com/librarian-tidy-up-arcane-library-steam-game-cozy-ai-2000702089"
+      },
+      {
+        "moat": "'No AI content' positioning",
+        "why": "Iron Nest shipped with zero AI and topped Next Fest wishlists; itch.io gives a 'No AI' tag; AI-disclosed games get ~50% fewer reviews. Using AI only for code keeps you off Steam's disclosure entirely.",
+        "source": "https://recognizingpatterns.substack.com/p/use-ai-to-build-your-game-just-keep ; https://www.digitalcitizen.life/steam-games-that-disclose-ai-use-may-sell-far-less-new-study-finds/"
+      },
+      {
+        "moat": "Speed of iteration + live building in public",
+        "why": "AI makes iteration cheap; Levels added features daily in public, turning development itself into marketing content. Speed alone is not a moat (everyone has it) but combined with an audience it compounds.",
+        "source": "https://levels.io/full-multiplayer-python-websockets-game-ai"
+      },
+      {
+        "moat": "Recurring characters / IP and community",
+        "why": "Originality and audience connection are cited as the remaining differentiators when creation is commoditized; a recognisable mascot/world can carry across many small games and short-form videos.",
+        "source": "https://www.athena-productions.com/read/state-of-ai-2026-246"
+      },
+      {
+        "moat": "Game feel and polish",
+        "why": "Poki explicitly rejects AI/template-heavy games lacking distinct personality and polish; 'almost right but not quite' is the top AI-coding frustration, so the last 20% of feel is where human effort shows.",
+        "source": "https://sdk.poki.com/working-with-ai ; https://ziva.sh/blogs/vibe-coding-games"
+      }
+    ],
+    "workflow": [
+      {
+        "practice": "Use AI for code, keep it out of what players see/hear",
+        "detail": "AI coding is exempt from Steam disclosure; human-made or licensed art, music, and writing avoid the label, the ~50% review penalty, and cozy-audience backlash.",
+        "source": "https://recognizingpatterns.substack.com/p/use-ai-to-build-your-game-just-keep"
+      },
+      {
+        "practice": "Scope to a single-file / template browser game first",
+        "detail": "JS/Three.js browser games are where AI output is most reliable and deploy is trivial; start from a running genre skeleton rather than a blank page.",
+        "source": "https://ziva.sh/blogs/vibe-coding-games ; https://app.cinevva.com/guides/vibe-coding-games"
+      },
+      {
+        "practice": "Ship a playable v1 in hours/days, then iterate publicly",
+        "detail": "fly.pieter.com v1 took ~3h and was improved daily with posts; jam-scale (1 month) builds win real prizes.",
+        "source": "https://levels.io/full-multiplayer-python-websockets-game-ai ; https://colyseus.io/blog/vibe-jam-2026/"
+      },
+      {
+        "practice": "Split work across agents by domain and write tests",
+        "detail": "Void Balls: 8 parallel Claude Code agents, each owning a domain, with 88 test files, shipped in 10 days. Have Claude check integration between files before playtests.",
+        "source": "https://app.cinevva.com/signals/2026-03-23-solo-devs-shipping-not-vibing ; https://gonzoml.substack.com/p/how-we-built-a-full-browser-game"
+      },
+      {
+        "practice": "Prototype ugly, measure, kill fast",
+        "detail": "Greybox prototypes with simple analytics (session length, retry loops) before investing in art; only scale the ones that show engagement.",
+        "source": "https://acorngames.gg/blog/2025/8/10/the-indie-devs-guide-to-mastering-tiktok-in-2025"
+      },
+      {
+        "practice": "Test hooks with short-form video before/while building",
+        "detail": "TikTok evaluates each clip independently so zero-follower accounts can go viral; devlog, before/after and funny-bug clips work; use view/save rates as a cheap demand signal per prototype.",
+        "source": "https://acorngames.gg/blog/2025/8/10/the-indie-devs-guide-to-mastering-tiktok-in-2025 ; https://presskit.gg/field-guides/tiktok-indie-game-marketing"
+      },
+      {
+        "practice": "Don't market the game as 'made by AI'",
+        "detail": "CODEX MORTIS's '100% AI' framing drew near-unanimous hostility; market the fantasy and the feel, disclose honestly where required.",
+        "source": "https://www.xataka.com/videojuegos/primer-videojuego-hecho-integramente-ia-llega-a-steam-rechazo-jugadores-ha-sido-casi-unanime"
+      },
+      {
+        "practice": "Review code that touches money/data; keep backups",
+        "detail": "AI code often has security flaws; review anything handling payments/accounts; version control and separate experiments.",
+        "source": "https://ziva.sh/blogs/vibe-coding-games"
+      },
+      {
+        "practice": "Lock genre and Steam page early; collect wishlists",
+        "detail": "Zukowski: finalize genre before the Steam page, launch the page early; demos well before launch help conversion.",
+        "source": "https://wnhub.io/news/stores-and-publishing/item-47311"
+      }
+    ]
+  },
+  "aiRules": [
+    "Use AI freely for code. Players can't see it, and Steam stopped requiring disclosure for coding assistants in January 2026.",
+    "Keep what players see and hear human-made or closely human-directed: art, music, voice, writing. Cozy players punish visible AI hardest (Librarian fell to ~38% positive over four AI-refined images).",
+    "Never market a game as 'made with AI'. Talk about the game. Disclose honestly wherever a platform requires it.",
+    "Speed is how you find a hit, not what protects it. What protects you is an audience you own, a recognizable art style, and recurring characters across games."
+  ],
+  "cozyMobileWeb": [
+    {
+      "name": "Cats & Soup (HIDEA)",
+      "platform": "iOS / Android",
+      "genre": "Cozy cat idle / management",
+      "results": "Passed 50M downloads (iOS+Android), 6 months after hitting 40M. Sensor Tower US weekly snapshots: Q2 2025 revenue peak ~$70K/week, downloads peak ~56K/week, ~525K weekly actives; Q3 2025 revenue peak ~$57K/week, ~619K weekly actives.",
+      "monetization": "Free-to-play: IAP plus ads (exact mix not found)",
+      "lesson": "Cute cat idle loop reaches enormous install volume, but US revenue per user is low; scale of downloads, not ARPU, drives the business.",
+      "sources": [
+        "https://www.pocketgamer.com/cats-soup/50m/",
+        "https://sensortower.com/blog/2025-q2-unified-top-5-cat%20games-revenue-us-608810b928293296047965a0",
+        "https://sensortower.com/blog/2025-q3-unified-top-5-cat%20games-revenue-us-608810b928293296047965a0"
+      ],
+      "confidence": "medium (downloads from developer milestone; revenue from Sensor Tower estimates, US only)"
+    },
+    {
+      "name": "Neko Atsume / Neko Atsume 2 (Hit-Point)",
+      "platform": "iOS / Android",
+      "genre": "Cat collector / idle",
+      "results": "Series has more than 33M downloads per the Neko Atsume 2 App Store listing. Neko Atsume 2 launched October 2024. No standalone figures for the sequel were found.",
+      "monetization": "Free-to-play: light IAP plus ads",
+      "lesson": "A minimal check-in loop (put out food, see which cats visit) can carry a long-lived franchise and a sequel ten years later.",
+      "sources": [
+        "https://apps.apple.com/app/id6499131935",
+        "https://en.wikipedia.org/wiki/Neko_Atsume"
+      ],
+      "confidence": "medium (franchise total from store listing; no sequel-only data)"
+    },
+    {
+      "name": "Animal Crossing: Pocket Camp (F2P) and Pocket Camp Complete (premium)",
+      "platform": "iOS / Android",
+      "genre": "Life sim / decorating",
+      "results": "F2P version: about 15M downloads in its first week (2017) and $250M+ lifetime player spending (Sensor Tower). Complete (paid, $9.99, launched Dec 2–3, 2024): about $3.1M gross in just over a week (AppMagic), $2.6M of it in the first week, averaging about $385K/day with a $505K peak on Dec 8, 2024.",
+      "monetization": "F2P IAP, then a one-time premium purchase",
+      "lesson": "A strong IP can be re-released as premium on mobile. Even so, about $3M in a week is small next to $250M of lifetime F2P spending.",
+      "sources": [
+        "https://sensortower.com/blog/animal-crossing-pocket-camp-250-million-revenue",
+        "https://www.pocketgamer.biz/animal-crossing-pocket-camp-complete-surpasses-3m-with-highest-daily-spend-since-2017/",
+        "https://techcrunch.com/2024/10/28/nintendo-to-launch-10-animal-crossing-mobile-game-on-december-3"
+      ],
+      "confidence": "medium-high"
+    },
+    {
+      "name": "Pokémon Sleep",
+      "platform": "iOS / Android",
+      "genre": "Cozy-adjacent sleep tracker / creature collector",
+      "results": "20M downloads by July 2024 (official) and 28M+ by July 2025. $234.9M lifetime player spending by its 3rd anniversary (July 2026). In year one, Japan was about 70% of revenue and 37% of downloads (Sensor Tower). US Q2 2025: about 8–15K downloads/week and about $104–214K revenue/week.",
+      "monetization": "Free-to-play: IAP and subscription (Premium Pass)",
+      "lesson": "Tying play to a daily real-life habit holds players over time. Monetization skews heavily to Japan.",
+      "sources": [
+        "https://pokemon.gamespress.com/Pokemon-Sleep-Celebrates-One-Year-Anniversary-and-Twenty-Million-Downl",
+        "https://www.pocketgamer.biz/pokmon-sleep-surpasses-230m-in-three-years/",
+        "https://sensortower.com/ja/blog/pokemon-sleep-1st-anniversary"
+      ],
+      "confidence": "high (downloads official), medium (revenue estimates)"
+    },
+    {
+      "name": "Finch: Self-Care Pet",
+      "platform": "iOS / Android",
+      "genre": "Self-care virtual pet",
+      "results": "Third-party tracker: about 2.34M downloads in the last 90 days (about 62% US), about 4.76M active users, and 'about $1M revenue' (period unclear). App Store Editors' Choice.",
+      "monetization": "Freemium: subscription (Finch Plus)",
+      "lesson": "A cozy pet built around wellness habits gets strong organic reach in the US. Its revenue figures are not reliable.",
+      "sources": [
+        "https://screensdesign.com/apps/finch-self-care-pet/",
+        "https://foxdata.com/en/blogs/finch-as-app-store-editors-choice-a-self-care-companion/"
+      ],
+      "confidence": "low (single third-party estimator, undated window)"
+    },
+    {
+      "name": "Travel Town (Magmatic / Moon Active)",
+      "platform": "iOS / Android",
+      "genre": "Merge-2 (cozy-ish travel/renovation)",
+      "results": "About $21M/month (mobidictum). It overtook Merge Mansion as the top merge game in January 2024 and was then passed by Gossip Harbor in November 2024. Sensor Tower US iOS Q2 2024 peaked at about $5.7M/week. One search summary gave $640M lifetime revenue with no clear source.",
+      "monetization": "Free-to-play IAP (energy, LiveOps events)",
+      "lesson": "Merge-2 with heavy LiveOps is the top-grossing format in cozy-adjacent mobile. It depends on paid user acquisition and ongoing events.",
+      "sources": [
+        "https://mobidictum.com/travel-town-achieves-remarkable-revenue-growth-despite-genre-decline/",
+        "https://sensortower.com/blog/2024-q2-ios-top-5-merge%20games-revenue-dk-6012c135241bc16eb8902271",
+        "https://naavik.co/digest/moon-active-casual/"
+      ],
+      "confidence": "medium (monthly run-rate); low ($640M lifetime, unattributed)"
+    },
+    {
+      "name": "Merge Mansion (Metacore)",
+      "platform": "iOS / Android",
+      "genre": "Merge-2 narrative renovation",
+      "results": "$700M+ lifetime revenue and 60M+ downloads after five years (launched Sept 2020). Earlier milestones: €400M/50M downloads (Apr 2024) and $500M/55M (Aug 2024).",
+      "monetization": "Free-to-play IAP",
+      "lesson": "Mystery-story marketing plus merge-2 builds a $100M+/yr title. That takes a large studio and a large UA budget.",
+      "sources": [
+        "https://www.gamesmarket.global/business/fifth-anniversary-metacores-merge-mansion-with-more-than-dollar700-million-in-revenue-after-five-years-d637f659709480d20a95acfaaf3e5b0b",
+        "https://mobilegamer.biz/metacore-hires-king-exec-as-merge-mansion-closes-in-on-e400m/"
+      ],
+      "confidence": "high (company-announced)"
+    },
+    {
+      "name": "Love & Pies (Trailmix / Supercell)",
+      "platform": "iOS / Android",
+      "genre": "Merge-2 cafe / narrative",
+      "results": "$7M revenue and 2M downloads in its first 8 months after the Sept 2021 launch. Later >$1M/month. Supercell took a majority stake with a $60M investment (May 2022). About 10% retention over four months was reported as encouraging.",
+      "monetization": "Free-to-play IAP",
+      "lesson": "Pivoting to merge-2 rescued a cozy cafe game. Long-term retention of roughly 10% counts as good in this genre.",
+      "sources": [
+        "https://naavik.co/digest/love-and-pies-merge2/",
+        "https://gamesbeat.com/supercell-acquires-majority-of-love-pies-maker-trailmix-and-invests-60m-more/"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Good Pizza, Great Pizza (TapBlaze)",
+      "platform": "iOS / Android (also PC/Switch)",
+      "genre": "Cozy cooking / shop sim",
+      "results": "300M+ downloads and 1M+ daily players. Profitable with a 12-person team and no VC funding (10th-anniversary coverage).",
+      "monetization": "Hybrid: about 40% IAP / 60% ads",
+      "lesson": "This is the closest analogue for a small indie shop sim. Ads-first hybrid monetization supports a tiny team for a decade, and a shop-sim loop works well on phones.",
+      "sources": [
+        "https://gamesbeat.com/good-pizza-great-pizza-touts-in-game-events-for-10th-anniversary/"
+      ],
+      "confidence": "medium-high (developer-stated)"
+    },
+    {
+      "name": "Cat Snack Bar (Treeplla)",
+      "platform": "iOS / Android",
+      "genre": "Cat idle restaurant (Eatventure-like)",
+      "results": "20M+ downloads and $4M+ IAP revenue (ads excluded). Called the most successful Eatventure copycat.",
+      "monetization": "Hybrid: IAP plus ads",
+      "lesson": "Putting a cat theme on a proven idle-restaurant loop reaches tens of millions of installs. IAP revenue per install is about $0.20, so ads carry the business.",
+      "sources": [
+        "https://www.pocketgamer.biz/eatventure-vs-cat-snack-bar-an-analysis-of-both-games"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Tsuki's Odyssey (HyperBeard)",
+      "platform": "iOS / Android",
+      "genre": "Passive idle / cozy rabbit life",
+      "results": "Went viral on TikTok (Spanish-language press coverage). No download or revenue figures were found.",
+      "monetization": "Free-to-play: IAP (carrots) plus ads",
+      "lesson": "A TikTok-driven discovery case for a cozy idle game, close to the developer's own channel. Numbers are not public.",
+      "sources": [
+        "https://rpp.pe/videojuegos/juegos/tsukis-odyssey-conoce-el-juego-del-conejito-que-esta-siendo-viral-en-las-redes-sociales-noticia-1558369",
+        "https://apps.apple.com/us/app/-/id1564146071"
+      ],
+      "confidence": "low (qualitative only)"
+    },
+    {
+      "name": "Stardew Valley mobile",
+      "platform": "iOS / Android",
+      "genre": "Farming life sim (premium port)",
+      "results": "More than $1M gross on iOS in its first ~3 weeks (Oct–Nov 2018, $7.99). US was about 41% of early copies and about 25% of purchases were on iPad. Predates the 2022–26 window and is included as a premium benchmark.",
+      "monetization": "Premium ($7.99), no IAP",
+      "lesson": "A known PC cozy hit can earn on mobile as premium, but mobile premium revenue is small compared with PC/console.",
+      "sources": [
+        "https://sensortower.com/blog/stardew-valley-revenue-1-million"
+      ],
+      "confidence": "medium (Sensor Tower estimate; dated)"
+    },
+    {
+      "name": "Hello Kitty Island Adventure (Sunblink)",
+      "platform": "Apple Arcade (iOS/Mac/TV) then Switch/PC/PS5",
+      "genre": "Cozy life sim / adventure",
+      "results": "Apple Arcade Game of the Year 2023, the third most-downloaded Apple Arcade game, and sixth-most downloaded on Arcade in 2025. 500K+ copies sold within 30 days of the Switch/PC launch (Jan 30, 2025).",
+      "monetization": "Subscription-funded (Apple Arcade), then premium on PC/console",
+      "lesson": "An Apple Arcade deal can fund development and build a fanbase before a profitable premium multiplatform launch.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hello_Kitty_Island_Adventure"
+      ],
+      "confidence": "medium-high"
+    },
+    {
+      "name": "A Little to the Left (Max Inferno / Secret Mode)",
+      "platform": "iOS / Android (also Netflix Games earlier)",
+      "genre": "Cozy tidying puzzle",
+      "results": "Premium mobile release at $9.99 with 100+ levels. No mobile sales figures were found.",
+      "monetization": "Premium one-time purchase (plus DLC)",
+      "lesson": "Cozy puzzle PC hits are porting to mobile as premium. Without public data, mobile's share of revenue cannot be judged.",
+      "sources": [
+        "https://wearesecretmode.com/news/a-little-to-the-left-ios-out-now",
+        "https://www.pocketgamer.com/a-little-to-the-left/android-dlcs-release"
+      ],
+      "confidence": "low (no figures)"
+    },
+    {
+      "name": "Grow a Garden (Roblox)",
+      "platform": "Roblox (mobile-heavy, cross-platform)",
+      "genre": "Cozy-adjacent gardening / idle trading",
+      "results": "21.6M concurrent players in late June 2025, beating Fortnite's 15.2M record (per Roblox, via AP). Made by a 16-year-old in a few days.",
+      "monetization": "Roblox Robux IAP (developer exchange)",
+      "lesson": "A low-stress gardening loop with trading and social features can reach the most concurrent players of any game. Roblox is a real distribution channel for cozy mechanics with young, phone-first players.",
+      "sources": [
+        "https://fortune.com/2025/07/30/roblox-video-game-grow-a-garden-viral-summer-hit/",
+        "https://en.wikipedia.org/wiki/Grow_a_Garden"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "mobileBenchmarks": [
+    {
+      "metric": "IAP vs ad revenue split, cozy cooking/shop sim (Good Pizza, Great Pizza)",
+      "value": "about 40% IAP / 60% ads",
+      "source": "https://gamesbeat.com/good-pizza-great-pizza-touts-in-game-events-for-10th-anniversary/",
+      "confidence": "medium-high (developer-stated, one title)"
+    },
+    {
+      "metric": "IAP revenue per download, cat idle restaurant (Cat Snack Bar)",
+      "value": "about $0.20 ($4M+ IAP / 20M+ downloads; ads excluded)",
+      "source": "https://www.pocketgamer.biz/eatventure-vs-cat-snack-bar-an-analysis-of-both-games",
+      "confidence": "medium (derived)"
+    },
+    {
+      "metric": "Long-term retention considered good for cozy merge (Love & Pies)",
+      "value": "about 10% over four months",
+      "source": "https://naavik.co/digest/love-and-pies-merge2/",
+      "confidence": "medium (one title)"
+    },
+    {
+      "metric": "Top cozy-adjacent merge run-rate (Travel Town)",
+      "value": "about $21M/month",
+      "source": "https://mobidictum.com/travel-town-achieves-remarkable-revenue-growth-despite-genre-decline/",
+      "confidence": "medium"
+    },
+    {
+      "metric": "Premium mobile cozy port, first ~week (Pocket Camp Complete, $9.99)",
+      "value": "about $3.1M gross in just over a week; about $385K/day average",
+      "source": "https://www.pocketgamer.biz/animal-crossing-pocket-camp-complete-surpasses-3m-with-highest-daily-spend-since-2017/",
+      "confidence": "medium (AppMagic estimate)"
+    },
+    {
+      "metric": "Regional revenue concentration, cozy habit app (Pokémon Sleep yr 1)",
+      "value": "Japan about 70% of revenue vs 37% of downloads",
+      "source": "https://sensortower.com/ja/blog/pokemon-sleep-1st-anniversary",
+      "confidence": "medium"
+    },
+    {
+      "metric": "50+ US gamers playing on mobile (AARP 2023)",
+      "value": "80%+ use mobile devices to play; 30% play only on smartphones",
+      "source": "https://www.aarp.org/research/topics/technology/info-2023/2023-gamers-50-plus.html",
+      "confidence": "medium-high"
+    }
+  ],
+  "recommendations": {
+    "platforms": "Build every game as a small (<20MB) HTML5 web build so one TikTok/YouTube link lands players in-game instantly with no login or install. Use your own domain (PWA) as the link target and hub - with H5 Games Ads rewarded ads, an email/Discord capture and a prominent 'Wishlist the full version on Steam' button - and pick ONE portal strategy: either Poki (web-exclusive, but 100% of ad revenue on traffic you send and 90M+ monthly players) or non-exclusive CrazyGames + itch.io (PWYW/premium unlock). Treat the free web game as the demo and sell an expanded cozy version on Steam ($5-15), since cozy fans pay for premium and browser-to-Steam funnels (shapez, Cookie Clicker, Vampire Survivors) are proven. Note YouTube Shorts descriptions have no clickable links (use long-form descriptions, pinned comments, channel links and the Related Video link) and TikTok needs a free Business account for a bio link without 1,000 followers. Apply to YouTube Playables, TikTok Minis and Discord Activities as upside once a game shows traction; skip Roblox, Telegram and native app stores until a hit justifies a port.",
+    "marketing": "Run one capture pipeline with three outlets: film raw 9:16 clips of the game's most satisfying/cozy loop and progress moments, and post each clip to TikTok, YouTube Shorts and Instagram Reels (Digging A Hole got 14.5M Reels vs 5M TikTok views from the same post, so don't skip Reels even if it wasn't planned). Every Short links via 'Related video' to a monthly long-form YouTube devlog whose description and pinned comment carry the play link; that devlog channel is the compounding asset that gives launches their first wave (Thronefall), while ad revenue at ~$1-4 gaming RPM is a bonus, not a business. Because short-form viewers are on phones and need ~200-2,000 views per wishlist-level action, the link must open an instantly playable mobile-friendly web build (or a free demo) plus an email/wishlist capture; switch TikTok to a business account or reach 1,000 followers early so the bio link exists. Favor small-scope cozy formats proven to spread (satisfying building/tidying, idle/desktop-companion, social hangout with clippable moments) and design in shareable moments so players create clips too. Track views->clicks->plays per platform with UTM links from day one, and cap content work (e.g. batch-film weekly) to avoid the solo-dev burnout of making videos instead of the game.",
+    "viral": "Build short-session cozy games around one satisfying physical verb: merge, place, stack, pour, decorate or sort. Each run should end in a shareable result, such as a score card, a photo of what the player made or decorated, or an emoji grid. A daily seeded challenge gives a reason to come back and a ready-made TikTok/YouTube Shorts format ('today's cozy puzzle, can you beat my score?'). Make the link playable in under 5 seconds on a phone with no signup, and add an element of discovery or rarity (a rare variant, a secret combination, a 'first discovery' tag) so viewers' own results become content. Post the AI-assisted build process itself as a content series. Dress-up/decorating, idle shop management and Suika-style merge puzzles are the cozy genres with the strongest portal evidence (Poki 2025 top performers and Cozy chart). If Poki's reported 100% revenue share for traffic you bring yourself holds, publishing there while driving your own social traffic may beat self-hosting ads; confirm the terms with Poki.",
+    "ai": "Use Claude Code aggressively for code (invisible to players and exempt from Steam's AI disclosure since Jan 2026) but keep art, music and writing human-made or carefully licensed, because cozy players are among the most hostile to visible AI and AI-disclosed Steam games get roughly half the reviews of comparable games. Treat speed as a prototyping engine, not a moat: build many tiny browser/web prototypes, post short clips of each on TikTok/YouTube Shorts, and only invest further in the few whose clips and playtests show real pull. The defensible assets are an owned audience (the fly.pieter.com lesson), a consistent hand-directed art style, and recurring cozy characters/world that tie every game and video together. Never market games as 'AI-made'; disclose truthfully where platforms require it, and monetize via web portals (Poki-quality polish) and cheap premium Steam releases once a concept has proven demand. Expect most releases to earn little - the 2025 Steam median was under 10 reviews - so budget time for marketing at least equal to build time."
+  }
+}

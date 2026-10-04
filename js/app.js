@@ -93,6 +93,7 @@
   const FILES = {
     meta: "data/meta.json", market: "data/market.json", games: "data/games.json", niches: "data/niches.json",
     playbook: "data/playbook.json", insights: "data/insights.json", concepts: "data/concepts.json", live: "data/live/steam.json",
+    gotomarket: "data/gotomarket.json", verification: "data/verification.json",
   };
   let D = null;
 
@@ -105,7 +106,7 @@
         if (!r.ok) throw new Error(r.status);
         out[k] = await r.json();
       } catch (e) {
-        if (k !== "live") throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
+        if (!["live", "verification"].includes(k)) throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
         out[k] = null;
       }
     }));
@@ -137,8 +138,12 @@
   function weights() {
     const def = {};
     D.concepts.scoring.factors.forEach((f) => (def[f.key] = f.weight));
-    const saved = store.get("weights", null);
+    const saved = store.get("weights2", null);
     return saved ? Object.assign(def, saved) : def;
+  }
+  function activePreset(w) {
+    const ps = D.concepts.scoring.presets || [];
+    return ps.find((p) => Object.keys(p.weights).every((k) => (w[k] || 0) === p.weights[k]));
   }
   function scoreConcept(c, w) {
     let tot = 0, sum = 0;
@@ -155,6 +160,8 @@
     overview: { label: "Briefing", icon: "M3 12l9-8 9 8M5 10v10h14V10", render: renderOverview },
     ask: { label: "Ask the atlas", icon: "M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12zM8 11h.01M12 11h.01M16 11h.01", render: () => window.AtlasAsk.render() },
     concepts: { label: "What to build", icon: "M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z", render: renderConcepts },
+    launch: { label: "Launch & grow", icon: "M5 19l4-4M14 4l6 6-8 8-6-6zM14 4l-2-2M20 10l2 2M3 21l2-2", render: renderLaunch },
+    spread: { label: "What spreads", icon: "M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4", render: renderSpread },
     outliers: { label: "Outliers", icon: "M12 3v4M12 17v4M3 12h4M17 12h4M12 12h.01M7 7l2 2M15 15l2 2M17 7l-2 2M9 15l-2 2", render: renderOutliers },
     gaps: { label: "Market gaps", icon: "M12 3v18M3 12h18M7 7h.01M17 17h.01", render: renderGaps },
     trends: { label: "Trends", icon: "M3 17l6-6 4 4 8-8M15 7h6v6", render: renderTrends },
@@ -218,7 +225,7 @@
     return [
       ["Genre", sp.genre], ["Players", sp.players], ["Setting", sp.setting], ["What you do", sp.coreVerb], ["Look", sp.look],
       ["Session", c.sessionLength], ["Price", c.pricing.base], ["Business model", c.pricing.model], ["Launch platforms", c.platforms.launch.join(", ")],
-      ["Team", sp.team], ["Time to launch", c.devMonths + " months"], ["Budget", c.budgetUSD.label], ["Audience", sp.audience],
+      ["Team", sp.team], ["Time to launch", c.devMonths < 3 ? "About " + Math.round(c.devMonths * 4.3) + " weeks" : c.devMonths + " months"], ["Budget", c.budgetUSD.label], ["Audience", sp.audience],
       ["Closest games", (c.comps || []).slice(0, 3).join(", ")], ["Stands out by", sp.differentiator],
     ].filter((r) => r[1]);
   }
@@ -253,7 +260,7 @@
         h("span", { class: "sugg-score", text: r.score.toFixed(1) }), miniBar(r.score)),
       h("div", { class: "sugg-main" },
         h("h3", { text: c.name }), h("p", { class: "ink-2", text: c.hook }),
-        h("div", { class: "chips" }, [sp.genre, sp.players, sp.price, c.devMonths + " months", c.budgetUSD.label].map((t) => h("span", { class: "chip", text: t })))),
+        h("div", { class: "chips" }, [sp.genre, sp.players, sp.price, (c.devMonths < 3 ? Math.round(c.devMonths * 4.3) + " weeks" : c.devMonths + " months"), c.budgetUSD.label].map((t) => h("span", { class: "chip", text: t })))),
       h("div", { class: "sugg-drivers" }, h("div", { class: "eyebrow", text: "Driven by" }), driverList(c.drivers, { noCaution: true, limit: 3, brief: true }),
         caution ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Watch out:"), " ", caution.signal) : null),
       h("div", { class: "sugg-actions" }, h("button", { type: "button", class: "btn primary", text: "See the plan", onclick: () => goConcept(c.id) }),
@@ -326,6 +333,130 @@
             h("h3", { text: f.title }), h("p", { class: "ink-2", text: f.detail })))))),
       section("Momentum right now", null,
         h("div", { class: "grid grid-2" }, [...M.trends].sort((a, b) => b.strength - a.strength).slice(0, 4).map(trendCard))),
+    );
+  }
+
+  // generic detail drawer (reuses the game drawer)
+  function openPanel(eyebrow, title, blocks, sources, confidence) {
+    const d = drawer();
+    const body = d.querySelector(".drawer-body");
+    body.replaceChildren(
+      h("div", { class: "section" }, h("div", { class: "eyebrow", text: eyebrow }), h("h2", { text: title, style: "font-size:var(--step-3)" })),
+      blocks.filter((b) => b && b[1] && (!Array.isArray(b[1]) || b[1].length)).map(([label, v]) => h("section", { class: "section" }, h("h3", { text: label }),
+        Array.isArray(v) ? h("ul", { class: "ink-2" }, v.map((x) => h("li", { text: typeof x === "string" ? x : [x.game, x.result].filter(Boolean).join(": ") }))) : h("p", { class: "ink-2", text: String(v) }))),
+      h("div", { class: "section" }, conf(confidence), srcLinks((sources || []).filter(Boolean))));
+    if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open", "");
+    d.scrollTop = 0;
+  }
+  const confOf = (c) => { const m = String(c || "").toLowerCase().match(/high|medium|low/); return m ? m[0] : null; };
+  function srcOne(u) { return u ? h("a", { href: u, target: "_blank", rel: "noopener", text: hostOf(u) }) : "—"; }
+  function tableOf(cols, rows) {
+    return h("div", { class: "table-wrap" }, h("table", {},
+      h("thead", {}, h("tr", {}, cols.map((c) => h("th", { class: c.num ? "num" : "", text: c.label })))),
+      h("tbody", {}, rows.map((r) => h("tr", { class: r.__click ? "clickable" : "", tabindex: r.__click ? "0" : null, onclick: r.__click || null, onkeydown: r.__click ? (e) => { if (e.key === "Enter") r.__click(); } : null },
+        cols.map((c) => { const v = c.get(r); return h("td", { class: (c.num ? "num " : "") + (c.cls || "") }, v instanceof Node ? v : v == null ? "—" : String(v)); }))))));
+  }
+
+  function renderLaunch() {
+    const G = D.gotomarket;
+    if (!G) return h("div", { class: "error-box", text: "Go-to-market data is missing (data/gotomarket.json)." });
+    const pickCh = (re) => G.channels.filter((c) => re.test(c.name));
+    const platformClick = (p) => () => openPanel(p.type, p.name, [
+      ["Audience", p.audience], ["Your share", p.revShare], ["What a phone viewer gets from your link", p.linkFromSocial], ["Requirements", p.requirements],
+      ["Exclusivity", p.exclusivity], ["How it makes money", p.monetization], ["Cozy fit", p.cozyFit], ["Best for", p.bestFor], ["Case studies", p.caseStudies], ["Risks", p.risks]],
+      p.sources, confOf(p.confidence));
+    const jump = h("nav", { class: "jump-bar", "aria-label": "On this page" });
+    const view = h("div", { class: "view" },
+      viewHead("Launch & grow", "How to get your games played and paid", "The system for one person building with AI: where the play link goes, how to market on TikTok, Shorts and YouTube, how the money works, and the rules for using AI."),
+      takeaway("launch"),
+      section("The system", "Run every game through the same loop. Each step has a gate that tells you whether to keep going.",
+        h("ol", { class: "loop-steps" }, G.loop.map((st, i) => h("li", { class: "card" },
+          h("div", { class: "eyebrow", text: "Step " + (i + 1) }), h("h3", { text: st.step }), h("p", { class: "ink-2", text: st.detail }),
+          h("p", { class: "gate" }, h("b", { text: "Go on when: " }), st.gate))))),
+      section("The stack", "What to use at each layer, and why.",
+        tableOf([{ label: "Layer", get: (r) => h("b", { text: r.layer }) }, { label: "Use", get: (r) => r.choice }, { label: "Why", cls: "ink-2", get: (r) => r.why }, { label: "Confidence", get: (r) => conf(r.confidence) }], G.stack)),
+      section("Where your link can go", "Click a platform for requirements, case studies and risks.",
+        tableOf([
+          { label: "Platform", get: (r) => h("b", { text: r.name }) }, { label: "Type", get: (r) => r.type },
+          { label: "Your share", cls: "ink-2", get: (r) => r.revShare }, { label: "From a phone link", cls: "ink-2", get: (r) => r.linkFromSocial },
+          { label: "Best for", cls: "ink-2", get: (r) => r.bestFor }, { label: "Confidence", get: (r) => conf(confOf(r.confidence)) },
+        ], G.platforms.map((p) => Object.assign({ __click: platformClick(p) }, p))),
+        G.socialLinkNotes && G.socialLinkNotes.length ? h("div", { class: "callout warn" }, h("b", { text: "Link rules on the apps" }),
+          h("ul", { class: "ink-2" }, G.socialLinkNotes.map((n) => h("li", {}, n.fact, " ", srcOne(n.source))))) : null),
+      section("Making money", "Ads are the floor. The paid version and your audience are the business.",
+        h("div", { class: "grid grid-2" },
+          panel("Free web game → paid version", "Proven paths",
+            h("ul", { class: "list-plain" }, G.webToPaidFunnels.map((f) => h("li", {}, h("b", { text: f.game }), h("div", { class: "ink-2", style: "font-size:.88rem", text: f.path }), h("div", { class: "mono", style: "color:var(--accent);font-size:.8rem", text: f.result }))))),
+          panel("Ad benchmarks", "Mostly low confidence: measure your own",
+            tableOf([{ label: "Metric", get: (r) => r.metric }, { label: "Value", get: (r) => r.value }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }], G.adBenchmarks))),
+        h("div", { class: "grid grid-2" },
+          panel("Taking payments on the web", null, tableOf([{ label: "Option", get: (r) => h("b", { text: r.option }) }, { label: "Fees", get: (r) => r.fees }, { label: "Notes", cls: "ink-2", get: (r) => r.notes }], G.webPayments)),
+          panel("YouTube as income", "A bonus, not the business", tableOf([{ label: "Stream", get: (r) => h("b", { text: r.stream }) }, { label: "Benchmark", cls: "ink-2", get: (r) => r.benchmark }], G.channelMonetization)))),
+      section("Marketing on TikTok, Shorts and YouTube", G.recommendations && G.recommendations.marketing,
+        h("div", { class: "grid grid-2" }, pickCh(/TikTok|Shorts|long-form|Reels/).map((c) => h("article", { class: "card" },
+          h("h3", { text: c.name }), h("p", { class: "ink-2", text: c.howGamesGrowThere }),
+          h("p", { style: "font-size:.88rem" }, h("b", { text: "Links: " }), c.linkMechanics),
+          c.formatsThatWork && c.formatsThatWork.length ? h("div", {}, h("h4", { text: "Formats that work" }), h("ul", { class: "ink-2", style: "font-size:.88rem" }, c.formatsThatWork.slice(0, 5).map((x) => h("li", { text: x })))) : null,
+          c.pitfalls && c.pitfalls.length ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Watch out:"), " ", c.pitfalls[0]) : null))),
+        h("h3", { text: "Case studies" }),
+        tableOf([{ label: "Game", get: (r) => h("div", {}, h("b", { text: r.game }), h("div", { class: "muted", style: "font-size:.8rem", text: r.dev })) }, { label: "Channel", get: (r) => r.channel },
+          { label: "Results", get: (r) => r.results }, { label: "Lesson", cls: "ink-2", get: (r) => r.lesson }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }],
+          G.caseStudies.map((c) => Object.assign({ __click: () => openPanel(c.channel, c.game, [["Who", c.dev], ["What they did", c.whatTheyDid], ["Results", c.results], ["Lesson", c.lesson]], [c.source], confOf(c.confidence)) }, c))),
+        h("div", { class: "grid grid-2" },
+          panel("Video formats", null, tableOf([{ label: "Format", get: (r) => h("b", { text: r.format }) }, { label: "Why it works", cls: "ink-2", get: (r) => r.whyItWorks }, { label: "Best on", get: (r) => r.bestChannel }], G.contentFormats)),
+          panel("Funnel benchmarks", "From video to player", h("ul", { class: "list-plain" }, (G.funnelBenchmarks || []).map((b) => h("li", {}, h("b", { text: b.metric }), h("div", { class: "ink-2", style: "font-size:.88rem" }, b.value, " ", conf(confOf(b.confidence))))))))),
+      section("Building with AI", "What helps you, and what costs you players.",
+        h("div", { class: "callout" }, h("b", { text: "The rules" }), h("ol", { class: "ink-2" }, G.aiRules.map((r) => h("li", { text: r })))),
+        h("div", { class: "grid grid-2" },
+          panel("How players see AI in games", null, h("ul", { class: "list-plain" }, G.ai.sentiment.map((x) => h("li", { style: "font-size:.88rem" }, x.finding, " ", conf(confOf(x.confidence)), " ", srcOne(x.source))))),
+          panel("Platform rules", null, tableOf([{ label: "Platform", get: (r) => h("b", { text: r.platform }) }, { label: "Policy", cls: "ink-2", get: (r) => r.policy }], G.ai.policies))),
+        h("div", { class: "grid grid-2" },
+          panel("What still protects you", null, h("ul", { class: "list-plain" }, G.ai.moats.map((m) => h("li", {}, h("b", { text: m.moat }), h("div", { class: "ink-2", style: "font-size:.88rem", text: m.why }))))),
+          panel("How fast AI-assisted devs work", null, h("ul", { class: "list-plain" }, G.ai.workflow.map((m) => h("li", {}, h("b", { text: m.practice }), h("div", { class: "ink-2", style: "font-size:.88rem", text: m.detail })))))),
+        h("h3", { text: "AI-built games so far" }),
+        tableOf([{ label: "Game", get: (r) => h("b", { text: r.name }) }, { label: "How built", cls: "ink-2", get: (r) => r.howBuilt }, { label: "Results", get: (r) => r.results }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }], G.ai.successStories)),
+    );
+    const secs = [...view.querySelectorAll(":scope > section.section")];
+    jump.append(h("span", { class: "muted", style: "font-size:.8rem", text: "On this page:" }),
+      ...secs.map((sec) => { const t = sec.querySelector("h2").textContent; return h("button", { type: "button", class: "chip ev", text: t, onclick: () => sec.scrollIntoView({ behavior: "smooth", block: "start" }) }); }));
+    view.insertBefore(jump, view.children[2]);
+    return view;
+  }
+
+  function renderSpread() {
+    const G = D.gotomarket;
+    if (!G) return h("div", { class: "error-box", text: "Go-to-market data is missing (data/gotomarket.json)." });
+    let lvl = store.get("spreadLevel", "");
+    const strip = h("div", { class: "chips", role: "group", "aria-label": "Cozy level" });
+    const list = h("div", {});
+    const levels = [["", "All"], ["cozy", "Cozy"], ["cozy-adjacent", "Cozy-adjacent"], ["not cozy", "Not cozy"]];
+    const draw = () => {
+      strip.replaceChildren(...levels.map(([k, label]) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(lvl === k), onclick: () => { lvl = k; store.set("spreadLevel", k); draw(); } },
+        h("span", { class: "p-name", text: label }), h("span", { class: "muted", style: "font-size:.75rem", text: String(G.viralHits.filter((x) => !k || x.cozyLevel === k).length) }))));
+      list.replaceChildren(tableOf([
+        { label: "Game", get: (r) => h("div", {}, h("b", { text: r.name }), h("div", { class: "muted", style: "font-size:.8rem", text: [r.year, r.platform].filter(Boolean).join(" · ") })) },
+        { label: "Cozy?", get: (r) => h("span", { class: "chip" + (r.cozyLevel === "cozy" ? " accent" : ""), text: r.cozyLevel }) },
+        { label: "How it spread", cls: "ink-2", get: (r) => r.howItSpread }, { label: "Results", get: (r) => r.results }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }],
+        G.viralHits.filter((x) => !lvl || x.cozyLevel === lvl).map((x) => Object.assign({ __click: () => openPanel([x.platform, x.genre].filter(Boolean).join(" · "), x.name,
+          [["How it spread", x.howItSpread], ["What players share", x.shareMechanic], ["How it makes money", x.monetization], ["Results", x.results], ["Lesson", x.lesson]], x.sources, confOf(x.confidence)) }, x))));
+    };
+    draw();
+    return h("div", { class: "view" },
+      viewHead("What spreads", "Games that went viral, and why", "Instant-play and short-session hits from Wordle to Grow a Garden, the patterns behind them, and what cozy looks like on web portals and phones."),
+      takeaway("spread"),
+      section("The patterns", G.recommendations && G.recommendations.viral,
+        h("div", { class: "grid grid-3" }, G.patterns.map((p) => h("article", { class: "card" }, h("h3", { text: p.pattern }), h("p", { class: "ink-2", style: "font-size:.9rem", text: p.detail }),
+          h("div", { class: "chips" }, (p.examples || []).map((e) => h("span", { class: "chip", text: e }))))))),
+      section("The hits", "Click a game for the full story.", strip, list),
+      section("What cozy looks like on web portals", null,
+        tableOf([{ label: "Genre", get: (r) => h("b", { text: r.genre }) }, { label: "Cozy-friendly", get: (r) => r.cozyCompatible ? h("span", { class: "chip accent", text: "Yes" }) : h("span", { class: "chip", text: "No" }) },
+          { label: "Evidence", cls: "ink-2", get: (r) => r.evidence }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }], G.portalGenres),
+        (G.platformEconomics || []).map((e) => h("p", { class: "panel-note", text: e.evidence }))),
+      section("Cozy on phones", "Mobile and mini-game cozy successes: where cozy players already spend time.",
+        tableOf([{ label: "Game", get: (r) => h("div", {}, h("b", { text: r.name }), h("div", { class: "muted", style: "font-size:.8rem", text: r.platform })) }, { label: "Genre", get: (r) => r.genre },
+          { label: "Results", get: (r) => r.results }, { label: "Money", cls: "ink-2", get: (r) => r.monetization }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }],
+          G.cozyMobileWeb.map((x) => Object.assign({ __click: () => openPanel(x.platform, x.name, [["Genre", x.genre], ["Results", x.results], ["How it makes money", x.monetization], ["Lesson", x.lesson]], x.sources, confOf(x.confidence)) }, x))),
+        G.mobileBenchmarks.length ? panel("Mobile benchmarks", null, tableOf([{ label: "Metric", get: (r) => r.metric }, { label: "Value", get: (r) => r.value }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }], G.mobileBenchmarks)) : null),
     );
   }
 
@@ -643,11 +774,19 @@
     const sliders = h("div", { class: "weights" }, S.factors.map((f) => {
       const out = h("b", { text: w[f.key] });
       const input = h("input", { type: "range", min: "0", max: "5", step: "1", value: String(w[f.key]), id: "w-" + f.key, "aria-label": f.label + " weight" });
-      input.addEventListener("input", () => { w[f.key] = +input.value; out.textContent = input.value; store.set("weights", w); drawAll(); });
+      input.addEventListener("input", () => { w[f.key] = +input.value; out.textContent = input.value; store.set("weights2", w); drawAll(); });
       return h("div", { class: "weight", title: f.description }, h("div", { class: "weight-top" }, h("label", { for: "w-" + f.key, text: f.label }), out), input);
     }));
-    const reset = h("button", { class: "btn", type: "button", text: "Reset weights", onclick: () => { store.set("weights", null); S.factors.forEach((f) => { w[f.key] = f.weight; const el = document.getElementById("w-" + f.key); if (el) { el.value = f.weight; el.previousSibling.lastChild.textContent = f.weight; } }); drawAll(); } });
+    const reset = h("button", { class: "btn", type: "button", text: "Reset weights", onclick: () => { store.set("weights2", null); S.factors.forEach((f) => { w[f.key] = f.weight; const el = document.getElementById("w-" + f.key); if (el) { el.value = f.weight; el.previousSibling.lastChild.textContent = f.weight; } }); drawAll(); } });
 
+    const presetBar = h("div", { class: "chips preset-bar", role: "group", "aria-label": "Rank for" });
+    const applyPreset = (p) => { Object.assign(w, p.weights); store.set("weights2", w); S.factors.forEach((f) => { const el = document.getElementById("w-" + f.key); if (el) { el.value = w[f.key]; el.previousSibling.lastChild.textContent = w[f.key]; } }); drawAll(); };
+    const drawPresets = () => {
+      const cur = activePreset(w);
+      presetBar.replaceChildren(h("span", { class: "muted", style: "font-size:.85rem", text: "Rank for:" }),
+        ...(S.presets || []).map((p) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(cur && cur.id === p.id), title: p.note, onclick: () => applyPreset(p) }, h("span", { class: "p-name", text: p.label }))),
+        cur ? null : h("span", { class: "chip", text: "Custom weights" }));
+    };
     const pick = (id, scroll) => { selected = id; store.set("concept", id); drawAll(); if (scroll) detail.scrollIntoView({ behavior: "smooth", block: "start" }); };
     const tab = (r, label) => h("button", { type: "button", role: "tab", class: "concept-tab", "aria-selected": String(r.c.id === selected), onclick: () => pick(r.c.id) },
       h("span", { class: "t-score", text: label + " · " + r.score.toFixed(1) + " / 10" }), h("span", { class: "t-name", text: r.c.name }), h("span", { class: "muted", style: "font-size:.78rem", text: (r.c.spec || {}).genre || r.c.niche }));
@@ -655,12 +794,14 @@
     function drawAll() {
       const { all, main, side } = rankedSplit(w);
       if (!selected || !all.find((r) => r.c.id === selected)) selected = main[0].c.id;
+      drawPresets();
       compare.replaceChildren(compareTable(main, (id) => pick(id, true)));
       tabs.replaceChildren(...main.map((r, i) => tab(r, "#" + (i + 1))));
-      sideTabs.replaceChildren(...side.map((r) => tab(r, "Side bet")));
+      const more = all.filter((r) => r.c.track !== "side" && !main.includes(r));
+      sideTabs.replaceChildren(...more.map((r) => tab(r, "More")), ...side.map((r) => tab(r, "Side bet")));
       const cur = all.find((r) => r.c.id === selected);
       const rank = main.indexOf(cur);
-      detail.replaceChildren(conceptDetail(cur.c, cur.score, rank >= 0 ? rank + 1 : null));
+      detail.replaceChildren(conceptDetail(cur.c, cur.score, rank >= 0 ? rank + 1 : null, more.includes(cur)));
       afterMount.splice(0).forEach((fn) => fn());
     }
 
@@ -668,18 +809,18 @@
       viewHead("What to build", "Five games the data points to", D.concepts.intro),
       takeaway("concepts"),
       h("div", { class: "callout warn" }, h("b", { text: "Read this first" }), h("p", { class: "ink-2", text: D.concepts.caveat })),
-      section("Side by side", "Bold marks the best of the five on each factor. Hover a factor score for the reasoning; click a name for its full plan.", compare),
+      section("Side by side", "Bold marks the best of the five on each factor. Hover a factor score for the reasoning; click a name for its full plan.", presetBar, compare),
       h("details", { class: "panel weights-panel" }, h("summary", {}, h("b", { text: "Change what matters" }), h("span", { class: "muted", text: " Scoring weights; the ranking updates live and is saved in this browser" })),
         sliders, h("div", {}, reset)),
       section("Full plans", null, tabs,
-        h("div", { class: "side-bets" }, h("div", { class: "eyebrow", text: "Side bets: small projects to run alongside, not instead" }), sideTabs),
+        h("div", { class: "side-bets" }, h("div", { class: "eyebrow", text: "More ideas and side bets" }), sideTabs),
         detail),
     ]);
     later(drawAll);
     return wrap;
   }
 
-  function conceptDetail(c, score, rank) {
+  function conceptDetail(c, score, rank, isMore) {
     const S = D.concepts.scoring;
     const factorBox = chartBox(), ganttBox = chartBox();
     later(() => C.barH(factorBox, S.factors.map((f) => ({ label: f.label, value: c.scores[f.key].score, display: c.scores[f.key].score + "/10", sub: c.scores[f.key].why })), { max: 10 }));
@@ -688,7 +829,7 @@
     return h("div", { class: "section", style: "gap:20px" },
       h("div", { class: "hero-rec" },
         h("div", { class: "section" },
-          h("div", { class: "eyebrow", text: (rank ? "Suggestion #" + rank : "Side bet · " + (c.sideRole || "")) + " · " + c.niche }),
+          h("div", { class: "eyebrow", text: (rank ? "Suggestion #" + rank : isMore ? "More ideas" : "Side bet · " + (c.sideRole || "")) + " · " + c.niche }),
           h("h2", { text: c.name }), h("p", { class: "ink-2", style: "font-size:var(--step-1)", text: c.oneLiner }), h("p", { text: c.pitch }),
           h("div", { class: "chips" }, askBtn("Pressure-test this", `Pressure-test ${c.name} for my studio: the biggest risks, what to validate first, and what you would change.`),
             askBtn("Adapt it to my studio", `Adapt the ${c.name} plan to my studio's team, budget and skills. What changes in scope, team, timeline and money?`)),
@@ -719,8 +860,8 @@
         panel("Team", null, h("table", {}, h("tbody", {}, c.team.map((t) => h("tr", {}, h("td", { class: "num", text: t.count + "×" }), h("td", {}, h("b", { text: t.role }), h("div", { class: "muted", style: "font-size:.82rem", text: t.note }))))))),
         panel("Budget & timeline", null,
           h("div", { class: "kpis" },
-            h("div", { class: "kpi" }, h("div", { class: "kpi-value", text: c.budgetUSD.label }), h("div", { class: "kpi-label", text: "Budget to 1.0" })),
-            h("div", { class: "kpi" }, h("div", { class: "kpi-value", text: c.devMonths + " mo" }), h("div", { class: "kpi-label", text: "To 1.0 launch" }))),
+            h("div", { class: "kpi" }, h("div", { class: "kpi-value", text: c.budgetUSD.label }), h("div", { class: "kpi-label", text: "Budget to launch" })),
+            h("div", { class: "kpi" }, h("div", { class: "kpi-value", text: c.devMonths < 3 ? Math.round(c.devMonths * 4.3) + " wk" : c.devMonths + " mo" }), h("div", { class: "kpi-label", text: "To launch" }))),
           h("p", { class: "ink-2", style: "font-size:.9rem", text: c.budgetUSD.note }))),
       panel("Production roadmap", "Green = build, violet = launch beats, amber = live ops. Hover for deliverables and go/no-go gates.", ganttBox,
         h("div", { class: "legend" }, h("span", {}, h("i", { style: "background:var(--series-1)" }), "Build"), h("span", {}, h("i", { style: "background:var(--series-2)" }), "Launch"), h("span", {}, h("i", { style: "background:var(--series-3)" }), "Live ops"))),
@@ -734,7 +875,7 @@
         h("tbody", {}, c.risks.map((r) => h("tr", {}, h("td", { text: r.risk }), h("td", { class: "ink-2", text: r.mitigation }))))))),
       panel("Revenue scenarios", c.revenueAssumptions, h("div", { class: "table-wrap", style: "border:0" }, h("table", {},
         h("thead", {}, h("tr", {}, h("th", { text: "Scenario" }), h("th", { class: "num", text: "Volume (yr 1)" }), h("th", { class: "num", text: "Net to studio" }), h("th", { text: "What it looks like" }))),
-        h("tbody", {}, c.revenueScenarios.map((r) => h("tr", {}, h("td", { class: "game-name", text: r.scenario }), h("td", { class: "num", text: fmtInt(r.units) }), h("td", { class: "num", text: "$" + fmtInt(r.netUSD) }), h("td", { class: "ink-2", text: r.note }))))))),
+        h("tbody", {}, c.revenueScenarios.map((r) => h("tr", {}, h("td", { class: "game-name", text: r.scenario }), h("td", { class: "num", text: r.volume || fmtInt(r.units) }), h("td", { class: "num", text: "$" + fmtInt(r.netUSD) }), h("td", { class: "ink-2", text: r.note }))))))),
     );
   }
 
@@ -753,6 +894,17 @@
     D.niches.niches.forEach((n) => (n.sources || []).forEach((u) => add(u, "Niche: " + n.name)));
     (D.niches.playerRequests || []).forEach((r) => add(r.source, "Player requests"));
     ["playbook", "funding", "localization", "budgets", "failureModes"].forEach((k) => (D.playbook[k] || []).forEach((x) => add(x.source, "Playbook")));
+    const GT = D.gotomarket;
+    if (GT) {
+      (GT.platforms || []).forEach((p) => (p.sources || []).forEach((u) => add(u, "Platform: " + p.name)));
+      (GT.caseStudies || []).forEach((c) => add(c.source, "Marketing case: " + c.game));
+      (GT.viralHits || []).forEach((x) => (x.sources || []).forEach((u) => add(u, "Viral hit: " + x.name)));
+      (GT.ai && GT.ai.sentiment || []).forEach((x) => add(x.source, "AI sentiment"));
+      (GT.ai && GT.ai.successStories || []).forEach((x) => add(x.source, "AI-built: " + x.name));
+      (GT.cozyMobileWeb || []).forEach((x) => (x.sources || []).forEach((u) => add(u, "Mobile/web: " + x.name)));
+      (GT.adBenchmarks || []).forEach((x) => add(x.source, "Ad benchmarks"));
+    }
+    (D.verification && D.verification.items || []).forEach((v) => String(v.source || "").split(/\s*;\s*/).forEach((u) => /^https?:/.test(u) && add(u, "Fact-check")));
     const q = h("input", { type: "search", id: "src-q", placeholder: "Filter by site or topic…" });
     const tbody = h("tbody", {});
     const rows = [...all.entries()].sort((a, b) => hostOf(a[0]).localeCompare(hostOf(b[0])));
@@ -770,6 +922,11 @@
         panel("Change log", null, h("div", { class: "timeline" }, D.meta.changelog.map((c) => h("div", { class: "tl-row" }, h("div", { class: "tl-when", text: c.date }), h("div", { class: "ink-2", text: c.note })))),
           D.live ? h("p", { class: "muted", style: "font-size:.85rem", text: "Live Steam figures last refreshed: " + (D.live.updatedAt || "never") }) : null)),
       h("div", { class: "callout" }, h("b", { text: "Confidence levels" }), h("p", { class: "ink-2", text: "High: official or first-party figure. Medium: reputable estimate (GameDiscoverCo, Gamalytic, VG Insights) or a figure from an interview. Low: a single secondary source or a derived estimate. Treat low-confidence numbers as direction, not fact." })),
+      D.verification ? section("Fact-check", "The key figures the suggestions rest on, re-checked against their original sources on " + D.verification.checkedOn + ". " + D.verification.method,
+        tableOf([{ label: "Claim", get: (r) => r.claim }, { label: "Status", get: (r) => h("span", { class: "chip " + (r.status === "confirmed" ? "good" : r.status === "revised" ? "warn" : "crit") },
+            svgIcon(r.status === "confirmed" ? "M5 12l5 5L20 7" : ICON.warn), r.status[0].toUpperCase() + r.status.slice(1)) },
+          { label: "What the source says", cls: "ink-2", get: (r) => r.verifiedValue + (r.note ? " " + r.note : "") },
+          { label: "Source", get: (r) => { const u = String(r.source || "").split(/\s*;\s*/)[0]; return /^https?:/.test(u) ? srcOne(u) : "—"; } }], D.verification.items)) : null,
       section("All sources (" + rows.length + ")", null, h("div", { class: "filters" }, h("div", { class: "field" }, h("label", { for: "src-q", text: "Filter" }), q)),
         h("div", { class: "table-wrap" }, h("table", {}, h("thead", {}, h("tr", {}, h("th", { text: "URL" }), h("th", { text: "Used for" }))), tbody))),
     );
