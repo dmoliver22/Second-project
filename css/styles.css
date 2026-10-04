@@ -503,3 +503,17 @@ table.compare tr.score-row td { font-size: 1rem; }
 .jump-bar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 8px; }
 .view > section.section { scroll-margin-top: 64px; }
 @media (max-width: 900px) { .jump-bar { top: calc(env(safe-area-inset-top, 0px) + 52px); } .view > section.section { scroll-margin-top: 120px; } }
+
+/* ---------- culture ---------- */
+.fit-table td.num, .fit-table th.num { text-align: center; }
+.fit-dot { color: var(--series-1); font-size: 1rem; }
+.cal { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 1000px) { .cal { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .cal { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .cal { grid-template-columns: minmax(0, 1fr); } }
+.cal-month { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.cal-month.now { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.cal-head { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-display); }
+.cal-item { font-size: .8rem; display: flex; flex-direction: column; gap: 2px; padding-top: 6px; border-top: 1px dashed var(--line); }
+.cal-item b { font-size: .84rem; }
+.chip.wrap { white-space: normal; align-self: flex-start; }

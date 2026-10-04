@@ -6,6 +6,7 @@ An analytics dashboard of the cozy game market, built to guide a new cozy-game s
 |---|---|
 | **Briefing** | The answers first: five ranked game suggestions with what drives each, the seven decisions with their evidence, your next 90 days, outliers, then the supporting numbers |
 | **Launch & grow** | The web-first system for a solo, AI-assisted developer: the build → clip → ship → grow loop with gates, the recommended stack, 16 link-to-play platforms compared (revenue share, what a phone viewer gets), money (ads, web → paid funnels, payments, YouTube income), TikTok/Shorts/YouTube marketing with 19 case studies, and rules for using AI |
+| **Culture signals** | Trends outside games (collectibles and characters, aesthetics, wellness and hobbies, social and search, seasons) with evidence, what each means for your games, which suggestions they support, a launch and content calendar, and idea seeds |
 | **What spreads** | 34 viral and instant-play hits and why they spread, virality patterns, cozy genres on web portals, cozy mobile successes |
 | **Ask the atlas** | Chat with the data. Answers come from this dashboard's files and fit the studio profile you fill in. Works in the claude.ai Artifact version, using the viewer's Claude account. |
 | **What to build** | Ranked game suggestions (scoring presets: "Solo + AI, web-first" by default, or "Small studio, Steam") compared side by side (scores, drivers, genre, players, setting, price, team, budget…), plus 2 side bets. Each has the market signals that drive it, a characteristics spec, and a full build-and-run plan: team, budget, roadmap, marketing, live ops, targets, kill criteria, revenue scenarios. Scoring weights are adjustable. |
@@ -38,6 +39,7 @@ All content lives in `data/`. The code only renders it.
 | `data/insights.json` | Headline, KPI tiles, key findings, the Briefing decisions and 90-day plan, outliers, "So what" takeaways, suggested chat questions, monetization guidance |
 | `data/concepts.json` | Game suggestions (`track`: main or side), their hook, `spec` (characteristics), `drivers` (market signals, with strength: strong, medium, supporting or caution), factor scores, full plans, and the scoring weights |
 | `data/gotomarket.json` | Platforms, ad and payment benchmarks, marketing channels and case studies, viral hits and patterns, AI landscape, cozy mobile/web games, and the recommended stack and loop |
+| `data/culture.json` | Culture signals outside games, the synthesis, the seasonal calendar and idea seeds |
 | `data/verification.json` | Fact-check results for the key figures |
 | `data/meta.json` | As-of date, methodology, change log |
 | `data/live/steam.json` | Live Steam review counts and prices (written by the refresher, don't edit by hand) |

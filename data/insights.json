@@ -50,6 +50,11 @@
       "link": "#spread"
     },
     {
+      "title": "Culture points to collectibles, rituals and third places",
+      "detail": "Outside games, the biggest movements are blind-box collecting (Pop Mart +185%), cute character casts (Sanrio's record year), bounded daily rituals (Duolingo's 58.7M daily users) and loneliness. Each maps to a game format.",
+      "link": "#culture"
+    },
+    {
       "title": "The link has to open a game, not a store",
       "detail": "Most TikTok viewers are on phones. YouTube Shorts links aren't clickable; TikTok needs a business account for a bio link. A web build that starts in seconds is the only frictionless path.",
       "link": "#launch"
@@ -246,20 +251,20 @@
   "decisions": [
     {
       "topic": "What to make",
-      "call": "Small web-first cozy games built around one satisfying action, each ending in a result players share. Start with Daily Tidy and Petal Drop.",
-      "why": "The formats that spread on phones are short, satisfying and shareable, and these two are the fastest to build and the easiest to clip.",
+      "call": "Small web-first cozy games built around one satisfying action and a daily ritual, each ending in something players share. Start with Treat Box and Daily Tidy; use Petal Drop as the fastest pipeline test.",
+      "why": "These sit where the game data and the wider culture agree: blind-box collecting, cleaning and organizing videos, daily habits and little treats. They're also the fastest to build and the easiest to clip.",
       "evidence": [
+        {
+          "text": "Pop Mart +185% in 2025 on blind boxes",
+          "link": "#culture"
+        },
+        {
+          "text": "CleanTok ~150B views",
+          "link": "#culture"
+        },
         {
           "text": "Wordle: 90 players → millions via the result grid",
           "link": "#spread"
-        },
-        {
-          "text": "Suika: sales up 50,000x after streamers",
-          "link": "#spread"
-        },
-        {
-          "text": "A Little to the Left: ~1M copies",
-          "game": "a-little-to-the-left"
         }
       ],
       "confidence": "medium"
@@ -350,9 +355,13 @@
     },
     {
       "topic": "What you own",
-      "call": "One recurring cozy world and cast across your games, your channel and an email list. That is the moat, not any single game.",
+      "call": "One recurring cast of 6–10 cute characters (and a cat) across every game, plus your channel and an email list. That's the moat, not any single game.",
       "why": "Anyone can build fast now. Audiences, a recognizable style and characters are what make each new game launch easier than the last.",
       "evidence": [
+        {
+          "text": "Sanrio: record ¥194bn year on a multi-character cast",
+          "link": "#culture"
+        },
         {
           "text": "fly.pieter.com: rode a 600k audience, then faded",
           "link": "#outliers"
@@ -372,7 +381,7 @@
     },
     {
       "when": "Weeks 1–3",
-      "what": "Build rough phone prototypes of Daily Tidy and Petal Drop (plus one wildcard). Post 3–5 clips of each before polishing anything."
+      "what": "Build rough phone prototypes of Treat Box and Daily Tidy, plus Petal Drop as a quick pipeline test. Post 3–5 clips of each before polishing anything. Design your cast of characters while you do."
     },
     {
       "when": "Weeks 2–12",
@@ -393,6 +402,8 @@
   ],
   "suggestedQuestions": [
     "I'm one person building with AI. Which of the five should I build first, and why?",
+    "Design my recurring cast of characters for Treat Box and the other games.",
+    "Which culture trends should my first month of TikTok content ride, week by week?",
     "Write me a 30-day content plan for TikTok and Shorts for Daily Tidy.",
     "Should I go Poki-exclusive or CrazyGames + itch.io? Walk me through the trade-off.",
     "What's the smallest version of Pond Party I could ship in two weeks?",
@@ -426,9 +437,9 @@
       "linkText": "See the web-first launch system"
     },
     "concepts": {
-      "text": "Ranked for you by default: five small web-first games you can build in weeks, each built on a format proven to spread. Daily Tidy and Petal Drop are the fastest starts; Pond Party has the biggest upside and the most build risk. The bigger Steam ideas are still here for when you have an audience.",
-      "link": "#launch",
-      "linkText": "See how to launch them"
+      "text": "Ranked for you by default, with outside-games trends now counted. Treat Box leads because it sits on the strongest culture signals; Daily Tidy, Cozy Corner and Petal Drop are close behind (treat close scores as ties). Pond Party and the bigger Steam ideas are under More ideas.",
+      "link": "#culture",
+      "linkText": "See the culture signals behind them"
     },
     "outliers": {
       "text": "The overperformers share a pattern: tiny team, one clear hook, friends or clips doing the marketing. The underperformers share one too: spending ahead of proof. Acclaim, reach and IP alone didn't save anyone.",
@@ -444,6 +455,11 @@
       "text": "The games that spread share a handful of traits: instant start, one satisfying action, a result or creation worth posting, and a reason to come back daily. Cozy fits that well; dress-up, idle shops and merge puzzles already lead cozy web charts.",
       "link": "#concepts",
       "linkText": "See the concepts built on these patterns"
+    },
+    "culture": {
+      "text": "The wider culture is pointing at the same things the game data does: collect cute characters, keep play short and ritual, give people a gentle shared space, and make sure what they see is hand-made. Time launches to autumn and December, when 'cozy' peaks.",
+      "link": "#concepts",
+      "linkText": "See how the suggestions use these trends"
     }
   },
   "outliers": [

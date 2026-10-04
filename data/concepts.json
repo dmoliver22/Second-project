@@ -46,6 +46,12 @@
         "description": "Whether the underlying trends are rising, peaking or declining."
       },
       {
+        "key": "culture",
+        "label": "Cultural tailwind",
+        "weight": 2,
+        "description": "How strongly trends outside games (collectibles, wellness, hobbies, social and seasonal) support the theme and format."
+      },
+      {
         "key": "scopeFit",
         "label": "Fits a small team",
         "weight": 0,
@@ -65,7 +71,8 @@
           "monetization": 2,
           "marketability": 3,
           "momentum": 1,
-          "scopeFit": 0
+          "scopeFit": 0,
+          "culture": 2
         }
       },
       {
@@ -80,12 +87,340 @@
           "monetization": 2,
           "marketability": 2,
           "momentum": 2,
-          "scopeFit": 3
+          "scopeFit": 3,
+          "culture": 1
         }
       }
     ]
   },
   "concepts": [
+    {
+      "id": "treat-box",
+      "name": "Treat Box",
+      "track": "main",
+      "niche": "Daily collectible · blind-box reveal · little treats",
+      "hook": "Open one free mystery box a day. Collect plush little treats with faces. Find the secret one.",
+      "oneLiner": "A daily free 'blind box' of tiny plush-style treats (a mochi, a croissant, a matcha latte with a face) that you collect, name and arrange on your shelf.",
+      "pitch": "Blind boxes are the consumer craze of the decade (Pop Mart's revenue rose 185% in 2025 on Labubu), adults buy cute collectibles for themselves, and unboxing is one of the most-watched video formats. Treat Box gives people the reveal without the price: one free box a day, series of six treats plus one secret with the odds shown openly, and a shelf to arrange your collection on. The treats look like Jellycat plush food, the cast is your own, and every opening is a 10-second clip.",
+      "genreTags": [
+        "Daily collectible",
+        "Reveal",
+        "Decorating",
+        "Mobile web"
+      ],
+      "spec": {
+        "genre": "Daily collect-and-display",
+        "players": "1, with shared shelves",
+        "setting": "A tiny shop shelf of plush treats",
+        "coreVerb": "Open, collect, arrange, trade duplicates",
+        "look": "Soft plush-style food with calm faces; chibi cast",
+        "team": "You + AI + a contract illustrator",
+        "audience": "Adults who collect cute things (the Jellycat, Sanrio and blind-box crowd)",
+        "differentiator": "The blind-box thrill for free, with open odds and an original cast",
+        "price": "Free (web) · $2–5 shelves and series"
+      },
+      "audience": "'Kidult' collectors aged 18–35, Jellycat and Sanrio fans, unboxing-video watchers; skews female.",
+      "comps": [
+        "Pop Mart blind boxes",
+        "Neko Atsume",
+        "Cats & Soup",
+        "Jellycat"
+      ],
+      "sessionLength": "1–3 minutes a day, plus arranging",
+      "artDirection": "Plush-texture treats with tiny calm faces; a pastel shop shelf; a recurring shopkeeper mascot. This has to be beautiful, hand-made art: the collectibles are the product.",
+      "drivers": [
+        {
+          "signal": "Blind boxes are the collectibles craze of the period",
+          "detail": "Pop Mart revenue +185% in 2025 to ~RMB 37bn, driven by Labubu and 'secret' figures.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Adults collect cute things for themselves",
+          "detail": "Kidult collecting and Sanrio's record year: the audience is grown-ups, not just kids.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Unboxing is a native video format",
+          "detail": "Every daily opening is a ready 10-second reveal clip; secret pulls make players post their own.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Little treats and plush food",
+          "detail": "'Little treat' culture and Jellycat-style plush food are the visual language people already love.",
+          "strength": "medium",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Labubu demand is cooling, and loot boxes are regulated",
+          "detail": "Pop Mart growth slowed to ~24% in H1 2026. Keep boxes free and odds visible; never sell random boxes for money.",
+          "strength": "caution",
+          "ref": {
+            "link": "#culture"
+          }
+        }
+      ],
+      "scores": {
+        "demand": {
+          "score": 8,
+          "why": "Blind boxes, kidult collecting and plush culture are huge and adult; daily collection games (Neko Atsume, Cats & Soup) reach tens of millions."
+        },
+        "gap": {
+          "score": 7,
+          "why": "Few free, ethical blind-box games with original cozy characters on the web."
+        },
+        "soloSpeed": {
+          "score": 9,
+          "why": "Simple systems; the work is the art for each series."
+        },
+        "instantPlay": {
+          "score": 10,
+          "why": "One tap opens today's box on a phone."
+        },
+        "monetization": {
+          "score": 6,
+          "why": "Direct-buy shelves, themes and series sets; never paid random boxes."
+        },
+        "marketability": {
+          "score": 9,
+          "why": "Reveal clips, secret pulls and shelf tours are native short-form content."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Collectibles are peaking but cute-character culture keeps rising."
+        },
+        "scopeFit": {
+          "score": 9,
+          "why": "Small scope."
+        },
+        "culture": {
+          "score": 10,
+          "why": "Sits on the strongest culture signals in the research: blind boxes, kidult collecting, unboxing, plush and little treats."
+        }
+      },
+      "whyNow": [
+        "The blind-box thrill is mainstream, but nobody offers it free and fairly in a cozy game.",
+        "Collectors already film their unboxings; your game gives them one a day.",
+        "An original cast built here becomes the mascots for every other game."
+      ],
+      "pillars": [
+        "One free box a day, forever",
+        "Odds always visible; nothing random is ever sold",
+        "Treats with personalities people pick favorites from",
+        "A shelf worth showing off"
+      ],
+      "coreLoop": [
+        "Open today's box",
+        "Reveal a treat",
+        "Check the series card",
+        "Arrange your shelf",
+        "Swap a duplicate",
+        "Come back tomorrow"
+      ],
+      "features": {
+        "mvp": [
+          "Daily free box with a satisfying reveal",
+          "Series of 6 treats + 1 secret, odds shown",
+          "A shelf to arrange",
+          "Share card of today's pull"
+        ],
+        "launch": [
+          "Soft streaks (freezes earned through play)",
+          "Duplicate swaps with friends via link",
+          "Monthly new series (seasonal: autumn bakes, winter cocoa, Lunar New Year sweets)",
+          "Shopkeeper mascot and a shop cat"
+        ],
+        "postLaunch": [
+          "Shelf themes and display cases (direct purchase)",
+          "Real-world merch of the cast (stickers, then plush)",
+          "Cross-promotion: treats appear as items in your other games"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (mobile web)",
+          "Poki or CrazyGames"
+        ],
+        "later": [
+          "iOS/Android",
+          "Merch store"
+        ]
+      },
+      "pricing": {
+        "base": "Free; shelves and themes $2–5",
+        "model": "Free daily boxes; direct-buy cosmetics; merch later",
+        "details": [
+          "Never sell random boxes. Paid loot boxes are regulated in several countries and cozy players distrust them.",
+          "Sell what people see: shelf themes, display cases, complete-series sets.",
+          "A rewarded ad for one extra box a day is the only ad."
+        ]
+      },
+      "monetizationPlan": [
+        "Rewarded ad for a bonus box",
+        "Shelf themes and display cases",
+        "Complete-the-series direct purchase",
+        "Merch of the cast once it's loved"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Film the daily reveal; run the series calendar."
+        },
+        {
+          "role": "Contract illustrator",
+          "count": 1,
+          "note": "Owns the plush style and the cast; 7 treats a month."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$4–15k",
+        "note": "Mostly character and treat art; later, merch samples."
+      },
+      "devMonths": 1.5,
+      "milestones": [
+        {
+          "name": "Reveal prototype + clip test",
+          "startMonth": 0,
+          "endMonth": 0.5,
+          "kind": "build",
+          "deliverable": "Box opening with 7 treats; 5 reveal clips",
+          "gate": "Clips earn saves; comments pick favorites"
+        },
+        {
+          "name": "Web launch",
+          "startMonth": 0.5,
+          "endMonth": 1.5,
+          "kind": "launch",
+          "deliverable": "Daily boxes, shelf, share card",
+          "gate": "25%+ day-2 return"
+        },
+        {
+          "name": "Monthly series",
+          "startMonth": 1.5,
+          "endMonth": 9,
+          "kind": "live",
+          "deliverable": "A new seasonal series each month",
+          "gate": "Shelf shares growing"
+        },
+        {
+          "name": "Cosmetics + merch test",
+          "startMonth": 3,
+          "endMonth": 6,
+          "kind": "launch",
+          "deliverable": "Shelf themes; sticker drop",
+          "gate": "1%+ buy cosmetics"
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Week 1",
+          "action": "Reveal clips with a 'which one would you get?' hook; secret-pull reactions."
+        },
+        {
+          "when": "Launch",
+          "action": "Daily 'today's box' post; feature players' shelves and secret pulls."
+        },
+        {
+          "when": "Monthly",
+          "action": "New-series reveal trailer timed to the season; long-form devlog on designing the treats."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Character polls ('who's your favorite?') borrowed from Sanrio's ranking playbook."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Daily",
+          "what": "One free box; one short video."
+        },
+        {
+          "when": "Monthly",
+          "what": "New series of 6 + 1 secret, themed to the season."
+        },
+        {
+          "when": "Yearly",
+          "what": "A character popularity vote."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Day-2 return",
+          "target": "25%+",
+          "why": "The daily box should build a habit fast."
+        },
+        {
+          "metric": "Share rate of pulls",
+          "target": "8%+",
+          "why": "Reveals should spread."
+        },
+        {
+          "metric": "Cosmetic conversion",
+          "target": "1–3% of players",
+          "why": "Checks the direct-buy economy."
+        }
+      ],
+      "killCriteria": [
+        "Reveal clips don't beat your channel average after 10 posts: the treats aren't lovable enough; redesign the cast.",
+        "Day-2 return under 12% after a month: the daily box isn't a habit; rethink rewards."
+      ],
+      "risks": [
+        {
+          "risk": "Seen as gambling",
+          "mitigation": "Free boxes only, odds always shown, no paid randomness, clear copy."
+        },
+        {
+          "risk": "Collectibles hype cools",
+          "mitigation": "The cast and the daily ritual carry it, not the trend; rotate themes."
+        },
+        {
+          "risk": "Looks like Labubu or Jellycat",
+          "mitigation": "An original cast with its own silhouettes; never imitate existing characters."
+        }
+      ],
+      "revenueAssumptions": "Ad revenue assumes ~$5 per 1,000 plays to you (≈1.5 rewarded or interstitial ads per play at a blended eCPM of ~$5, with 100% kept on your own traffic at Poki). Low-confidence estimate; measure your own. Cosmetics add ~$3 per 1,000 plays (about 1–2% of players buying a $2–5 item).",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 300000,
+          "volume": "300k plays",
+          "netUSD": 2400,
+          "note": "The cast didn't land."
+        },
+        {
+          "scenario": "Base",
+          "units": 6000000,
+          "volume": "6M plays",
+          "netUSD": 48000,
+          "note": "A steady daily-collector crowd."
+        },
+        {
+          "scenario": "Strong",
+          "units": 60000000,
+          "volume": "60M plays + merch",
+          "netUSD": 550000,
+          "note": "A loved cast with a merch line."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 400000000,
+          "volume": "400M plays + merch + licensing",
+          "netUSD": 4000000,
+          "note": "Neko Atsume-style phenomenon. Rare."
+        }
+      ]
+    },
     {
       "id": "tea-cart",
       "name": "Tea Cart",
@@ -154,6 +489,22 @@
           }
         },
         {
+          "signal": "Café, matcha and 'little treat' culture",
+          "detail": "Matcha interest up ~376% year on year; small treats are how people cope with cost-of-living pressure.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Desktop companions and focus timers are rising",
+          "detail": "Steam now runs a Desktop Companion Fest; Bongo Cat and Rusty's Retirement showed the format.",
+          "strength": "medium",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
           "signal": "Weak clip appeal and crowded",
           "detail": "Upgrade loops don't make great TikToks, and clones are everywhere. Growth leans on portal traffic.",
           "strength": "caution",
@@ -194,6 +545,10 @@
         "scopeFit": {
           "score": 9,
           "why": "Small team-friendly."
+        },
+        "culture": {
+          "score": 9,
+          "why": "Supported by 37 culture signals, strongest: Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin); Cat content dominance; Loneliness epidemic and the search for low-cost third places."
         }
       },
       "whyNow": [
@@ -225,12 +580,16 @@
           "Street expansion with 8 shops",
           "20 regular customers with tiny stories",
           "Offline earnings",
-          "Rewarded boosts"
+          "Rewarded boosts",
+          "Focus mode: a screen-edge strip where each 25-minute focus block brews a cup and grows the street",
+          "Matcha, hojicha, boba and seasonal drinks (pumpkin spice in October, peppermint in December)"
         ],
         "postLaunch": [
           "Seasonal teas and events",
           "Mobile app version",
-          "Cosmetic decorations"
+          "Cosmetic decorations",
+          "A shop cat and plush-style pastries with faces",
+          "Long ambient 'cozy with me' YouTube videos of the street"
         ]
       },
       "platforms": {
@@ -463,6 +822,22 @@
           }
         },
         {
+          "signal": "Aesthetics churn fast, and that's free content",
+          "detail": "Pinterest Predicts, BookTok (370B views) and crafts give a steady supply of daily themes people already search for.",
+          "strength": "medium",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Miniatures and 'tiny things' are trending",
+          "detail": "Tiny rooms photograph like dioramas, a format that travels well on social.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
           "signal": "Lots of art, and galleries need moderation",
           "detail": "Props are the product, so art cost is ongoing; a public gallery needs filtering.",
           "strength": "caution",
@@ -503,6 +878,10 @@
         "scopeFit": {
           "score": 8,
           "why": "Small team-friendly."
+        },
+        "culture": {
+          "score": 10,
+          "why": "Supported by 41 culture signals, strongest: Kidult collecting (adults buying toys for themselves); Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin); Cat content dominance."
         }
       },
       "whyNow": [
@@ -534,12 +913,15 @@
           "Daily themes and a public gallery with hearts",
           "Prop collection and unlocks",
           "Room styles (café, treehouse, attic)",
-          "Moderated gallery"
+          "Moderated gallery",
+          "Themes named after current aesthetics (book nook, cherry-coded, Y2K bedroom, journal desk)",
+          "Miniature diorama photo mode with tilt-shift"
         ],
         "postLaunch": [
           "Seasonal prop packs",
           "Friend galleries",
-          "A Roblox version (where theme-and-vote thrives)"
+          "A Roblox version (where theme-and-vote thrives)",
+          "Free 'capsule' of mystery props each day: a series of 6 + 1 secret, open odds"
         ]
       },
       "platforms": {
@@ -772,6 +1154,22 @@
           }
         },
         {
+          "signal": "People are looking for low-cost third places",
+          "detail": "About 3 in 10 adults aged 18–29 feel lonely much of the day; a free, gentle shared pond is a third place you can open from a link.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Body doubling and study-with-me are mainstream",
+          "detail": "Fishing quietly next to others while you work or study is the same need.",
+          "strength": "medium",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
           "signal": "Servers, moderation and a slow cool-down",
           "detail": "Real-time multiplayer needs servers and abuse handling; fly.pieter.com's revenue fell to ~$12k/month within months.",
           "strength": "caution",
@@ -812,6 +1210,10 @@
         "scopeFit": {
           "score": 7,
           "why": "A small team could do it comfortably."
+        },
+        "culture": {
+          "score": 7,
+          "why": "Supported by 25 culture signals, strongest: Kidult collecting (adults buying toys for themselves); Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin); Cat content dominance."
         }
       },
       "whyNow": [
@@ -844,12 +1246,15 @@
           "Collection book and dock decorating",
           "Seasonal fish and weather",
           "Cosmetic hats",
-          "Streamer mode: chat can vote on the weather"
+          "Streamer mode: chat can vote on the weather",
+          "Quiet Pond mode: fish side by side with strangers while a focus timer runs (body doubling)",
+          "A capybara who soaks in the pond with a yuzu on its head"
         ],
         "postLaunch": [
           "Steam version with bigger worlds ($4.99)",
           "Discord Activity version",
-          "New ponds each season"
+          "New ponds each season",
+          "Long ambient YouTube streams of the pond (lofi + rain) that link to the game"
         ]
       },
       "platforms": {
@@ -1106,6 +1511,14 @@
           }
         },
         {
+          "signal": "Botanicals and 'build and display' are adult hobbies now",
+          "detail": "LEGO Botanicals-style payoffs and the houseplant boom: a bouquet you made is something to show off.",
+          "strength": "medium",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
           "signal": "Clones everywhere",
           "detail": "Fruit-merge clones are all over portals. Only distinct art and the garden meta will make it stand out.",
           "strength": "caution",
@@ -1146,6 +1559,10 @@
         "scopeFit": {
           "score": 10,
           "why": "Tiny scope."
+        },
+        "culture": {
+          "score": 7,
+          "why": "Supported by 28 culture signals, strongest: Kidult collecting (adults buying toys for themselves); Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin); Streak psychology, with forgiveness (Duolingo)."
         }
       },
       "whyNow": [
@@ -1178,12 +1595,15 @@
           "Daily seeded pot and leaderboard",
           "The garden: every bloom you've made, decorated by you",
           "Seasonal flower sets",
-          "Rewarded 'shake the pot' rescue"
+          "Rewarded 'shake the pot' rescue",
+          "Bouquet ending: arrange the flowers you merged into a bouquet card to keep or send"
         ],
         "postLaunch": [
           "Deluxe version on Steam and Switch ($3.99)",
           "Friend pots (challenge links)",
-          "Themed pots: herbs, succulents, wildflowers"
+          "Themed pots: herbs, succulents, wildflowers",
+          "Monthly 'bloom calendar' with real seasonal flowers",
+          "Crochet flower skin (yarn-ball merges)"
         ]
       },
       "platforms": {
@@ -1425,6 +1845,22 @@
           }
         },
         {
+          "signal": "CleanTok and 'Sunday reset' videos are a huge, ready format",
+          "detail": "Cleaning and organizing content has ~150B TikTok views; a before/after tidy is the same clip.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Bounded daily play fits screen-time guilt",
+          "detail": "81% of Gen Z wish they could disconnect; 'one tidy a day, done in 3 minutes' is the pitch.",
+          "strength": "medium",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
           "signal": "Needs a steady supply of hand-made scenes",
           "detail": "One scene a day is a content treadmill. Build a scene editor early and keep a 30-day buffer.",
           "strength": "caution",
@@ -1465,6 +1901,10 @@
         "scopeFit": {
           "score": 9,
           "why": "Small scope for any team."
+        },
+        "culture": {
+          "score": 7,
+          "why": "Supported by 26 culture signals, strongest: Cat content dominance; Streak psychology, with forgiveness (Duolingo); AI fatigue, 'slop' backlash and demand for human-made."
         }
       },
       "whyNow": [
@@ -1498,13 +1938,17 @@
           "Streaks and a calendar",
           "Archive of past scenes",
           "Email or account-free streak saving",
-          "Scene editor for you to make scenes fast"
+          "Scene editor for you to make scenes fast",
+          "Soft streaks with earned freezes and a 'revive your streak' option (Duolingo-style forgiveness)",
+          "A cat who wanders through scenes, knocking things over"
         ],
         "postLaunch": [
           "Weekend 'big tidy' scenes",
           "Seasonal themes",
           "Paid collection on Steam and mobile with all past scenes",
-          "Player-made scenes (later)"
+          "Player-made scenes (later)",
+          "'Sunday Reset': a bigger weekly restock scene (fridge, vanity, pantry) built for before/after clips",
+          "Crafts-themed weeks: yarn baskets, embroidery boxes, junk journals"
         ]
       },
       "platforms": {
@@ -1748,6 +2192,10 @@
         "instantPlay": {
           "score": 2,
           "why": "A 3D online co-op game is a Steam download, not a tap-to-play link."
+        },
+        "culture": {
+          "score": 5,
+          "why": "Loneliness and third-place trends favor co-op, but few culture signals point at survival or the sea."
         }
       },
       "whyNow": [
@@ -2207,6 +2655,10 @@
         "instantPlay": {
           "score": 6,
           "why": "Works in a browser; online co-op via a share link is feasible, couch co-op on one phone less so."
+        },
+        "culture": {
+          "score": 8,
+          "why": "Matcha and café culture, anime and K-culture, night-market aesthetics and the 'little treat' mood all point here; couples content is evergreen."
         }
       },
       "whyNow": [
@@ -2635,6 +3087,10 @@
         "instantPlay": {
           "score": 6,
           "why": "WebGL can run it (Townscaper had a web toy), but sculpting is better with a mouse or tablet than a phone."
+        },
+        "culture": {
+          "score": 6,
+          "why": "Ghibli-adjacent landscapes, miniatures and the slow-living mood help; fewer direct signals than the web-first ideas."
         }
       },
       "whyNow": [
@@ -2966,6 +3422,10 @@
         "instantPlay": {
           "score": 5,
           "why": "Plays in a browser, but a story game wants longer sessions than a tap from a video."
+        },
+        "culture": {
+          "score": 6,
+          "why": "Autumn and Halloween seasonality and 'cute-spooky' aesthetics help, but only for part of the year."
         }
       },
       "whyNow": [
@@ -3343,6 +3803,10 @@
         "instantPlay": {
           "score": 5,
           "why": "The link opens Roblox, which needs the app and an account on phones."
+        },
+        "culture": {
+          "score": 7,
+          "why": "Gen Alpha's calm idle loops on Roblox and collecting culture support it."
         }
       },
       "whyNow": [
@@ -3593,6 +4057,10 @@
         "instantPlay": {
           "score": 9,
           "why": "Tile placement is natural with touch and loads instantly."
+        },
+        "culture": {
+          "score": 7,
+          "why": "The 'grandma hobbies' and crochet revival (needlecraft searches up 136%), plus bounded, calming play, fit it closely."
         }
       },
       "whyNow": [
@@ -3935,6 +4403,10 @@
         "instantPlay": {
           "score": 3,
           "why": "A desktop overlay is a download; a browser-tab version loses the point."
+        },
+        "culture": {
+          "score": 8,
+          "why": "Desktop companions, focus timers and body doubling, houseplants and virtual-pet revival all point here."
         }
       },
       "whyNow": [

@@ -93,7 +93,7 @@
   const FILES = {
     meta: "data/meta.json", market: "data/market.json", games: "data/games.json", niches: "data/niches.json",
     playbook: "data/playbook.json", insights: "data/insights.json", concepts: "data/concepts.json", live: "data/live/steam.json",
-    gotomarket: "data/gotomarket.json", verification: "data/verification.json",
+    gotomarket: "data/gotomarket.json", verification: "data/verification.json", culture: "data/culture.json",
   };
   let D = null;
 
@@ -162,6 +162,7 @@
     concepts: { label: "What to build", icon: "M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z", render: renderConcepts },
     launch: { label: "Launch & grow", icon: "M5 19l4-4M14 4l6 6-8 8-6-6zM14 4l-2-2M20 10l2 2M3 21l2-2", render: renderLaunch },
     spread: { label: "What spreads", icon: "M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4", render: renderSpread },
+    culture: { label: "Culture signals", icon: "M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20", render: renderCulture },
     outliers: { label: "Outliers", icon: "M12 3v4M12 17v4M3 12h4M17 12h4M12 12h.01M7 7l2 2M15 15l2 2M17 7l-2 2M9 15l-2 2", render: renderOutliers },
     gaps: { label: "Market gaps", icon: "M12 3v18M3 12h18M7 7h.01M17 17h.01", render: renderGaps },
     trends: { label: "Trends", icon: "M3 17l6-6 4 4 8-8M15 7h6v6", render: renderTrends },
@@ -457,6 +458,66 @@
           { label: "Results", get: (r) => r.results }, { label: "Money", cls: "ink-2", get: (r) => r.monetization }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }],
           G.cozyMobileWeb.map((x) => Object.assign({ __click: () => openPanel(x.platform, x.name, [["Genre", x.genre], ["Results", x.results], ["How it makes money", x.monetization], ["Lesson", x.lesson]], x.sources, confOf(x.confidence)) }, x))),
         G.mobileBenchmarks.length ? panel("Mobile benchmarks", null, tableOf([{ label: "Metric", get: (r) => r.metric }, { label: "Value", get: (r) => r.value }, { label: "Conf.", get: (r) => conf(confOf(r.confidence)) }], G.mobileBenchmarks)) : null),
+    );
+  }
+
+  const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function renderCulture() {
+    const K = D.culture;
+    if (!K) return h("div", { class: "error-box", text: "Culture data is missing (data/culture.json)." });
+    const top = rankedSplit().main;
+    const cats = uniq(K.signals.map((x) => x.category));
+    let cat = store.get("cultureCat", "");
+    if (cat && !cats.includes(cat)) cat = "";
+    const strip = h("div", { class: "chips", role: "group", "aria-label": "Category" });
+    const grid = h("div", { class: "grid grid-2" });
+    const conceptName = (id) => (D.concepts.concepts.find((c) => c.id === id) || {}).name;
+    const sorted = [...K.signals].sort((a, b) => b.strength - a.strength || (a.direction === "rising" ? -1 : 1));
+    const draw = () => {
+      strip.replaceChildren(...["", ...cats].map((c) => h("button", { type: "button", class: "phase-btn slim", "aria-pressed": String(cat === c), onclick: () => { cat = c; store.set("cultureCat", c); draw(); } },
+        h("span", { class: "p-name", text: c || "All" }), h("span", { class: "muted", style: "font-size:.75rem", text: String(K.signals.filter((x) => !c || x.category === c).length) }))));
+      grid.replaceChildren(...sorted.filter((x) => !cat || x.category === cat).map((x) => h("article", { class: "card" },
+        h("div", { class: "card-top" }, h("h3", { text: x.name }), dirChip(x.direction)),
+        h("div", { class: "meta" }, x.category, " · strength ", pips(x.strength)),
+        h("p", { class: "ink-2", style: "font-size:.9rem", text: x.whatsHappening }),
+        x.audienceOverlap ? h("p", { style: "font-size:.86rem" }, h("b", { text: "Overlap with cozy players: " }), x.audienceOverlap) : null,
+        h("div", {}, h("h4", { text: "For your games" }), h("ul", { class: "ink-2", style: "font-size:.88rem" }, (x.gameImplications || []).slice(0, 4).map((t) => h("li", { text: t })))),
+        (x.conceptFit || []).filter(conceptName).length ? h("div", { class: "chips" }, h("span", { class: "muted", style: "font-size:.8rem", text: "Helps:" }),
+          x.conceptFit.filter(conceptName).map((id) => h("button", { type: "button", class: "chip accent", text: conceptName(id), onclick: () => goConcept(id) }))) : null,
+        x.risks ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Watch out:"), " ", x.risks) : null,
+        h("details", {}, h("summary", { text: "Evidence (" + (x.evidence || []).length + ")", style: "cursor:pointer;font-size:.85rem;color:var(--accent)" }),
+          h("ul", { class: "list-plain", style: "margin-top:8px" }, (x.evidence || []).map((e) => h("li", { style: "font-size:.85rem" }, e.fact, " ", conf(confOf(e.confidence)), " ", srcOne(e.source))))),
+        askBtn("Ask how to use this", `How should my games use the "${x.name}" trend? Be concrete about theme, mechanics and the first clip I'd post.`))));
+    };
+    draw();
+
+    // which suggestions ride which signals
+    const fitTable = h("div", { class: "table-wrap" }, h("table", { class: "fit-table" },
+      h("thead", {}, h("tr", {}, h("th", { text: "Signal" }), top.map((r) => h("th", { class: "num", text: r.c.name })))),
+      h("tbody", {}, sorted.filter((x) => (x.conceptFit || []).some((id) => top.find((r) => r.c.id === id))).slice(0, 15).map((x) => h("tr", {},
+        h("td", {}, h("b", { text: x.name }), " ", dirChip(x.direction)),
+        top.map((r) => h("td", { class: "num" }, (x.conceptFit || []).includes(r.c.id) ? h("span", { class: "fit-dot", title: x.name + " → " + r.c.name, "aria-label": "fits" }, "●") : h("span", { class: "muted", text: "·" }))))))));
+
+    const now = new Date().getMonth();
+    const cal = h("div", { class: "cal" }, MONTHS.map((m, i) => {
+      const items = (K.calendar || []).filter((c) => (c.months || []).includes(i + 1));
+      return h("div", { class: "cal-month" + (i === now ? " now" : "") },
+        h("div", { class: "cal-head" }, h("b", { text: m }), i === now ? h("span", { class: "chip accent", text: "Now" }) : null),
+        items.length ? items.map((c) => h("div", { class: "cal-item" }, h("b", { text: c.moment }), h("div", { class: "ink-2", text: c.themeIdea }), c.contentIdea ? h("div", { class: "muted", text: "Post: " + c.contentIdea }) : null))
+          : h("div", { class: "muted", text: "—" }));
+    }));
+
+    return h("div", { class: "view" },
+      viewHead("Culture signals", "Trends outside games that should shape yours", "Collectibles, characters, aesthetics, hobbies, wellness, social platforms and the seasons: what's moving in the wider culture, how much it overlaps with cozy players, and what it means for the games you make and when you post them."),
+      takeaway("culture"),
+      K.synthesis ? section("What it means for your games", null, h("div", { class: "grid grid-2" }, K.synthesis.map((t) => h("article", { class: "card" }, h("h3", { text: t.title }), h("p", { class: "ink-2", text: t.detail }),
+        t.signals && t.signals.length ? h("div", { class: "chips" }, t.signals.map((sname) => h("span", { class: "chip", text: sname }))) : null)))) : null,
+      section("Which suggestions ride which trends", "Your current top five against the 15 strongest signals that support them. The full list is under All signals.", fitTable),
+      section("The year at a glance", "When cozy interest peaks and what to theme around. 'cozy' searches peak every December; autumn content runs September to November.", cal),
+      section("All signals", "Click a game chip to see the suggestion; open Evidence for sources.", strip, grid),
+      K.seeds && K.seeds.length ? section("Game ideas these trends suggest", "Seeds from the research, not yet scored. Ask the atlas to develop one.",
+        h("div", { class: "grid grid-3" }, K.seeds.map((n) => h("article", { class: "card" }, h("h4", { text: n.idea }), h("p", { class: "ink-2", style: "font-size:.86rem", text: n.whyThisTrend }),
+          h("span", { class: "chip wrap", text: n.format }), askBtn("Develop this idea", `Develop this game idea into a concept for my studio, scored the same way as the others: ${n.idea}`))))) : null,
     );
   }
 

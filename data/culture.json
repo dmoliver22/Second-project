@@ -1,0 +1,2981 @@
+{
+  "compiledOn": "2026-10-04",
+  "method": "Web search summaries across three tracks (collectibles and aesthetics; wellness, hobbies and attention; social, search and seasonal). Full pages could not be opened; confidence is marked per fact.",
+  "synthesis": [
+    {
+      "title": "Make it collectible, never gambling",
+      "detail": "Blind boxes and adult collecting are the biggest consumer craze of the period (Pop Mart revenue +185% in 2025). Use free, open-odds series ('6 + 1 secret') with your own characters, and never sell random boxes for money.",
+      "signals": [
+        "Blind boxes, Pop Mart and Labubu",
+        "Kidult collecting (adults buying toys for themselves)",
+        "Unboxing / mystery-reveal as a content format"
+      ]
+    },
+    {
+      "title": "Build a cast, not just a game",
+      "detail": "Character-led cute keeps growing (Sanrio's record ¥194.1bn year and 63M votes in its character ranking; Chiikawa; capybaras; cats everywhere). Design 6–10 simple mascots, each with a color, item and personality, and reuse them across every game and video. A cat should turn up in all of them.",
+      "signals": [
+        "Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin)",
+        "Cat content dominance",
+        "Character IP crossing into cozy games"
+      ]
+    },
+    {
+      "title": "Bounded, ritual play wins",
+      "detail": "81% of Gen Z wish they could disconnect, and Duolingo reached 58.7M daily users on forgiving streaks. Sell 'one cozy minute a day', use soft streaks with freezes and revives, and add a 'that's enough for today' moment.",
+      "signals": [
+        "Streak psychology, with forgiveness (Duolingo)",
+        "Digital detox, screen-time anxiety and 'brain rot' backlash",
+        "Romanticize your life, slow living, quiet life"
+      ]
+    },
+    {
+      "title": "Be a third place",
+      "detail": "About 3 in 10 adults aged 18–29 feel lonely much of the day, and body doubling, study-with-me and lofi streams are how many cope. Quiet shared spaces, focus timers and long ambient YouTube videos are on-trend formats for your games.",
+      "signals": [
+        "Loneliness epidemic and the search for low-cost third places",
+        "Focus timers and body doubling ('study with me', Forest, lofi streams)",
+        "Gen Alpha on Roblox: calm idle loops beat chaos at scale"
+      ]
+    },
+    {
+      "title": "Borrow the feed's favorite formats",
+      "detail": "CleanTok (~150B views), ASMR and unboxing are already proven video formats. Give every game a before/after, a reveal or a sound worth hearing, so the clip makes itself.",
+      "signals": [
+        "CleanTok, organizing, restock and 'Sunday reset' content",
+        "ASMR and 'oddly satisfying' sensory content",
+        "Unboxing / mystery-reveal as a content format"
+      ]
+    },
+    {
+      "title": "Human-made is a selling point",
+      "detail": "85% of gamers are negative about generative AI, and the 2025 AI 'Ghibli filter' backlash showed how strongly people react to imitations. Keep art and sound visibly hand-made, tell the solo-developer story, and never imitate an artist's style.",
+      "signals": [
+        "AI fatigue, 'slop' backlash and demand for human-made",
+        "Studio Ghibli aesthetic demand and the 2025 AI 'Ghibli filter' backlash"
+      ]
+    },
+    {
+      "title": "Little treats, little prices",
+      "detail": "Cost-of-living pressure plus 'little treat' culture: free in the browser, with $2–5 supporter packs or deluxe versions, fits the mood better than $20 asks for small games.",
+      "signals": [
+        "Cost-of-living squeeze and 'little treat' economy",
+        "Cost of living & 'little treat' culture"
+      ]
+    },
+    {
+      "title": "Time it to the season",
+      "detail": "'Cozy' searches peak every December; autumn takes over TikTok from September to November. Launch in early October (Steam's autumn fests), ship winter content by late November, and use January's Desktop Companion and Shop Keeper fests and Lunar New Year (6 Feb 2027).",
+      "signals": [
+        "Google search 'cozy' is a winter-peaking, long-term rising term",
+        "Autumn aesthetic / 'fallcore' on TikTok"
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "Blind boxes, Pop Mart and Labubu",
+      "category": "Collectibles & characters",
+      "whatsHappening": "Pop Mart's blind-box model (random figure from a series, 1-in-72 'secret' chase figure) turned Labubu (The Monsters IP) into the defining collectible of 2025. Growth exploded in 2025, then cooled sharply in 2026: Pop Mart raised supply, resale prices collapsed, and the CEO called 2026 an 'adjustment' year. Pop Mart's newer IPs (Twinkle Twinkle, Skullpanda, Crybaby, Dimoo) keep growing, so the blind-box format is outlasting any single character.",
+      "evidence": [
+        {
+          "fact": "Pop Mart 2025 revenue RMB 37.1bn (~US$5.4bn), up ~185% YoY; net income RMB 12.8bn",
+          "numeric": 37.1,
+          "source": "https://invezz.com/uk/news/2026/03/25/pop-mart-stock-falls-20percent-despite-strong-results-labubu-risks-weigh/",
+          "confidence": "high"
+        },
+        {
+          "fact": "The Monsters (Labubu) made up 38% of Pop Mart 2025 revenue, up from 23% in 2024; plush category revenue RMB 18.7bn, +560.6%",
+          "numeric": 38,
+          "source": "https://invezz.com/uk/news/2026/03/25/pop-mart-stock-falls-20percent-despite-strong-results-labubu-risks-weigh/",
+          "confidence": "high"
+        },
+        {
+          "fact": "H1 2026 revenue up only 23.8% to RMB 17.17bn; The Monsters RMB 4.45bn; CEO says H2 pressure greater and 20% growth target unlikely; Twinkle Twinkle fastest-growing IP at +580.6%",
+          "numeric": 23.8,
+          "source": "https://kr-asia.com/pop-marts-next-act-gets-harder-as-labubu-growth-cools",
+          "confidence": "high"
+        },
+        {
+          "fact": "Standard Pop Mart secret/chase odds are 1 in 72 per box (e.g., Labubu x Hello Kitty series)",
+          "numeric": 72,
+          "source": "https://gulfnews.com/best-buys/labubu-blind-box-review-the-bag-charm-everyone-is-chasing-1.500637384",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Secret figure in Big Into Energy series fell on resale from CNY 4,522 (15 June peak) to CNY 540; analysts attribute the drop mainly to increased supply",
+          "numeric": 540,
+          "source": "https://www.thestandard.com.hk/china/article/314826/Labubu-resale-price-falls-may-be-more-about-supply-than-demand",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Pop Mart US TikTok Shop sales were ~$4.8M in April 2025 and >$5.5M in June 2025 (+1,828% YoY), driven by livestream shopping",
+          "numeric": 5.5,
+          "source": "https://www.modernretail.co/operations/pop-marts-labubu-craze-supercharges-tiktok-shop-sales/",
+          "confidence": "high"
+        },
+        {
+          "fact": "Lisa (BLACKPINK) posting a Labubu bag charm in April 2024 is widely cited as the global trigger; a CNN simulation estimated an average collector would spend ~$2,000 to complete a set including the secret",
+          "numeric": 2000,
+          "source": "https://fortune.com/2025/06/11/what-is-labubu",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 5,
+      "audienceOverlap": "Very high. The buyers are mostly Gen Z and millennial women who collect bag charms, make unboxing videos on TikTok, and also play cozy games. Labubu itself is cooling, but the rush of a random reveal, a set to complete and a rare secret item is now a familiar habit for this audience.",
+      "gameImplications": [
+        "Use a free 'blind box' reveal as the core reward: a series of 6 items plus 1 'secret' item, shown on a silhouette shelf so players can see which slots are still empty",
+        "Show the odds openly, e.g. 'secret 1/72', and add a pity counter. Never sell random boxes for real money: paid loot boxes are legally risky and would undermine the cozy brand",
+        "Release rotating 'series' (seasonal sets of 6+1). These give you a steady supply of short videos ('new series dropped')",
+        "Make an unboxing animation (shake, tear, reveal) worth recording: slow reveal, sound effect, a sparkle on the secret. That moment is the TikTok clip",
+        "Design one original 'ugly-cute' mascot instead of copying Labubu. Labubu's fall in 2026 shows that a game built on one character is fragile"
+      ],
+      "conceptFit": [
+        "petal-drop",
+        "cozy-corner",
+        "pond-party",
+        "tea-cart",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Pokemon TCG Pocket (pack-opening ritual)",
+        "Animal Crossing (fossil/fish completion)",
+        "Neko Atsume (rare cat visitors)"
+      ],
+      "risks": "Labubu-specific themes are already fading (resale has collapsed, and searches peaked in mid-2025). Paying real money for random items invites loot-box regulation and backlash. Using Pop Mart IP or look-alikes risks trademark and copyright claims.",
+      "sources": [
+        "https://invezz.com/uk/news/2026/03/25/pop-mart-stock-falls-20percent-despite-strong-results-labubu-risks-weigh/",
+        "https://kr-asia.com/pop-marts-next-act-gets-harder-as-labubu-growth-cools",
+        "https://www.thestandard.com.hk/china/article/314826/Labubu-resale-price-falls-may-be-more-about-supply-than-demand",
+        "https://www.modernretail.co/operations/pop-marts-labubu-craze-supercharges-tiktok-shop-sales/",
+        "https://gulfnews.com/best-buys/labubu-blind-box-review-the-bag-charm-everyone-is-chasing-1.500637384",
+        "https://campaignlive.com/article/reached-peak-labubu-charting-rise-fall-ugly-cute-viral-toy/1948309"
+      ],
+      "track": "collectibles",
+      "id": "blind-boxes-pop-mart-and-labubu"
+    },
+    {
+      "name": "Unboxing / mystery-reveal as a content format",
+      "category": "Collectibles & characters",
+      "whatsHappening": "Reveal videos have become a TikTok genre of their own: unboxings, 'mystery scoop' videos (scooping random items from a bin) and blind-box openings. Other mini-figure lines with secret figures, such as Sonny Angel and Smiski, ride the same format. Research links watching unboxings to buying blind boxes.",
+      "evidence": [
+        {
+          "fact": "TikTok 'mystery scoop' content is riding the blind-box success wave and has become commonplace (YPulse, March 2026)",
+          "numeric": null,
+          "source": "https://www.ypulse.com/newsfeed/2026/03/11/tiktok-mystery-scoop-content-is-riding-the-blind-box-success-wave/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "#unboxing on TikTok has 28bn+ views (secondary summary)",
+          "numeric": 28000000000,
+          "source": "https://www.nssmag.com/en/fashion/39095/unboxing-blind-box-consumption-trend",
+          "confidence": "low"
+        },
+        {
+          "fact": "Sonny Angel secret figure odds reported as 1 in 144 per box",
+          "numeric": 144,
+          "source": "https://chambleeblueandgold.com/16460/opinion/why-are-sonny-angels-so-popular/",
+          "confidence": "low"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "High. Short-form viewers of unboxing and ASMR videos overlap heavily with mobile and cozy players, and the format suits Shorts and TikTok because the payoff comes at the end.",
+      "gameImplications": [
+        "Build every daily session so it ends in a reveal (box, egg, gift, catch) that makes a 10-20 second vertical clip",
+        "Add a 'share my pull' card that exports a vertical PNG or GIF showing the rarity",
+        "Market with 'opening 10 boxes until I get the secret' Shorts that use real in-game odds",
+        "Use packaging-style UI: foil wrappers, a satisfying tear sound, and ASMR-style audio"
+      ],
+      "conceptFit": [
+        "petal-drop",
+        "pond-party",
+        "tea-cart",
+        "cozy-corner",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Pokemon TCG Pocket",
+        "Gacha-lite cozy mobile games"
+      ],
+      "risks": "Viewers may tire of reveal videos that don't add anything new. A reveal only works if the item is worth having, so the art has to be good.",
+      "sources": [
+        "https://www.ypulse.com/newsfeed/2026/03/11/tiktok-mystery-scoop-content-is-riding-the-blind-box-success-wave/",
+        "https://www.nssmag.com/en/fashion/39095/unboxing-blind-box-consumption-trend"
+      ],
+      "track": "collectibles",
+      "id": "unboxing-mystery-reveal-as-a-content-format"
+    },
+    {
+      "name": "Kidult collecting (adults buying toys for themselves)",
+      "category": "Collectibles & characters",
+      "whatsHappening": "Adults are now the main growth engine of the US toy market, led by collectibles, trading cards and premium plush. Buyers pay more for things they can display and collect than for impulse toys.",
+      "evidence": [
+        {
+          "fact": "US adults (18+) bought ~$9.1bn of toys for themselves, about one-fifth of the market; the adult segment grew ~12% and reached $1.8bn in Q1 2025",
+          "numeric": 9.1,
+          "source": "https://www.spielwarenmesse.de/en/mag/toy-market-news/adults-drive-us-toy-market-growth-in-2025-collectibles-and-nostalgia-lead-the-way/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Toy sales for recipients aged 18+ rose 18% (Circana, 2025)",
+          "numeric": 18,
+          "source": "https://www.retailbrew.com/stories/2025/06/06/collectible-trading-cards-and-adults-drive-toy-sales-in-2025-circana",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Global toy collectibles market projected to reach $48.9bn by 2034 (10.1% CAGR)",
+          "numeric": 48.9,
+          "source": "https://www.bizcommunity.com/article/unboxing-the-secret-to-zuru-success-in-toy-collectibles-258347a",
+          "confidence": "low"
+        }
+      ],
+      "direction": "rising",
+      "strength": 5,
+      "audienceOverlap": "Very high. The adult women aged 20-35 who drive kidult plush and figure buying are the core cozy-game audience. One secondary source says 62% of cozy players are women or non-binary.",
+      "gameImplications": [
+        "Pitch the game to adults: 'a collection for grown-ups who like cute things', not as a kids' game",
+        "Make the collection log and display shelf a first-class screen, since adults collect to show things off",
+        "Sell cosmetic packs or supporter bundles at a fixed price with every item shown, not as random pulls"
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "petal-drop",
+        "pond-party",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Hello Kitty Island Adventure",
+        "Animal Crossing: New Horizons"
+      ],
+      "risks": "Collectible fatigue could set in, and higher prices could squeeze discretionary spending.",
+      "sources": [
+        "https://www.spielwarenmesse.de/en/mag/toy-market-news/adults-drive-us-toy-market-growth-in-2025-collectibles-and-nostalgia-lead-the-way/",
+        "https://www.retailbrew.com/stories/2025/06/06/collectible-trading-cards-and-adults-drive-toy-sales-in-2025-circana",
+        "https://voxbooster.com/blog/cozy-games-statistics-2026"
+      ],
+      "track": "collectibles",
+      "id": "kidult-collecting-adults-buying-toys-for-themselves"
+    },
+    {
+      "name": "Plush culture: Jellycat and Squishmallows",
+      "category": "Collectibles & characters",
+      "whatsHappening": "Jellycat turned plush into a premium adult gift and status object, with a ~70% gross margin and food and objects with faces (its Amuseables range). Squishmallows is the mass-market counterpart. The overall plush category softened in 2025, but adult plush buying stayed strong.",
+      "evidence": [
+        {
+          "fact": "Jellycat 2024 revenue up 66% to GBP 333m; pre-tax profit more than doubled to GBP 139m; gross margin near 70%",
+          "numeric": 333,
+          "source": "https://insideretail.asia/2025/10/08/profits-double-how-toymaker-jellycat-made-plushies-a-high-margin-business/",
+          "confidence": "high"
+        },
+        {
+          "fact": "Jellycat 2025 accounts were due by 30 Sep 2026 at Companies House; no verified 2025 total found",
+          "numeric": null,
+          "source": "https://find-and-update.company-information.service.gov.uk/company/03591414",
+          "confidence": "high"
+        },
+        {
+          "fact": "Jazwares (Squishmallows owner) passed $1bn revenue in 2023, driven by Squishmallows",
+          "numeric": 1,
+          "source": "https://en.wikipedia.org/wiki/Squishmallows",
+          "confidence": "medium"
+        },
+        {
+          "fact": "US plush category declined ~4% in H1 2025 (Circana), even as adult toy buying grew; Squishmallows ranked 4th among top licensed properties",
+          "numeric": -4,
+          "source": "https://www.giftsanddec.com/tag/kidults/",
+          "confidence": "low"
+        },
+        {
+          "fact": "Squishmallows won Toy Association Toy of the Year (2023, confirmed by Jazwares)",
+          "numeric": null,
+          "source": "https://www.jazwares.com/newsroom/squishmallows-from-jazwares-takes-home-prestigious-toy-of-the-year-award-for-2023",
+          "confidence": "high"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 4,
+      "audienceOverlap": "Very high. Plush shelves and plush 'families' are a common sight in cozy-gamer desk and room setups, and their owners make TikTok room tours.",
+      "gameImplications": [
+        "Use the Jellycat style for objects: soft, rounded food and everyday items with small calm faces (pastries, teacups, flowers). This fits tea-cart menu items and petal-drop pieces",
+        "Make plush-style cosmetics for cozy-corner, such as a 'plush shelf' wall decor set and limited monthly plush drops",
+        "Use a fuzzy, felted look (soft shading, visible stitches). It reads as cozy at thumbnail size",
+        "Hook idea: 'my plush collection, but it's a game'"
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "tea-cart",
+        "petal-drop",
+        "daily-tidy",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Hello Kitty Island Adventure (plush-like characters)",
+        "Cats & Soup (soft rounded style)"
+      ],
+      "risks": "Jellycat actively pursues copycats over IP, so avoid near-copies of specific designs. Mass plush is softening.",
+      "sources": [
+        "https://insideretail.asia/2025/10/08/profits-double-how-toymaker-jellycat-made-plushies-a-high-margin-business/",
+        "https://find-and-update.company-information.service.gov.uk/company/03591414",
+        "https://en.wikipedia.org/wiki/Squishmallows",
+        "https://www.giftsanddec.com/tag/kidults/",
+        "https://www.axios.com/local/chicago/2025/11/18/chicago-jellycat-adult-plush-toy-craze"
+      ],
+      "track": "collectibles",
+      "id": "plush-culture-jellycat-and-squishmallows"
+    },
+    {
+      "name": "Sanrio multi-character boom (Hello Kitty, Cinnamoroll, Kuromi, Pompompurin)",
+      "category": "Collectibles & characters",
+      "whatsHappening": "Sanrio posted record results thanks to global licensing and a 'multi-character' strategy. Fans pick a favourite from a cast and vote in an annual ranking that draws tens of millions of votes. Hello Kitty Island Adventure shows the IP translating into cozy games.",
+      "evidence": [
+        {
+          "fact": "Sanrio FY ended March 2026: net sales record JPY 194.1bn (+33.9%), operating profit ~JPY 78bn (+41-50% depending on report)",
+          "numeric": 194.1,
+          "source": "https://filingreader.com/news-wire/tokyo/2026-06-23/sanrio-posts-record-profit-and-raises-dividend-to-69-yen",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Sanrio forecasts FY3/2027 net sales of JPY 229.8bn (+18.4%)",
+          "numeric": 229.8,
+          "source": "https://quartr.com/events/sanrio-company-ltd-8136-q4-2026_F3KM60wL",
+          "confidence": "medium"
+        },
+        {
+          "fact": "2025 Sanrio Character Ranking drew 63M+ votes; Pompompurin (5.6M) ended Cinnamoroll's five-year streak (5.4M); Kuromi 4th, Hello Kitty 5th",
+          "numeric": 63000000,
+          "source": "https://www.timeout.com/tokyo/news/sanrio-has-announced-its-2025-character-ranking-results-070225",
+          "confidence": "high"
+        },
+        {
+          "fact": "Hello Kitty Island Adventure sold 500k units in 30 days after Jan 30, 2025 Switch/Steam launch and topped 1M by Nov 2025",
+          "numeric": 1000000,
+          "source": "https://www.gematsu.com/2025/11/hello-kitty-island-adventure-sales-top-one-million",
+          "confidence": "high"
+        }
+      ],
+      "direction": "rising",
+      "strength": 5,
+      "audienceOverlap": "Very high. Sanrio fans are the stereotypical cozy-game audience. Kuromi brings in a 'cute but edgy' sub-audience.",
+      "gameImplications": [
+        "Build a cast of 6-10 simple mascots, each with a signature colour, item and one-line personality, so players pick a favourite (the 'oshi' or favourite-member effect)",
+        "Run an in-game or comment-section 'character popularity vote' each season. It is cheap engagement and gives you content",
+        "Include one 'edgy-cute' member (the Kuromi or Badtz-Maru archetype) alongside the soft pastel ones",
+        "Use clear flat shapes, oversized heads and a single accessory, which stays readable at 32px for web games"
+      ],
+      "conceptFit": [
+        "pond-party",
+        "tea-cart",
+        "cozy-corner",
+        "petal-drop",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Hello Kitty Island Adventure",
+        "Hello Kitty and Friends Happiness Parade"
+      ],
+      "risks": "Licensing Sanrio is out of reach for a solo developer, and fan imitations risk takedowns. Build original characters.",
+      "sources": [
+        "https://filingreader.com/news-wire/tokyo/2026-06-23/sanrio-posts-record-profit-and-raises-dividend-to-69-yen",
+        "https://quartr.com/events/sanrio-company-ltd-8136-q4-2026_F3KM60wL",
+        "https://www.timeout.com/tokyo/news/sanrio-has-announced-its-2025-character-ranking-results-070225",
+        "https://www.gematsu.com/2025/11/hello-kitty-island-adventure-sales-top-one-million",
+        "https://www.gematsu.com/2025/03/hello-kitty-island-adventure-sales-top-500000"
+      ],
+      "track": "collectibles",
+      "id": "sanrio-multi-character-boom-hello-kitty-cinnamoroll-kuromi-p"
+    },
+    {
+      "name": "Kawaii, chibi and 'ugly-cute' aesthetics (Chiikawa, Labubu)",
+      "category": "Aesthetics",
+      "whatsHappening": "Japanese and Chinese cute characters are spreading globally. Chiikawa (small, vulnerable, chibi) won Japan character awards and launched a hit mobile game. 'Ugly-cute' (Labubu's fangs, odd proportions) appeals to Gen Z who want cute with an edge.",
+      "evidence": [
+        {
+          "fact": "Chiikawa Pocket mobile game (March 2025) had 3M downloads in its first week and 5M+ globally across 43 regions",
+          "numeric": 5000000,
+          "source": "https://www.nippon.com/en/in-depth/d01122/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Chiikawa entered the top 10 best-selling IP franchises in China in 2024",
+          "numeric": 10,
+          "source": "https://www.nippon.com/en/in-depth/d01122/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "The Monsters IP made RMB 3.04bn in 2024 (+726.6% YoY); 'ugly-cute' credited for Gen Z appeal",
+          "numeric": 3.04,
+          "source": "https://www.globenewswire.com/de/news-release/2025/06/18/3101299/0/en/IRSA-The-Global-Conquest-of-China-s-Ugly-Sprite-How-Labubu-Sparked-the-Gen-Z-Emotional-Economy.html",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Very high, and it suits small web games: chibi art is cheap to produce, reads well at small sizes and shows clearly in Shorts thumbnails.",
+      "gameImplications": [
+        "Default art direction: chibi proportions (head about half the body), dot eyes, blush marks and a soft outline",
+        "Add an 'ugly-cute' rarity tier, such as fanged flowers or grumpy fish, because odd items get shared more than pretty ones",
+        "Give characters small vulnerable stories (Chiikawa-style tiny struggles) for short episodic posts",
+        "Make tiny reaction animations (wobble, cry, cheer). They are cheap and make good GIF and Short material"
+      ],
+      "conceptFit": [
+        "petal-drop",
+        "pond-party",
+        "daily-tidy",
+        "tea-cart",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Chiikawa Pocket",
+        "Suika Game",
+        "Cats & Soup"
+      ],
+      "risks": "The space is crowded and generic kawaii is easy to ignore. You need a recognisable signature trait.",
+      "sources": [
+        "https://www.nippon.com/en/in-depth/d01122/",
+        "https://animecorner.me/chiikawa-pocket-game-release/",
+        "https://www.globenewswire.com/de/news-release/2025/06/18/3101299/0/en/IRSA-The-Global-Conquest-of-China-s-Ugly-Sprite-How-Labubu-Sparked-the-Gen-Z-Emotional-Economy.html"
+      ],
+      "track": "collectibles",
+      "id": "kawaii-chibi-and-ugly-cute-aesthetics-chiikawa-labubu"
+    },
+    {
+      "name": "Cat content dominance",
+      "category": "Animals",
+      "whatsHappening": "Cats remain the internet's default cute subject. Cat-themed games, from Neko Atsume to Little Kitty, Big City, regularly sell well above their scope.",
+      "evidence": [
+        {
+          "fact": "#cat on TikTok has ~754bn views (Statista chart summary)",
+          "numeric": 754000000000,
+          "source": "https://statista.com/chart/1616/cats-on-social-media",
+          "confidence": "low"
+        },
+        {
+          "fact": "Little Kitty, Big City sold 100k+ copies in 48 hours (May 2024) and passed 2M unique Game Pass players",
+          "numeric": 100000,
+          "source": "https://gamedeveloper.com/business/little-kitty-big-city-tops-100-000-sales-in-two-days",
+          "confidence": "high"
+        },
+        {
+          "fact": "GameDiscoverCo estimated Little Kitty, Big City lifetime sales near 500k copies by end of May 2024",
+          "numeric": 500000,
+          "source": "https://gameworldobserver.com/2024/05/13/little-kitty-big-city-sales-100k-copies-matt-wood",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 5,
+      "audienceOverlap": "Very high. Cat owners and cat-video viewers are a large, female-leaning audience that overlaps with cozy players.",
+      "gameImplications": [
+        "Give every concept an optional cat: a shop cat in tea-cart, a pond cat that steals fish in pond-party, a cat that knocks things over in daily-tidy",
+        "Use the cat as the mascot for marketing (a cat reaction in the first second of each Short)",
+        "Collect cat breeds or coat patterns as a rarity ladder (tabby common, calico rare, 'void cat' secret)",
+        "'Cat knocks things off the shelf' is a natural daily-tidy puzzle twist and meme hook"
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "tea-cart",
+        "pond-party",
+        "cozy-corner",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Neko Atsume",
+        "Cats & Soup",
+        "Little Kitty, Big City",
+        "Stray"
+      ],
+      "risks": "Cat games are saturated, so 'another cat game' needs a twist. There is little risk of the trend itself fading.",
+      "sources": [
+        "https://statista.com/chart/1616/cats-on-social-media",
+        "https://gamedeveloper.com/business/little-kitty-big-city-tops-100-000-sales-in-two-days",
+        "https://gameworldobserver.com/2024/05/13/little-kitty-big-city-sales-100k-copies-matt-wood"
+      ],
+      "track": "collectibles",
+      "id": "cat-content-dominance"
+    },
+    {
+      "name": "Capybara and 'chill animal' crazes",
+      "category": "Animals",
+      "whatsHappening": "Since about 2022 the capybara has been the internet's symbol of calm and 'unbothered' living, with onsen videos, the 'Capibara' song and capybara cafes. A capybara-themed roguelite turned the meme into a $100M+ mobile hit.",
+      "evidence": [
+        {
+          "fact": "Capybara Go! (Habby) passed $100M gross player spending on 2 Feb 2025, under 3 months after worldwide launch",
+          "numeric": 100000000,
+          "source": "https://www.pocketgamer.biz/habbys-capybara-go-surpasses-100m-in-gross-player-spending",
+          "confidence": "high"
+        },
+        {
+          "fact": "Capybara Go! took ~$40M overseas revenue in its first two months",
+          "numeric": 40000000,
+          "source": "https://technode.com/2024/12/19/capybara-go-takes-40-million-in-overseas-revenue-within-two-months-of-launch/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Capybara onsen-with-yuzu TikTok videos drew 40M+ views; Tokyo capybara cafe charges JPY 1,250 per 30 min with queues before opening",
+          "numeric": 40000000,
+          "source": "https://news.medill.northwestern.edu/chicago/?p=103979",
+          "confidence": "low"
+        },
+        {
+          "fact": "Capybara toys up 37% in Amazon sales over a 3-month window (trend tracker)",
+          "numeric": 37,
+          "source": "https://ccentral.ca/whats-trending-toys",
+          "confidence": "low"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 3,
+      "audienceOverlap": "High. The capybara's 'calm and unbothered' symbolism matches cozy players' stress-relief motivation exactly.",
+      "gameImplications": [
+        "Use a capybara as a hangout guest or NPC: one sitting in the pond in pond-party with a yuzu or mikan on its head is a ready-made shareable moment",
+        "Make an 'onsen' event theme (steam, yuzu, towels) in cozy-corner or pond-party",
+        "Give tea-cart a regular customer who orders the same thing every day: a capybara",
+        "Treat it as a cameo or seasonal character, not the core IP, because the craze is mature"
+      ],
+      "conceptFit": [
+        "pond-party",
+        "tea-cart",
+        "cozy-corner"
+      ],
+      "exampleGamesUsingIt": [
+        "Capybara Go!",
+        "Kapibarasan (Bandai character)"
+      ],
+      "risks": "The trend is mature and some players are fatigued by it. Capybara Go shows that a mascot theme can sell even when the gameplay isn't cozy.",
+      "sources": [
+        "https://www.pocketgamer.biz/habbys-capybara-go-surpasses-100m-in-gross-player-spending",
+        "https://technode.com/2024/12/19/capybara-go-takes-40-million-in-overseas-revenue-within-two-months-of-launch/",
+        "https://news.medill.northwestern.edu/chicago/?p=103979",
+        "https://ccentral.ca/whats-trending-toys"
+      ],
+      "track": "collectibles",
+      "id": "capybara-and-chill-animal-crazes"
+    },
+    {
+      "name": "Studio Ghibli aesthetic demand and the 2025 AI 'Ghibli filter' backlash",
+      "category": "Aesthetics",
+      "whatsHappening": "Demand for the soft painterly Ghibli look is enormous. Theatrical re-releases out-earned their original runs, and ChatGPT's 'Ghiblify' moment in March 2025 drove record signups. It also caused a strong backlash over AI imitating artists, helped by Miyazaki's 'insult to life itself' clip resurfacing. Players increasingly punish games where AI art is visible.",
+      "evidence": [
+        {
+          "fact": "Altman: ChatGPT added 1M users in one hour during the Ghibli-style image surge (late March 2025)",
+          "numeric": 1000000,
+          "source": "https://www.scmp.com/tech/big-tech/article/3304828/chatgpt-usage-hits-record-studio-ghibli-style-ai-images-go-viral",
+          "confidence": "high"
+        },
+        {
+          "fact": "700M+ images were created in the first week of GPT-4o image generation",
+          "numeric": 700000000,
+          "source": "https://the-decoder.com/chatgpts-image-generation-explodes-with-700m-creations-in-first-week/",
+          "confidence": "high"
+        },
+        {
+          "fact": "Princess Mononoke 4K IMAX re-release (2025) grossed ~$4M opening weekend on ~330 screens, more than its original 1997 US run ($2.7M)",
+          "numeric": 4000000,
+          "source": "https://www.thepopverse.com/movies-princess-mononoke-highest-grossing-movie-us-per-cinema-imax-rerelease",
+          "confidence": "medium"
+        },
+        {
+          "fact": "~7% of the Steam library (7,818 titles) disclose generative AI; ~20% of 2025 releases did; ~60% of disclosures involve visuals (Totally Human analysis)",
+          "numeric": 7818,
+          "source": "https://www.videogameschronicle.com/news/steam-games-disclosing-generative-ai-use-are-up-800-this-year/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Jurassic World Evolution 3 removed AI-generated portraits after player outcry",
+          "numeric": null,
+          "source": "https://www.screenhub.com.au/news/games/steam-generative-ai-games-2673234/",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Very high for the aesthetic. The same cozy audience is also among the most hostile to AI-generated art, so this signal carries both an opportunity and a risk.",
+      "gameImplications": [
+        "Use Ghibli-adjacent qualities without imitating the style: hand-painted skies, a warm food focus, wind in grass, humble everyday tasks, and gentle spirit creatures",
+        "Never market with AI 'Ghibli-style' images. Show hand-made or clearly original art, and talk about what the AI tools did (code) as opposed to what a person drew (art)",
+        "A food-preparation close-up (Ghibli food) suits tea-cart: steaming tea and pastries filmed as ASMR Shorts",
+        "Only claim \"hand-made art\" if it is true; transparent disclosure (AI for code, humans for art) protects trust with this audience"
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "pond-party",
+        "cozy-corner"
+      ],
+      "exampleGamesUsingIt": [
+        "Spiritfarer",
+        "Ni no Kuni (actual Ghibli collaboration)",
+        "Europa"
+      ],
+      "risks": "AI art backlash is severe in this community. Using 'Ghibli' in titles or tags risks trademark issues and accusations of copying. A developer known for AI coding tools should keep art visibly hand-made or original.",
+      "sources": [
+        "https://www.scmp.com/tech/big-tech/article/3304828/chatgpt-usage-hits-record-studio-ghibli-style-ai-images-go-viral",
+        "https://the-decoder.com/chatgpts-image-generation-explodes-with-700m-creations-in-first-week/",
+        "https://fortune.com/2025/03/27/chatgpt-studio-ghibli-hayao-miyazaki-openai-altman-copyright-lawsuit",
+        "https://www.thepopverse.com/movies-princess-mononoke-highest-grossing-movie-us-per-cinema-imax-rerelease",
+        "https://www.videogameschronicle.com/news/steam-games-disclosing-generative-ai-use-are-up-800-this-year/",
+        "https://www.screenhub.com.au/news/games/steam-generative-ai-games-2673234/"
+      ],
+      "track": "collectibles",
+      "id": "studio-ghibli-aesthetic-demand-and-the-2025-ai-ghibli-filter"
+    },
+    {
+      "name": "Cottagecore / hygge / 'cozy' as lifestyle",
+      "category": "Aesthetics",
+      "whatsHappening": "Cottagecore peaked as a viral aesthetic in 2020-21. It has since turned into a broader, practical 'comfort' lifestyle: cozy corners, rituals, crochet and slow living. Pinterest's 2026 forecast puts comfort and escapism at the centre.",
+      "evidence": [
+        {
+          "fact": "Pinterest Predicts 2026: 55% of global respondents prioritise comfort as an emotional need; trends driven by 'self-preservation and escapism' (e.g., poetcore 'cozy corners')",
+          "numeric": 55,
+          "source": "https://newsroom.pinterest.com/news/pinterest-predicts-nonconformity-self-preservation-and-escapism-drive-21-trends-for-2026/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Cottagecore peaked on TikTok in 2020-2021 and has since evolved into practical comfort decor",
+          "numeric": null,
+          "source": "https://www.spacejoy.com/interior-designs-blog/cottagecore-in-2025-from-whimsical-fantasy-to-practical-comfort",
+          "confidence": "medium"
+        },
+        {
+          "fact": "74% of cozy players say they play for stress and anxiety relief; average age ~28.5 (secondary compilation)",
+          "numeric": 74,
+          "source": "https://voxbooster.com/blog/cozy-games-statistics-2026",
+          "confidence": "low"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 4,
+      "audienceOverlap": "Near-total. This lifestyle is the reason cozy games exist as a genre. The sub-aesthetics rotate (cottagecore, then poetcore, then Y2K), but the need for comfort doesn't.",
+      "gameImplications": [
+        "Treat named aesthetics as rotating daily or weekly themes rather than as the whole identity of a game. cozy-corner's 'daily theme' is ideal: cottagecore Monday, poetcore reading nook, Y2K bedroom",
+        "Use rituals as mechanics: brewing, watering, tidying and lighting a candle at session end",
+        "Frame marketing as 'a 3-minute comfort break' rather than 'a game', which matches the stress-relief motivation",
+        "Use Pinterest as a discovery channel too: room screenshots shared as pins"
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "tea-cart",
+        "daily-tidy"
+      ],
+      "exampleGamesUsingIt": [
+        "Unpacking",
+        "A Little to the Left",
+        "Stardew Valley",
+        "Strange Horticulture"
+      ],
+      "risks": "The word 'cozy' is overused in game marketing, so you need a specific hook beyond it.",
+      "sources": [
+        "https://newsroom.pinterest.com/news/pinterest-predicts-nonconformity-self-preservation-and-escapism-drive-21-trends-for-2026/",
+        "https://www.spacejoy.com/interior-designs-blog/cottagecore-in-2025-from-whimsical-fantasy-to-practical-comfort",
+        "https://voxbooster.com/blog/cozy-games-statistics-2026"
+      ],
+      "track": "collectibles",
+      "id": "cottagecore-hygge-cozy-as-lifestyle"
+    },
+    {
+      "name": "Tamagotchi and virtual-pet revival",
+      "category": "Nostalgia",
+      "whatsHappening": "Tamagotchi passed 100M units in 2025 ahead of its 30th anniversary (Nov 2026), with Tamagotchi Paradise (2025) popular among 20-30-year-olds, Tamagotchi Plaza on Switch, and a UNIQLO collaboration. Self-care pet apps like Finch turn the nurture loop into wellness.",
+      "evidence": [
+        {
+          "fact": "Tamagotchi cumulative shipments reached 100M units (end July 2025); 98.1M by March 2025",
+          "numeric": 100000000,
+          "source": "https://www.nssmag.com/en/lifestyle/38204/tamagotchi-y2k-nostalgia-100-millions-sales",
+          "confidence": "high"
+        },
+        {
+          "fact": "Shipments split: Japan 49%, US 33%, Europe 16%; 38 models released since 1996",
+          "numeric": 33,
+          "source": "https://www.bandainamco.co.jp/en/ir/library/newsletter82_special.html",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Tamagotchi Paradise (2025) met high enthusiasm especially among users aged 20-30",
+          "numeric": null,
+          "source": "https://www.fortuneidn.com/news/kebangkitan-tamagotchi-model-paradise-dan-nostalgia-dorong-penjualan-00-4vfn9-lqq5nn",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Tamagotchi Plaza launched 27 June 2025 on Switch/Switch 2 with Tamagotchi Uni linkage",
+          "numeric": null,
+          "source": "https://www.bandainamcoent.com/es_mx/news/tamagotchi-plaza-available-now-for-nintendo-switch-and-switch-2",
+          "confidence": "high"
+        },
+        {
+          "fact": "Finch self-care pet app: ~2.34M downloads in a 90-day window, 4.95 rating from 550k+ reviews",
+          "numeric": 2340000,
+          "source": "https://foxdata.com/en/blogs/finch-as-app-store-editors-choice-a-self-care-companion/",
+          "confidence": "low"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "High. Millennials who grew up with Tamagotchi and Gen Z discovering it both want low-commitment daily check-ins. That is exactly the web daily-game habit loop.",
+      "gameImplications": [
+        "Add a small pet that lives in the game and reacts to daily play (fed by tidying, by tea sales, by petals merged). It gives a reason to return without punishing missed days",
+        "Use soft care needs rather than death or neglect penalties (Finch-style kindness), in keeping with cozy values",
+        "Use an LCD or pixel 'retro device' skin as an optional nostalgia cosmetic",
+        "Tie anniversaries to the calendar: Tamagotchi turns 30 in Nov 2026, so a 'virtual pet' week of Shorts can ride the press cycle"
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "cozy-corner",
+        "daily-tidy",
+        "petal-drop",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Tamagotchi Plaza",
+        "Finch",
+        "Neko Atsume",
+        "Pou"
+      ],
+      "risks": "Guilt mechanics (neglect, death) alienate cozy players. Bandai holds the Tamagotchi trademark, so don't use the name.",
+      "sources": [
+        "https://www.nssmag.com/en/lifestyle/38204/tamagotchi-y2k-nostalgia-100-millions-sales",
+        "https://www.bandainamco.co.jp/en/ir/library/newsletter82_special.html",
+        "https://www.fortuneidn.com/news/kebangkitan-tamagotchi-model-paradise-dan-nostalgia-dorong-penjualan-00-4vfn9-lqq5nn",
+        "https://www.bandainamcoent.com/es_mx/news/tamagotchi-plaza-available-now-for-nintendo-switch-and-switch-2",
+        "https://foxdata.com/en/blogs/finch-as-app-store-editors-choice-a-self-care-companion/"
+      ],
+      "track": "collectibles",
+      "id": "tamagotchi-and-virtual-pet-revival"
+    },
+    {
+      "name": "Y2K / 2000s and Frutiger Aero nostalgia",
+      "category": "Nostalgia",
+      "whatsHappening": "Gen Z is reviving the 2000s through digital cameras, flip phones, glossy 'Frutiger Aero' UI (bubbles, aqua, skeuomorphic gloss) and early-internet visuals. Much of it is 'make-believe nostalgia' for an optimistic tech future.",
+      "evidence": [
+        {
+          "fact": "Searches for flip phones up 15,369% YoY among Gen Z and younger millennials (cited stat)",
+          "numeric": 15369,
+          "source": "https://thedailydownload.substack.com/p/flip-phones-are-trending-again-heres",
+          "confidence": "low"
+        },
+        {
+          "fact": "#frutigeraero grew rapidly on TikTok from late 2023 through 2024 and spread into Roblox (Dress to Impress) culture",
+          "numeric": null,
+          "source": "https://creativebloq.com/news/frutiger-aero-aesthetic-resurgance",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Digital cameras popular again among Gen Z for low-res 'glow' photos",
+          "numeric": null,
+          "source": "https://www.mentalfloss.com/culture/generations/digital-cameras-popularity-gen-z",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 3,
+      "audienceOverlap": "Medium-high, mostly among Gen Z women. It is a decor and cosmetic theme more than a core game identity.",
+      "gameImplications": [
+        "Offer a Y2K bedroom theme pack for cozy-corner (CRT TV, butterfly clips, flip phone, lava lamp)",
+        "Use a Frutiger Aero water and bubble skin for pond-party or petal-drop: glossy aqua UI, bubbles and fish",
+        "Use a fake desktop or 'old OS' frame for the web game. The browser is a natural home for it",
+        "Add a digicam-filter photo mode for sharing"
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "pond-party",
+        "petal-drop"
+      ],
+      "exampleGamesUsingIt": [
+        "Hypnospace Outlaw",
+        "Roblox Dress to Impress themes"
+      ],
+      "risks": "Aesthetic cycles are short. Use it as a swappable theme so the game isn't built around it.",
+      "sources": [
+        "https://creativebloq.com/news/frutiger-aero-aesthetic-resurgance",
+        "https://thedailydownload.substack.com/p/flip-phones-are-trending-again-heres",
+        "https://www.mentalfloss.com/culture/generations/digital-cameras-popularity-gen-z"
+      ],
+      "track": "collectibles",
+      "id": "y2k-2000s-and-frutiger-aero-nostalgia"
+    },
+    {
+      "name": "Miniatures and 'tiny things'",
+      "category": "Collectibles & characters",
+      "whatsHappening": "Tiny replicas of everyday items (ZURU Mini Brands) and miniature worlds (Sylvanian Families/Calico Critters, now 40 years old and courting adults) are popular with collectors and on TikTok as satisfying detail content.",
+      "evidence": [
+        {
+          "fact": "ZURU sold 86M+ Mini Brands capsules since 2019, ~200k units/week in the US; 2.2M TikTok followers (claimed most-liked collectible brand on TikTok)",
+          "numeric": 86000000,
+          "source": "https://www.bizcommunity.com/article/unboxing-the-secret-to-zuru-success-in-toy-collectibles-258347a",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Sylvanian Families turned 40 in 2025; Epoch is targeting kidults after UK profit fall",
+          "numeric": 40,
+          "source": "https://www.toysnplaythings.media/epochs-sylvanian-families-targets-kidults/",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 3,
+      "audienceOverlap": "High. Tiny detailed rooms and objects are the visual language of cozy decorating and tidying games.",
+      "gameImplications": [
+        "Present daily-tidy and cozy-corner as dioramas: an isometric room with tilt-shift blur that looks like a miniature",
+        "Collect tiny items: mini groceries for tea-cart stock, mini furniture for cozy-corner",
+        "Make a 'tiny item reveal' capsule mechanic, with Mini Brands-style unwrapping",
+        "Market with macro-style close-up Shorts of the tiny details"
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "cozy-corner",
+        "tea-cart",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Unpacking",
+        "A Little to the Left",
+        "Tiny Glade"
+      ],
+      "risks": "Low. Detail-heavy art costs a solo developer art time.",
+      "sources": [
+        "https://www.bizcommunity.com/article/unboxing-the-secret-to-zuru-success-in-toy-collectibles-258347a",
+        "https://www.toysnplaythings.media/epochs-sylvanian-families-targets-kidults/",
+        "https://tg24.sky.it/lifestyle/2025/09/24/sylvanian-families-40-years"
+      ],
+      "track": "collectibles",
+      "id": "miniatures-and-tiny-things"
+    },
+    {
+      "name": "Character IP crossing into cozy games",
+      "category": "Collectibles & characters",
+      "whatsHappening": "Toy and character brands now launch cozy or casual games, and those games sell: Hello Kitty Island Adventure passed 1M, Chiikawa Pocket passed 5M downloads and Capybara Go passed $100M. Pop Mart pushes digital engagement via apps and film, not games yet. For a small developer, the reverse path is open: build an original character game first, then merch.",
+      "evidence": [
+        {
+          "fact": "Hello Kitty Island Adventure: 500k in 30 days on Switch/Steam (Mar 2025), 1M+ by Nov 2025; 4.9/5 on Apple Arcade with 114k+ reviews",
+          "numeric": 1000000,
+          "source": "https://www.gematsu.com/2025/11/hello-kitty-island-adventure-sales-top-one-million",
+          "confidence": "high"
+        },
+        {
+          "fact": "Chiikawa Pocket had 2M+ pre-registrations and 3M downloads in week one",
+          "numeric": 3000000,
+          "source": "https://www.nippon.com/en/in-depth/d01122/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Pop Mart's app reached #9 in US App Store Shopping (May 2025); Sony Pictures film in development",
+          "numeric": 9,
+          "source": "https://foxdata.com/ru/blogs/why-gen-z-loves-labubu-how-pop-marts-blind-box-craze-hit-64k-daily-downloads/",
+          "confidence": "low"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Very high. Character fans want places to spend time with their characters, and cozy games are that place.",
+      "gameImplications": [
+        "Design the game's mascots as a merch-ready IP from day 1: simple silhouettes, sticker-able, plush-able",
+        "Use the same characters across all five concepts (a shared 'universe'), so each game markets the others and fans follow the characters",
+        "Later, sell stickers or pins and plush pre-orders via print-on-demand or crowdfunding once a character tests well in Shorts",
+        "Track which character gets most comments and push that one (Sanrio ranking logic)"
+      ],
+      "conceptFit": [
+        "pond-party",
+        "tea-cart",
+        "cozy-corner",
+        "petal-drop",
+        "daily-tidy",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Hello Kitty Island Adventure",
+        "Chiikawa Pocket",
+        "Tamagotchi Plaza",
+        "Capybara Go!"
+      ],
+      "risks": "Merch takes capital and logistics. Validate the character's appeal first through engagement.",
+      "sources": [
+        "https://www.gematsu.com/2025/11/hello-kitty-island-adventure-sales-top-one-million",
+        "https://www.nintendolife.com/news/2025/03/hello-kitty-island-adventure-sales-surpass-half-a-million-in-30-days",
+        "https://www.nippon.com/en/in-depth/d01122/",
+        "https://foxdata.com/ru/blogs/why-gen-z-loves-labubu-how-pop-marts-blind-box-craze-hit-64k-daily-downloads/"
+      ],
+      "track": "collectibles",
+      "id": "character-ip-crossing-into-cozy-games"
+    },
+    {
+      "name": "Gamified self-care and habit companions (Finch, Pokémon Sleep, Tamagotchi revival)",
+      "category": "Wellness & habits",
+      "whatsHappening": "Apps that wrap self-care or habits in a pet or companion keep growing and holding revenue. Finch (you look after a bird by doing small self-care tasks) passed 10M downloads. Pokémon Sleep earns a steady $5M+ a month. Physical virtual pets are back too: Tamagotchi shipped its 100 millionth unit in 2025, helped by Gen Z buyers.",
+      "evidence": [
+        {
+          "fact": "Finch: Self-Care Pet gained 2.34M downloads in a 90-day window; US is 61.78% of downloads",
+          "numeric": 2340000,
+          "source": "https://foxdata.com/en/blogs/finch-as-app-store-editors-choice-a-self-care-companion/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Finch has over 10 million downloads (Google Play #WeArePlay feature, July 2025)",
+          "numeric": 10000000,
+          "source": "https://android-developers.googleblog.com/2025/07/weareplay-app-game-founders-across-the-us.html",
+          "confidence": "high"
+        },
+        {
+          "fact": "Pokémon Sleep reached $234.9M lifetime player spending by its 3rd anniversary (July 2026); year 3 was $68.2M, down 3.2% YoY",
+          "numeric": 234900000,
+          "source": "https://respawn.outlookindia.com/gaming/gaming-news/pokémon-sleep-hits-2349m-revenue-on-3rd-anniversary",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Pokémon Sleep monthly revenue never dropped below $5M in its first two years ($182.8M in two years)",
+          "numeric": 182800000,
+          "source": "https://www.pocketgamer.biz/pokmon-sleep-surpasses-230m-in-three-years/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Tamagotchi passed 100 million units shipped worldwide (announced Aug 28, 2025); ~2M units shipped in 5 months in 2025",
+          "numeric": 100000000,
+          "source": "https://www.toy-people.com/en/?p=103089",
+          "confidence": "high"
+        },
+        {
+          "fact": "Tamagotchi global sales doubled between 2022 and 2023; merch sales up ~7x since 2019",
+          "numeric": 2,
+          "source": "https://www.electronicspecifier.com/?p=34604",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Very high. Finch's core users are young women aged roughly 18–34 who care about mental health, which is the same group that plays cozy games. Pokémon Sleep shows that 'play by living well' is a business that keeps paying.",
+      "gameImplications": [
+        "Mechanic: a small companion (cat, bird, frog) whose mood or growth comes from the player returning for 2–5 minute sessions. Missing a day should never punish it.",
+        "Theme: 'take care of yourself by taking care of it'. Let players pick a tiny real-world intention (drink water, stretch) that the companion celebrates.",
+        "Session design: one short daily ritual plus optional extra play. Show visible progress so the player can see they are growing.",
+        "Marketing hook: 'my pet bird made me drink water' style POV Shorts; companion reacts to the player's day."
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "tea-cart",
+        "daily-tidy",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Finch",
+        "Pokémon Sleep",
+        "Tamagotchi Paradise",
+        "Neko Atsume",
+        "Kinder World"
+      ],
+      "risks": "This space is crowded with well-funded apps. Players feel guilty when a pet suffers from neglect. Framing the game as mental-health help invites scrutiny, so avoid making any therapeutic claims.",
+      "sources": [
+        "https://foxdata.com/en/blogs/finch-as-app-store-editors-choice-a-self-care-companion/",
+        "https://android-developers.googleblog.com/2025/07/weareplay-app-game-founders-across-the-us.html",
+        "https://www.pocketgamer.biz/pokmon-sleep-surpasses-230m-in-three-years/",
+        "https://www.toy-people.com/en/?p=103089"
+      ],
+      "track": "wellness",
+      "id": "gamified-self-care-and-habit-companions-finch-pok-mon-sleep-"
+    },
+    {
+      "name": "Streak psychology, with forgiveness (Duolingo)",
+      "category": "Wellness & habits",
+      "whatsHappening": "Duolingo is the clearest proof that daily streaks keep people coming back. In 2026 it also showed that letting people win back a lost streak brings back lapsed users at scale: 15.4M learners revived a streak in one campaign.",
+      "evidence": [
+        {
+          "fact": "Duolingo DAUs 47.7M in Q2 2025, +40% YoY",
+          "numeric": 47700000,
+          "source": "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000165/q2fy25duolingo6-30x25share.htm",
+          "confidence": "high"
+        },
+        {
+          "fact": "As of Dec 31, 2025: ~43M DAUs with 7+ day streak and ~15M with 365+ day streak",
+          "numeric": 15000000,
+          "source": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+          "confidence": "high"
+        },
+        {
+          "fact": "Duolingo DAUs 58.7M in Q2 2026, +23% YoY (growth sped up from Q1)",
+          "numeric": 58700000,
+          "source": "https://pulse2.com/duolingo-daily-active-users-reach-58-7-million-as-retention-hits-record-84-and-social-accounts-top-1-billion-organic-impressions/",
+          "confidence": "high"
+        },
+        {
+          "fact": "Streak Revival campaign: 15.4M learners revived streaks, including ~8M with no active streak at the start",
+          "numeric": 15400000,
+          "source": "https://www.webull.com/news/15392596720296960",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Duolingo social accounts topped 1 billion organic impressions in the quarter",
+          "numeric": 1000000000,
+          "source": "https://pulse2.com/duolingo-daily-active-users-reach-58-7-million-as-retention-hits-record-84-and-social-accounts-top-1-billion-organic-impressions/",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 5,
+      "audienceOverlap": "Very high. Most mobile users know how streaks work, and cozy players like routine as long as it isn't punishing.",
+      "gameImplications": [
+        "Use a soft streak: daily puzzle or theme, plus streak freezes earned through play and a 'revive your streak' option, instead of hard resets.",
+        "Show streak milestones as cozy rewards (new decoration, new tea recipe, new flower variety) rather than as a number to protect.",
+        "Each daily challenge should have a single solution and a shareable result (an emoji grid or a room snapshot), like Wordle.",
+        "Marketing: run the brand voice through a mascot character (Duolingo's owl model), with mascot reaction Shorts and 'day 100 of my streak' creator posts."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "cozy-corner",
+        "petal-drop",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Duolingo",
+        "Wordle / NYT Games",
+        "Pokémon Sleep",
+        "Finch"
+      ],
+      "risks": "Streak anxiety clashes with the cozy promise. A punishing streak loop will draw backlash, given how many people are worried about screen time.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1562088/000156208825000165/q2fy25duolingo6-30x25share.htm",
+        "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+        "https://pulse2.com/duolingo-daily-active-users-reach-58-7-million-as-retention-hits-record-84-and-social-accounts-top-1-billion-organic-impressions/",
+        "https://www.webull.com/news/15392596720296960"
+      ],
+      "track": "wellness",
+      "id": "streak-psychology-with-forgiveness-duolingo"
+    },
+    {
+      "name": "Focus timers and body doubling ('study with me', Forest, lofi streams)",
+      "category": "Attention & media",
+      "whatsHappening": "Body doubling means getting work done better with someone else present. It went mainstream through TikTok Live, YouTube 'study with me' videos, Discord and Twitch co-working, and in 2026 through book-reading streams (Kai Cenat). Lofi Girl's 24/7 stream is the visual template: a cozy room, a cat and a looping animation. Forest turns focus time into growing trees.",
+      "evidence": [
+        {
+          "fact": "Lofi Girl had 14.9M YouTube subscribers and 2.32B total views as of May 2025",
+          "numeric": 14900000,
+          "source": "https://en.wikipedia.org/wiki/Lofi_Girl",
+          "confidence": "high"
+        },
+        {
+          "fact": "Forest claims 2M+ paying users, is top productivity app in 136 countries, and 2M+ real trees planted",
+          "numeric": 2000000,
+          "source": "https://apps.apple.com/app/id866450515",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Body doubling / 'study with me' covered as mainstream ADHD-adjacent productivity practice (NPR, 2024)",
+          "numeric": null,
+          "source": "https://www.npr.org/2024/07/25/nx-s1-4860330/come-study-with-me-how-virtual-buddy-might-help-you-get-things-done",
+          "confidence": "high"
+        },
+        {
+          "fact": "Kai Cenat returned from hiatus to read books on livestream (Jan 2026); educators link bookstreaming to body doubling",
+          "numeric": null,
+          "source": "https://www.ypulse.com/newsfeed/2026/01/22/kai-cenat-returned-from-hiatus-to-read-on-livestreams/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "YouTube channel Soothing Relaxation has 4.8B+ channel views; ambience channels are a recognized YouTube category",
+          "numeric": 4800000000,
+          "source": "https://blog.youtube/culture-and-trends/ambient-music/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "83% of Gen Z respondents have used YouTube to watch soothing content to relax (Ipsos 2022 for Google)",
+          "numeric": 83,
+          "source": "https://thinkwithgoogle.com/consumer-insights/consumer-trends/gen-z-viewing-habits",
+          "confidence": "high"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Very high. Students, remote workers, ADHD communities and cozy gamers overlap heavily. Many people already keep a cozy game or lofi tab open in the background.",
+      "gameImplications": [
+        "Design for a second-screen or background tab: idle progress, gentle ambient audio and an optional pomodoro timer that rewards focus blocks.",
+        "Multiplayer presence without pressure: other players' avatars sit quietly nearby, a 'co-working pond' (pond-party) with silent emotes.",
+        "Make a 24/7 YouTube livestream of the game itself (idle tea shop or pond) as a lofi-style channel. It doubles as marketing.",
+        "Hook: 'study with me in my tea shop' or 'focus for 25 minutes and your café grows'."
+      ],
+      "conceptFit": [
+        "pond-party",
+        "tea-cart",
+        "cozy-corner"
+      ],
+      "exampleGamesUsingIt": [
+        "Forest",
+        "Rusty's Retirement",
+        "Ropuka's Idle Island",
+        "Chill Corner",
+        "Spirit City: Lofi Sessions",
+        "Focus Friend (Hank Green)"
+      ],
+      "risks": "Lofi room visuals are now a cliché, so the game needs its own look. Background tabs mean less ad and active engagement. Focus framing has to deliver real calm, not more stimulation.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lofi_Girl",
+        "https://apps.apple.com/app/id866450515",
+        "https://www.npr.org/2024/07/25/nx-s1-4860330/come-study-with-me-how-virtual-buddy-might-help-you-get-things-done",
+        "https://blog.youtube/culture-and-trends/ambient-music/",
+        "https://thinkwithgoogle.com/consumer-insights/consumer-trends/gen-z-viewing-habits"
+      ],
+      "track": "wellness",
+      "id": "focus-timers-and-body-doubling-study-with-me-forest-lofi-str"
+    },
+    {
+      "name": "ASMR and 'oddly satisfying' sensory content",
+      "category": "Attention & media",
+      "whatsHappening": "ASMR and 'satisfying' clips (sorting, slicing, things fitting perfectly) are now a standing genre on Shorts, TikTok and Reels, used to relax and fall asleep. Mid-size ASMR channels pull hundreds of millions of views.",
+      "evidence": [
+        {
+          "fact": "ASMR Glow: 1.89M subscribers and 765.81M total views (Aug 2025)",
+          "numeric": 765810000,
+          "source": "https://vidiq.com/youtube-stats/channel/UCFmL725KKPx2URVPvH3Gp8w",
+          "confidence": "medium"
+        },
+        {
+          "fact": "83% of Gen Z have used YouTube for soothing content; ASMR and 'oddly satisfying' compilations are named formats",
+          "numeric": 83,
+          "source": "https://thinkwithgoogle.com/consumer-insights/consumer-trends/gen-z-viewing-habits",
+          "confidence": "high"
+        },
+        {
+          "fact": "Claimed: 54% of regular ASMR viewers use oddly satisfying videos for stress relief or sleep (attributed to UCL; secondary blog, unverified)",
+          "numeric": 54,
+          "source": "https://www.influencers-time.com/oddly-satisfying-why-its-2025s-viral-content-phenomenon/",
+          "confidence": "low"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 4,
+      "audienceOverlap": "High. Satisfying sounds and visuals are central to why people love Suika, Unpacking and A Little to the Left.",
+      "gameImplications": [
+        "Put real effort into sound: crisp clicks, cup clinks, a soft 'thunk' when a flower merges. Make the sounds the selling point.",
+        "Every core action should be clip-worthy: snapping into place, sorting into neat rows, color gradients finishing.",
+        "Add a 'quiet' or ASMR mode with no music, only foley sounds, and market it on its own.",
+        "Shorts format: 15–30 seconds of uninterrupted satisfying gameplay with no talking, captioned 'POV: you organize the drawer'."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "petal-drop",
+        "tea-cart"
+      ],
+      "exampleGamesUsingIt": [
+        "A Little to the Left",
+        "Unpacking",
+        "Suika Game",
+        "PowerWash Simulator",
+        "Cozy Grove ASMR clips"
+      ],
+      "risks": "The genre is saturated and easy to copy, which makes it hard to stand out. The algorithm rewards short loops more than game installs.",
+      "sources": [
+        "https://vidiq.com/youtube-stats/channel/UCFmL725KKPx2URVPvH3Gp8w",
+        "https://thinkwithgoogle.com/consumer-insights/consumer-trends/gen-z-viewing-habits"
+      ],
+      "track": "wellness",
+      "id": "asmr-and-oddly-satisfying-sensory-content"
+    },
+    {
+      "name": "CleanTok, organizing, restock and 'Sunday reset' content",
+      "category": "Attention & media",
+      "whatsHappening": "Cleaning, decluttering, restocking and reset routines are one of TikTok's largest lifestyle niches. Viewers find the before/after and the sense of order calming, even when they don't clean themselves.",
+      "evidence": [
+        {
+          "fact": "#cleantok surpassed 150 billion all-time views as of 2025; 7M+ posts",
+          "numeric": 150000000000,
+          "source": "https://goatagency.com/?p=4487",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Cleaning influencers topped ~6K in early 2025, up ~30% YoY; CleanTok creators reach 43M+ users monthly on average",
+          "numeric": 6000,
+          "source": "https://goatagency.com/?p=4487",
+          "confidence": "low"
+        },
+        {
+          "fact": "YPulse: young people love aesthetically pleasing restocking content",
+          "numeric": null,
+          "source": "https://www.ypulse.com/newsfeed/2024/04/11/young-people-love-aesthetically-pleasing-restocking-content/",
+          "confidence": "high"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 4,
+      "audienceOverlap": "Very high. This is the strongest direct fit for tidying and organizing puzzle games (Unpacking, A Little to the Left).",
+      "gameImplications": [
+        "daily-tidy: a daily messy scene (fridge restock, vanity, bookshelf, junk drawer) with a satisfying before/after reveal at the end.",
+        "Copy restock-video rituals: lining up jars, rainbow-sorting, labeling and the final 'pan out' shot.",
+        "Recurring themed days such as 'Sunday reset'.",
+        "Marketing: copy CleanTok formats exactly (split-screen before/after, 'restock with me', 'reset my room') using gameplay footage."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "cozy-corner"
+      ],
+      "exampleGamesUsingIt": [
+        "Unpacking",
+        "A Little to the Left",
+        "Tiny Bookshop (shelf sorting)",
+        "Organizing mobile ads (Sort It 3D etc.)"
+      ],
+      "risks": "Mobile hypercasual 'sort' ads flood this niche, so a cozy game needs a craft-quality look to stand apart. Restock content draws criticism for overconsumption.",
+      "sources": [
+        "https://goatagency.com/?p=4487",
+        "https://www.ypulse.com/newsfeed/2024/04/11/young-people-love-aesthetically-pleasing-restocking-content/"
+      ],
+      "track": "wellness",
+      "id": "cleantok-organizing-restock-and-sunday-reset-content"
+    },
+    {
+      "name": "'Grandma hobbies' and the analog crafting revival (crochet, knitting, embroidery, junk journals)",
+      "category": "Hobbies",
+      "whatsHappening": "Gen Z and millennials are taking up tactile hobbies as a break from algorithms and screens. Michaels declared 2026 'the Year of Creative Living in the analog era'. Searches for needlecraft, junk journals and charm-making have jumped.",
+      "evidence": [
+        {
+          "fact": "Michaels 2026 report: searches for embroidery, knitting and crochet rose 136% in six months; yarn-accessory sales +40% YoY",
+          "numeric": 136,
+          "source": "https://www.michaelspressroom.com/news/detail/5025/michaels-unveils-2026-creativity-trend-report-revealing",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Needlepoint searches up 251% YoY; junk journal and vision board searches up 60%+; Shrinky Dink kit searches +414%",
+          "numeric": 251,
+          "source": "https://www.aol.com/lifestyle/8-biggest-crafting-trends-2026-194606392.html",
+          "confidence": "medium"
+        },
+        {
+          "fact": "86% of Gen Z identify with being a 'maker' (2025 survey cited by WSJ)",
+          "numeric": 86,
+          "source": "https://fashionunited.com/news/fashion/why-grandma-hobbies-are-on-the-rise-among-young-consumers/2026072473586",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Gen Z turns to knitting, crochet and embroidery 'to escape the algorithm' (Sept 2026)",
+          "numeric": null,
+          "source": "https://lavocedinewyork.com/en/lifestyles/2026/09/23/gen-z-turns-to-knitting-crochet-and-embroidery-to-escape-the-algorithm/",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Very high. The crafters are largely women aged 18–40 who want calm, a creative outlet and visible progress, which matches the cozy-game core.",
+      "gameImplications": [
+        "Theme: yarn, granny squares, embroidery hoops, sticker or junk-journal pages. These read instantly as cozy and handmade.",
+        "Mechanic: 'row by row' progress, so each session adds a visible strip to a blanket or quilt that grows over weeks (a gentle streak).",
+        "Use a hand-drawn or hand-crafted art style (felt, paper, stitched textures) to signal 'human-made'.",
+        "Marketing: work with CrochetTok and craft creators, and tie the game to real patterns (finish a game quilt and unlock a real printable pattern)."
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "petal-drop",
+        "daily-tidy"
+      ],
+      "exampleGamesUsingIt": [
+        "Wool: Knit & Crochet idle games",
+        "Cross-stitch apps",
+        "Garden Paws",
+        "Junk-journal sticker apps"
+      ],
+      "risks": "The trend is partly a rejection of screens, so position the game as a companion to the hobby, not a replacement for it.",
+      "sources": [
+        "https://www.michaelspressroom.com/news/detail/5025/michaels-unveils-2026-creativity-trend-report-revealing",
+        "https://www.aol.com/lifestyle/8-biggest-crafting-trends-2026-194606392.html",
+        "https://fashionunited.com/news/fashion/why-grandma-hobbies-are-on-the-rise-among-young-consumers/2026072473586"
+      ],
+      "track": "wellness",
+      "id": "grandma-hobbies-and-the-analog-crafting-revival-crochet-knit"
+    },
+    {
+      "name": "Jigsaw puzzles and adult 'build and display' kits (LEGO Botanicals)",
+      "category": "Hobbies",
+      "whatsHappening": "Adults are buying jigsaws and display builds as screen-free downtime. In 2025 LEGO Botanicals (flower bouquets) replaced Harry Potter on LEGO's bestselling-themes list. Ravensburger's growth in North America was driven by adult puzzles.",
+      "evidence": [
+        {
+          "fact": "Ravensburger core business +3% in 2025, driven by adult puzzles and card games; US/Canada sales +11%",
+          "numeric": 11,
+          "source": "https://www.spielwarenmesse.de/en/mag/toy-market-news/ravensburger-2025-growth-in-core-business-drop-in-trading-cards/",
+          "confidence": "high"
+        },
+        {
+          "fact": "Jigsaw puzzle market est. $2.23B in 2025, 4.52% CAGR to 2032 (market research firm estimate)",
+          "numeric": 2230000000,
+          "source": "https://www.reportprime.com/jigsaw-puzzle-r2915",
+          "confidence": "low"
+        },
+        {
+          "fact": "LEGO Botanicals replaced Harry Potter on the bestselling themes list in 2025 and became its own theme",
+          "numeric": null,
+          "source": "https://www.brickfanatics.com/lego-reveals-bestselling-themes-in-2025",
+          "confidence": "high"
+        },
+        {
+          "fact": "Adult-oriented sets (18+) accounted for ~33% of LEGO sales",
+          "numeric": 33,
+          "source": "https://forbes.pe/negocios/2025-04-09/lego-peru-proyecta-crecer-a-doble-digito-este-ano-buscara-conquistar-a-ninos-y-adultos",
+          "confidence": "low"
+        }
+      ],
+      "direction": "rising",
+      "strength": 3,
+      "audienceOverlap": "High. Flower bouquets, slow assembly and a finished piece to display are exactly the cozy-game fantasy.",
+      "gameImplications": [
+        "petal-drop: flower merge that ends in a bouquet you can arrange and display (the LEGO Botanicals payoff). Collectible flower species become seasonal.",
+        "Jigsaw-style daily puzzle with a cozy illustration revealed at the end, and a gallery wall of finished puzzles.",
+        "End each session with something to display or keep, such as a finished bouquet card or a room photo for sharing.",
+        "Marketing: 'build a bouquet' ASMR Shorts and Valentine's/Mother's Day seasonal beats."
+      ],
+      "conceptFit": [
+        "petal-drop",
+        "cozy-corner",
+        "daily-tidy"
+      ],
+      "exampleGamesUsingIt": [
+        "Jigsaw Puzzle apps (Jigsaw Planet, Magic Jigsaw)",
+        "Wilmot's Warehouse",
+        "Botany Manor",
+        "Bouquet-building mobile games"
+      ],
+      "risks": "Physical puzzles appeal precisely because they are screen-free, and older adults (45+) skew heavily toward puzzling, so it won't all carry over to a young TikTok audience.",
+      "sources": [
+        "https://www.spielwarenmesse.de/en/mag/toy-market-news/ravensburger-2025-growth-in-core-business-drop-in-trading-cards/",
+        "https://www.brickfanatics.com/lego-reveals-bestselling-themes-in-2025"
+      ],
+      "track": "wellness",
+      "id": "jigsaw-puzzles-and-adult-build-and-display-kits-lego-botanic"
+    },
+    {
+      "name": "Journaling, stationery and 'main character maintenance'",
+      "category": "Hobbies",
+      "whatsHappening": "Paper planners, junk journals, notecards and stationery shops are growing fast, driven by Gen Z manifesting, digital fatigue and journaling TikTok.",
+      "evidence": [
+        {
+          "fact": "Papier expected to cross $50M sales in 2025, up ~30% YoY; sales doubled over three years",
+          "numeric": 50000000,
+          "source": "https://www.modernretail.co/marketing/brands-briefing-papiers-sales-swell-to-50m-this-year-fueled-by-a-desire-for-analog-products/",
+          "confidence": "high"
+        },
+        {
+          "fact": "Gen Z is 35–40% of customers for major stationery brands",
+          "numeric": 35,
+          "source": "https://insights.munich-startup.de/news/feed/papier-doubles-sales-to-50-8m-as-gen-z-drives-analog-stationery-boom",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Ryman notebook sales +20% YoY; 51% of Gen Z believe writing down goals helps them come true",
+          "numeric": 51,
+          "source": "https://www.yorkshireeveningpost.co.uk/read-this/notebook-sales-surge-as-gen-z-embraces-manifesting-5010449",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 3,
+      "audienceOverlap": "High. Journaling and stickers are core cozy aesthetics, and 'Cozy Desk' is a recognizable theme.",
+      "gameImplications": [
+        "cozy-corner daily themes can include a desk or journal corner. Decorate a scrapbook page with stamps and stickers earned from play.",
+        "End every session with a 'daily page' that records what you did, like a habit tracker drawn as a journal spread.",
+        "Optional real-world prompt: one line of gratitude or intention that the game stores in a cozy diary, kept local for privacy.",
+        "Marketing: 'plan with me' and 'journal with me' formats using in-game pages."
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "daily-tidy"
+      ],
+      "exampleGamesUsingIt": [
+        "Finch (journaling)",
+        "Wanderstop",
+        "Tiny Bookshop",
+        "Sticker/scrapbook apps like Collage Diary"
+      ],
+      "risks": "Journaling prompts can feel like homework, so keep them optional.",
+      "sources": [
+        "https://www.modernretail.co/marketing/brands-briefing-papiers-sales-swell-to-50m-this-year-fueled-by-a-desire-for-analog-products/",
+        "https://insights.munich-startup.de/news/feed/papier-doubles-sales-to-50-8m-as-gen-z-drives-analog-stationery-boom",
+        "https://www.yorkshireeveningpost.co.uk/read-this/notebook-sales-surge-as-gen-z-embraces-manifesting-5010449"
+      ],
+      "track": "wellness",
+      "id": "journaling-stationery-and-main-character-maintenance"
+    },
+    {
+      "name": "Houseplants and gardening among younger adults",
+      "category": "Hobbies",
+      "whatsHappening": "Millennials and Gen Z are spending more time and money on gardening, mostly herbs, vegetables and houseplants in small spaces.",
+      "evidence": [
+        {
+          "fact": "2026 Axiom Gardening Outlook: 66.7% of millennials and 63.8% of Gen Z gardeners spent more time gardening in 2025; 61.1% of millennials spent more money",
+          "numeric": 66.7,
+          "source": "https://www.gardencentermag.com/article/2026-axiom-gardening-outlook-study-target-audience-millennials-gen-z",
+          "confidence": "high"
+        },
+        {
+          "fact": "65.2% of Gen Z gardeners expect to spend more time gardening in 2026",
+          "numeric": 65.2,
+          "source": "https://www.gardencentermag.com/article/2026-axiom-gardening-outlook-study-target-audience-millennials-gen-z",
+          "confidence": "high"
+        }
+      ],
+      "direction": "rising",
+      "strength": 3,
+      "audienceOverlap": "High. Plants are the most universal cozy prop, and plant care maps naturally onto daily check-in loops.",
+      "gameImplications": [
+        "petal-drop: tie flower types to real species and seasons, and run a 'bloom calendar' event each month.",
+        "cozy-corner: a houseplant shelf that grows between visits (a real-time growth timer is a soft reason to come back).",
+        "Plant care is a low-stakes daily habit loop. Plants should wilt gently and always be recoverable.",
+        "Marketing: 'plant shelf glow-up' and 'propagation timelapse' formats."
+      ],
+      "conceptFit": [
+        "petal-drop",
+        "cozy-corner",
+        "tea-cart"
+      ],
+      "exampleGamesUsingIt": [
+        "Viridi",
+        "Ooblets",
+        "Garden Galaxy",
+        "Botany Manor",
+        "Grow a Garden (Roblox)"
+      ],
+      "risks": "The survey covers people who already garden, not the general population.",
+      "sources": [
+        "https://www.gardencentermag.com/article/2026-axiom-gardening-outlook-study-target-audience-millennials-gen-z"
+      ],
+      "track": "wellness",
+      "id": "houseplants-and-gardening-among-younger-adults"
+    },
+    {
+      "name": "Reading revival and BookTok / bookstreaming",
+      "category": "Hobbies",
+      "whatsHappening": "BookTok keeps driving adult-fiction sales and 'book nook' aesthetics. Bookstreaming (reading live) emerged in 2026. YA as a category is sliding, while 'new adult' and romantasy grow.",
+      "evidence": [
+        {
+          "fact": "US print unit sales 762.4M in 2025 (+0.3%); adult fiction +1% in 2025 vs ~5% in 2024",
+          "numeric": 762400000,
+          "source": "https://www.publishersweekly.com/pw/by-topic/industry-news/bookselling/article/99417-print-book-sales-rose-slightly-in-2025.html",
+          "confidence": "high"
+        },
+        {
+          "fact": "YA fiction (excl. Sunrise on the Reaping) down 12% in 2025",
+          "numeric": -12,
+          "source": "https://www.publishersweekly.com/pw/by-topic/industry-news/bookselling/article/99417-print-book-sales-rose-slightly-in-2025.html",
+          "confidence": "high"
+        },
+        {
+          "fact": "BookTok-linked sales rose 20% in 2024 to ~60M units",
+          "numeric": 60000000,
+          "source": "https://www.publishersweekly.com/pw/by-topic/industry-news/bookselling/article/99417-print-book-sales-rose-slightly-in-2025.html",
+          "confidence": "medium"
+        },
+        {
+          "fact": "'Romantasy' was on Oxford's 2024 Word of the Year shortlist",
+          "numeric": null,
+          "source": "https://corp.oup.com/news/brain-rot-named-oxford-word-of-the-year-2024/",
+          "confidence": "high"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 3,
+      "audienceOverlap": "High. BookTok and cozy gaming share a 'cozy reading nook' fantasy and a mostly female 18–35 audience.",
+      "gameImplications": [
+        "cozy-corner theme days: 'book nook', 'rainy reading corner', 'romantasy tower'.",
+        "daily-tidy level type: shelving books by color or series (shelf-sorting is very satisfying content).",
+        "tea-cart synergy: a book-café variant where customers order tea plus a book recommendation.",
+        "Marketing: hijack 'bookshelf tour' formats, partner with BookTok creators and use reading-session ambience."
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "daily-tidy",
+        "tea-cart"
+      ],
+      "exampleGamesUsingIt": [
+        "Tiny Bookshop",
+        "Bookshop Simulator",
+        "Kind Words",
+        "Bear and Breakfast"
+      ],
+      "risks": "Growth has slowed. BookTok audiences are wary of AI-generated covers and text.",
+      "sources": [
+        "https://www.publishersweekly.com/pw/by-topic/industry-news/bookselling/article/99417-print-book-sales-rose-slightly-in-2025.html"
+      ],
+      "track": "wellness",
+      "id": "reading-revival-and-booktok-bookstreaming"
+    },
+    {
+      "name": "Home baking and sourdough comfort",
+      "category": "Hobbies",
+      "whatsHappening": "Sourdough and home baking stayed popular after the pandemic, with steady social chatter and pop-culture spikes.",
+      "evidence": [
+        {
+          "fact": "Sourdough global conversations up 79% YoY (Puratos social listening)",
+          "numeric": 79,
+          "source": "https://www.puratos.com/blog/sourdough-trends-and-ideas-for-bakers",
+          "confidence": "medium"
+        },
+        {
+          "fact": "UK (AHDB, Feb 2025): 11% bake at least weekly, 20% at least monthly",
+          "numeric": 11,
+          "source": "https://www.thegrocer.co.uk/download?ac=235300",
+          "confidence": "low"
+        },
+        {
+          "fact": "Michaels 2026: mini loaf pan searches up 900%+ YoY (Gilded Gifting trend)",
+          "numeric": 900,
+          "source": "https://www.aol.com/lifestyle/8-biggest-crafting-trends-2026-194606392.html",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 2,
+      "audienceOverlap": "Medium-high. Baking is a familiar cozy-sim fantasy, though it competes with many cooking games.",
+      "gameImplications": [
+        "tea-cart menu expansions: bakes alongside teas. A 'sourdough starter' that you feed daily makes a perfect soft daily habit.",
+        "Small tasks that take real time to finish (proofing, steeping) as reasons to come back.",
+        "Marketing: 'bake with me' style videos of in-game recipes."
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "cozy-corner"
+      ],
+      "exampleGamesUsingIt": [
+        "Cooking Mama: Cookstar",
+        "Good Pizza Great Pizza",
+        "Bakery Story",
+        "Venba"
+      ],
+      "risks": "The cooking-sim genre is crowded, and baking as a trend is mature rather than new.",
+      "sources": [
+        "https://www.puratos.com/blog/sourdough-trends-and-ideas-for-bakers",
+        "https://www.aol.com/lifestyle/8-biggest-crafting-trends-2026-194606392.html"
+      ],
+      "track": "wellness",
+      "id": "home-baking-and-sourdough-comfort"
+    },
+    {
+      "name": "Romanticize your life, slow living, quiet life",
+      "category": "Wellness & habits",
+      "whatsHappening": "Content aesthetics have shifted toward ordinary rituals: making coffee, resetting the apartment, a 'little life'. Pinterest says Gen Z is trading 'viral chaos for slower, highly curated lives'.",
+      "evidence": [
+        {
+          "fact": "'I think I like this little life' trend: 845.1M TikTok views; #quietlife ~83M views; slow living 240K+ posts",
+          "numeric": 845100000,
+          "source": "https://www.bustle.com/wellness/quiet-life-trend-tiktok",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Gen Z drives ~two-thirds (67%) of Pinterest Predicts 2026 trends; Gen Z 38% more likely to embrace self-expression to stay emotionally connected",
+          "numeric": 67,
+          "source": "https://www.ypulse.com/newsfeed/2025/12/10/gen-z-is-driving-two-thirds-of-pinterests-predicted-trends-for-2026/",
+          "confidence": "high"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 4,
+      "audienceOverlap": "Very high. This is close to the definition of the cozy-game fantasy.",
+      "gameImplications": [
+        "Frame sessions as small rituals: morning tea, evening tidy, Sunday reset. Use the real clock and time of day to set the mood (morning light, evening lamps).",
+        "Use first-person 'little life' writing and UI: 'today's corner', 'today's cup'.",
+        "Marketing: 'romanticizing my 5-minute break' and 'a little life in my browser tab' Shorts with soft voiceover."
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "tea-cart",
+        "daily-tidy",
+        "pond-party",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Unpacking",
+        "Wanderstop",
+        "Kind Words",
+        "Tiny Glade",
+        "Toem"
+      ],
+      "risks": "The aesthetic wears out quickly, and critics call it performative ('performative' was on Merriam-Webster's 2025 shortlist).",
+      "sources": [
+        "https://www.bustle.com/wellness/quiet-life-trend-tiktok",
+        "https://www.ypulse.com/newsfeed/2025/12/10/gen-z-is-driving-two-thirds-of-pinterests-predicted-trends-for-2026/"
+      ],
+      "track": "wellness",
+      "id": "romanticize-your-life-slow-living-quiet-life"
+    },
+    {
+      "name": "Digital detox, screen-time anxiety and 'brain rot' backlash",
+      "category": "Attention & media",
+      "whatsHappening": "Gen Z says it wants to disconnect: dumbphones, app blockers (Opal, one sec), 'touch grass'. 'Brain rot' (2024) and 'slop' (2025) were words of the year. People feel guilty about mindless scrolling but still look for short comfort sessions.",
+      "evidence": [
+        {
+          "fact": "81% of Gen Z adults often wish they could disconnect more easily (Quad/Harris Poll, Feb 2025)",
+          "numeric": 81,
+          "source": "https://www.emarketer.com/content/gen-z--millennials-feeling-digital-fatigue",
+          "confidence": "high"
+        },
+        {
+          "fact": "63% of Gen Z intentionally disconnect from devices (Talker Research), highest of any generation",
+          "numeric": 63,
+          "source": "https://995theword.com/lifestyle/the-81-problem-why-gen-z-desperately-wants-to-disconnect-and-how-they039re-actua",
+          "confidence": "medium"
+        },
+        {
+          "fact": "'Brain rot' named Oxford Word of the Year 2024; usage frequency +230% 2023–2024",
+          "numeric": 230,
+          "source": "https://corp.oup.com/news/brain-rot-named-oxford-word-of-the-year-2024/",
+          "confidence": "high"
+        },
+        {
+          "fact": "Opal claims 220M+ hours of screen time saved by users",
+          "numeric": 220000000,
+          "source": "https://www.similarweb.com/app/apple/1497465230",
+          "confidence": "low"
+        },
+        {
+          "fact": "'Touch grass' was on Merriam-Webster's 2025 Word of the Year shortlist",
+          "numeric": null,
+          "source": "https://www.euronews.com/2025/12/15/merriam-websters-2025-word-of-the-year-is-slop",
+          "confidence": "high"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Very high. Cozy players often say they want relaxation without guilt.",
+      "gameImplications": [
+        "Make 'bounded play' the selling point: 'one cozy puzzle a day, done in 3 minutes'. Add a built-in 'that's enough for today' ending screen and no endless feed.",
+        "No dark patterns: no loot boxes, no energy timers that nag, no push-notification spam. Advertise this openly.",
+        "Optionally reward stepping away (the tea shop earns while you're offline, the companion says 'go outside').",
+        "Marketing hook: 'the anti-doomscroll game' or 'a 5-minute break that doesn't rot your brain'."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "tea-cart",
+        "petal-drop",
+        "cozy-corner",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Wordle / NYT Games",
+        "Forest",
+        "Focus Friend",
+        "Rusty's Retirement"
+      ],
+      "risks": "This is still screen time. Over-claiming wellness benefits invites backlash. Endless-play modes like Suika merging conflict with 'bounded' messaging.",
+      "sources": [
+        "https://www.emarketer.com/content/gen-z--millennials-feeling-digital-fatigue",
+        "https://corp.oup.com/news/brain-rot-named-oxford-word-of-the-year-2024/",
+        "https://www.euronews.com/2025/12/15/merriam-websters-2025-word-of-the-year-is-slop"
+      ],
+      "track": "wellness",
+      "id": "digital-detox-screen-time-anxiety-and-brain-rot-backlash"
+    },
+    {
+      "name": "Loneliness epidemic and the search for low-cost third places",
+      "category": "Society & economy",
+      "whatsHappening": "Young adults are the loneliest age group. In-person time with friends has collapsed, cost gets in the way of meeting up, and Gen Z is rebuilding hangouts (malls, run clubs) and trying AI companions.",
+      "evidence": [
+        {
+          "fact": "Gallup 2025: ~3 in 10 US adults aged 18–29 felt lonely 'a lot of the day yesterday' vs 21% of all adults; under-30 depression 26.7%",
+          "numeric": 30,
+          "source": "https://www.ormanager.com/briefs/survey-depression-loneliness-surge-among-young-and-low-income-adults",
+          "confidence": "medium"
+        },
+        {
+          "fact": "APA Stress in America 2025: 69% needed more emotional support than they received (up from 65%); >50% feel lonely daily",
+          "numeric": 69,
+          "source": "https://www.austenriggs.org/news/america-is-in-a-crisis-of-connection-what-the-apa-s-2025-stress-in-america-survey-reveals",
+          "confidence": "high"
+        },
+        {
+          "fact": "Ages 15–24 spend 70% less time in person with friends than in 2003 (US Surgeon General data)",
+          "numeric": 70,
+          "source": "https://hello-sunshine.com/wp-content/uploads/2026/04/The-Comeback-of-the-Hangout_Gen-Z-Research-Report_Sunnie-x-Westfield-Rise-1.pdf",
+          "confidence": "high"
+        },
+        {
+          "fact": "73% of Gen Z (girls, Sunnie x Westfield study) say the mall is the top place to spend time with friends; 72% would go even without buying",
+          "numeric": 73,
+          "source": "https://hello-sunshine.com/wp-content/uploads/2026/04/The-Comeback-of-the-Hangout_Gen-Z-Research-Report_Sunnie-x-Westfield-Rise-1.pdf",
+          "confidence": "medium"
+        },
+        {
+          "fact": "72% of US teens have tried AI companions; 52% are regular users; only 6% cite feeling less lonely as a reason (Common Sense Media 2025)",
+          "numeric": 72,
+          "source": "https://malaymail.com/news/life/2025/07/18/nearly-75pc-of-us-teens-use-ai-companions-study-highlights-mental-health-risks-and-warns-against-use-for-those-under-18/184233",
+          "confidence": "high"
+        }
+      ],
+      "direction": "rising",
+      "strength": 5,
+      "audienceOverlap": "Very high. Cozy multiplayer spaces (Animal Crossing islands, Roblox hangouts, Sky) work as free digital third places.",
+      "gameImplications": [
+        "pond-party is the direct answer: a free browser 'third place' with a no-pressure social presence, short link-share invites and no account needed.",
+        "Use low-stakes social mechanics: emotes, gifting fish or tea, seeing who's online and fishing together, all without demanding chat (and moderation-friendly).",
+        "Async connection for solo modes: leave a note or gift for the next player, daily shared community goals ('the town caught 10,000 fish today').",
+        "Marketing: 'a cozy hangout you can send your friends a link to', and friend-group TikTok POVs."
+      ],
+      "conceptFit": [
+        "pond-party",
+        "tea-cart",
+        "cozy-corner"
+      ],
+      "exampleGamesUsingIt": [
+        "Animal Crossing",
+        "Sky: Children of the Light",
+        "Grow a Garden / Roblox hangouts",
+        "Webfishing",
+        "Kind Words"
+      ],
+      "risks": "Real-time multiplayer requires moderation and child safety. A sparse lobby kills the vibe, so seed it with NPCs or 'ghost' players. Do not market the game as a cure for loneliness.",
+      "sources": [
+        "https://www.ormanager.com/briefs/survey-depression-loneliness-surge-among-young-and-low-income-adults",
+        "https://www.austenriggs.org/news/america-is-in-a-crisis-of-connection-what-the-apa-s-2025-stress-in-america-survey-reveals",
+        "https://hello-sunshine.com/wp-content/uploads/2026/04/The-Comeback-of-the-Hangout_Gen-Z-Research-Report_Sunnie-x-Westfield-Rise-1.pdf",
+        "https://malaymail.com/news/life/2025/07/18/nearly-75pc-of-us-teens-use-ai-companions-study-highlights-mental-health-risks-and-warns-against-use-for-those-under-18/184233"
+      ],
+      "track": "wellness",
+      "id": "loneliness-epidemic-and-the-search-for-low-cost-third-places"
+    },
+    {
+      "name": "AI fatigue, 'slop' backlash and demand for human-made",
+      "category": "Attention & media",
+      "whatsHappening": "Consumers, and gamers above all, are strongly negative about generative AI content. Meanwhile AI disclosures on Steam are surging, so visibly AI-generated assets are becoming a negative signal. This matters directly for a developer who uses AI coding tools.",
+      "evidence": [
+        {
+          "fact": "Merriam-Webster 2025 Word of the Year: 'slop' (low-quality AI content)",
+          "numeric": null,
+          "source": "https://www.euronews.com/2025/12/15/merriam-websters-2025-word-of-the-year-is-slop",
+          "confidence": "high"
+        },
+        {
+          "fact": "Quantic Foundry (Oct–Dec 2025, n=1,799): 85% of gamers below-neutral on GenAI in games, ~62–63% 'very negative'; women 75% very negative",
+          "numeric": 85,
+          "source": "https://www.gamesmarket.global/quantic-foundry-most-gamers-are-negative-about-the-use-of-gen-ai-in-video-games",
+          "confidence": "high"
+        },
+        {
+          "fact": "~8,000 Steam titles disclose GenAI use (up ~800% in a year); ~20% of 2025 Steam releases disclosed GenAI; 60% of use is visual assets",
+          "numeric": 8000,
+          "source": "https://www.videogameschronicle.com/news/steam-games-disclosing-generative-ai-use-are-up-800-this-year/",
+          "confidence": "high"
+        },
+        {
+          "fact": "Ipsos July 2025: 74% prefer news from humans (up from 69% in 2023); 75% prefer human photojournalism",
+          "numeric": 74,
+          "source": "https://nna.org/human-triumph-people-still-prefer-humans-over-ai-for-content-news-more",
+          "confidence": "medium"
+        },
+        {
+          "fact": "APA 2025: AI-related stress at 57%, especially among adults 18–34",
+          "numeric": 57,
+          "source": "https://www.austenriggs.org/news/america-is-in-a-crisis-of-connection-what-the-apa-s-2025-stress-in-america-survey-reveals",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 5,
+      "audienceOverlap": "Very high and risky. Women, who make up much of the cozy audience, are the most negative toward AI in games.",
+      "gameImplications": [
+        "Use AI for code and tooling, but keep art, music and writing visibly human or hand-crafted (or commission them). Coding assistance is far less contentious than generated visuals.",
+        "Disclose honestly if required, but lead with the human craft: devlog Shorts showing hand-drawn sprites and recorded foley.",
+        "Avoid generic AI-looking art styles. A distinctive, slightly imperfect, handmade look is a competitive advantage.",
+        "Marketing hook: 'made by one person' and 'hand-drawn' build-in-public stories. Solo-developer authenticity performs well on TikTok."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "petal-drop",
+        "cozy-corner",
+        "pond-party",
+        "tea-cart",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Hand-drawn indie cozy games marketed with 'no AI' (e.g., various Steam pages adding 'no AI' badges)"
+      ],
+      "risks": "Being exposed for using AI art, or an AI-sounding marketing voice, can sink a cozy launch. Comment sections will call it out.",
+      "sources": [
+        "https://www.euronews.com/2025/12/15/merriam-websters-2025-word-of-the-year-is-slop",
+        "https://www.gamesmarket.global/quantic-foundry-most-gamers-are-negative-about-the-use-of-gen-ai-in-video-games",
+        "https://www.videogameschronicle.com/news/steam-games-disclosing-generative-ai-use-are-up-800-this-year/",
+        "https://nna.org/human-triumph-people-still-prefer-humans-over-ai-for-content-news-more"
+      ],
+      "track": "wellness",
+      "id": "ai-fatigue-slop-backlash-and-demand-for-human-made"
+    },
+    {
+      "name": "Cost-of-living squeeze and 'little treat' economy",
+      "category": "Society & economy",
+      "whatsHappening": "Consumers are cutting streaming, live events and nights out, but protecting small affordable comforts: a $5–12 drink, a blind-box toy. Free, cheap entertainment that feels like a treat fits this mood.",
+      "evidence": [
+        {
+          "fact": "39% of Americans decreased entertainment spending; 46% of those cancelled ≥1 streaming service; 62% cite rising everyday costs",
+          "numeric": 39,
+          "source": "https://www.reach3insights.com/nearly-4-in-10-americans-cutting-back-on-entertainment",
+          "confidence": "medium"
+        },
+        {
+          "fact": "54% of Americans plan to cut nonessential spending in 2025 (Bankrate), up from 49%",
+          "numeric": 54,
+          "source": "https://www.bankrate.com/press-releases/more-than-half-of-americans-anticipate-spending-less-on-travel-dining-or-live-entertainment-purchases/",
+          "confidence": "high"
+        },
+        {
+          "fact": "BofA: 57% of Gen Z buy themselves a weekly 'treat'; median ~$5 per treat, ~$30/month; 59% say it leads to overspending",
+          "numeric": 57,
+          "source": "https://fortune.com/2025/08/19/gen-z-treat-culture-spending",
+          "confidence": "high"
+        },
+        {
+          "fact": "62% of Americans consider little treats part of self-care",
+          "numeric": 62,
+          "source": "https://ncsolutions.com/?p=62448",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "High. Young adults on tight budgets are the core audience for free web games.",
+      "gameImplications": [
+        "Free-to-play in the browser with no install is a strength. Monetize with a cheap, optional supporter pack ($2–5, sized like a 'little treat') or cosmetic packs, not aggressive in-app purchases.",
+        "The game itself can be a 'little treat': a daily cup in tea-cart, a daily bouquet in petal-drop. Frame it as a free daily treat.",
+        "Marketing hook: 'a free little treat for your lunch break'."
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "petal-drop",
+        "daily-tidy",
+        "pond-party",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Wordle",
+        "Suika Game ($ cheap)",
+        "Webfishing ($5)",
+        "Rusty's Retirement ($)"
+      ],
+      "risks": "People with little to spend are hard to monetize, so plan for ads, tips or a cheap premium tier.",
+      "sources": [
+        "https://www.reach3insights.com/nearly-4-in-10-americans-cutting-back-on-entertainment",
+        "https://www.bankrate.com/press-releases/more-than-half-of-americans-anticipate-spending-less-on-travel-dining-or-live-entertainment-purchases/",
+        "https://fortune.com/2025/08/19/gen-z-treat-culture-spending"
+      ],
+      "track": "wellness",
+      "id": "cost-of-living-squeeze-and-little-treat-economy"
+    },
+    {
+      "name": "Gen Z / millennial stress and mental health",
+      "category": "Society & economy",
+      "whatsHappening": "Stress, depression and AI anxiety are high among young adults, and soothing media is used as everyday self-regulation.",
+      "evidence": [
+        {
+          "fact": "Gallup: under-30 depression rate rose from 13% (2017) to 26.7% (2025)",
+          "numeric": 26.7,
+          "source": "https://www.ormanager.com/briefs/survey-depression-loneliness-surge-among-young-and-low-income-adults",
+          "confidence": "medium"
+        },
+        {
+          "fact": "APA 2025: three-quarters of adults more stressed about the nation's direction; AI-related stress 57%",
+          "numeric": 75,
+          "source": "https://www.austenriggs.org/news/america-is-in-a-crisis-of-connection-what-the-apa-s-2025-stress-in-america-survey-reveals",
+          "confidence": "medium"
+        },
+        {
+          "fact": "MarketCast: female gamers split evenly between fast-paced and cozy games, while 79% of male gamers prefer fast-paced",
+          "numeric": 79,
+          "source": "https://gamesbeat.com/data-report-in-2025-women-spent-more-time-gaming-than-men/",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Very high. Cozy games are commonly played to decompress, especially by women.",
+      "gameImplications": [
+        "Design for decompression: no fail states, no timers by default, undo everywhere, gentle feedback.",
+        "Add a breathing or slow 'wind-down' mode (e.g., slower music and visuals in the evening).",
+        "Messaging: 'nothing can go wrong here'. Avoid clinical mental-health claims."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "petal-drop",
+        "cozy-corner",
+        "tea-cart",
+        "pond-party"
+      ],
+      "exampleGamesUsingIt": [
+        "Unpacking",
+        "Spiritfarer",
+        "Stardew Valley",
+        "Wanderstop"
+      ],
+      "risks": "Sensitive territory: avoid exploiting distress in ads.",
+      "sources": [
+        "https://www.ormanager.com/briefs/survey-depression-loneliness-surge-among-young-and-low-income-adults",
+        "https://www.austenriggs.org/news/america-is-in-a-crisis-of-connection-what-the-apa-s-2025-stress-in-america-survey-reveals",
+        "https://gamesbeat.com/data-report-in-2025-women-spent-more-time-gaming-than-men/"
+      ],
+      "track": "wellness",
+      "id": "gen-z-millennial-stress-and-mental-health"
+    },
+    {
+      "name": "Matcha, tea and café culture",
+      "category": "Society & economy",
+      "whatsHappening": "Matcha became a Gen Z identity drink between 2024 and 2026, causing supply shortages and café rebrands. Customizing drinks (milk, sweetness, toppings) is a form of self-expression. Pinterest hints matcha may be peaking as an aesthetic.",
+      "evidence": [
+        {
+          "fact": "US imports of Japanese tea up 200.9% in value in a year; US matcha retail sales +86% in three years",
+          "numeric": 200.9,
+          "source": "https://vinepair.com/articles/matcha-boom-breaking-point/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Blank Street dropped 'Coffee' from its name; matcha drinks ~half its business",
+          "numeric": 50,
+          "source": "https://vinepair.com/articles/matcha-boom-breaking-point/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Square recorded 1.6M matcha beverage sales across 2,100+ UK retailers in June–July 2025",
+          "numeric": 1600000,
+          "source": "https://freshcup.com/the-matcha-boom-is-reshaping-cafes-how-long-before-it-hits-a-wall/",
+          "confidence": "low"
+        },
+        {
+          "fact": "Japan's heat-stressed matcha output struggling to meet soaring global demand (July 2025)",
+          "numeric": null,
+          "source": "https://malaymail.com/news/life/2025/07/04/japans-heat-stressed-matcha-tea-output-struggles-to-meet-soaring-global-demand/182777",
+          "confidence": "high"
+        },
+        {
+          "fact": "Pinterest Predicts 2026 coverage asks if Gen Z is 'ready to leave matcha behind'",
+          "numeric": null,
+          "source": "https://nssmag.com/en/lifestyle/43770/pinterest-predicts-2026-aesthetic-trends",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 4,
+      "audienceOverlap": "Very high. The tea and café fantasy is a cozy staple, and the young, female, aesthetic-driven audience matches.",
+      "gameImplications": [
+        "tea-cart: center the game on drink customization (whisking matcha, layering milk, toppings, ube or hojicha variants) as satisfying mini-interactions.",
+        "Seasonal drink drops (pumpkin, strawberry matcha, sakura) to ride food-trend cycles. Keep the menu broader than matcha so the game survives the peak.",
+        "Collecting cup and cafe-cart cosmetics as 'little treat' purchases.",
+        "Marketing: 'making the perfect strawberry matcha in my tiny tea cart' ASMR Shorts with pouring and whisking sounds."
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "cozy-corner",
+        "pond-party",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Coffee Talk",
+        "Boba Story",
+        "Good Coffee, Great Coffee",
+        "Tea For God",
+        "Cafe idle mobile games"
+      ],
+      "risks": "Matcha as an aesthetic may peak during 2026–27, so use 'tea' broadly rather than matcha alone.",
+      "sources": [
+        "https://vinepair.com/articles/matcha-boom-breaking-point/",
+        "https://malaymail.com/news/life/2025/07/04/japans-heat-stressed-matcha-tea-output-struggles-to-meet-soaring-global-demand/182777",
+        "https://nssmag.com/en/lifestyle/43770/pinterest-predicts-2026-aesthetic-trends"
+      ],
+      "track": "wellness",
+      "id": "matcha-tea-and-caf-culture"
+    },
+    {
+      "name": "'Cozy' as a mainstream commercial descriptor",
+      "category": "Social & search",
+      "whatsHappening": "'Cozy' moved from niche tag to the top-growing store keyword among successful Steam games; 'solo' is close behind, meaning one-person cozy projects are now the norm, not the exception.",
+      "evidence": [
+        {
+          "fact": "Share of Steam games with >$100k lifetime revenue using 'cozy' in capsule description rose from 0.4% (2022) to 3.1% (2025), +675%",
+          "numeric": 675,
+          "source": "https://respawn.outlookindia.com/gaming/gaming-news/steam-vibe-shift-why-cozy-is-the-most-dominant-keyword-of-2026",
+          "confidence": "high (GameDiscoverCo analysis via press)"
+        },
+        {
+          "fact": "'solo' as a descriptor grew 450% over the same period",
+          "numeric": 450,
+          "source": "https://respawn.outlookindia.com/gaming/gaming-news/steam-vibe-shift-why-cozy-is-the-most-dominant-keyword-of-2026",
+          "confidence": "medium"
+        },
+        {
+          "fact": "62% of dedicated cozy players identify as women or non-binary (Circana study, as cited by a stats aggregator)",
+          "numeric": 62,
+          "source": "https://voxbooster.com/blog/cozy-games-statistics-2026",
+          "confidence": "low-medium (secondary aggregator)"
+        }
+      ],
+      "direction": "rising",
+      "strength": 5,
+      "audienceOverlap": "Core: women/non-binary 18-35 who also consume cleantok, booktok, crochet and study-with-me content.",
+      "gameImplications": [
+        "Lead every hook with the word 'cozy' plus one concrete verb (tidy, merge, decorate, fish, brew).",
+        "Expect saturation: differentiate by a single tactile mechanic and a strong seasonal skin rather than 'cozy' alone."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "petal-drop",
+        "cozy-corner",
+        "pond-party",
+        "tea-cart",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Stardew Valley",
+        "Fields of Mistria",
+        "Unpacking",
+        "A Little to the Left"
+      ],
+      "risks": "Term is getting crowded on Steam; 'cozy' alone no longer differentiates.",
+      "sources": [
+        "https://respawn.outlookindia.com/gaming/gaming-news/steam-vibe-shift-why-cozy-is-the-most-dominant-keyword-of-2026",
+        "https://voxbooster.com/blog/cozy-games-statistics-2026"
+      ],
+      "track": "social",
+      "id": "cozy-as-a-mainstream-commercial-descriptor"
+    },
+    {
+      "name": "Google search 'cozy' is a winter-peaking, long-term rising term",
+      "category": "Social & search",
+      "whatsHappening": "Google's own data: US searches for 'cozy' climb every winter since 2004 and peak in December; October interest is dominated by Halloween/pumpkin/foliage searches rather than 'cozy' itself.",
+      "evidence": [
+        {
+          "fact": "Searches for 'cozy' have ticked upward each winter since 2004 and consistently peak in December",
+          "numeric": "December peak",
+          "source": "https://blog.google/products/search/search-interest-trends-history-winter-cozy/",
+          "confidence": "high (Google blog)"
+        },
+        {
+          "fact": "'Hygge' exploded in search interest in January 2017 — specific cozy vocabularies rise as the parent term grows",
+          "numeric": null,
+          "source": "https://blog.google/products/search/search-interest-trends-history-winter-cozy/",
+          "confidence": "high"
+        },
+        {
+          "fact": "No public source found giving year-over-year % growth for 'cozy games' on Google Trends; check trends.google.com directly",
+          "numeric": null,
+          "source": "https://blog.google/products/search/search-interest-trends-history-winter-cozy/",
+          "confidence": "n/a (gap)"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Broad mainstream US audience; winter peak overlaps holiday gifting and Steam Winter Sale.",
+      "gameImplications": [
+        "Ship winter content by late November so it is indexed and seeded before the December peak.",
+        "Use regional spelling: 'cosy' for UK/AU titles/tags, 'cozy' for US."
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "tea-cart",
+        "daily-tidy"
+      ],
+      "exampleGamesUsingIt": [
+        "Animal Crossing seasonal events"
+      ],
+      "risks": "No verified regional or YoY breakdown; Google Trends should be checked live before committing keyword strategy.",
+      "sources": [
+        "https://blog.google/products/search/search-interest-trends-history-winter-cozy/"
+      ],
+      "track": "social",
+      "id": "google-search-cozy-is-a-winter-peaking-long-term-rising-term"
+    },
+    {
+      "name": "Autumn aesthetic / 'fallcore' on TikTok",
+      "category": "Social & search",
+      "whatsHappening": "Autumn is the most aesthetic-driven season on TikTok: pumpkin-spice, candles, chunky sweaters, rain. TikTok even built an 'Autumn Aesthetic' effect. #fallvibes, #autumnvibes, #sweaterweather, #cozyseason trend in September.",
+      "evidence": [
+        {
+          "fact": "#autumnaesthetic and #fallaesthetic together exceed 7 billion TikTok views",
+          "numeric": 7000000000.0,
+          "source": "https://time.com/6316524/fall-aesthetics-tiktok/",
+          "confidence": "medium (2023 data)"
+        },
+        {
+          "fact": "TikTok created an 'Autumn Aesthetic' creative effect that became a top trend",
+          "numeric": null,
+          "source": "https://newsroom.tiktok.com/en-us/trending-on-tiktok-enter-autumn-aesthetic",
+          "confidence": "high"
+        },
+        {
+          "fact": "#fallvibes, #autumnvibes, #sweaterweather, #cozyseason listed as trending September hashtags",
+          "numeric": null,
+          "source": "https://www.socialpilot.co/de/tiktok-marketing/tiktok-hashtags",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 5,
+      "audienceOverlap": "Very high: same young female 'aesthetic' audience as cozy games.",
+      "gameImplications": [
+        "Autumn skin (leaves, rain-on-window, pumpkin, warm lamp) for every concept; post daily Sept-Nov.",
+        "October is NOW: a fall/Halloween update is the highest-leverage near-term content move."
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "tea-cart",
+        "petal-drop",
+        "daily-tidy",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Animal Crossing",
+        "Spiritfarer"
+      ],
+      "risks": "Extremely crowded window; brands also flood Q4 so paid reach is costlier.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/trending-on-tiktok-enter-autumn-aesthetic",
+        "https://time.com/6316524/fall-aesthetics-tiktok/",
+        "https://www.socialpilot.co/de/tiktok-marketing/tiktok-hashtags"
+      ],
+      "track": "social",
+      "id": "autumn-aesthetic-fallcore-on-tiktok"
+    },
+    {
+      "name": "CleanTok & satisfying-organizing content",
+      "category": "Social & search",
+      "whatsHappening": "Cleaning/organizing videos are one of TikTok's largest lifestyle niches; satisfaction comes from before/after transformation.",
+      "evidence": [
+        {
+          "fact": "#cleantok passed 150 billion all-time views as of 2025",
+          "numeric": 150000000000.0,
+          "source": "https://onlinecarpets.co.uk/blogs/news/the-rise-of-cleantok",
+          "confidence": "medium (secondary)"
+        },
+        {
+          "fact": "#CleanTok had over 79 billion views in 2023 (Unilever)",
+          "numeric": 79000000000.0,
+          "source": "https://www.unilever.com/news/news-search/2023/cleantok-is-making-cleaning-fun-and-were-seizing-the-opportunity/",
+          "confidence": "high"
+        },
+        {
+          "fact": "Spring cleaning searches peak in March, +43% YoY per Pinterest data",
+          "numeric": 43,
+          "source": "https://nbcbayarea.com/entertainment/google-trends-for-march/3832051",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 5,
+      "audienceOverlap": "High: overlaps cozy and puzzle audiences; before/after is a native short-form format.",
+      "gameImplications": [
+        "daily-tidy's before/after loop is a ready-made TikTok format (3-sec mess -> satisfying reveal).",
+        "Seasonal tidy packs: spring cleaning (March), back-to-school desk (Aug/Sep), New Year reset (Jan)."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "cozy-corner"
+      ],
+      "exampleGamesUsingIt": [
+        "Unpacking",
+        "A Little to the Left",
+        "PowerWash Simulator"
+      ],
+      "risks": "Organizing-game space has strong incumbents; puzzle must be quick (<60s) to suit daily play.",
+      "sources": [
+        "https://nbcbayarea.com/entertainment/google-trends-for-march/3832051",
+        "https://onlinecarpets.co.uk/blogs/news/the-rise-of-cleantok",
+        "https://www.unilever.com/news/news-search/2023/cleantok-is-making-cleaning-fun-and-were-seizing-the-opportunity/"
+      ],
+      "track": "social",
+      "id": "cleantok-satisfying-organizing-content"
+    },
+    {
+      "name": "BookTok and 'study with me' companionship content",
+      "category": "Social & search",
+      "whatsHappening": "Calm companion content (reading, studying, lofi) is huge and long-lived; viewers use it as ambient background and 'body doubling'.",
+      "evidence": [
+        {
+          "fact": "#BookTok had 370 billion views and 52M+ creations as of 2025",
+          "numeric": 370000000000.0,
+          "source": "https://newsroom.tiktok.com/booktok-50-millionen?lang=de-DE",
+          "confidence": "high (TikTok newsroom)"
+        },
+        {
+          "fact": "#studywithme has ~3.5 billion TikTok views",
+          "numeric": 3500000000.0,
+          "source": "https://www.freemalaysiatoday.com/category/2022/05/27/young-people-increasingly-turning-to-tiktok-to-study",
+          "confidence": "medium (2022 data)"
+        },
+        {
+          "fact": "520M+ views of YouTube videos with 'study with me' in the title in 2023",
+          "numeric": 520000000.0,
+          "source": "https://blog.youtube/culture-and-trends/study-with-me/",
+          "confidence": "high (YouTube)"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "High: students and young professionals; ties to back-to-school and exam seasons.",
+      "gameImplications": [
+        "Make long-form YouTube 'cozy with me' ambient videos (1-3 hr tea-cart or pond-party with rain/lofi).",
+        "Book/library and study-desk themed decor packs for cozy-corner."
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "pond-party",
+        "cozy-corner"
+      ],
+      "exampleGamesUsingIt": [
+        "Rusty's Retirement",
+        "Bongo Cat",
+        "Spirit City: Lofi Sessions"
+      ],
+      "risks": "Ambient videos earn watch time but low click-through; need clear link to play.",
+      "sources": [
+        "https://blog.youtube/culture-and-trends/study-with-me/",
+        "https://newsroom.tiktok.com/booktok-50-millionen?lang=de-DE",
+        "https://www.freemalaysiatoday.com/category/2022/05/27/young-people-increasingly-turning-to-tiktok-to-study"
+      ],
+      "track": "social",
+      "id": "booktok-and-study-with-me-companionship-content"
+    },
+    {
+      "name": "Desktop-companion / idle 'play while you work' games",
+      "category": "Social & search",
+      "whatsHappening": "Games that sit on the screen edge while you work went mainstream in 2024-2025; Valve now runs a dedicated Desktop Companion Fest.",
+      "evidence": [
+        {
+          "fact": "Bongo Cat all-time peak 194,508 concurrent players on Steam",
+          "numeric": 194508,
+          "source": "https://steamdb.com/de/tools/steam-charts/3419430-bongo-cat",
+          "confidence": "high (SteamDB)"
+        },
+        {
+          "fact": "Rusty's Retirement sold over 330,000 units on Steam since April 2024",
+          "numeric": 330000,
+          "source": "https://gameindustrylibrary.com/documents/how-rusty-s-retirement-idle-farmed-its-way-to-300k-steam-sales/insights",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Steam Desktop Companion Fest scheduled Jan 14-18, 2027",
+          "numeric": null,
+          "source": "https://www.pcgamer.com/games/steam-reveals-all-the-sale-dates-and-themed-events-for-the-first-half-of-2027/",
+          "confidence": "high"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Students, remote workers, study-with-me viewers.",
+      "gameImplications": [
+        "tea-cart as a browser-tab / screen-edge idle tea shop is directly on-trend; offer a 'focus mode' strip layout.",
+        "Target Desktop Companion Fest (Jan 2027) and Shop Keeper Fest (Jan 25-Feb 1 2027) if a Steam build exists."
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "pond-party"
+      ],
+      "exampleGamesUsingIt": [
+        "Bongo Cat",
+        "Rusty's Retirement",
+        "Ropuka's Idle Island"
+      ],
+      "risks": "Monetization weak for free idlers (Bongo Cat reportedly not very profitable); browser tab may be throttled when backgrounded.",
+      "sources": [
+        "https://gameindustrylibrary.com/documents/how-rusty-s-retirement-idle-farmed-its-way-to-300k-steam-sales/insights",
+        "https://steamdb.com/de/tools/steam-charts/3419430-bongo-cat",
+        "https://www.pcgamer.com/games/steam-reveals-all-the-sale-dates-and-themed-events-for-the-first-half-of-2027/"
+      ],
+      "track": "social",
+      "id": "desktop-companion-idle-play-while-you-work-games"
+    },
+    {
+      "name": "Crafts & 'grandma hobbies' (crochet, cottagecore, plants)",
+      "category": "Social & search",
+      "whatsHappening": "Slow, tactile hobbies are a durable Gen Z identity; cottagecore remains a reference aesthetic and crochet/lace details carry into Pinterest 2026 ('Laced Up').",
+      "evidence": [
+        {
+          "fact": "#crochet ~13.9 billion TikTok views; most popular craft on TikTok",
+          "numeric": 13900000000.0,
+          "source": "https://www.gathered.how/knitting-and-crochet/crochet/tiktok-viewers-hooked-craft",
+          "confidence": "medium"
+        },
+        {
+          "fact": "#cottagecore reported at 14.3B TikTok views (sources vary 8.7B-14.3B)",
+          "numeric": 14300000000.0,
+          "source": "https://izea.com/resources/cottagecore-hashtag-tiktok/",
+          "confidence": "medium"
+        },
+        {
+          "fact": "#planttok ~1.6B views; #plantsoftiktok ~4.3B",
+          "numeric": 1600000000.0,
+          "source": "https://westernindependent.com.au/2024/06/05/the-luscious-world-of-planttok/",
+          "confidence": "low-medium"
+        },
+        {
+          "fact": "Pinterest 2026 'Laced Up': lace nails +215%, lace doily +105%",
+          "numeric": 215,
+          "source": "https://ppc.land/pinterest-unveils-21-consumer-trends-for-2026-advertising-campaigns/",
+          "confidence": "high"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 4,
+      "audienceOverlap": "High overlap with cozy-game audience (women 18-35).",
+      "gameImplications": [
+        "Crochet/knit textures and doily motifs as UI skins; plants as collectibles in cozy-corner; flower/plant merge in petal-drop.",
+        "Cottagecore is mature — use it as a palette, not the hook."
+      ],
+      "conceptFit": [
+        "petal-drop",
+        "cozy-corner",
+        "tea-cart"
+      ],
+      "exampleGamesUsingIt": [
+        "Ooblets",
+        "Garden Paws",
+        "Grow a Garden"
+      ],
+      "risks": "Cottagecore hashtag figures are dated (2020-2022); trend is past its peak novelty.",
+      "sources": [
+        "https://izea.com/resources/cottagecore-hashtag-tiktok/",
+        "https://ppc.land/pinterest-unveils-21-consumer-trends-for-2026-advertising-campaigns/",
+        "https://westernindependent.com.au/2024/06/05/the-luscious-world-of-planttok/",
+        "https://www.gathered.how/knitting-and-crochet/crochet/tiktok-viewers-hooked-craft"
+      ],
+      "track": "social",
+      "id": "crafts-grandma-hobbies-crochet-cottagecore-plants"
+    },
+    {
+      "name": "Café, matcha & East Asian 'little treat' aesthetics",
+      "category": "Youth culture",
+      "whatsHappening": "Matcha exploded on TikTok in 2025; café and dessert visuals are a dominant treat aesthetic; Pinterest notes Gen Z may be 'leaving matcha behind' in 2026 for new flavours.",
+      "evidence": [
+        {
+          "fact": "#matcha: 2.9M posts, 36.1B views; +376% YoY views in spring 2025",
+          "numeric": 376,
+          "source": "https://exolyt.com/de/blogs/how-is-matcha-trend-brewing-buzz-on-socials",
+          "confidence": "medium (social listening vendor)"
+        },
+        {
+          "fact": "Strawberry matcha fastest-growing flavour, +85% YoY views",
+          "numeric": 85,
+          "source": "https://exolyt.com/de/blogs/how-is-matcha-trend-brewing-buzz-on-socials",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Google searches for matcha barely increased over 3 years — trend is TikTok-native",
+          "numeric": null,
+          "source": "https://exolyt.com/de/blogs/how-is-matcha-trend-brewing-buzz-on-socials",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "peaking",
+      "strength": 4,
+      "audienceOverlap": "Very high: young women, café-goers, anime/K-culture fans.",
+      "gameImplications": [
+        "tea-cart: matcha, hojicha, boba, yuzu menus; seasonal drinks (pumpkin spice in Oct, peppermint in Dec, strawberry matcha in spring).",
+        "Use rotating 'drink of the week' so the game follows whatever flavour is trending."
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "petal-drop",
+        "cozy-corner",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Coffee Talk",
+        "Boba Story",
+        "Good Pizza, Great Pizza"
+      ],
+      "risks": "Single-drink trends burn out fast; keep menu data-driven and swappable.",
+      "sources": [
+        "https://exolyt.com/de/blogs/how-is-matcha-trend-brewing-buzz-on-socials"
+      ],
+      "track": "social",
+      "id": "caf-matcha-east-asian-little-treat-aesthetics"
+    },
+    {
+      "name": "Anime & K-culture as Gen Z mainstream",
+      "category": "Youth culture",
+      "whatsHappening": "Anime and K-pop are baseline Gen Z culture; KPop Demon Hunters became Netflix's most-viewed film ever in 2025.",
+      "evidence": [
+        {
+          "fact": "KPop Demon Hunters: 518.3M Netflix views by end of 2025, most-viewed Netflix film ever",
+          "numeric": 518300000.0,
+          "source": "https://www.screendaily.com/news/netflix-record-holder-kpop-demon-hunters-drew-482m-views-in-2025/5212864.article",
+          "confidence": "high"
+        },
+        {
+          "fact": "42% of Gen Z watch anime weekly; ~60% of 13-17s identify as anime fans",
+          "numeric": 42,
+          "source": "https://hubintel.substack.com/p/gen-z-anime-streaming",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Crunchyroll: 17M subscribers Q1 2025",
+          "numeric": 17000000.0,
+          "source": "https://thepopverse.com/tv-crunchyroll-anime-subscribers-unlikely-to-hit-target-25-million-2025-why",
+          "confidence": "medium"
+        },
+        {
+          "fact": "YouTube Culture & Trends 2025: Gen Z consumption is 'borderless'/global-first",
+          "numeric": null,
+          "source": "https://influencermarketinghub.com/youtube-genz-report-borderless-media-habits/",
+          "confidence": "high"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "High for under-25s; chibi/kawaii art style is the shared visual language.",
+      "gameImplications": [
+        "Chibi/kawaii character art, Japanese/Korean café and stationery motifs, convenience-store and lantern themes.",
+        "Avoid IP; use generic 'idol stage' or 'night market' themes."
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "cozy-corner",
+        "pond-party"
+      ],
+      "exampleGamesUsingIt": [
+        "Bongo Cat",
+        "Suika Game",
+        "Coffee Talk"
+      ],
+      "risks": "IP/trademark risk if mimicking specific franchises.",
+      "sources": [
+        "https://hubintel.substack.com/p/gen-z-anime-streaming",
+        "https://influencermarketinghub.com/youtube-genz-report-borderless-media-habits/",
+        "https://thepopverse.com/tv-crunchyroll-anime-subscribers-unlikely-to-hit-target-25-million-2025-why",
+        "https://www.screendaily.com/news/netflix-record-holder-kpop-demon-hunters-drew-482m-views-in-2025/5212864.article"
+      ],
+      "track": "social",
+      "id": "anime-k-culture-as-gen-z-mainstream"
+    },
+    {
+      "name": "Gen Alpha on Roblox: calm idle loops beat chaos at scale",
+      "category": "Youth culture",
+      "whatsHappening": "Roblox's biggest 2025 hit was a slow, idle gardening game, while 'brainrot' absurdist humour dominates kids' meme culture; the two coexist (e.g., 'Steal a Brainrot').",
+      "evidence": [
+        {
+          "fact": "Grow a Garden peaked at ~22.3M concurrent players on Aug 23, 2025 (other reports differ)",
+          "numeric": 22300000.0,
+          "source": "https://en.wikipedia.org/wiki/Grow_a_Garden",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Roblox had 151.5M daily active users in Q3 2025, +70% YoY",
+          "numeric": 151500000.0,
+          "source": "https://gamesbeat.com/?p=309290",
+          "confidence": "high"
+        },
+        {
+          "fact": "'Italian Brainrot' was Japanese elementary-school girls' #1 buzzword of 2025",
+          "numeric": null,
+          "source": "https://automaton-media.com/en/news/italian-brainrot-was-japanese-elementary-school-girls-top-buzzword-in-2025-according-to-survey/",
+          "confidence": "high"
+        },
+        {
+          "fact": "YouTube Culture & Trends 2025 'Creative Maximalism': dense, fast-edited, layered-reference humour",
+          "numeric": null,
+          "source": "https://ppc.land/youtube-study-reveals-creative-maximalism-trend-reshaping-content-for-generation-z/",
+          "confidence": "high"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Partial: younger (8-14) than core cozy audience; very mobile/browser-native.",
+      "gameImplications": [
+        "pond-party's multiplayer hangout + rare-catch collecting mirrors Grow a Garden's loop (plant/catch, wait, show off rare item).",
+        "Short-form marketing can mix calm gameplay with fast, maximalist edits and absurd rare-item reveals."
+      ],
+      "conceptFit": [
+        "pond-party",
+        "petal-drop",
+        "tea-cart"
+      ],
+      "exampleGamesUsingIt": [
+        "Grow a Garden",
+        "Dress to Impress",
+        "Steal a Brainrot"
+      ],
+      "risks": "Child-safety/COPPA obligations for multiplayer chat; brainrot humour ages quickly.",
+      "sources": [
+        "https://automaton-media.com/en/news/italian-brainrot-was-japanese-elementary-school-girls-top-buzzword-in-2025-according-to-survey/",
+        "https://en.wikipedia.org/wiki/Grow_a_Garden",
+        "https://gamesbeat.com/?p=309290",
+        "https://ppc.land/youtube-study-reveals-creative-maximalism-trend-reshaping-content-for-generation-z/"
+      ],
+      "track": "social",
+      "id": "gen-alpha-on-roblox-calm-idle-loops-beat-chaos-at-scale"
+    },
+    {
+      "name": "Pinterest Predicts 2025/2026: maximalism, nostalgia, comfort-seeking",
+      "category": "Social & search",
+      "whatsHappening": "Pinterest frames 2026 around nonconformity, self-preservation and escapism; away from minimalism toward expressive, nostalgic and playful aesthetics.",
+      "evidence": [
+        {
+          "fact": "Throwback Kid: nostalgia toys +225%, 2000s kids toys +140%",
+          "numeric": 225,
+          "source": "https://www.campaignasia.com/article/pinterest-predicts-the-biggest-gen-z-trends-of-2026/506572",
+          "confidence": "high"
+        },
+        {
+          "fact": "2026 list includes Pen Pals (handwritten letters), Gimme Gummy, Cool Blue, FunHaus, Brooched, Vamp Romantic, Mystic Outlands",
+          "numeric": null,
+          "source": "https://newsroom.pinterest.com/news/pinterest-predicts-nonconformity-self-preservation-and-escapism-drive-21-trends-for-2026/",
+          "confidence": "high"
+        },
+        {
+          "fact": "2025 'Cherry Coded': 'cherry vibe' searches +325%; 'Primary Play' decor +85%",
+          "numeric": 325,
+          "source": "https://pulse-advertising.com/news/pinterest-2025-trends",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 3,
+      "audienceOverlap": "Medium-high: Pinterest skews female and decor-oriented, like cozy-corner players.",
+      "gameImplications": [
+        "cozy-corner daily themes can map straight to Pinterest names: 'Cherry Coded', 'Cool Blue', 'Throwback Kid toy room', 'Pen Pal desk', 'Brooch cabinet'.",
+        "Pen Pals -> in-game letters/notes between players."
+      ],
+      "conceptFit": [
+        "cozy-corner",
+        "pond-party",
+        "petal-drop"
+      ],
+      "exampleGamesUsingIt": [
+        "Unpacking",
+        "Decorate a room games"
+      ],
+      "risks": "Pinterest forecasts are directional; not all hit.",
+      "sources": [
+        "https://newsroom.pinterest.com/news/pinterest-predicts-nonconformity-self-preservation-and-escapism-drive-21-trends-for-2026/",
+        "https://pulse-advertising.com/news/pinterest-2025-trends",
+        "https://www.campaignasia.com/article/pinterest-predicts-the-biggest-gen-z-trends-of-2026/506572"
+      ],
+      "track": "social",
+      "id": "pinterest-predicts-2025-2026-maximalism-nostalgia-comfort-se"
+    },
+    {
+      "name": "TikTok Next 2026: authenticity, curiosity detours, emotional ROI",
+      "category": "Social & search",
+      "whatsHappening": "TikTok's own 2026 forecast: 'Reali-TEA' (unpolished real life over fantasy), 'Curiosity Detours' (rabbit holes), 'Emotional ROI' (intentional purchases justified by feeling).",
+      "evidence": [
+        {
+          "fact": "Three 2026 trend signals: Reali-TEA, Curiosity Detours, Emotional ROI under theme 'Irreplaceable Instinct'",
+          "numeric": null,
+          "source": "https://ads.tiktok.com/business/library/TikTok_Next_2026_Trend_Report.pdf",
+          "confidence": "high"
+        },
+        {
+          "fact": "YouTube Culture & Trends: ~60% adopted habits/rituals from creators",
+          "numeric": 60,
+          "source": "https://influencermarketinghub.com/youtube-genz-report-borderless-media-habits/",
+          "confidence": "medium"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "All audiences; favours solo-dev 'building in public' content.",
+      "gameImplications": [
+        "Devlog-style face/hands-on content ('I made a cozy game with AI in a week') fits Reali-TEA better than polished trailers.",
+        "Daily-ritual framing (daily puzzle, daily room theme) matches 'adopted habits from creators'."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "cozy-corner",
+        "tea-cart",
+        "petal-drop",
+        "pond-party"
+      ],
+      "exampleGamesUsingIt": [
+        "Wordle-style dailies"
+      ],
+      "risks": "Platform trend reports are marketing documents; treat as directional.",
+      "sources": [
+        "https://ads.tiktok.com/business/library/TikTok_Next_2026_Trend_Report.pdf",
+        "https://influencermarketinghub.com/youtube-genz-report-borderless-media-habits/"
+      ],
+      "track": "social",
+      "id": "tiktok-next-2026-authenticity-curiosity-detours-emotional-ro"
+    },
+    {
+      "name": "Short-form scale and YouTube on TV",
+      "category": "Macro",
+      "whatsHappening": "Short-form views keep climbing; YouTube is now watched most on TVs in the US, so long-form ambient/cozy videos have a living-room audience while Shorts/TikTok are mobile-vertical.",
+      "evidence": [
+        {
+          "fact": "YouTube Shorts averages 200 billion daily views (June 2025)",
+          "numeric": 200000000000.0,
+          "source": "https://www.thewrap.com/youtube-shorts-200-billion-daily-views",
+          "confidence": "high"
+        },
+        {
+          "fact": "YouTube = 12.4% of all US TV viewing (Nielsen, April 2025); TV became the top device for YouTube in US in Q1 2025",
+          "numeric": 12.4,
+          "source": "https://techcrunch.com/2025/05/27/youtube-tops-disney-and-netflix-in-tv-viewing-nielsen-finds",
+          "confidence": "high"
+        },
+        {
+          "fact": "TikTok users average ~54-58 min/day (US ~53.8 min)",
+          "numeric": 53.8,
+          "source": "https://explodingtopics.com/blog/time-spent-on-tiktok",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Users hold phones vertically 94% of the time",
+          "numeric": 94,
+          "source": "https://autofaceless.ai/blog/mobile-video-consumption-statistics-2026",
+          "confidence": "low (aggregator)"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "Universal.",
+      "gameImplications": [
+        "Two-track content: 9:16 hooks under 30s for TikTok/Shorts; 16:9 1-3 hr ambient 'cozy with me' videos for YouTube on TV.",
+        "Design game UI to read clearly in a vertical crop (mobile-first web layout)."
+      ],
+      "conceptFit": [
+        "daily-tidy",
+        "petal-drop",
+        "pond-party",
+        "tea-cart",
+        "cozy-corner",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Lofi Girl"
+      ],
+      "risks": "Aggregator stats on vertical viewing are weakly sourced.",
+      "sources": [
+        "https://autofaceless.ai/blog/mobile-video-consumption-statistics-2026",
+        "https://explodingtopics.com/blog/time-spent-on-tiktok",
+        "https://techcrunch.com/2025/05/27/youtube-tops-disney-and-netflix-in-tv-viewing-nielsen-finds",
+        "https://www.thewrap.com/youtube-shorts-200-billion-daily-views"
+      ],
+      "track": "social",
+      "id": "short-form-scale-and-youtube-on-tv"
+    },
+    {
+      "name": "Cost of living & 'little treat' culture",
+      "category": "Macro",
+      "whatsHappening": "Under financial pressure, Gen Z buys frequent small treats (~$5) rather than big purchases; free/cheap web games are the ultimate little treat.",
+      "evidence": [
+        {
+          "fact": "Over half of Gen Z buy a small treat at least weekly; 1 in 5 daily",
+          "numeric": null,
+          "source": "https://www.bostonglobe.com/2025/08/16/nation/gen-z-little-treats-are-worth-going-over-budget",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Median treat ~$5; 62% consider little treats crucial to self-care",
+          "numeric": 62,
+          "source": "https://ncsolutions.com/?p=62448",
+          "confidence": "medium"
+        },
+        {
+          "fact": "53% of Gen Z buy small indulgences because they can't afford bigger treats",
+          "numeric": 53,
+          "source": "https://www.ypulse.com/?p=172446",
+          "confidence": "medium"
+        },
+        {
+          "fact": "Valentine's 2026 spending record $29.1B; Halloween 2025 record $13.1B — seasonal spending stays strong despite tariffs",
+          "numeric": 29100000000.0,
+          "source": "https://www.convenience.org/Media/Daily/2026/February/2/4-NRF-Valentines-Day-Spending_Research",
+          "confidence": "high"
+        }
+      ],
+      "direction": "rising",
+      "strength": 4,
+      "audienceOverlap": "High.",
+      "gameImplications": [
+        "Price any premium version at 'little treat' level ($3-5) or use cosmetic tips/supporter packs.",
+        "In-game 'treat' theming (desserts, drinks) mirrors real behaviour; tea-cart literally sells little treats."
+      ],
+      "conceptFit": [
+        "tea-cart",
+        "petal-drop",
+        "cozy-corner",
+        "treat-box"
+      ],
+      "exampleGamesUsingIt": [
+        "Suika Game ($2.99)",
+        "Bongo Cat (free + cosmetics)"
+      ],
+      "risks": "Low price points need volume; ad-funded web games depend on CPMs that dip in Q1.",
+      "sources": [
+        "https://ncsolutions.com/?p=62448",
+        "https://www.bostonglobe.com/2025/08/16/nation/gen-z-little-treats-are-worth-going-over-budget",
+        "https://www.convenience.org/Media/Daily/2026/February/2/4-NRF-Valentines-Day-Spending_Research",
+        "https://www.ypulse.com/?p=172446"
+      ],
+      "track": "social",
+      "id": "cost-of-living-little-treat-culture"
+    },
+    {
+      "name": "Merge/drop puzzles go viral via streamers",
+      "category": "Social & search",
+      "whatsHappening": "Suika Game showed a cheap, cute merge-drop puzzle can explode via streamer/VTuber clips on short-form.",
+      "evidence": [
+        {
+          "fact": "Suika Game sold 1.4M+ units by Oct 12, 2023, including 400k in 7 days",
+          "numeric": 1400000.0,
+          "source": "https://www.gonintendo.com/contents/27345-suika-game-hits-1-4-million-sold",
+          "confidence": "high"
+        },
+        {
+          "fact": "Suika Game passed 4 million downloads by Nov 2023",
+          "numeric": 4000000.0,
+          "source": "https://www.shacknews.com/article/137892/suika-game-nintendo-switch-4-million",
+          "confidence": "high"
+        }
+      ],
+      "direction": "declining",
+      "strength": 3,
+      "audienceOverlap": "Broad; streamer audiences.",
+      "gameImplications": [
+        "petal-drop needs a clip-able fail/near-miss moment and a 'final flower' bloom reveal for virality.",
+        "Seasonal flower sets (sakura spring, sunflower summer, maple autumn, poinsettia winter)."
+      ],
+      "conceptFit": [
+        "petal-drop"
+      ],
+      "exampleGamesUsingIt": [
+        "Suika Game",
+        "Fruit merge clones"
+      ],
+      "risks": "Suika-like is heavily cloned; novelty is gone — needs theme + daily seed hook.",
+      "sources": [
+        "https://www.gonintendo.com/contents/27345-suika-game-hits-1-4-million-sold",
+        "https://www.shacknews.com/article/137892/suika-game-nintendo-switch-4-million"
+      ],
+      "track": "social",
+      "id": "merge-drop-puzzles-go-viral-via-streamers"
+    }
+  ],
+  "calendar": [
+    {
+      "moment": "Peak autumn / 'fall vibes' + Steam Autumn Sale & Cooking Fest",
+      "months": [
+        10
+      ],
+      "why": "#fallvibes/#cozyseason trend in Sept-Oct; Steam Autumn Sale Oct 1-8 2026, Cooking Fest Oct 12-19, Next Fest Oct 19-26 2026.",
+      "themeIdea": "Pumpkin-spice/chai menu, rain-on-window, maple leaves",
+      "contentIdea": "tea-cart 'first pumpkin latte of the season' Short; Cooking Fest tie-in post",
+      "source": "https://www.pcgamer.com/games/steam-reveals-all-the-sale-dates-and-themed-events-for-the-first-half-of-2027/",
+      "confidence": "high"
+    },
+    {
+      "moment": "Halloween / Steam Scream Fest",
+      "months": [
+        10
+      ],
+      "why": "Record $13.1B US Halloween spend 2025, 73% participate, 78% buy decorations; Steam Scream V Fest Oct 26-Nov 2 2026.",
+      "themeIdea": "Cute-spooky (not scary): ghost fish, witch's study, candy-corn flowers",
+      "contentIdea": "pond-party ghost-fish night event; cozy-corner 'decorate a witchy room' daily theme",
+      "source": "https://nrf.com/media-center/press-releases/nrf-consumer-survey-finds-halloween-spending-to-reach-record-13-1-billion",
+      "confidence": "high"
+    },
+    {
+      "moment": "Pre-winter / Thanksgiving / Black Friday",
+      "months": [
+        11
+      ],
+      "why": "Ramp-up to the December 'cozy' search peak; seed content before indexation.",
+      "themeIdea": "Sweater weather, harvest table, first snow",
+      "contentIdea": "Launch winter skins late Nov; 'hours of cozy' YouTube ambient video",
+      "source": "https://blog.google/products/search/search-interest-trends-history-winter-cozy/",
+      "confidence": "medium"
+    },
+    {
+      "moment": "Winter holidays + Steam Winter Sale",
+      "months": [
+        12,
+        1
+      ],
+      "why": "Google 'cozy' searches peak every December; Steam Winter Sale Dec 17 2026-Jan 4 2027.",
+      "themeIdea": "Snow, fairy lights, peppermint cocoa, gift-wrapping",
+      "contentIdea": "Advent-style daily-tidy (25 days of tidy puzzles); cozy-corner holiday room daily",
+      "source": "https://blog.google/products/search/search-interest-trends-history-winter-cozy/",
+      "confidence": "high"
+    },
+    {
+      "moment": "New Year reset / habits",
+      "months": [
+        1
+      ],
+      "why": "Resolution/habit searches spike first two weeks of January; TikTok 'Reali-TEA' favours real routines.",
+      "themeIdea": "Fresh-start desk, planner, minimalist reset",
+      "contentIdea": "daily-tidy 'new year declutter' streak; 'I'll make one cozy game a month' devlog series",
+      "source": "https://www.accelerateddigitalmedia.com/insights/capitalizing-on-new-years-resolution-health-searches",
+      "confidence": "medium"
+    },
+    {
+      "moment": "Steam Desktop Companion Fest & Shop Keeper Fest",
+      "months": [
+        1
+      ],
+      "why": "Desktop Companion Fest Jan 14-18 2027; Shop Keeper Fest Jan 25-Feb 1 2027.",
+      "themeIdea": "Screen-edge idle tea cart",
+      "contentIdea": "Ship tea-cart desktop/Steam build or demo; 'play while you study' Short",
+      "source": "https://www.pcgamer.com/games/steam-reveals-all-the-sale-dates-and-themed-events-for-the-first-half-of-2027/",
+      "confidence": "high"
+    },
+    {
+      "moment": "Lunar New Year (Year of the Goat) + Steam Sheep Fest",
+      "months": [
+        2
+      ],
+      "why": "Lunar New Year starts Feb 6 2027 (Year of the Goat/Sheep); Steam Sheep Fest Feb 4-8 2027; Asian mobile gaming spend spikes.",
+      "themeIdea": "Red lanterns, dumplings, sheep/goat mascot",
+      "contentIdea": "pond-party lantern-festival koi event; tea-cart dumplings & oolong menu",
+      "source": "https://www.farmersalmanac.com/when-chinese-new-year",
+      "confidence": "high"
+    },
+    {
+      "moment": "Valentine's Day / Galentine's",
+      "months": [
+        2
+      ],
+      "why": "Record $29.1B US spend 2026; gifting widening to friends and pets.",
+      "themeIdea": "Cherry-coded hearts, pen-pal letters, chocolate",
+      "contentIdea": "pond-party 'send a fish to a friend' letters; petal-drop rose set",
+      "source": "https://www.convenience.org/Media/Daily/2026/February/2/4-NRF-Valentines-Day-Spending_Research",
+      "confidence": "high"
+    },
+    {
+      "moment": "Steam Next Fest (Feb/Mar) + Couch Co-Op Fest",
+      "months": [
+        2,
+        3
+      ],
+      "why": "Next Fest Feb 22-Mar 1 2027; Couch Co-Op Fest Feb 8-15 2027.",
+      "themeIdea": "Demo for the most polished concept",
+      "contentIdea": "Demo-launch devlog; pond-party co-op clip for Couch Co-Op Fest",
+      "source": "https://www.pcgamer.com/games/steam-reveals-all-the-sale-dates-and-themed-events-for-the-first-half-of-2027/",
+      "confidence": "high"
+    },
+    {
+      "moment": "Spring cleaning + sakura season + Steam Spring Sale",
+      "months": [
+        3,
+        4
+      ],
+      "why": "Spring-cleaning searches peak in March (+43% YoY per Pinterest); Steam Spring Sale Mar 18-25 2027; Witch Fest Apr 22-26.",
+      "themeIdea": "Cherry blossoms, open windows, decluttering",
+      "contentIdea": "daily-tidy spring-cleaning pack; petal-drop sakura bloom set",
+      "source": "https://nbcbayarea.com/entertainment/google-trends-for-march/3832051",
+      "confidence": "medium"
+    },
+    {
+      "moment": "Exam season / Mother's Day",
+      "months": [
+        5
+      ],
+      "why": "Study-with-me demand; gifting moment.",
+      "themeIdea": "Study desk, garden for mum",
+      "contentIdea": "2-hr 'study with tea-cart' YouTube ambient video",
+      "source": "https://blog.youtube/culture-and-trends/study-with-me/",
+      "confidence": "medium"
+    },
+    {
+      "moment": "Wholesome Direct / Summer Game Fest + Next Fest June + Steam Summer Sale",
+      "months": [
+        6,
+        7
+      ],
+      "why": "Wholesome Direct 2026 was June 6 (50+ games) within SGF; Next Fest Jun 14-21 2027; Summer Sale Jun 24-Jul 8 2027. Submissions typically close months before.",
+      "themeIdea": "Summer picnic, beach pond, iced matcha",
+      "contentIdea": "Ride the 'cozy games' search spike with 'games like Wholesome Direct you can play in your browser' list videos",
+      "source": "https://www.gematsu.com/event/wholesome-direct-2026/",
+      "confidence": "high"
+    },
+    {
+      "moment": "Summer holidays (kids/Gen Alpha online)",
+      "months": [
+        7,
+        8
+      ],
+      "why": "Roblox records like Grow a Garden peaked in June-August 2025 when school is out.",
+      "themeIdea": "Garden growing, fishing tournaments",
+      "contentIdea": "pond-party summer tournament with rare catches; 'catch of the day' Shorts",
+      "source": "https://en.wikipedia.org/wiki/Grow_a_Garden",
+      "confidence": "medium"
+    },
+    {
+      "moment": "Back to school / 'cozy season' starts",
+      "months": [
+        8,
+        9
+      ],
+      "why": "Study content returns; #cozyseason/#fallvibes start trending in September.",
+      "themeIdea": "Dorm/desk makeover, stationery, first-autumn-day",
+      "contentIdea": "cozy-corner dorm-room daily themes; daily-tidy 'backpack/desk tidy'",
+      "source": "https://www.socialpilot.co/de/tiktok-marketing/tiktok-hashtags",
+      "confidence": "medium"
+    }
+  ],
+  "seeds": [
+    {
+      "idea": "Mystery Charm Shelf: a daily free 'blind box' of tiny bag-charm creatures (6 per series plus 1 secret at visible 1/72 odds, with a pity counter). Players hang charms on a bag or shelf and trade duplicates with friends via link",
+      "whyThisTrend": "Blind-box and bag-charm culture (Labubu, Sonny Angel), unboxing content, and the urge to complete a set. Uses an original 'ugly-cute' cast to avoid depending on Labubu",
+      "format": "Web daily game; 1 free box per day plus earnable extras; cosmetic supporter pack; shareable vertical 'my pull' card"
+    },
+    {
+      "idea": "Capy Onsen: an idle hot-spring hangout where chill animals (capybara, cat, duck) soak and you add yuzu, towels and lanterns. Rare guests visit with 'secret' odds",
+      "whyThisTrend": "Capybara 'unbothered' meme, cat dominance, Neko Atsume-style rare visitors, comfort and escapism",
+      "format": "Web idle game with returning-visitor collection log; could be an event mode inside pond-party"
+    },
+    {
+      "idea": "Pocket Sprout: a kind virtual pet that grows from your daily cozy actions across all five games (tidy, merge, decorate, fish, brew). No death and no guilt",
+      "whyThisTrend": "Tamagotchi 100M and its 30th anniversary in Nov 2026, Finch self-care pets, retro device nostalgia",
+      "format": "Shared meta-layer and companion web widget; retro LCD skin cosmetic"
+    },
+    {
+      "idea": "Plush Pastry Bakery: a tea-cart variant where every menu item is a soft plush-style food with a face. Customers 'adopt' them, and seasonal 'series' drop monthly",
+      "whyThisTrend": "Jellycat-style food with faces, kidult plush gifting, kawaii food content",
+      "format": "Idle and merge web game; monthly themed series; ASMR Shorts of plush food being made"
+    },
+    {
+      "idea": "Tiny Room Diorama: decorate a matchbox-sized miniature room with a tilt-shift camera. Daily 'Mini Brands-style' capsule of a tiny household item",
+      "whyThisTrend": "Miniatures and tiny things, Sylvanian Families going after adults, cozy-corner daily themes, macro-detail TikTok content",
+      "format": "Web decorating game; daily capsule; photo mode exporting vertical images"
+    },
+    {
+      "idea": "Focus Teahouse: pomodoro focus timer plus idle tea shop. Each 25-minute focus block brews a cup and grows the shop, with optional quiet co-presence of other focusers in a shared room.",
+      "whyThisTrend": "Body doubling and study-with-me, Forest's focus-to-grow loop, lofi 24/7 streams, and digital-detox guilt (play that helps you do something else).",
+      "format": "Web background tab, plus a 24/7 YouTube livestream of the shop as marketing; extends tea-cart and pond-party."
+    },
+    {
+      "idea": "Granny Square: daily crochet-pattern puzzle. Solve one color-arrangement puzzle a day, and each solve adds a square to a blanket that grows over a month and can be exported as a real pattern.",
+      "whyThisTrend": "'Grandma hobbies' revival (+136% needlecraft searches), Duolingo-style streaks, and a hand-crafted look that answers AI-slop backlash.",
+      "format": "Daily web puzzle with a shareable emoji or stitch grid and soft streak plus revive."
+    },
+    {
+      "idea": "Sourdough Starter Pet: a Finch-style companion that is a jar of starter. Feed it with tiny real self-care check-ins, and it bakes bread or treats you can gift to friends.",
+      "whyThisTrend": "Self-care pet apps (Finch 10M+ downloads), the Tamagotchi revival (100M units), baking comfort and 'little treats'.",
+      "format": "Mobile-web PWA with 1–2 minute daily sessions, no punishment for missed days, and gifting by link."
+    },
+    {
+      "idea": "Restock Rush (Sunday Reset): a weekly bigger tidying or restocking scene (fridge, vanity, pantry) that rewards rainbow-sorting and labeling, with an auto-generated before/after clip for TikTok.",
+      "whyThisTrend": "CleanTok (150B+ views), the appeal of restock content, and satisfying/ASMR content.",
+      "format": "Weekly event layered on daily-tidy, with a built-in clip/export tool for shareable vertical video."
+    },
+    {
+      "idea": "Bouquet Studio: petal-drop merge runs end by arranging the flowers you merged into a bouquet you can display and send as a card.",
+      "whyThisTrend": "LEGO Botanicals becoming a bestseller, Gen Z gardening growth, and 'little treat' gifting.",
+      "format": "Add-on to petal-drop, with shareable bouquet cards and seasonal flower drops (Valentine's, Mother's Day)."
+    },
+    {
+      "idea": "Lantern Night Market: browser idle stall-hopping at an East Asian night market, cozy meets K/J-culture",
+      "whyThisTrend": "Anime/K-culture mainstream (KPop Demon Hunters 518M views), matcha/café treat culture, Pinterest 'Mystic Outlands'",
+      "format": "Idle/management web game, 9:16-friendly"
+    },
+    {
+      "idea": "Pen Pal Pond: pond-party variant where you mail a caught fish + handwritten note to a random player",
+      "whyThisTrend": "Pinterest 2026 'Pen Pals', TikTok 'Emotional ROI', Valentine's/Galentine's gifting",
+      "format": "Async multiplayer browser"
+    },
+    {
+      "idea": "Crochet Merge: Suika-like where yarn balls merge into crochet plushies",
+      "whyThisTrend": "#crochet ~13.9B views, Pinterest 'Laced Up', Throwback Kid nostalgia toys +225%",
+      "format": "Physics merge puzzle, daily seed"
+    },
+    {
+      "idea": "Study Buddy Tab: screen-edge companion that tidies/brews while a pomodoro timer runs",
+      "whyThisTrend": "Bongo Cat 194k peak CCU, Rusty's Retirement 330k sales, study-with-me, Steam Desktop Companion Fest",
+      "format": "Browser tab / desktop idle"
+    },
+    {
+      "idea": "Treat Shelf: daily 'little treat' collection — unlock one tiny dessert/drink per day to arrange on a shelf",
+      "whyThisTrend": "Little treat culture (half of Gen Z treat weekly), cozy-corner decorating, daily ritual habits",
+      "format": "Daily micro-game (60 seconds)"
+    }
+  ],
+  "summaries": {
+    "collectibles": "The strongest collectibles signal is the blind-box model, more than any one character: Pop Mart grew ~185% in 2025 to RMB 37.1bn, but Labubu-led growth slowed to ~24% in H1 2026 and resale prices collapsed. Cozy games should therefore use free, transparent series-plus-secret collection loops with original 'ugly-cute' or chibi mascots rather than imitating Labubu. Character-led cute IP is still growing strongly (Sanrio's record JPY 194bn year, a 63M-vote character ranking, Hello Kitty Island Adventure passing 1M, Chiikawa Pocket passing 5M). Cats, capybaras, plush (Jellycat at ~70% margin), virtual pets (Tamagotchi at 100M ahead of its 30th anniversary) and miniatures all fit cozy-corner, tea-cart and pond-party as recurring guests, rotating themes and rarity ladders. Demand for the Ghibli look is huge, but after the March 2025 AI 'Ghibli filter' backlash an AI-assisted developer should keep its art visibly original and never market with AI imitations of artists' styles.",
+    "wellness": "The strongest non-game tailwinds for cozy web games in 2024–2026 are loneliness and the hunt for cheap third places, gamified self-care with forgiving streaks (Duolingo at 58.7M DAUs, with 15.4M streak revivals), screen-time guilt that rewards bounded 'one a day' play, and a fierce backlash against AI slop (85% of gamers are negative on GenAI). Tactile, analog hobbies (crochet, journaling, botanicals, puzzles) and sensory media (CleanTok, ASMR, lofi, study-with-me) provide ready-made themes and short-video formats. Matcha and café culture and the 'little treat' economy strongly support tea-cart, though matcha itself may be peaking. Across the five concepts, daily-tidy (CleanTok plus streaks) and pond-party (third place plus body doubling) have the best trend fit, and tea-cart gains most if it adds focus-timer or companion mechanics. The key strategic risk is perceived AI use: keep art and audio visibly human-made and market the solo-developer story.",
+    "social": "The strongest non-game signals for cozy games are huge, stable lifestyle niches on TikTok: CleanTok (~150B views), BookTok (370B), crochet and cottagecore (~14B each). On top of these sit a rising treat and café aesthetic (matcha +376% YoY), the mainstreaming of anime and K-culture, and the move to desktop-companion idle games. Google's 'cozy' searches peak every December, and autumn aesthetics take over TikTok from September to November. So the best launch windows are early-to-mid October (Autumn Sale, Cooking Fest, Next Fest, Scream Fest) and late November for winter content. January (Desktop Companion and Shop Keeper Fests) suits tea-cart, and February brings Lunar New Year (Year of the Goat, Feb 6 2027) plus Next Fest. Macro signals favour free or $3-5 'little treat' pricing, vertical mobile-first hooks for Shorts and TikTok, and long ambient YouTube videos watched on TVs. daily-tidy (CleanTok before/after) and tea-cart (treat, café and idle-desktop trends) have the strongest evidence. pond-party fits the Gen Alpha and Roblox hangout pattern but carries child-safety overhead."
+  }
+}

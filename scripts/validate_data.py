@@ -112,6 +112,14 @@ if gtm:
     for i, p in enumerate(gtm.get("platforms", [])):
         need(p, ["name", "type", "revShare", "linkFromSocial"], f"gotomarket.json platforms[{i}] {p.get('name', '?')}")
 
+cul = load("culture.json")
+if cul:
+    need(cul, ["synthesis", "signals", "calendar"], "culture.json")
+    for i, x in enumerate(cul.get("signals", [])):
+        w = f"culture.json signals[{i}] {x.get('name', '?')}"
+        need(x, ["name", "category", "whatsHappening", "direction"], w)
+        num_in(x, "strength", 1, 5, w)
+
 ver = load("verification.json")
 if ver:
     for i, v in enumerate(ver.get("items", [])):
