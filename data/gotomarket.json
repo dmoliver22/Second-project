@@ -690,7 +690,7 @@
     },
     {
       "option": "Xsolla (MoR, games-specific)",
-      "fees": "~5% + 'cost of channel' (undefined); all-in not public",
+      "fees": "~5% + 'cost of channel' (not published); all-in not public",
       "notes": "Used by CrazyGames for IAP; web shops, many local payment methods",
       "source": "https://dodopayments.com/blogs/xsolla-alternatives/"
     },

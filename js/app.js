@@ -21,6 +21,8 @@
     append(el, kids);
     return el;
   }
+  // replaceChildren that, like h(), flattens arrays and skips null/false
+  function fill(el, ...kids) { el.replaceChildren(); append(el, kids); return el; }
   function append(el, kids) {
     for (const k of kids.flat(Infinity)) {
       if (k === null || k === undefined || k === false) continue;
@@ -399,7 +401,7 @@
   function openPanel(eyebrow, title, blocks, sources, confidence) {
     const d = drawer();
     const body = d.querySelector(".drawer-body");
-    body.replaceChildren(
+    fill(body,
       h("div", { class: "section" }, h("div", { class: "eyebrow", text: eyebrow }), h("h2", { text: title, style: "font-size:var(--step-3)" })),
       blocks.filter((b) => b && b[1] && (!Array.isArray(b[1]) || b[1].length)).map(([label, v]) => h("section", { class: "section" }, h("h3", { text: label }),
         Array.isArray(v) ? h("ul", { class: "ink-2" }, v.map((x) => h("li", { text: typeof x === "string" ? x : [x.game, x.result].filter(Boolean).join(": ") }))) : h("p", { class: "ink-2", text: String(v) }))),
@@ -933,7 +935,7 @@
     ];
     const details = [["Sales", g.salesEstimate], ["Team", g.teamSize], ["Engine", g.engine], ["Data notes", g.dataNotes]].filter((x) => x[1]);
     const block = (title, content) => content ? h("section", { class: "section" }, h("h3", { text: title }), typeof content === "string" ? h("p", { class: "ink-2", text: content }) : content) : null;
-    body.replaceChildren(
+    fill(body,
       h("div", { class: "section" },
         h("div", { class: "eyebrow", text: [g.subgenre, g.businessModel].filter(Boolean).join(" · ") }),
         h("h2", { text: g.name, style: "font-size:var(--step-3)" }),
