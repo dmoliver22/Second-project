@@ -1,0 +1,2223 @@
+{
+  "intro": "Compact pitches written from the proven-genre research so every open theme has at least two games. Each is a proven loop with an under-served theme and one moment that clips; scores use the same factors as the full plans.",
+  "pitches": [
+    {
+      "id": "lather-and-loaf",
+      "name": "Lather & Loaf",
+      "family": "First-person craft & shop sims",
+      "theme": "Hand-craft studio (Dressmaker-adjacent)",
+      "hook": "Pour the swirl blind, wait for it to set, then slice the loaf.",
+      "oneLiner": "Run a tiny cold-process soap studio: mix colours, pour layered swirls into a wooden mould, cure it, then slice the loaf to reveal what you made and fill market orders.",
+      "genre": "First-person bench craft sim",
+      "camera": "first-person",
+      "loop": [
+        "Read an order card (a scent, colours, a pattern)",
+        "Mix and tint batter, then pour it in layers and drag a swirl stick",
+        "Cure the loaf on the rack, then slice it on the cutter",
+        "Wrap, label and price bars for the market stall; unlock moulds and scents"
+      ],
+      "clip": "The wire cutter drops through the loaf and a bar tips over to show a perfect peacock swirl inside.",
+      "look": {
+        "short": "Sunny farmhouse workroom, pastel soap, oiled wood, paper labels",
+        "vibe": "A whitewashed back room with a deep sink, morning light through a window full of drying lavender. Matte, slightly translucent soap in pastel layers sits on oiled pine racks next to brown kraft paper and twine. Calm and clean, like a soap-cutting video with the sound turned up.",
+        "palette": [
+          {
+            "name": "Oat milk",
+            "hex": "#EFE6D6"
+          },
+          {
+            "name": "Lavender",
+            "hex": "#B9A7D6"
+          },
+          {
+            "name": "Sage",
+            "hex": "#9DB59A"
+          },
+          {
+            "name": "Pine rack",
+            "hex": "#B7864F"
+          },
+          {
+            "name": "Rose clay",
+            "hex": "#D99A8E"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "Free browser slice; $12.99 on Steam",
+      "money": "Premium Steam release, with a paid itch build and scent/mould packs later.",
+      "comps": [
+        "Dressmaker",
+        "PowerWash Simulator",
+        "Soap Cutting (mobile)"
+      ],
+      "why": "Dressmaker proved a real-world craft process can hit 400k+ wishlists and #9 global top seller, and the research found no notable soap or candle sim on Steam. Soap-cutting is already a proven satisfying-video genre: the mobile Soap Cutting app alone has 8k+ ratings, so the clip has a built-in audience.",
+      "risk": "Mobile soap-cutting toys are cheap and familiar, so the pour-and-swirl craft has to feel deep enough to be worth a Steam price.",
+      "firstStep": "One bench, one loaf mould, three colours, a swirl stick and the cutter: pour one loaf and slice it into bars, with a share button for the cross-section.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 7,
+        "demand": 7,
+        "gap": 8,
+        "soloSpeed": 6,
+        "creatorFit": 6,
+        "instantPlay": 7,
+        "monetization": 6,
+        "marketability": 9,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "twelve-frames",
+      "name": "Twelve Frames",
+      "family": "First-person craft & shop sims",
+      "theme": "Small-object restoration",
+      "hook": "Fix a 1960s camera, then develop the forgotten film still inside.",
+      "oneLiner": "Restore mechanical film cameras at a tiny repair bench: free a stuck shutter, clean fungus off the lens, replace light seals. Each one arrives with a half-shot roll inside, and you develop it in the darkroom to see someone's lost photos.",
+      "genre": "First-person restoration sim with a narrative reveal",
+      "camera": "first-person",
+      "loop": [
+        "Open a parcel: a broken camera and its owner's note",
+        "Diagnose and fix it part by part (shutter, aperture blades, lens, seals)",
+        "Rewind the roll you found inside and develop it in the darkroom",
+        "Hang the prints, send the camera home, and read the reply that tells the photos' story"
+      ],
+      "clip": "Under a red safelight a blank sheet in the tray slowly blooms into a 1974 wedding photo.",
+      "look": {
+        "short": "Workbench lamp by day, red darkroom glow by night",
+        "vibe": "A narrow repair shop with a green-shaded bench lamp, brass screws in a magnetic tray, black leatherette and chrome bodies. Through a curtain is a darkroom lit only by a red safelight with dripping trays and clothes-pegged prints. Nostalgic, quiet and a little bit mysterious.",
+        "palette": [
+          {
+            "name": "Chrome",
+            "hex": "#C9CDD1"
+          },
+          {
+            "name": "Leatherette",
+            "hex": "#2B2A2C"
+          },
+          {
+            "name": "Bench green",
+            "hex": "#3F6B55"
+          },
+          {
+            "name": "Safelight red",
+            "hex": "#B8332E"
+          },
+          {
+            "name": "Print paper",
+            "hex": "#F2ECDD"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "Free browser slice; $14.99 on Steam",
+      "money": "Premium Steam release; later camera-model DLC packs (rangefinders, medium format).",
+      "comps": [
+        "ReStory: Chill Electronics Repairs",
+        "Unpacking",
+        "PowerWash Simulator"
+      ],
+      "why": "ReStory showed nostalgic object repair sells (500k+ copies in about 1.5 months, budget back in 12h), and Piece by Piece's ~4.8k shows a specific object with a story beats generic repair. The found-film reveal adds an Unpacking-style story to every job, and analog film photography is a living hobby the creator can shoot real photos for.",
+      "risk": "ReStory already covers some Y2K cameras and clones are coming, so the film-era mechanics and the darkroom reveal must be clearly the star.",
+      "firstStep": "One rangefinder with a stuck shutter and a dirty lens, the darkroom with three trays, and a roll of six hand-shot photos that tell a tiny story.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 7,
+        "demand": 7,
+        "gap": 6,
+        "soloSpeed": 5,
+        "creatorFit": 5,
+        "instantPlay": 5,
+        "monetization": 6,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "kenzan",
+      "name": "Kenzan",
+      "family": "First-person craft & shop sims",
+      "theme": "Florist atelier",
+      "hook": "Three stems, one pin frog, and all the empty space in between.",
+      "oneLiner": "A calm ikebana game: trim each stem to length, set its angle on a spiky kenzan in a shallow bowl, and build a three-line arrangement for the season's alcove.",
+      "genre": "Minimal arrangement puzzle",
+      "camera": "first-person",
+      "loop": [
+        "Pick a season's prompt and a vessel",
+        "Choose 3-5 stems and branches from the bucket",
+        "Cut each to length and angle, then press it onto the kenzan",
+        "Place it in the tokonoma alcove, get a gentle reading from the teacher, and save it to your album"
+      ],
+      "clip": "A single bent plum branch clicks onto the pins and suddenly the whole bowl looks finished.",
+      "look": {
+        "short": "Tatami room, paper screen light, one bowl, lots of air",
+        "vibe": "A quiet tatami room with soft daylight through shoji paper and one dark ceramic bowl of still water. Only a few stems on screen at once, so every branch and petal is hand-modelled and lit with care. Minimal, airy and meditative.",
+        "palette": [
+          {
+            "name": "Shoji paper",
+            "hex": "#F3EEE3"
+          },
+          {
+            "name": "Tatami",
+            "hex": "#C9BF8F"
+          },
+          {
+            "name": "Ink bowl",
+            "hex": "#2E3236"
+          },
+          {
+            "name": "Plum blossom",
+            "hex": "#E3A2B4"
+          },
+          {
+            "name": "Moss",
+            "hex": "#6E7F4A"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "small",
+      "price": "Free on web; $4.99 full version on itch and Steam",
+      "money": "Free web game with a cheap paid season-pack version; small Steam release if the web version finds fans.",
+      "comps": [
+        "Flowers and Favours: Florist Simulator",
+        "Puni the Florist",
+        "Tiny Glade"
+      ],
+      "why": "The florist space is thin (Flowers and Favours has 291 reviews, Puni the Florist about 152), and ikebana is a different verb and audience from a counter bouquet shop. Only a handful of stems per scene cuts the 'many small flower assets' risk the research flags.",
+      "risk": "Very calm and quiet, so it may draw admirers rather than buyers; demand for florist games is inferred, not measured.",
+      "firstStep": "One bowl, one kenzan, five stems with cut-and-angle controls, and a spring alcove to place the finished arrangement in.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 5,
+        "demand": 6,
+        "gap": 8,
+        "soloSpeed": 8,
+        "creatorFit": 7,
+        "instantPlay": 8,
+        "monetization": 4,
+        "marketability": 7,
+        "momentum": 6,
+        "culture": 7,
+        "scopeFit": 9
+      }
+    },
+    {
+      "id": "rummage-room",
+      "name": "Rummage Room",
+      "family": "First-person craft & shop sims",
+      "theme": "Thrift and vintage resale",
+      "hook": "Every donation bag might hide a treasure. Price it before anyone notices.",
+      "oneLiner": "Work the back room of a charity thrift shop: tip out donation bags, sort and steam the finds, spot the rare ones by their tags and stitching, and price them for the floor before the Saturday rush.",
+      "genre": "First-person sort-and-appraise sim",
+      "camera": "first-person",
+      "loop": [
+        "Tip a donation bag onto the sorting table",
+        "Sort items: rag bin, floor rack or 'take a closer look'",
+        "Inspect labels, seams and stamps with a loupe to identify rare finds",
+        "Price and tag; watch shoppers grab bargains and upgrade the shop"
+      ],
+      "clip": "A crumpled denim jacket gets flipped over and the loupe lands on a rare red-tab label.",
+      "look": {
+        "short": "Cluttered back room, strip lights, colourful heaps",
+        "vibe": "A cosy, cluttered stockroom with buzzing strip lights, black bin bags and wire racks of hangers. Piles of colourful knitwear, chipped teacups and paperbacks spill across a big wooden table. Warm, busy and a bit treasure-cave.",
+        "palette": [
+          {
+            "name": "Bin bag",
+            "hex": "#2F3135"
+          },
+          {
+            "name": "Denim",
+            "hex": "#4A6A94"
+          },
+          {
+            "name": "Mustard knit",
+            "hex": "#D9A93D"
+          },
+          {
+            "name": "Price tag",
+            "hex": "#F4E9C8"
+          },
+          {
+            "name": "Rust",
+            "hex": "#B5583A"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "Free browser slice; $12.99 on Steam",
+      "money": "Premium Steam release with seasonal 'donation drive' item packs.",
+      "comps": [
+        "TCG Card Shop Simulator",
+        "Thrifty Business",
+        "Unpacking"
+      ],
+      "why": "TCG Card Shop Simulator sold about 400k in 10 days on a 'what is in the pack' reveal, and a donation bag is the same reveal with real-world nostalgia. The only direct comp, Thrifty Business, is top-down with no reveal hook and sold about 6.9k, so the first-person appraisal angle is open.",
+      "risk": "Thrifty Business's weak result may mean thrift is a soft theme; the bag reveal and the loupe moment must carry it.",
+      "firstStep": "One sorting table, five donation bags with 40 items and three hidden rare finds, the loupe, and a price gun.",
+      "scores": {
+        "originality": 5,
+        "provenDemand": 7,
+        "demand": 7,
+        "gap": 6,
+        "soloSpeed": 6,
+        "creatorFit": 6,
+        "instantPlay": 6,
+        "monetization": 6,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "flat-lay",
+      "name": "Flat Lay",
+      "family": "First-person craft & shop sims",
+      "theme": "Thrift and vintage resale",
+      "hook": "Turn a $2 thrift sweater into the perfect listing photo.",
+      "oneLiner": "Run a reselling side-hustle from your bedroom floor: pick through a kilo-sale haul, mend and steam the best pieces, style a top-down flat-lay photo, and list it to see if it sells.",
+      "genre": "Styling and resale sim",
+      "camera": "top-down",
+      "loop": [
+        "Pick pieces from a kilo-sale haul on a budget",
+        "Mend, de-pill and steam the keepers",
+        "Style a flat lay with props and snap the listing photo",
+        "Write a price and watch likes, offers and sales roll in"
+      ],
+      "clip": "A crumpled grey cardigan becomes a styled flat lay with a coffee cup and a sunbeam, and the 'SOLD' stamp lands.",
+      "look": {
+        "short": "Bedroom floorboards, daylight, styled clothes and little props",
+        "vibe": "Seen straight down onto pale floorboards and a cream rug in soft window light. Hand-drawn clothes with visible knit texture sit beside props like dried flowers, a mug and sunglasses. Bright, tidy and Instagram-pretty.",
+        "palette": [
+          {
+            "name": "Floorboard",
+            "hex": "#D8C3A5"
+          },
+          {
+            "name": "Cream rug",
+            "hex": "#F5EFE3"
+          },
+          {
+            "name": "Faded black",
+            "hex": "#3A3838"
+          },
+          {
+            "name": "Cherry",
+            "hex": "#C2474B"
+          },
+          {
+            "name": "Sky knit",
+            "hex": "#9CC3DA"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "small",
+      "price": "Free on web; $5 full version",
+      "money": "Free web version (Poki/CrazyGames ads), with a paid full version on itch and Steam.",
+      "comps": [
+        "Thrifty Business",
+        "Unpacking",
+        "Tiny Bookshop"
+      ],
+      "why": "Thrift flipping is a native TikTok format with a real reseller culture, and the theme suits a flat 2D view that plays well from a link. Cozy games reach 1,000 reviews at 11% versus 4.2% for Steam, and the web path tests the hook cheaply before Thrifty Business's ~6.9k ceiling becomes a worry.",
+      "risk": "Clothes styling needs a lot of hand-drawn items, and the selling side could feel like a spreadsheet if the photo moment is weak.",
+      "firstStep": "One haul of 15 garments, a steamer and a mending tool, a prop shelf, the flat-lay camera, and a simple 'likes and offers' result screen.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 5,
+        "demand": 6,
+        "gap": 8,
+        "soloSpeed": 8,
+        "creatorFit": 8,
+        "instantPlay": 9,
+        "monetization": 5,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 9,
+        "scopeFit": 9
+      }
+    },
+    {
+      "id": "crackle-and-crate",
+      "name": "Crackle & Crate",
+      "family": "First-person craft & shop sims",
+      "theme": "Record store",
+      "hook": "Buy a dusty crate for $20. One record in it might be worth $800.",
+      "oneLiner": "Run a small used-record shop: buy collections at house calls, clean each record at the bench, grade it under the lamp, play it in the listening booth and price it for the bins.",
+      "genre": "First-person crate-dig and grading sim",
+      "camera": "first-person",
+      "loop": [
+        "Buy a crate from a seller's collection",
+        "Flip through and pull records out of their sleeves",
+        "Wash and brush them, then grade under the light (VG+, NM)",
+        "Needle-drop in the booth to check, price and file in the bins"
+      ],
+      "clip": "The needle drops on a filthy record, it crackles, you wash it, and the second drop is crystal clean.",
+      "look": {
+        "short": "Basement record shop, warm lamps, sleeve-art walls",
+        "vibe": "A basement shop with low ceilings, rows of wooden bins and walls covered in hand-drawn sleeves. A brass lamp lights the cleaning bench and the black shine of fresh vinyl. Late-night, warm and a bit smoky.",
+        "palette": [
+          {
+            "name": "Vinyl black",
+            "hex": "#151517"
+          },
+          {
+            "name": "Lamp amber",
+            "hex": "#E2A33F"
+          },
+          {
+            "name": "Bin oak",
+            "hex": "#8E5E37"
+          },
+          {
+            "name": "Sleeve teal",
+            "hex": "#2F7F7A"
+          },
+          {
+            "name": "Paper white",
+            "hex": "#EDE4D1"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "Free browser slice; $14.99 on Steam",
+      "money": "Premium Steam release; later genre-crate DLC with new commissioned albums.",
+      "comps": [
+        "TCG Card Shop Simulator",
+        "ReStory: Chill Electronics Repairs",
+        "Wax Heads"
+      ],
+      "why": "Digging for a rare pressing has the same reveal as TCG's pack opening (about 400k copies in 10 days), and nostalgia repair is hot (ReStory 500k+). Vinyl collecting is a living hobby, and a record-store game is explicitly requested on r/CozyGamers.",
+      "risk": "Wax Heads, Re:Store the Record Store and Vinyl Store: Tidy Up! are already on Steam, and every record needs original music and sleeve art.",
+      "firstStep": "One crate of 20 records with 3 rare ones, the cleaning bench, the grading light and one turntable that plays dirty and clean versions of an original track.",
+      "scores": {
+        "originality": 5,
+        "provenDemand": 6,
+        "demand": 6,
+        "gap": 5,
+        "soloSpeed": 5,
+        "creatorFit": 5,
+        "instantPlay": 5,
+        "monetization": 6,
+        "marketability": 8,
+        "momentum": 6,
+        "culture": 8,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "pressing-day",
+      "name": "Pressing Day",
+      "family": "First-person craft & shop sims",
+      "theme": "Record store",
+      "hook": "Drop coloured wax pellets in, close the press, see what splatter you made.",
+      "oneLiner": "Your record shop has a tiny press in the back: mix coloured vinyl pellets, press local bands' records, and lift the lid on a marbled or splatter disc nobody else in the world has.",
+      "genre": "First-person craft and reveal toy",
+      "camera": "first-person",
+      "loop": [
+        "Take a local band's order (colours, mood, run size)",
+        "Drop and mix coloured pellets into the hot puck",
+        "Close the press, lift the lid and trim the edge",
+        "Sleeve, sticker and sell the run at the counter; unlock colours and effects"
+      ],
+      "clip": "The press lifts and a swirled pink-and-teal record peels off, still steaming.",
+      "look": {
+        "short": "Back-room press, bright colour pellets, chrome and steam",
+        "vibe": "A cramped back room behind the shop counter, with a chunky chrome press, buckets of candy-bright vinyl pellets and posters for local gigs on the walls. Steam and glossy colour against dark machinery. Punky, warm and handmade.",
+        "palette": [
+          {
+            "name": "Press chrome",
+            "hex": "#B7BCC2"
+          },
+          {
+            "name": "Bubblegum",
+            "hex": "#EE7FB0"
+          },
+          {
+            "name": "Teal wax",
+            "hex": "#2BB3A5"
+          },
+          {
+            "name": "Gig poster",
+            "hex": "#F0D35B"
+          },
+          {
+            "name": "Back room",
+            "hex": "#2A2633"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "small",
+      "price": "Free on web; $3.99 'full press' unlock",
+      "money": "Free web toy with ads on portals, plus a cheap paid version with more colours and effects.",
+      "comps": [
+        "TCG Card Shop Simulator",
+        "PowerWash Simulator",
+        "Soap Cutting (mobile)"
+      ],
+      "why": "A self-made reveal is the cheapest version of what sells in this genre (TCG's pack opening drove about 400k copies in 10 days), and coloured-vinyl pressing videos are already popular on social video. The scene is one machine and a counter, which keeps the art scope small.",
+      "risk": "It may be a toy rather than a game: the band orders and shop side need enough reason to keep pressing.",
+      "firstStep": "The press, eight pellet colours, mix-and-drop controls and the lid lift, with a 'save your record' card to share.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 4,
+        "demand": 5,
+        "gap": 8,
+        "soloSpeed": 8,
+        "creatorFit": 7,
+        "instantPlay": 8,
+        "monetization": 4,
+        "marketability": 9,
+        "momentum": 6,
+        "culture": 7,
+        "scopeFit": 9
+      }
+    },
+    {
+      "id": "suds-and-snips",
+      "name": "Suds & Snips",
+      "family": "First-person craft & shop sims",
+      "theme": "Pet grooming salon",
+      "hook": "Matted, muddy and miserable goes in. A fluffball comes out.",
+      "oneLiner": "Run a first-person dog grooming salon: soak and lather, blow-dry, brush out mats, clip a breed cut, and hand back a dog that shakes itself proudly.",
+      "genre": "First-person grooming sim",
+      "camera": "first-person",
+      "loop": [
+        "Check in a dog and its owner's request",
+        "Bath and rinse until the water runs clear",
+        "Blow-dry, de-mat and clip the cut",
+        "Bow, photo for the salon wall, payment; upgrade tools and the salon"
+      ],
+      "clip": "A shaggy sheepdog gets the dryer and puffs up into a perfect cloud, then wags.",
+      "look": {
+        "short": "Bright tiled salon, bubbles, fluffy dogs, pastel tools",
+        "vibe": "A small, bright salon with mint tiles, a steel tub and a big window onto a rainy street. Thick soap bubbles, soft stylised fur and chunky pastel tools. Cheerful, clean and squeaky.",
+        "palette": [
+          {
+            "name": "Mint tile",
+            "hex": "#A8DCCB"
+          },
+          {
+            "name": "Bubble white",
+            "hex": "#F7FAFA"
+          },
+          {
+            "name": "Steel tub",
+            "hex": "#9AA4AB"
+          },
+          {
+            "name": "Peach towel",
+            "hex": "#F2B38B"
+          },
+          {
+            "name": "Muddy paw",
+            "hex": "#7A5A3C"
+          }
+        ]
+      },
+      "path": "Steam-first",
+      "effort": "large",
+      "price": "$14.99 on Steam",
+      "money": "Premium Steam release with breed-pack DLC; consoles if it sells.",
+      "comps": [
+        "PowerWash Simulator",
+        "Groomer",
+        "Exotica 2: Pet Shop Simulator"
+      ],
+      "why": "Grooming is a PowerWash-style dirty-to-clean reveal (17M players) plus cute dogs, two of the strongest video hooks. Steam supply is weak: Exotica 2 sold about 13.7k at 78%, the VR Pets & Stuff has 10 reviews, and Groomer is from 2019.",
+      "risk": "Fur and dog animation are the hardest art problems on the list; weak animals sank Exotica 2's reviews.",
+      "firstStep": "One scruffy terrier, a tub, a dryer and clippers, with a fur shader that changes from wet to fluffy to clipped.",
+      "scores": {
+        "originality": 4,
+        "provenDemand": 7,
+        "demand": 8,
+        "gap": 6,
+        "soloSpeed": 3,
+        "creatorFit": 3,
+        "instantPlay": 4,
+        "monetization": 7,
+        "marketability": 10,
+        "momentum": 7,
+        "culture": 9,
+        "scopeFit": 6
+      }
+    },
+    {
+      "id": "hoof-and-plait",
+      "name": "Hoof & Plait",
+      "family": "First-person craft & shop sims",
+      "theme": "Pet grooming salon",
+      "hook": "Brush a checkerboard onto the horse's rump. Win the ribbon.",
+      "oneLiner": "Groom horses at a small show stable: curry off the mud, plait the mane into neat buttons, oil the hooves and brush quarter marks before each horse walks into the ring.",
+      "genre": "First-person grooming and show-prep sim",
+      "camera": "first-person",
+      "loop": [
+        "Bring a muddy horse in from the field",
+        "Curry, brush and wash it, then pick and oil the hooves",
+        "Plait the mane and comb the quarter marks",
+        "Watch it trot into the ring, collect ribbons and unlock new horses and tack"
+      ],
+      "clip": "A stencil comes off the horse's shining rump to show a crisp checkerboard of quarter marks.",
+      "look": {
+        "short": "Stable yard at golden hour, glossy coats, hay dust",
+        "vibe": "A small stone stable yard, low sun coming through the barn door and lighting hay dust. Glossy chestnut and grey coats, leather tack and bright show rosettes. Warm, horsey and proud.",
+        "palette": [
+          {
+            "name": "Chestnut",
+            "hex": "#9A4E2B"
+          },
+          {
+            "name": "Hay gold",
+            "hex": "#E3BE6A"
+          },
+          {
+            "name": "Barn shade",
+            "hex": "#3D3A33"
+          },
+          {
+            "name": "Rosette blue",
+            "hex": "#2E5FA8"
+          },
+          {
+            "name": "Grey coat",
+            "hex": "#C8C6C1"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "Free browser slice; $12.99 on Steam",
+      "money": "Premium Steam release with horse-breed and show-season packs.",
+      "comps": [
+        "Star Stable",
+        "PowerWash Simulator",
+        "Groomer"
+      ],
+      "why": "The horse-lover audience is large and loyal yet barely served on Steam PC, and grooming gives a PowerWash-style reveal (17M players) plus a neat pattern finish. Supply of PC grooming sims is weak (Exotica 2 ~13.7k, Pets & Stuff 10 reviews).",
+      "risk": "Horse anatomy and coat need strong hand-made art, and the audience skews young and often plays on mobile rather than Steam.",
+      "firstStep": "One muddy horse in a stall, three brushes, a hoof pick, a mane to plait and one quarter-mark stencil.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 5,
+        "demand": 7,
+        "gap": 8,
+        "soloSpeed": 5,
+        "creatorFit": 4,
+        "instantPlay": 5,
+        "monetization": 6,
+        "marketability": 8,
+        "momentum": 6,
+        "culture": 7,
+        "scopeFit": 7
+      }
+    },
+    {
+      "id": "clean-fade",
+      "name": "Clean Fade",
+      "family": "First-person craft & shop sims",
+      "theme": "Barber or hair salon",
+      "hook": "Blend a skin fade so clean the whole shop goes quiet.",
+      "oneLiner": "Work the chair in a neighbourhood barbershop on PC: read the reference photo, blend a fade with guards and a trimmer, line up the edges, finish with a hot towel and a mirror reveal.",
+      "genre": "First-person barber sim",
+      "camera": "first-person",
+      "loop": [
+        "A regular sits down and shows a reference photo",
+        "Clip, blend through the guards and line up with the trimmer",
+        "Hot towel, product and mirror turn",
+        "Tip, chat and reputation; unlock clippers, chairs and shop decor"
+      ],
+      "clip": "The trimmer outlines a crisp hairline, then the chair spins round to the mirror.",
+      "look": {
+        "short": "Neighbourhood barbershop, chrome chairs, neon sign, warm chatter",
+        "vibe": "A corner barbershop with checkered floors, red leather chairs and a buzzing neon sign in the window. Photos of regulars on the mirror, a radio on the shelf and soft stylised hair with clean, readable lines. Lively, friendly and confident.",
+        "palette": [
+          {
+            "name": "Barber red",
+            "hex": "#B3322F"
+          },
+          {
+            "name": "Chrome",
+            "hex": "#CDD2D6"
+          },
+          {
+            "name": "Checker black",
+            "hex": "#1F1F22"
+          },
+          {
+            "name": "Neon blue",
+            "hex": "#4FB7E8"
+          },
+          {
+            "name": "Warm skin light",
+            "hex": "#E8C3A0"
+          }
+        ]
+      },
+      "path": "Steam-first",
+      "effort": "large",
+      "price": "$14.99 on Steam",
+      "money": "Premium Steam release, plus style packs and later a console port.",
+      "comps": [
+        "Barber Chop (mobile)",
+        "PowerWash Simulator",
+        "Supermarket Simulator"
+      ],
+      "why": "Haircut ASMR is proven on mobile (Hair Tattoo: Barber Shop has 4.3k App Store ratings) but Steam PC has only small entries, and barber TikTok is already full of fade reveals. Streamers drive this genre (Supermarket Simulator's 19.3M hours watched), and a mirror reveal gives them a reaction moment with every customer.",
+      "risk": "Hair simulation is technically hard, and mobile barber games make players expect it to be cheap.",
+      "firstStep": "One customer, clippers with three guards and a trimmer, a hair system that shows the blend, and a mirror reveal.",
+      "scores": {
+        "originality": 5,
+        "provenDemand": 6,
+        "demand": 7,
+        "gap": 6,
+        "soloSpeed": 3,
+        "creatorFit": 3,
+        "instantPlay": 4,
+        "monetization": 6,
+        "marketability": 9,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 6
+      }
+    },
+    {
+      "id": "braid-chair",
+      "name": "Braid Chair",
+      "family": "First-person craft & shop sims",
+      "theme": "Barber or hair salon",
+      "hook": "Part it straight, braid it tight, and watch the pattern come together.",
+      "oneLiner": "Run a small braiding salon: section hair with a rat-tail comb, braid cornrows and box braids row by row, add beads and cuffs, and send clients out ready for the weekend.",
+      "genre": "First-person braiding sim",
+      "camera": "first-person",
+      "loop": [
+        "Agree a style with the client from the style book",
+        "Part the hair into a clean grid or curved pattern",
+        "Braid each section with a rhythm input, then add beads and cuffs",
+        "Mirror reveal, photo for the wall and chat; unlock styles and decor"
+      ],
+      "clip": "Top-down shot of a finished curved cornrow pattern as the last bead clicks on.",
+      "look": {
+        "short": "Sunlit home salon, bright beads, neat parting lines",
+        "vibe": "A small salon in a converted front room, with plants, a speaker playing and afternoon sun across the chair. Neat parting lines, glossy braids and jars of bright beads and gold cuffs. Warm, social and proud of the craft.",
+        "palette": [
+          {
+            "name": "Deep brown",
+            "hex": "#3B2418"
+          },
+          {
+            "name": "Gold cuff",
+            "hex": "#D7A93B"
+          },
+          {
+            "name": "Bead coral",
+            "hex": "#E9715A"
+          },
+          {
+            "name": "Plant green",
+            "hex": "#4E8A5B"
+          },
+          {
+            "name": "Sun wall",
+            "hex": "#F4D9B6"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "Free browser slice; $12.99 on Steam",
+      "money": "Premium Steam release with style-book packs designed with real braiders.",
+      "comps": [
+        "Dressmaker",
+        "Barber Chop (mobile)",
+        "Tiny Bookshop"
+      ],
+      "why": "No notable braiding game exists on Steam, and braid videos are a huge, underrepresented TikTok niche. Braiding is a rule-based, pattern craft like Dressmaker's sewing (400k+ wishlists), and a strand-based look is easier to fake convincingly than loose hair.",
+      "risk": "It needs authentic representation built with real braiders and Black hair creators, or it will be rejected by the very audience it is for.",
+      "firstStep": "One client, a comb, a parting grid and a cornrow braiding input, finishing with beads and a top-down reveal.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 5,
+        "demand": 7,
+        "gap": 8,
+        "soloSpeed": 4,
+        "creatorFit": 4,
+        "instantPlay": 5,
+        "monetization": 5,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 7
+      }
+    },
+    {
+      "id": "kettle-stitch",
+      "name": "Kettle Stitch",
+      "family": "First-person craft & shop sims",
+      "theme": "Bookbinding or a story bookshop",
+      "hook": "People bring you their loose pages. You bind their life into a book.",
+      "oneLiner": "Run a small bindery where townsfolk bring loose letters, recipes and diaries: read enough to choose the right cover, fold and sew the signatures, glue the spine and tool a gold title, then hand the finished book back.",
+      "genre": "First-person bookbinding sim with narrative",
+      "camera": "first-person",
+      "loop": [
+        "A client drops off a bundle of pages and a story",
+        "Sort and read the pages to choose paper, cloth and title",
+        "Fold, punch and sew the signatures; glue, back and case the spine",
+        "Gold-tool the title, hand it over and see how it changes their story"
+      ],
+      "clip": "A heated brass tool presses into green cloth and lifts off, leaving a gleaming gold name.",
+      "look": {
+        "short": "Lamp-lit bindery, cloth, leather, gold foil and paper stacks",
+        "vibe": "A tiny bindery with a cast-iron press, waxed thread, rolls of marbled paper and bone folders. A warm lamp lights cloth covers in bottle green and oxblood, and the gold foil catches it. Quiet, tender and handmade.",
+        "palette": [
+          {
+            "name": "Bottle green",
+            "hex": "#2F5A45"
+          },
+          {
+            "name": "Oxblood",
+            "hex": "#6E2A2A"
+          },
+          {
+            "name": "Gold foil",
+            "hex": "#D4AF52"
+          },
+          {
+            "name": "Paper",
+            "hex": "#F1E7D2"
+          },
+          {
+            "name": "Iron press",
+            "hex": "#3A3B3D"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "Free browser slice; $12.99 on Steam",
+      "money": "Premium Steam release with story-chapter expansions.",
+      "comps": [
+        "Bookshop Simulator",
+        "Venba",
+        "Dressmaker"
+      ],
+      "why": "Bookshop Simulator proved paying demand (about 50.9k copies, 93%) with a plain shop, and Tiny Bookshop showed a book theme can reach 500k+ when it has a personal layer. Bookbinding is a real hobby with satisfying steps, and each commission is a small story instead of another stocking shift.",
+      "risk": "Writing carries a lot of the value and must be human-made, and the binding steps could feel repetitive across many books.",
+      "firstStep": "One client's bundle of six letters, the folding, sewing and gluing steps, and the gold-tooled cover reveal.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 6,
+        "demand": 6,
+        "gap": 7,
+        "soloSpeed": 6,
+        "creatorFit": 5,
+        "instantPlay": 6,
+        "monetization": 5,
+        "marketability": 7,
+        "momentum": 6,
+        "culture": 7,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "left-inside",
+      "name": "Left Inside",
+      "family": "First-person craft & shop sims",
+      "theme": "Bookbinding or a story bookshop",
+      "hook": "A letter fell out of a used book. Find who it belongs to.",
+      "oneLiner": "Price used books in a seaside second-hand bookshop and find what readers left inside them: bookmarks, letters, pressed flowers, tickets. Piece the clues together to return them to their owners.",
+      "genre": "Narrative bookshop and lost-and-found puzzle",
+      "camera": "first-person",
+      "loop": [
+        "Open a box of used books and price each one",
+        "Flip the pages and find what was left inside",
+        "Match clues (inscriptions, dates, handwriting) to townsfolk",
+        "Return the item and unlock their story and new shelves"
+      ],
+      "clip": "A paperback is fanned and a 1987 concert ticket and a pressed daisy flutter onto the counter.",
+      "look": {
+        "short": "Seaside second-hand bookshop, rain on glass, warm lamps",
+        "vibe": "A crooked bookshop by the harbour, with ladders, rain on the window and a cat on the stacks. Worn spines, foxed pages, hand-written notes and pressed flowers rendered in soft, painterly detail. Nostalgic, rainy and gently curious.",
+        "palette": [
+          {
+            "name": "Foxed page",
+            "hex": "#E9DCC0"
+          },
+          {
+            "name": "Harbour blue",
+            "hex": "#3E5F75"
+          },
+          {
+            "name": "Spine red",
+            "hex": "#9C3B32"
+          },
+          {
+            "name": "Lamp glow",
+            "hex": "#F0B95B"
+          },
+          {
+            "name": "Ink",
+            "hex": "#2C2A29"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "small",
+      "price": "Free first chapter on web; $6.99 full game",
+      "money": "Free first chapter on web and itch, with a paid full game on itch and Steam.",
+      "comps": [
+        "Tiny Bookshop",
+        "Unpacking",
+        "Bookshop Simulator"
+      ],
+      "why": "Tiny Bookshop sold 500k+ by pairing a bookshop with a personal story, and Unpacking and A Little to the Left (1M+ each) show that stories told through objects sell. Bookshop Simulator's ~50.9k proves the venue pays even plain, and the found-object twist gives every box a reveal.",
+      "risk": "It is mostly writing and hand-drawn items, so value depends on story quality, and it brushes against the crowded bookshop tag.",
+      "firstStep": "One box of eight books, three hidden items, a small town board with four suspects, and one completed return.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 6,
+        "demand": 7,
+        "gap": 7,
+        "soloSpeed": 7,
+        "creatorFit": 7,
+        "instantPlay": 8,
+        "monetization": 5,
+        "marketability": 8,
+        "momentum": 6,
+        "culture": 8,
+        "scopeFit": 9
+      }
+    },
+    {
+      "id": "pigeonhole-post",
+      "name": "Pigeonhole Post",
+      "family": "Top-down management & tycoon",
+      "theme": "Cozy walk-and-restock venue",
+      "hook": "A hedgehog runs the village post office. The parcel tower gets ridiculous.",
+      "oneLiner": "You are the hedgehog postmaster of a hillside village: scoop parcels from the delivery hatch, sort them into colour-coded pigeonholes, thump them with the franking stamp and hand them to waiting neighbours or to the courier pigeons you hire.",
+      "genre": "Walk-and-restock idle-arcade management",
+      "camera": "top-down",
+      "loop": [
+        "Walk over the delivery hatch to pick up a wobbling stack of parcels",
+        "Drop them into the pigeonholes that match each street's colour",
+        "Stamp and hand parcels over at the counter or load the pigeon loft",
+        "Spend coins on new counters, a sorting machine and pigeon helpers"
+      ],
+      "clip": "The hedgehog waddles through the office balancing a twenty-parcel tower; one THUNK of the franking stamp and a pigeon flaps off with it.",
+      "look": {
+        "short": "Hand-painted 3/4 post office, brass, pinewood and brown paper",
+        "vibe": "A tiny stone post office on a sloping village street, late-afternoon sun slanting through a bay window onto brass scales, wooden pigeonhole walls and stacks of string-tied brown parcels. Everything is chunky and toy-like, painted with soft gouache edges instead of the shiny low-poly portal look. Snow, blossom and harvest seasons repaint the street outside.",
+        "palette": [
+          {
+            "name": "Pillar-box red",
+            "hex": "#B9382F"
+          },
+          {
+            "name": "Parcel kraft",
+            "hex": "#C79A62"
+          },
+          {
+            "name": "Pinewood",
+            "hex": "#E2C08D"
+          },
+          {
+            "name": "Post-office green",
+            "hex": "#3E6B55"
+          },
+          {
+            "name": "Envelope cream",
+            "hex": "#F6EEDC"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "medium",
+      "price": "Free on web (Poki/CrazyGames); $9.99 expanded Steam version",
+      "money": "Portal ad share (100% on self-brought traffic) pays first, then a Steam edition with seasons, a second village and a desktop mode.",
+      "comps": [
+        "Monkey Mart",
+        "My Perfect Hotel",
+        "Eatventure",
+        "A Short Hike (village warmth)"
+      ],
+      "why": "Monkey Mart's carry-stacks loop has ~300M Poki plays and a 4.6 rating from 3.79M votes, yet nearly all of its imitators are supermarkets, restaurants or hotels in the same low-poly look. A post office is a venue anyone understands in one sentence, and the parcel tower and franking stamp are built-in clip moments.",
+      "risk": "The loop is a commodity, so if the hand-painted art and hedgehog don't stand out on Poki it becomes one more clone dependent on curation luck.",
+      "firstStep": "One room: delivery hatch, three colour pigeonholes, a counter with a stamp, four customer types and one hireable pigeon, playable on a phone with a virtual stick.",
+      "scores": {
+        "originality": 4,
+        "provenDemand": 8,
+        "demand": 7,
+        "gap": 6,
+        "soloSpeed": 8,
+        "creatorFit": 7,
+        "instantPlay": 10,
+        "monetization": 6,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 6,
+        "scopeFit": 9
+      }
+    },
+    {
+      "id": "moonsoak",
+      "name": "Moonsoak",
+      "family": "Top-down management & tycoon",
+      "theme": "Animal or spirit bathhouse",
+      "hook": "Scrub the soot off a tired spirit and watch its true colours return.",
+      "oneLiner": "You run a three-storey bathhouse for forest spirits, seen side-on like a dollhouse; each guest arrives grey with a worry (soot, moss, rust, salt), and you pick the bath, scrub them clean and hear a small story before they leave glowing.",
+      "genre": "Side-view narrative bathhouse management",
+      "camera": "side view",
+      "loop": [
+        "Greet a spirit and read what its grime says about its worry",
+        "Send it to the right bath: herb, mineral, moon-cold or ember-hot",
+        "Scrub with a brush stroke until the grime lifts and colour floods back",
+        "Earn lantern-coins and a story fragment; add a floor, a bath or a helper"
+      ],
+      "clip": "A brush sweeps across a soot-black spirit and a strip of bright turquoise fur appears underneath, then the whole guest blooms into colour.",
+      "look": {
+        "short": "Lantern-lit wooden bathhouse cross-section, steam and ink-wash night",
+        "vibe": "A tall cedar bathhouse cut open like a doll's house at night, every room glowing amber through paper screens while steam curls up past the moon. The spirits are soft, round and hand-drawn, washed out to grey when they arrive and saturated jewel colours when they leave. Ink-wash hills and fireflies sit behind.",
+        "palette": [
+          {
+            "name": "Cedar brown",
+            "hex": "#6B4430"
+          },
+          {
+            "name": "Lantern amber",
+            "hex": "#F2A541"
+          },
+          {
+            "name": "Night indigo",
+            "hex": "#23264A"
+          },
+          {
+            "name": "Steam white",
+            "hex": "#EDEFF2"
+          },
+          {
+            "name": "Spirit turquoise",
+            "hex": "#3FC1B0"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "$14.99 on Steam (free browser prologue)",
+      "money": "Premium Steam sale with a free browser prologue that collects wishlists, then a seasonal guest pack.",
+      "comps": [
+        "Maltese's Fluffy Onsen",
+        "Spiritfarer",
+        "Tiny Bookshop"
+      ],
+      "why": "Maltese's Fluffy Onsen sold ~188k at 95% positive with only a handful of bathhouse competitors, and the research notes nobody has made the premium, narrative 'Tiny Bookshop of bathhouses' yet. Unlike Soak & Snooze (a top-down animal walk-and-restock idle), this is a story-led side-view game whose verb is scrubbing grime into colour, and $15-20 cozy games reach 1,000 reviews far more often (45.2%) than cheap ones.",
+      "risk": "Every spirit needs bespoke illustration plus writing, so content volume, not code, decides whether the game ships.",
+      "firstStep": "One floor with two baths, three spirits with distinct grime, the scrub-reveal shader and one short story each, playable in a browser with mouse or finger.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 6,
+        "demand": 7,
+        "gap": 6,
+        "soloSpeed": 5,
+        "creatorFit": 5,
+        "instantPlay": 6,
+        "monetization": 7,
+        "marketability": 9,
+        "momentum": 7,
+        "culture": 7,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "lilypad-glasshouse",
+      "name": "Lilypad Glasshouse",
+      "family": "Top-down management & tycoon",
+      "theme": "Small cozy aquarium",
+      "hook": "Grow a lily pad strong enough to hold a toddler, then open the doors.",
+      "oneLiner": "You restore a small Victorian glasshouse in a town park, raise rare plants in warm, wet and dry zones, and open it to visitors; the big days are bloom events, when a giant water lily, a night-flowering cactus or a stinky corpse flower draws a crowd.",
+      "genre": "Cozy greenhouse builder-manager",
+      "camera": "top-down",
+      "loop": [
+        "Plant cuttings in zones and tune heat, mist and light",
+        "Arrange beds, paths and benches so visitors linger",
+        "Prepare a bloom event and invite the town",
+        "Earn ticket money and rarer seeds; restore another wing of glass"
+      ],
+      "clip": "A smiling toddler is lowered onto a huge round lily pad in the pond, and it holds; the crowd in the glasshouse claps.",
+      "look": {
+        "short": "Steamy Victorian glasshouse, wrought iron, lush green, top-down",
+        "vibe": "Seen from above through a curved glass roof dotted with condensation, a white wrought-iron palm house fills with ferns, palms and a round pond of giant lilies. Light is soft and humid, mornings mist over and evenings glow with gas lamps. Visitors are small animal townsfolk in coats and hats.",
+        "palette": [
+          {
+            "name": "Fern green",
+            "hex": "#3F7D4E"
+          },
+          {
+            "name": "Wrought white",
+            "hex": "#F1F3EE"
+          },
+          {
+            "name": "Lily pink",
+            "hex": "#E7A1B0"
+          },
+          {
+            "name": "Pond teal",
+            "hex": "#2F6F73"
+          },
+          {
+            "name": "Terracotta pot",
+            "hex": "#C46A47"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "$14.99 on Steam",
+      "money": "Premium Steam with a free demo for Next Fest; later a botanical expansion (desert house, orchid house).",
+      "comps": [
+        "Megaquarium",
+        "Two Point Museum",
+        "Let's Build a Zoo"
+      ],
+      "why": "Exhibit tycoons are proven (Let's Build a Zoo $3M, Two Point Museum 229k-665k) while the small, cozy end is thin, with Megaquarium (2018, 3,410 reviews) still the reference. A greenhouse keeps the 'build displays, please visitors' loop but swaps animals for plants, which are far cheaper to draw and animate, and bloom events give a natural clip beat.",
+      "risk": "Plant tending can feel passive next to animals, so bloom events must carry the excitement or reviews will call it slow.",
+      "firstStep": "One wing with two climate zones, six plants, a visitor flow and one giant-lily bloom event ending in the toddler-on-the-pad moment, in the browser.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 5,
+        "demand": 6,
+        "gap": 8,
+        "soloSpeed": 5,
+        "creatorFit": 5,
+        "instantPlay": 6,
+        "monetization": 6,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 7
+      }
+    },
+    {
+      "id": "needle-and-sleeve",
+      "name": "Needle & Sleeve",
+      "family": "Top-down management & tycoon",
+      "theme": "Tiny curation shop",
+      "hook": "\"Something for driving home after a breakup.\" Flip the crate, drop the needle.",
+      "oneLiner": "You run a tiny record shop under a railway arch; customers ask for a feeling, not a title, so you flip through crates of hand-drawn sleeves, drop the needle on a few seconds of the track and watch whether their head starts nodding.",
+      "genre": "Recommendation shop sim",
+      "camera": "side view",
+      "loop": [
+        "Hear a customer's mood-request (a doodle speech bubble and a line)",
+        "Swipe through crates by genre, era and sleeve art",
+        "Drop the needle on a pick and read the customer's reaction",
+        "Sell, earn regulars' stories and buy new crates at the weekend fair"
+      ],
+      "clip": "A grumpy commuter in a wet coat hears three seconds of your pick, his foot starts tapping, then his whole body sways as the train rumbles overhead.",
+      "look": {
+        "short": "Warm side-view record shop under a brick arch, rainy night",
+        "vibe": "A narrow shop tucked into a brick railway arch, string lights, a listening corner with a worn armchair and crates of colourful sleeves in front of rain-streaked glass. Every so often a train rumbles overhead and the records rattle. Sleeves are the star: dozens of small, bold, hand-drawn album covers in different eras.",
+        "palette": [
+          {
+            "name": "Arch brick",
+            "hex": "#8E4A35"
+          },
+          {
+            "name": "Vinyl black",
+            "hex": "#1E1B1A"
+          },
+          {
+            "name": "Bulb gold",
+            "hex": "#F4C35A"
+          },
+          {
+            "name": "Rainy blue",
+            "hex": "#4D6A86"
+          },
+          {
+            "name": "Sleeve coral",
+            "hex": "#E8735A"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "$12.99 on Steam (free browser 'one evening' slice)",
+      "money": "Premium Steam sale, plus a soundtrack release and later 'new crate' music packs from guest musicians.",
+      "comps": [
+        "Tiny Bookshop",
+        "Coffee Talk"
+      ],
+      "why": "Tiny Bookshop (500k+) and Coffee Talk (~369k) prove the 'read the customer, give them the right thing' loop, and the research found no notable management game for vinyl, a hobby with an active community. Top-down curation of sleeves and moods is a different format from a first-person crate-digging sim, and a phone can play it with swipes.",
+      "risk": "It needs a lot of short original music and many sleeves, which must be human-made (commissioned musicians or properly licensed libraries), and that budget is the real bottleneck.",
+      "firstStep": "One evening: three crates of 24 records with 10-second original clips, six customers with mood requests, and the head-nod reaction, playable by swipe in a phone browser.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 6,
+        "demand": 7,
+        "gap": 7,
+        "soloSpeed": 6,
+        "creatorFit": 5,
+        "instantPlay": 8,
+        "monetization": 6,
+        "marketability": 7,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "skein-street",
+      "name": "Skein Street",
+      "family": "Top-down management & tycoon",
+      "theme": "Tiny curation shop",
+      "hook": "Pick the perfect yarn. Then they come back wearing it.",
+      "oneLiner": "You run a tiny yarn shop on a windy island; knitters and crocheters bring a pattern and a story, you match fibre, weight and colours for their project, wind the skein into a cake, and later they return to pin a photo of the finished piece on your show-and-tell wall.",
+      "genre": "Recommendation shop sim",
+      "camera": "side view",
+      "loop": [
+        "Read a customer's pattern card and who it is for",
+        "Pick fibre and weight, then build a colourway from your shelves",
+        "Wind the hank into a cake on the swift and ball winder",
+        "Collect coins and, later, the finished-object photo; restock from island dyers"
+      ],
+      "clip": "A customer who bought your three-colour combo walks back in wearing the striped jumper, and the photo slides onto a wall covered in finished projects.",
+      "look": {
+        "short": "Cosy side-view wool shop, cubbies of colour, sea-mist windows",
+        "vibe": "A little stone shop with a wall of wooden cubbies packed with yarn in every colour, a wooden swift spinning on the counter and a misty harbour beyond the window. The yarn is soft and fuzzy, hand-painted with visible fibres; customers are bundled-up islanders and their dogs. The show-and-tell wall slowly fills with tiny painted photos.",
+        "palette": [
+          {
+            "name": "Heather purple",
+            "hex": "#8A6C93"
+          },
+          {
+            "name": "Oat wool",
+            "hex": "#E8DCC4"
+          },
+          {
+            "name": "Sea mist",
+            "hex": "#9DB7B5"
+          },
+          {
+            "name": "Moss",
+            "hex": "#6C7F45"
+          },
+          {
+            "name": "Rust orange",
+            "hex": "#C8643A"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "medium",
+      "price": "Free web demo; $7.99 full game on itch.io then Steam",
+      "money": "A paid full version on itch.io and Steam, with seasonal dye-lot packs; colourways are cheap to add because yarn sprites are tinted, not redrawn.",
+      "comps": [
+        "Tiny Bookshop",
+        "Dressmaker",
+        "Coffee Talk",
+        "Unpacking"
+      ],
+      "why": "Tiny Bookshop's 500k+ copies show hobby fandoms buy recommendation shops, and the research names yarn and knitting as a fandom with no notable management game. Dressmaker's 400k+ wishlists show the crafting crowd is primed right now, and here the payoff (customers returning in what you chose) is shareable on its own.",
+      "risk": "Knitters will notice fake craft details, so fibre and weight logic must be right, and the recommendation writing still needs real volume.",
+      "firstStep": "One shop day: 30 tintable yarns, eight customers with pattern cards, the swift-winding action and two return visits with finished-piece photos, in a phone browser.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 6,
+        "demand": 7,
+        "gap": 8,
+        "soloSpeed": 6,
+        "creatorFit": 6,
+        "instantPlay": 8,
+        "monetization": 6,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 9,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "little-lido",
+      "name": "Little Lido",
+      "family": "Top-down management & tycoon",
+      "theme": "Browser-tab idle venue",
+      "hook": "An outdoor swimming pool for animals, doing lengths along the bottom of your screen.",
+      "oneLiner": "A tiny 1930s open-air lido runs in a strip at the bottom of your desktop or a small browser window; otters, ducks and a very slow tortoise swim lengths while you work, and you spend their entry coins on lanes, a diving board, a tea hatch and a heated winter dip.",
+      "genre": "Desktop-strip idle management",
+      "camera": "side view",
+      "loop": [
+        "Guests arrive and swim lengths across the strip on their own",
+        "Tap to tidy towels, serve tea and rescue the odd floundering duckling",
+        "Spend coins on lanes, loungers, diving boards and staff",
+        "Seasons turn: summer crowds, autumn leaves on the water, winter cold-water dippers"
+      ],
+      "clip": "An otter does butterfly along the bottom of a busy spreadsheet while a tortoise in a swim cap is overtaken by everyone.",
+      "look": {
+        "short": "Art-deco lido in a thin strip, sunny pastel pixels",
+        "vibe": "A long sliver of a 1930s lido: white curved walls, a striped diving board, blue water with sun ripples and a little tea hatch with bunting. Guests are tiny pixel animals in swim caps and stripy costumes. In winter steam rises off the water and dippers shriek and run for the sauna.",
+        "palette": [
+          {
+            "name": "Lido blue",
+            "hex": "#5BB8D6"
+          },
+          {
+            "name": "Deco white",
+            "hex": "#F7F4EC"
+          },
+          {
+            "name": "Coral stripe",
+            "hex": "#F08A7E"
+          },
+          {
+            "name": "Sun yellow",
+            "hex": "#F9D56E"
+          },
+          {
+            "name": "Tile navy",
+            "hex": "#24456B"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "small",
+      "price": "$4.99 on Steam; free browser-tab version",
+      "money": "A cheap Steam purchase driven by streamers leaving it on screen, plus cosmetic swimwear and a 'midnight swim' pack.",
+      "comps": [
+        "Rusty's Retirement",
+        "Maltese's Fluffy Onsen",
+        "Screenside Station",
+        "Bongo Cat"
+      ],
+      "why": "Rusty's Retirement (solo, 100k in 5 days, 500k+) and Fluffy Onsen (~188k) prove the runs-while-you-work format, and the research says farming is the most copied theme there while venues are rarer. A lido's long lanes fit a horizontal strip naturally, and wild and cold-water swimming give it a real wellness tailwind.",
+      "risk": "Desktop-idle shelves are filling fast (fishing, sushi, mining and railway strips already exist), so it only works if the swimmers are funny enough to clip.",
+      "firstStep": "A browser strip with one pool, five animal swimmers, coin pickup and two upgrades, which can pop out as a small always-on-top window via Chrome's Document Picture-in-Picture.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 7,
+        "demand": 7,
+        "gap": 5,
+        "soloSpeed": 8,
+        "creatorFit": 8,
+        "instantPlay": 5,
+        "monetization": 5,
+        "marketability": 8,
+        "momentum": 6,
+        "culture": 8,
+        "scopeFit": 10
+      }
+    },
+    {
+      "id": "first-crack",
+      "name": "First Crack",
+      "family": "Top-down management & tycoon",
+      "theme": "Grow it, then serve it",
+      "hook": "Grow it, pick it, roast it. Listen for the crack. Pour it.",
+      "oneLiner": "You take over a family coffee farm on a misty hillside: tend and pick ripe red cherries, dry them on raised beds, roast them in a little drum while listening for the first crack, and pour cups at the farm's porch window for pickers, hikers and the bus driver.",
+      "genre": "Farm-to-cup management sim",
+      "camera": "top-down",
+      "loop": [
+        "Tend coffee rows and pick only the ripe red cherries",
+        "Dry and sort the beans, turning them on raised beds",
+        "Roast to taste by ear: pull the drum after first crack for light, later for dark",
+        "Serve regulars at the porch window and reinvest in rows, varieties and a bigger roaster"
+      ],
+      "clip": "The drum turns, beans go from green to gold to brown, the first crack pops like popcorn, and the beans pour out steaming into the cooling tray.",
+      "look": {
+        "short": "Misty green terraces, red cherries, warm wooden porch",
+        "vibe": "Steep terraced rows of glossy coffee shrubs dotted with red cherries, morning cloud drifting through banana trees, and a weathered wooden farmhouse porch with a hand-painted sign. Pixel art with soft lighting: wet mornings, golden afternoons, string lights when the porch opens. A real coffee region, made with people from there.",
+        "palette": [
+          {
+            "name": "Coffee leaf",
+            "hex": "#2E5E3A"
+          },
+          {
+            "name": "Cherry red",
+            "hex": "#C2302A"
+          },
+          {
+            "name": "Roast brown",
+            "hex": "#5A3524"
+          },
+          {
+            "name": "Cloud mist",
+            "hex": "#DDE5E1"
+          },
+          {
+            "name": "Porch teal",
+            "hex": "#3B8C8A"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "large",
+      "price": "$16.99 on Steam (free browser roasting slice)",
+      "money": "Premium Steam (Early Access possible), then consoles; the browser roasting slice is a wishlist funnel.",
+      "comps": [
+        "Stardew Valley",
+        "Chef RPG",
+        "Travellers Rest",
+        "Coffee Talk"
+      ],
+      "why": "Players have asked for a cozy coffee game with management and Harvest Moon depth (r/CozyGamers), and cozy farming has the best odds of any cozy niche at 27.8% reaching 1,000 reviews. The farm-to-cup chain is untaken, since cafés alone are crowded and the only grow-and-serve hits are taverns (Travellers Rest) and restaurants (Chef RPG, ~165k).",
+      "risk": "Two loops (farm and service) are the scope trap the research warns about, so one must stay shallow and the region must be portrayed with real collaborators.",
+      "firstStep": "A browser slice with one terrace to pick, the roast-by-ear drum with first and second crack, and three customers who each want a different roast.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 7,
+        "demand": 8,
+        "gap": 7,
+        "soloSpeed": 4,
+        "creatorFit": 4,
+        "instantPlay": 4,
+        "monetization": 7,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 9,
+        "scopeFit": 6
+      }
+    },
+    {
+      "id": "cacao-cottage",
+      "name": "Cacao Cottage",
+      "family": "Top-down management & tycoon",
+      "theme": "Grow it, then serve it",
+      "hook": "Crack the pod, temper the chocolate, hear the snap.",
+      "oneLiner": "On one screen you grow a handful of cacao trees beside a tiny chocolate window: crack open pods, ferment and dry the beans, temper the melted chocolate on a marble slab and snap finished bars for customers who each want a different filling.",
+      "genre": "One-screen grow-and-serve shop",
+      "camera": "side view",
+      "loop": [
+        "Harvest a ripe pod and crack it open",
+        "Ferment, dry and grind the beans (quick taps)",
+        "Temper on the marble slab with back-and-forth swipes, then pour into moulds",
+        "Snap and wrap the bar for a customer; spend earnings on trees, fillings and moulds"
+      ],
+      "clip": "A swipe drags glossy chocolate across cold marble, it sets with a shine, and the bar snaps cleanly in half with a loud crack.",
+      "look": {
+        "short": "Sunny tropical cottage counter, glossy chocolate and marble",
+        "vibe": "A little painted cottage at the edge of a cacao grove: pods in yellow, orange and purple hang from the trunks outside, and inside the counter has a cold white marble slab, copper pots and rows of wrapped bars. Chocolate is drawn glossy and thick, with highlights that move as you swipe.",
+        "palette": [
+          {
+            "name": "Pod yellow",
+            "hex": "#E8B530"
+          },
+          {
+            "name": "Dark cacao",
+            "hex": "#3B2218"
+          },
+          {
+            "name": "Milk chocolate",
+            "hex": "#8B5A3C"
+          },
+          {
+            "name": "Marble white",
+            "hex": "#EFEDE8"
+          },
+          {
+            "name": "Leaf green",
+            "hex": "#4F8A3F"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "small",
+      "price": "Free on web (Poki/CrazyGames); $6.99 premium on Steam and mobile",
+      "money": "Portal ads first, then a premium Steam/mobile version with more fillings, moulds and a seasonal gift-box rush.",
+      "comps": [
+        "Good Pizza, Great Pizza",
+        "Papa's Freezeria",
+        "Kebab Chefs!",
+        "Cooking Mama"
+      ],
+      "why": "Good Pizza, Great Pizza (300M+ downloads) proves the single-screen assembly loop, and Kebab Chefs (242.8k, $3.5M) shows a specific food beats a generic restaurant. Folding a tiny grove into the same screen keeps the grow-then-serve fantasy that cozy farming fans want (27.8% reach 1,000 reviews) without a second full game.",
+      "risk": "On portals it may read as just another cooking game unless the snap and the temper swipe feel genuinely great.",
+      "firstStep": "One grove with three trees, the pod crack, the temper swipe with a snap result, and five customers with filling requests, playable on a phone.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 6,
+        "demand": 7,
+        "gap": 8,
+        "soloSpeed": 7,
+        "creatorFit": 7,
+        "instantPlay": 9,
+        "monetization": 6,
+        "marketability": 9,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 9
+      }
+    },
+    {
+      "id": "dondurma-days",
+      "name": "Dondurma Days",
+      "family": "Top-down management & tycoon",
+      "theme": "Single-dish street-food stall",
+      "hook": "Tease them with the cone. Not too long, or they leave.",
+      "oneLiner": "You run a Turkish dondurma cart at a summer evening bazaar: knead and stretch the chewy ice cream on a long paddle, build the cone, then do the famous trick, flipping and snatching it back, just long enough to make each customer laugh rather than storm off.",
+      "genre": "Single-dish order-assembly stall",
+      "camera": "side view",
+      "loop": [
+        "Read the order and the customer's patience (kids, tourists, grandpas)",
+        "Knead and stretch the dondurma, then stack scoops and toppings on the cone",
+        "Perform the tease with timed flips, snatches and cone swaps",
+        "Hand it over at the laugh peak for big tips; unlock flavours, tricks and a bigger cart"
+      ],
+      "clip": "A kid reaches for the cone, it flips upside down on the paddle, the kid grabs an empty cone, and the whole queue bursts out laughing.",
+      "look": {
+        "short": "Bright evening bazaar cart, brass bell, stretchy ice cream",
+        "vibe": "A brass-trimmed red ice-cream cart under strings of lights at a waterfront summer bazaar, with a dusky pink sky and minarets and ferries in the soft background. The vendor wears a little embroidered vest; the dondurma stretches in thick, elastic ribbons. Customers are expressive, chunky cartoon people whose faces do the comedy.",
+        "palette": [
+          {
+            "name": "Cart red",
+            "hex": "#C8332B"
+          },
+          {
+            "name": "Pistachio",
+            "hex": "#9BBF5A"
+          },
+          {
+            "name": "Brass",
+            "hex": "#D2A24C"
+          },
+          {
+            "name": "Dusk pink",
+            "hex": "#F3B3A6"
+          },
+          {
+            "name": "Bosphorus blue",
+            "hex": "#2D5A80"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "small",
+      "price": "Free on web (Poki/CrazyGames); $4.99 ad-free mobile and Steam",
+      "money": "Portal ad share and mobile ads plus a small premium version with more tricks, flavours and festival nights.",
+      "comps": [
+        "Good Pizza, Great Pizza",
+        "Papa's Scooperia",
+        "Kebab Chefs!",
+        "Cooking Mama"
+      ],
+      "why": "Good Pizza, Great Pizza's single-screen order loop reached 300M+ downloads (60% ads), and Kebab Chefs (242.8k, $3.5M) shows a named national food outsells generic food. The dondurma tease is already a viral real-world video format, so the game's core action is a clip people recognise instantly.",
+      "risk": "One trick could wear thin after a few sessions, and the culture must be drawn with Turkish collaborators rather than as a gag.",
+      "firstStep": "One cart, three flavours, the stretch-and-stack build, four tease moves with a patience meter, and six customer types, playable one-thumb in a phone browser.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 7,
+        "demand": 7,
+        "gap": 8,
+        "soloSpeed": 8,
+        "creatorFit": 7,
+        "instantPlay": 10,
+        "monetization": 6,
+        "marketability": 10,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 10
+      }
+    },
+    {
+      "id": "scuff-and-shine",
+      "name": "Scuff & Shine",
+      "family": "Other evergreen genres",
+      "theme": "Hobby restoration",
+      "hook": "Grandpa's 1985 runners, grey with mud. Watch the midsole turn white again.",
+      "oneLiner": "A first-person sneaker restoration bench: each pair arrives with its owner's story, and you scrub, de-yellow, re-glue, re-dye and re-lace it back to life without erasing who wore it.",
+      "genre": "First-person restoration sim",
+      "camera": "first-person",
+      "loop": [
+        "Open the box and read the owner's note",
+        "Inspect: tag scuffs, yellowing, split soles, frayed laces",
+        "Scrub, sand, re-glue and touch up paint in tool passes",
+        "Choose what to keep (a signature, a worn toe) and return the pair",
+        "Earn tools, dyes and lace stock; take harder jobs"
+      ],
+      "clip": "A soft brush drags across a muddy midsole and leaves one clean bright-white stripe.",
+      "look": {
+        "short": "Sunny back-room cobbler bench, rubber, suede and foam bubbles",
+        "vibe": "A small sneaker repair counter behind a laundromat, late afternoon light through a frosted window. Rubber, canvas and suede read clearly at bench scale; suds hold their shape and grime lifts in streaks. Pegboard walls, shoe trees, rows of dye pots, a radio playing quietly.",
+        "palette": [
+          {
+            "name": "Midsole white",
+            "hex": "#F4F1EA"
+          },
+          {
+            "name": "Suede tan",
+            "hex": "#C49A6C"
+          },
+          {
+            "name": "Pegboard teal",
+            "hex": "#2F6F73"
+          },
+          {
+            "name": "Grime umber",
+            "hex": "#5A4636"
+          },
+          {
+            "name": "Lace red",
+            "hex": "#D2483C"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "$14.99 on Steam",
+      "money": "Premium Steam sale plus small paid 'shoe drop' packs of themed pairs (court, trail, skate).",
+      "comps": [
+        "ReStory",
+        "PowerWash Simulator",
+        "Cozy Game Restoration",
+        "A Little to the Left"
+      ],
+      "why": "Restoration is the 2026 breakout lane (ReStory 500k+ copies) and supply of focused hobby restorers is thin, with Cozy Game Restoration only taking cartridges. Sneaker cleaning is one of TikTok's biggest satisfying formats, and the object has a huge community of its own that would share the game, which is exactly the hobby-community pattern that carried Tiny Bookshop to 200K+ copies at launch.",
+      "risk": "Sneaker culture is less 'cozy' than plush or books, so the owner stories must carry warmth or it reads as a cleaning-sim clone.",
+      "firstStep": "One browser bench with one muddy canvas pair: scrub mask on the midsole, a lace swap, and the before/after turntable shot.",
+      "scores": {
+        "originality": 5,
+        "provenDemand": 8,
+        "demand": 7,
+        "gap": 7,
+        "soloSpeed": 6,
+        "creatorFit": 5,
+        "instantPlay": 6,
+        "monetization": 7,
+        "marketability": 9,
+        "momentum": 8,
+        "culture": 8,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "who-gets-the-teapot",
+      "name": "Who Gets the Teapot",
+      "family": "Other evergreen genres",
+      "theme": "Story told through objects",
+      "hook": "Grandma left a houseful of things. Every box you pack is a family argument.",
+      "oneLiner": "Clear a late grandmother's house room by room, deciding what goes to which relative, what is donated and what you keep; each object you lift reveals a piece of her life and the family's.",
+      "genre": "Narrative sorting puzzle",
+      "camera": "isometric",
+      "loop": [
+        "Enter a room full of her things",
+        "Pick up an object and read what it reveals",
+        "Drop it in a box for a relative, donation or keep",
+        "Relatives' notes react; hidden letters unlock the next room"
+      ],
+      "clip": "You lift a chipped teapot, three relatives' sticky notes pop up claiming it, and the box lids rattle.",
+      "look": {
+        "short": "Sunlit pixel-art bungalow, doilies, labelled boxes, dust in the light",
+        "vibe": "Isometric rooms in a 1960s bungalow, soft afternoon sun in long dust beams. Crocheted doilies, enamel tins, a sewing tin full of buttons, cardboard boxes with names written in marker. Quiet, tender and a little funny, never morbid.",
+        "palette": [
+          {
+            "name": "Wallpaper sage",
+            "hex": "#A9B79A"
+          },
+          {
+            "name": "Doily cream",
+            "hex": "#F3E9D2"
+          },
+          {
+            "name": "Cardboard",
+            "hex": "#C7A36E"
+          },
+          {
+            "name": "Marker navy",
+            "hex": "#2B3A55"
+          },
+          {
+            "name": "Teapot rose",
+            "hex": "#D98C8C"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "$12.99 on Steam",
+      "money": "Premium Steam game with console and mobile ports later, the Unpacking path.",
+      "comps": [
+        "Unpacking",
+        "A Little to the Left",
+        "What Remains of Edith Finch"
+      ],
+      "why": "Unpacking and A Little to the Left each sold 1M+ with no successor at that level, while organizing without a story hook stalls (Whisper of the House ~235 reviews), so the emotional frame is the point. 'Swedish death cleaning' is a living lifestyle trend, and almost every player has helped clear a relative's home.",
+      "risk": "Each room needs many hand-drawn objects, and the tone must stay warm or grief will put cozy players off.",
+      "firstStep": "One kitchen with about 30 objects, three relative boxes plus donate and keep, and one hidden letter that changes how you read the room.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 7,
+        "demand": 7,
+        "gap": 7,
+        "soloSpeed": 6,
+        "creatorFit": 5,
+        "instantPlay": 8,
+        "monetization": 6,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 9
+      }
+    },
+    {
+      "id": "on-the-fridge",
+      "name": "On the Fridge",
+      "family": "Other evergreen genres",
+      "theme": "Story told through objects",
+      "hook": "A family's whole life, told one fridge magnet at a time.",
+      "oneLiner": "Each level is the same fridge door in a different year; arrange the new magnets, drawings, photos and notes that arrived, and the family's story builds up (and gets cleared away) on one door.",
+      "genre": "Short narrative arrangement puzzle",
+      "camera": "side view",
+      "loop": [
+        "See the door as it was last year",
+        "Unpack this year's pile: a scan photo, a crayon drawing, a save-the-date",
+        "Arrange and overlap items under magnets until it 'clicks'",
+        "Turn the page to the next year and see what stayed"
+      ],
+      "clip": "A crayon dinosaur drawing slaps onto the door under a strawberry magnet, years flick by, and the drawing yellows.",
+      "look": {
+        "short": "One cream fridge door, layered paper scraps under bright magnets",
+        "vibe": "A single fridge door filling the screen, lit by a kitchen window. Paper of every kind, from glossy photos and crayon drawings to receipts and a school timetable, curls slightly and casts soft shadows. Magnets are chunky and colourful; the door picks up stickers and fades over the years.",
+        "palette": [
+          {
+            "name": "Fridge cream",
+            "hex": "#EFE6D2"
+          },
+          {
+            "name": "Crayon blue",
+            "hex": "#3A6EA5"
+          },
+          {
+            "name": "Magnet yellow",
+            "hex": "#F2C14E"
+          },
+          {
+            "name": "Photo shadow",
+            "hex": "#6B5E55"
+          },
+          {
+            "name": "Sticker pink",
+            "hex": "#E07A9A"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "small",
+      "price": "Free first chapter on web; $5 full game on itch.io and Steam",
+      "money": "Free web chapter as the TikTok link, then a $5 full version with later 'another family' door packs.",
+      "comps": [
+        "Unpacking",
+        "A Little to the Left",
+        "Florence"
+      ],
+      "why": "It takes Unpacking's 1M+ 'story through objects' formula into a space everyone recognises, with a single flat screen that suits a 2D browser build. Short, finishable, tiny-price games are a proven lane in the research (Webfishing $5, Unpacking as a short premium puzzle).",
+      "risk": "A short, small-ceiling game: unless the story makes people cry on camera, it sells modestly.",
+      "firstStep": "Three years of one fridge door in the browser, with drag, layer and snap under magnets and one emotional turn in the third year.",
+      "scores": {
+        "originality": 8,
+        "provenDemand": 5,
+        "demand": 6,
+        "gap": 8,
+        "soloSpeed": 8,
+        "creatorFit": 7,
+        "instantPlay": 10,
+        "monetization": 4,
+        "marketability": 8,
+        "momentum": 6,
+        "culture": 8,
+        "scopeFit": 10
+      }
+    },
+    {
+      "id": "kite-hill",
+      "name": "Kite Hill",
+      "family": "Other evergreen genres",
+      "theme": "Cozy co-op hangout (not fishing)",
+      "hook": "Draw your own kite, fly it with friends, try not to tangle.",
+      "oneLiner": "A cheap 2-4 player hangout on a windy hill: paint your own kite, fly it on real-feeling string physics, chase gusts, do tricks, and inevitably tangle with your friends.",
+      "genre": "Co-op hangout",
+      "camera": "3/4",
+      "loop": [
+        "Paint a kite and tail on the picnic blanket",
+        "Launch into the wind and read the gusts",
+        "Fly tricks, chase updrafts, collect ribbons in the sky",
+        "Tangle, untangle, laugh; unlock new hills, frames and tails"
+      ],
+      "clip": "Two hand-drawn kites cross strings, spin around each other and spiral down into a tree while the players scream.",
+      "look": {
+        "short": "Low-poly grassy hill, big sky, hand-painted kites, cloud shadows",
+        "vibe": "A rolling green headland under a huge pale sky, cloud shadows sweeping across the grass. Low-poly characters in raincoats and scarves, picnic blankets, a little ice-cream van. The kites are the art: whatever the players painted, flapping and bright.",
+        "palette": [
+          {
+            "name": "Hill green",
+            "hex": "#7FB069"
+          },
+          {
+            "name": "Sky wash",
+            "hex": "#CFE6F2"
+          },
+          {
+            "name": "Kite red",
+            "hex": "#E4572E"
+          },
+          {
+            "name": "Raincoat yellow",
+            "hex": "#F3C13A"
+          },
+          {
+            "name": "Cloud shadow",
+            "hex": "#5C7A89"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "$5.99 on Steam",
+      "money": "Low-price Steam sale built to be bought in friend groups (four-pack), plus a cosmetic supporter pack.",
+      "comps": [
+        "Webfishing",
+        "Lethal Company",
+        "Shell Shockers (browser lobbies)"
+      ],
+      "why": "Webfishing (solo dev, $5) sold an estimated 1-2M+ with ~20K peak concurrent players on one relaxing verb plus drawing, and press openly asks for 'more games like Webfishing'. Kites add player-made art (painted kites) and physics comedy (tangles), the two engines of Webfishing's clips.",
+      "risk": "Netcode and moderation of painted kites are the real work, and hangout games depend on a meme moment no one can plan.",
+      "firstStep": "A two-player browser lobby on one hill with string physics, a basic paint tool for the kite, and tangling.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 6,
+        "demand": 7,
+        "gap": 8,
+        "soloSpeed": 5,
+        "creatorFit": 6,
+        "instantPlay": 6,
+        "monetization": 6,
+        "marketability": 9,
+        "momentum": 8,
+        "culture": 7,
+        "scopeFit": 8
+      }
+    },
+    {
+      "id": "binocular-club",
+      "name": "Binocular Club",
+      "family": "Other evergreen genres",
+      "theme": "Cozy co-op hangout (not fishing)",
+      "hook": "Birdwatching with friends, but your voice chat scares the birds.",
+      "oneLiner": "2-4 friends walk a misty nature reserve at dawn, listening for calls, spotting birds with binoculars and logging them in a shared field journal, while proximity voice chat means talking too loud flushes the rare ones.",
+      "genre": "Co-op exploration hangout",
+      "camera": "first-person",
+      "loop": [
+        "Pick a reserve and a time of day",
+        "Listen, point, whisper; spot and identify birds together",
+        "Sketch or photograph them into the shared journal",
+        "Fill the checklist and unlock new reserves, seasons and gear"
+      ],
+      "clip": "The whole group freezes and whispers as a kingfisher lands, then someone sneezes on mic and it bolts.",
+      "look": {
+        "short": "Misty dawn wetland, boardwalks, soft painterly low-poly birds",
+        "vibe": "A reed marsh at dawn, mist on the water, wooden boardwalks and a hide with a slot window. Low-poly scenery with hand-painted textures; the birds are the most detailed, carefully animated things in it. Cool blue morning turning gold.",
+        "palette": [
+          {
+            "name": "Reed straw",
+            "hex": "#C9B27C"
+          },
+          {
+            "name": "Dawn mist",
+            "hex": "#DCE3E8"
+          },
+          {
+            "name": "Marsh teal",
+            "hex": "#3E6B6B"
+          },
+          {
+            "name": "Kingfisher blue",
+            "hex": "#1F8FC7"
+          },
+          {
+            "name": "Robin orange",
+            "hex": "#E07B39"
+          }
+        ]
+      },
+      "path": "Steam-first",
+      "effort": "medium",
+      "price": "$9.99 on Steam",
+      "money": "Premium Steam sale with paid region packs (new reserves, birds and real recorded calls).",
+      "comps": [
+        "Webfishing",
+        "Lethal Company",
+        "Alba: A Wildlife Adventure",
+        "New Pokémon Snap"
+      ],
+      "why": "Co-op hangouts around a non-fishing verb are an open gap: Webfishing proved the format at an estimated 1-2M+ copies, while couples co-op lists complain most options are combat-heavy or huge epics. Birding is a large, growing real hobby with its own apps and communities, and the 'too loud, bird gone' rule gives streamers a built-in comedy beat.",
+      "risk": "Proximity voice, bird AI and many animated species are the heaviest art and code load of the co-op pitches, and bird calls must come from licensed human recordings.",
+      "firstStep": "One marsh, eight species, two-player proximity voice with a loudness meter that flushes birds, and a shared checklist.",
+      "scores": {
+        "originality": 8,
+        "provenDemand": 5,
+        "demand": 7,
+        "gap": 8,
+        "soloSpeed": 4,
+        "creatorFit": 5,
+        "instantPlay": 4,
+        "monetization": 6,
+        "marketability": 9,
+        "momentum": 7,
+        "culture": 9,
+        "scopeFit": 7
+      }
+    },
+    {
+      "id": "little-line",
+      "name": "Little Line",
+      "family": "Other evergreen genres",
+      "theme": "Low-attention idle, not farming",
+      "hook": "A tiny model railway chugs along the bottom of your screen while you work.",
+      "oneLiner": "A model-railway idle game in a strip at the screen edge: lay track, add villages and stations, and your little train runs deliveries and passengers on its own while you work, growing a line across your desktop.",
+      "genre": "Desktop idle",
+      "camera": "side view",
+      "loop": [
+        "Lay a few pieces of track and a station",
+        "The train runs on its own, earning tickets",
+        "Check in to add villages, bridges and carriages",
+        "Unlock seasons, night runs and new locomotives"
+      ],
+      "clip": "A tiny steam train puffs past under a busy spreadsheet, crosses a bridge, and toots into a snowy station.",
+      "look": {
+        "short": "Pixel model railway, felt-green hills, tiny stations, steam puffs",
+        "vibe": "A pixel-art strip that looks like a model railway layout on a hobby table: felt hills, lichen trees, little stations with lit windows. Steam puffs float up out of the strip, and at night the windows glow while the train's headlamp sweeps the track.",
+        "palette": [
+          {
+            "name": "Felt green",
+            "hex": "#5E8C4A"
+          },
+          {
+            "name": "Engine red",
+            "hex": "#B23A2E"
+          },
+          {
+            "name": "Brass",
+            "hex": "#C9A54A"
+          },
+          {
+            "name": "Ballast grey",
+            "hex": "#8A8580"
+          },
+          {
+            "name": "Window glow",
+            "hex": "#F6D57A"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "small",
+      "price": "$5.99 on Steam",
+      "money": "Cheap Steam sale plus small paid locomotive and scenery packs; a browser-tab mode is the free taster.",
+      "comps": [
+        "Rusty's Retirement",
+        "Bongo Cat",
+        "Mini Metro",
+        "Cast n Chill"
+      ],
+      "why": "Rusty's Retirement (solo) sold 500K+ by putting an old theme in a desktop strip, and model railways have a huge hobby audience on YouTube that no idle game is aimed at. Train art is cheap in pixel packs and the screen-edge screenshot sells itself.",
+      "risk": "Screen-edge idle games are filling fast, and a model-railway strip (Screenside Station) already exists; it must win on charm and the miniature-hobby crowd, and it overlaps with Sill, so build one or the other. Idle releases grew +150% in 2026 and Sill already covers the studio's desktop-idle slot, so this only makes sense if it replaces or follows Sill.",
+      "firstStep": "A browser-tab strip with one loop of track, one train, two stations and an offline-earnings check-in.",
+      "scores": {
+        "originality": 5,
+        "provenDemand": 7,
+        "demand": 7,
+        "gap": 3,
+        "soloSpeed": 9,
+        "creatorFit": 8,
+        "instantPlay": 4,
+        "monetization": 5,
+        "marketability": 7,
+        "momentum": 6,
+        "culture": 7,
+        "scopeFit": 10
+      }
+    },
+    {
+      "id": "tamalada",
+      "name": "Tamalada",
+      "family": "Other evergreen genres",
+      "theme": "Heritage cooking story",
+      "hook": "Every Christmas Eve, one family, one table, three hundred tamales.",
+      "oneLiner": "A short narrative cooking game about one Mexican-American family's yearly tamale-making party: each chapter is a Christmas Eve, and you spread masa, fill, fold and stack while the family's conversations and seats at the table change over the years.",
+      "genre": "Narrative cooking",
+      "camera": "top-down",
+      "loop": [
+        "Take your place at the table this year",
+        "Spread masa, fill and fold husks to the rhythm of the talk",
+        "Pass trays, answer relatives, choose what to say",
+        "Steam the pot; the next Christmas Eve opens with someone new at the table"
+      ],
+      "clip": "A spoon spreads masa across a corn husk in one smooth stroke, then the tamale folds and drops onto a growing stack.",
+      "look": {
+        "short": "Overhead kitchen table, warm lamps, husks, steam and paper plates",
+        "vibe": "Looking down at a crowded kitchen table under warm pendant light at night: corn husks soaking in a bowl, a pot of red chile, hands of different ages reaching in. Hand-painted 2D, slightly papery, with Christmas lights reflecting on the window.",
+        "palette": [
+          {
+            "name": "Husk gold",
+            "hex": "#E2C27D"
+          },
+          {
+            "name": "Chile red",
+            "hex": "#A8322D"
+          },
+          {
+            "name": "Masa cream",
+            "hex": "#F2E3C2"
+          },
+          {
+            "name": "Tile blue",
+            "hex": "#2E5E8C"
+          },
+          {
+            "name": "Night window",
+            "hex": "#1E2433"
+          }
+        ]
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "price": "$9.99 on Steam",
+      "money": "Premium Steam sale timed to the holiday season each year, with console ports if it lands.",
+      "comps": [
+        "Venba",
+        "Unpacking",
+        "Florence"
+      ],
+      "why": "Narrative heritage cooking is rare (Venba is the reference and critically loved) while the Cooking tag is crowded with management games (365 releases in 2026, median 22 reviews). A tamalada is a shared tradition for millions of families and a built-in Christmas seasonal moment, the kind of community that shares a game itself.",
+      "risk": "It needs a Mexican-American co-writer and family recipes given with consent; told from outside, the community will reject it.",
+      "firstStep": "One Christmas Eve in the browser: the masa spread, fill and fold action, a stack counter, and one conversation that branches on what you say.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 4,
+        "demand": 6,
+        "gap": 8,
+        "soloSpeed": 7,
+        "creatorFit": 6,
+        "instantPlay": 8,
+        "monetization": 5,
+        "marketability": 8,
+        "momentum": 6,
+        "culture": 9,
+        "scopeFit": 9
+      }
+    },
+    {
+      "id": "lola-on-speaker",
+      "name": "Lola on Speaker",
+      "family": "Other evergreen genres",
+      "theme": "Heritage cooking story",
+      "hook": "Lola's recipe says 'just enough.' Figure out how much that is.",
+      "oneLiner": "A Filipino student abroad cooks family dishes in a tiny dorm kitchen with their grandmother on speakerphone: her instructions are vague, the local shop lacks half the ingredients, and you learn her recipes, and her life, by getting them almost right.",
+      "genre": "Narrative cooking puzzle",
+      "camera": "top-down",
+      "loop": [
+        "Call Lola and pick a dish (adobo, sinigang, lumpia)",
+        "Shop the local store and choose substitutes",
+        "Cook from her vague cues: smell, sound, colour",
+        "Taste, plate and send a photo; she judges and tells a story"
+      ],
+      "clip": "Fingers roll a lumpia tight, seal it with a dab of water, and it lands perfectly in a neat row of twenty.",
+      "look": {
+        "short": "Cramped dorm counter, phone propped on a mug, steam and lamplight",
+        "vibe": "A tiny dorm counter seen from above, a phone propped against a mug showing Lola's call, a single hob and a rice cooker. Flat hand-drawn 2D with bold shapes; cold blue city night outside, warm yellow kitchen light and rising steam inside.",
+        "palette": [
+          {
+            "name": "Rice cooker white",
+            "hex": "#F5F2EC"
+          },
+          {
+            "name": "Adobo brown",
+            "hex": "#6B3E26"
+          },
+          {
+            "name": "Calamansi green",
+            "hex": "#8DBF4A"
+          },
+          {
+            "name": "Dorm night blue",
+            "hex": "#2A3B5C"
+          },
+          {
+            "name": "Lamp yellow",
+            "hex": "#F4C95D"
+          }
+        ]
+      },
+      "path": "web-first",
+      "effort": "small",
+      "price": "Free first dish on web; $6 full game on itch.io and Steam",
+      "money": "Free first recipe as the TikTok link, then a $6 full game; extra 'Lola's holiday dishes' pack later.",
+      "comps": [
+        "Venba",
+        "Cooking Mama",
+        "Coffee Talk"
+      ],
+      "why": "Narrative cooking is a proven critical favourite (Venba) and rare, while generic cooking is crowded (median 22 reviews in the Cooking tag). The 'grandma says just enough' joke is universal, and the Filipino diaspora is a large, very online audience that shares content about lola and food.",
+      "risk": "It needs a Filipino co-writer and real family recipes, and short narrative games have a small sales ceiling.",
+      "firstStep": "One dish (adobo) in the browser: a vague-instruction call, three substitutes, a simmer-by-smell cue and Lola's verdict.",
+      "scores": {
+        "originality": 7,
+        "provenDemand": 4,
+        "demand": 6,
+        "gap": 8,
+        "soloSpeed": 7,
+        "creatorFit": 6,
+        "instantPlay": 8,
+        "monetization": 5,
+        "marketability": 8,
+        "momentum": 6,
+        "culture": 8,
+        "scopeFit": 9
+      }
+    },
+    {
+      "id": "tide-and-quay",
+      "name": "Tide & Quay",
+      "family": "Other evergreen genres",
+      "theme": "Diorama builder, new setting",
+      "hook": "Build a little harbour, then watch the tide go out and come back.",
+      "oneLiner": "A goal-less harbour diorama builder: drag quay walls, slipways and cottages up a cliff, moor boats, and watch the tide roll out and in so boats settle on the mud and float again, with a lighthouse sweeping the town at night.",
+      "genre": "Relaxing builder",
+      "camera": "isometric",
+      "loop": [
+        "Drag a quay wall or a row of cottages along the cliff",
+        "Place boats, nets, a pub, a lighthouse",
+        "Run the tide and the day to see the town change",
+        "Unlock new coves, weathers and boat types"
+      ],
+      "clip": "The tide drains out, a dozen boats tilt gently onto the mud, then the water creeps back in and lifts them all.",
+      "look": {
+        "short": "Granite cove, whitewashed cottages, tidal mud, warm windows at dusk",
+        "vibe": "A small diorama cove floating on a pale backdrop: granite cliffs, whitewashed and pastel cottages stepping up the slope, slate roofs, wet sand and green weed revealed at low tide. Dusk turns the water silver and every window glows; the lighthouse beam sweeps across.",
+        "palette": [
+          {
+            "name": "Harbour slate",
+            "hex": "#4A5A66"
+          },
+          {
+            "name": "Whitewash",
+            "hex": "#F2EFE8"
+          },
+          {
+            "name": "Seaweed",
+            "hex": "#6E7F3A"
+          },
+          {
+            "name": "Sea glass",
+            "hex": "#8FC1B5"
+          },
+          {
+            "name": "Buoy orange",
+            "hex": "#E8743B"
+          }
+        ]
+      },
+      "path": "Steam-first",
+      "effort": "large",
+      "price": "$14.99 on Steam",
+      "money": "Premium Steam sale, then new-cove packs and console ports.",
+      "comps": [
+        "Tiny Glade",
+        "Townscaper",
+        "Dorfromantik"
+      ],
+      "why": "Tiny Glade (2 devs) sold 616K copies at launch and City Builder games reach 1k reviews at 2.5x the Steam rate, but the medieval-village setting is taken. A tide that moves everything you built is a fresh second clip after the build itself, and coastal towns are a well-loved setting with no builder of their own.",
+      "risk": "Tiny Glade's magic is custom procedural geometry; snapped asset-pack pieces will look ordinary next to it, and it competes with Terraces for the studio's builder slot.",
+      "firstStep": "One cove with drag-to-build quay walls and cottages, three boats and a working tide cycle.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 7,
+        "demand": 7,
+        "gap": 6,
+        "soloSpeed": 4,
+        "creatorFit": 5,
+        "instantPlay": 5,
+        "monetization": 7,
+        "marketability": 9,
+        "momentum": 6,
+        "culture": 6,
+        "scopeFit": 6
+      }
+    },
+    {
+      "id": "sauna-lake",
+      "name": "Sauna Lake",
+      "family": "Other evergreen genres",
+      "theme": "Survival-craft in a fresh region",
+      "hook": "Build a lakeside cabin in Finland. Sauna first, then everything else.",
+      "oneLiner": "A cozy co-op survival-craft set in the Finnish lakeland: forage, fish, row between islands and build a cabin, where the sauna is the heart of your camp, your rest point and your reason to plunge into an icy lake with friends.",
+      "genre": "Cozy co-op survival-craft",
+      "camera": "3/4",
+      "loop": [
+        "Forage berries and mushrooms, fish and cut wood",
+        "Build and upgrade the cabin and sauna",
+        "Row to new islands as seasons turn from midnight sun to snow",
+        "Sauna, then cold plunge, to rest and gain buffs"
+      ],
+      "clip": "Four friends burst out of a steaming sauna and leap into a frozen lake hole under the northern lights.",
+      "look": {
+        "short": "Pine islands, red cabins, still lakes, midnight sun and snow",
+        "vibe": "Endless blue lakes dotted with pine islands, red-painted wooden cabins with white trim, birch bark and mossy granite. Summer is a low gold midnight sun on glassy water; winter is blue snow, steam pouring from the sauna door and green auroras above.",
+        "palette": [
+          {
+            "name": "Falun red",
+            "hex": "#9E2B25"
+          },
+          {
+            "name": "Lake blue",
+            "hex": "#2F5D7C"
+          },
+          {
+            "name": "Birch white",
+            "hex": "#EDEBE4"
+          },
+          {
+            "name": "Pine green",
+            "hex": "#2E4A33"
+          },
+          {
+            "name": "Midnight-sun gold",
+            "hex": "#F0B44C"
+          }
+        ]
+      },
+      "path": "Steam-first",
+      "effort": "large",
+      "price": "$17.99 in Steam Early Access",
+      "money": "Early Access on Steam with a 1.0 spike, then console ports.",
+      "comps": [
+        "Dinkum",
+        "Valheim",
+        "Sons of the Forest",
+        "Len's Island"
+      ],
+      "why": "Open World Survival Craft has the best odds in the research (28.3% reach 1k reviews) and solo-dev Dinkum reached 1M+ on a regional theme. Sauna and cold-plunge culture is a big wellness trend, and the Finnish lakeland is unused by any cozy survival game.",
+      "risk": "This is the heaviest content and 3D-art load possible for a solo dev, and it would compete with Driftgarden for the studio's co-op survival slot.",
+      "firstStep": "One island, gather-and-build for a sauna, a rowing boat, and two-player co-op with the sauna-and-plunge rest loop.",
+      "scores": {
+        "originality": 6,
+        "provenDemand": 8,
+        "demand": 8,
+        "gap": 7,
+        "soloSpeed": 2,
+        "creatorFit": 3,
+        "instantPlay": 2,
+        "monetization": 8,
+        "marketability": 8,
+        "momentum": 8,
+        "culture": 7,
+        "scopeFit": 4
+      }
+    }
+  ]
+}
