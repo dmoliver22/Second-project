@@ -251,20 +251,20 @@
   "decisions": [
     {
       "topic": "What to make",
-      "call": "Small web-first cozy games built around one satisfying action and a daily ritual, each ending in something players share. Start with Treat Box and Daily Tidy; use Petal Drop as the fastest pipeline test.",
-      "why": "These sit where the game data and the wider culture agree: blind-box collecting, cleaning and organizing videos, daily habits and little treats. They're also the fastest to build and the easiest to clip.",
+      "call": "Small web-first cozy games with a fresh action and a share built into play. Start with Treat Box and If It Fits; use Lemon Ink as the quickest pipeline test. Cuttings is the strongest growth loop if you're ready to run a small server.",
+      "why": "These scored best for a solo creator after 80 ideas were generated, double-scored and critiqued. They sit where the game data, the culture trends and phone-first distribution agree.",
       "evidence": [
         {
-          "text": "Pop Mart +185% in 2025 on blind boxes",
+          "text": "Idea lab: 80 ideas → 5 finalists",
+          "link": "#ideas"
+        },
+        {
+          "text": "Pop Mart +185% on blind boxes",
           "link": "#culture"
         },
         {
-          "text": "CleanTok ~150B views",
+          "text": "'If it fits, I sits' cat culture",
           "link": "#culture"
-        },
-        {
-          "text": "Wordle: 90 players → millions via the result grid",
-          "link": "#spread"
         }
       ],
       "confidence": "medium"
@@ -385,7 +385,7 @@
     },
     {
       "when": "Step 2",
-      "what": "Build rough phone prototypes of Treat Box and Daily Tidy, plus Petal Drop as a quick pipeline test. Post 3–5 clips of each before polishing anything. Design your cast of characters while you do."
+      "what": "Build rough phone prototypes of Treat Box and If It Fits, plus Lemon Ink as a quick test of the whole pipeline (no server, little art). Post 3–5 clips of each before polishing anything."
     },
     {
       "when": "Step 3",
@@ -405,6 +405,7 @@
     }
   ],
   "suggestedQuestions": [
+    "Of the Idea lab finalists, which should I build first and why?",
     "I'm one person building with AI. Which of the five should I build first, and why?",
     "Walk me through shipping Treat Box on my own site and itch.io this week, step by step.",
     "Design my recurring cast of characters for Treat Box and the other games.",

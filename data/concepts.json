@@ -1,5 +1,5 @@
 {
-  "intro": "Game suggestions built from the gaps, trends, outliers and go-to-market research in this atlas. They're ranked for your model by default: one person building with AI, games playable from a link, marketing on TikTok and YouTube. Switch the scoring to 'Small studio, Steam' to see the flagship-style ideas rise.",
+  "intro": "Game suggestions from two rounds: the first five came from the market research; the second five came out of the Idea lab, where 80 ideas were generated, scored by two judges and attacked by two critics. Everything is ranked for your model by default: one person building with AI, web-first, marketed on TikTok and YouTube.",
   "caveat": "No dataset can guarantee a hit, and most games, web or Steam, earn very little. Each suggestion is a bet backed by specific signals, with gates that tell you early whether it's working. The scores are research-based judgements, so treat close scores as ties.",
   "scoring": {
     "factors": [
@@ -110,6 +110,2174 @@
     ]
   },
   "concepts": [
+    {
+      "id": "leaflings",
+      "ideaId": "link-18",
+      "name": "Leaflings",
+      "track": "main",
+      "niche": "Make-your-own critters · field-guide collecting · photo-to-creature",
+      "hook": "Pick a photo of anything flat (a leaf, a petal, a ticket stub, a crisp). It becomes a little guy.",
+      "oneLiner": "Choose a photo of a real flat object and its exact silhouette and colours become a wobbly critter with ink eyes and twig legs, who moves into your herbarium page and fills a field guide of about 30 shape classes.",
+      "pitch": "Everyone has a pocket full of little flat things: the maple leaf from the walk home, a cinema ticket, a pressed petal, one perfectly curled crisp. Leaflings turns any of them into a shape-true critter in seconds. You pick a photo from your camera roll (or take one through the phone's own photo sheet), the object peels off the picture, blinks, grows legs and waddles onto a hand-drawn herbarium page. Shapes sort into a field guide of about 30 silhouette classes (maple, ginkgo, heart, needle, ticket, crisp...) with a 6 + 1 secret per season, villagers post a gentle request each morning ('the baker wants something red and pointy'), and every critter can be sent to a friend by link or saved as a sticker. The photo never leaves the phone. No two players own the same creatures, because the creatures come from their own pockets and pavements.",
+      "genreTags": [
+        "Creature maker",
+        "Field-guide collection",
+        "Photo-to-play",
+        "Mobile web"
+      ],
+      "spec": {
+        "genre": "Make-and-collect creature toy with a daily request",
+        "players": "1, with critters traded by link",
+        "setting": "A hand-drawn herbarium page that slowly becomes a paper village",
+        "coreVerb": "Find, pick a photo, hatch, collect, trade",
+        "look": "Your real object's photo-cutout with hand-inked eyes and twig legs on kraft herbarium paper",
+        "team": "You + AI + a contract illustrator for the face and limb kit",
+        "audience": "Adults and teens who pick up leaves and keep ticket stubs; journalers and nature-walk posters",
+        "differentiator": "Your own real-world object is the creature: the content generator is the player's pocket, not a gacha",
+        "price": "Free (web) · $3 herbarium pack · $5–8 printed sticker sheet of your own critters"
+      },
+      "audience": "18–35 nature-walk, journaling and 'little treasures' people (fallcore and junk-journal TikTok), plus families with kids; skews female. Secondary: classroom and nature-club use.",
+      "comps": [
+        "Labo Leaves",
+        "Plum's Creaturizer (PBS Kids)",
+        "Pikmin Bloom",
+        "Seek by iNaturalist",
+        "Neko Atsume"
+      ],
+      "sessionLength": "1–3 minutes to hatch one critter and answer the morning request; longer browsing the field guide",
+      "artDirection": "The player's photo supplies the body, so the hand-made art is a small, characterful kit: about 20 hand-inked eyes, mouths, legs and hats, plus one herbarium page and a handful of villagers. The kit must be drawn by a human illustrator with a recognisably own line, never a copied style.",
+      "drivers": [
+        {
+          "signal": "Autumn owns TikTok and leaves are the icon",
+          "detail": "Fallcore peaks from September to November; 'leaves from my walk became little guys' is a ready-made seasonal Short, and launching in autumn rides it.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Players make the content and the clips",
+          "detail": "Every critter is unique to its finder, so 'show me yours' comments and stitches are the growth loop, like Infinite Craft's user-made discoveries.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Collecting with empty silhouettes, not a gacha",
+          "detail": "A 30-slot field guide with a 6 + 1 seasonal secret gives Pop Mart-style completion pressure while the 'drop' is something you physically found.",
+          "strength": "medium",
+          "ref": {
+            "niche": "Creature collector/pet care"
+          }
+        },
+        {
+          "signal": "Touch-grass and screen-time guilt",
+          "detail": "A game that sends you to look at the ground for a red pointy thing is an easy, likeable digital-detox angle.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Camera in in-app browsers, and a crowded collector niche",
+          "detail": "TikTok and Instagram in-app browsers break live camera access, so the file picker must be first; creature collectors are well supplied (demand 6, supply 7), so the photo hook has to carry it.",
+          "strength": "caution",
+          "ref": {
+            "link": "#launch"
+          }
+        }
+      ],
+      "scores": {
+        "originality": {
+          "score": 9,
+          "why": "No one turns your own photographed object into a shape-true critter; Labo Leaves uses presets and Creaturizer is a kids' drawing toy."
+        },
+        "demand": {
+          "score": 6,
+          "why": "Creature collecting and kidult cute are strong, but 'photograph an object' is an unproven ask and creature collectors are well supplied."
+        },
+        "gap": {
+          "score": 8,
+          "why": "Nothing does photo-to-critter on the web; the nearest products are kids' apps and identification tools."
+        },
+        "soloSpeed": {
+          "score": 5,
+          "why": "On-device segmentation that works on messy backgrounds, a trace fallback, a draw mode and a link codec are real engineering, even with AI tools."
+        },
+        "creatorFit": {
+          "score": 6,
+          "why": "The player's photo is the art, so only a face/limb kit is bespoke; segmentation edge cases eat time, but every critter is a video."
+        },
+        "instantPlay": {
+          "score": 6,
+          "why": "Starter leaves and a draw mode play instantly, but the real hook needs a photo, and in-app browsers make the camera path shaky."
+        },
+        "monetization": {
+          "score": 5,
+          "why": "Herbarium pack and printed sticker sheets are honest money; portals barely fit, so ad volume is limited."
+        },
+        "marketability": {
+          "score": 9,
+          "why": "A real leaf peeling off a photo and waddling away is a five-second clip, and players post their own critters."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Fallcore and journaling are peaking; the any-object fix keeps it alive after autumn."
+        },
+        "culture": {
+          "score": 8,
+          "why": "Autumn aesthetics, kidult collecting, ugly-cute critters, junk journals and touch-grass all point here."
+        },
+        "scopeFit": {
+          "score": 8,
+          "why": "Small, clear scope for a team; the hard part is one well-bounded vision problem."
+        }
+      },
+      "whyNow": [
+        "Autumn is the launch window: leaves are on every pavement and on every For You page.",
+        "File pickers now work in most in-app browsers, so a TikTok viewer can hatch a critter without a live camera.",
+        "Creators and players are tired of identical gacha drops; a creature only you could have found is the opposite of slop."
+      ],
+      "pillars": [
+        "Anything flat can become a little guy",
+        "The photo never leaves your phone",
+        "Collect by finding, never by paying",
+        "Every critter is worth sending to someone"
+      ],
+      "coreLoop": [
+        "Read the morning villager request",
+        "Find a flat object (or pick an old photo)",
+        "Hatch it into a critter",
+        "File it in the field guide and fill a silhouette",
+        "Send it to a friend or save it as a sticker",
+        "Come back for the next request"
+      ],
+      "features": {
+        "mvp": [
+          "Camera-roll file picker first (input type=file, accept=image/*), with the phone's own camera sheet as an option; no live viewfinder",
+          "On-device cutout: colour threshold and contour, with an 'put it on white paper' hint, plus a 'trace it with your finger' fallback when the cutout fails",
+          "Photo redrawn to canvas to strip EXIF and GPS before processing; nothing is uploaded",
+          "Critter generation: ~60-point outline + 3-colour palette, hand-inked eyes, mouth and twig legs chosen from the shape",
+          "Six free 'pressed starter leaves' so the very first session has creatures with no photo at all",
+          "Share a critter by link (~250 bytes in the URL) or as a transparent sticker PNG"
+        ],
+        "launch": [
+          "Field guide of about 30 silhouette classes with empty slots, plus a 6 + 1 seasonal secret",
+          "Daily villager requests ('the baker wants something red and pointy') with a soft streak and earned freezes",
+          "'Draw a leaf' input so in-app browser users and portal players can always play",
+          "Herbarium save link and an 'Add to Home Screen' nudge, so iOS storage eviction or a different browser never loses the village",
+          "In-app browser detection with a one-tap 'open in Safari/Chrome for the camera' bar",
+          "Adopt a friend's critter from its link; critters from other cities count as 'exotic' in the guide",
+          "A shop cat who sleeps on whatever critter you made last"
+        ],
+        "postLaunch": [
+          "Seasonal object types: autumn leaves, winter paper snowflakes and ticket stubs, spring petals, summer shells and crisps",
+          "Herbarium pack: frames, decor and extra pages",
+          "Print-on-demand sticker sheet of YOUR critters",
+          "Classroom 'nature walk' mode with no sharing"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (mobile web, installable)",
+          "itch.io"
+        ],
+        "later": [
+          "iOS/Android app (where camera games belong)",
+          "Discord Activity (a shared server herbarium)",
+          "Portal 'draw your own leaf' edition"
+        ]
+      },
+      "pricing": {
+        "base": "Free; $3 herbarium pack; $5–8 printed sticker sheet",
+        "model": "Free creature-making forever; one-time supporter unlock; physical stickers of your own critters",
+        "details": [
+          "Making, collecting and trading critters is always free; nothing random is sold.",
+          "The $3 herbarium pack sells decor, frames and pages, the things you look at.",
+          "Printed sticker sheets of your own critters are personal and non-predatory, and fit gifting.",
+          "At most one optional rewarded ad (an extra request reroll) on the web build."
+        ]
+      },
+      "monetizationPlan": [
+        "$3 herbarium supporter pack",
+        "Print-on-demand sticker sheets of the player's own critters",
+        "Seasonal object kits bundled into the pack (never paywalling the guide)",
+        "A paid mobile app with extra pages once the web hook is proven"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Own the cutout pipeline; film real objects becoming critters for the daily clip."
+        },
+        {
+          "role": "Contract illustrator",
+          "count": 1,
+          "note": "Draws the face and limb kit, the herbarium page and the villagers in their own hand."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$2–8k",
+        "note": "Mostly the face/limb kit and village art; sticker sample prints later."
+      },
+      "steps": [
+        {
+          "name": "Cutout prototype + clip test",
+          "deliverable": "Pick a photo, get a critter; 10 real-object clips posted",
+          "gate": "Move on when 8 of 10 test photos on plain paper cut out cleanly and the clips beat your channel average."
+        },
+        {
+          "name": "Web launch (autumn skin)",
+          "deliverable": "Starter leaves, file picker, trace fallback, critter links and stickers, herbarium save link",
+          "gate": "Move on when 30%+ of visitors hatch a critter from their own photo and 10%+ share one."
+        },
+        {
+          "name": "Field guide + daily requests",
+          "deliverable": "30 silhouette classes, 6 + 1 seasonal secret, villager requests, soft streaks, draw mode",
+          "gate": "Move on when day-2 return reaches 20%+."
+        },
+        {
+          "name": "First money",
+          "deliverable": "$3 herbarium pack; sticker-sheet print test",
+          "gate": "Move on when 1%+ of returning players buy and sticker returns stay low."
+        },
+        {
+          "name": "Any-object seasons + reach",
+          "deliverable": "Winter object types; Discord Activity or portal draw-mode build",
+          "gate": "Move on to a mobile app when winter retention holds near autumn's."
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Before launch",
+          "action": "Post 'I turned leaves from my walk into little guys' clips; ask commenters what object to try next and make their suggestions."
+        },
+        {
+          "when": "Launch",
+          "action": "One critter post daily from viewers' objects; pin 'make yours' in bio; stitch players' strangest critters."
+        },
+        {
+          "when": "Each season",
+          "action": "New object-type reveal (paper snowflakes, petals, shells) with a secret-silhouette tease; long-form devlog on how the cutout works and why the photo never leaves the phone."
+        },
+        {
+          "when": "Ongoing",
+          "action": "'Weirdest thing you've turned into a leafling' prompts; a field-guide poll for the next secret."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Daily",
+          "what": "One villager request; one clip of a viewer's critter."
+        },
+        {
+          "when": "Each season",
+          "what": "New object types, a new 6 + 1 secret and a page decor set."
+        },
+        {
+          "when": "Holidays",
+          "what": "Halloween 'spooky leaves', winter paper snowflakes, Valentine's heart-shaped petals."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Own-photo hatch rate",
+          "target": "30%+ of visitors",
+          "why": "Proves the photo ask isn't too much for phone viewers."
+        },
+        {
+          "metric": "Cutout success on first try",
+          "target": "80%+",
+          "why": "Failed cutouts kill the magic."
+        },
+        {
+          "metric": "Critter share rate",
+          "target": "10%+",
+          "why": "Shares are the growth loop."
+        },
+        {
+          "metric": "Day-2 return",
+          "target": "20%+",
+          "why": "Checks the villager request is a real reason to come back."
+        }
+      ],
+      "killCriteria": [
+        "Fewer than 15% of visitors ever hatch a critter from their own photo after a few thousand visits: the ask is too big; pivot to draw-a-leaf or fold the critter maker into another game.",
+        "Day-2 return stays under 10% after the field guide ships: it's a one-time toy; keep it as a free funnel and stop investing.",
+        "Cutouts keep failing on real phone photos after the trace fallback: the magic doesn't survive contact; stop."
+      ],
+      "risks": [
+        {
+          "risk": "In-app browsers break the camera (TikTok/Instagram webviews)",
+          "mitigation": "File picker and photo library first, never a live viewfinder; detect in-app browsers and offer 'open in Safari/Chrome'; starter leaves and draw mode always work."
+        },
+        {
+          "risk": "Segmentation fails on grass, pavement and shadows",
+          "mitigation": "'Put it on white paper' hint, a finger-trace fallback and a manual nudge of the outline."
+        },
+        {
+          "risk": "Players lose their village (iOS storage eviction, separate in-app storage)",
+          "mitigation": "The herbarium save link is the save; nudge Add to Home Screen; an export/restore button."
+        },
+        {
+          "risk": "Privacy and kids",
+          "mitigation": "EXIF stripped, photos never uploaded, links carry only outline and colours, no free-text names (presets only)."
+        },
+        {
+          "risk": "Seasonal novelty fades after autumn",
+          "mitigation": "Any flat object works, so winter and spring have their own object types; daily requests keep a reason to look."
+        },
+        {
+          "risk": "Weak portal fit limits ad reach",
+          "mitigation": "Treat the web as a funnel to a paid mobile app; a draw-mode build for portals is optional."
+        }
+      ],
+      "revenueAssumptions": "Estimates only. Ads are light here (one optional rewarded ad), so assume ~$2 per 1,000 plays rather than the usual ~$5 per 1,000 plays (itself a low-confidence blended figure). The herbarium pack: at ~5 plays per player, 1,000 plays ≈ 200 players; if 1–1.5% buy the $3 pack, that's ~$6–9 gross, ~$5 net per 1,000 plays after fees. Sticker sheets add ~$1 per 1,000 plays at a few dollars margin each. Total ≈ $7–8 per 1,000 plays. Measure your own.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 200000,
+          "volume": "200k plays",
+          "netUSD": 1500,
+          "note": "The photo ask was too much; a nice free toy."
+        },
+        {
+          "scenario": "Base",
+          "units": 3000000,
+          "volume": "3M plays",
+          "netUSD": 22000,
+          "note": "A seasonal hit with a loyal journaling crowd."
+        },
+        {
+          "scenario": "Strong",
+          "units": 25000000,
+          "volume": "25M plays + sticker sheets + mobile app",
+          "netUSD": 220000,
+          "note": "Critters become a TikTok format; the app sells."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 150000000,
+          "volume": "150M plays + app + merch",
+          "netUSD": 1500000,
+          "note": "A Pikmin-Bloom-style daily habit. Rare."
+        }
+      ],
+      "look": {
+        "short": "A kraft-paper herbarium page · real leaves with inked eyes and twig legs",
+        "vibe": "Imagine opening an old botany notebook on a rainy afternoon. Pressed leaves are taped to the cream pages with little handwritten labels, and then one of them blinks. Its edges lift off the paper, two ink-dot eyes open, matchstick legs unfold, and it toddles to the next page to say hello to a ticket stub with a top hat.",
+        "layout": "Portrait phone screen. Top: a slim paper tab with today's villager request in handwriting ('The baker wants something red and pointy') next to the villager's little face, and a row of seasonal silhouettes showing 6 + 1 slots. Middle two-thirds: the herbarium page itself, cream paper with faint ruled lines, where your critters stand, wander and nap beside handwritten labels; swipe sideways to turn pages. Bottom third: a big round 'find' button shaped like a magnifying glass, with 'pick a photo' and 'draw one' as two smaller buttons beside it. When you pick a photo, the page dims, your picture appears like a print on the desk, a dotted line traces around the object, it peels off with a paper rustle, eyes pop open, legs unfold, and the new critter walks onto the page and its silhouette fills in the field guide.",
+        "references": [
+          "Victorian herbarium sheets and pressed-flower books",
+          "Junk journals and scrapbook stickers",
+          "Museum specimen labels",
+          "Paper-craft stop-motion"
+        ],
+        "palette": [
+          {
+            "name": "Herbarium cream",
+            "hex": "#F3EAD7"
+          },
+          {
+            "name": "Maple red",
+            "hex": "#C8553D"
+          },
+          {
+            "name": "Ginkgo gold",
+            "hex": "#E8B63E"
+          },
+          {
+            "name": "Moss",
+            "hex": "#7A8B4F"
+          },
+          {
+            "name": "Rain slate",
+            "hex": "#9DB4C0"
+          },
+          {
+            "name": "Ink brown",
+            "hex": "#4A3B2E"
+          }
+        ],
+        "shapes": "The body is whatever the player found, kept true to its silhouette; everything added is small and simple: round dot eyes, a tiny curved mouth, thin twig legs, little hats.",
+        "characters": "Critters are 90% real object and 10% personality. Villagers are a handful of round paper-doll neighbours (a baker, a postmistress, a beetle librarian) and a loaf-shaped shop cat.",
+        "camera": "Flat, top-down, like looking at a notebook on a desk. Portrait first, so a screenshot is one full page.",
+        "lighting": "Soft overcast window light, with a gentle drop shadow under each critter so it looks like it's standing on the paper.",
+        "textures": "Kraft and cream paper grain, washi tape corners, pencil ruling, real photo texture on every critter.",
+        "ui": "Paper tabs and torn-edge cards, rubber-stamp icons, big thumb-sized round buttons.",
+        "type": "A handwriting font made from the creator's own handwriting for labels, with a clean serif (e.g. Literata) for the field guide.",
+        "motion": "Critters peel off with a slight curl, wobble when they walk, and do a tiny hop when tapped; pages turn with a real paper bend.",
+        "sound": "Paper rustle, a soft 'pip' when eyes open, tiny twig footsteps, pencil scratches. Music: acoustic guitar and soft woodwinds.",
+        "screenshot": "A full herbarium page: a maple leaf, a ginkgo, a ticket stub and a crisp standing in a row with handwritten labels under each.",
+        "clip": "A hand holds a red maple leaf on white paper → snap → it peels off the photo → eyes open → it waddles onto the page. Five seconds.",
+        "avoid": [
+          "Generic cartoon monsters that hide the real object",
+          "Toothy or creepy faces",
+          "Glossy plastic UI or neon colours",
+          "Any imitation of a known illustrator's style"
+        ]
+      },
+      "distribution": {
+        "ship": "Own site (installable mobile web) + itch.io, launched in autumn",
+        "firstMoney": "$3 herbarium pack, then print-on-demand sticker sheets of your own critters",
+        "reach": "Weak portal fit: a 'draw your own leaf' build for CrazyGames or YouTube Playables, and a Discord Activity where a server shares one herbarium",
+        "graduate": "iOS/Android app, where camera games belong; Steam not needed"
+      },
+      "origin": "Idea lab"
+    },
+    {
+      "id": "if-it-fits",
+      "ideaId": "culture-13",
+      "name": "If It Fits",
+      "track": "main",
+      "niche": "Soft-body physics puzzle · cats are liquid · daily room",
+      "hook": "Cats are liquid. Prove it: pour this chonk into a teacup.",
+      "oneLiner": "A no-fail soft-body puzzle where you nudge, tip and coax squishy cats into teacups, boxes, boots and sinks until every cat fits and sits, with a new room every morning.",
+      "pitch": "'Cats are liquid' and 'if it fits, I sits' are two of the internet's oldest cat jokes, and nobody has made the game that proves them. In If It Fits each room has a few soft-body cats and some deeply unsuitable containers. You nudge and tip them, and they glorp, ooze and loaf into place. Each breed flows differently (a kitten pours like water, a Persian like honey, a chonk like pudding, a sphynx wobbles like jelly), so breeds are both the puzzle variety and a 6 + 1 secret collection. A new room arrives every morning, generated from a shared prop library and checked by a solver so it always has a fair par, and a sandbox photo room lets players pour any cat into anything and post the result. When the last cat settles, the camera pans over the room as the purring builds. It's a physics clip that sells itself and a perfect portal game.",
+      "genreTags": [
+        "Physics puzzle",
+        "Daily puzzle",
+        "Cats",
+        "Mobile web"
+      ],
+      "spec": {
+        "genre": "Soft-body fill-the-room puzzle",
+        "players": "1, with a shareable daily result",
+        "setting": "Cozy rooms full of teacups, boxes, boots, sinks and fruit bowls",
+        "coreVerb": "Nudge, pour, squish, loaf",
+        "look": "Round gouache-style cats with dot eyes; warm painted rooms built from modular props",
+        "team": "You + AI + a contract illustrator",
+        "audience": "Cat people of every age; physics-puzzle and portal players",
+        "differentiator": "Breeds with their own viscosity make filling space the puzzle; daily solver-checked rooms",
+        "price": "Free (web) · $3 room packs and coats · $4–5 premium app/Steam later"
+      },
+      "audience": "Cat owners and cat-meme fans aged 13–45 (very broad, slightly female), portal puzzle players, streamers who like physics comedy.",
+      "comps": [
+        "Suika Game",
+        "Cats & Soup",
+        "Liquid Cat gashapon toys",
+        "Mobile 'cats are liquid' sort puzzles",
+        "A Little to the Left"
+      ],
+      "sessionLength": "2–4 minutes for the daily room; open-ended in the sandbox",
+      "artDirection": "One cat rig with hand-painted coats and faces, a library of about 40 hand-drawn container props, and three reusable room backdrops. Human-made art is the charm; it must be cute while squishing, never gross.",
+      "drivers": [
+        {
+          "signal": "Cats are the internet's favourite content",
+          "detail": "Cat content keeps rising; 'cats are liquid' is an evergreen meme, and Liquid Cat capsule toys prove people pay for the joke.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Satisfying physics is streamer and Shorts gold",
+          "detail": "Slow, squishy, readable without sound: a chonk glorping into a teacup is the kind of 3-second hook that made Suika spread.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Portals want cute physics puzzles",
+          "detail": "Offline single-player physics puzzles are the best portal fit: Poki, CrazyGames and YouTube Playables (puzzle is a top Playables category).",
+          "strength": "strong",
+          "ref": {
+            "link": "#launch"
+          }
+        },
+        {
+          "signal": "Cats sell cozy games",
+          "detail": "Cats & Soup's 80M+ downloads show cat-centric cozy games have a huge, paying audience.",
+          "strength": "medium",
+          "ref": {
+            "game": "cats-and-soup"
+          }
+        },
+        {
+          "signal": "The name is taken and the feel is a single point of failure",
+          "detail": "'Cats are Liquid' is an existing Steam series and mobile sort puzzles use the phrase; if the soft-body cat is jittery or fiddly on a phone, the fantasy dies in ten seconds.",
+          "strength": "caution",
+          "ref": {
+            "link": "#ideas"
+          }
+        }
+      ],
+      "scores": {
+        "originality": {
+          "score": 6,
+          "why": "The meme and some cat-liquid games exist, but a cozy soft-body fill-the-room puzzle with breed viscosity is new."
+        },
+        "demand": {
+          "score": 8,
+          "why": "Cats plus satisfying physics is about as broad as cozy gets; cat games reliably find big audiences."
+        },
+        "gap": {
+          "score": 6,
+          "why": "Several games borrow the phrase and physics puzzles are plentiful, but none owns this exact fantasy."
+        },
+        "soloSpeed": {
+          "score": 5,
+          "why": "The soft-body cat and the par solver are real tuning work; rooms are cheap once the prop library exists."
+        },
+        "creatorFit": {
+          "score": 7,
+          "why": "One rig with palette swaps and a shared prop library; endless clip material."
+        },
+        "instantPlay": {
+          "score": 9,
+          "why": "Tap the link, drag a cat; drag controls by default, no permissions."
+        },
+        "monetization": {
+          "score": 7,
+          "why": "Portal ads, a $3 unlock, merch of cat-in-cup stickers and a clear premium port."
+        },
+        "marketability": {
+          "score": 10,
+          "why": "A huge cat slowly pouring into a teacup is the clip; sandbox photos make players post their own."
+        },
+        "momentum": {
+          "score": 8,
+          "why": "Cat content is still rising; satisfying-physics clips are evergreen."
+        },
+        "culture": {
+          "score": 8,
+          "why": "Cats, CleanTok satisfaction, ASMR purring and bounded daily rituals."
+        },
+        "scopeFit": {
+          "score": 9,
+          "why": "Small, contained puzzle game with a clear content pipeline."
+        }
+      },
+      "whyNow": [
+        "The meme is evergreen and nobody has made the definitive game of it.",
+        "Portals and YouTube Playables are hungry for cute, offline physics puzzles.",
+        "Soft-body physics now runs smoothly in phone browsers, so the clip can be the actual game in a link."
+      ],
+      "pillars": [
+        "Squishy, never gross",
+        "No fail: every cat eventually fits",
+        "One new room every morning, always fair",
+        "A sandbox worth photographing"
+      ],
+      "coreLoop": [
+        "Open the morning room",
+        "Study the cats and containers",
+        "Nudge and tip until each cat pours in",
+        "Fits & sits: the purr pan",
+        "Share your cat-face grid",
+        "Pour for fun in the sandbox"
+      ],
+      "features": {
+        "mvp": [
+          "One soft-body cat rig (pressure-spring blob, ~24–32 nodes, fixed-step physics) with drag and tap controls",
+          "Four breeds with distinct viscosity: kitten = water, Persian = honey, chonk = pudding, sphynx = jelly",
+          "Three hand-made rooms built from the prop library",
+          "'Cozy points' scoring by how snugly each cat fits, not by failures",
+          "'Fits & sits' reveal: camera pan with purring that builds as the room fills",
+          "Share grid of cat faces, spoiler-free"
+        ],
+        "launch": [
+          "Daily room generated from a shared library of ~40 containers on 3 reusable backdrops, with a solver-checked par",
+          "Breed collection: 6 + 1 secret, each with its own flow and a hand-painted coat",
+          "Sandbox Loaf: pour any cat into any prop and take a photo-mode screenshot",
+          "Soft streak with earned freezes; a 'that's enough for today' ending card",
+          "Optional tilt control behind an explicit permission tap (iOS)",
+          "Portal build (Poki/CrazyGames, YouTube Playables) with the daily room offline"
+        ],
+        "postLaunch": [
+          "Room packs: bathhouse, bookshop, Halloween attic, winter cabin",
+          "Coats and accessories (direct purchase)",
+          "Cat-in-cup stickers and acrylic standees",
+          "Premium app/Steam edition with 100 hand-tuned rooms and a level editor"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (mobile web)",
+          "itch.io",
+          "Poki or CrazyGames (early, since it suits portals)"
+        ],
+        "later": [
+          "YouTube Playables",
+          "Steam ($4–5)",
+          "iOS/Android premium"
+        ]
+      },
+      "pricing": {
+        "base": "Free daily room; $3 unlock; $4–5 premium edition later",
+        "model": "Free web with portal ads; one-time unlock; premium port",
+        "details": [
+          "The daily room and sandbox are always free.",
+          "$3 one-time unlock: room packs and coats. Nothing random is sold.",
+          "Portal ads on portal traffic only; a rewarded ad can give a hint, never a skip-the-fun.",
+          "A $4–5 premium edition with 100 rooms once the web version proves the hook."
+        ]
+      },
+      "monetizationPlan": [
+        "Portal ad revenue (Poki/CrazyGames, Playables)",
+        "$3 room pack and coats unlock on own site and itch",
+        "Cat-in-cup stickers and acrylic standees",
+        "$4–5 Steam and mobile premium edition"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Own the physics feel and the room solver; post an 'impossible fit' clip every day."
+        },
+        {
+          "role": "Contract illustrator",
+          "count": 1,
+          "note": "Paints the cat rig, breeds, coats and the prop library in their own hand."
+        },
+        {
+          "role": "Sound recordist (could be you)",
+          "count": 1,
+          "note": "Real purrs, soft thumps and ceramic clinks; the purr is the ASMR hook."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$4–12k",
+        "note": "Cat breeds, props and backdrops; later room packs and merch samples."
+      },
+      "steps": [
+        {
+          "name": "Cat-feel prototype",
+          "deliverable": "One soft-body cat pouring into three containers on a mid-range Android phone",
+          "gate": "Move on only if the squish is delightful to strangers on a phone; if not, stop."
+        },
+        {
+          "name": "Clip test",
+          "deliverable": "Five 'chonk into teacup' clips from the prototype",
+          "gate": "Move on when clips beat your channel average and comments ask for a link."
+        },
+        {
+          "name": "Web launch",
+          "deliverable": "Four breeds, three rooms, cozy points, fits & sits reveal, share grid",
+          "gate": "Move on when 60%+ of visitors finish a room."
+        },
+        {
+          "name": "Daily rooms + sandbox",
+          "deliverable": "Prop library, room generator with solver-checked par, Sandbox Loaf photo mode, 6 + 1 breeds",
+          "gate": "Move on when day-2 return reaches 25%+ and players post sandbox photos."
+        },
+        {
+          "name": "Portals + first money",
+          "deliverable": "Poki/CrazyGames build; $3 unlock on own site",
+          "gate": "Move on when portal ratings hold 4.3+ and 1%+ of own-site players unlock."
+        },
+        {
+          "name": "Premium edition",
+          "deliverable": "Steam/mobile edition with 100 rooms",
+          "gate": "Build it when wishlists or a mailing list show demand."
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Before launch",
+          "action": "'Cats are liquid. Prove it.' clips of a chonk slowly pouring into a teacup; ask commenters which container is next."
+        },
+        {
+          "when": "Launch",
+          "action": "An 'impossible fit' clip every day; stitch players' sandbox photos; send the portal build to cat and physics streamers."
+        },
+        {
+          "when": "Each season",
+          "action": "New room pack trailer (Halloween attic, winter cabin, spring bathhouse) and a secret-breed tease; long-form devlog on building a squishy cat."
+        },
+        {
+          "when": "Ongoing",
+          "action": "'Rate my loaf' community posts and breed polls; use 'cats are liquid' in every caption for search."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Daily",
+          "what": "One generated room with a par; one clip."
+        },
+        {
+          "when": "Each season",
+          "what": "A themed room pack and a new secret breed."
+        },
+        {
+          "when": "Holidays",
+          "what": "Pumpkin and stocking containers; a festive sandbox prop set."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "First-room completion",
+          "target": "60%+",
+          "why": "Checks the cat feels good and controls are obvious."
+        },
+        {
+          "metric": "Day-2 return",
+          "target": "25%+",
+          "why": "The daily room should become a habit."
+        },
+        {
+          "metric": "Share or screenshot rate",
+          "target": "8%+",
+          "why": "Sandbox photos and grids drive growth."
+        },
+        {
+          "metric": "Portal rating",
+          "target": "4.3+ stars",
+          "why": "Portals promote highly rated games."
+        }
+      ],
+      "killCriteria": [
+        "Strangers don't smile at the cat-feel prototype on a phone: the core fantasy fails; stop before building rooms.",
+        "Clips don't beat your channel average after 10 posts: the hook isn't landing; rethink the cat or the framing.",
+        "Day-2 return stays under 12% after daily rooms ship: keep it as a portal toy and don't build the premium edition."
+      ],
+      "risks": [
+        {
+          "risk": "The soft-body cat is jittery, gross or fiddly on phones",
+          "mitigation": "Prototype the cat first and gate everything on its feel; fixed-step physics, capped node count, generous drag targets."
+        },
+        {
+          "risk": "Puzzles get solved by shaking",
+          "mitigation": "Viscosity per breed, container shapes that need order and timing, and cozy points for snug fits rather than just 'inside'."
+        },
+        {
+          "risk": "Name collisions ('Cats are Liquid' Steam series; 'If It Fits' may also be in use)",
+          "mitigation": "Check stores and trademarks before launch; keep 'cats are liquid' in captions, not the title; have a fallback name ready (e.g. 'Pour Cat')."
+        },
+        {
+          "risk": "Generated rooms feel samey",
+          "mitigation": "Hand-made backdrops and a curated prop library; the solver rejects dull rooms; hand-tune a showcase room each season."
+        },
+        {
+          "risk": "Clones on portals once it spreads",
+          "mitigation": "Move fast to portals yourself; the breeds, the purr and the cast are the moat."
+        }
+      ],
+      "revenueAssumptions": "Estimates only. Ads: ~$5 per 1,000 plays to you (≈1.5 ads per play at a blended eCPM of ~$5, 100% kept on traffic you bring to Poki); low confidence, measure your own. The $3 unlock: at ~6 plays per player, 1,000 plays ≈ 170 players; if ~1% unlock that's ~$5 gross, ~$2 net per 1,000 plays after fees and portal share. Total ≈ $7 per 1,000 plays. A premium edition at $4–5 nets ~$3 per copy after store cuts.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 500000,
+          "volume": "500k plays",
+          "netUSD": 3500,
+          "note": "Cute, but the squish didn't spread."
+        },
+        {
+          "scenario": "Base",
+          "units": 10000000,
+          "volume": "10M plays",
+          "netUSD": 70000,
+          "note": "A steady portal and daily-room favourite."
+        },
+        {
+          "scenario": "Strong",
+          "units": 60000000,
+          "volume": "60M plays + 40k premium copies",
+          "netUSD": 540000,
+          "note": "Streamers pick it up; the premium edition sells."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 300000000,
+          "volume": "300M plays + 300k premium copies + merch",
+          "netUSD": 3000000,
+          "note": "A Suika-style cat phenomenon. Rare."
+        }
+      ],
+      "look": {
+        "short": "Warm painted rooms · round squishy cats pouring into teacups",
+        "vibe": "Imagine a sunny kitchen on a lazy afternoon. A huge ginger cat sits on the counter above a tiny blue teacup. You nudge him, and he sighs, slowly glorps over the rim like warm pudding, and settles into a perfect loaf with two ears and a tail sticking out. The room hums with a deep, happy purr.",
+        "layout": "Portrait phone screen. Top: a slim bar with the room's name, a row of small cat faces (one per cat, grey until it's seated) and the par shown as a little paw count. Middle two-thirds: the room itself, a painted kitchen or bathroom wall with shelves, a sink, boxes and teacups at different heights, and two or three round cats lounging on top of things. Bottom third: the floor of the room and a soft tray with 'undo', 'hint' and 'sandbox' as big round buttons. You drag a cat with your finger to nudge it; it stretches toward your finger, then oozes off a shelf, pours into a container and settles. When the last cat sits, the buttons fade, the camera slowly pans across the room from cat to cat, the purring swells, and the cat-face row turns gold.",
+        "references": [
+          "Liquid Cat capsule toys",
+          "Mid-century children's picture books (painted, flat colour)",
+          "Japanese cat-café interiors",
+          "Ceramic teacup and kitchenware shop windows"
+        ],
+        "palette": [
+          {
+            "name": "Ginger",
+            "hex": "#E8964A"
+          },
+          {
+            "name": "Cream fur",
+            "hex": "#F7E6CC"
+          },
+          {
+            "name": "Teacup blue",
+            "hex": "#8FB3D9"
+          },
+          {
+            "name": "Mint tile",
+            "hex": "#BFDCCB"
+          },
+          {
+            "name": "Oak floor",
+            "hex": "#C9A27A"
+          },
+          {
+            "name": "Night ink",
+            "hex": "#3E3A4F"
+          }
+        ],
+        "shapes": "Cats are almost circles with ears; they stretch into teardrops when they pour and settle into loaves. Containers are chunky and simple with thick rims.",
+        "characters": "Breeds with a personality each: a sleepy chonk, a dramatic Persian, a zippy kitten, a wobbly sphynx, a polite tabby, a fluffy Maine Coon and one secret cat. Dot eyes, tiny mouths, no realistic anatomy.",
+        "camera": "Side-on, like a dollhouse cutaway. Portrait first, so a screenshot is the whole room.",
+        "lighting": "Warm afternoon sun through a window; soft shadows under each cat. The reveal pan gets a gentle golden glow.",
+        "textures": "Gouache-like flat colour with a little paper grain; visible brush edges on fur; glazed ceramics with a single highlight.",
+        "ui": "Round, chunky buttons like cat-food tins; paw-print counters; a cat-face row as the progress bar.",
+        "type": "Round, soft display font (e.g. Baloo 2) with a simple body font (e.g. Nunito).",
+        "motion": "Cats stretch toward your finger, pour with a slow wobble, overshoot slightly and settle; ears twitch and tails flick when seated.",
+        "sound": "A soft 'glorp' as cats pour, a ceramic clink as they land, real recorded purrs that layer and swell at the reveal. Music: gentle piano and brushed drums.",
+        "screenshot": "A kitchen where a chonk fills a teacup, a kitten is in a boot and a Persian has overflowed a fruit bowl, all purring.",
+        "clip": "Huge cat above tiny teacup → finger nudge → slow glorp → perfect loaf with ears poking out → purr. Five seconds.",
+        "avoid": [
+          "Realistic fur or anatomy (squishing then reads as gross)",
+          "Liquid that looks like actual fluid or goo",
+          "Any suggestion the cats are hurt or stuck",
+          "Imitating any existing cat character or an artist's style"
+        ]
+      },
+      "distribution": {
+        "ship": "Own site + itch.io",
+        "firstMoney": "$3 unlock for room packs and coats",
+        "reach": "Poki or CrazyGames early, then YouTube Playables; a Discord Activity sandbox later",
+        "graduate": "$4–5 Steam and mobile premium edition with 100 rooms"
+      },
+      "origin": "Idea lab"
+    },
+    {
+      "id": "lemon-ink",
+      "ideaId": "verbs-01",
+      "name": "Lemon Ink",
+      "track": "main",
+      "niche": "Little gifts by link · secret notes · tactile reveal",
+      "hook": "Send a secret note. They have to iron it to read it.",
+      "oneLiner": "Write a short hidden note, add a music-box tune if you like, and send it as a link; your friend smooths out the crumpled paper with a warm iron until your words bloom in brown lemon ink.",
+      "pitch": "Group chats are full of words and short on gestures. Lemon Ink is a little gift you send by link: write up to about 200 characters, pick an occasion (birthday, Valentine's, sorry, thank you, 'open when you're sad'), choose your paper and, if you like, a tune from a pre-punched music-box library. Your friend opens a crumpled, coffee-stained page and has to iron it flat; wrinkles hiss away and your handwriting slowly browns into view, then the little music box plays. They tap 'write back', and the reply arrives stacked on top of yours. Every note you receive goes into a keepsake drawer. As you collect stationery, the reveal changes: hold a candle under it, rub a pencil across it, steam it over a kettle. It merges three gift ideas (Lemon Ink, Music Box Mail and Songbird) into one 'little gifts by link' brand, needs no server, and keeps the note in the link, with firm safeguards against misuse.",
+      "genreTags": [
+        "Gift toy",
+        "Secret messages",
+        "ASMR reveal",
+        "Mobile web"
+      ],
+      "spec": {
+        "genre": "Link-gift toy with a tactile reveal",
+        "players": "2 (sender and recipient), in chains",
+        "setting": "A writing desk with a warm iron, a candle, a kettle and a little music box",
+        "coreVerb": "Write, send, iron, reply",
+        "look": "Real scanned crumpled paper, brown lemon-ink handwriting, a toy-like iron and a carved music box",
+        "team": "You + AI + a sound recordist (could be you); light illustration",
+        "audience": "Friends, couples and families who send little notes; e-card senders of every age",
+        "differentiator": "The reveal is physical and the gift is personal: a note your friend has to iron open",
+        "price": "Free sending forever · $3 stationery pack · $1–2 seasonal papers · test a ~$12/yr card-sender plan"
+      },
+      "audience": "Primary: 16–35 friends and couples in group chats (Valentine's, birthdays, crushes, apologies). Secondary: older card-senders who already pay for animated e-cards. Kids via a presets-only mode.",
+      "comps": [
+        "Jacquie Lawson e-cards",
+        "Kind Words",
+        "Music Box Fun",
+        "'Open when' letters",
+        "Scratch-card reveal apps"
+      ],
+      "sessionLength": "1–2 minutes to write or reveal a note; a minute rereading the keepsake drawer",
+      "artDirection": "Mostly real, human-made material: scanned crumpled papers, the creator's own handwriting as the font, recorded iron hiss and a real music-box comb. A small illustrated set (the iron, candle, kettle, music box and a cat paw stamp) gives it a recognisable charm.",
+      "drivers": [
+        {
+          "signal": "Reveals and ASMR are native feed formats",
+          "detail": "Unboxing and 'oddly satisfying' sounds are proven; a crumpled page hissing flat as brown words bloom is a sound-on and sound-off clip.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "The share is the game",
+          "detail": "Like Wordle's grid, every note is a link someone must open, and 'write back' turns one share into a chain without a server.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Gestures for couples and lonely friends",
+          "detail": "Loneliness and long-distance relationships drive demand for small warm gestures; Valentine's and 'open when' letters are ready occasions.",
+          "strength": "medium",
+          "ref": {
+            "niche": "Cozy games for couples"
+          }
+        },
+        {
+          "signal": "People already pay for cozy cards",
+          "detail": "Animated e-card subscriptions show adults pay for occasions; seasonal paper packs fit 'little treat' prices.",
+          "strength": "supporting",
+          "ref": {
+            "link": "#ideas"
+          }
+        },
+        {
+          "signal": "One-shot use, misuse risk and no portal loop",
+          "detail": "The recipient irons once and leaves; free text under your brand can carry bullying or phishing; portals can't do the link-to-friend loop, so reach there needs a separate story mode.",
+          "strength": "caution",
+          "ref": {
+            "link": "#launch"
+          }
+        }
+      ],
+      "scores": {
+        "originality": {
+          "score": 7,
+          "why": "An ironing reveal as a private message format is new; e-cards and music-box sequencers exist, but none are tactile and personal like this."
+        },
+        "demand": {
+          "score": 5,
+          "why": "People send cards and notes, but it's an occasions product with spiky, low-frequency use."
+        },
+        "gap": {
+          "score": 7,
+          "why": "No cozy tactile note-gift on the web; e-cards feel dated and Music Box Fun is a tool, not a gift."
+        },
+        "soloSpeed": {
+          "score": 8,
+          "why": "A heat shader, a URL codec and a tune player; no server and very little bespoke art."
+        },
+        "creatorFit": {
+          "score": 8,
+          "why": "Scans, own handwriting and recorded sound; easy to film, though the personal notes themselves aren't public content."
+        },
+        "instantPlay": {
+          "score": 9,
+          "why": "The recipient taps and irons with one finger; iOS audio and scroll quirks need care."
+        },
+        "monetization": {
+          "score": 4,
+          "why": "Stationery and seasonal papers are small; a card-sender plan is untested; no ads on gifts."
+        },
+        "marketability": {
+          "score": 7,
+          "why": "The iron-and-bloom clip is lovely, and people film opening notes, but most notes stay private."
+        },
+        "momentum": {
+          "score": 6,
+          "why": "ASMR and reveals are peaking; e-cards are flat; Valentine's is a reliable spike."
+        },
+        "culture": {
+          "score": 7,
+          "why": "Loneliness and small gestures, ASMR, unboxing and human-made handwriting all support it."
+        },
+        "scopeFit": {
+          "score": 9,
+          "why": "Tiny, contained and server-free."
+        }
+      },
+      "whyNow": [
+        "Group chats need gestures, not more text; a note someone has to iron open feels like a real gift.",
+        "Halloween ('invisible ink spell' paper) and Valentine's are ready launch moments.",
+        "Human-made handwriting and real recorded sound stand out against generated content."
+      ],
+      "pillars": [
+        "Sending is always free",
+        "The reveal is the gift",
+        "Safe by design: short, filtered, no links",
+        "Everything you receive is kept"
+      ],
+      "coreLoop": [
+        "Pick an occasion and paper",
+        "Write a short note (and add a tune)",
+        "Send the link",
+        "Friend irons it open",
+        "Friend writes back on top",
+        "Notes collect in the keepsake drawer"
+      ],
+      "features": {
+        "mvp": [
+          "Compose a note up to ~200 characters, compressed into the link (deflate + base64url in the URL fragment, so it isn't readable in the URL or link preview)",
+          "Iron reveal: wrinkle normal map flattens and lemon ink browns with accumulated heat; the iron sits ~60px above the finger so it's visible",
+          "Safeguards: word and slur filter on compose, URLs stripped and never linkified, 'written by a player, not Lemon Ink' footer",
+          "Report button that sends the note's hash to a simple report inbox; a shipped blocklist of reported hashes refuses to render them",
+          "'Write back' that stacks the reply on the previous note (up to 3 deep, still all in the link)",
+          "Presets-only mode for kids and shy senders"
+        ],
+        "launch": [
+          "Occasions: birthday, Valentine's, apology, thank-you, 'open when'",
+          "Pre-punched music-box library of public-domain tunes, cranked with a finger after the reveal",
+          "Keepsake drawer of every note received, with an export link and an 'Add to Home Screen' nudge",
+          "Halloween 'invisible ink spell' paper as the first seasonal paper",
+          "Add the occasion to your calendar (.ics) for 'open on your birthday' notes",
+          "iOS audio set to playback so phones on silent still play the tune"
+        ],
+        "postLaunch": [
+          "Reveal variants as stationery unlocks: candle, pencil rubbing, steam",
+          "Seasonal papers and wax seals",
+          "Songbird courier: a little bird delivers the note and sings its tune (cosmetic)",
+          "'Dead-letter office' story mode of authored notes, released seasonally as the portal edition",
+          "Card-sender plan test: all stationery and tunes plus an occasion reminder calendar"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (mobile web)",
+          "itch.io page linking to it"
+        ],
+        "later": [
+          "Discord Activity (send a note to a channel member)",
+          "Portal story-mode edition (Poki/CrazyGames, YouTube Playables)",
+          "iOS/Android app with real occasion reminders"
+        ]
+      },
+      "pricing": {
+        "base": "Free sending; $3 stationery pack; $1–2 seasonal papers",
+        "model": "Free gift loop; one-time supporter pack; small seasonal packs; a card-sender plan to test",
+        "details": [
+          "Never paywall sending or reading a note.",
+          "$3 stationery pack: papers, inks, seals, tunes and the candle/pencil/steam reveals.",
+          "$1–2 seasonal papers (Halloween, winter, Valentine's).",
+          "Test a ~$12/yr card-sender plan aimed at older e-card senders: every stationery set plus occasion reminders.",
+          "No ads on received notes; ads only in the portal story edition."
+        ]
+      },
+      "monetizationPlan": [
+        "$3 stationery supporter pack",
+        "$1–2 seasonal paper packs",
+        "~$12/yr card-sender plan (test)",
+        "Ads in the portal story edition only"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Write the safeguards first; film iron reveals and reply chains."
+        },
+        {
+          "role": "Sound recordist (could be you)",
+          "count": 1,
+          "note": "Real iron hiss, paper crinkle, candle crackle and a real music-box comb."
+        },
+        {
+          "role": "Contract illustrator (light)",
+          "count": 1,
+          "note": "Iron, candle, kettle, music box, wax seals and a cat paw stamp."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$1–5k",
+        "note": "Sound recording, a handful of illustrated objects and paper scans; the handwriting font is the creator's own."
+      },
+      "steps": [
+        {
+          "name": "Iron reveal + safeguards",
+          "deliverable": "Compose → link → iron → reveal, with the 200-character cap, filter, link-stripping and report button",
+          "gate": "Move on when friends iron a note open without help and the filter blocks a test list of abuse."
+        },
+        {
+          "name": "Clip test",
+          "deliverable": "Five crumpled-note reveal clips (sound on and off)",
+          "gate": "Move on when clips beat your channel average and comments ask 'how do I send one?'."
+        },
+        {
+          "name": "Web launch",
+          "deliverable": "Occasions, reply chains, keepsake drawer, Halloween paper",
+          "gate": "Move on when 15%+ of recipients send a note back."
+        },
+        {
+          "name": "Music box + first money",
+          "deliverable": "Tune library and crank; $3 stationery pack with candle, pencil and steam reveals",
+          "gate": "Move on when 2%+ of senders buy."
+        },
+        {
+          "name": "Valentine's push + plan test",
+          "deliverable": "Valentine's papers; card-sender plan offered to returning senders",
+          "gate": "Keep the plan only if it converts and refund requests stay low."
+        },
+        {
+          "name": "Reach",
+          "deliverable": "Discord Activity; portal 'dead-letter office' story edition",
+          "gate": "Move on to an app when returning senders ask for reminders."
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Before launch",
+          "action": "ASMR reveal clips: a crumpled page hisses flat and 'I never told you, but...' browns into view."
+        },
+        {
+          "when": "Launch",
+          "action": "'Send this to the friend who...' hooks; film real reactions (with permission) of people ironing notes."
+        },
+        {
+          "when": "Each season",
+          "action": "Seasonal paper reveal (Halloween spell ink, winter frost, Valentine's); long-form devlog on recording the iron hiss and making a handwriting font."
+        },
+        {
+          "when": "Ongoing",
+          "action": "'Open when' series and reply-chain screenshots; pitch it as the anti-e-card for couples and long-distance friends."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Each season",
+          "what": "A new paper, ink colour and a public-domain tune."
+        },
+        {
+          "when": "Holidays",
+          "what": "Occasion sets for Halloween, winter holidays, Lunar New Year, Valentine's and Mother's Day."
+        },
+        {
+          "when": "Ongoing",
+          "what": "Review reports, update the blocklist and the word filter."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Reply rate",
+          "target": "15%+ of recipients",
+          "why": "Chains are the growth loop."
+        },
+        {
+          "metric": "Sends per new sender",
+          "target": "1.5+",
+          "why": "Shows people send to more than one friend."
+        },
+        {
+          "metric": "Stationery conversion",
+          "target": "2%+ of senders",
+          "why": "Checks the small-money model."
+        },
+        {
+          "metric": "Reports per 1,000 notes",
+          "target": "Under 1",
+          "why": "Keeps the brand safe."
+        }
+      ],
+      "killCriteria": [
+        "Reply rate stays under 5% after a few thousand notes: it's a one-shot card; keep it as a free funnel for your other games.",
+        "Reports exceed a handful per 1,000 notes despite the filter: switch to presets-only or stop free text.",
+        "Valentine's passes without a clear spike in sends: the occasions loop isn't working."
+      ],
+      "risks": [
+        {
+          "risk": "Abuse: bullying, crush harassment or phishing text under your brand",
+          "mitigation": "~200-character cap, word filter, no clickable links, text hidden from previews, 'written by a player' footer, report button and blocklist, presets-only mode for kids."
+        },
+        {
+          "risk": "One-shot use: the recipient irons once and leaves",
+          "mitigation": "Reply chains, occasions, keepsake drawer, calendar reminders and seasonal papers."
+        },
+        {
+          "risk": "Lost keepsakes (iOS storage eviction, in-app browser storage)",
+          "mitigation": "Export link, Add to Home Screen nudge; every note is still in its original link."
+        },
+        {
+          "risk": "No portal loop",
+          "mitigation": "A separate offline story edition for portals; Discord Activity for in-server notes."
+        },
+        {
+          "risk": "Music copyright",
+          "mitigation": "Public-domain tunes only in the library; don't feature famous songs in videos."
+        },
+        {
+          "risk": "Small money",
+          "mitigation": "Low cost to build; treat it as a brand and funnel, and test the card-sender plan before relying on it."
+        }
+      ],
+      "revenueAssumptions": "Estimates only. No ads on gifts; ads (~$5 per 1,000 plays, low confidence) apply only to the portal story edition, about a quarter of plays in Base, so ~$1.25 per 1,000 plays overall. A 'play' here is a note written or opened; at ~4 plays per sender, 1,000 plays ≈ 250 senders; if 2% buy the $3 pack that's ~$15 gross, ~$11 net; seasonal papers add ~$1. About $13 per 1,000 plays in total, but play volumes are smaller than portal games. The card-sender plan is a separate test and is only in Strong and Breakout.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 300000,
+          "volume": "300k plays",
+          "netUSD": 2500,
+          "note": "A sweet toy few people come back to."
+        },
+        {
+          "scenario": "Base",
+          "units": 3000000,
+          "volume": "3M plays",
+          "netUSD": 35000,
+          "note": "A staple for Valentine's and birthdays among a loyal crowd."
+        },
+        {
+          "scenario": "Strong",
+          "units": 20000000,
+          "volume": "20M plays + 5k plan subscribers",
+          "netUSD": 300000,
+          "note": "Note-sending becomes a group-chat habit; older senders subscribe."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 120000000,
+          "volume": "120M plays + 40k subscribers + app",
+          "netUSD": 2000000,
+          "note": "The default way to send a little gift online. Rare."
+        }
+      ],
+      "look": {
+        "short": "A warm writing desk · crumpled paper, a little iron, words blooming in brown ink",
+        "vibe": "Imagine a wooden desk under a lamp late in the evening. A ball of crumpled, coffee-ringed paper sits beside a small blue iron. You smooth it out, and with every pass the wrinkles hiss flat, a curl of steam rises, and someone's handwriting slowly toasts into view, warm brown on cream. Then a tiny music box on the corner of the desk starts to play.",
+        "layout": "Portrait phone screen. Top: a slim strip with the occasion ('A note for your birthday') and a wax seal showing who it's from, if they chose to say. Middle two-thirds: the crumpled page filling the screen, full of folds and shadows, with the little iron resting on its corner. Bottom third: the desk edge, with the music box (closed until the note is revealed), and after reading, two big buttons: 'write back' and 'keep it'. You drag the iron across the page; it hovers just above your finger so you can see it, the paper flattens behind it in strokes, and the letters brown wherever you've passed. When the whole note is readable, the iron lifts away, the music box opens and the tune plays as you crank its handle.",
+        "references": [
+          "Real lemon-juice invisible ink experiments",
+          "Old airmail stationery and wax seals",
+          "Wooden music boxes and paper punch strips",
+          "Stationery-shop windows"
+        ],
+        "palette": [
+          {
+            "name": "Paper cream",
+            "hex": "#F6EFE0"
+          },
+          {
+            "name": "Toasted ink",
+            "hex": "#8A5A2B"
+          },
+          {
+            "name": "Lemon peel",
+            "hex": "#F2D45C"
+          },
+          {
+            "name": "Wax-seal red",
+            "hex": "#B8433A"
+          },
+          {
+            "name": "Iron blue",
+            "hex": "#A9BCC9"
+          },
+          {
+            "name": "Desk walnut",
+            "hex": "#5C4033"
+          }
+        ],
+        "shapes": "Soft, real paper folds and creases; small rounded objects (a chubby iron, a squat candle, a box with a little crank).",
+        "characters": "No cast is needed; a cat paw stamp signs default notes and an optional little songbird courier arrives with tune-gifts.",
+        "camera": "Top-down on the desk, like reading a letter in your hands. Portrait first.",
+        "lighting": "Warm desk-lamp light from the top left; the ironed area gets a faint warm glow that cools as ink appears.",
+        "textures": "Real scanned paper with crumples, coffee rings and torn edges; visible ink bleed in the handwriting; wood grain on the desk.",
+        "ui": "Wax-seal buttons, paper tags for occasions, a hand-drawn stamp for 'report'.",
+        "type": "A handwriting font made from the creator's own hand for notes; a clean serif (e.g. Lora) for menus.",
+        "motion": "Wrinkles flatten under the iron in smooth strokes, steam curls rise, ink fades in by heat, the music box lid creaks open.",
+        "sound": "Real iron hiss and paper crinkle, a candle crackle, a pencil scratch, a real music-box comb. No background music until the tune plays.",
+        "screenshot": "A half-ironed page: crumpled at the top, smooth at the bottom, with 'happy birthday, you absolute legend' browning into view beside the iron.",
+        "clip": "Crumpled paper ball → iron glides → wrinkles hiss flat → 'I never told you, but...' blooms in brown ink → music box plays. Seven seconds.",
+        "avoid": [
+          "Glossy greeting-card clip art",
+          "Any clickable links or URLs in notes",
+          "Romance-only framing that excludes friends and family",
+          "Imitating a famous illustrator's or font designer's style"
+        ]
+      },
+      "distribution": {
+        "ship": "Own site + itch.io page, launched with a Halloween paper",
+        "firstMoney": "$3 stationery pack and $1–2 seasonal papers; never paywall sending",
+        "reach": "Discord Activity (notes in a server) and a portal 'dead-letter office' story edition on Poki/CrazyGames/YouTube Playables",
+        "graduate": "iOS/Android app with real occasion reminders; Steam not needed"
+      },
+      "origin": "Idea lab"
+    },
+    {
+      "id": "cuttings",
+      "ideaId": "culture-01",
+      "name": "Cuttings",
+      "track": "main",
+      "niche": "Houseplant care · gift-by-link · living family trees",
+      "hook": "This plant has lived in 4,000 phones. Here's your cutting. Grow it, snip it, pass it on.",
+      "oneLiner": "A cozy houseplant game where new plants only arrive as cuttings sent by link, rare mutations appear only in descendants, and every plant carries a family tree back to a public mother plant named in a creator video.",
+      "pitch": "Grow a Garden proved that gardening plus rare mutations is the biggest cozy fantasy going, and real plant people already make friends by handing out pothos cuttings in jam jars. Cuttings makes that ritual the whole game: you can't buy or find a plant, only receive one. Every newcomer gets a free cutting from a public mother plant (each creator video names one, like 'Biscuit'), so a stranger from TikTok is growing in seconds and joins one giant visible lineage. Tend it for a minute, snip a cutting when a node is ready, and send it by link. Rare traits (variegated, pink stem, heart leaf, moon leaf...) only ever show up in descendants, so the best plants are always gifts. Per-lineage leaderboards ('Biscuit: generation 31, 12 countries') give group chats something to race on, and milestone reveals ('your cutting now has 100 descendants') are the clip. Plants are drawn by an L-system from about eight hand-drawn leaf shapes, and a light server keeps every plant safe even when iOS wipes browser storage.",
+      "genreTags": [
+        "Plant care",
+        "Gift-by-link",
+        "Collection",
+        "Mobile web"
+      ],
+      "spec": {
+        "genre": "Async social plant care",
+        "players": "1, connected to everyone through a shared family tree",
+        "setting": "A sunny apartment windowsill of jam jars and terracotta pots",
+        "coreVerb": "Tend, snip, gift, discover",
+        "look": "Hand-drawn painted leaves on procedural vines; jam jars, terracotta and kraft gift tags",
+        "team": "You + AI + a contract illustrator for leaves and pots",
+        "audience": "Houseplant people, group chats and long-distance friends (18–35)",
+        "differentiator": "Plants can only be received as gifts; rare traits appear only in descendants; the lineage is the content",
+        "price": "Free (web) · $3 Greenhouse supporter pack"
+      },
+      "audience": "Houseplant owners and plant-swap fans (the pothos-and-monstera crowd), adult 'kidult' collectors, friend group chats and long-distance families; skews female, 18–35. Plus the creator's own audience, who all grow branches of the same public mother plant.",
+      "comps": [
+        "Grow a Garden",
+        "Neko Atsume",
+        "Viridi",
+        "Plant Daddy (itch.io)",
+        "Real-life plant swaps"
+      ],
+      "sessionLength": "1–2 minute check-ins whenever a cutting is ready; longer when exploring the family tree and leaderboards",
+      "artDirection": "About eight hand-drawn leaf shapes (pothos, heart-leaf philodendron, hoya, string-of-hearts, peperomia, tradescantia, monstera, fern), drawn large and painted, assembled into vines by an L-system; six hand-drawn pots, jam jars and two shelf backgrounds; warm window light. Every leaf is drawn by a person; the code only arranges them.",
+      "drivers": [
+        {
+          "signal": "Gardening plus mutations is the biggest cozy fantasy right now",
+          "detail": "Grow a Garden reached ~22M concurrent players on rare-seed and mutation hype. Cuttings brings the mutation chase to the open web, as gifts instead of purchases.",
+          "strength": "strong",
+          "ref": {
+            "game": "grow-a-garden"
+          }
+        },
+        {
+          "signal": "Plant swaps and propagation are real social rituals",
+          "detail": "Houseplant people already trade cuttings in jam jars and track 'whose pothos this came from'. The game turns that ritual into the only way to get a plant.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Every cutting is an invite",
+          "detail": "The share is the game: each cutting is a unique link with a gift-tag preview, and lineage leaderboards give group chats something to compete on. Milestone reveals are ready-made clips.",
+          "strength": "strong",
+          "ref": {
+            "link": "#spread"
+          }
+        },
+        {
+          "signal": "Loneliness, third places and kidult collecting",
+          "detail": "A quiet way to stay connected (a living thing passed between friends) plus a 6 + 1 secret trait collection for adult collectors.",
+          "strength": "medium",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Check-in care games are crowded, and the web forgets",
+          "detail": "Idle and care companions are oversupplied (demand 7, supply 10), Sill overlaps, iOS evicts browser storage after 7 idle days and the web has no push. The lineage must be the hook, backed by server saves and email.",
+          "strength": "caution",
+          "ref": {
+            "niche": "Idle/desktop companion"
+          }
+        }
+      ],
+      "scores": {
+        "originality": {
+          "score": 8,
+          "why": "Gifting as the only way to get a plant, mutations that appear only in descendants and a public lineage as the content are new; Plant Daddy shares seed codes and Grow a Garden sells mutations, but nobody makes the family tree the game."
+        },
+        "demand": {
+          "score": 7,
+          "why": "Houseplants and gardening are huge and Grow a Garden proved the mutation chase; slow async care is a smaller audience on the web than on Roblox."
+        },
+        "gap": {
+          "score": 7,
+          "why": "Plant-care check-in games exist (Viridi and many idle gardens), but none spread by gifting or show lineage; the overlap with your own Sill concept needs a decision."
+        },
+        "soloSpeed": {
+          "score": 7,
+          "why": "L-system plants and a Cloudflare Worker + D1 tree are well within AI-assisted reach, but the server, link previews, rate limits and saves add real work over a client-only toy."
+        },
+        "creatorFit": {
+          "score": 8,
+          "why": "Low art load (about eight leaves, six pots) and the creator is literally inside the game: every video names a mother plant and later reports its growth."
+        },
+        "instantPlay": {
+          "score": 8,
+          "why": "Tapping a cutting link roots a plant on the sill immediately, no login; keeping it across browsers needs a bookmarked shelf link or an optional email."
+        },
+        "monetization": {
+          "score": 5,
+          "why": "Supporter pack and seasonal pots only; portals and Playables can't run the gift loop, so ad reach is small until an app with widgets."
+        },
+        "marketability": {
+          "score": 8,
+          "why": "The leaf-to-family-tree zoom-out and milestone numbers are strong hooks, and mutation reveals get posted; the plant itself grows slowly, so clips rely on numbers and reveals rather than action."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Houseplant culture is stable-to-rising and gardening games are surging after Grow a Garden; plant care itself is not new."
+        },
+        "culture": {
+          "score": 8,
+          "why": "Sits on plant-swap culture, loneliness and third places, kidult collecting, human-made backlash and little treats."
+        },
+        "scopeFit": {
+          "score": 9,
+          "why": "Small systemic game with a tiny backend; a small team could ship it and the app easily."
+        }
+      },
+      "whyNow": [
+        "Grow a Garden made mutations and rare plants mainstream, but nobody has put that chase on the open web as something you give away.",
+        "Plant swaps and propagation jars are how plant people already make friends; the game makes that ritual work by link in any group chat.",
+        "Autumn is houseplant season: plants move indoors and windowsill posts take over, which is the perfect launch moment.",
+        "A creator-owned mother plant turns every video into a growing public number that viewers are part of."
+      ],
+      "pillars": [
+        "You can only receive plants, never buy them",
+        "Plants never die; they droop and forgive",
+        "Rare traits appear only in descendants, so the best ones are always gifts",
+        "The family tree is the content"
+      ],
+      "coreLoop": [
+        "Open a cutting link and root it in a jar",
+        "Water, mist or turn it when it droops",
+        "Grow until a node glows 'ready to snip'",
+        "Snip a cutting and send it by link",
+        "See whether the descendant mutated",
+        "Watch your branch of the family tree grow and climb the lineage board"
+      ],
+      "features": {
+        "mvp": [
+          "Open a cutting link and the plant roots on your sill instantly, no login",
+          "L-system plants from ~8 hand-drawn leaf shapes that grow in real time and droop instead of dying",
+          "Snip and send: unique cutting links with a gift-tag preview ('Dana sent you a cutting of Biscuit, generation 14')",
+          "Server-side plant state and lineage (Cloudflare Worker + D1/KV) keyed by a private shelf link, so storage eviction and in-app browsers never lose a plant",
+          "Free cutting from the public mother plant 'Biscuit' for every newcomer with no friend to gift them",
+          "Simple family-tree diagram with generation counter"
+        ],
+        "launch": [
+          "Mutation table: 6 visible traits (variegated, pink stem, heart leaf, moon leaf, ruffled edge, mini leaf) + 1 secret, shown as silhouettes with odds printed like a seed packet",
+          "Per-lineage leaderboards: generation depth, descendants and countries (opt-in country only)",
+          "Milestone reveal clips and emails ('your cutting now has 100 descendants')",
+          "Optional email magic-link account to keep your plants across browsers and phones",
+          "Spoiler-free mutation share card",
+          "A new creator-named mother plant with each video series, each with its own board",
+          "Fig the shelf cat, who naps by the jars next to its own pot of cat grass"
+        ],
+        "postLaunch": [
+          "Country-level world-map zoom-out of a lineage (opt-in)",
+          "Discord Activity: pass cuttings around a server with a server lineage board",
+          "New species, each a new set of hand-drawn leaves",
+          "Seasonal pots and a winter grow light",
+          "iOS/Android app with a home-screen widget and real notifications",
+          "Printable family-tree poster of your own branch"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (mobile web), where the lineage server lives",
+          "itch.io (mirror that hands off to your site)"
+        ],
+        "later": [
+          "Discord Activity",
+          "iOS/Android app with widgets and notifications"
+        ]
+      },
+      "pricing": {
+        "base": "Free; $3 Greenhouse supporter pack; $1–2 seasonal pots",
+        "model": "Every plant is free through gifting; pay only for space and decoration",
+        "details": [
+          "Never sell plants, cuttings, mutations or better mutation odds. Rarity must stay a gift.",
+          "$3 Greenhouse pack: more shelf space, hand-drawn pots, macramé hangers and a grow light that adds a cozy evening glow.",
+          "Seasonal pot sets at $1–2.",
+          "At most one optional rewarded ad for 'plant food' (a little extra growth), never required and never for mutations."
+        ]
+      },
+      "monetizationPlan": [
+        "$3 Greenhouse supporter pack",
+        "Seasonal pot sets",
+        "Optional rewarded ad for plant food",
+        "Paid app with widgets later; printed family-tree posters"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Name a mother plant in each video; record real snip, pour and jar sounds; run the lineage boards."
+        },
+        {
+          "role": "Contract illustrator",
+          "count": 1,
+          "note": "Draws ~8 leaf shapes large, 6 pots, 2 shelf backgrounds and the shelf cat. Never imitate an existing botanical artist's style."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$2–6k",
+        "note": "Mostly leaf, pot and shelf art. Server costs stay near zero on Cloudflare's free tier at small scale, but grow with a breakout and must be watched."
+      },
+      "steps": [
+        {
+          "name": "Leaf art + growth prototype",
+          "deliverable": "8 hand-drawn leaf shapes on an L-system plant that grows, droops and perks up; the snip gesture",
+          "gate": "Move on when side-by-side screenshots of 20 plants look hand-made and varied, and testers want to snip without being told"
+        },
+        {
+          "name": "Lineage server + cutting links",
+          "deliverable": "Cloudflare Worker + D1 for plant state and parent IDs, private shelf link, cutting links with gift-tag previews, family-tree diagram, per-device rate limits",
+          "gate": "Move on when a test lineage survives 5+ generations across Safari, Chrome and the TikTok in-app browser with no lost plants"
+        },
+        {
+          "name": "Mother-plant launch",
+          "deliverable": "Public 'Biscuit' mother plant, a free cutting for every newcomer, a launch video naming it",
+          "gate": "Move on when 60%+ of visitors root a cutting and 15%+ of rooted players send one"
+        },
+        {
+          "name": "Mutations, leaderboards, milestones",
+          "deliverable": "6 + 1 secret trait table, per-lineage boards, milestone reveal clips and emails, optional email account",
+          "gate": "Move on when cuttings sent per rooted plant reaches 0.8+ and players post milestone clips"
+        },
+        {
+          "name": "Greenhouse pack",
+          "deliverable": "$3 supporter pack and the first seasonal pot set",
+          "gate": "Move on when 1%+ of returning players buy"
+        },
+        {
+          "name": "Discord Activity + app",
+          "deliverable": "Pass-cuttings Discord Activity; iOS/Android app with widget and notifications",
+          "gate": "Port when Discord servers grow their own lineages and app sign-ups justify it"
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Before launch",
+          "action": "Devlog Shorts of the hand-drawn leaves becoming vines ('8 drawings, a million plants') and the cuttings-in-jam-jars ritual."
+        },
+        {
+          "when": "Launch",
+          "action": "Mother-plant video: 'This is Biscuit. Take a cutting.' Link in bio and long-form descriptions (Shorts links aren't clickable, so say 'link in profile')."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Milestone clips: extreme close-up of one leaf, zoom out through the tree, '4,112 descendants'. Daily clips featuring viewers' mutations and the lineage race."
+        },
+        {
+          "when": "Each season",
+          "action": "A new named mother plant and seasonal pot set (autumn launch, a winter 'Snow Pothos', a spring swap event)."
+        },
+        {
+          "when": "At each lineage milestone",
+          "action": "Long-form devlog on how the lineage spread, showing the real tree and the strangest mutations."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Daily (in-game)",
+          "what": "Plants grow in real time, cuttings ripen, new leaves unfurl."
+        },
+        {
+          "when": "Each new video",
+          "what": "A new named mother plant lineage joins the leaderboards."
+        },
+        {
+          "when": "Each season",
+          "what": "Seasonal pots and a seasonal secret trait."
+        },
+        {
+          "when": "At lineage milestones",
+          "what": "Automatic reveal clip and email to everyone in that branch."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Rooting rate",
+          "target": "60%+ of link visitors",
+          "why": "The first tap must become a plant."
+        },
+        {
+          "metric": "Cuttings sent per rooted plant",
+          "target": "0.8+",
+          "why": "The viral loop; above 1.0 the lineage grows by itself."
+        },
+        {
+          "metric": "Day-2 return",
+          "target": "30%+",
+          "why": "Checks that the plant is worth coming back to."
+        },
+        {
+          "metric": "Save rate (shelf link bookmarked or email added)",
+          "target": "25%+",
+          "why": "Players who don't save lose their plant when they switch browsers."
+        },
+        {
+          "metric": "Greenhouse conversion",
+          "target": "1–2% of returning players",
+          "why": "Checks the only real revenue line."
+        }
+      ],
+      "killCriteria": [
+        "After the first few thousand rooted plants, under 10% of players ever send a cutting: gifting isn't the loop; fold the plant into Sill or stop.",
+        "Three mother-plant videos fail to beat your channel average: the lineage number isn't a hook.",
+        "Plants look samey or obviously procedural in side-by-side screenshots: fix the leaf art and L-system rules before scaling."
+      ],
+      "risks": [
+        {
+          "risk": "Cold start: a lone TikTok visitor has no friend to gift them a plant",
+          "mitigation": "Every newcomer gets a free cutting from the public mother plant named in the video they came from."
+        },
+        {
+          "risk": "Lost plants: iOS evicts browser storage after 7 idle days and in-app browser storage is separate from Safari",
+          "mitigation": "All plant state lives on the server keyed by a private shelf link; prompt 'bookmark your shelf' on first save; optional email account."
+        },
+        {
+          "risk": "Overlaps with your own Sill concept",
+          "mitigation": "Make Cuttings the windowsill garden whose only acquisition channel is gifting, and shelve or merge Sill."
+        },
+        {
+          "risk": "Procedural plants look generic",
+          "mitigation": "Large hand-drawn painted leaves, strict per-species growth rules, and a screenshot test before launch."
+        },
+        {
+          "risk": "Bots or farms spam fake descendants to top the leaderboards",
+          "mitigation": "Rate-limit cuttings per device; count a descendant only once it has been rooted and tended on two separate visits."
+        },
+        {
+          "risk": "Location and safety: a world map implies where people live",
+          "mitigation": "Opt-in country only, never GPS or city; preset nicknames ('Mossy Otter'), no free text, so no moderation and safe for kids."
+        },
+        {
+          "risk": "Web retention with no push notifications",
+          "mitigation": "Plants never die; milestone emails for players who opt in; the app with widgets and notifications is the graduation step."
+        },
+        {
+          "risk": "Low revenue ceiling: portals and Playables can't run the gift loop, and server costs grow with a hit",
+          "mitigation": "Keep the server lean (parent IDs and small plant records), price the Greenhouse pack honestly, and treat the app as the real business."
+        }
+      ],
+      "revenueAssumptions": "Estimates only, low confidence; measure your own. Ads: ~$5 per 1,000 plays where ads run, but Cuttings shows only one optional rewarded ad and runs mostly on its own site, so count about half: ~$2.50 per 1,000 plays. Greenhouse pack: a check-in game averages ~8 plays per player, so 1,000 plays ≈ 125 players; ~1.5% buy the $3 pack at ~90% after payment fees ≈ $5 per 1,000 plays. Seasonal pots add a little. Server costs are near zero at small scale and roughly $0.20–0.50 per 1,000 plays at volume. Net ≈ $7 per 1,000 plays, plus app sales in the bigger scenarios.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 200000,
+          "volume": "200k plays",
+          "netUSD": 1400,
+          "note": "People root the cutting but don't pass it on."
+        },
+        {
+          "scenario": "Base",
+          "units": 3000000,
+          "volume": "3M plays",
+          "netUSD": 21000,
+          "note": "A few healthy lineages in the creator's audience and their group chats."
+        },
+        {
+          "scenario": "Strong",
+          "units": 30000000,
+          "volume": "30M plays + app",
+          "netUSD": 260000,
+          "note": "Lineages cross into plant communities; the app with widgets adds most of the upside."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 300000000,
+          "volume": "300M plays + app + posters",
+          "netUSD": 3000000,
+          "note": "'My pothos has a million descendants' becomes a meme. Rare, and server costs must be managed."
+        }
+      ],
+      "look": {
+        "short": "A sunny windowsill of jam-jar cuttings · hand-drawn leaves on living vines",
+        "vibe": "Imagine a sunny apartment windowsill lined with jam jars of water, each holding a trailing green cutting with tiny white roots curling in the glass. You slide a pair of brass scissors across a vine: snip. The cutting drops into a fresh jar with a soft plink, roots wriggle out, and a little kraft-paper gift tag flips over: 'Biscuit · generation 32 · for Sam'. Somewhere off-screen, a family tree grows one more twig.",
+        "layout": "Portrait phone screen. Top: a slim kraft-paper tag showing your plant's lineage ('Biscuit · gen 32 · 4,112 descendants · 23 countries') with a tiny tree icon that opens the family tree. Middle two-thirds: the windowsill seen straight on, your plant in its pot or jar with vines spilling over the edge and soft window light behind; when a node is ready, one small bud glows. Below the sill: big object buttons for care (a watering can, a mister, a turn-the-pot arrow) and a pair of brass scissors. Bottom: a tab bar of Sill, Family tree and Traits (six silhouettes plus one '?' secret). The key interaction: drag the scissors across the glowing node; the cutting falls into a jam jar, roots curl out, and a share sheet slides up with the gift-tag preview to send by link. Opening someone else's link plays it in reverse: a jar arrives on your sill and roots in front of you.",
+        "references": [
+          "Real propagation stations: cuttings in jam jars on a windowsill",
+          "Plant-swap tables at community markets",
+          "Old herbarium labels and seed packets (for layout and labels)",
+          "Genealogy and family-tree charts"
+        ],
+        "palette": [
+          {
+            "name": "Pothos green",
+            "hex": "#5E9B5B"
+          },
+          {
+            "name": "Variegated cream",
+            "hex": "#F2EBCB"
+          },
+          {
+            "name": "Terracotta",
+            "hex": "#C46F4A"
+          },
+          {
+            "name": "Jar glass",
+            "hex": "#CFE5E1"
+          },
+          {
+            "name": "Window light",
+            "hex": "#FFF4DC"
+          },
+          {
+            "name": "Kraft tag",
+            "hex": "#B88A5A"
+          }
+        ],
+        "shapes": "Organic but tidy: rounded leaves with one confident outline, cylindrical jars, chunky terracotta pots. Vines curve in smooth arcs, never jagged or tangled.",
+        "characters": "The plants are the characters: each lineage has a name (Biscuit, Noodle, Pip) and each owner a preset nickname ('Mossy Otter'). Fig, a loaf-shaped tabby, naps between the jars next to its own pot of cat grass.",
+        "camera": "Straight-on, like standing at the window; portrait 9:16 so one screenshot is the whole sill. The family tree zooms out smoothly from a single leaf to the whole lineage.",
+        "lighting": "Daylight through the window follows the player's real clock: cool morning, golden afternoon, lamplit evening. Mutated leaves catch the light softly (variegation glows), never sparkle like a slot machine.",
+        "textures": "Painted leaves with visible brush grain, soft glass refraction on the jars, speckled terracotta, kraft-paper tags on string.",
+        "ui": "Kraft-paper tags and seed-packet cards; big thumb-sized object buttons; a trait card with six silhouettes and one secret, odds printed underneath like a seed packet.",
+        "type": "A warm serif for names and labels (e.g. Fraunces) with a clean sans body (e.g. Nunito); generation numbers in a small typewriter face like a herbarium label.",
+        "motion": "Vines grow with a gentle ease and sway; leaves unfurl; a drooping plant slumps and perks back up with a tiny bounce when watered; roots curl out in the jar.",
+        "sound": "Recorded real sounds: scissors snip, water poured into glass, a jar set on wood, rustling leaves, a cat purr. Music: soft piano and nylon guitar.",
+        "screenshot": "A packed windowsill of jars and pots, one cream-and-green variegated vine trailing down the middle, its gift tag reading 'gen 32'.",
+        "clip": "Extreme close-up of one heart-shaped leaf → fast zoom out through a glowing family tree → '4,112 descendants · 23 countries'. Five to eight seconds.",
+        "avoid": [
+          "Clip-art plants or obviously repetitive procedural vines",
+          "Slot-machine sparkle or coin showers on mutations",
+          "Exact-location maps or anything that reveals where a player lives",
+          "Imitating any botanical illustrator's style"
+        ]
+      },
+      "distribution": {
+        "ship": "Own site + itch.io (itch as a mirror; cutting links always point to your own site, where the lineage server lives)",
+        "firstMoney": "$3 Greenhouse supporter pack and $1–2 seasonal pots",
+        "reach": "Discord Activities (pass cuttings around a server) plus creator videos; portals, Playables and TikTok Minis are a poor fit because the gift loop needs network calls",
+        "graduate": "iOS/Android app with a home-screen widget and notifications; Steam not needed"
+      },
+      "origin": "Idea lab"
+    },
+    {
+      "id": "fold-together",
+      "ideaId": "contra-03",
+      "name": "Fold Together",
+      "track": "main",
+      "niche": "Couch co-op · cloth physics · laundry folding for two",
+      "hook": "Fold a fitted sheet with your partner. One phone, four thumbs. Try not to bicker.",
+      "oneLiner": "A two-player cloth-physics game where each person holds two corners of a floppy sheet, on one phone or on two phones by link, folding a daily basket of three items (one of them absurd) and learning hotel folds that end in towel animals.",
+      "pitch": "Every couple has fought over a fitted sheet, and 'cozy games for couples' is one of the most requested and least supplied lanes in the research. Fold Together turns that tiny domestic moment into a calm, untimed co-op toy: each person grabs two corners, you stretch, line up the edges and the cloth snaps into a crisp fold with a soft thwump. There are no fail states, only gentle bickering ('your other left'). A daily basket of three items (one absurd: an octopus costume, a parachute) ends in a shareable fold-score card, a hotel-fold path ends in towel animals (swan, elephant, cat), and your linen closet fills with neat stacks. Play on one phone laid flat between you, on two phones paired by link (for long-distance couples and friends), or as a Discord Activity inside a voice call. Fabrics are scans of real textiles, so the art is human-made by definition.",
+      "genreTags": [
+        "Co-op",
+        "Physics",
+        "Couples",
+        "Mobile web"
+      ],
+      "spec": {
+        "genre": "Two-player cooperative cloth folding",
+        "players": "2 (same phone, two phones by link, or Discord); solo with the cat",
+        "setting": "A sunny laundry room and a linen closet",
+        "coreVerb": "Grab, stretch, fold together",
+        "look": "Scanned real fabrics on soft 2D cloth; warm laundry-room light; players are only fingertip rings",
+        "team": "You + AI + a contract illustrator (room, basket, cat)",
+        "audience": "Couples, housemates and long-distance pairs",
+        "differentiator": "Calm, untimed, no-fail cloth folding for two on one shared phone, with online and Discord modes",
+        "price": "Free (web) · $3 Linen Closet pack · $3–5 Steam later"
+      },
+      "audience": "Couples (dating, married and long-distance), housemates and siblings, 18–40; the 'we can't fold a fitted sheet' meme crowd; CleanTok and organizing fans; Discord friend groups looking for something gentle to do in a call.",
+      "comps": [
+        "Unpacking",
+        "A Little to the Left",
+        "Highlaundry Overwashed",
+        "Katazuke",
+        "It Takes Two (for couples, at the opposite scale)"
+      ],
+      "sessionLength": "3–5 minutes for the daily basket; open-ended free folding in the linen closet",
+      "artDirection": "Real fabrics scanned on a flatbed (thrifted tea towels, gingham, waffle towels, a grandmother's tablecloth) mapped onto soft cloth; one hand-drawn laundry room, a basket and a cat; towel animals as hand-made final poses. Almost all of the art is real textiles.",
+      "drivers": [
+        {
+          "signal": "Couples want cozy games to play together",
+          "detail": "Cozy games for couples: demand 8 vs supply 4 in the open-lanes data, and 'co-op games for couples/partners' is a recurring player request.",
+          "strength": "strong",
+          "ref": {
+            "niche": "Cozy games for couples"
+          }
+        },
+        {
+          "signal": "The fitted-sheet fight is already a meme",
+          "detail": "CleanTok (~150B views) and satisfying-organizing clips are peaking; couples failing to fold a fitted sheet is a format the game recreates on cue.",
+          "strength": "strong",
+          "ref": {
+            "link": "#culture"
+          }
+        },
+        {
+          "signal": "Local 2-player and Discord Activities are proven channels",
+          "detail": "Two-player games are a staple portal category, and Discord Activities put games inside the voice calls where long-distance couples and friends already hang out.",
+          "strength": "medium",
+          "ref": {
+            "link": "#launch"
+          }
+        },
+        {
+          "signal": "No-fail tidying sells",
+          "detail": "Unpacking and A Little to the Left proved that calm organizing with a satisfying snap is a cozy fantasy people pay for.",
+          "strength": "supporting",
+          "ref": {
+            "game": "unpacking"
+          }
+        },
+        {
+          "signal": "Needs two people, and folding games exist",
+          "detail": "Co-op demand is high (9) but so is supply (6); Highlaundry Overwashed and Katazuke already fold laundry, and a lone TikTok viewer can't play the real thing, so the solo cat mode has to be fun too.",
+          "strength": "caution",
+          "ref": {
+            "niche": "Cozy co-op/multiplayer (2-4 players)"
+          }
+        }
+      ],
+      "scores": {
+        "originality": {
+          "score": 7,
+          "why": "Two people sharing four corners of one cloth on one phone is a fresh verb and format; laundry co-op exists (Highlaundry, Katazuke) but frantic or abstract, not calm cloth folding."
+        },
+        "demand": {
+          "score": 7,
+          "why": "Couples and co-op are among the most requested lanes; laundry folding is a narrower fantasy than gardening or cooking."
+        },
+        "gap": {
+          "score": 7,
+          "why": "Couples supply is low (4) and almost nothing does two-player one-phone touch play on the web."
+        },
+        "soloSpeed": {
+          "score": 6,
+          "why": "Verlet cloth and the same-phone mode are quick with AI help, but crisp-looking folds, four-touch handling, WebRTC pairing and a Discord Activity add up."
+        },
+        "creatorFit": {
+          "score": 7,
+          "why": "Very low art (scanned fabrics, one room, a cat) and great clips, but the best clips need two real people on camera."
+        },
+        "instantPlay": {
+          "score": 7,
+          "why": "Opens instantly in the browser with touch controls, but the real game needs a second person present or paired; solo cat mode covers lone visitors."
+        },
+        "monetization": {
+          "score": 6,
+          "why": "Portal ads on local 2-player, a $3 pack and a natural $3–5 Steam couch co-op version; Discord adds reach more than money."
+        },
+        "marketability": {
+          "score": 9,
+          "why": "Couples bickering over a flailing sheet then a crisp thwump is a self-explaining clip, and players film their own partners."
+        },
+        "momentum": {
+          "score": 7,
+          "why": "Couples co-op and CleanTok are rising; Discord Activities are growing as a channel."
+        },
+        "culture": {
+          "score": 7,
+          "why": "Rides CleanTok, couples content, loneliness and long-distance connection, and the cat; less tied to collectibles or seasonal trends."
+        },
+        "scopeFit": {
+          "score": 8,
+          "why": "Small systemic game; a small team could ship web, Discord and Steam versions comfortably."
+        }
+      },
+      "whyNow": [
+        "Couples and co-op are among the most requested cozy lanes and among the least supplied on the web.",
+        "Discord Activities put games inside voice calls, exactly where long-distance couples and friends already spend evenings together.",
+        "CleanTok and satisfying-organizing clips are peaking; a crisp thwump fold is that format with a funny twist.",
+        "Steam's Couch Co-Op Fest gives a clear graduation target for a cheap two-player game."
+      ],
+      "pillars": [
+        "No fail states: a messy fold is still a fold, just a funny one",
+        "Two people, four corners, one sheet",
+        "Every fold ends in a satisfying snap and a neat stack",
+        "Gentle bickering, never blame"
+      ],
+      "coreLoop": [
+        "Open today's basket of three",
+        "Each grab two corners",
+        "Stretch, line up the edges and fold",
+        "Thwump: the fold snaps crisp and scores",
+        "Stack it in your linen closet",
+        "Share the fold-score card or challenge another pair with the same basket"
+      ],
+      "features": {
+        "mvp": [
+          "Same-phone mode: phone laid flat between you, each player owns one end and two corners",
+          "Verlet cloth with snap-to-crease folds: a towel and a fitted sheet whose springy elastic corners fight back",
+          "Fold score: crispness, matched edges and a 'tiny arguments' count (no penalties)",
+          "Solo two-thumb mode: Pickle the cat holds the other end (mostly)",
+          "Shareable fold-score card styled like a laundry care tag"
+        ],
+        "launch": [
+          "Daily laundry basket: 3 items, one absurd (an octopus costume, a parachute, a ball gown), the same for everyone",
+          "'Challenge another couple' link with the same basket seed and a comparable score",
+          "Link-paired online mode: two phones, two corners each (WebRTC data channel, tiny signaling Worker, TURN fallback)",
+          "Linen closet that fills with your neat stacks and can be decorated",
+          "Hotel-fold progression: thirds, hotel fold, fan, spa roll, then towel animals (swan, elephant, cat)",
+          "Tablet and desktop layouts, plus a desktop keyboard mode (WASD vs arrows) for portals",
+          "Preset bickering lines either player can tap ('your other left', 'that's inside out')"
+        ],
+        "postLaunch": [
+          "Discord Activity: fold together inside a voice call",
+          "Grandma's linen closet mode: lace, quilts and tablecloths",
+          "Seasonal baskets (Halloween costumes, festive winter tablecloths, Valentine's heart towels)",
+          "More towel animals and a secret one",
+          "Steam version with controller support and Remote Play Together"
+        ]
+      },
+      "platforms": {
+        "launch": [
+          "Your own site (phone, tablet and desktop web)",
+          "itch.io",
+          "CrazyGames (local 2-player with keyboard mode)"
+        ],
+        "later": [
+          "Discord Activity",
+          "YouTube Playables (offline same-device mode)",
+          "Steam (Couch Co-Op Fest, Remote Play Together)",
+          "iOS/Android"
+        ]
+      },
+      "pricing": {
+        "base": "Free daily basket; $3 Linen Closet pack; $3–5 Steam version later",
+        "model": "Free to fold together forever; pay once for more fabrics, folds and closet decor",
+        "details": [
+          "Online pairing and the daily basket are always free: charging for the second player kills the share.",
+          "One purchase unlocks the pack for both players while they play together, so a $3 pack never splits a couple.",
+          "The Linen Closet pack: scanned fabric sets, quilts and lace, the cat lying on the sheet, all towel animals and closet decor.",
+          "On portals, a rewarded ad for a bonus basket item; never an ad mid-fold.",
+          "Steam at $3–5 with controller support: a low price multiplies when both friends must own it (the Webfishing lesson)."
+        ]
+      },
+      "monetizationPlan": [
+        "Portal ad revenue on local 2-player",
+        "$3 Linen Closet pack, shared by the pair",
+        "Seasonal fabric baskets",
+        "$3–5 Steam couch co-op version"
+      ],
+      "team": [
+        {
+          "role": "You: design, build (with AI), video",
+          "count": 1,
+          "note": "Scan thrifted fabrics; film real pairs on a sofa (start with your partner or friends); run the daily basket."
+        },
+        {
+          "role": "Contract illustrator",
+          "count": 1,
+          "note": "Laundry room, basket, Pickle the cat and the towel-animal poses. A small job."
+        }
+      ],
+      "budgetUSD": {
+        "label": "$2–7k",
+        "note": "Room and cat art, thrifted fabrics and a flatbed scanner, TURN relay and Discord hosting costs; Steam fee and controller testing later."
+      },
+      "steps": [
+        {
+          "name": "Cloth feel prototype",
+          "deliverable": "A towel and a fitted sheet on one phone laid flat; four-touch handling; snap-to-crease folds",
+          "gate": "Move on when 5 pairs fold without instructions and laugh, and a fold reads clearly as a fold in a screenshot"
+        },
+        {
+          "name": "Couch clip test",
+          "deliverable": "10 short clips of real pairs on a sofa ('no, YOUR corner')",
+          "gate": "Move on when clips beat your channel average and comments tag partners"
+        },
+        {
+          "name": "Web launch",
+          "deliverable": "Daily basket of 3 with one absurd item, fold-score card, solo cat mode, linen closet, tablet and desktop layouts",
+          "gate": "Move on when Day-2 return reaches 20%+ and 6%+ of baskets are shared"
+        },
+        {
+          "name": "Online pairing",
+          "deliverable": "Link-paired two-phone mode over WebRTC with a tiny signaling Worker and TURN fallback",
+          "gate": "Move on when 85%+ of pairing attempts connect and both players feel in sync"
+        },
+        {
+          "name": "Towel animals + Linen Closet pack",
+          "deliverable": "Hotel-fold path to swan, elephant and cat; the $3 pack",
+          "gate": "Move on when 1%+ of players buy"
+        },
+        {
+          "name": "Portals and Discord",
+          "deliverable": "Keyboard mode on CrazyGames, an offline Playables build, a Discord Activity",
+          "gate": "Move on when portal plays and Discord sessions grow without your videos"
+        },
+        {
+          "name": "Steam couch co-op version",
+          "deliverable": "$3–5 version with controller support and Remote Play Together; a Couch Co-Op Fest demo",
+          "gate": "Build the full version only when demo wishlists hit your target"
+        }
+      ],
+      "marketingPlan": [
+        {
+          "when": "Before launch",
+          "action": "Film couples on a sofa, four thumbs on one phone, 'no, YOUR corner', then thwump. Caption: 'tag who you'd fight with'."
+        },
+        {
+          "when": "Launch",
+          "action": "Daily basket post ('today's absurd item is a parachute'); repost players' fold-score cards and partner clips."
+        },
+        {
+          "when": "Ongoing",
+          "action": "Daily clips: towel-animal reveals, long-distance pairs folding over Discord, the cat lying on the sheet. Long-form devlog on faking 3D folds in 2D."
+        },
+        {
+          "when": "Each season",
+          "action": "Seasonal basket and real-fabric drop: Halloween costumes, festive winter tablecloths, a Valentine's couples basket."
+        },
+        {
+          "when": "Before Steam launch",
+          "action": "Couch Co-Op Fest demo and wishlist push, led by the best player-made couple clips."
+        }
+      ],
+      "liveOps": [
+        {
+          "when": "Daily (in-game)",
+          "what": "A new basket of 3, one absurd, the same for everyone, with a fold-score card."
+        },
+        {
+          "when": "Each season",
+          "what": "New fabrics from real scanned textiles and a seasonal absurd item."
+        },
+        {
+          "when": "Each update",
+          "what": "A new towel animal or fold technique."
+        },
+        {
+          "when": "Valentine's",
+          "what": "A couples basket event with shared score cards."
+        }
+      ],
+      "kpis": [
+        {
+          "metric": "Two-human sessions",
+          "target": "40%+ of sessions",
+          "why": "The game is for two; if most play alone, it's a different game."
+        },
+        {
+          "metric": "Share rate of fold cards",
+          "target": "6%+",
+          "why": "Cards and challenge links are the spread."
+        },
+        {
+          "metric": "Day-2 return",
+          "target": "20%+",
+          "why": "Checks that the daily basket brings pairs back."
+        },
+        {
+          "metric": "Online pairing success",
+          "target": "85%+ connect",
+          "why": "Failed pairing loses long-distance couples instantly."
+        },
+        {
+          "metric": "Pack conversion",
+          "target": "1–2% of players",
+          "why": "Checks the direct-buy pack."
+        }
+      ],
+      "killCriteria": [
+        "Couch clips don't beat your channel average after 10 posts: the premise doesn't sell on video.",
+        "Fewer than 25% of sessions ever have two humans after a few thousand players: it's a solo toy; lean on the cat mode or stop.",
+        "Folds still don't read as crisp folds in screenshots after the prototype: the 2D cloth trick failed; stop before building online modes."
+      ],
+      "risks": [
+        {
+          "risk": "Folding is a 3D action faked in 2D; layered flaps can look like a tangled mess",
+          "mitigation": "Simulate the cloth loosely, then snap to precomputed crease states once corners align, drawing folded layers as clean flaps with shadow lines."
+        },
+        {
+          "risk": "Four thumbs on one phone is cramped",
+          "mitigation": "Phone laid flat with each player at one end, big corner rings, generous snap tolerance, tablet layout, and online mode for two phones."
+        },
+        {
+          "risk": "A lone viewer from TikTok can't play the real game",
+          "mitigation": "Solo two-thumb mode with the cat as default for lone visitors; 'send your partner the link' as the next step."
+        },
+        {
+          "risk": "WebRTC pairing fails on some networks and needs TURN relays that cost money",
+          "mitigation": "Signaling via a Cloudflare Worker or Durable Object, TURN fallback, only corner positions sent; ship online only after same-phone proves the fun."
+        },
+        {
+          "risk": "Discord Activities need app review, an OAuth token server and their own UI rules",
+          "mitigation": "Treat Discord as a later reach stage, reusing the online mode's room server."
+        },
+        {
+          "risk": "Mobile browser gestures (pinch-zoom, double-tap zoom, iOS swipe-back) break four-touch play, and iOS has no web haptics",
+          "mitigation": "touch-action:none, user-scalable=no, keep corners away from screen edges; sound carries the thwump."
+        },
+        {
+          "risk": "Existing laundry co-op games (Highlaundry Overwashed, Katazuke)",
+          "mitigation": "Stay calm, untimed and cloth-based; own the couples framing and towel animals."
+        },
+        {
+          "risk": "Poki requires open-web exclusivity",
+          "mitigation": "Start on CrazyGames and keep your own site; weigh Poki only if its reach clearly beats your own traffic."
+        },
+        {
+          "risk": "Fabric rights",
+          "mitigation": "Scan textiles you own or thrifted; avoid recognizable designer prints; use and credit only public-domain museum scans."
+        },
+        {
+          "risk": "Repetition once every item has been folded",
+          "mitigation": "Daily absurd items, towel animals, seasonal fabrics and challenge links keep it fresh."
+        }
+      ],
+      "revenueAssumptions": "Estimates only, low confidence; measure your own. Ads: ~$5 per 1,000 plays (portal ads and rewarded ads). Linen Closet pack: about a third of plays happen on your own site, itch.io or Discord, where the pack is sold; at ~3 plays per player that's ~110 players per 1,000 plays, of whom ~1.5% buy the $3 pack at ~90% after fees ≈ $4 per 1,000 plays. Net ≈ $9 per 1,000 plays. Steam: a $4 copy nets about $2.50 after Steam's cut, refunds and taxes.",
+      "revenueScenarios": [
+        {
+          "scenario": "Miss",
+          "units": 300000,
+          "volume": "300k plays",
+          "netUSD": 2700,
+          "note": "Funny clips, but no habit."
+        },
+        {
+          "scenario": "Base",
+          "units": 5000000,
+          "volume": "5M plays",
+          "netUSD": 45000,
+          "note": "A steady couples, housemates and portal crowd."
+        },
+        {
+          "scenario": "Strong",
+          "units": 40000000,
+          "volume": "40M plays + 40k Steam copies",
+          "netUSD": 460000,
+          "note": "Portal staple plus a Couch Co-Op Fest hit on Steam."
+        },
+        {
+          "scenario": "Breakout",
+          "units": 250000000,
+          "volume": "250M plays + 400k Steam/console copies",
+          "netUSD": 3250000,
+          "note": "The couples game everyone dares each other to play. Rare."
+        }
+      ],
+      "look": {
+        "short": "A sunny laundry room for two · real scanned fabrics that flop and snap",
+        "vibe": "Imagine a sunlit laundry room with a big pine folding table and a basket of warm, slightly wrinkled washing. A gingham sheet lies between two people; four fingertips pinch its corners, it billows and sags, someone says 'your other left', and then the edges meet and it snaps into a crisp square with a soft thwump and a puff of lavender. A grey cat immediately lies down on it.",
+        "layout": "Same-phone mode: the phone lies flat on the table between you, in portrait. Top end (upside down, facing the far player): their two teal corner rings and a small 'tiny arguments' tally. Middle: the folding table seen from straight above, today's item spread out, with a faint dotted crease guide. Bottom end, facing you: your two coral corner rings and the basket counter (2 of 3), with the absurd item peeking out of the basket. The key interaction: each person presses and drags their two corners; when the edges line up, the crease guide turns gold; let go and the cloth snaps into the fold with a thwump, slides off onto a neat stack at the side, and the next item tumbles out. In online mode each phone shows the table from its own end, and the partner's fingertips appear as soft teal rings.",
+        "references": [
+          "Real laundry rooms and hotel linen closets",
+          "Hotel towel-animal folding",
+          "Laundry care-tag symbols and typography",
+          "Thrift-shop tea towels and gingham"
+        ],
+        "palette": [
+          {
+            "name": "Fresh linen",
+            "hex": "#F5F1E8"
+          },
+          {
+            "name": "Gingham blue",
+            "hex": "#7FA6C9"
+          },
+          {
+            "name": "Coral thumb",
+            "hex": "#F08A6E"
+          },
+          {
+            "name": "Teal thumb",
+            "hex": "#4FA79B"
+          },
+          {
+            "name": "Lavender sachet",
+            "hex": "#B9A6D3"
+          },
+          {
+            "name": "Pine table",
+            "hex": "#C99A6B"
+          }
+        ],
+        "shapes": "Soft rectangles that billow and sag; folded stacks are neat rounded blocks; towel animals are chunky and lovable, all curves.",
+        "characters": "Players are only hands: two coral fingertip rings and two teal ones, so anyone can be anyone. Pickle, a round grey cat with one white sock, lies on whatever you're folding and holds the other end in solo mode (mostly).",
+        "camera": "Straight down on the folding table, like looking at a real table between you. Portrait for one phone; landscape and wider tables on tablet and desktop.",
+        "lighting": "Morning light from a side window; thin fabric glows slightly where light passes through; each fold gets a soft shadow line so layers read clearly.",
+        "textures": "Flatbed scans of real fabric: visible weave, stitching, terry loops and slight wrinkles; a wood-grain table; a wicker basket.",
+        "ui": "Big corner rings in coral and teal, a dotted crease guide that turns gold, washi-tape labels in the linen closet, and a fold-score card shaped like a laundry care tag with care-symbol icons.",
+        "type": "A rounded sans (e.g. Nunito) for UI with a typewriter face (e.g. Courier Prime) for care-tag labels and scores.",
+        "motion": "Cloth billows and lags behind fingers; a fold snaps with a small squash and a puff; towel animals reveal with a gentle turn; the cat flops down with a bounce.",
+        "sound": "Recorded real sounds: fabric flaps, a felt-soft thwump, a dryer hum, folding on wood, a cat purr. Music: gentle acoustic guitar and glockenspiel.",
+        "screenshot": "A linen closet of neat stacks in real fabrics, a towel swan on top and Pickle asleep on the bottom shelf.",
+        "clip": "Four thumbs, a fitted sheet flailing, 'no, YOUR corner!', thwump: a crisp square. Score card: '94% · 3 tiny arguments'. Under ten seconds.",
+        "avoid": [
+          "Timers, fail screens or red X's",
+          "Scores that blame one player",
+          "Glossy detergent-advert styling",
+          "Recognizable designer fabric prints"
+        ]
+      },
+      "distribution": {
+        "ship": "Own site + itch.io, playable on a phone, tablet or laptop",
+        "firstMoney": "$3 Linen Closet pack (fabrics, quilts, the cat on the sheet, all towel animals), shared by both players in a pair",
+        "reach": "CrazyGames two-player category with keyboard mode, YouTube Playables for the offline same-device mode, then a Discord Activity for long-distance couples and friends",
+        "graduate": "Steam at $3–5 with controller support and Remote Play Together, launched through Couch Co-Op Fest; mobile apps optional"
+      },
+      "origin": "Idea lab"
+    },
     {
       "id": "treat-box",
       "name": "Treat Box",

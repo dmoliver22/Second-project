@@ -13,6 +13,10 @@
   "changelog": [
     {
       "date": "2026-10-04",
+      "note": "Idea lab: 80 ideas generated from four lenses, scored by two independent judges, top 12 critiqued by a player/market critic and a build/distribution critic. Five finalists (Leaflings, If It Fits, Lemon Ink, Cuttings, Fold Together) added with full plans. New scoring factors: originality and fit for a solo creator."
+    },
+    {
+      "date": "2026-10-04",
       "note": "Removed time estimates: plans are now ordered steps with the signal to move on, the 90-day plan is 'Your first steps', and ladder stages have no durations. Platform rules (e.g. Steam's 30-day wait) and measured facts stay."
     },
     {

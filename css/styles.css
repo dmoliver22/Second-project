@@ -496,7 +496,7 @@ table.compare tr.score-row td { font-size: 1rem; }
 .gate { color: var(--ink); margin-top: auto; padding-top: 6px; border-top: 1px dashed var(--line-strong); }
 .preset-bar { align-items: center; }
 .chip { max-width: 100%; }
-.card .chips .chip { white-space: normal; }
+.card .chips .chip, .sugg .chips .chip { white-space: normal; }
 .loop-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 @media (max-width: 1000px) { .loop-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .loop-steps { grid-template-columns: minmax(0, 1fr); } }
