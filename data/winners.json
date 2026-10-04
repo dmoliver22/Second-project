@@ -1,0 +1,1679 @@
+{
+  "title": "Ideas built to pass all nine checks",
+  "intro": "Designed against the nine checks (proven loop, open theme, hook, shareable moment, feel, click, look and sound, timing, return and money), then graded by a critic who re-rated every check, verified the shakiest figures, fixed what could be fixed and cut what couldn't. Ordered by the critic's judgement of each idea's chance to win. None is a sure thing; each one's 'Prove it first' test tells you cheaply whether strangers agree.",
+  "winners": [
+    {
+      "id": "win-scuff-and-shine",
+      "name": "Scuff & Shine",
+      "family": "First-person craft & shop sims",
+      "theme": "Small-object restoration with nostalgia: beloved everyday sneakers",
+      "sourceIdeas": [
+        "scuff-and-shine",
+        "well-loved",
+        "rummage-room"
+      ],
+      "hook": "Grandpa's mud-grey 1985 runners: one brush stroke cuts a white stripe, one towel wipe brings the whole side back, and you decide which scuffs are memories.",
+      "oneLiner": "Run a one-bench shoe restoration shop in the back room of a tiny shopfront: open each shoebox and its owner's note, scrub and wipe away decades of grime, de-yellow soles on the windowsill, re-glue, re-paint and re-lace, and protect the marks that matter (a kid's name on the tongue, a friend's doodle on the toe) before the pair goes home.",
+      "clipStoryboard": [
+        {
+          "beat": "0–1s",
+          "shot": "Tight on a mud-caked grey runner on a green cutting mat under a warm gooseneck lamp; a soapy brush hovers. Heard: a dull rubber thud and a cardboard box lid."
+        },
+        {
+          "beat": "1–2.5s",
+          "shot": "One brush stroke along the midsole cracks the dry crust and leaves a single shocking pale stripe through the grime. Heard: a wet bristle 'shff' and a crust crackle."
+        },
+        {
+          "beat": "2.5–4.5s",
+          "shot": "Small circles build a thick lather that turns brown as it lifts the dirt; then a towel sweeps once and the whole side flashes white, a glint running along the wipe edge. The towel comes away brown. Heard: foam fizz, rubber squeak, a soft tuned 'ting'."
+        },
+        {
+          "beat": "4.5–6s",
+          "shot": "Hold on the split shoe: half mud, half gleaming, with a strip of blue painter's tape protecting a child's marker name on the tongue."
+        },
+        {
+          "beat": "6–8s",
+          "shot": "The yellowed sole, wrapped in cling film on a sunny windowsill, timelapses from nicotine yellow to icy translucent blue."
+        },
+        {
+          "beat": "8–10s",
+          "shot": "The finished pair goes back into its box beside an old photo of the owner wearing them; the lid closes. Heard: the zone 'tings' resolve into one warm chord."
+        }
+      ],
+      "provenLoop": {
+        "loop": "Take in a dirty, worn object with a story, clean and restore it in tool passes until every zone is done, return it, earn better tools and harder jobs (the PowerWash / ReStory / House Flipper restoration loop).",
+        "paidHits": [
+          {
+            "name": "PowerWash Simulator / PowerWash Simulator 2",
+            "result": "First game: 17M players and a 148,013 Steam CCU peak. Sequel: 1M+ players in week one, an estimated 343.8k Steam copies / $5.2M at $24.99 (Raijin), but a peak only ~13% of the original's, which is the novelty-decay warning",
+            "confidence": "medium"
+          },
+          {
+            "name": "ReStory: Chill Electronics Repairs",
+            "result": "100k sales on day one, 300k+ in a week, 500k+ in about 1.5 months, budget recouped in 12h, 96% positive (tinyBuild-published)",
+            "confidence": "medium"
+          },
+          {
+            "name": "House Flipper 2",
+            "result": "131k copies / $4.3M in 3 days, 1M+ by Feb 2026",
+            "confidence": "high"
+          },
+          {
+            "name": "Crime Scene Cleaner",
+            "result": "355k+ Steam units / $5.4M in its first 60 days: a cleaning verb with a strong theme twist",
+            "confidence": "medium"
+          },
+          {
+            "name": "Car Mechanic Simulator 2021",
+            "result": "About 839k Steam copies: restoration of one object category with an enthusiast fandom",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "openTheme": {
+        "demand": "Sneaker cleaning and restoration is one of the biggest evergreen before-and-after formats on YouTube and TikTok: Reshoevn8r's Vick Almighty has about 1.6M YouTube subscribers and 803K Instagram followers (Viral Nation; confirmed by search; a separate 2.4M TikTok figure could not be confirmed and is dropped). The research names nostalgic small-object restoration as the fastest-growing open pocket (ReStory 500k+). Caution: that audience skews toward sneaker culture rather than cozy gamers, so the owner stories have to bridge the two.",
+        "supply": "No dedicated sneaker restoration game found in two rounds of searching. Shoemaker (Steam, 2018, $0.99) is a tiny boot-repair game with no visible audience; mobile has hypercasual 'shoe DIY' ad games; Sneaker Store Simulator and Shoes Store Simulator are reportedly retail stocking sims (designer search, not re-confirmed). The real threat is generalist restorers: The Repair House (by the PC Building Simulator creator; instruments, arcade cabinets, antiques, toys), Cozy Game Restoration (cartridges, Sept 2026), Workshop Simulator (Mixed, 307 reviews) and Things Left Unsaid (2027). Any of them could add a shoe level, so the sneaker game must be the best at one object, not broader.",
+        "searched": "Searched 'sneaker restoration simulator Steam game cleaning shoes', 'sneaker cleaning restoration simulator game Steam' (only The Repair House, a generalist, came up), '\"sneaker restoration\" game Steam OR itch.io', 'Vick Almighty Reshoevn8r subscribers' and '\"Scuff & Shine\" game Steam'. No sneaker restorer exists; the name is free."
+      },
+      "coreAction": {
+        "verb": "Scrub, then wipe (the brush cracks the crust and lifts grime into foam; one towel pass reveals the clean)",
+        "input": "Mouse: hold left button and scrub; small circles clean fastest (real technique), long strokes leave streaks. Right button + drag is the towel wipe. Wheel or Q/E turns the shoe held in your off-hand between 6 framed angles. Controller: right stick scrubs at the reticle, right-trigger pressure sets brush pressure, left trigger + flick wipes, left stick turns the shoe. Touch (browser slice): one finger scrubs, a two-finger swipe wipes.",
+        "response": "Within one frame the brush head lands where you point and its bristles splay against the direction of travel. On caked mud the first pass cracks the crust and leaves a pale stripe (guaranteed, for the clip). Foam spawns exactly at the contact point and starts tinting toward the colour of the dirt it lifts. Within about 80 ms the material squeak starts, pitched by stroke speed, and the shoe nudges a few millimetres in your hand from the force. The grime mask thins one layer per pass (crust, then grime, then stain), so progress shows under your hand but the full clean waits for the towel.",
+        "feedback": [
+          "First-stroke crack: on a fresh shoe the first pass on dry mud breaks the crust into a pale stripe with a crackle and a few dry flakes. It promises the clean without giving it away, and it is the clip's opening beat.",
+          "Bristle splay and follow-through: bristles bend opposite to motion with a 60–80 ms spring lag, flick back with overshoot when you change direction or lift, and throw 2–4 droplets; the head tilts to hug the midsole curve.",
+          "Dirty foam as the progress readout: lather grows with scrub speed, takes on the colour of what it lifts (white, grey, brown) and slowly slides down under gravity, so you watch the dirt move from the shoe into the foam.",
+          "The wipe, the payoff beat: one towel drag carries the foam away in a smooth wave and exposes everything you cleaned at once, with a specular glint travelling along the wipe edge, a whoosh and a short bright 'shing'. The towel visibly darkens.",
+          "Material-aware sound: separate close-mic scrub loops for mesh (crackly fizz), suede (soft hush), leather (squeak) and rubber (high squeal), with pitch and volume tied to stroke speed and ±8% random pitch per stroke; a foam-crackle layer grows with foam volume.",
+          "Zone completion: when a zone (toe box, heel tab, midsole wall) passes ~97% it auto-completes with a single light sweep and a soft bell 'ting' tuned to that zone, so a finished shoe plays a little chord. No percentage ever appears.",
+          "Rinse bowl: dipping the brush clouds the bowl; over a job it goes from clear to cocoa, an ambient record of how filthy the pair was.",
+          "Camera: a 3–5% micro-zoom toward the active area that relaxes when you stop; a 3% ease-in and 0.5 s hold on each wipe; on the last zone the camera eases back to a three-quarter hero view under the lamp. No shake ever.",
+          "Love marks: some marks are not dirt (a marker name, a doodle, a signature). They are a fragile layer that fades in visible stages with a soft warning tone if you scrub them; blue painter's tape masks them with a satisfying tear-and-press sound, and a tiny heart pin shows it is protected.",
+          "Haptics and UI: controller rumble textured per material (soft on suede, buzzy on mesh, ticks on rubber) with one crisp pulse per zone 'ting'; on screen only a shoebox-lid checklist with pencil ticks (clean, de-yellow, glue, paint, lace) and the owner's note pinned to the lamp."
+        ],
+        "payoff": "The towel wipe that turns a brown, foamy panel bright white in one sweep, repeated zone by zone until the shoe glints under the lamp; then secondary verbs in the same feel language (a paint pen that lays a wet line drying matte in 0.5 s, the windowsill de-yellowing timelapse, laces ticking through eyelets) and the box shot beside the owner's old photo.",
+        "tuning": [
+          "firstStrokeContrast: how visible the crust-crack stripe is (must read on a phone screen)",
+          "Grime layers per zone (2–4) and removal per pass per material: target 6–12 strokes per zone",
+          "circularBonus: how much faster small circles clean than straight strokes, teaching technique without text",
+          "Brush radius and edge softness: precise versus forgiving",
+          "Foam spawn rate, maximum volume, tint speed and slide speed: how readable 'dirt moving into foam' is",
+          "Wipe width and glint travel speed: wide enough to feel like one magic sweep",
+          "Bristle spring stiffness and damping (overshoot on lift)",
+          "shoeNudge: how far the shoe moves under force (too much feels slippery, zero feels dead)",
+          "Love-mark fragility (passes before it fades) and tape stickiness",
+          "Zone auto-complete threshold (95–98%) and micro-zoom amount (3–5%)"
+        ],
+        "feelsBadIf": [
+          "Pixel hunting for the last 1% (PowerWash's known pain point). Fix: zones auto-complete above ~97% with a sweep, and a UV torch shows leftover spots on demand.",
+          "The clean appears instantly under the brush, killing the scrub-then-wipe reveal. Fix: the brush only cracks the crust and lifts dirt into foam; the towel reveals.",
+          "Scrubbing feels like an eraser tool on a texture. Fix: bristle splay, foam that carries dirt colour, shoe nudge and material sound.",
+          "Turning the shoe is fiddly. Fix: snap to 6 framed angles with free rotation between, and 'next dirty zone' auto-turn on request.",
+          "A love mark is erased with no warning. Fix: staged fading with a warning tone, and tape always one click away.",
+          "Every shoe feels the same. Fix: materials demand different tools (suede eraser and crepe brush dry, mesh with foam, leather with cream), plus damage types and one new tool every few jobs.",
+          "Fake brands look cheap, or real ones invite legal trouble. Fix: a small set of lovingly invented, era-true brands with their own logos and history (an '85 runner, an '88 basketball high, a '99 skate shoe, a canvas low).",
+          "Grime reads as disgusting. Fix: mud, dust and age only, never bodily."
+        ]
+      },
+      "clickMoment": {
+        "first": "Inside 30 seconds, before any menu: the first stroke cracks a pale stripe through grandpa's mud, a few circles turn the foam brown, and one towel wipe flashes the whole side white. 'It's actually clean under there.' Only then does the note in the box appear: 'These were Dad's. Please keep his name on the tongue,' and the tape is introduced on the spot.",
+        "deeper": "The deeper click is reading shoes like a restorer (which tool for which material, what to tape, how long the sole sits in the sun) and the first real 'keep' choice: a teenager's court shoes with her late friend's doodle on the toe box, which you clean around and re-edge. Attachment lands with the first owner reply, a photo of the grandad in the restored runners at a wedding, and later with your own swap-meet 'grail' pair on the shelf."
+      },
+      "look": {
+        "short": "Back-room cobbler bench · green cutting mat under a warm lamp · soft-stylised shoes with real material texture",
+        "vibe": "A narrow back room behind a tiny shopfront: a green self-healing cutting mat with a white grid, a brass gooseneck lamp, a pegboard of brushes, rolls of blue painter's tape, and a windowsill lined with cling-filmed soles turning in the sun. The shoes are the only saturated things: soft-stylised, slightly chunky proportions with convincing materials (matte suede, glossy leather, honeycomb mesh, a creamy midsole that goes properly white), so grime reads as real and clean reads as factory-fresh. The background falls into warm bokeh; customers exist as notes, voices and old photos.",
+        "signature": "The split shoe: one half mud-brown, the other gleaming white, divided by a crisp line of brown foam, with a strip of blue painter's tape over a child's handwritten name on the tongue.",
+        "palette": [
+          {
+            "name": "Midsole White",
+            "hex": "#F6F4EE"
+          },
+          {
+            "name": "Old Mud",
+            "hex": "#6E5A45"
+          },
+          {
+            "name": "Suede Sand",
+            "hex": "#C8A27A"
+          },
+          {
+            "name": "Ice Sole Blue",
+            "hex": "#BFE3EA"
+          },
+          {
+            "name": "Cutting-Mat Green",
+            "hex": "#2F6B57"
+          },
+          {
+            "name": "Painter's Tape Blue",
+            "hex": "#3D7FD1"
+          }
+        ],
+        "references": [
+          "Reshoevn8r / Vick Almighty restoration videos (macro shots, lamp light, foam)",
+          "PowerWash Simulator's clean-stripe readability",
+          "ReStory's specific nostalgic objects and warm bench",
+          "Unpacking (story told through objects)",
+          "Product photography of vintage sneakers on cutting mats"
+        ],
+        "avoid": [
+          "Real brand logos or trademarked silhouettes (swoosh, Jumpman)",
+          "Hype-shop streetwear neon and resale 'flex' coldness",
+          "Photoreal grime that reads as disgusting or horror-cleaner tones",
+          "Percent meters and HUD clutter",
+          "AI-generated textures, art, voice or music"
+        ]
+      },
+      "sound": "ASMR-first real foley recorded on thrifted sneakers: per-material bristle scrubs, foam crackle, rubber squeaks, tape tears, lace zips and box lids, all close-mic'd, with the squeak pitch following your hand. Music is warm human-played lo-fi soul with a Rhodes that ducks under every scrub so the brush is the music; the zone 'tings' are a tuned bell set, so finishing a shoe plays a chord.",
+      "timing": {
+        "session": "One pair is one job of about 6–10 minutes: unbox and read the note, inspect under the UV torch, dry-brush, scrub and wipe each zone, then glue, paint and re-lace. A shop day is 2–3 pairs plus one sole curing on the windowsill overnight. Weekends add a swap meet where you buy beat-up pairs blind (a 'what's under the mud' reveal) for the shelf or resale. The arc is tool unlocks, harder materials (suede, patent, crumbling vintage foam) and owner storylines that return with follow-ups.",
+        "firstMinute": "0–10 s: a box opens on the bench with one muddy runner, a brush and a towel. 10–30 s: first stroke, pale stripe; circles, brown foam; wipe, white side. 30–50 s: the first zone 'tings' and the note appears, introducing the tape. 50–60 s: the shoe turns to show the yellowed sole, the hook into the next tool.",
+        "marketWindow": "Why now: 2026 is the year of tactile restoration breakouts (ReStory 500k+, Dressmaker #9 global), the object categories are being claimed one by one, and no sneaker restorer exists. Plan: post browser-slice clips during spring 'clean your whites' season, take the Steam demo to the June Steam Next Fest, and launch 1.0 at back-to-school in late summer, when sneaker-cleaning content peaks; send the game to real sneaker restorers for reaction videos as the main launch lever. Spring cleaning season becomes the first anniversary update."
+      },
+      "comeBack": {
+        "short": "A yellowed sole is curing on the windowsill, and the next box from a returning owner is on the doorstep with a follow-up note.",
+        "long": "Owner storylines that come back (the nurse's retirement pair, grandpa's wedding shoes), a growing wall of before/after polaroids, tool and technique unlocks (steamers, sole swaps, re-dye, custom paint), swap-meet blind buys with rare finds under the mud, a personal grail shelf, a 'my own pair' sandbox with shareable turntable GIFs, and seasonal jobs (festival boots, salt-stained winter boots, prom and wedding sneakers)."
+      },
+      "money": {
+        "model": "Free browser toy, then a paid itch.io/Ko-fi supporter build while the Steam page collects wishlists, then premium Steam with a demo; later story-pair and boots/skates DLC and console ports.",
+        "price": "Steam $14.99; supporter build $5; DLC $3.99",
+        "evidence": "PowerWash Simulator 2 sells at $24.99 (~$5.2M est. gross); Dressmaker at $14.99 recouped in under 24h; the genre's implied average realised price is $10–12 (Supermarket Simulator, TCG Card Shop). House Flipper 2 and Gas Station Simulator extend the tail with DLC. Themed sims without a breakout land at 25k–120k copies; a specific nostalgic object (ReStory) broke out at 500k+, while generic cozy repair (Piece by Piece) is estimated at only ~4.8k copies (low confidence). Cozy games reaching 1,000 reviews correspond to roughly $150k gross."
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "proveItFirst": "Build a Three.js browser toy with one commissioned shoe model (one silhouette, three grime layers, three zones, one taped love mark): scrub, lather, wipe, nothing else. Record three caption-free vertical clips (first-stroke stripe, full wipe reveal, before/after with the taped name) and post them twice: once into sneaker-cleaning TikTok/Shorts (tag restorers) and once into cozy-gaming spaces (r/CozyGamers, cozy TikTok). A yes is a clip over 100k views with 'where can I play' comments from BOTH audiences, players posting their own wipe recordings, and 2,000+ itch plays where 30%+ clean the whole shoe and median time passes 3 minutes. If only sneakerheads respond, lean harder into owner stories; if only the before/after gets views and nobody plays past zone one, fix the scrub feel before anything else.",
+      "weakestLink": "Audience fit and novelty decay. Sneaker-cleaning viewers are not obviously cozy-game buyers, and without real brands sneakerheads may shrug at invented silhouettes, so the owner stories have to do the warming. The cleaning verb also wears off (PowerWash 2's peak was about 13% of the original's), so materials, tools and story chains must keep it fresh, and a generalist restorer adding shoes could take the theme.",
+      "checks": {
+        "provenLoop": {
+          "rating": "strong",
+          "note": "Cleaning and restoration is one of the most-paid sim loops: PowerWash (17M players), ReStory 500k+, House Flipper 2 1M+, Crime Scene Cleaner 355k in 60 days, CMS2021 ~839k."
+        },
+        "openTheme": {
+          "rating": "ok",
+          "note": "No sneaker restorer exists (confirmed by search), but the cozy-buyer demand is inferred from video views, and generalist restorers (The Repair House, Cozy Game Restoration) could add shoes."
+        },
+        "hook": {
+          "rating": "strong",
+          "note": "A mud-grey shoe and one white stripe is understood in one second with no text."
+        },
+        "moment": {
+          "rating": "strong",
+          "note": "The wipe reveal mirrors a real viral video format shot for shot, and the split shoe with taped name adds a human beat."
+        },
+        "feel": {
+          "rating": "strong",
+          "note": "Three-beat crack/foam/wipe, foam that carries dirt colour, per-material sound, shoe nudge and no pixel hunting; specified to the knob."
+        },
+        "click": {
+          "rating": "strong",
+          "note": "The first wipe lands inside 30 seconds before any menu; the 'keep the mark' choice and owner replies give the deeper click."
+        },
+        "look": {
+          "rating": "ok",
+          "note": "The split shoe with blue tape is legible in a thumbnail, but the product-photo realism sits close to other restoration sims and needs commissioned 3D shoes in several silhouettes."
+        },
+        "timing": {
+          "rating": "ok",
+          "note": "Good window while categories are being claimed, but the restoration wave (Repair House, Cozy Game Restoration, Things Left Unsaid) is closing it."
+        },
+        "comeBackAndMoney": {
+          "rating": "ok",
+          "note": "Overnight sole cure, owner follow-ups and swap-meet reveals give pull, and $14.99 has clear comps, but it is a finite campaign and cleaning novelty decays."
+        }
+      },
+      "scores": {
+        "originality": 5,
+        "provenDemand": 8,
+        "demand": 7,
+        "gap": 6,
+        "soloSpeed": 5,
+        "creatorFit": 5,
+        "instantPlay": 5,
+        "monetization": 7,
+        "marketability": 9,
+        "momentum": 8,
+        "culture": 7,
+        "scopeFit": 8
+      },
+      "critic": {
+        "verdict": "Build-ready",
+        "summary": "The strongest proven loop in the set, paired with a real-world video format that already gets millions of views and a feel spec that is ready to prototype. It wins if the scrub-then-wipe clip pulls both sneaker and cozy audiences; it dies if only sneakerheads care (no cozy buyers) or if a generalist restorer ships a better shoe level first.",
+        "fixesApplied": [
+          "Merged the two Scuff & Shine drafts: kept the first-person family, the back-room cutting-mat bench, the love-mark tape and zone chords (FP draft) and added the guaranteed first-stroke stripe, circular-scrub bonus, shoe nudge, heart pin and secondary-verb feel (EV draft).",
+          "Resolved a contradiction between drafts: the first stroke now only cracks the crust into a pale stripe, so the towel wipe stays the full reveal (three beats instead of two competing payoffs).",
+          "Rebuilt the clip so the stripe lands at 1 s, then foam, wipe, taped name, sole timelapse and box photo.",
+          "Picked one market plan (spring clips, June Next Fest, back-to-school launch) instead of two conflicting launch windows.",
+          "Corrected creator figures to the confirmed 1.6M YouTube / 803K Instagram and dropped the unconfirmed 2.4M TikTok claim; marked the retail shoe-store sims as unconfirmed.",
+          "Prove-it test now posts to sneaker AND cozy audiences and requires a response from both, to test the audience-fit risk directly.",
+          "Downgraded open theme, look and timing to ok; lowered demand, gap, culture to match calibration (Well Loved is the nearest calibrated comp)."
+        ]
+      },
+      "rank": 1
+    },
+    {
+      "id": "win-lather-and-loaf",
+      "name": "Lather & Loaf",
+      "family": "First-person craft & shop sims",
+      "theme": "Hand-craft studio (Dressmaker-adjacent): cold-process soap",
+      "sourceIdeas": [
+        "lather-and-loaf",
+        "glaze-day",
+        "pressing-day"
+      ],
+      "hook": "Pour three colours blind, drag one swirl, then pull the wire through the loaf and find out what you made.",
+      "oneLiner": "Run a tiny cold-process soap studio above a Saturday market: tint batter, pour layers and drag a swirl stick through a wooden mould, let it cure, then pull the wire cutter through the loaf. Every bar is a new cross-section of your own pour, and the best ones fill customers' order cards.",
+      "clipStoryboard": [
+        {
+          "beat": "0–1.5s",
+          "shot": "Overhead on a walnut mould of cream batter. Three enamel jugs (rose, teal, gold) tip in from height and fold into ribbons. Heard: a thick, slow glug and a bench creak. (This is the half that mobile soap-cutting ads never show.)"
+        },
+        {
+          "beat": "1.5–3s",
+          "shot": "A bamboo stick drags one figure-eight; the surface feathers into a peacock pattern. Heard: a soft wet drag."
+        },
+        {
+          "beat": "3–4s",
+          "shot": "Hard cut: the cured loaf on the cutter bed in morning light, its top now plain and matte, giving nothing away. A brass latch clacks; the lever is gripped."
+        },
+        {
+          "beat": "4–6s",
+          "shot": "The lever comes down; the wire bows as it sinks through with a crisp crunch-squeak and a wooden 'tock'. The bar clings for a beat, peels away and tips onto its side."
+        },
+        {
+          "beat": "6–7.5s",
+          "shot": "Hold on the wet, glossy cut face: a teal heart sits inside a rose spiral nobody could see from the top. The camera eases in; the sheen dries to matte."
+        },
+        {
+          "beat": "7.5–9s",
+          "shot": "Two more pulls in rhythm, then ten bars fanned out on kraft paper like a flipbook, the heart morphing bar to bar. Heard: one low nylon-guitar note."
+        }
+      ],
+      "provenLoop": {
+        "loop": "Take an order, craft it with hands-on real-world steps, get a reveal you made yourself, sell it, buy new materials and techniques (Dressmaker's craft-to-order loop plus the TCG-style reveal, ten reveals per loaf).",
+        "paidHits": [
+          {
+            "name": "Dressmaker",
+            "result": "Hands-on craft-to-order: 400k+ wishlists at its Sept 21 2026 launch, #9 Steam global top seller, ~15.5k peak CCU, 96% positive, costs recouped in under 24h; $14.99. Launched two weeks ago, so final sales are not yet known",
+            "confidence": "medium"
+          },
+          {
+            "name": "Potion Craft: Alchemist Simulator",
+            "result": "Craft-to-order with one tactile verb: 100k copies in its first 3 days of Early Access, #1 Steam top seller for 3 days, 7,046 peak CCU (tinyBuild-published; confirmed by search)",
+            "confidence": "high"
+          },
+          {
+            "name": "TCG Card Shop Simulator",
+            "result": "'What's inside' reveal loop: ~400k copies in 10 days, ~1.1M Steam copies / ~$12.9M gross (Raijin), solo developer",
+            "confidence": "medium"
+          },
+          {
+            "name": "Tiny Bookshop",
+            "result": "Hobby-fandom market shop at ~$20: 200k+ in 12 days, 500k+ total",
+            "confidence": "high"
+          }
+        ]
+      },
+      "openTheme": {
+        "demand": "Soap cutting is one of the oldest 'oddly satisfying' formats: soap-cutting videos had about 1.5B TikTok views and #soapcutting 934k+ Instagram posts by a 2022 press count (the 3.6B figure in the draft could not be confirmed and is dropped; follower counts for individual soap makers are unverified). Mobile 'Soap Cutting' toys are still being updated in 2026, so people play it, though for free. Dressmaker shows the hand-craft crowd buys on Steam right now, and the research names candle and soap making as open Dressmaker-adjacent themes. Paid demand for a soap game is inferred, not measured.",
+        "supply": "No soap- or candle-making sim on Steam (confirmed again by search). Competitors are mobile ASMR toys (Soap Cutting, Soap Cutting Relax, Idle Soap ASMR), a Sims 4 soap mod and a soap-shop mobile project in development (Bunno's Soap Shop, a university project). They are weak because you only cut prefab bars: you never make the soap, so the reveal is not yours and there is no craft or shop. The danger is perceptual, not competitive: millions of people have seen soap cutting in mobile ads, so the clip must show the pour. A cautionary craft comp: Master of Pottery (Steam, pottery wheel plus showroom, $5.99) has only ~538 reviews at 97% after years in Early Access, so a pleasant craft bench without a viral reveal stays small.",
+        "searched": "Searched 'soap making simulator Steam cold process soap cutting', 'soap making simulator Steam game 2026', '\"soap shop simulator\" OR \"candle shop simulator\" Steam', 'soap cutting TikTok views billion' and 'Master of Pottery Steam'. Found only mobile cutting toys, a Sims mod, a mobile project in development and no Steam soap studio; the name is free."
+      },
+      "coreAction": {
+        "verb": "Slice the loaf (pull the wire cutter)",
+        "input": "Mouse: grab the cutter lever and drag down; lever depth follows the cursor 1:1. Controller: right trigger is analog lever depth (full pull = through the loaf). Touch: drag down anywhere on the right half of the screen. A scroll tick or bumper ratchets the loaf forward one bar-width.",
+        "response": "Within one frame the lever rotates with your drag. The first ~8% of travel is free play, then the wire meets the top skin with a sprung 'clack', bows into a shallow curve and leaves a thin indent line along the top. A dry 'tick' plays at contact. From there the wire's depth tracks your drag against a firmness curve, so you feel the soap pushing back.",
+        "feedback": [
+          "Anticipation: free travel before contact, a sprung clack at contact, and a 4% camera ease-in, so the cut always 'loads' before it bites.",
+          "Wire bow: the wire bends up to ~6 mm (visual) in proportion to pull speed and the loaf's firmness, and straightens when you ease off. This shows resistance without any UI.",
+          "Surface deformation: the top skin dimples along the wire and a bead of glycerin 'sweat' squeezes out along the cut line (decal plus 3-8 crumb particles at the wire's exit point; embeds like lavender buds occasionally pop out).",
+          "Sound, layered: (a) a granular crunch whose grains fire every 1.5-3 mm of travel, pitch tracking speed ±15%; (b) randomized squeak transients from a 6-sample pool, ±8% pitch; (c) a faint wire 'string' tone that rises as tension builds; (d) a wooden 'tock' when the wire hits the bed; (e) a soft thump as the bar tips, volume and pitch set by bar weight. All of it is close-mic foley of real soap cut on a real cutter.",
+          "Follow-through: the two halves cling for 60-120 ms (a sticky separation), then the bar peels away and tips onto its side as a rigid body with 2-3% squash on landing, then recovers. It is soap, so it has a little give.",
+          "Light: the fresh cut face has a wet specular sheen that dries to matte over ~2 s, which sells 'just cut' in every frame of a clip.",
+          "Camera: no shake (it is cozy). A 1-frame micro-bump on the 'tock', then on the tip-over the camera holds 0.4 s, pushes in ~6% and turns ~3° toward the cut face. It releases when you touch the lever again.",
+          "Rhythm and the pour (the other half of the hands' time): after three bars each full pull auto-ratchets the loaf one notch with a click, so slicing becomes pull-click-pull-click. The pour is just as physical: jug tilt follows your drag angle 1:1, the batter stream thickens with tilt, folds into ribbons where it lands (written into the 3D colour field), and the glug pitch drops as the jug empties.",
+          "Haptics: on a controller, a low rumble textured per crunch grain and one firm pulse on the 'tock'; on phones, light taps per grain cluster.",
+          "UI: nothing during the cut. After the bar lands, a small kraft tag slides in naming the pattern ('Peacock, lopsided') only if an order asked for one; otherwise the bar just joins the row."
+        ],
+        "payoff": "The bar tips and a pattern no one has seen turns toward the light. Because the swirl is a real 3D volume, every slice is another cross-section, so a loaf is ten reveals that morph bar to bar like a flipbook. Rare emergent shapes (a heart, a clean spiral, a 'galaxy') earn a soft chime and a named entry in the pattern journal.",
+        "tuning": [
+          "Free travel before contact (5-12% of lever travel): more makes the bite feel heavier.",
+          "Wire bow max (3-8 mm) and spring constant: the main 'resistance' read.",
+          "Firmness curve per recipe and cure stage: young soap is soft and squishy, fully cured is crisp and crunchy.",
+          "Crunch grain spacing (1.5-3 mm) and pitch range (±8-15%): crispness versus mush.",
+          "Clinging separation delay (60-120 ms) and tip torque: how 'fresh' and heavy a bar feels.",
+          "Landing squash (2-4%) and recovery damping.",
+          "Camera push-in (4-8%), turn (2-5°) and hold (0.3-0.6 s).",
+          "Wet-sheen fade time (1.5-3 s).",
+          "Jerk threshold for cosmetic chatter marks on the cut face.",
+          "Volume resolution of the swirl field (e.g. 64×32×128 voxels): sharper patterns versus WebGL cost.",
+          "Pour stream width per degree of jug tilt and ribbon fold strength: how readable your own pour is when it reappears in the cut face."
+        ],
+        "feelsBadIf": [
+          "The wire moves at a canned animation speed whatever you do. Fix: depth is always driven by your input against the firmness curve.",
+          "The inside pattern doesn't match what you poured (a pre-baked texture). Fix: the pour and swirl write into a real 3D colour field that the cut samples, so players recognise their own pour.",
+          "The crunch loops audibly. Fix: granular grains, a sample pool and speed-tracked pitch.",
+          "A bad cut wastes the loaf. Fix: mistakes are only cosmetic (chatter marks, a crooked edge); uneven bars sell as cheap 'seconds' or get grated into confetti soap, so nothing is lost.",
+          "Ten bars per loaf feels like a chore. Fix: the ratchet rhythm after bar three, plus each bar being a new reveal.",
+          "Input lag in the browser. Fix: read raw pointer events and apply at most one frame of smoothing.",
+          "The bar falls like a brick. Fix: clinging separation, squash and the wet sheen.",
+          "The pour is a menu choice (pick a 'swirl type' button). Fix: every pour and swirl is a hand gesture whose exact path shows up inside the loaf, so the reveal is always yours.",
+          "The clip looks like a mobile soap-cutting ad. Fix: every marketing clip opens on the pour and the plain top, so the slice is a reveal of something made, not a prefab bar."
+        ]
+      },
+      "clickMoment": {
+        "first": "In the first minute you tip three jugs into the mould (you can only see the top), drag the stick once, watch a cozy dusk-to-dawn timelapse, then pull the lever. The first bar tips over and the inside looks nothing like the top. It is your pour, folded in ways you didn't predict. The second pull shows a different cross-section, and it clicks: every slice is a new reveal of something you made.",
+        "deeper": "The deeper click is learning to pour blind on purpose. You read 'trace' (thin batter swirls, thick batter holds layers), choose drop, hanger or in-the-pot swirls and embeds, and start predicting what bar 5 will look like. The mastery beat is a wedding order that asks for a heart hidden in the middle bar, and you land it. Attachment comes from naming your signature recipe and seeing regulars at the stall ask for it again."
+      },
+      "look": {
+        "short": "Sunny attic soap studio · pastel bars on oiled walnut · kraft paper and string",
+        "vibe": "A small whitewashed attic room with a slanted skylight. Morning light falls across an oiled walnut bench, a wooden mould, enamel jugs with drips down their sides and a brass-and-steel wire cutter. The soap is the colour: chalky pastel batter that turns glossy where it is freshly cut. Everything else is warm wood, linen, kraft paper and twine, slightly soft-focused, like a handmade-goods Instagram account with real dust in the air.",
+        "signature": "The 'flipbook row': ten freshly cut bars fanned out side by side, the swirl visibly morphing from bar to bar, each with a wet sheen on its cut face. You recognise it in a thumbnail the way you recognise a sliced cake.",
+        "palette": [
+          {
+            "name": "Batter Cream",
+            "hex": "#F3E9D8"
+          },
+          {
+            "name": "Rose Clay",
+            "hex": "#E8A5A0"
+          },
+          {
+            "name": "Spirulina Teal",
+            "hex": "#6FB7AE"
+          },
+          {
+            "name": "Turmeric Gold",
+            "hex": "#E3B04B"
+          },
+          {
+            "name": "Oiled Walnut",
+            "hex": "#6B4A33"
+          },
+          {
+            "name": "Kraft Paper",
+            "hex": "#C9A57A"
+          }
+        ],
+        "references": [
+          "Dressmaker's warm boutique close-ups",
+          "real cold-process soap-maker videos (overhead pour shots and cutter close-ups)",
+          "Unpacking's tactile object love",
+          "A Little to the Left's clean, calm framing",
+          "Kinfolk-style handmade-goods photography"
+        ],
+        "avoid": [
+          "Neon 'satisfying' mobile-ad colours and glitter overload",
+          "Hyper-real PBR plastic sheen that makes soap look like candy",
+          "UI meters and percentages over the bench",
+          "Cluttered factory or 'soap tycoon' framing",
+          "Any AI-generated art or music"
+        ]
+      },
+      "sound": "ASMR-first: every cut, pour and drag is close-mic foley recorded on real soap (a real wire cutter and loaf are cheap to buy, and recording them is devlog content). Music is sparse nylon guitar and a soft Rhodes that drop out whenever your hand is on the lever, so the crunch carries the moment. Market days add distant chatter and a church bell.",
+      "timing": {
+        "session": "A studio day runs about 10-15 minutes: read 2-3 order cards, pour one or two loaves (2-4 minutes each), slice and bevel the loaf that cured overnight (about 2 minutes of pure rhythm), then stamp, wrap and shelve. Every third day is the Saturday stall, where you price bars and meet regulars. The longer arc is unlocking techniques, scents and moulds and filling the 40-pattern journal.",
+        "firstMinute": "No menus: a loaf mould and three pre-tinted jugs. Pour (15 s), one swirl drag (5 s), a cure timelapse (5 s), then the first three slices with the reveal on each. The first order card arrives only after the third bar has tipped.",
+        "marketWindow": "Dressmaker (Sept 21 2026) and ReStory (Aug 2026) just proved tactile craft and restoration breakouts, and the research expects Dressmaker clones to target sewing and knitting first, which leaves soap open. Cozy releases jumped from 632 in 2025 to 1,041 by late Sept 2026, so a sharp reveal is needed to stand out. Handmade soap is a classic gift: reveal the Steam page with a 'holiday soap' clip in the gifting season, put the demo in a Steam Next Fest, pitch Wholesome Direct, and launch 1.0 in early November so holiday gifting and Steam's Autumn and Winter sales follow."
+      },
+      "comeBack": {
+        "short": "The loaf you poured yesterday has cured and is waiting on the cutter, so the reveal is literally banked for your next session.",
+        "long": "A pattern journal with 40 named swirls (some rare and emergent), technique unlocks (embeds, mica lines, rimmed tops, salt bars), regulars whose orders build on past ones, seasonal scents and colour drops, stall decoration, and shareable pour codes: send a friend your recipe and they slice 'your' loaf in their game, so their reveal matches yours."
+      },
+      "money": {
+        "model": "Premium on Steam, after a free browser toy and a paid itch.io/Ko-fi supporter build; small seasonal DLC scent-and-mould packs later.",
+        "price": "$14.99 (supporter build $5)",
+        "evidence": "Dressmaker launched at $14.99 and recouped in under 24h; Potion Craft sold 100k in 3 days (confirmed); implied average realised prices in the genre are $10–12 (Supermarket Simulator, TCG Card Shop). Well-reviewed themed sims without a breakout land at 25k–120k copies (Bookshop Simulator ~50.9k / $488k, Tavern Manager ~92.3k / $830k); sims with no clip-able hook land under 10k (Piece by Piece ~4.8k, low confidence), and a pleasant craft bench at $5.99 (Master of Pottery, ~538 reviews) stays small, which is why the reveal must be proven first. Cozy games that reach 1,000 reviews correspond to roughly $150k gross."
+      },
+      "path": "browser test → Steam",
+      "effort": "small",
+      "proveItFirst": "Build a one-screen browser toy (Three.js, WebGL2 3D texture): one mould, three jugs, one swirl stick, a cure timelapse and the cutter. No shop, no menus. Before posting, check that a real soap maker cannot tell your cut face from a photo of real cold-process soap at phone size. Post 5 different 7–10 second clips of real player-made pours (always opening on the pour, no text) to TikTok and Shorts, and link the toy on itch.io with a 'follow for the game' button. A yes is any clip above 100k views with 'what game is this' comments and fewer than about 1 in 10 top comments calling it 'one of those mobile ads', or 2,000+ itch plays where the median player pours 3+ loaves and 5%+ click through to follow or wishlist. A no is players slicing one loaf and leaving.",
+      "weakestLink": "Perceived depth and the mobile-ad shadow. Free soap-cutting toys have trained people to see soap slicing as a 30-second ad, so the clip must sell the pour and the Steam game must prove the craft (trace, techniques, hidden-pattern orders) is worth $15; the shop side is the thinnest part of the design. Master of Pottery shows a well-liked craft bench can stay tiny. The 3D swirl volume must also look like real soap, or the reveal becomes a gimmick.",
+      "checks": {
+        "provenLoop": {
+          "rating": "ok",
+          "note": "Craft-to-order with a reveal sold for Potion Craft (100k in 3 days) and Dressmaker (400k+ wishlists), but Dressmaker's final sales are not in yet and a craft bench without a viral reveal (Master of Pottery) stays small."
+        },
+        "openTheme": {
+          "rating": "strong",
+          "note": "Confirmed empty on Steam: only mobile prefab-cutting toys, a Sims mod and a mobile project; soap cutting has 1.5B+ TikTok views."
+        },
+        "hook": {
+          "rating": "ok",
+          "note": "'Pour blind, slice to find out' is instant, but a stranger may read any soap-slicing clip as a mobile ad; the clip has to open on the pour to separate itself."
+        },
+        "moment": {
+          "rating": "strong",
+          "note": "The bar tipping to show a hidden heart you poured is a proven satisfying beat made personal, and every loaf yields ten."
+        },
+        "feel": {
+          "rating": "strong",
+          "note": "Analog lever against a firmness curve, wire bow, granular crunch, clinging separation and wet sheen, plus a 1:1 hand pour; mistakes are cosmetic."
+        },
+        "click": {
+          "rating": "strong",
+          "note": "The first bar reveals inside the first minute; the deeper click is pouring blind on purpose and landing a hidden-heart order."
+        },
+        "look": {
+          "rating": "strong",
+          "note": "The flipbook row of freshly cut bars is a thumbnail people already recognise; one bench suits commissioned and bought art."
+        },
+        "timing": {
+          "rating": "ok",
+          "note": "Gifting season and the post-Dressmaker moment help, but cozy supply is up 143% and craft clones are coming."
+        },
+        "comeBackAndMoney": {
+          "rating": "ok",
+          "note": "The overnight cure banks the next reveal and $14.99 has comps, but depth beyond the slice is unproven and the ceiling is mid-tier unless the clip spreads."
+        }
+      },
+      "scores": {
+        "originality": 6,
+        "provenDemand": 6,
+        "demand": 7,
+        "gap": 7,
+        "soloSpeed": 6,
+        "creatorFit": 6,
+        "instantPlay": 6,
+        "monetization": 6,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 7,
+        "scopeFit": 8
+      },
+      "critic": {
+        "verdict": "Promising, fix first",
+        "summary": "The emptiest theme in the set with the cheapest bench to build, and a reveal that is literally the player's own work, ten times per loaf. It wins if clips that open on the pour read as 'a game where you make it' rather than another mobile soap ad; it dies if the 3D swirl doesn't look like real soap or if players slice one loaf and see nothing deeper to buy.",
+        "fixesApplied": [
+          "Rewrote the clip so it opens on the pour and shows the plain cured top before the cut, with a hidden heart as the reveal; this separates it from mobile soap-cutting ads.",
+          "Added the pour as a specified hand action (1:1 jug tilt, stream width, ribbon fold, glug pitch) because it is half the hands' time, plus two new feels-bad fixes.",
+          "Corrected soap-cutting demand to the confirmed 1.5B TikTok views (2022) and dropped the unconfirmed 3.6B and follower claims.",
+          "Confirmed Potion Craft (100k in 3 days, tinyBuild) and raised its confidence; flagged that Dressmaker's final sales are not known yet.",
+          "Added Master of Pottery (~538 reviews at $5.99) as an honest downside comp for craft benches.",
+          "Prove-it test now includes a real-soap realism check and an 'is this an ad?' comment threshold.",
+          "Downgraded proven loop and hook to ok; lowered provenDemand, gap, soloSpeed, creatorFit, instantPlay, marketability, culture and scopeFit toward Glaze Day's calibrated row."
+        ]
+      },
+      "rank": 2
+    },
+    {
+      "id": "win-well-loved",
+      "name": "Well Loved",
+      "family": "First-person craft & shop sims",
+      "theme": "Small-object restoration with nostalgia: plush and toy hospital",
+      "sourceIdeas": [
+        "well-loved",
+        "twelve-frames",
+        "kettle-stitch"
+      ],
+      "hook": "Close a split seam in one pull and watch a 30-year-old bear plump back to life.",
+      "oneLiner": "Run a tiny plush hospital: admit worn, much-loved toys with their owners' notes, wash and fluff them, restuff and ladder-stitch their seams shut, mend eyes and noses without erasing the love marks, and sometimes fix an old voice box and hear what it says.",
+      "clipStoryboard": [
+        {
+          "beat": "0–1s",
+          "shot": "Close-up: a balding honey-coloured bear on a felt-topped bench under a gooseneck lamp, a split side seam with stuffing poking out, a brown paper hospital tag on its wrist. Heard: a soft lamp click."
+        },
+        {
+          "beat": "1–3s",
+          "shot": "A curved needle stabs left, right, left, right across the gap; loose thread loops form a little ladder. Heard: a soft tick on each stab and a thread whisper."
+        },
+        {
+          "beat": "3–5s",
+          "shot": "A hand pulls the thread: the ladder rungs tighten one after another, the edges roll in and the seam vanishes. Heard: an ascending music-box run, one note per rung."
+        },
+        {
+          "beat": "5–6s",
+          "shot": "The bear plumps up with a little bounce; one ear flops; its button eye catches the lamp."
+        },
+        {
+          "beat": "6–8s",
+          "shot": "The bear sits beside an old photo of a toddler hugging it; a tiny voice box under the bench clicks and a crackly recorded voice says 'night night'. Then the hospital tag gets a 'discharged' stamp."
+        }
+      ],
+      "provenLoop": {
+        "loop": "Take in a worn object with a story, restore it through hands-on real-world steps, return it and see the owner's reaction, earn better tools and harder cases (ReStory's repair-with-story loop with Dressmaker's sewing verb).",
+        "paidHits": [
+          {
+            "name": "Dressmaker",
+            "result": "400k+ wishlists, #9 Steam global top seller, recouped in under 24h; sewing as the core verb; $14.99",
+            "confidence": "medium"
+          },
+          {
+            "name": "ReStory: Chill Electronics Repairs",
+            "result": "500k+ copies in about 1.5 months; restore a specific nostalgic object with a story between jobs",
+            "confidence": "medium"
+          },
+          {
+            "name": "Unpacking",
+            "result": "100k in 10 days, 1M+ by its first anniversary; a life story told through personal objects",
+            "confidence": "medium"
+          },
+          {
+            "name": "PowerWash Simulator",
+            "result": "17M players on a dirty-to-clean reveal (the fur fluff-out is the same reveal on plush)",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "openTheme": {
+        "demand": "Adults buy plush for themselves: Jellycat's 2024 revenue rose 66% to £333M with profit more than doubling, and the growth is credited to 'kidults' (YPulse, Inside Retail, Oct 2025; confirmed by search). Adults now account for about 30% of global toy spending (same reporting). The draft's '20% of plush sales are adults buying for themselves' could not be confirmed and is dropped. Real toy hospitals (Tokyo, Singapore, Montreal) draw steady press, Dressmaker shows sewing sells as a game verb, and the research names plush/toy hospitals inside the open small-object restoration pocket.",
+        "supply": "Piece by Piece (Gamkat / No More Robots, March 2026) repairs heirlooms and toys for woodland animals: estimated ~4.8k copies (low confidence), although its publisher said a name-collision bundle earned it about three times its expected revenue, which suggests modest expectations. Generic objects, a cute generic look and no clip moment. Workshop Simulator is generic and Mixed (307 reviews). Plush-specific games are kids' mobile apps (Plush Hospital Teddy Bear Game, Belle's plush dolls repair) and small itch.io projects (Teddy Bear Repair, Moxie's Plushie Hospital visual novel). Nothing on Steam is a first-person plush hospital for adults built around a great sewing feel. Risk: the research expects Dressmaker clones to target sewing first.",
+        "searched": "Searched 'plush toy repair game Steam teddy bear hospital cozy', 'plush toy repair game Steam stuffed animal hospital sewing' (only mobile kids' apps and itch projects), 'Jellycat revenue 2024 kidults', 'Piece by Piece No More Robots sales' and '\"Well Loved\" game Steam plush'. The name is free on Steam."
+      },
+      "coreAction": {
+        "verb": "Ladder-stitch and cinch (stab left, stab right, then one pull closes the seam)",
+        "input": "Mouse: the needle follows the cursor; swing it back and forth across the seam in a zig-zag and each crossing onto the far bank snaps a stitch in (no dots to click). Hold and drag away from the seam to cinch. Controller: left and right triggers stab the left and right banks in an alternating walking rhythm, right stick pulls the thread. Touch: zig-zag a finger across the seam, then drag away to cinch.",
+        "response": "Within 50 ms of the needle crossing onto a bank, its tip pushes into the fabric, the fabric dimples around it (vertex displacement), and it pops through with a few fibre motes. Faint chalk marks show the ideal spacing, but the stitch lands where you actually crossed. The thread follows as a rope that lies as a loose rung across the gap, so after each zig-zag pair you can count your ladder growing, at your own tempo.",
+        "feedback": [
+          "Anticipation: the needle hovers and its tip glints over the next valid dot; the fabric pre-dimples slightly as it approaches.",
+          "Stab: a 40 ms push-in with fabric dimple, then a pop-through with 2-4 fibre motes and a soft 'tick' (6 sample variations, ±6% pitch).",
+          "Thread: verlet rope with a slight overshoot; pulling through plays a cotton 'fffp' whose pitch follows pull speed.",
+          "Ladder rungs: loose loops visibly cross the gap, a physical progress bar with no UI.",
+          "The cinch: on the pull, rungs tighten in sequence with a 30-50 ms stagger, each one playing the next note of an ascending pentatonic music-box run; the fabric edges roll inward and meet, and the seam disappears.",
+          "Plump: the limb or body inflates 4-8% with spring overshoot (damping ~0.5) and a soft 'fwump'; ears and loose limbs get secondary wobble.",
+          "Camera: a slow 5% push-in during the cinch that releases on the plump; no shake. On a finished patient, the camera rests on the eyes as one catches the lamp.",
+          "Fur: brushing a matted patch with a slicker brush combs shell-textured fur from flat and clumped to soft and lifted, a small PowerWash-style reveal on plush.",
+          "Haptics: a crisp click per stab and a rising buzz through the cinch, peaking on the plump.",
+          "UI: almost none. Spacing guides are faint chalk dots; uneven stitching shows physically as a slightly puckered seam that the owner notices kindly rather than as a score."
+        ],
+        "payoff": "One long pull turns a ragged split into an invisible seam with a little melody, and the toy plumps up and 'looks back' at you. On some patients, a repaired voice box plays a decades-old recording made for the child who owned it.",
+        "tuning": [
+          "Rung tighten stagger (30-50 ms) and the note scale: the musicality of the cinch.",
+          "Plump amount (4-8%), spring stiffness and overshoot.",
+          "Fabric dimple depth and radius per material (felt, mohair, minky, velour).",
+          "Needle push-in duration (30-60 ms) and pop-through particle count.",
+          "Dot spacing tolerance: how forgiving placement is before a seam puckers.",
+          "Cinch drag distance required (short feels cheap, long feels like work).",
+          "Fur shell count and comb radius for the de-matting pass.",
+          "Camera push-in (3-6%) and release timing.",
+          "Zig-zag crossing tolerance and stitch snap distance: how freely the hand can swing before stitches go uneven."
+        ],
+        "feelsBadIf": [
+          "Free-form cloth simulation tangles or clips. Fix: seams are authored paths per plush, so the stitch is always physically clean while still under your control.",
+          "Stitching becomes clicking dots at a chore pace (the most-repeated action turning into a QTE). Fix: a continuous zig-zag gesture with stitches landing where you cross, short seams of 6–10 stitches, and the cinch payoff after every seam.",
+          "The cinch is a canned animation. Fix: rungs only tighten as far as you have pulled, so a slow pull plays the melody slowly.",
+          "The toys look like stiff plastic. Fix: commissioned hero plush with real fabric textures, fur shells and soft-body squash on every touch; this is the art budget's main line.",
+          "Perfectionism gets punished. Fix: small imperfections become 'love marks' the owner appreciates, and only skipping a step fails a job.",
+          "It reads as a kids' game. Fix: adult owners and adult stories (a bear that went through chemo with someone, a rabbit from a late father), muted storybook tones rather than candy colours.",
+          "The plush look stiff in the browser. Fix: prove one commissioned hero bear with shell-texture fur and soft-body squash in WebGL before any other content; if it doesn't read as soft at phone size, the project stops there."
+        ]
+      },
+      "clickMoment": {
+        "first": "In the first minute you take a bear with a split seam, tap left-right-left-right to lay six rungs, then pull: the rungs zip shut with a rising melody and the bear plumps up in your hands. That 'one pull and it's whole again' is the click, before any note or menu.",
+        "deeper": "The deeper click comes when you start choosing what not to fix: you leave the worn nose a child rubbed for 20 years, re-use the original button eye found in the stuffing, and tape the owner's name tag back on. Attachment lands with the first voice box: you fix the tiny mechanism, press the paw and hear a grandmother's recorded goodnight, then read the owner's letter. Later, an unclaimed stray on the 'adopt' shelf becomes yours to restore and keep."
+      },
+      "look": {
+        "short": "Warm storybook toy hospital · felt-topped bench under a gooseneck lamp · honey, cream and rose",
+        "vibe": "A small upstairs workroom like a cross between a tailor's and a children's ward: a sage-green felt bench, a gooseneck lamp, jars of buttons and glass eyes, a washing line of drying patients over the radiator, and paper hospital tags on every toy. The plush are rendered with real softness: mohair pile, worn bald patches, faded velour, slightly uneven stitching. Light is warm lamp-glow against blue evening windows, quiet and tender rather than cute.",
+        "signature": "The brown paper hospital tag tied on a string around every patient's wrist, with a handwritten name and ailment ('Biscuit, 31, split seam, missing eye') and a little plaster on the toy.",
+        "palette": [
+          {
+            "name": "Felt Bench Sage",
+            "hex": "#93A88B"
+          },
+          {
+            "name": "Honey Mohair",
+            "hex": "#D9A55B"
+          },
+          {
+            "name": "Muslin Cream",
+            "hex": "#F4EBDD"
+          },
+          {
+            "name": "Rose Thread",
+            "hex": "#D9727A"
+          },
+          {
+            "name": "Lamp Amber",
+            "hex": "#F2C46D"
+          },
+          {
+            "name": "Evening Window Blue",
+            "hex": "#3E5873"
+          }
+        ],
+        "references": [
+          "Real toy-hospital photography (Tokyo and Singapore soft toy hospitals)",
+          "Dressmaker's tactile sewing close-ups",
+          "Unpacking's object-story intimacy",
+          "The Velveteen Rabbit illustrations",
+          "Jellycat product photography for fabric softness"
+        ],
+        "avoid": [
+          "Candy-pastel kids'-app styling",
+          "Glossy plastic toys or rubbery fur",
+          "Gore jokes about toy 'surgery'",
+          "Score popups and timers",
+          "AI-generated art, voice or music"
+        ]
+      },
+      "sound": "Soft cotton and felt foley, needle ticks, thread whispers and the 'fwump' of a plumped limb, with every cinch playing an ascending run on a music box so the shop literally sounds like mending. Music is a gentle felt piano and celesta. Old voice boxes are the sonic signature: short, crackly human-recorded messages (lullabies, 'I love you', a child's laugh) recorded by real voice actors.",
+      "timing": {
+        "session": "One patient takes about 8-12 minutes: admission (read the note, tie the tag), triage (squeeze to find lumps, check seams and eyes, find what is hidden in the stuffing), wash, dry overnight on the radiator line, then stitch, restuff, mend eyes and nose, fluff the fur and discharge with a photo against the window. A day is 2-3 patients, with yesterday's washed patients waiting dry and fluffy. The arc is harder cases (antique mohair, voice boxes, jointed bears), owner story chains and the adopt shelf.",
+        "firstMinute": "A bear is already on the bench with its seam split. Six taps and one pull close it with the melody and the plump. Only then does the box's note get read: 'This is Biscuit. He's older than me. Please don't make him new.' The love-mark idea is introduced right there.",
+        "marketWindow": "Dressmaker (Sept 21 2026) has just put sewing in front of hundreds of thousands of players and the kidult plush boom (Jellycat +66%) is at its height, but sewing is where Dressmaker clones will land first, so the clip must be out before them. Best moments: a Steam page reveal with a 'tell me about your childhood plush' call for stories, a demo in Steam Next Fest, a Wholesome Direct pitch, and 1.0 in early November ahead of holiday gifting, with a real toy-hospital charity tie-in for press."
+      },
+      "comeBack": {
+        "short": "Yesterday's washed patients are dry on the radiator line and waiting to be stitched, and an owner's reply letter with a photo has arrived.",
+        "long": "A wall of discharge photos and letters, a library of recovered voice-box messages, the adopt shelf of unclaimed strays to restore and keep, harder materials and antique techniques, recurring families whose toys come back across generations, and seasonal events like a winter toy drive."
+      },
+      "money": {
+        "model": "Premium on Steam after a free browser toy and a paid supporter build; later DLC patient packs and console ports (Switch suits it).",
+        "price": "$14.99 (supporter build $5)",
+        "evidence": "Dressmaker at $14.99 recouped in under 24h; Unpacking (~$20) sold 1M+ and ported widely; genre implied average realised price $10–12; 45.2% of cozy games at $20+ reach 1,000 reviews (budget confound). Downside comp: Piece by Piece (cozy repair, strong publisher) ~4.8k copies (low confidence) without a clip moment, which is exactly what the cinch has to fix. Themed-sim mid-tier band is 25k–120k copies."
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "proveItFirst": "First, commission one hero bear and get it soft in WebGL (shell fur, squash on touch); if it doesn't read as plush at phone size, stop. Then build a browser toy with that bear, one split seam and one matted patch: zig-zag, cinch, plump, brush. No shop. Post 6–8 second cinch clips to TikTok and Shorts with no text, plus one asking viewers to describe their childhood plush. A yes is a clip above 100k views or a save rate above 3%, 200+ comments telling their own plush stories, or 2,000+ itch plays where 40%+ of players finish the bear. A no is views without stories and players leaving before the cinch.",
+      "weakestLink": "Proof of audience and art cost. Piece by Piece, the closest cozy repair game, sold ~4.8k with a good publisher, so the theme alone will not sell; everything rides on the cinch clip spreading. Plush also needs high-quality commissioned fabric and fur art (Exotica 2's weak animals sank it to 78%), which is the biggest spend and the hardest part to get right for a solo creator.",
+      "checks": {
+        "provenLoop": {
+          "rating": "strong",
+          "note": "Restore-with-story is ReStory's loop (500k+), sewing is Dressmaker's verb, objects-as-story is Unpacking's (1M+)."
+        },
+        "openTheme": {
+          "rating": "ok",
+          "note": "No adult plush hospital on Steam and kidult demand is confirmed (Jellycat +66%), but the closest cozy repair game (Piece by Piece) sold small and sewing clones are coming."
+        },
+        "hook": {
+          "rating": "strong",
+          "note": "A split bear closing in one pull and plumping up needs no text."
+        },
+        "moment": {
+          "rating": "strong",
+          "note": "The ladder-stitch cinch is already a popular real sewing clip; the voice-box message is a second, emotional beat."
+        },
+        "feel": {
+          "rating": "ok",
+          "note": "The cinch and plump are excellent on paper and stitching is now a free zig-zag, but everything rides on fabric and fur reading as soft in a browser, the hardest art-tech problem in the set."
+        },
+        "click": {
+          "rating": "strong",
+          "note": "The cinch lands within the first minute; choosing what not to fix and the voice box give the deeper click."
+        },
+        "look": {
+          "rating": "strong",
+          "note": "The brown paper hospital tag on every patient is a distinct thumbnail signature with a tender, non-kiddie palette."
+        },
+        "timing": {
+          "rating": "ok",
+          "note": "Holiday toy season and the plush boom line up, but sewing is exactly where post-Dressmaker clones will land."
+        },
+        "comeBackAndMoney": {
+          "rating": "ok",
+          "note": "Overnight drying line, letters and the adopt shelf give pull; premium comps are clear but the nearest downside comp is close."
+        }
+      },
+      "scores": {
+        "originality": 5,
+        "provenDemand": 8,
+        "demand": 8,
+        "gap": 7,
+        "soloSpeed": 5,
+        "creatorFit": 4,
+        "instantPlay": 5,
+        "monetization": 7,
+        "marketability": 9,
+        "momentum": 8,
+        "culture": 9,
+        "scopeFit": 8
+      },
+      "critic": {
+        "verdict": "Promising, fix first",
+        "summary": "The most emotional idea in the set, with a cinch that is a real viral sewing beat and a theme riding a confirmed adult-plush boom. It wins if one commissioned bear looks genuinely soft in the browser and the cinch clip pulls people's own plush stories; it dies on art cost or if it reads as a Piece by Piece-style generic repair game.",
+        "fixesApplied": [
+          "Replaced click-the-dots stitching with a continuous zig-zag gesture (stitches land where you cross), since stitching is the most-repeated action and dots read as a QTE.",
+          "Added a hard first gate: one hero plush must read as soft in WebGL before anything else is built.",
+          "Confirmed Jellycat (+66%, £333M) and the ~30% adult share of toy spending; dropped the unconfirmed '20% of plush' claim.",
+          "Added Piece by Piece's publisher comment (about 3x expected revenue) and the itch/mobile plush competitors found by search.",
+          "Downgraded feel and timing to ok and reset scores to the calibrated Well Loved row (creatorFit 4, instantPlay 5)."
+        ]
+      },
+      "rank": 3
+    },
+    {
+      "id": "win-dondurma-days",
+      "name": "Dondurma Days",
+      "family": "Top-down management & tycoon",
+      "theme": "Single-dish street-food stall",
+      "sourceIdeas": [
+        "dondurma-days",
+        "lantern-stall"
+      ],
+      "hook": "You're the Turkish ice-cream man: tease every customer with the cone, and hand it over at the exact moment they laugh.",
+      "oneLiner": "Run a dondurma cart at a summer evening bazaar. Stretch the chewy ice cream on a long brass paddle, then flip, dodge and snatch the cone back from each customer, and hand it over at their peak laugh (before they storm off) for the biggest tip. Stack bigger multi-scoop orders that must stay stuck through your tricks, discover each regular's favourite trick, and spend tips on flavours, new tricks, a bigger cart and new bazaars.",
+      "clipStoryboard": [
+        {
+          "beat": "0–1s",
+          "shot": "Side view of a turquoise-tiled cart at dusk. A small girl on tiptoe reaches for a cone held out on a metre-long brass paddle. One bright brass-bell DING."
+        },
+        {
+          "beat": "1–3s",
+          "shot": "Her fingers close, the paddle flicks, and the cone spins upside down. The ice cream stays stuck on as a stretchy white ribbon. She's holding an empty cone. Whoosh, then a rubbery squeak."
+        },
+        {
+          "beat": "3–5s",
+          "shot": "The paddle taps the cone on her nose. She giggles, and the queue behind her starts laughing, one person and then three."
+        },
+        {
+          "beat": "5–7s",
+          "shot": "She reaches again. This time the cone settles into her hand. A 100 ms freeze-frame, then the whole queue cheers and coins arc into a brass tip jar with rising clinks."
+        },
+        {
+          "beat": "7–8s",
+          "shot": "A small instant photo of her face, beaming and smeared with pistachio, slides into the corner and pins itself to the cart."
+        }
+      ],
+      "provenLoop": {
+        "loop": "Read the customer, perform one tactile action on a single counter screen, hand it over, earn tips, unlock upgrades (the Good Pizza, Great Pizza counter loop). The twist, and the unproven part, is that the action is a timing performance rather than an assembly.",
+        "paidHits": [
+          {
+            "name": "Good Pizza, Great Pizza",
+            "result": "300M+ downloads, 1M+ daily players, 60% ads / 40% IAP, also sold on Steam (gamesbeat)",
+            "confidence": "high"
+          },
+          {
+            "name": "Kebab Chefs! - Restaurant Simulator",
+            "result": "242.8k copies / $3.5M: a specific national food outsells generic restaurants (wnhub)",
+            "confidence": "medium"
+          },
+          {
+            "name": "Coffee Talk",
+            "result": "~369k units / $3.3M all platforms for a serve-and-read-the-customer counter game (VGI via Wikipedia)",
+            "confidence": "medium"
+          },
+          {
+            "name": "Potion Craft",
+            "result": "100k copies in 3 days, #1 Steam top seller for 3 days, built on one tactile shop action (confirmed by search)",
+            "confidence": "high"
+          }
+        ]
+      },
+      "openTheme": {
+        "demand": "Videos of Turkish ice-cream vendors teasing customers are a viral format that comes back every year (Istanbul tourism blogs and news sites keep covering 'woman pranks Turkish ice cream vendor' style clips). Counter-serving games are proven at enormous scale (GPGP 300M+). A specific national food sells better than a generic restaurant (Kebab Chefs 242.8k).",
+        "supply": "Ice Cream Guy (iPad, 'trick with your scoop') has this exact mechanic but has too few ratings for the App Store to show a score, so it's a sketch nobody found. Turkish Ice Cream Man on itch.io is interactive fiction. Ice Cream Inc. on CrazyGames is billed as a 'Dondurma Simulator' but its play is pour-to-match-the-shape with toppings, with no tease. Ice Cream Please (Poki), Ice Cream Fever and Dessert Maker (CrazyGames), and Dondurmacı DIY (iOS) are generic make-the-order ice-cream games. Nobody has built the tease as a well-felt core verb with cozy art.",
+        "searched": "WebSearch: 'Turkish ice cream dondurma game Steam OR Poki OR CrazyGames' (generic ice-cream games plus Turkish Ice Cream Man IF on itch); '\"Turkish ice cream\" prank mobile game' (found Ice Cream Guy, unrated); '\"Ice Cream Inc\" crazygames dondurma' (pour-and-match, no tease); '\"Dondurma Days\" game' (name not taken). Re-checked 'Turkish ice cream vendor game trick customers dondurma mobile': only travel and culture articles about the real tradition, no new game."
+      },
+      "coreAction": {
+        "verb": "Tease (flick, dodge and snatch the cone on a long paddle, then hand it over at the laugh peak)",
+        "input": "One finger or the mouse. Drag to move the paddle tip, flick fast to flip the cone, lift your finger near the customer's open hand to hand it over. Controller: left stick moves the paddle, flick the right stick to flip, A to hand over. The cone always sits about 80 px above the finger so your thumb never hides it.",
+        "response": "Within one frame the paddle tip springs toward your finger. It's slightly underdamped, so it overshoots by about 6% and settles in about 90 ms. The white dondurma ribbon between scoop and cone stretches and swings with the paddle. The customer's eyes follow the cone at once, and their hand starts a visible pull-back 'tell' before each lunge.",
+        "feedback": [
+          "Animation: the cone squashes up to 1.2x along the direction of travel on hard reversals and springs back. The dondurma is an 8-segment verlet rope that stretches like taffy and snaps back with a wobble. A flip spins the cone 540° with ease-out and a small overshoot.",
+          "Anticipation: every customer lunge has a 120–200 ms tell (shoulders up, hand drawn back, tongue out for kids). Dodges are about reading people, not luck.",
+          "Faces as the meter: there's no bar, only the face and body. Giggle, laugh, belly laugh, then a smirk, a frown and arms crossed. Kids bounce, grandpas wag a finger, tourists lift a phone. A tiny laugh bubble inflates above the head for readability on small screens.",
+          "Sound: the paddle taps a brass bell, and each tease in a chain steps up the scale (do-re-mi-fa). The flick whoosh is pitched by flick speed. The ribbon makes a rubbery squeak-thwop. Kid giggles are randomised ±3 semitones so no two match. A crowd-laugh layer grows with the combo, from one voice to the whole queue.",
+          "Hitstop: 80 ms freeze on a perfect last-instant dodge and 100 ms on the handover, with a 3% camera push-in on the customer's face.",
+          "Particles: sprinkles of crushed pistachio fly off on flips. On handover, coins burst out patterned like Iznik tiles. On a frustrated customer, a single cartoon sweat drop.",
+          "Physical tip jar: coins are rigid bodies that drop into a brass jar on the cart, and the clinks rise in pitch as the jar fills. No number flies to a HUD corner.",
+          "Haptics: 10 ms pulse on each dodge and 30 ms on handover (navigator.vibrate on Android, controller rumble on Steam).",
+          "Crowd follow-through: after a great handover the next two people in the queue applaud and lean forward, so the next tease starts with an audience.",
+          "Photo: the best reaction of the evening is saved as an instant photo pinned to the cart. It's shareable and doubles as the collection."
+        ],
+        "payoff": "The handover at the laugh peak: freeze, the customer's hand closes, the queue erupts, coins rain into the brass jar, and their beaming face is pinned to your cart. Wait one beat too long and they storm off. Hand it over one beat early and you get a polite smile and a small tip.",
+        "tuning": [
+          "Paddle spring stiffness and damping: how 'held' versus 'floaty' the paddle feels (aim for under 90 ms settle)",
+          "Tell duration per customer type (120–200 ms): how readable the lunges are",
+          "Lunge speed and reach radius: how hard a dodge is",
+          "Laugh curve per customer type (kids tolerate long teases, grandpas short ones but tip big, filming tourists reward longer routines): how much there is to read",
+          "Laugh-peak window width (start about 400 ms, narrows with fame): how hard the handover timing is",
+          "Flick velocity threshold for a flip: accidental versus deliberate tricks",
+          "Hitstop length (60–120 ms): how much each success weighs",
+          "Tip multiplier per extra trick and per audience size: risk versus reward",
+          "Customers per evening and queue patience: the pace of a session",
+          "Scoop stack stickiness and wobble (1–4 scoops): bigger orders make every flip riskier and every handover worth more.",
+          "Combo memory: how many different tricks a routine needs before the crowd multiplier grows, so repeating one flip stops paying."
+        ],
+        "feelsBadIf": [
+          "Grabs feel random. Always show the tell, and never let a lunge land inside it.",
+          "The paddle lags or swims. If settle time goes over about 100 ms it feels like dragging through syrup.",
+          "Your thumb covers the cone on a phone. Keep the cone offset above the finger.",
+          "The laugh peak can't be read. If players need a meter, the faces have failed, so redraw them bigger and simpler.",
+          "Failure is humiliating or punishing. Storm-offs are comic (a huff, a stomp), the customer comes back next evening for a 'rematch' with a bigger tip, and no customer is ever mocked. They are in on the game.",
+          "Every customer plays the same. Each type needs a different laugh curve and tell, or it turns into a one-trick toy.",
+          "The culture reads as a gag. Vendor, music and bazaar are drawn and checked with Turkish collaborators."
+        ]
+      },
+      "clickMoment": {
+        "first": "About 15 seconds in, the first kid reaches, you flick almost by accident, the cone flips upside down, she's left holding an empty cone, and the queue laughs. Then you hand it over while she's giggling, coins pour in, and you realise this isn't a cooking game: you're performing, and the timing is yours.",
+        "deeper": "A few evenings in you start reading people: Dede Ahmet only laughs at the nose-tap, the tourist filming you wants a three-trick routine, the shy kid needs one quick flip and an early handover. Each regular has a secret favourite trick you discover by watching their face, written into a little notebook. Your first chained routine on a wobbling three-scoop order draws a semicircle of onlookers and the tip jar overflows; later the photo wall of regulars' faces is the thing you're attached to."
+      },
+      "look": {
+        "short": "Golden-hour bazaar cart · hand-painted 2D side view · turquoise tiles, brass and a metre of stretchy white ice cream",
+        "vibe": "A single side-on view of a small cart with a hand-painted Iznik-tile front, a brass bell and copper lids, at the warm end of a summer evening. Behind it, a soft-focus bazaar of string lights, a ferry horn far off, and silhouettes strolling past. Customers are chunky, expressive gouache characters with big readable faces and hands, a little like animated storybook illustrations. Everything is still except the paddle, the ribbon of ice cream and the faces, which are where your eye should be.",
+        "signature": "A metre-long ribbon of glossy white dondurma stretched between the brass paddle and the tub, hanging in a perfect arc over a child's reaching hand",
+        "palette": [
+          {
+            "name": "Iznik turquoise",
+            "hex": "#1FA3A3"
+          },
+          {
+            "name": "Cobalt tile",
+            "hex": "#1E4C9A"
+          },
+          {
+            "name": "Pistachio",
+            "hex": "#A7C957"
+          },
+          {
+            "name": "Clotted cream",
+            "hex": "#FFF4E0"
+          },
+          {
+            "name": "Pomegranate",
+            "hex": "#C8323C"
+          },
+          {
+            "name": "Polished brass",
+            "hex": "#C9A13B"
+          }
+        ],
+        "references": [
+          "Good Pizza, Great Pizza (single-counter readability)",
+          "Iznik tilework and Ottoman miniature colour, simplified",
+          "Gouache children's-book illustration (big faces, big hands)",
+          "Real Kahramanmaraş-style dondurma vendor videos (the choreography, not the costume gag)"
+        ],
+        "avoid": [
+          "Fez-and-moustache caricature or 'exotic bazaar' clichés",
+          "Low-poly hypercasual 3D",
+          "A visible patience bar that steals focus from faces",
+          "Busy backgrounds that compete with the paddle",
+          "AI-generated art"
+        ]
+      },
+      "sound": "Bright and handmade. The brass bell is the lead instrument: every tease plays a note, so a good routine literally plays a melody. Under it, a light darbuka and oud loop commissioned from a Turkish musician, which drops out for a beat at each hitstop. Crowd laughter is the dynamic layer: an empty street at the start of the evening, a laughing crowd by the end.",
+      "timing": {
+        "session": "Each customer takes 8–20 seconds of tease and handover. An evening is 12–20 customers as dusk turns to night and the crowd thickens, ending in a 'last cone' finale and a look at the evening's photo. Between evenings you take one quick upgrade decision (a flavour, a trick, a cart part). On Steam, a summer season strings evenings across three bazaars (hometown square, ferry pier, seaside promenade) and ends in a festival night.",
+        "firstMinute": "No menu. The cart is open and a kid is already in the queue. One ghosted finger shows 'drag'. The first flick happens almost by accident, the queue laughs, the first handover pays out, and a second customer (a grandpa with a much shorter fuse) teaches you that people differ. All before 60 seconds.",
+        "marketWindow": "Dondurma vendor clips peak with summer tourist season, so post the browser slice and clips as northern-hemisphere summer begins. Bring a Steam demo to the June Steam Next Fest so the summer bazaar theme matches the season, and launch on Steam the following early summer. The format is native to vertical video, which is where the real-world vendor clips already circulate."
+      },
+      "comeBack": {
+        "short": "Tonight's grudge customer wants a rematch, a regular's favourite trick is still undiscovered in your notebook, and a new trick or flavour from last evening is waiting to try on the queue.",
+        "long": "A cast of regulars with their own tells, favourite tricks and small stories that move forward each evening, a photo wall you fill with reactions, routines composed from unlocked tricks (nose-tap, cone-swap, behind-the-back, the triple-scoop spin), multi-scoop orders that raise the stakes, a nightly 'festival crowd' on the web version where the same seeded queue lets friends compare tips, and new bazaars with different crowds."
+      },
+      "money": {
+        "model": "Free browser version on Poki/CrazyGames (ad revenue share), then a premium Steam version with the full season and regulars' stories, then mobile if it sells",
+        "price": "Web: free with ads. Steam: $7.99–9.99",
+        "evidence": "GPGP earns 60% ads / 40% IAP on 300M+ downloads and also sells on Steam. Poki pays 100% of ad revenue on traffic you bring and 50/50 on theirs, with 100M monthly players, but its curation is selective. Kebab Chefs made 242.8k copies / $3.5M at about $15. Fluffy Onsen shows a cheap, focused game can move volume (tracker estimates range from ~61.7k copies / $314k to ~188k / $814k). Cozy games under $5 hit 1,000 reviews only 2.7% of the time, which is why the Steam version is priced above that; no single-verb counter toy in the research has sold at Steam scale, so the Steam version is the uncertain part."
+      },
+      "path": "web-first",
+      "effort": "small",
+      "proveItFirst": "Build one screen: the cart, one paddle and three customer types with commissioned placeholder faces. Record two 8-second vertical clips (an 'empty cone' fail and a perfect handover) and post them on TikTok/Shorts with the playable itch.io link pinned. A yes is any clip passing about 50k views with comments asking where to play, plus itch players whose median session runs past 5 minutes (not 3: depth is the question) with at least a third coming back for a second evening. Also show the slice to two or three Turkish players before posting; if the portrayal reads as a gag to them, fix it first. If the clip gets views but the slice doesn't hold people, tune tells and the peak window before building anything else.",
+      "weakestLink": "Depth. A single tease verb might be a 10-minute toy rather than a season-long game, and the Steam version only works if customer-reading and routine-building keep revealing new layers. A close second risk is cultural portrayal: it needs Turkish collaborators to be warm rather than a novelty.",
+      "checks": {
+        "provenLoop": {
+          "rating": "ok",
+          "note": "The single-counter serve-and-tip loop is GPGP's (300M+), with Kebab Chefs and Coffee Talk as premium proof, but the tease-timing verb itself has never sold."
+        },
+        "openTheme": {
+          "rating": "strong",
+          "note": "Searches found only an unrated iPad toy, an interactive fiction and generic ice-cream makers; nobody owns the tease."
+        },
+        "hook": {
+          "rating": "strong",
+          "note": "The real vendor trick is already a recurring viral video, so the hook explains itself with no words."
+        },
+        "moment": {
+          "rating": "strong",
+          "note": "The empty-cone flip and the handover at peak laugh are clips by design."
+        },
+        "feel": {
+          "rating": "strong",
+          "note": "Spring paddle with 90 ms settle, verlet ribbon, readable 120–200 ms tells, hitstop, a bell scale and a physical tip jar make it skill-based and physical."
+        },
+        "click": {
+          "rating": "strong",
+          "note": "The first laugh lands within 15 seconds; reading regulars' favourite tricks is the deeper click."
+        },
+        "look": {
+          "rating": "ok",
+          "note": "Distinctive gouache-and-Iznik direction, but it depends on a strong character illustrator and careful cultural art direction."
+        },
+        "timing": {
+          "rating": "ok",
+          "note": "Short customer loops and a summer launch matched to vendor-clip season, but there is no rising trend behind it, only a perennial meme."
+        },
+        "comeBackAndMoney": {
+          "rating": "weak",
+          "note": "Rematches, favourite tricks and multi-scoop orders help on paper, but a one-verb toy may be done in an evening, and portal ad income plus an $8 Steam version has no direct comp in the research."
+        }
+      },
+      "scores": {
+        "originality": 7,
+        "provenDemand": 5,
+        "demand": 6,
+        "gap": 8,
+        "soloSpeed": 8,
+        "creatorFit": 7,
+        "instantPlay": 9,
+        "monetization": 5,
+        "marketability": 9,
+        "momentum": 6,
+        "culture": 7,
+        "scopeFit": 9
+      },
+      "critic": {
+        "verdict": "Risky",
+        "summary": "The cheapest, fastest test in the set, with a hook the real world already made viral and a feel spec that rewards skill. It can win as a web hit that graduates to a small Steam game, but it dies if the tease is a ten-minute toy with no depth, or if the cultural portrayal reads as a novelty gag.",
+        "fixesApplied": [
+          "Added depth systems to the design itself: multi-scoop orders that must stay stuck through tricks, each regular's secret favourite trick, combo memory so repeating one flip stops paying, and a seeded nightly crowd for the web version.",
+          "Raised the prove-it bar to a 5-minute median session plus a second-evening return, and added a check with Turkish players before posting.",
+          "Replaced the unsourced Potion Craft line with the confirmed figure; softened Fluffy Onsen to the 61.7k–188k tracker range.",
+          "Re-stated the proven loop honestly: the counter loop is proven, the tease verb is not.",
+          "Downgraded proven loop and timing to ok and come-back-and-money to weak; lowered provenDemand, demand, instantPlay, monetization, marketability, momentum, culture and scopeFit."
+        ]
+      },
+      "rank": 4
+    },
+    {
+      "id": "win-teacup-tabby",
+      "name": "Teacup Tabby",
+      "family": "Web & link originals",
+      "theme": "Soft-body 'cats are liquid' container puzzle with a daily room",
+      "sourceIdeas": [
+        "if-it-fits",
+        "daily-tidy",
+        "petal-drop"
+      ],
+      "hook": "Cats are liquid: pick up a chonky cat and pour it into a teacup.",
+      "oneLiner": "A no-fail physics puzzle where you grab squishy cats by the scruff and drop, nudge and pile them into teacups, boots, sinks and too-small boxes until every cat in the room is sitting. Everyone gets the same Daily Room, with a spoiler-free result card to share.",
+      "clipStoryboard": [
+        {
+          "beat": "0-1s",
+          "shot": "A huge orange cat dangles from a fingertip, stretched like mochi, above a tiny porcelain teacup on a sunny kitchen table. One questioning 'mrrp?'."
+        },
+        {
+          "beat": "1-2.5s",
+          "shot": "Release: the cat flops onto the rim, squashes wide and spills over both sides (a porcelain 'tink', then a soft 'blorp'). It looks impossible."
+        },
+        {
+          "beat": "2.5-4.5s",
+          "shot": "One gentle finger nudge. The cat starts to purr, its body softens and slowly glorps down into the cup until only a dome of fur is left above the rim."
+        },
+        {
+          "beat": "4.5-6s",
+          "shot": "Two ear tips pop up out of the cup ('pip, pip'), the eyes close in a slow blink, and a single warm chord rings. The camera eases in a little and holds."
+        },
+        {
+          "beat": "6-8s",
+          "shot": "A pull-back shows the whole room: three more cats already loafed in a boot, a sink and a fruit bowl. The purrs stack into one chord and the sunbeam warms."
+        }
+      ],
+      "provenLoop": {
+        "loop": "Short, no-fail physics puzzles where you fill containers and get a satisfying settle, plus a daily shared puzzle with a result card. Honest caveat: the research's cozy-puzzle niche has the lowest success rate (5.9% reach 1,000 reviews).",
+        "paidHits": [
+          {
+            "name": "Suika Game",
+            "result": "10M+ downloads across Switch, iOS and Android (Aladdin X, July 2024); top Japanese Switch download of 2023 after streamers found it; iOS grossed almost $2M in its first three months (Siliconera; confirmed by search)",
+            "confidence": "high"
+          },
+          {
+            "name": "A Little to the Left",
+            "result": "999,999 copies by Nov 2023, at about $15; added a 'Daily Tidy' mode for return play (evergreen_other.json)",
+            "confidence": "high"
+          },
+          {
+            "name": "Monkey Mart (Poki)",
+            "result": "About 300M plays on Poki, rated 4.6 from 3.79M votes; Poki serves 100M monthly players and 1B gameplays a month (management_tycoon.json). Shows the web portal pays off for a cute, instant format.",
+            "confidence": "medium"
+          },
+          {
+            "name": "Unpacking",
+            "result": "100K in 10 days, 1M+ in year one: 'put things where they fit' satisfaction sells at a premium price (evergreen_other.json)",
+            "confidence": "high"
+          }
+        ]
+      },
+      "openTheme": {
+        "demand": "'Cats are liquid' and 'if it fits, I sits' are some of the oldest and most durable cat memes. Cat content is the biggest pet category on TikTok and Shorts. The pool's If It Fits pitch scored 10 for clip appeal, the highest in the calibration table. Suika proved that a cute physics settle spreads by itself through streamers.",
+        "supply": "Fit My Cat (RedDeerGames, Switch/Xbox/Steam 2024) is a rigid grid packing puzzle with 90+ levels; reviews praise the calm but criticise controls that 'have a mind of their own'. It has no soft body and no pour. The exact gag already exists as a game-jam piece: 'Cats are liquid' (BitSummit Game Jam 2023) has you carry a plump cat on a spoon into a cup, so the joke is not ownable, only the execution is. Squishy Cats (iOS) is a hypercasual jelly-cat platformer; Box Cats Puzzle and 'If It Fits, It Sits' jam games are tiny prototypes. None makes the pour-and-sit a full game with a daily room.",
+        "searched": "Searched 'cats are liquid puzzle fit cat into container Steam', 'squishy cat physics puzzle soft body', '\"If It Fits\" cat game' and '\"Fit My Cat\" reviews'. Found Fit My Cat (grid, weak reviews), Squishy Cats (iOS hypercasual platformer), Box Cats Puzzle and several itch jam games. 'If It Fits' is taken by a cat board game and jam games, so the name is now Teacup Tabby, which turned up no existing game. Re-checked 'cats are liquid physics puzzle game fit cat in container' and found the BitSummit 2023 jam game with the same cup gag, plus Fit My Cat reviews (calm, but control complaints)."
+      },
+      "coreAction": {
+        "verb": "Scruff-grab and pour (pick up a cat, let it stretch, drop it, and let it ooze in)",
+        "input": "Touch: press on a cat, drag, lift the finger. Mouse: left-button drag. A second finger or right-click gives a short 'nudge' poke. One-handed and portrait-friendly.",
+        "response": "Within one frame of the press, the 3-4 body nodes nearest the finger attach to it with a soft spring, not a rigid pin. The cat's eyes snap wide, its ears flatten a little and its legs drop to dangle. Within about 80 ms the body stretches toward the finger like pulled mochi, while the rump lags behind under its own weight.",
+        "feedback": [
+          "Animation, grab: eyes widen, pupils turn round, ears go back 15 degrees, and the four paws hang as pendulums that swing with drag velocity (follow-through). The face, ears, paws and tail are rigid sprites riding on the soft body, so the cat always reads as a cat rather than a blob.",
+          "Animation, carry: real soft-body stretch along the drag direction, clamped by a shader so it never goes past 1.8x length. The tail swishes against the motion. Fast shakes make the cheeks wobble, a joke players will discover.",
+          "Animation, land: on contact the body squashes to about 1.3x width (from the actual simulated nodes), then rebounds. A small 'paws out' frame plays on hard landings.",
+          "Animation, ooze: once more than about 55% of the cat is inside a container and it is nearly still, its 'relax' value ramps up over about 0.8 s. Internal pressure drops, the body flows to fill the shape, and the purr fades in. This is the deliberate slow beat after the fast drop.",
+          "Sound, layered: a 'mrrp?' on grab (pitch set by cat size, randomised by plus or minus 2 semitones, never the same twice in a row). A material hit on land: porcelain 'tink', cardboard 'thup', rubber-boot 'bwomp', enamel-sink 'dong'. A wet 'glorp' that rises in pitch as the cat sinks. Then a purr loop recorded from real cats.",
+          "Sound, chord: each cat that sits adds one note of a warm major-7th chord to the room's purr (C, E, G, B in cat order). When all cats sit, the chord resolves on a soft celesta. Players come to hear progress.",
+          "Particles: a few fur tufts at the rim on contact. Dust motes in the sunbeam swirl when a cat passes through. A single small heart or 'z' puff on the sit. Restrained, never confetti.",
+          "Camera: no shake, ever (cats are soft). On each sit the time scale drops to 0.35x for 120 ms, the camera pushes in 4% toward that cat and holds for 400 ms, then eases back. On the final sit the whole room's light warms over 1 s.",
+          "Haptics (mobile web): a 10 ms tick on grab, nothing while dragging, and a double tick [12, 40, 12] on the sit, timed with the ear pop.",
+          "UI: a faint dotted 'fill ring' inside each container shows how much of the cat is in, so 'why didn't it count?' never happens. Nudge count in a corner as a paw-print tally. No timer."
+        ],
+        "payoff": "The Sit: the cat sinks, two ear tips pop up out of the container, the eyes close in a slow blink and its purr joins the room's chord. When the last cat sits, the room exhales: light warms, the chord resolves, and a polaroid of the room drops into your album.",
+        "tuning": [
+          "grabStiffness (finger spring k): low gives mochi stretch, high feels like carrying a brick. Start soft, then stiffen 20% for heavy cats so they don't drag across the floor",
+          "bodyPressure and relaxedPressure: how solid a cat is in the air versus how liquid it gets once it sits. This is the main personality knob (chonk 0.6 to 0.25, kitten 0.9 to 0.5, sphynx slippery with low friction)",
+          "relaxRampTime (0.5-1.2 s): length of the ooze beat. Too short and the payoff is lost, too long and it feels sluggish",
+          "sitThreshold (% inside, max speed): how forgiving 'fits' is",
+          "slowMoScale and slowMoDuration on a sit (0.35x / 120 ms)",
+          "maxStretchRatio before a cat 'pops' back to shape (1.8x)",
+          "containerFriction per material (porcelain slick, cardboard grippy)",
+          "earPopDelay after the sit (about 90 ms, so the ears land on the haptic tick)",
+          "sunbeamRelaxBonus: cats in a sunbeam relax faster, a mid-game puzzle tool",
+          "solverSubsteps and node count (24-32 perimeter nodes) for stability versus phone CPU"
+        ],
+        "feelsBadIf": [
+          "The cat is a featureless jelly blob. Keep the face, ears, paws and tail rigid and readable at all times, because the joke is that it's still clearly a cat.",
+          "Packed cats jitter or vibrate (soft-body solver instability). Use substeps, sleep resting nodes, and add damping once relaxed.",
+          "You pick up the wrong cat (Fit My Cat's main complaint). Pick the topmost face under the finger, highlight the grabbed cat's outline, and widen the hit area to the whole cat silhouette.",
+          "The finger covers the cat on a phone. Offset the grab point slightly above the touch and show the stretch.",
+          "Cats tunnel through thin container walls at speed. Use continuous collision and cap fall speed.",
+          "A sit doesn't register and players don't know why. The fill ring and a 'nearly' ear-twitch at 45% fix this.",
+          "It becomes a punishing optimisation puzzle. Keep it no-fail with no timer, and keep the nudge par only on the Daily Room card.",
+          "The cats look hurt or distressed when stretched. They should look surprised or unbothered, never in pain, so faces stay calm and stretch is limited."
+        ]
+      },
+      "clickMoment": {
+        "first": "Room 2. Room 1 was a cat and a big cardboard box. Room 2 shows a tiny teacup and a chonk three times its size, and the player assumes it can't work. They drop the cat anyway, it splats over the rim, they nudge once, and it slowly pours in until the ears pop up. 'Wait, it FITS?' That surprise, in under 60 seconds, is the hook and the clip.",
+        "deeper": "Around the first chapter's end, players realise cats are a material. A relaxed chonk is a soft base you can pile a springy kitten onto, a sunbeam makes any cat runnier, and a sphynx slides into gaps nobody else fits. Puzzles turn into designing a cat pile. Attachment comes from the album: every solved room leaves a polaroid of your cats loafed in mismatched containers, and you name the regulars."
+      },
+      "look": {
+        "short": "Warm gouache rooms · round ink-outlined cats pouring into teacups",
+        "vibe": "Every room is a sunlit domestic corner painted in flat gouache: a kitchen table, a bathroom sink, a hallway of boots, all seen straight-on like a theatre set. The cats are simple round shapes with a confident brush-ink outline, flat fur colours, painted-on stripes that stretch with the body, and tiny triangular ears. A diagonal sunbeam crosses every room and the dust in it glitters. It should feel like a picture-book spread that wobbles.",
+        "signature": "Two pointed ear tips and a closed-eye smile poking out of the top of a too-small teacup, in a sunbeam. That silhouette is the logo, the thumbnail and the Steam capsule.",
+        "palette": [
+          {
+            "name": "Marmalade fur",
+            "hex": "#E8893A"
+          },
+          {
+            "name": "Sunbeam butter",
+            "hex": "#F6D98B"
+          },
+          {
+            "name": "Porcelain cream",
+            "hex": "#F4EEE2"
+          },
+          {
+            "name": "Willow-pattern blue",
+            "hex": "#3E6A9E"
+          },
+          {
+            "name": "Brush ink",
+            "hex": "#2B2420"
+          },
+          {
+            "name": "Rose-nose pink",
+            "hex": "#E7A1A0"
+          }
+        ],
+        "references": [
+          "Simon's Cat (line confidence)",
+          "Neko Atsume (cats in containers as a collection)",
+          "A Little to the Left (flat domestic tableau)",
+          "Suika Game (readable physics on a flat background)",
+          "Chi's Sweet Home picture-book colour"
+        ],
+        "avoid": [
+          "3D fur rendering",
+          "neon hypercasual colours",
+          "cats looking squashed in pain",
+          "cluttered rooms where containers don't read at a glance",
+          "AI-generated art of any kind"
+        ]
+      },
+      "sound": "Real cat purrs and chirps (recorded or licensed from cat owners, credited in the game) are the instrument. Every sit adds a note to a warm major-7th purr chord over a quiet piano-and-celesta loop. Materials have their own voices (porcelain tink, cardboard thup, rubber bwomp), so a room of cats sounds different from the next.",
+      "timing": {
+        "session": "Short loops: one room takes 1-3 minutes with 2-5 cats. Chapters are themed homes of 8 rooms (Grandma's kitchen, a cat café, a laundrette), each ending with a 'cat parade' polaroid. The Daily Room takes 2-5 minutes, with a spoiler-free result card (cats, nudges, the container icons) to paste in a group chat.",
+        "firstMinute": "0-15 s: one cat, one big box, and a hand-drawn arrow is the only tutorial. 15-45 s: the teacup and the chonk, splat, nudge, pour, ear pop. 45-60 s: a room with two cats and two containers where the obvious pairing is wrong. Swapping them is the first small 'aha'.",
+        "marketWindow": "Why now: cozy puzzle and physics-settle clips are at their peak after Suika's 10M+. Poki and CrazyGames reward instant, touch-first cute games. Dressmaker showed that a free itch prototype with 100k downloads can lead to a Steam hit. Best moments: put the free browser slice live for National Cat Day (Oct 29) or Japan's Cat Day (Feb 22, which sits next to the February Steam Next Fest, so the Steam demo goes into that Next Fest). Time the Steam 1.0 for International Cat Day (Aug 8), when cat-content creators look for something to post."
+      },
+      "comeBack": {
+        "short": "A new Daily Room every morning, the same for everyone, with a nudge par and a result card your group chat compares.",
+        "long": "New cat temperaments (long cat, floof, sphynx, kitten litters) and new container materials keep changing the puzzles. The album of named cats in silly containers becomes a collection. A room editor lets players send each other 'impossible' rooms by link."
+      },
+      "money": {
+        "model": "Free browser version (Daily Room plus the first chapter) on Poki/CrazyGames and your own site, with ads on the portal versions. Premium Steam/itch version with every chapter, the room editor and an album export.",
+        "price": "Steam $7.99 (launch discount to $6.39); later a $2.99 chapter pack and a Switch port",
+        "evidence": "Suika's iOS version grossed almost $2M in three months off a tiny puzzle (confirmed). A Little to the Left sold about 1M at about $15. Webfishing proved a $5 price spreads by word of mouth. Poki pays 100% of ad revenue on traffic you bring and 50/50 on theirs, and Monkey Mart reached about 300M Poki plays (management_tycoon.json). Calibration: 45% of cozy games at $20+ reach 1k reviews versus 2.7% under $5, so don't go below about $7; cozy puzzles specifically hit only 5.9%."
+      },
+      "path": "web-first",
+      "effort": "small",
+      "proveItFirst": "Build one browser room with one cat (a commissioned painted chonk: face, ears, paws and tail as separate sprites) and three containers: box, teacup, boot. Screen-record three vertical clips of the teacup pour and post them on TikTok and Shorts with the link in bio, plus an itch page. A yes is any clip over 100k views with 'what game is this / where can I play' comments, AND at least 40% of link visitors finishing all three containers, AND some players recording their own pour. If clips get views but people leave before the teacup, the feel needs work, not the idea.",
+      "weakestLink": "Off-track and copyable. The founder asked for proven loops rather than novelty toys, and this is the closest thing in the set to a toy: the whole pitch fits in a 5-second clip, the gag already exists as a jam game, and hypercasual studios can clone the pour fast if it goes viral. Cozy puzzles have the lowest hit rate (5.9%), a $7.99 puzzler only earns big if the Daily Room becomes a habit, and soft-body stability on cheap phone browsers is the technical risk.",
+      "checks": {
+        "provenLoop": {
+          "rating": "ok",
+          "note": "Physics-settle (Suika 10M+) and fit-things-in puzzles (A Little to the Left ~1M, Unpacking 1M+) are proven, but a soft-body pour puzzle has no hit and cozy puzzles have the lowest hit rate (5.9%)."
+        },
+        "openTheme": {
+          "rating": "ok",
+          "note": "Only weak competitors (Fit My Cat grid puzzle, a jam game, iOS hypercasual), but the cup gag itself already exists, so only the execution is ownable."
+        },
+        "hook": {
+          "rating": "strong",
+          "note": "'Pour a cat into a teacup' needs no explanation, and the 5-second clip has no text."
+        },
+        "moment": {
+          "rating": "strong",
+          "note": "Ear tips popping out of a too-small cup is a perfect loop and thumbnail, and every player makes their own version."
+        },
+        "feel": {
+          "rating": "strong",
+          "note": "Grab, mochi stretch, splat, ooze and sit are specified with rigid readable features, a purr chord and haptic ticks; solver stability on cheap phones is the build risk."
+        },
+        "click": {
+          "rating": "strong",
+          "note": "The 'it fits?!' surprise lands in room 2, well inside a minute; cats as building material is the deeper click."
+        },
+        "look": {
+          "rating": "strong",
+          "note": "Gouache plus ink-outline cats is cheap to commission and the ears-in-a-teacup silhouette is an ownable mark."
+        },
+        "timing": {
+          "rating": "ok",
+          "note": "Cat days (Oct 29, Feb 22, Aug 8) and Next Fest give clear moments; cozy puzzles are evergreen, not rising."
+        },
+        "comeBackAndMoney": {
+          "rating": "ok",
+          "note": "Daily Room plus album gives a reason to return; the money is proven but modest (portal ads plus a small premium price)."
+        }
+      },
+      "scores": {
+        "originality": 5,
+        "provenDemand": 5,
+        "demand": 8,
+        "gap": 6,
+        "soloSpeed": 5,
+        "creatorFit": 7,
+        "instantPlay": 9,
+        "monetization": 6,
+        "marketability": 9,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 9
+      },
+      "critic": {
+        "verdict": "Risky",
+        "summary": "The best pure clip in the set and the most link-friendly, with a feel spec that makes the meme physical. It can win as a web-first cozy puzzle with a daily habit, but it is off the founder's proven-genre brief, the gag already exists as a jam game, and a viral clip invites instant hypercasual clones.",
+        "fixesApplied": [
+          "Added the BitSummit 2023 'Cats are liquid' jam game (same cup gag) to supply and lowered originality accordingly.",
+          "Confirmed Suika's 10M+ downloads and ~$2M iOS gross; replaced the unconfirmed '3.5/5' Fit My Cat score with what reviews actually say.",
+          "Added the research's 5.9% cozy-puzzle hit rate to the loop and money evidence, and named the off-track risk in the weakest link.",
+          "Lowered originality, provenDemand, marketability and momentum to sit next to the calibrated If It Fits row."
+        ]
+      },
+      "rank": 5
+    },
+    {
+      "id": "win-skein-street",
+      "name": "Skein Street",
+      "family": "Top-down management & tycoon",
+      "theme": "Tiny curation shop",
+      "sourceIdeas": [
+        "skein-street",
+        "needle-and-sleeve",
+        "stem-and-ribbon"
+      ],
+      "hook": "Choose the yarn for someone's project, then they walk back in wearing it.",
+      "oneLiner": "Run a tiny wool shop on a windy island. Knitters bring a pattern and a reason (shown as a sketch: a hat and a fishing boat). You pick fibre and weight, speckle-dye a bare skein or build a colourway from a wall of cubbies, and crank each skein into a neat yarn cake on the ball winder. Days later they come back wearing the finished piece, and its photo goes on your show-and-tell wall.",
+      "clipStoryboard": [
+        {
+          "beat": "0–1s",
+          "shot": "Side view of a small stone wool shop, rain streaking the window. A woman lays a pattern card on the counter: a sketched hat next to a tiny drawing of a fishing boat (no words). Door bell, rain hiss."
+        },
+        {
+          "beat": "1–3s",
+          "shot": "In the dye corner a bare cream skein lies in a tray; a hand squeezes sea-grey and gorse-yellow dye bottles over it in quick dots. The colours bloom and bleed into the wet wool. Heard: drip, a soft fizz."
+        },
+        {
+          "beat": "3–6s",
+          "shot": "Close on the ball winder: a circular drag cranks it, the ratchet clicks faster, the swift spins, and the speckles you just dropped wrap into a criss-cross yarn cake."
+        },
+        {
+          "beat": "6–7s",
+          "shot": "The cake pops off the winder with a hollow 'thup' and stands up flat-topped, speckled grey and gold. The customer squishes it and grins."
+        },
+        {
+          "beat": "7–9s",
+          "shot": "Door bell again. She's back with an old fisherman in a grey-and-gold speckled hat. An instant photo slides onto a wall already covered in finished jumpers, socks and blankets."
+        }
+      ],
+      "provenLoop": {
+        "loop": "Read a customer's request, choose the right thing from your stock, hand it over, restock and decorate (the Tiny Bookshop / Coffee Talk read-the-customer shop loop), with one tactile prep action and the customer's return as payoff.",
+        "paidHits": [
+          {
+            "name": "Tiny Bookshop",
+            "result": "500,000+ copies after an Aug 2025 launch (200k+ in 12 days), 96% positive, physical and PS5 releases",
+            "confidence": "high"
+          },
+          {
+            "name": "Coffee Talk",
+            "result": "~369k units / $3.3M all platforms (VGI)",
+            "confidence": "medium"
+          },
+          {
+            "name": "Dressmaker (craft-audience proof, first-person)",
+            "result": "400k+ wishlists, #9 Steam global top seller, budget recouped in under 24h (Sept 2026); itch prototype 100k+ downloads",
+            "confidence": "medium"
+          },
+          {
+            "name": "Bookshop Simulator (plain execution of a hobby shop)",
+            "result": "~50.9k Steam copies / $488k, 93% (Raijin)",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "openTheme": {
+        "demand": "Tiny Bookshop showed that a hobby fandom will buy and market a recommendation shop (BookTok). Dressmaker's 2026 breakout shows the needle-craft audience is primed and buying right now, and the first-person-sims research notes crochet, knitting and sewing trending on TikTok with Gen Z. Knitters are famous for sharing finished objects, which is exactly this game's payoff.",
+        "supply": "No yarn or knitting shop game turned up in two rounds of searching. Knitwits (itch, Nov 2024) and Knit-Pick (GMTK jam 2025) are knitting-action toys, Yarn Sorting: Knitting Master is a mobile sort puzzle, and The Sims 4 has a knitting pack. Nearby hobby shops are arriving: Thrifty Business (May 2026, ~6.9k copies, low confidence), Piece by Piece (repair shop) and Tiny Bookshop followers; a plant-shop title (Leafy Corner) was reported by the designer search but not re-confirmed. The research itself expects Dressmaker clones to target knitting next, so 'unclaimed' may not last.",
+        "searched": "WebSearch: 'yarn shop game Steam knitting shop management cozy 2026' (found Leafy Corner plant shop, Thrifty Business, Knit-Pick; no yarn shop); 'knitting simulator Steam 2026 wishlist yarn crochet game' (Knitwits, Knit Master, Sims pack only); '\"Skein Street\" game' (name free; only an unrelated 2017 shooter called Skein)."
+      },
+      "coreAction": {
+        "verb": "Wind (crank a chosen skein into a yarn cake on the ball winder)",
+        "input": "Phone: draw circles with one finger anywhere around the winder. Only the angle around the winder's centre counts, so circle size and jitter don't matter. Mouse: circular drag. Controller: rotate the right stick. Accessibility: hold to auto-wind at a fixed comfortable speed.",
+        "response": "The winder handle turns at your finger's angular speed from the first frame. The swift (the umbrella frame holding the hank) counter-rotates, the strand between them visibly travels and thrums, and the cake starts growing in its signature diagonal criss-cross wraps.",
+        "feedback": [
+          "Pattern reveal: the cake texture is generated from the yarn's actual colourway, including the dye dots you dropped by hand in the speckle tray (an early unlock), so solid yarn wraps clean, speckled yarn scatters your own dots and variegated yarn pools into stripes. Every wind is a small reveal of how your colours behave.",
+          "Rhythm, not a meter: in the sweet speed band the cake grows crisp with a flat top. Crank too fast and the wraps go loose and lumpy ('yarn barf', a real knitter joke) and the strand slaps. Too slow and it simply takes longer. You see the quality on the cake itself.",
+          "Sound: the plastic ratchet goes 'tk-tk-tk' at a rate tied to speed (granular, so it never machine-guns), a soft wool hiss on the strand, the swift's wooden creak and a hollow 'thup' when the cake pops off.",
+          "Animation: the swift's arms flex slightly under tension, the strand wobbles with a sine amplitude tied to speed, the last tail whips round the cake (follow-through), and the finished cake squashes 10% as it stands on the counter, then settles.",
+          "Haptics: a light tick per full revolution and a firmer pulse on pop-off.",
+          "Camera: a 300 ms gentle push-in on the finished cake, then pull back to show it standing in the customer's colourway line-up.",
+          "Particles: fine fibre motes drift through the window light, more at higher speed. Mohair throws a halo.",
+          "Customer: they lean in during winding, and on pop-off they squish the cake (a 4-frame squash) and react to the colours, not to a score.",
+          "Fibre differences: each fibre sounds and moves differently. Chunky wool is slow and plush, sock yarn fast and tight, mohair fuzzy and quiet, so the same gesture feels different across stock."
+        ],
+        "payoff": "Two to four cakes standing side by side on the counter next to the pattern card, the customer's face lighting up at the combination, and, later, the door bell and the finished piece walking in.",
+        "tuning": [
+          "Sweet-spot angular speed band and its width: how much rhythm skill matters",
+          "Revolutions per skein (keep each wind about 3–4 seconds): chore versus pleasure",
+          "Barf threshold and how lumpy a loose cake looks: how much a sloppy wind shows",
+          "Ratchet click rate versus speed: how fast feels fast",
+          "Pop-off squash amount and push-in duration: how much each cake weighs",
+          "Number of skeins per order (1–4): length of each customer",
+          "In-game days until a customer returns with the finished object: anticipation",
+          "Hard-rule strictness (weight and fibre fit) versus soft taste (colour): how quiz-like matching feels",
+          "Speckle dye bloom radius and bleed time: how much a dropped dot spreads into the wet wool before it sets."
+        ],
+        "feelsBadIf": [
+          "Winding becomes a chore. Keep it short, let a hired helper auto-wind bulk orders later, and keep hand-winding for the colourways you care about.",
+          "Circle detection is janky on a phone. Read only the angle around the centre, smoothed over 3 frames, and accept any radius.",
+          "Matching is a quiz with one right answer. Weight and fibre have real rules, but colour has many good answers and the customer reacts to taste.",
+          "Craft details are wrong. Knitters will notice, so fibre, weight and yardage logic is checked by real knitters.",
+          "The return payoff takes too long. The first customer must come back inside the first session.",
+          "Finished objects look generic. Each return photo has to show the exact colours you chose, in the item's pattern."
+        ]
+      },
+      "clickMoment": {
+        "first": "Within the first minute: the first customer wants 'a warm hat for my dad who fishes'. You pull a chunky sea-grey wool and a stripe of yellow, crank the winder, watch the speckles wrap into the cake, and it pops off into her hands. Then, at the end of that first short day, she comes back with Da wearing it, in your colours. That's when it clicks: what you choose becomes real.",
+        "deeper": "A few days in, your show-and-tell wall is a quilt of things that exist because of you. Regulars come back with bigger and riskier projects (Morag's first-ever jumper, a blanket for a new baby), and a customer asks for 'whatever you'd choose', trusting your taste. Mastery is building colourways that surprise people and work."
+      },
+      "look": {
+        "short": "Side-view island wool shop · painted 2D · rainbow cubby wall against grey sea mist",
+        "vibe": "A narrow side-on wool shop on a Shetland-like island: whitewashed stone, a deep-set window with rain and sea mist outside, and one whole wall of wooden cubbies stuffed with yarn sorted into a rainbow gradient. The world outside is soft greys and greens, and every bit of saturated colour lives in the yarn, so the wall glows like a paint swatch. Customers are chunky, bundled-up islanders in their own hand-knits, drawn in painted 2D with soft texture. The show-and-tell wall of instant photos slowly fills the other side of the shop.",
+        "signature": "A floor-to-ceiling rainbow wall of yarn cubbies glowing inside a grey, rain-misted stone shop",
+        "palette": [
+          {
+            "name": "Heather grey",
+            "hex": "#9C9AA6"
+          },
+          {
+            "name": "Sea mist",
+            "hex": "#CFE0DC"
+          },
+          {
+            "name": "Madder red",
+            "hex": "#B5473A"
+          },
+          {
+            "name": "Gorse yellow",
+            "hex": "#E3B23C"
+          },
+          {
+            "name": "Peat brown",
+            "hex": "#5B4636"
+          },
+          {
+            "name": "Atlantic blue",
+            "hex": "#2F5D7C"
+          }
+        ],
+        "references": [
+          "Tiny Bookshop (warm painted shop, customer vignettes)",
+          "Fair Isle knitting colourwork (the palette logic)",
+          "Real local yarn shops' cubby walls (the thumbnail)",
+          "Coffee Talk (single-room side view with characters at a counter)"
+        ],
+        "avoid": [
+          "Generic 'cottagecore' pastels everywhere: keep colour in the yarn only",
+          "Fake knitting terms or impossible yarn",
+          "Cluttered UI over the wall",
+          "Twee caricatured islanders",
+          "AI-generated art"
+        ]
+      },
+      "sound": "Weather and wool. Rain on glass, wind under the door and the sea far off are the bed. The ball-winder ratchet is the signature sound, and every fibre has its own hiss. A slow fiddle-and-harp folk score commissioned from a musician lifts when a customer returns wearing your colours, with the shop bell as its downbeat.",
+      "timing": {
+        "session": "A customer takes 30–90 seconds (read, pick, wind, hand over). A shop day is 4–6 customers plus one or two returns with finished objects, ending as you flip the sign and see the day's photo on the wall. Between days you restock from island dyers whose seasonal colourways change. On Steam, the arc runs through the island's year (lambing, summer tourists, a wool-week festival, winter knit-alongs), with regulars' small stories carrying across it.",
+        "firstMinute": "The door bell rings as the game opens, the first customer is already talking, and the pattern card asks a simple fibre-and-colour question. Pick, wind, pop, squish, all inside 60 seconds. Her return with the finished hat lands before the first day ends.",
+        "marketWindow": "Knitting is an autumn and winter hobby, and the Dressmaker breakout (Sept 2026) has just shown the craft audience will buy. Ship the browser slice and clips into knitting TikTok and r/knitting as knitting season starts, take the Steam demo to the October or February Next Fest, and launch into the next autumn, ideally around Shetland Wool Week, with knitting YouTubers ('knittubers') as the streamer channel."
+      },
+      "comeBack": {
+        "short": "Someone you served yesterday is coming back today with what they made, and the dyers have a new seasonal colourway in.",
+        "long": "The show-and-tell wall becomes a collection of your taste, regulars' projects grow from scarves to heirloom jumpers, the shop expands (a dye pot out back, a knit-night table, a second room), and the island's year changes what people ask for."
+      },
+      "money": {
+        "model": "Free browser slice as the hook test, a paid itch or Ko-fi supporter build, then a premium Steam version with a demo, plus later colourway or pattern-book DLC and a console port if it sells",
+        "price": "Supporter build: $5. Steam: $14.99",
+        "evidence": "Tiny Bookshop (~$20) sold 500k+, Coffee Talk (~$13) ~369k / $3.3M, and Dressmaker ($14.99) recouped its budget in under 24h. 45.2% of $20+ cozy games reach 1,000 reviews versus 2.7% under $5 (budget confound noted). Even a plain hobby-shop execution (Bookshop Simulator) made ~$488k."
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "proveItFirst": "Build a one-customer browser toy: pattern card, a small cubby wall, the winder with the barf-versus-neat cake, and the finished-hat return photo. Post a vertical clip of the winding and the return on knitting TikTok and r/knitting, with the playable link. A yes is knitters sharing it themselves (stitches, duets, people posting what colourway they'd have picked), a front-page r/knitting thread, and at least 10% of slice players signing up for the Steam wishlist or Discord. If they only critique craft accuracy, fix that first.",
+      "weakestLink": "Clip power and content volume. The research is blunt that cozy shops without a clip-able hook sell under 10k (Thrifty Business ~6.9k), and this game's best moment (the customer returning in your colours) is emotional rather than instantly satisfying; the speckle-dye-and-wind beat has to carry the clips. Every customer also needs writing and every return a finished-object illustration in the chosen colours, knitters will punish wrong craft details, and Dressmaker clones are expected to arrive in knitting.",
+      "checks": {
+        "provenLoop": {
+          "rating": "ok",
+          "note": "Tiny Bookshop (500k+) and Coffee Talk (~369k) prove the read-the-customer shop, but there are fewer hits than for restoration or counter loops."
+        },
+        "openTheme": {
+          "rating": "strong",
+          "note": "No yarn shop game found in two searches, while the needle-craft audience is surging after Dressmaker; clones are a future, not current, threat."
+        },
+        "hook": {
+          "rating": "ok",
+          "note": "'They come back wearing it' is warm and clear, but the payoff needs two scenes separated in time, so the 5-second clip is weaker than the others'."
+        },
+        "moment": {
+          "rating": "ok",
+          "note": "The speckle-dye-and-wind reveal and the cake pop-off are pleasant and real ASMR formats, but not as instantly shareable as a split shoe or a sliced loaf."
+        },
+        "feel": {
+          "rating": "ok",
+          "note": "The angle-only crank with a sweet-speed band and fibre-specific sound is solid, but the most frequent decision (choosing yarn) is a selection, not a physical action."
+        },
+        "click": {
+          "rating": "ok",
+          "note": "The first wind lands inside a minute; the bigger click (the return in your colours) arrives at the end of the first day, not the first minute."
+        },
+        "look": {
+          "rating": "strong",
+          "note": "The rainbow cubby wall glowing inside a grey, rain-misted stone shop is an instantly recognisable thumbnail."
+        },
+        "timing": {
+          "rating": "ok",
+          "note": "Knitting season and the post-Dressmaker moment fit, but the same moment invites knitting clones."
+        },
+        "comeBackAndMoney": {
+          "rating": "ok",
+          "note": "Returning customers are a real reason to come back and $14.99 premium has precedent, but there is no portal income and the ceiling depends on clips that are harder to make."
+        }
+      },
+      "scores": {
+        "originality": 6,
+        "provenDemand": 6,
+        "demand": 6,
+        "gap": 7,
+        "soloSpeed": 5,
+        "creatorFit": 5,
+        "instantPlay": 7,
+        "monetization": 6,
+        "marketability": 7,
+        "momentum": 7,
+        "culture": 8,
+        "scopeFit": 8
+      },
+      "critic": {
+        "verdict": "Risky",
+        "summary": "An empty hobby-shop theme with a proven Tiny Bookshop-style loop and a lovely thumbnail, aimed at a craft audience that is buying right now. It can win if knitters adopt it as their own the way BookTok adopted Tiny Bookshop; it dies the way Thrifty Business did, as a well-made cozy shop without a clip that spreads.",
+        "fixesApplied": [
+          "Added a hand speckle-dye step that feeds the winding reveal, giving the clip a tactile, satisfying middle beat.",
+          "Removed text from the clip (the pattern card is now a sketch), as the hook check requires a no-text clip.",
+          "Added search-confirmed competitors (Knitwits, Knit-Pick, Yarn Sorting mobile puzzle) and flagged Leafy Corner as unconfirmed.",
+          "Rewrote the weakest link around clip power, which the research names as the main cause of under-10k cozy shops.",
+          "Downgraded hook, moment, feel and click to ok; lowered demand, gap, soloSpeed, creatorFit, instantPlay, monetization, marketability, momentum and culture."
+        ]
+      },
+      "rank": 6
+    },
+    {
+      "id": "win-tangle-hill",
+      "name": "Tangle Hill",
+      "family": "Other evergreen genres",
+      "theme": "Cozy co-op hangout (not fishing): kite flying",
+      "sourceIdeas": [
+        "kite-hill",
+        "pond-party"
+      ],
+      "hook": "Paint a kite, send a link, and fly with your friends on one windy hill. Try not to tangle.",
+      "oneLiner": "A cheap 1-8 player hangout on a windy hill. You draw your own kite, catch the gusts you can see rolling through the grass, and fly next to friends whose lines hum like strings. Sooner or later two kites cross, spiral together and land in the kite-eating tree.",
+      "clipStoryboard": [
+        {
+          "beat": "0-1.5s",
+          "shot": "Low angle from the grass: four hand-drawn kites against a huge blue sky (a frog, a badly drawn cat, a heart, a crayon dinosaur), each trailing a ribbon tail. Wind and a soft chord of humming lines."
+        },
+        {
+          "beat": "1.5-3s",
+          "shot": "A wave of brighter grass rolls up the hill toward the players. The frog kite catches it, surges up, and its line's hum jumps an octave."
+        },
+        {
+          "beat": "3-5s",
+          "shot": "The cat kite drifts into the frog kite's line. The lines cross, twist, and both kites start spiralling around each other faster and faster. Two players' voices: 'no no no NO'."
+        },
+        {
+          "beat": "5-7s",
+          "shot": "Both kites corkscrew into a huge oak that is already full of dozens of other players' kites. Leaves burst out. A crow lands on the cat kite."
+        },
+        {
+          "beat": "7-9s",
+          "shot": "Cut to the tiny figures on the hill doing a group 'facepalm' emote, then the sun sets and the remaining kites light up as lanterns."
+        }
+      ],
+      "provenLoop": {
+        "loop": "A cheap online hangout built around one relaxing, slightly skill-based verb, with self-expression (drawing, cosmetics) and physics comedy that produces clips.",
+        "paidHits": [
+          {
+            "name": "Webfishing",
+            "result": "Solo dev, $5. About 20K peak CCU and 98% of 6,200+ reviews within two weeks of its Oct 2024 launch; tracker estimates range from ~1.3M copies / $5.6M (Raijin) to ~5M (another tracker, low confidence)",
+            "confidence": "medium"
+          },
+          {
+            "name": "Cast n Chill",
+            "result": "One relaxing verb plus idle play: 95% of 8,097 reviews, an estimated 180K-582K copies (evergreen_other.json)",
+            "confidence": "medium"
+          },
+          {
+            "name": "Dinkum",
+            "result": "Solo dev, cozy co-op: 350K in its first Early Access month, 1M+ total (evergreen_other.json)",
+            "confidence": "high"
+          },
+          {
+            "name": "PEAK (Aggro Crab / Landfall)",
+            "result": "Cheap co-op physics comedy: 1M copies in six days, 2M in nine days and 5M+ in about a month after its June 2025 launch (confirmed by search). A climbing challenge, not a hangout, so it proves cheap co-op comedy spreads, not that kites do",
+            "confidence": "high"
+          }
+        ]
+      },
+      "openTheme": {
+        "demand": "Press and players explicitly ask for 'more games like Webfishing' (Vice). Couples co-op guides complain that most co-op picks are combat-heavy or 100-hour epics (evergreen_other.json). Outbound funded kite flying as a Kickstarter stretch goal ('Cozy Kites'), which shows that backers want the activity. Kite festivals are a living tradition with huge crowds: Uttarayan/Makar Sankranti in Gujarat, Weifang, Washington DC's Blossom Kite Festival, Guatemala's giant Day of the Dead kites.",
+        "supply": "Come Fly With Me (itch.io) is literally 'a laid-back multiplayer kite-flying hangout in a dreamy low-poly meadow', so the exact concept exists as a tiny prototype with no Steam presence. Outbound (funded Kickstarter, 'Cozy Kites' stretch goal) supports up to 4-player co-op kite flying as a side activity. Yakko Tako Royale (Coming Soon) is competitive kite fighting for up to 16 kites, the opposite of cozy but the same sky. Stunt Kite Party (HandyGames, 2019) is a competitive couch party game. Nobody has shipped the cozy kite hangout on Steam, but it is not as empty as the draft claimed.",
+        "searched": "Searched 'kite flying multiplayer co-op game Steam 2026', '\"Kite Hill\" game', '\"Yakko Tako\" kite game', 'Stunt Kite Party reviews' and 'games like Webfishing hangout 2026'. Found the four kite titles above (all weak or off-target). Webfishing-likes are padded with big MMOs (Palia, Dinkum) and A Game About Penguins. The pool's 'Kite Hill' name collides with a large dairy brand, so the game is renamed Tangle Hill, which turned up no existing game. Re-checked 'multiplayer kite flying game cozy Steam 2026' and '\"kite\" game Steam coming soon co-op': confirmed Come Fly With Me is a multiplayer kite hangout prototype, Outbound has 4-player co-op kites, and Yakko Tako Royale is 16-player kite fighting."
+      },
+      "coreAction": {
+        "verb": "Pull the line (feel the wind through the string and catch the gusts)",
+        "input": "Mouse: hold left button to pull the line in, release to let it run out, and move the mouse left/right to steer the kite's nose. Touch: hold anywhere to pull and slide left/right to steer. Controller: right trigger to pull (analogue, so half-pressure gives half-pull), left stick to steer, and rumble carries line tension.",
+        "response": "On press, the line snaps from a lazy sagging curve to straight in the same frame. The kite's nose dips for about 60 ms (anticipation), then it climbs. The line's hum starts immediately at a pitch set by tension. Your character leans back with both fists at their chest. Release, and the line visibly bellies out and the hum falls away to a flutter.",
+        "feedback": [
+          "Line physics: a 40-segment verlet rope with sag that responds to tension. Pulled, it goes straight and bright; slack, it droops into a soft catenary. The line is the main readout, so players read tension from it rather than from a meter.",
+          "Kite animation: the sail fabric bows under load (vertex squash along the spine), and the ribbon tail (a separate rope with cloth ribbons) whips and lags with follow-through. On a gust catch the kite lunges upward, stretching 10% along its climb, then settles.",
+          "Character: leans back against tension (rig blend by tension 0-1), stumbles a step forward when a strong gust yanks, plants their feet when you hold. Small but sells the force.",
+          "Visible wind: gusts are telegraphed 0.8-1.2 s ahead as a bright wave rolling up the grass, petals and dandelion seeds streaming, and cloud shadows racing. You see the wind coming, which turns waiting into anticipation.",
+          "Sound, the signature: each line is a bowed-string or Aeolian-harp tone with pitch tied to tension. Each player's line is tuned to a different note of a pentatonic scale, so four friends flying make a shifting chord. Layers on top: fabric flutter (rate tied to airspeed), a soft rope creak at max tension, and a wind bed.",
+          "Gust catch payoff sound: pulling inside the gust window plays a rising 'whumph' as the sail fills, the hum jumps an octave for 1.5 s, and a high harmonic shimmers.",
+          "Camera: third person behind the flyer, lifting and tilting up 6-8 degrees when your kite climbs, so the sky gets bigger. A slight FOV widen (2-3 degrees) on a gust catch. No shake except a tiny one on a tree crash.",
+          "Haptics: controller rumble at low frequency scales with tension, plus a sharp pulse on a gust catch and on a line touch. Mobile web vibrates only on a catch and on a tangle start.",
+          "Particles: dandelion seeds and blossom streaming in gusts, a puff of leaves on a tree crash, and a short ribbon of sparkles trailing the tail during tricks (loops leave a fading ribbon, so players can draw hearts in the sky).",
+          "UI: almost none. A small altitude ribbon on the line near your hands, and the gust count shown as knots on your line."
+        ],
+        "payoff": "Catching a big gust perfectly: your kite surges high above everyone else's, the camera lifts to a huge sky, and your line's note rings out an octave higher over your friends' chord. The social payoff is the tangle spiral into the kite-eating tree, which everyone laughs at.",
+        "tuning": [
+          "tensionToLift curve: how much pulling climbs versus stalls. The main skill knob, kept generous for beginners",
+          "steadyWindFloor: a minimum lift so a kite never falls out of the sky just because you did nothing (no death spiral)",
+          "gustTelegraphLead (0.8-1.2 s) and gustWindow (how early or late a pull still counts)",
+          "gustFrequency and strength per hill and time of day",
+          "lineLengthMax and reelSpeed",
+          "tangleTwistThreshold: how many crossings before lines lock into a spiral (1.5 twists), and autoUntangleTime (about 6 s) so tangles never trap anyone",
+          "humPitchRange per player and the scale (pentatonic, so any combination sounds pleasant)",
+          "tailDrag: longer tails are more stable but slower, which makes tails both a cosmetic and a handling choice",
+          "cameraLift degrees per 10 m of altitude",
+          "netInterpolationBuffer (about 100 ms) for other players' kites"
+        ],
+        "feelsBadIf": [
+          "Beginners can't keep the kite up and it keeps crashing. Use a steady-wind floor and an auto-stabilising assist that fades as you play.",
+          "Wind is invisible and gusts feel random. Always telegraph them in the grass, petals and clouds.",
+          "Other players' kites stutter or teleport. Interpolate, and simulate remote lines locally from synced kite positions.",
+          "Tangles are used to grief people. Auto-untangle after about 6 s, keep private link lobbies as the default, and add a 'wide sky' option that turns off line collisions with non-friends.",
+          "Drawn kites are used for offensive images in public lobbies. Public lobbies show non-friends' kites as plain colours unless you opt in, with report and block.",
+          "The line looks like a stiff stick. Never draw it as straight segments without sag or vibration.",
+          "There's nothing to do after ten minutes. Gust medals, tricks, ribbon drawings, lantern dusk and seasonal hills give structure without goals."
+        ]
+      },
+      "clickMoment": {
+        "first": "In the first 20 seconds your kite sags and wobbles. Then a bright wave of grass comes rolling up the hill. You pull just as it reaches you, the kite leaps into the sky and your line sings an octave higher. 'I caught the wind.' In the first minute a friend joins from the link and their line hums a second note under yours.",
+        "deeper": "The first real tangle: you and a friend realise you can untwist by circling opposite ways, and you talk each other through it (and fail into the tree). Later, at dusk, four friends hold their lines at different tensions on purpose to play a chord. The hill becomes a shared instrument and the group's place, and the tree slowly fills with your group's crashed kites, which stay there between sessions."
+      },
+      "look": {
+        "short": "A huge sky over one rounded green hill · crayon-drawn kites with long ribbon tails",
+        "vibe": "Two-thirds of every frame is sky: deep cobalt at the top fading to warm haze, with big soft painted cumulus clouds. The hill is a smooth, low-poly rounded green dome with wind-brushed grass shaded in two tones and a single enormous oak on the shoulder, its branches full of other people's kites. Players are small, round, faceless-ish figures in knitted hats. The kites are the only hand-drawn, wobbly-line things in the world, so player art pops.",
+        "signature": "The kite lines: one bright, sun-catching thread from each tiny figure to its kite, drawn thin and glowing against the sky. Plus the oak tree stuffed with crashed kites.",
+        "palette": [
+          {
+            "name": "High-sky cobalt",
+            "hex": "#2F6FB8"
+          },
+          {
+            "name": "Horizon haze",
+            "hex": "#CFE3EE"
+          },
+          {
+            "name": "Hill green",
+            "hex": "#7DAE5A"
+          },
+          {
+            "name": "Gust-light grass",
+            "hex": "#C9E07A"
+          },
+          {
+            "name": "Kite-string gold",
+            "hex": "#FFD66B"
+          },
+          {
+            "name": "Ribbon red",
+            "hex": "#E2513F"
+          }
+        ],
+        "references": [
+          "Webfishing (low-fi social hangout, drawing as meme engine)",
+          "Alto's Adventure (sky gradients)",
+          "Sky: Children of the Light (a sky as a social space)",
+          "Peanuts' kite-eating tree",
+          "Studio Ghibli wind in grass (Kiki's Delivery Service hillside)"
+        ],
+        "avoid": [
+          "realistic 3D grass that tanks browser frame rates",
+          "busy HUDs",
+          "competitive scoreboards",
+          "dark or edgy tone",
+          "AI-generated art or music"
+        ]
+      },
+      "sound": "The game sounds like an Aeolian harp: every kite line is a living string whose pitch follows its tension, tuned so any group of players makes a pleasant pentatonic chord. Under it are wind, fabric flutter, skylarks and a distant town bell at dusk. Music is sparse acoustic guitar and harmonium that only fades in during lantern hour.",
+      "timing": {
+        "session": "Micro loop: 20-40 s cycles of waiting, a visible gust, a pull and a soar. Meso loop: a 3-5 minute 'wind spell' with a gust medal goal (catch 5 big gusts, do a loop, write a heart in ribbon) that earns tail ribbons and fabrics. Macro loop: an in-game day of about 20 minutes on the hill, ending in lantern dusk when kites glow and everyone releases a sky lantern together. Then the lobby keeps hanging out or leaves.",
+        "firstMinute": "0-10 s: paint a kite on a diamond template with three crayon colours (or skip with a preset). 10-30 s: the kite lifts off your hands and the first telegraphed gust arrives and is caught. 30-60 s: a 'share this hill' link button. A friend's kite appears beside yours, the two hums meet, and their line drifts suspiciously close to yours.",
+        "marketWindow": "Why now: the 'more games like Webfishing' demand is still unmet by small games, cheap co-op friendslop is the breakout pattern of 2025-26, and Open World / co-op niches keep above-average odds. Best moments: test the browser link around Makar Sankranti/Uttarayan (Jan 14), when kite clips flood social feeds. Put the Steam demo into the February Steam Next Fest. Launch 1.0 in spring kite season (late March to April, around Washington's Blossom Kite Festival and Weifang), with a seasonal autumn hill update timed to Guatemala's giant kites on Nov 1."
+      },
+      "comeBack": {
+        "short": "Your friends are there, or their ghost kites are: a daily 'wind of the day' (a named weather pattern with its own gusts and a medal) and lantern dusk give a reason to meet up, and the tree keeps your group's crashed kites.",
+        "long": "Seasonal hills (cherry-blossom spring, beach, autumn harvest, a snowy winter hill), new kite frames (box, delta, giant festival kites flown by two players at once), a growing wardrobe of tails and fabrics, and the group's own tree full of trophies. A real group ritual, like Webfishing's lobbies."
+      },
+      "money": {
+        "model": "Free browser slice (2-4 players by link, one hill, limited kite frames) to spread. Premium Steam version with 8-player lobbies, all hills, kite frames and Steam Workshop kite designs. Optional cosmetic supporter pack.",
+        "price": "Steam $5.99, a 4-pack friend bundle, and a $3.99 supporter pack (soundtrack plus festival kite frames)",
+        "evidence": "Webfishing sold an estimated 1.3M (Raijin) to ~5M copies at $5 as a solo project, and Rusty's Retirement at about $7 sold 500K+ (evergreen_other.json). PEAK (about $8) sold 5M+ in about a month, confirmed, showing cheap co-op comedy breaks out through streamers. Below $5 a game without a background hook rarely reaches 1k reviews (2.7%), so stay at about $6, not $3."
+      },
+      "path": "browser test → Steam",
+      "effort": "medium",
+      "proveItFirst": "Build a single-player browser toy first: one hill, one kite, visible gusts and the singing line, with no netcode. Add 'ghost kites': replays of the last few visitors' flights (and their drawn kites, friends-only by default) drifting in the same sky, which gives social presence with no live servers. Post vertical clips of a gust catch with the hum, and a two-kite tangle played by you in two browser windows. A yes is clip comments tagging friends ('we need this', '@x play with me') at over 5% of comments, plus solo players staying over 3 minutes on average with nothing to do but fly. Only then add link lobbies and test with 20 friend groups; the yes there is groups coming back unprompted the next day.",
+      "weakestLink": "It depends on friends and on emergent clips you can't plan. Solo, it is a lovely ten-minute toy (ghost kites help, but don't replace friends), and retention only exists if groups adopt the hill as their hangout, which can't be proven until real groups play. Live netcode for crossing ropes plus moderating drawn kites is the hardest engineering and ops in this set for one person, and the exact concept already exists as an itch prototype.",
+      "checks": {
+        "provenLoop": {
+          "rating": "ok",
+          "note": "The cheap hangout around one relaxing verb is proven by Webfishing (1.3M+ est., solo, $5), and PEAK shows cheap co-op comedy spreads, but no kite game has sold."
+        },
+        "openTheme": {
+          "rating": "ok",
+          "note": "No cozy kite hangout on Steam, but the same concept exists on itch (Come Fly With Me), Outbound has 4-player co-op kites, and a 16-player kite game is coming."
+        },
+        "hook": {
+          "rating": "strong",
+          "note": "'Draw a kite, send a link, don't tangle' is instantly understood, and the clip works without text."
+        },
+        "moment": {
+          "rating": "strong",
+          "note": "The tangle spiral into a tree full of kites is a systemic group-laugh clip, and hand-drawn kites make every clip unique."
+        },
+        "feel": {
+          "rating": "strong",
+          "note": "A singing line with pitch from tension, telegraphed gusts with a timing window, rope sag as the readout and analogue-trigger rumble make the pull physical."
+        },
+        "click": {
+          "rating": "ok",
+          "note": "Catching the first visible gust lands within 30 s, but the real click (a friend's line humming under yours) needs a second person."
+        },
+        "look": {
+          "rating": "ok",
+          "note": "Big sky plus glowing threads is clear and cheap with low-poly packs, but low-poly hills are a familiar look; player drawings carry the distinctiveness."
+        },
+        "timing": {
+          "rating": "ok",
+          "note": "Real kite calendar moments (Uttarayan, spring festivals) and Next Fest, but kite culture is regional and 'more Webfishing' demand is two years old."
+        },
+        "comeBackAndMoney": {
+          "rating": "weak",
+          "note": "Retention lives entirely on friend groups adopting the hill, which can't be shown before netcode exists, and a $5.99 price needs a streamer moment to matter."
+        }
+      },
+      "scores": {
+        "originality": 7,
+        "provenDemand": 5,
+        "demand": 6,
+        "gap": 7,
+        "soloSpeed": 4,
+        "creatorFit": 5,
+        "instantPlay": 7,
+        "monetization": 5,
+        "marketability": 8,
+        "momentum": 7,
+        "culture": 6,
+        "scopeFit": 8
+      },
+      "critic": {
+        "verdict": "Risky",
+        "summary": "A fresh relaxing verb for the under-served cheap co-op hangout space, with a singing line that is genuinely new game feel and a tangle that writes its own clips. It can win the way Webfishing did if groups adopt the hill; it dies as a pretty solo toy, or on rope netcode and drawn-kite moderation that one person can't support.",
+        "fixesApplied": [
+          "Added 'ghost kites' (asynchronous replays of other visitors) to the browser test and come-back, so social presence can be tested without live netcode.",
+          "Confirmed PEAK (1M in 6 days, 5M+ in about a month) and raised its confidence, while noting it is a climbing game, not a hangout.",
+          "Updated Webfishing to the 1.3M (Raijin) to ~5M tracker range.",
+          "Corrected supply: Come Fly With Me is the exact concept as an itch prototype and Outbound has 4-player co-op kites; open theme downgraded from strong to ok.",
+          "Downgraded click, timing to ok and come-back-and-money to weak; lowered provenDemand, demand, gap, creatorFit, monetization, marketability, momentum and culture."
+        ]
+      },
+      "rank": 7
+    }
+  ],
+  "cut": [
+    {
+      "id": "soak-and-snooze",
+      "name": "Soak & Snooze",
+      "reason": "Open theme is weak and can't be fixed without changing the idea: the exact theme already exists as 'CapybaraOnsen ~Idle Game~' on iOS, plus Hot Springs | Onsen (Steam idle, $3.99), Capy Spa (Xbox/PlayStation), Maltese's Fluffy Onsen (95% of ~3k reviews, 61.7k–188k est. copies, with a spin-off and DLC), Onsen Master, Bathhouse Creatures and Animal Spa. The walk-and-stock loop is a commodity and the hands only steer (auto pickup/drop), so feel rests on a cosmetic tower sway. It is a Monkey Mart reskin in a crowded animal-onsen niche."
+    }
+  ]
+}

@@ -360,6 +360,12 @@
 
     return h("div", { class: "view" },
       viewHead("Briefing · data as of " + D.meta.asOf, I.headline, I.subhead),
+      D.winners && D.winners.winners && D.winners.winners.length ? section("Best bets right now", "From Winning ideas: designed against nine checks and graded by a critic. Run each one's 'Prove it first' test before building.",
+        h("div", { class: "grid grid-3" }, [...D.winners.winners].sort((x, y) => (x.rank || 99) - (y.rank || 99)).slice(0, 3).map((w) => h("article", { class: "card" },
+          h("div", { class: "card-top" }, h("div", {}, h("div", { class: "eyebrow", text: (w.critic && w.critic.verdict) || "Winning idea" }), h("h3", { text: w.name })), checkStrip(w, true)),
+          h("p", { class: "ink-2", text: w.hook }),
+          w.look && w.look.palette ? h("div", { class: "look-line" }, swatches(w.look, true), h("span", { text: w.look.short })) : null,
+          h("div", { class: "chips" }, h("button", { type: "button", class: "btn primary", text: "See it", onclick: () => openWinner(w.id) }), saveBtn({ id: "pitch:" + w.id, kind: "pitch", ref: w.id, title: w.name, hook: w.hook || "" })))))) : null,
       section("Five games to consider", "Ranked by the data. Each shows what kind of game it is and the market signals behind it.",
         h("div", { class: "sugg-list" }, rankedSplit().main.map(suggestionRow)),
         h("div", { class: "chips", style: "gap:18px" }, h("a", { href: "#concepts", text: "Compare all five side by side →" }),
@@ -1589,6 +1595,7 @@
       h("p", { class: "w-hook", text: w.hook }),
       h("p", { class: "ink-2", text: w.oneLiner }),
       w.look && w.look.palette ? h("div", { class: "look-line" }, swatches(w.look, true), h("span", { text: w.look.short })) : null,
+      (() => { const src = pool().filter((it) => it.kind !== "winner" && (w.sourceIdeas || []).includes(it.id)); return src.length ? h("div", { class: "chips" }, h("span", { class: "muted", style: "font-size:.8rem", text: "Builds on:" }), src.map((it) => h("button", { type: "button", class: "chip accent", style: "cursor:pointer;font:inherit;font-size:.74rem;font-weight:600", text: it.name, onclick: () => openItem(it) }))) : null; })(),
       checkStrip(w),
       w.critic ? h("div", { class: "callout" + (w.critic.verdict && /fix|risk|weak/i.test(w.critic.verdict) ? " warn" : "") }, h("b", { text: "Critic: " + (w.critic.verdict || "") }), h("p", { class: "ink-2", text: w.critic.summary || "" }),
         w.critic.fixesApplied && w.critic.fixesApplied.length ? h("details", {}, h("summary", { text: "What the critic changed (" + w.critic.fixesApplied.length + ")", style: "cursor:pointer;color:var(--accent);font-size:.88rem" }), ul(w.critic.fixesApplied)) : null) : null,
@@ -1616,10 +1623,10 @@
   function renderWinners() {
     const X = D.winners;
     if (!X || !X.winners || !X.winners.length) return h("div", { class: "error-box", text: "Winning ideas are missing (data/winners.json)." });
-    const list = [...X.winners].sort((a, b) => checkPoints(b) - checkPoints(a) || weighted(b.scores, weights()) - weighted(a.scores, weights()));
+    const list = [...X.winners].sort((a, b) => (a.rank || 99) - (b.rank || 99));
     const openId = store.get("winnerOpen", null);
     store.set("winnerOpen", null);
-    if (openId) later(() => { const el = document.getElementById("w-" + openId); if (el) el.scrollIntoView({ block: "start" }); });
+    if (openId) later(() => setTimeout(() => { const el = document.getElementById("w-" + openId); if (el) el.scrollIntoView({ block: "start" }); }, 0));
     return h("div", { class: "view" },
       viewHead("Winning ideas", X.title || "Ideas built to pass all nine checks", X.intro),
       takeaway("winners"),
@@ -1627,7 +1634,9 @@
         h("div", { class: "check-legend" }, CHECKS.map(([k, l, d]) => h("div", {}, h("b", { text: l }), h("span", { class: "muted", text: " " + d })))),
         h("p", { class: "panel-note", text: "No idea is a sure thing: the checks raise the odds, and the 'Prove it first' test tells you cheaply whether strangers agree before you build the game." })),
       h("nav", { class: "jump-bar", "aria-label": "Winning ideas" }, list.map((w) => h("a", { href: "#winners", text: w.name, onclick: (e) => { e.preventDefault(); const el = document.getElementById("w-" + w.id); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); } }))),
-      h("div", { class: "section", style: "gap:22px" }, list.map((w, i) => winnerCard(w, i + 1))));
+      h("div", { class: "section", style: "gap:22px" }, list.map((w, i) => winnerCard(w, i + 1))),
+      X.cut && X.cut.length ? section("Cut by the critic", "Ideas that couldn't reach at least OK on proven loop, open theme and feel, and why.",
+        h("div", { class: "grid grid-2" }, X.cut.map((c) => h("article", { class: "card" }, h("h3", { text: c.name }), h("p", { class: "ink-2", style: "font-size:.9rem", text: c.reason }))))) : null);
   }
 
   // ---------- game finder: every suggestion in one pool ----------

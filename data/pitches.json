@@ -1019,7 +1019,7 @@
         "Spiritfarer",
         "Tiny Bookshop"
       ],
-      "why": "Maltese's Fluffy Onsen sold ~188k at 95% positive with only a handful of bathhouse competitors, and the research notes nobody has made the premium, narrative 'Tiny Bookshop of bathhouses' yet. Unlike Soak & Snooze (a top-down animal walk-and-restock idle), this is a story-led side-view game whose verb is scrubbing grime into colour, and $15-20 cozy games reach 1,000 reviews far more often (45.2%) than cheap ones.",
+      "why": "Maltese's Fluffy Onsen sold an estimated 62k–188k at 95% positive with only a handful of bathhouse competitors, and the research notes nobody has made the premium, narrative 'Tiny Bookshop of bathhouses' yet. Unlike Soak & Snooze (a top-down animal walk-and-restock idle), this is a story-led side-view game whose verb is scrubbing grime into colour, and $15-20 cozy games reach 1,000 reviews far more often (45.2%) than cheap ones.",
       "risk": "Every spirit needs bespoke illustration plus writing, so content volume, not code, decides whether the game ships.",
       "firstStep": "One floor with two baths, three spirits with distinct grime, the scrub-reveal shader and one short story each, playable in a browser with mouse or finger.",
       "scores": {
@@ -1296,7 +1296,7 @@
         "Screenside Station",
         "Bongo Cat"
       ],
-      "why": "Rusty's Retirement (solo, 100k in 5 days, 500k+) and Fluffy Onsen (~188k) prove the runs-while-you-work format, and the research says farming is the most copied theme there while venues are rarer. A lido's long lanes fit a horizontal strip naturally, and wild and cold-water swimming give it a real wellness tailwind.",
+      "why": "Rusty's Retirement (solo, 100k in 5 days, 500k+) and Fluffy Onsen (an estimated 62k–188k) prove the runs-while-you-work format, and the research says farming is the most copied theme there while venues are rarer. A lido's long lanes fit a horizontal strip naturally, and wild and cold-water swimming give it a real wellness tailwind.",
       "risk": "Desktop-idle shelves are filling fast (fishing, sushi, mining and railway strips already exist), so it only works if the swimmers are funny enough to clip.",
       "firstStep": "A browser strip with one pool, five animal swimmers, coin pickup and two upgrades, which can pop out as a small always-on-top window via Chrome's Document Picture-in-Picture.",
       "scores": {

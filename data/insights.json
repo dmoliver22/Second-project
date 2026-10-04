@@ -251,20 +251,20 @@
   "decisions": [
     {
       "topic": "What to make",
-      "call": "Build proven loops with a fresh theme and one satisfying action, not novelty toys. Start with Soak & Snooze (an animal bathhouse on the walk-and-restock loop: it plays from a link and grows into a Steam game) and Treat Box (the fastest web test). The strongest Steam bet is Well Loved, a plush hospital in the craft-and-restore pattern behind 2026's breakouts.",
-      "why": "Copies of taken themes mostly land at 25k–120k copies, and well-reviewed sims with no hook sell under 10k. The 2026 breakouts are tactile craft and restoration (ReStory 500k+, Dressmaker #9 global top seller) and fresh-theme management (Maltese's Fluffy Onsen ~188k with 3–4 competitors). Dressmaker started as a free itch.io prototype, so the browser-first test still fits.",
+      "call": "Build proven loops with a fresh theme, one moment that clips and an action that feels great, and prove each one with a cheap clip test before building the game. Start with Scuff & Shine (the only Build-ready winning idea), then test Lather & Loaf and Well Loved. Keep Treat Box as the fastest web test.",
+      "why": "Copies of taken themes mostly land at 25k–120k copies and hookless ones under 10k; 2026's breakouts are tactile craft and restoration (ReStory 500k+, Dressmaker #9 global top seller). A critic graded every winning idea on nine checks and cut the one whose theme had filled up (the animal onsen). Dressmaker started as a free itch.io prototype, so testing first is proven too.",
       "evidence": [
+        {
+          "text": "Winning ideas and their nine checks",
+          "link": "#winners"
+        },
         {
           "text": "Proven genres: hits, misses and open themes",
           "link": "#genres"
         },
         {
-          "text": "The five plans side by side",
-          "link": "#concepts"
-        },
-        {
-          "text": "Idea lab experiments (keep as side tests)",
-          "link": "#ideas"
+          "text": "Every idea in the Game finder",
+          "link": "#finder"
         }
       ],
       "confidence": "medium"
@@ -385,7 +385,7 @@
     },
     {
       "when": "Step 2",
-      "what": "Build rough prototypes of Soak & Snooze (2D, in a phone browser) and Treat Box, plus a one-bench browser slice of Well Loved that shows a single before-and-after restore. Post 3–5 clips of each before polishing anything."
+      "what": "Run the 'Prove it first' test for Scuff & Shine, Lather & Loaf and Well Loved: make just the core moment (a hand-made mockup or a rough playable of that one action), post it as if the game exists, and compare saves, shares and 'where can I play?' comments. Build the one strangers pull you toward."
     },
     {
       "when": "Step 3",
@@ -405,6 +405,7 @@
     }
   ],
   "suggestedQuestions": [
+    "Walk me through the 'Prove it first' test for Scuff & Shine: what exactly do I make and post, and what counts as a yes?",
     "Of the proven-genre suggestions, which should I build first and why?",
     "What's the smallest browser slice of Well Loved that would test the hook?",
     "Which open theme in Proven genres has the best odds for a solo developer, and why?",
@@ -482,6 +483,11 @@
       "text": "Every idea in one pool, scored by the same weights. Start with Roll if you want to be surprised in a smart way, or filter to a family and ship path and sort by what matters. When one grabs you, press More like this until you find the version you'd build, then Save it.",
       "link": "#saved",
       "linkText": "See what you've saved"
+    },
+    "winners": {
+      "text": "These are designed to pass all nine checks, then graded harshly. Only Scuff & Shine is Build-ready; the rest need a fix or carry a real risk, and each card says which. Read the feel spec and the clip storyboard first: they are the parts that decide whether a proven loop becomes a hit. Then run the 'Prove it first' test before building.",
+      "link": "#finder",
+      "linkText": "See every idea in the Game finder"
     }
   },
   "outliers": [

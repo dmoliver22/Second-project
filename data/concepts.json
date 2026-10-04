@@ -9007,20 +9007,20 @@
       "artDirection": "Hand-painted top-down 2D of a small wooden mountain inn in snow: cedar, steam, yuzu-yellow floats and round, sleepy animals.",
       "scores": {
         "originality": {
-          "score": 4,
-          "why": "The loop is a straight Monkey Mart / My Perfect Hotel loop and animal onsens already exist (Fluffy Onsen, Capybara Spa, Capy Spa), so only the cozy art, multi-species rituals and portal-to-Steam plan are new."
+          "score": 3,
+          "why": "A Monkey Mart-style loop in a theme several games already use."
         },
         "provenDemand": {
           "score": 8,
-          "why": "Walk-and-restock is one of the most proven loops anywhere (Monkey Mart ~300M Poki plays, My Perfect Hotel up to $178K a week in US iOS alone), and an animal onsen already sold ~188k on Steam."
+          "why": "Walk-and-restock is one of the most proven loops anywhere (Monkey Mart ~300M Poki plays, My Perfect Hotel up to $178K a week in US iOS alone), and an animal onsen already sold an estimated 62k–188k on Steam."
         },
         "demand": {
           "score": 8,
           "why": "Fluffy Onsen's 95% from 2,875 reviews and Monkey Mart's 4.6 rating from 3.79M votes show both the theme and the loop are wanted."
         },
         "gap": {
-          "score": 5,
-          "why": "Bathhouse supply is medium-low on Steam (3-4 visible games), but walk-and-restock is a commodity on portals and several small capybara-spa games already exist."
+          "score": 2,
+          "why": "The animal-onsen theme has filled up: CapybaraOnsen (iOS idle), Hot Springs | 温泉 (Steam idle), Capy Spa (consoles), Onsen Master, Bathhouse Creatures, Animal Spa, and Fluffy Onsen's own follow-up."
         },
         "soloSpeed": {
           "score": 7,
@@ -9056,7 +9056,7 @@
         }
       },
       "whyNow": [
-        "Maltese's Fluffy Onsen sold ~188k units (~$814k) at 95% positive in 2025 with only 3-4 visible bathhouse competitors; nobody has yet made the hands-on, nicely drawn version (steampulse).",
+        "Maltese's Fluffy Onsen sold an estimated 62k–188k units (up to ~$814k) at 95% positive in 2025 with only 3-4 visible bathhouse competitors; nobody has yet made the hands-on, nicely drawn version (steampulse).",
         "Monkey Mart reached ~300M plays on Poki and reportedly cost under $10k to make, and Poki hit 1B gameplays in a month in 2025: the walk-and-restock loop has a ready audience on phones (cinevva / Poki).",
         "Cozy games still reach 1,000 reviews at 11% against 4.2% for all of Steam, even with 1,041 cozy releases by late September 2026, and cute-animal hospitality games keep selling (Bear and Breakfast 157k-357k)."
       ],
@@ -9260,7 +9260,7 @@
           "scenario": "Strong",
           "units": 120000,
           "netUSD": 780000,
-          "note": "Top of the clone band, close to Fluffy Onsen's ~188k but at a higher price."
+          "note": "Top of the clone band, close to Fluffy Onsen's estimated 62k–188k but at a higher price."
         },
         {
           "scenario": "Breakout",
@@ -9283,8 +9283,8 @@
       },
       "drivers": [
         {
-          "signal": "An animal onsen already sold ~188k",
-          "detail": "Maltese's Fluffy Onsen: ~188k units, ~$814k, 2,875 reviews at 95% positive (May 2025), with only 3-4 visible bathhouse competitors (Onsen Master, Bathhouse Creatures, Animal Spa).",
+          "signal": "An animal onsen already sold an estimated 62k–188k",
+          "detail": "Maltese's Fluffy Onsen: an estimated 62k–188k units, up to ~$814k, 2,875 reviews at 95% positive (May 2025), with only 3-4 visible bathhouse competitors (Onsen Master, Bathhouse Creatures, Animal Spa).",
           "strength": "strong",
           "ref": {
             "link": "https://www.steampulse.org/game/3404470"
@@ -9315,12 +9315,9 @@
           }
         },
         {
-          "signal": "Crowded loop, cheap competitors",
-          "detail": "Walk-and-restock clones flood portals and mobile with paid UA; the Shop Keeper tag is up 634% and Idler up 150% in 2026; small capybara-spa games already exist; Fluffy Onsen sells at ~$4-5, and under-$5 cozy games reach 1,000 reviews only 2.7% of the time. The art and rituals must carry the difference.",
-          "strength": "caution",
-          "ref": {
-            "niche": "Shop/management sim (cafe, bakery, potion shop)"
-          }
+          "signal": "The theme is now crowded",
+          "detail": "A deeper competitor search found CapybaraOnsen (iOS), Hot Springs | 温泉 on Steam (.99), Capy Spa (Xbox/PlayStation), Onsen Master, Bathhouse Creatures, Animal Spa and a Fluffy Onsen follow-up. The critic cut it from Winning ideas: build it only with a sharper twist.",
+          "strength": "caution"
         }
       ],
       "look": {
