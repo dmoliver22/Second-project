@@ -951,13 +951,13 @@
         "A Short Hike (village warmth)"
       ],
       "why": "Monkey Mart's carry-stacks loop has ~300M Poki plays and a 4.6 rating from 3.79M votes, yet nearly all of its imitators are supermarkets, restaurants or hotels in the same low-poly look. A post office is a venue anyone understands in one sentence, and the parcel tower and franking stamp are built-in clip moments.",
-      "risk": "The loop is a commodity, so if the hand-painted art and hedgehog don't stand out on Poki it becomes one more clone dependent on curation luck.",
+      "risk": "A cozy post-office game, Cat Mail Co., launched on Steam in July 2026. The loop is a commodity, so if the hand-painted art and hedgehog don't stand out on Poki it becomes one more clone dependent on curation luck.",
       "firstStep": "One room: delivery hatch, three colour pigeonholes, a counter with a stamp, four customer types and one hireable pigeon, playable on a phone with a virtual stick.",
       "scores": {
         "originality": 4,
         "provenDemand": 8,
         "demand": 7,
-        "gap": 6,
+        "gap": 4,
         "soloSpeed": 8,
         "creatorFit": 7,
         "instantPlay": 10,
@@ -1647,13 +1647,13 @@
         "What Remains of Edith Finch"
       ],
       "why": "Unpacking and A Little to the Left each sold 1M+ with no successor at that level, while organizing without a story hook stalls (Whisper of the House ~235 reviews), so the emotional frame is the point. 'Swedish death cleaning' is a living lifestyle trend, and almost every player has helped clear a relative's home.",
-      "risk": "Each room needs many hand-drawn objects, and the tone must stay warm or grief will put cozy players off.",
+      "risk": "A Storied Life: Tabitha (from A Little to the Left's publisher) did 'pack a late relative's home' in April 2026 and flopped (82% of 62 reviews, a peak of 75 players). Each room needs many hand-drawn objects, and the tone must stay warm or grief will put cozy players off.",
       "firstStep": "One kitchen with about 30 objects, three relative boxes plus donate and keep, and one hidden letter that changes how you read the room.",
       "scores": {
         "originality": 7,
         "provenDemand": 7,
-        "demand": 7,
-        "gap": 7,
+        "demand": 5,
+        "gap": 3,
         "soloSpeed": 6,
         "creatorFit": 5,
         "instantPlay": 8,
@@ -1785,7 +1785,7 @@
         "Shell Shockers (browser lobbies)"
       ],
       "why": "Webfishing (solo dev, $5) sold an estimated 1-2M+ with ~20K peak concurrent players on one relaxing verb plus drawing, and press openly asks for 'more games like Webfishing'. Kites add player-made art (painted kites) and physics comedy (tangles), the two engines of Webfishing's clips.",
-      "risk": "Netcode and moderation of painted kites are the real work, and hangout games depend on a meme moment no one can plan.",
+      "risk": "'Kite Hill' is also a big dairy brand, so it needs another name (the Winning ideas version is Tangle Hill). Netcode and moderation of painted kites are the real work, and hangout games depend on a meme moment no one can plan.",
       "firstStep": "A two-player browser lobby on one hill with string physics, a basic paint tool for the kite, and tangling.",
       "scores": {
         "originality": 7,

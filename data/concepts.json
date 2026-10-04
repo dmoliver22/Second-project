@@ -639,6 +639,11 @@
           "ref": {
             "link": "#ideas"
           }
+        },
+        {
+          "signal": "The name is taken",
+          "detail": "'If It Fits' is already used by a board game and several jam games; the Winning ideas version is called Teacup Tabby.",
+          "strength": "caution"
         }
       ],
       "scores": {
@@ -8105,8 +8110,8 @@
           "why": "Wheel-throwing is one of social media's most-watched hobby formats and pottery classes are booming; the research found no notable cozy pottery sim."
         },
         "gap": {
-          "score": 7,
-          "why": "No cozy pottery studio sim on Steam; Kiln (Double Fine, Apr 2026) is a team brawler but competes for 'pottery game' searches."
+          "score": 3,
+          "why": "Master of Pottery is a strong incumbent (about 2,900 Steam reviews at 97% positive), and Double Fine's Kiln competes for 'pottery game' searches."
         },
         "soloSpeed": {
           "score": 6,
@@ -8405,6 +8410,11 @@
           "ref": {
             "link": "https://www.doublefine.com/news/announcing-our-new-game-kiln"
           }
+        },
+        {
+          "signal": "A strong pottery game already exists",
+          "detail": "Master of Pottery has about 2,900 Steam reviews at 97% positive (an estimated 50–100k owners). Glaze Day must beat it on the kiln reveal and the cozy studio life, or pick a less-served craft (soap, candles, yarn).",
+          "strength": "caution"
         }
       ],
       "look": {
@@ -9465,8 +9475,8 @@
           "why": "Our niche data puts cozy ocean/underwater demand at 6/10 (a qualitative estimate); Megaquarium's 95% shows love but not mass demand."
         },
         "gap": {
-          "score": 7,
-          "why": "Ocean/underwater supply is 3/10 and Megaquarium is still the reference, but small idle and fishkeeping aquariums are appearing in 2026 (ARC Aquarium, Lured In, We Love Fish Tanks, Loopquarium)."
+          "score": 5,
+          "why": "Several small aquarium games launched in 2026 (ARC Aquarium, Cozy Littlequarium, Desktop Aquarium, Lured In), so the space is filling."
         },
         "soloSpeed": {
           "score": 4,
@@ -9764,6 +9774,11 @@
           "ref": {
             "link": "#gaps"
           }
+        },
+        {
+          "signal": "Small aquarium games are arriving fast",
+          "detail": "ARC Aquarium, Cozy Littlequarium and Desktop Aquarium all launched in 2026, plus Lured In; the 'cozy aquarium' slot is no longer empty.",
+          "strength": "caution"
         }
       ],
       "look": {
