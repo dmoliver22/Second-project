@@ -10,6 +10,12 @@
         "description": "Is this genuinely new (a fresh verb, fantasy or format), or a reskin of an existing hit?"
       },
       {
+        "key": "provenDemand",
+        "label": "Proven demand",
+        "weight": 3,
+        "description": "How well this genre and core loop have sold before: many past hits with the same loop score high, untested formats score low. Different from originality."
+      },
+      {
         "key": "demand",
         "label": "Player demand",
         "weight": 3,
@@ -86,7 +92,8 @@
           "scopeFit": 0,
           "culture": 2,
           "originality": 3,
-          "creatorFit": 2
+          "creatorFit": 2,
+          "provenDemand": 3
         }
       },
       {
@@ -104,7 +111,8 @@
           "scopeFit": 3,
           "culture": 1,
           "originality": 2,
-          "creatorFit": 0
+          "creatorFit": 0,
+          "provenDemand": 3
         }
       }
     ]
@@ -232,6 +240,10 @@
         "scopeFit": {
           "score": 8,
           "why": "Small, clear scope for a team; the hard part is one well-bounded vision problem."
+        },
+        "provenDemand": {
+          "score": 3,
+          "why": "Make-your-own-creature toys have no big commercial track record; the closest hits are kids' apps."
         }
       },
       "whyNow": [
@@ -648,6 +660,10 @@
         "scopeFit": {
           "score": 9,
           "why": "Small, contained puzzle game with a clear content pipeline."
+        },
+        "provenDemand": {
+          "score": 5,
+          "why": "Cute physics puzzles sell (Cats & Soup's cat appeal, Suika's physics), but 'fit the cat' itself is unproven as a paid loop."
         }
       },
       "whyNow": [
@@ -1070,6 +1086,10 @@
         "scopeFit": {
           "score": 9,
           "why": "Tiny, contained and server-free."
+        },
+        "provenDemand": {
+          "score": 2,
+          "why": "Link-gift toys spread but have no record of earning; there is no proven genre behind it."
         }
       },
       "whyNow": [
@@ -1497,6 +1517,10 @@
         "scopeFit": {
           "score": 9,
           "why": "Small systemic game with a tiny backend; a small team could ship it and the app easily."
+        },
+        "provenDemand": {
+          "score": 4,
+          "why": "Plant-care games (Viridi, Kinder World) have loyal but small audiences; the gifting chain is untested."
         }
       },
       "whyNow": [
@@ -1941,6 +1965,10 @@
         "scopeFit": {
           "score": 8,
           "why": "Small systemic game; a small team could ship web, Discord and Steam versions comfortably."
+        },
+        "provenDemand": {
+          "score": 3,
+          "why": "Co-op is proven, but a folding verb is not; nothing comparable has sold."
         }
       },
       "whyNow": [
@@ -2398,6 +2426,10 @@
         "creatorFit": {
           "score": 6,
           "why": "Code is simple, but every series needs seven lovable hand-made treats: steady art cost."
+        },
+        "provenDemand": {
+          "score": 6,
+          "why": "Collect-and-display with daily pulls is proven on mobile (gacha, blind-box apps); proven less as a web game."
         }
       },
       "whyNow": [
@@ -2795,6 +2827,10 @@
         "creatorFit": {
           "score": 7,
           "why": "Well-understood systems AI can build fast; moderate art for customers and street."
+        },
+        "provenDemand": {
+          "score": 7,
+          "why": "Idle shop tycoons are a long-running hit format on mobile and web portals (Monkey Mart, My Perfect Hotel, Eatventure)."
         }
       },
       "whyNow": [
@@ -3182,6 +3218,10 @@
         "creatorFit": {
           "score": 5,
           "why": "Props are the product, so art never stops; plus gallery moderation."
+        },
+        "provenDemand": {
+          "score": 7,
+          "why": "Room decorating is evergreen: mobile decorating games, House Flipper and Unpacking-adjacent hits."
         }
       },
       "whyNow": [
@@ -3568,6 +3608,10 @@
         "creatorFit": {
           "score": 6,
           "why": "Real-time multiplayer and servers are real work even with AI; art is modest low-poly."
+        },
+        "provenDemand": {
+          "score": 6,
+          "why": "Cozy fishing sells steadily, and Webfishing (2024) proved a cheap social fishing hangout can break out."
         }
       },
       "whyNow": [
@@ -3965,6 +4009,10 @@
         "creatorFit": {
           "score": 9,
           "why": "Tiny system and ten flower designs: the easiest build here for one person with AI."
+        },
+        "provenDemand": {
+          "score": 7,
+          "why": "Suika-style merge puzzles proved huge in 2023–24, though the format is now crowded."
         }
       },
       "whyNow": [
@@ -4357,6 +4405,10 @@
         "creatorFit": {
           "score": 6,
           "why": "Easy to code; a daily hand-made scene is a content treadmill unless scenes are built from reusable object sets."
+        },
+        "provenDemand": {
+          "score": 7,
+          "why": "Tidying and organizing puzzles are proven (Unpacking, A Little to the Left) with a repeat audience."
         }
       },
       "whyNow": [
@@ -4699,6 +4751,10 @@
         "creatorFit": {
           "score": 2,
           "why": "3D online co-op is a team-sized project."
+        },
+        "provenDemand": {
+          "score": 8,
+          "why": "Cozy survival-crafting is one of the strongest-selling cozy formats (My Time at Sandrock, Palia's audience, Valheim-likes)."
         }
       },
       "whyNow": [
@@ -5197,6 +5253,10 @@
         "creatorFit": {
           "score": 4,
           "why": "Two-player co-op, food art and cultural consultants: a lot for one person."
+        },
+        "provenDemand": {
+          "score": 8,
+          "why": "Co-op cooking and shop sims are proven many times over (Overcooked, PlateUp!, Kebab Chefs)."
         }
       },
       "whyNow": [
@@ -5670,6 +5730,10 @@
         "creatorFit": {
           "score": 6,
           "why": "Water and terrain code suits AI-assisted iteration, but the feel needs long tuning."
+        },
+        "provenDemand": {
+          "score": 7,
+          "why": "Relaxing builders are proven (Townscaper, Tiny Glade, Islanders), with recurring breakout hits."
         }
       },
       "whyNow": [
@@ -6046,6 +6110,10 @@
         "creatorFit": {
           "score": 3,
           "why": "Twenty stories of human writing plus painted art: heavy for one person."
+        },
+        "provenDemand": {
+          "score": 5,
+          "why": "Inn management and spooky-cozy each have hits, but the narrative mix is less proven commercially."
         }
       },
       "whyNow": [
@@ -6468,6 +6536,10 @@
         "creatorFit": {
           "score": 5,
           "why": "Small, but Roblox's Luau and live-ops skills are separate from web."
+        },
+        "provenDemand": {
+          "score": 9,
+          "why": "Gardening and trading on Roblox is the platform's biggest proven format right now (Grow a Garden)."
         }
       },
       "whyNow": [
@@ -6772,6 +6844,10 @@
         "creatorFit": {
           "score": 7,
           "why": "Simple puzzle code; fabric patterns are a manageable art set."
+        },
+        "provenDemand": {
+          "score": 6,
+          "why": "Tile-placement puzzles are proven (Dorfromantik, Islanders) with a steady audience."
         }
       },
       "whyNow": [
@@ -7165,6 +7241,10 @@
         "creatorFit": {
           "score": 8,
           "why": "Tiny scope and small pixel art."
+        },
+        "provenDemand": {
+          "score": 7,
+          "why": "Idle desktop companions are proven recently (Rusty's Retirement, Bongo Cat, Ropuka's Idle Island)."
         }
       },
       "whyNow": [

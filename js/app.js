@@ -93,7 +93,7 @@
   const FILES = {
     meta: "data/meta.json", market: "data/market.json", games: "data/games.json", niches: "data/niches.json",
     playbook: "data/playbook.json", insights: "data/insights.json", concepts: "data/concepts.json", live: "data/live/steam.json",
-    gotomarket: "data/gotomarket.json", verification: "data/verification.json", culture: "data/culture.json", ideation: "data/ideation.json",
+    gotomarket: "data/gotomarket.json", verification: "data/verification.json", culture: "data/culture.json", ideation: "data/ideation.json", genres: "data/genres.json",
   };
   let D = null;
 
@@ -106,7 +106,7 @@
         if (!r.ok) throw new Error(r.status);
         out[k] = await r.json();
       } catch (e) {
-        if (!["live", "verification", "ideation"].includes(k)) throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
+        if (!["live", "verification", "ideation", "genres"].includes(k)) throw new Error("Could not load " + url + ". Serve the folder over http (see README) or open dist/cozy-market-atlas.html.");
         out[k] = null;
       }
     }));
@@ -163,6 +163,7 @@
     concepts: { label: "What to build", icon: "M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z", render: renderConcepts },
     launch: { label: "Launch & grow", icon: "M5 19l4-4M14 4l6 6-8 8-6-6zM14 4l-2-2M20 10l2 2M3 21l2-2", render: renderLaunch },
     spread: { label: "What spreads", icon: "M18 8a3 3 0 100-6 3 3 0 000 6zM6 15a3 3 0 100-6 3 3 0 000 6zM18 22a3 3 0 100-6 3 3 0 000 6zM8.6 13.5l6.8 4M15.4 6.5l-6.8 4", render: renderSpread },
+    genres: { label: "Proven genres", icon: "M4 20V10M10 20V4M16 20v-7M22 20H2", render: renderGenres },
     ideas: { label: "Idea lab", icon: "M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0012 3z", render: renderIdeas },
     culture: { label: "Culture signals", icon: "M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20", render: renderCulture },
     outliers: { label: "Outliers", icon: "M12 3v4M12 17v4M3 12h4M17 12h4M12 12h.01M7 7l2 2M15 15l2 2M17 7l-2 2M9 15l-2 2", render: renderOutliers },
@@ -536,6 +537,61 @@
     const head = drawer().querySelector(".drawer-body .section");
     if (head) head.append(h("div", { class: "chips" }, saveBtn(ideaEntry(x)),
       x.conceptId && D.concepts.concepts.some((c) => c.id === x.conceptId) ? h("button", { type: "button", class: "btn", text: "See the full plan", onclick: () => { drawer().close(); goConcept(x.conceptId); } }) : null));
+  }
+
+  function renderGenres() {
+    const P = D.genres;
+    if (!P) return h("div", { class: "error-box", text: "Proven-genre research is missing (data/genres.json)." });
+    const conceptName = (id) => (D.concepts.concepts.find((c) => c.id === id) || {}).name;
+    const satCls = { low: "good", medium: "warn", high: "crit", "very high": "crit" };
+    let gi = Math.min(store.get("genreTab", 0), P.genres.length - 1);
+    const tabs = h("div", { class: "phase-strip", role: "tablist", "aria-label": "Genre" });
+    const body = h("div", { class: "section", style: "gap:20px" });
+    const ul = (arr) => h("ul", { class: "ink-2", style: "font-size:.92rem" }, (arr || []).map((t) => h("li", { text: t })));
+    function draw() {
+      tabs.replaceChildren(...P.genres.map((g, i) => h("button", { type: "button", role: "tab", class: "phase-btn", "aria-pressed": String(i === gi), onclick: () => { gi = i; store.set("genreTab", i); draw(); } },
+        h("span", { class: "p-n", text: (g.saturation ? "Crowding: " + g.saturation.level : "") }), h("span", { class: "p-name", text: g.label || g.genre }))));
+      const g = P.genres[gi];
+      const proven = (g.trackRecord || []);
+      body.replaceChildren(...[
+        h("div", { class: "takeaway" }, h("div", { class: "eyebrow", text: g.label || g.genre }), h("p", { text: g.summary })),
+        g.saturation ? h("div", { class: "callout" + (/high/.test(g.saturation.level) ? " warn" : "") },
+          h("div", { class: "card-top", style: "justify-content:flex-start;gap:10px;align-items:center" }, h("b", { text: "How crowded it is" }), h("span", { class: "chip " + (satCls[g.saturation.level] || ""), text: g.saturation.level })),
+          h("p", { class: "ink-2", text: g.saturation.evidence })) : null,
+        g.openThemes && g.openThemes.length ? section("Open themes", "Angles with real demand and few or weak games, from the research. These are where a new game has room.",
+          h("div", { class: "grid grid-2" }, g.openThemes.map((t) => h("article", { class: "card" },
+            h("div", { class: "card-top" }, h("h3", { text: t.theme }), t.genre ? h("span", { class: "chip", text: t.genre }) : null),
+            h("p", { class: "ink-2", style: "font-size:.92rem", text: t.whyOpen }),
+            t.evidence && t.evidence.length ? h("details", {}, h("summary", { text: "Evidence (" + t.evidence.length + ")", style: "cursor:pointer;font-size:.85rem;color:var(--accent)" }),
+              h("ul", { class: "list-plain", style: "margin-top:8px" }, t.evidence.map((e) => h("li", { style: "font-size:.85rem" }, e.fact, " ", conf(confOf(e.confidence)), " ", srcOne(e.source))))) : null,
+            t.risk ? h("p", { class: "sugg-caution" }, h("span", { class: "dir peaking" }, svgIcon(ICON.warn), "Watch out:"), " ", t.risk) : null,
+            t.conceptId && conceptName(t.conceptId) ? h("div", { class: "chips" }, h("button", { type: "button", class: "btn primary", text: "Our game for this: " + conceptName(t.conceptId), onclick: () => goConcept(t.conceptId) })) : null,
+            askBtn("Ask about this gap", `Is "${t.theme}" (${g.label || g.genre}) a good first game for me? What would the core loop, the clip and the first playable look like?`))))) : null,
+        g.takenThemes && g.takenThemes.length ? h("div", { class: "section", style: "gap:8px" }, h("h3", { text: "Already done well (don't clone)" }), h("div", { class: "chips" }, g.takenThemes.map((t) => h("span", { class: "chip wrap", text: t })))) : null,
+        proven.length ? section("Track record", "Hits and misses in this genre. Click a row for the details and source.",
+          tableOf([
+            { label: "Game", get: (r) => h("div", {}, h("b", { text: r.name }), h("div", { class: "muted", style: "font-size:.8rem", text: [r.studio, r.year].filter(Boolean).join(" · ") })) },
+            { label: "Theme", get: (r) => r.theme },
+            { label: "View", get: (r) => r.camera },
+            { label: "Team", get: (r) => r.teamSize },
+            { label: "Price", get: (r) => r.price },
+            { label: "Result", get: (r) => h("div", { style: "font-size:.85rem" }, r.result, " ", conf(confOf(r.confidence))) },
+          ], proven.map((r) => Object.assign({ __click: () => openPanel(g.label || g.genre, r.name, [["Theme", r.theme], ["Core loop", r.coreLoop], ["Result", r.result], ["Why it worked (or didn't)", r.whyItWorked], ["The moment that spread", r.clipMoment], ["Team", r.teamSize], ["Price", r.price]], [r.source], confOf(r.confidence)) }, r)))) : null,
+        h("div", { class: "grid grid-2" }, panel("What wins now", null, ul(g.whatWinsNow)), panel("What fails", null, ul(g.whatFails))),
+        h("div", { class: "grid grid-2" },
+          panel("Can you build it solo with AI?", null, h("p", { class: "ink-2", style: "font-size:.92rem", text: g.soloAiFeasibility })),
+          panel("Can it start on the web?", null, h("p", { class: "ink-2", style: "font-size:.92rem", text: g.webFeasibility }))),
+        h("div", { class: "grid grid-2" },
+          panel("How these games make money", null, h("p", { class: "ink-2", style: "font-size:.92rem", text: g.monetization })),
+          panel("How the hits got found", null, h("p", { class: "ink-2", style: "font-size:.92rem", text: g.marketing }))),
+        srcLinks(g.sources),
+      ].filter(Boolean));
+    }
+    draw();
+    return h("div", { class: "view" },
+      viewHead("Proven genres", P.title || "Evergreen genres and the gaps inside them", P.intro),
+      takeaway("genres"),
+      tabs, body);
   }
 
   function renderIdeas() {
