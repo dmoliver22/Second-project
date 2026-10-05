@@ -663,3 +663,4 @@ textarea.brief { width: 100%; font-family: var(--font-data); font-size: .78rem; 
 .idea-messages { min-height: 420px; }
 .make-plan { font-size: 1rem; padding: 10px 16px; }
 a.btn { text-decoration: none; display: inline-flex; align-items: center; }
+.prompt-text { white-space: pre-wrap; font-family: var(--font-data); font-size: .78rem; line-height: 1.55; background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; max-height: 520px; overflow: auto; color: var(--ink); margin: 0; }

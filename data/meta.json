@@ -12,6 +12,10 @@
   ],
   "changelog": [
     {
+      "date": "2026-10-05",
+      "note": "Plan pages can carry design-detail sections (pillars, views, controls, systems) and a build prompt with a Copy prompt button. Your own saved ideas can now be chatted with. First full game design added under My plans: Pot Luck (cozy-chaotic crab boat, overhead and first-person, PC and phone demo)."
+    },
+    {
       "date": "2026-10-04",
       "note": "Idea chats and plans: every idea has 'Chat about this idea'; the chat knows the idea, its genre research and the nine checks, marks decisions, and is kept with the dashboard. 'Make the plan' turns the idea plus the chat into an official plan page (nine checks, clip, feel, look, steps, marketing, risks, what changed) under My plans; plans can be saved, found in the Game finder and updated to new versions."
     },
