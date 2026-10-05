@@ -108,7 +108,8 @@
       "https://en.wikipedia.org/wiki/Stardew_Valley"
     ],
     "confidence": "high",
-    "teamAtLaunch": 1
+    "teamAtLaunch": 1,
+    "steamAppId": 413150
   },
   {
     "id": "cats-and-soup",
@@ -261,7 +262,8 @@
       "https://multiplayer.it/notizie/infinity-nikki-ha-contribuito-a-far-raggiungere-quasi-1-miliardo-di-dollari-a-papergames-nel-2024.html",
       "https://en.wikipedia.org/wiki/Infinity_Nikki"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 3164330
   },
   {
     "id": "palia",
@@ -318,7 +320,8 @@
       "https://en.wikipedia.org/wiki/Palia",
       "https://news.xbox.com/en-us/2026/04/21/palia-royal-highlands/"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 2707930
   },
   {
     "id": "pokemon-pokopia",
@@ -417,7 +420,8 @@
     ],
     "confidence": "medium",
     "dataNotes": "Units/revenue = Raijin estimate. steamReviews is 'past 74,000' snapshot. Cozy-adjacent (job sim).",
-    "teamAtLaunch": 1
+    "teamAtLaunch": 1,
+    "steamAppId": 2670630
   },
   {
     "id": "webfishing",
@@ -468,7 +472,8 @@
       "https://www.gamersunchained.com/game/webfishing"
     ],
     "confidence": "medium",
-    "teamAtLaunch": 1
+    "teamAtLaunch": 1,
+    "steamAppId": 3146520
   },
   {
     "id": "fields-of-mistria",
@@ -522,7 +527,8 @@
       "https://www.rpgsite.net/news/20950-fields-mistria-will-not-see-price-increase-with-10-potential-console-ports-will-be-evaluated-later",
       "https://automaton-media.com/newsjp/fieldsofmistria-20240816-306039/"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 2142790
   },
   {
     "id": "hello-kitty-island-adventure",
@@ -577,7 +583,8 @@
       "https://raijin.gg/app/2495100/Hello_Kitty_Island_Adventure",
       "https://automaton-media.com/en/news/with-favorable-animal-crossing-comparisons-hello-kitty-island-adventure-racks-up-positive-steam-reviews-and-sells-over-500000-copies-in-its-first-month/"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 2495100
   },
   {
     "id": "dinkum",
@@ -627,7 +634,8 @@
       "https://raijin.gg/app/1062520/Dinkum"
     ],
     "confidence": "medium",
-    "teamAtLaunch": 1
+    "teamAtLaunch": 1,
+    "steamAppId": 1062520
   },
   {
     "id": "unpacking",
@@ -686,7 +694,8 @@
     ],
     "confidence": "high",
     "dataNotes": "revenueEstimateUSDm = Raijin Steam-only gross estimate (~672.6K Steam copies, $8.1M); other trackers say 1.2M units/$16.7M. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
-    "teamAtLaunch": 4
+    "teamAtLaunch": 4,
+    "steamAppId": 1135690
   },
   {
     "id": "spiritfarer",
@@ -798,7 +807,8 @@
       "https://raijin.gg/app/1629520/A_Little_to_the_Left"
     ],
     "confidence": "medium",
-    "dataNotes": "revenueEstimateUSDm = Raijin Steam-only gross estimate (318.3K Steam copies)."
+    "dataNotes": "revenueEstimateUSDm = Raijin Steam-only gross estimate (318.3K Steam copies).",
+    "steamAppId": 1629520
   },
   {
     "id": "dredge",
@@ -854,7 +864,8 @@
     ],
     "confidence": "medium",
     "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (1.1M copies/$16.2M); VGI 1.6M/$26.8M.",
-    "teamAtLaunch": 4
+    "teamAtLaunch": 4,
+    "steamAppId": 1562430
   },
   {
     "id": "sun-haven",
@@ -906,7 +917,8 @@
       "https://rpgamer.com/2020/10/kickstarter-check-in-sun-haven-patagon-the-forbidden-island/",
       "https://raiderking.com/sun-haven-nintendo-switch-release-date/"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 1432860
   },
   {
     "id": "strange-horticulture",
@@ -959,7 +971,8 @@
     ],
     "confidence": "medium",
     "dataNotes": "steamReviews is a floor ('over 10,000', Overwhelmingly Positive) per publisher; exact count not retrieved.",
-    "teamAtLaunch": 2
+    "teamAtLaunch": 2,
+    "steamAppId": 1574580
   },
   {
     "id": "tiny-glade",
@@ -1012,7 +1025,8 @@
     ],
     "confidence": "medium",
     "dataNotes": "Raijin Sep-2026 Steam estimate 516.8K copies/$4.6M is lower than the confirmed 616K, showing estimator unreliability; VaporLens estimates 1.8M/$27M. Revenue left null. ",
-    "teamAtLaunch": 2
+    "teamAtLaunch": 2,
+    "steamAppId": 2198150
   },
   {
     "id": "coral-island",
@@ -1068,7 +1082,8 @@
       "https://www.unrealengine.com/en-US/developer-interviews/coral-island-inside-the-chill-farm-sim-reinventing-the-genre",
       "https://en.wikipedia.org/wiki/Coral_Island_(video_game)"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 1158160
   },
   {
     "id": "story-of-seasons-grand-bazaar",
@@ -1174,7 +1189,8 @@
     ],
     "confidence": "medium",
     "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (464K copies/$2.4M); VaporLens 1.64M/$9.8M (likely high). Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
-    "teamAtLaunch": 1
+    "teamAtLaunch": 1,
+    "steamAppId": 1291340
   },
   {
     "id": "little-kitty-big-city",
@@ -1226,7 +1242,8 @@
       "https://wnhub.io/news/investment/item-44203",
       "https://gamasutra.com/business/little-kitty-big-city-tops-1-million-players-on-xbox-game-pass"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 1177980
   },
   {
     "id": "rustys-retirement",
@@ -1275,7 +1292,8 @@
       "https://en.wikipedia.org/wiki/Rusty%27s_Retirement"
     ],
     "confidence": "medium",
-    "teamAtLaunch": 1
+    "teamAtLaunch": 1,
+    "steamAppId": 2666510
   },
   {
     "id": "tiny-bookshop",
@@ -1327,7 +1345,8 @@
       "https://steampulse.org/game/2133760",
       "https://en.wikipedia.org/wiki/Tiny_Bookshop"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 2133760
   },
   {
     "id": "coffee-talk",
@@ -1381,7 +1400,8 @@
       "https://gematsu.com/2023/03/coffee-talk-episode-2-hibiscus-butterfly-coming-to-xbox-game-pass-on-day-one"
     ],
     "confidence": "low",
-    "dataNotes": "Units/revenue are VGI estimates via SteamPulse (Steam only)."
+    "dataNotes": "Units/revenue are VGI estimates via SteamPulse (Steam only).",
+    "steamAppId": 914800
   },
   {
     "id": "spirit-city-lofi-sessions",
@@ -1432,7 +1452,8 @@
     ],
     "confidence": "medium",
     "dataNotes": "releaseYear 2024 inferred from launch-week coverage dated April 2024 (not directly confirmed). revenueEstimateUSDm = Raijin estimate.",
-    "teamAtLaunch": 3
+    "teamAtLaunch": 3,
+    "steamAppId": 2113850
   },
   {
     "id": "is-this-seat-taken",
@@ -1486,7 +1507,8 @@
       "https://automaton-media.com/articles/newsjp/20260813-459959/"
     ],
     "confidence": "medium",
-    "dataNotes": "steamPositivePct computed from 8,889/9,135 positive snapshot (~97%)."
+    "dataNotes": "steamPositivePct computed from 8,889/9,135 positive snapshot (~97%).",
+    "steamAppId": 3035120
   },
   {
     "id": "tiny-pasture",
@@ -1533,7 +1555,8 @@
       "https://portaln10.com.br/tecnologia/games/tiny-pasture-jogo-indie-desbanca-gigantes-e-conquista-steam-com-simplicidade-e-fofura-250935/",
       "https://vaporlens.app/app/3167550/tiny_pasture.md"
     ],
-    "confidence": "low"
+    "confidence": "low",
+    "steamAppId": 3167550
   },
   {
     "id": "bear-and-breakfast",
@@ -1582,7 +1605,8 @@
       "https://gamespress.com/Bear-and-Breakfast-opens-shop-on-Nintendo-Switch"
     ],
     "confidence": "low",
-    "dataNotes": "Units/revenue are VGI estimates."
+    "dataNotes": "Units/revenue are VGI estimates.",
+    "steamAppId": 1136370
   },
   {
     "id": "starsand-island",
@@ -1631,7 +1655,8 @@
       "https://steampulse.org/game/2966320",
       "https://www.gamedeveloper.com/press-release/starsand-island-launches-on-pc-and-consoles-on-18th-august"
     ],
-    "confidence": "low"
+    "confidence": "low",
+    "steamAppId": 2966320
   },
   {
     "id": "lightyear-frontier",
@@ -1678,7 +1703,8 @@
       "https://raijin.gg/app/1677110/Lightyear_Frontier",
       "https://news.xbox.com/en-us/2024/02/02/lightyear-frontier-game-pass-march/"
     ],
-    "confidence": "low"
+    "confidence": "low",
+    "steamAppId": 1677110
   },
   {
     "id": "wanderstop",
@@ -1727,7 +1753,8 @@
       "https://steampulse.org/game/1299460"
     ],
     "confidence": "low",
-    "dataNotes": "Units/revenue are VGI estimates via SteamPulse."
+    "dataNotes": "Units/revenue are VGI estimates via SteamPulse.",
+    "steamAppId": 1299460
   },
   {
     "id": "roots-of-pacha",
@@ -1780,7 +1807,8 @@
       "https://www.gamepressure.com/S013-amp.asp?ID=22088",
       "https://en.wikipedia.org/wiki/Roots_of_Pacha"
     ],
-    "confidence": "low"
+    "confidence": "low",
+    "steamAppId": 1245560
   },
   {
     "id": "moonstone-island",
@@ -1828,7 +1856,8 @@
       "https://www.gematsu.com/2022/06/raw-fury-to-publish-open-world-deckbuilder-life-simulation-game-moonstone-island-for-switch-pc",
       "https://miketendo64.com/2025/11/07/srg-143-moonstone-island/"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 1658150
   },
   {
     "id": "venba",
@@ -1881,7 +1910,8 @@
       "https://steambase.io/apps/venba"
     ],
     "confidence": "low",
-    "dataNotes": "Units/revenue = Raijin Steam estimate (49.3K copies/$443K)."
+    "dataNotes": "Units/revenue = Raijin Steam estimate (49.3K copies/$443K).",
+    "steamAppId": 1491670
   },
   {
     "id": "botany-manor",
@@ -1932,7 +1962,8 @@
       "https://en.wikipedia.org/wiki/Botany_Manor"
     ],
     "confidence": "low",
-    "dataNotes": "Units/revenue are VGI estimates."
+    "dataNotes": "Units/revenue are VGI estimates.",
+    "steamAppId": 1425350
   },
   {
     "id": "disney-dreamlight-valley",
@@ -1991,7 +2022,8 @@
       "https://mickeyblog.com/2025/09/03/new-wishblossom-ranch-paid-expansion-coming-to-disney-dreamlight-valley/",
       "https://steambase.io/apps/disney-dreamlight-valley"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 1401590
   },
   {
     "id": "my-time-at-sandrock",
@@ -2047,7 +2079,8 @@
       "https://steampulse.org/game/1084600",
       "https://businesswire.com/news/home/20230228006045/en/Focus-Entertainment-Partners-up-With-Pathea-Games-and-Becomes-the-Publisher-of-My-Time-at-Sandrock-on-PC"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 1084600
   },
   {
     "id": "wylde-flowers",
@@ -2098,7 +2131,8 @@
       "https://gamespress.com/Award-winning-Wylde-Flowers-releasing-September-20th-on-Nintendo-Switc",
       "https://raijin.gg/app/1896700/Wylde_Flowers"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 1896700
   },
   {
     "id": "fae-farm",
@@ -2148,7 +2182,8 @@
       "https://www.journaldugeek.com/2025/01/28/ces-jeux-a-succes-viennent-de-signer-leur-arret-de-mort/",
       "https://automaton-media.com/articles/newsjp/20230911-263842/"
     ],
-    "confidence": "low"
+    "confidence": "low",
+    "steamAppId": 2230110
   },
   {
     "id": "paleo-pines",
@@ -2198,7 +2233,8 @@
       "https://gematsu.com/2023/06/paleo-pines-launches-september-26",
       "https://www.gonintendo.com/contents/24960-paleo-pines-demo-reactions-trailer-shared"
     ],
-    "confidence": "low"
+    "confidence": "low",
+    "steamAppId": 1202200
   },
   {
     "id": "grow-a-garden",
@@ -2398,7 +2434,8 @@
       "https://raijin.gg/app/593150/Ooblets",
       "https://gematsu.com/2019/08/ooblets-for-pc-timed-exclusive-to-epic-games-store"
     ],
-    "confidence": "low"
+    "confidence": "low",
+    "steamAppId": 593150
   },
   {
     "id": "a-short-hike",
@@ -2454,7 +2491,8 @@
     ],
     "confidence": "medium",
     "dataNotes": "revenueEstimateUSDm = Raijin Steam gross estimate (428.1K copies, June 2026). SteamPageAnalyzer Boxleiter estimate: 765K copies/$6.1M gross from 19,127 reviews. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
-    "teamAtLaunch": 1
+    "teamAtLaunch": 1,
+    "steamAppId": 1055540
   },
   {
     "id": "cozy-grove",
@@ -2509,7 +2547,8 @@
       "https://vaporlens.app/app/1458100/cozy_grove/stats/details"
     ],
     "confidence": "low",
-    "dataNotes": "Units/revenue = VaporLens-style estimate (633,310 copies, $9.49M), likely high. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough."
+    "dataNotes": "Units/revenue = VaporLens-style estimate (633,310 copies, $9.49M), likely high. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
+    "steamAppId": 1458100
   },
   {
     "id": "dorfromantik",
@@ -2565,7 +2604,8 @@
     ],
     "confidence": "medium",
     "dataNotes": "revenueEstimateUSDm = VGI estimate via SteamPulse (874K units/$7.2M); Raijin 526.9K/$4.4M. Third-party Steam estimates (Boxleiter-style / VG Insights / Raijin / VaporLens) vary 2-5x; treat as rough.",
-    "teamAtLaunch": 4
+    "teamAtLaunch": 4,
+    "steamAppId": 1455840
   },
   {
     "id": "potion-craft",
@@ -2616,7 +2656,8 @@
       "https://www.tinybuild.com/single-post/potion-craft-launches-into-1-0-marking-the-biggest-steam-launch-ever",
       "https://en.wikipedia.org/wiki/Potion_Craft"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 1210320
   },
   {
     "id": "lil-gator-game",
@@ -2666,7 +2707,8 @@
       "https://www.steamspy.com/dev/Playtonic+Friends",
       "https://www.gematsu.com/2025/10/lil-gator-game-gator-of-the-year-edition-for-ps5-switch-launches-in-early-2026"
     ],
-    "confidence": "low"
+    "confidence": "low",
+    "steamAppId": 1586800
   },
   {
     "id": "islanders",
@@ -2717,7 +2759,8 @@
     ],
     "confidence": "low",
     "dataNotes": "VaporLens estimate 1,294,616 sales/$6.46M considered likely high; not used numerically.",
-    "teamAtLaunch": 3
+    "teamAtLaunch": 3,
+    "steamAppId": 1046030
   },
   {
     "id": "bongo-cat",
@@ -2765,7 +2808,8 @@
       "https://tracker.gg/population/steam/3419430",
       "https://insider-gaming.com/what-is-bongo-cat-on-steam/"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "steamAppId": 3419430
   },
   {
     "id": "ropukas-idle-island",
@@ -2814,7 +2858,8 @@
     ],
     "confidence": "low",
     "dataNotes": "Positive % from an earlier snapshot 1,907/1,969 (~97%); review count 4,028 later snapshot. Business model guess 'Premium + DLC' is uncertain.",
-    "teamAtLaunch": 3
+    "teamAtLaunch": 3,
+    "steamAppId": 3416070
   },
   {
     "id": "animal-crossing-pocket-camp",
@@ -2969,6 +3014,7 @@
       "https://everythingedinburgh.com/?p=27428",
       "https://www.cgmagonline.com/news/announced-wholesome-direct-2026/"
     ],
-    "confidence": "low"
+    "confidence": "low",
+    "steamAppId": 4019220
   }
 ]

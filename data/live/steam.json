@@ -1,5 +1,328 @@
 {
-  "updatedAt": null,
-  "source": "Steam store public endpoints (filled by scripts/refresh_steam.py)",
-  "games": {}
+  "updatedAt": "2026-10-05",
+  "source": "Steam store public endpoints",
+  "games": {
+    "stardew-valley": {
+      "appId": 413150,
+      "priceUSD": 14.99,
+      "totalReviews": 1042554,
+      "positivePct": 98,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "infinity-nikki": {
+      "appId": 3164330,
+      "priceUSD": 0,
+      "totalReviews": 10573,
+      "positivePct": 57,
+      "reviewScoreDesc": "Mixed"
+    },
+    "palia": {
+      "appId": 2707930,
+      "priceUSD": 0,
+      "totalReviews": 44663,
+      "positivePct": 86,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "supermarket-simulator": {
+      "appId": 2670630,
+      "priceUSD": 19.99,
+      "totalReviews": 84377,
+      "positivePct": 92,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "webfishing": {
+      "appId": 3146520,
+      "priceUSD": 4.99,
+      "totalReviews": 70496,
+      "positivePct": 97,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "fields-of-mistria": {
+      "appId": 2142790,
+      "priceUSD": 13.99,
+      "totalReviews": 35846,
+      "positivePct": 97,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "hello-kitty-island-adventure": {
+      "appId": 2495100,
+      "priceUSD": 39.99,
+      "totalReviews": 12586,
+      "positivePct": 94,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "dinkum": {
+      "appId": 1062520,
+      "priceUSD": 19.99,
+      "totalReviews": 29176,
+      "positivePct": 92,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "unpacking": {
+      "appId": 1135690,
+      "priceUSD": 19.99,
+      "totalReviews": 41002,
+      "positivePct": 93,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "a-little-to-the-left": {
+      "appId": 1629520,
+      "priceUSD": 14.99,
+      "totalReviews": 19296,
+      "positivePct": 92,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "dredge": {
+      "appId": 1562430,
+      "priceUSD": 24.99,
+      "totalReviews": 57290,
+      "positivePct": 96,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "sun-haven": {
+      "appId": 1432860,
+      "priceUSD": 24.99,
+      "totalReviews": 25618,
+      "positivePct": 80,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "strange-horticulture": {
+      "appId": 1574580,
+      "priceUSD": 15.99,
+      "totalReviews": 16197,
+      "positivePct": 94,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "tiny-glade": {
+      "appId": 2198150,
+      "priceUSD": 14.99,
+      "totalReviews": 24874,
+      "positivePct": 97,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "coral-island": {
+      "appId": 1158160,
+      "priceUSD": 29.99,
+      "totalReviews": 27760,
+      "positivePct": 89,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "townscaper": {
+      "appId": 1291340,
+      "priceUSD": 5.99,
+      "totalReviews": 21657,
+      "positivePct": 95,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "little-kitty-big-city": {
+      "appId": 1177980,
+      "priceUSD": 24.99,
+      "totalReviews": 13922,
+      "positivePct": 97,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "rustys-retirement": {
+      "appId": 2666510,
+      "priceUSD": 6.99,
+      "totalReviews": 14882,
+      "positivePct": 97,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "tiny-bookshop": {
+      "appId": 2133760,
+      "priceUSD": 19.99,
+      "totalReviews": 7850,
+      "positivePct": 96,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "coffee-talk": {
+      "appId": 914800,
+      "priceUSD": 12.99,
+      "totalReviews": 12628,
+      "positivePct": 95,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "spirit-city-lofi-sessions": {
+      "appId": 2113850,
+      "priceUSD": 11.99,
+      "totalReviews": 16883,
+      "positivePct": 98,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "is-this-seat-taken": {
+      "appId": 3035120,
+      "priceUSD": 9.99,
+      "totalReviews": 9739,
+      "positivePct": 97,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "tiny-pasture": {
+      "appId": 3167550,
+      "priceUSD": 5.99,
+      "totalReviews": 8641,
+      "positivePct": 92,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "bear-and-breakfast": {
+      "appId": 1136370,
+      "priceUSD": 19.99,
+      "totalReviews": 5379,
+      "positivePct": 89,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "starsand-island": {
+      "appId": 2966320,
+      "priceUSD": 39.99,
+      "totalReviews": 7180,
+      "positivePct": 77,
+      "reviewScoreDesc": "Mostly Positive"
+    },
+    "lightyear-frontier": {
+      "appId": 1677110,
+      "priceUSD": 29.99,
+      "totalReviews": 4763,
+      "positivePct": 84,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "wanderstop": {
+      "appId": 1299460,
+      "priceUSD": 24.99,
+      "totalReviews": 3264,
+      "positivePct": 93,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "roots-of-pacha": {
+      "appId": 1245560,
+      "priceUSD": 24.99,
+      "totalReviews": 4570,
+      "positivePct": 94,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "moonstone-island": {
+      "appId": 1658150,
+      "priceUSD": 19.99,
+      "totalReviews": 5094,
+      "positivePct": 84,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "venba": {
+      "appId": 1491670,
+      "priceUSD": 14.99,
+      "totalReviews": 3802,
+      "positivePct": 93,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "botany-manor": {
+      "appId": 1425350,
+      "priceUSD": 24.99,
+      "totalReviews": 1594,
+      "positivePct": 95,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "disney-dreamlight-valley": {
+      "appId": 1401590,
+      "priceUSD": 39.99,
+      "totalReviews": 24992,
+      "positivePct": 92,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "my-time-at-sandrock": {
+      "appId": 1084600,
+      "priceUSD": 39.99,
+      "totalReviews": 29126,
+      "positivePct": 88,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "wylde-flowers": {
+      "appId": 1896700,
+      "priceUSD": 24.99,
+      "totalReviews": 2774,
+      "positivePct": 96,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "fae-farm": {
+      "appId": 2230110,
+      "priceUSD": 29.99,
+      "totalReviews": 3597,
+      "positivePct": 80,
+      "reviewScoreDesc": "Mostly Positive"
+    },
+    "paleo-pines": {
+      "appId": 1202200,
+      "priceUSD": 29.99,
+      "totalReviews": 2701,
+      "positivePct": 82,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "ooblets": {
+      "appId": 593150,
+      "priceUSD": 29.99,
+      "totalReviews": 1557,
+      "positivePct": 91,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "a-short-hike": {
+      "appId": 1055540,
+      "priceUSD": 7.99,
+      "totalReviews": 22816,
+      "positivePct": 99,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "cozy-grove": {
+      "appId": 1458100,
+      "priceUSD": 14.99,
+      "totalReviews": 8518,
+      "positivePct": 89,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "dorfromantik": {
+      "appId": 1455840,
+      "priceUSD": 13.99,
+      "totalReviews": 29663,
+      "positivePct": 96,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "potion-craft": {
+      "appId": 1210320,
+      "priceUSD": 19.99,
+      "totalReviews": 44901,
+      "positivePct": 93,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "lil-gator-game": {
+      "appId": 1586800,
+      "priceUSD": 19.99,
+      "totalReviews": 6166,
+      "positivePct": 99,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "islanders": {
+      "appId": 1046030,
+      "priceUSD": 4.99,
+      "totalReviews": 16790,
+      "positivePct": 94,
+      "reviewScoreDesc": "Very Positive"
+    },
+    "bongo-cat": {
+      "appId": 3419430,
+      "priceUSD": 0,
+      "totalReviews": 111881,
+      "positivePct": 97,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "ropukas-idle-island": {
+      "appId": 3416070,
+      "priceUSD": 3.99,
+      "totalReviews": 4324,
+      "positivePct": 95,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    },
+    "dressmaker": {
+      "appId": 4019220,
+      "priceUSD": 14.99,
+      "totalReviews": 10098,
+      "positivePct": 98,
+      "reviewScoreDesc": "Overwhelmingly Positive"
+    }
+  }
 }
